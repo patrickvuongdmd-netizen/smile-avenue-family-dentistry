@@ -59,9 +59,9 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       {mobileOpen && (
         <div className="lg:hidden bg-background border-t border-border pb-4">
           <div className="container mx-auto px-4 pt-4 flex flex-col gap-4 font-sans text-sm font-medium text-foreground">
-            <span className="py-2">Services</span>
-            <span className="py-2">Locations</span>
-            <span className="py-2">Patients</span>
+            <Link to="/services/" className="py-2" onClick={() => setMobileOpen(false)}>Services</Link>
+            <Link to="/convenient-locations/" className="py-2" onClick={() => setMobileOpen(false)}>Locations</Link>
+            <Link to="/patients/new-patient-hub/" className="py-2" onClick={() => setMobileOpen(false)}>Patients</Link>
             <Link to="/about" className="py-2" onClick={() => setMobileOpen(false)}>About</Link>
             <Link to="/blog" className="py-2" onClick={() => setMobileOpen(false)}>Blog</Link>
             <a href={`tel:${phone}`} className="flex items-center gap-2 py-2 text-primary font-semibold">
