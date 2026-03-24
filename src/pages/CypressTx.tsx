@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
