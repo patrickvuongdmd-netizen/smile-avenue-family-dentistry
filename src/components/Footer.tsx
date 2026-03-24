@@ -8,7 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-display font-bold mb-4">Smile Avenue</h3>
+            <Link to="/" className="inline-block mb-4">
+              <img src="/logo-full.png" alt="Smile Avenue Family Dentistry" className="h-9 w-auto brightness-0 invert" />
+            </Link>
             <p className="text-sm font-body leading-relaxed opacity-70">
               Hospitality-driven dental care for the whole family. Two convenient locations in Cypress and Katy, TX.
             </p>

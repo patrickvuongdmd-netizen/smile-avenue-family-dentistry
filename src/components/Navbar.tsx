@@ -16,13 +16,9 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl md:text-2xl font-display font-bold text-foreground">
-              Smile Avenue
-            </span>
-            <span className="text-xs font-sans font-medium text-muted-foreground tracking-wide">
-              FAMILY DENTISTRY
-            </span>
+          <Link to="/" className="flex items-center">
+            <img src="/logo-full.png" alt="Smile Avenue Family Dentistry" className="hidden sm:block h-10 w-auto" />
+            <img src="/logo-mark.png" alt="Smile Avenue" className="sm:hidden h-9 w-9 rounded-full" />
           </Link>
 
           {/* Desktop Nav */}
