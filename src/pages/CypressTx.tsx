@@ -47,6 +47,11 @@ const faqs = [
 const CypressTx = () => {
   return (
     <>
+      <Helmet>
+        <title>Dentist in Cypress, TX | Smile Avenue Family Dentistry</title>
+        <meta name="description" content="Your family dentist in Cypress, TX. Personalized care, advanced comfort, and same-day appointments at 9212 Fry Rd. Serving Cypress, Bridgeland, Fairfield, and Towne Lake families." />
+        <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/" />
+      </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 
       <main className="pb-14 lg:pb-0">
