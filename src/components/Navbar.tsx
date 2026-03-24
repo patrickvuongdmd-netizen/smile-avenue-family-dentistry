@@ -28,15 +28,9 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
             <div className="flex items-center gap-6 text-sm font-sans font-medium text-foreground">
-              <button className="flex items-center gap-1 hover:text-primary transition-colors">
-                Services <ChevronDown className="w-3.5 h-3.5" />
-              </button>
-              <button className="flex items-center gap-1 hover:text-primary transition-colors">
-                Locations <ChevronDown className="w-3.5 h-3.5" />
-              </button>
-              <button className="flex items-center gap-1 hover:text-primary transition-colors">
-                Patients <ChevronDown className="w-3.5 h-3.5" />
-              </button>
+              <Link to="/services/" className="hover:text-primary transition-colors">Services</Link>
+              <Link to="/convenient-locations/" className="hover:text-primary transition-colors">Locations</Link>
+              <Link to="/patients/new-patient-hub/" className="hover:text-primary transition-colors">Patients</Link>
               <Link to="/about" className="hover:text-primary transition-colors">About</Link>
               <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
             </div>
