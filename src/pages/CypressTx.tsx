@@ -278,11 +278,11 @@ const CypressTx = () => {
             <div className="inline-block bg-card rounded-xl p-6 border border-border text-left max-w-md">
               <div className="flex items-start gap-3 mb-2">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm font-sans text-foreground">1718 N Fry Rd, Katy, TX 77449</span>
+                <span className="text-sm font-sans text-foreground">23541 Westheimer Pkwy Ste #170, Katy, TX 77494</span>
               </div>
               <div className="flex items-center gap-3 mb-4">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:2818990288" className="text-sm font-sans text-foreground hover:text-primary transition-colors">(281) 899-0288</a>
+                <a href="tel:2818005008" className="text-sm font-sans text-foreground hover:text-primary transition-colors">(281) 800-5008</a>
               </div>
               <Link to="/katy-tx/" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
                 Visit Katy Page →
