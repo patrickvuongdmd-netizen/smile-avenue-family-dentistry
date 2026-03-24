@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img src="/logo-full.png" alt="Smile Avenue Family Dentistry" className="h-9 w-auto brightness-0 invert" />
+              <img src="/logo-full.png" alt="Smile Avenue Family Dentistry" className="h-10 w-auto brightness-0 invert" />
             </Link>
             <p className="text-sm font-body leading-relaxed opacity-70">
               Hospitality-driven dental care for the whole family. Two convenient locations in Cypress and Katy, TX.
