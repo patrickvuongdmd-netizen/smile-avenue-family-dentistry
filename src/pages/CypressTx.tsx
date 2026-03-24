@@ -301,10 +301,10 @@ const CypressTx = () => {
               Schedule your visit today at our Cypress office. Your best smile is closer than you think.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
+              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-block bg-background text-foreground font-sans font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity">
                 Book at Cypress
               </a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
+              <a href={`tel:${CYPRESS_PHONE}`} className="inline-block bg-transparent border-2 border-background text-background font-sans font-semibold px-8 py-4 rounded-xl hover:bg-background/10 transition-colors">
                 Call {CYPRESS_PHONE_FORMATTED}
               </a>
             </div>
