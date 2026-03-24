@@ -236,19 +236,19 @@ const CypressTx = () => {
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Insurance</h3>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Most Insurance Accepted</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept most major PPO plans and will verify your benefits before your visit.</p>
-                <Link to="/patients/insurance/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Learn More →</Link>
+                <Link to="/patients/insurance/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Membership Plan</h3>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Smile Avenue Membership Plan</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">No insurance? Our in-house plan covers cleanings, exams, and gives you discounts on treatment.</p>
-                <Link to="/patients/membership-plan/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Learn More →</Link>
+                <Link to="/patients/membership-plan/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Financing</h3>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Dental Financing</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Flexible monthly payment options through CareCredit and Sunbit — apply in minutes.</p>
-                <Link to="/patients/financing/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Learn More →</Link>
+                <Link to="/patients/financing/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
           </div>
@@ -278,11 +278,11 @@ const CypressTx = () => {
             <div className="inline-block bg-card rounded-xl p-6 border border-border text-left max-w-md">
               <div className="flex items-start gap-3 mb-2">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm font-sans text-foreground">1718 N Fry Rd, Katy, TX 77449</span>
+                <span className="text-sm font-sans text-foreground">23541 Westheimer Pkwy Ste #170, Katy, TX 77494</span>
               </div>
               <div className="flex items-center gap-3 mb-4">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:2818990288" className="text-sm font-sans text-foreground hover:text-primary transition-colors">(281) 899-0288</a>
+                <a href="tel:2818005008" className="text-sm font-sans text-foreground hover:text-primary transition-colors">(281) 800-5008</a>
               </div>
               <Link to="/katy-tx/" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
                 Visit Katy Page →
@@ -301,10 +301,10 @@ const CypressTx = () => {
               Schedule your visit today at our Cypress office. Your best smile is closer than you think.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
+              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-block bg-background text-foreground font-sans font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity">
                 Book at Cypress
               </a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
+              <a href={`tel:${CYPRESS_PHONE}`} className="inline-block bg-transparent border-2 border-background text-background font-sans font-semibold px-8 py-4 rounded-xl hover:bg-background/10 transition-colors">
                 Call {CYPRESS_PHONE_FORMATTED}
               </a>
             </div>
