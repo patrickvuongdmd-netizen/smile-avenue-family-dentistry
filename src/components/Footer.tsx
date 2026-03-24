@@ -33,15 +33,16 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Patients & Resources */}
           <div>
-            <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Quick Links</h4>
+            <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Patients & Resources</h4>
             <div className="space-y-2 text-sm font-sans opacity-70">
-              <Link to="/cypress-tx/" className="block hover:opacity-100 transition-opacity">Cypress Location</Link>
-              <Link to="/katy-tx/" className="block hover:opacity-100 transition-opacity">Katy Location</Link>
-              <Link to="/about" className="block hover:opacity-100 transition-opacity">About Us</Link>
+              <Link to="/patients/new-patient-hub/" className="block hover:opacity-100 transition-opacity">New Patient Hub</Link>
+              <Link to="/patients/insurance/" className="block hover:opacity-100 transition-opacity">Insurance</Link>
+              <Link to="/patients/financing/" className="block hover:opacity-100 transition-opacity">Financing</Link>
+              <Link to="/patients/membership-plan/" className="block hover:opacity-100 transition-opacity">Membership Plan</Link>
               <Link to="/blog" className="block hover:opacity-100 transition-opacity">Blog</Link>
-              <Link to="/patients/insurance" className="block hover:opacity-100 transition-opacity">Insurance</Link>
+              <Link to="/faq/" className="block hover:opacity-100 transition-opacity">FAQ</Link>
             </div>
           </div>
 
