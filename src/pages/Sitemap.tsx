@@ -133,10 +133,10 @@ const SitemapPage = () => {
       <Helmet>
         <title>Sitemap | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Complete sitemap for Smile Avenue Family Dentistry. Find all pages for our Cypress and Katy dental offices." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/sitemap/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/sitemap/" />
         <meta property="og:title" content="Sitemap | Smile Avenue Family Dentistry" />
         <meta property="og:description" content="Complete sitemap for Smile Avenue Family Dentistry." />
-        <meta property="og:url" content="https://smileavenuedentistry.com/sitemap/" />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/sitemap/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>

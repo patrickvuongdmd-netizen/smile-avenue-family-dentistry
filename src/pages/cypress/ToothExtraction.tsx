@@ -46,7 +46,7 @@ const ToothExtractionCypress = () => (
     <Helmet>
       <title>Tooth Extraction Cypress, TX | Smile Avenue Family Dentistry</title>
       <meta name="description" content="Tooth extraction in Cypress, TX. Simple & surgical extractions, wisdom teeth removal with sedation options. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/tooth-extraction/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/tooth-extraction/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

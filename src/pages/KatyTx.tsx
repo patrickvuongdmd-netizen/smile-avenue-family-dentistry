@@ -54,7 +54,7 @@ const KatyTx = () => {
       <Helmet>
         <title>Dentist in Katy, TX | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Your family dentist in Katy, TX. Personalized care, advanced comfort, and same-day appointments at 23541 Westheimer Pkwy. Serving Katy, Cinco Ranch, Cross Creek Ranch, and Firethorne families." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/katy-tx/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/katy-tx/" />
       </Helmet>
       <Navbar phone={KATY_PHONE} phoneFormatted={KATY_PHONE_FORMATTED} bookingUrl={KATY_BOOKING} />
 
@@ -358,7 +358,7 @@ const KatyTx = () => {
               postalCode: "77494",
               addressCountry: "US",
             },
-            url: "https://smileavenuedentistry.com/katy-tx/",
+            url: "https://www.smileavenuefamilydentistry.com/katy-tx/",
             openingHoursSpecification: [
               { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:00" },
             ],

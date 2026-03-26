@@ -46,7 +46,7 @@ const DenturesCypress = () => (
     <Helmet>
       <title>Dentures Cypress, TX | Full & Partial | Smile Avenue</title>
       <meta name="description" content="Dentures in Cypress, TX. Full dentures, partial dentures & implant-supported options. Restore your smile comfortably. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/dentures/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/dentures/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

@@ -44,7 +44,7 @@ const SmileGallery = () => {
       <Helmet>
         <title>Smile Gallery — Before & After | Smile Avenue Family Dentistry</title>
         <meta name="description" content="See real before and after results from Smile Avenue patients. Browse transformations including implants, veneers, whitening, Invisalign, and crowns." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/smile-gallery/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/smile-gallery/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

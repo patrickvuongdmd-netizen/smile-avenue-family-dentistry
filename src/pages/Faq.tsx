@@ -79,7 +79,7 @@ const Faq = () => {
     <Helmet>
       <title>FAQ | Smile Avenue Family Dentistry — Cypress & Katy, TX</title>
       <meta name="description" content="Frequently asked questions about dental care at Smile Avenue Family Dentistry in Cypress and Katy, TX. Insurance, costs, implants, Invisalign, emergencies & more." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/faq/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/faq/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_FMT} bookingUrl={BOOKING} />
 

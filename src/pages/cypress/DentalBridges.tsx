@@ -46,7 +46,7 @@ const DentalBridgesCypress = () => (
     <Helmet>
       <title>Dental Bridges Cypress, TX | Smile Avenue Family Dentistry</title>
       <meta name="description" content="Dental bridges in Cypress, TX. Traditional, Maryland & implant-supported bridges to replace missing teeth. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/dental-bridges/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/dental-bridges/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

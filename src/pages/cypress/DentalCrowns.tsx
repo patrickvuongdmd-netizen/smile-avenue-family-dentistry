@@ -46,7 +46,7 @@ const DentalCrownsCypress = () => (
     <Helmet>
       <title>Dental Crowns Cypress, TX | Same-Day CEREC | Smile Avenue</title>
       <meta name="description" content="Dental crowns in Cypress, TX. Same-day CEREC crowns, porcelain & zirconia options. Restore your tooth in one visit. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/dental-crowns/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/dental-crowns/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

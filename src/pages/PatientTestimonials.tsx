@@ -36,10 +36,10 @@ const PatientTestimonials = () => {
       <Helmet>
         <title>Patient Testimonials | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Read what 5,000+ patients say about Smile Avenue Family Dentistry. Real reviews from real families in Cypress and Katy, TX." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/patient-testimonials/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/patient-testimonials/" />
         <meta property="og:title" content="Patient Testimonials | Smile Avenue Family Dentistry" />
         <meta property="og:description" content="Read what 5,000+ patients say about Smile Avenue. Real reviews from Cypress and Katy, TX families." />
-        <meta property="og:url" content="https://smileavenuedentistry.com/patient-testimonials/" />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/patient-testimonials/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>

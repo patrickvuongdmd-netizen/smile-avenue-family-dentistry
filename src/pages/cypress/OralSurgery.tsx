@@ -46,7 +46,7 @@ const OralSurgeryCypress = () => (
     <Helmet>
       <title>Oral Surgery Cypress, TX | Wisdom Teeth & More | Smile Avenue</title>
       <meta name="description" content="Oral surgery in Cypress, TX. Wisdom teeth removal, bone grafting, sinus lifts & surgical extractions with sedation. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/oral-surgery/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/oral-surgery/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

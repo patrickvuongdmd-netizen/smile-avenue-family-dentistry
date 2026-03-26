@@ -44,7 +44,7 @@ const FreeConsultation = () => {
       <Helmet>
         <title>Free Dental Consultation | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Schedule your free dental consultation at Smile Avenue. Get expert advice on implants, cosmetic dentistry, Invisalign, and more — no obligation." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/free-consultation/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/free-consultation/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

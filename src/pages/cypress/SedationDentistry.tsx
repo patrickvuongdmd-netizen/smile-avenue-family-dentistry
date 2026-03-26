@@ -46,7 +46,7 @@ const SedationDentistryCypress = () => (
     <Helmet>
       <title>Sedation Dentistry Cypress, TX | Anxiety-Free | Smile Avenue</title>
       <meta name="description" content="Sedation dentistry in Cypress, TX. Nitrous oxide, oral sedation & IV sedation for anxiety-free dental care. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/sedation-dentistry/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/sedation-dentistry/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

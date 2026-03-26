@@ -24,7 +24,7 @@ const Insurance = () => {
       <Helmet>
         <title>Insurance & Financing | Smile Avenue Family Dentistry</title>
         <meta name="description" content="We accept most major dental insurance plans. Financing available through CareCredit and Sunbit. No insurance? Ask about our membership plan." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/insurance/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/insurance/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

@@ -79,7 +79,7 @@ const NewPatientHub = () => {
       <Helmet>
         <title>New Patient Hub | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Welcome to Smile Avenue! Everything you need for your first visit — online forms, insurance info, what to expect, and how to book your appointment." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/patients/new-patient-hub/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/patients/new-patient-hub/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

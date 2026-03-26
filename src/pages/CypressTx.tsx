@@ -56,7 +56,7 @@ const CypressTx = () => {
       <Helmet>
         <title>Dentist in Cypress, TX | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Your family dentist in Cypress, TX. Personalized care, advanced comfort, and same-day appointments at 9212 Fry Rd. Serving Cypress, Bridgeland, Fairfield, and Towne Lake families." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 
@@ -366,7 +366,7 @@ const CypressTx = () => {
               latitude: 29.9691,
               longitude: -95.6977,
             },
-            url: "https://smileavenuedentistry.com/cypress-tx/",
+            url: "https://www.smileavenuefamilydentistry.com/cypress-tx/",
             openingHoursSpecification: [
               { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:00" },
             ],

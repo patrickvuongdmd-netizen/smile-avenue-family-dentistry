@@ -260,7 +260,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://smileavenuedentistry.com/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
       { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://smileavenuedentistry.com${loc.path}/` },
       { "@type": "ListItem", position: 3, name: data.serviceName, item: canonicalUrl },
     ],
