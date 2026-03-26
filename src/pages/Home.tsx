@@ -11,6 +11,7 @@ import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import { Play } from "lucide-react";
 import { useState } from "react";
+import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -34,12 +35,12 @@ const services = [
 ];
 
 const doctors = [
-  { name: "Dr. Patrick Vuong", credentials: "DMD", role: "Founder", href: "/doctors/patrick-vuong-dmd" },
-  { name: "Dr. Peter Kim", credentials: "DDS", role: "General Dentist", href: "/doctors/peter-kim-dds" },
-  { name: "Dr. Laith Yahya", credentials: "DDS", role: "General Dentist", href: "/doctors/laith-yahya-dds" },
-  { name: "Dr. Weiyen Chang", credentials: "DDS", role: "General Dentist", href: "/doctors/weiyen-chang-dds" },
-  { name: "Dr. Christian Lopez", credentials: "DDS", role: "General Dentist", href: "/doctors/christian-lopez-dds" },
-  { name: "Dr. Tamaara Willis", credentials: "DDS, MS", role: "Specialist", href: "/doctors/tamaara-willis-dds-ms" },
+  { name: "Dr. Patrick Vuong", credentials: "DMD", role: "Founder", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
+  { name: "Dr. Peter Kim", credentials: "DDS", role: "General Dentist", href: "/doctors/peter-kim-dds", imgKey: "peter-kim" },
+  { name: "Dr. Laith Yahya", credentials: "DDS", role: "General Dentist", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
+  { name: "Dr. Weiyen Chang", credentials: "DDS", role: "General Dentist", href: "/doctors/weiyen-chang-dds", imgKey: "weiyen-chang" },
+  { name: "Dr. Christian Lopez", credentials: "DDS", role: "General Dentist", href: "/doctors/christian-lopez-dds", imgKey: "christian-lopez" },
+  { name: "Dr. Tamaara Willis", credentials: "DDS, MS", role: "Specialist", href: "/doctors/tamaara-willis-dds-ms", imgKey: "tamaara-willis" },
 ];
 
 const testimonials = [
@@ -67,6 +68,7 @@ const faqs = [
 const Home = () => {
   const [activeTab, setActiveTab] = useState<"cypress" | "katy">("cypress");
   const [heroLoc, setHeroLoc] = useState<"cypress" | "katy">("cypress");
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
   const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
@@ -85,7 +87,7 @@ const Home = () => {
           name: "Smile Avenue Family Dentistry",
           url: "https://smileavenuedentistry.com",
           logo: "https://smileavenuedentistry.com/logo-full.png",
-          sameAs: ["https://facebook.com/smileavenuedentistry", "https://instagram.com/smileavenuedentistry"],
+          sameAs: ["https://www.facebook.com/SmileAvenueFamilyDentistry/", "https://www.instagram.com/smileavenuefamilydentistry/", "https://www.tiktok.com/@smileavenuetx"],
           contactPoint: [
             { "@type": "ContactPoint", telephone: "+1-832-648-1756", contactType: "customer service", areaServed: "US" },
             { "@type": "ContactPoint", telephone: "+1-281-800-5008", contactType: "customer service", areaServed: "US" },
@@ -112,6 +114,7 @@ const Home = () => {
         })}</script>
         <meta property="og:title" content="Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX" />
         <meta property="og:description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments." />
+        <meta property="og:image" content={OFFICE_IMAGES.homepageHero} />
         <meta property="og:url" content="https://smileavenuedentistry.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
@@ -145,7 +148,16 @@ const Home = () => {
                   <span>4.9 from 5,000+ reviews</span>
                 </div>
               </div>
-              <div className="aspect-[4/3] rounded-2xl bg-muted flex items-center justify-center text-muted-foreground text-sm font-sans" role="img" aria-label="Happy family smiling at Smile Avenue Family Dentistry">Hero Image — Happy Family Smiling</div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src={OFFICE_IMAGES.homepageHero}
+                  alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice in Cypress and Katy, TX"
+                  className="w-full h-full object-cover"
+                  fetchPriority="high"
+                  width={800}
+                  height={600}
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -193,12 +205,37 @@ const Home = () => {
             <h2 className="section-heading">Take a Virtual Tour</h2>
             <p className="section-body max-w-2xl mx-auto">Step inside Smile Avenue and see why thousands of Houston families trust us with their smiles.</p>
             <div className="max-w-4xl mx-auto mt-8">
-              <div className="aspect-video rounded-2xl bg-muted relative flex items-center justify-center overflow-hidden group cursor-pointer shadow-lg" role="img" aria-label="Virtual tour video of Smile Avenue Family Dentistry office">
-                <div className="absolute inset-0 bg-foreground/5 group-hover:bg-foreground/10 transition-colors" />
-                <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform z-10 shadow-xl">
-                  <Play className="w-8 h-8 text-primary-foreground ml-1" aria-hidden="true" />
-                </div>
-                <span className="absolute bottom-4 left-4 text-xs font-sans text-muted-foreground bg-background/80 px-3 py-1 rounded-full">YouTube Video Embed</span>
+              <div className="aspect-video rounded-2xl overflow-hidden relative shadow-lg">
+                {videoPlaying ? (
+                  <video
+                    src={HERO_VIDEO_URL}
+                    autoPlay
+                    controls
+                    className="w-full h-full object-cover"
+                    aria-label="Virtual tour video of Smile Avenue Family Dentistry office"
+                  />
+                ) : (
+                  <button
+                    onClick={() => setVideoPlaying(true)}
+                    className="w-full h-full relative group cursor-pointer"
+                    aria-label="Play office tour video"
+                  >
+                    <img
+                      src={OFFICE_IMAGES.homepageHero}
+                      alt="Smile Avenue Family Dentistry office tour video thumbnail"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      width={1280}
+                      height={720}
+                    />
+                    <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+                        <Play className="w-8 h-8 text-primary-foreground ml-1" aria-hidden="true" />
+                      </div>
+                    </div>
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -220,14 +257,19 @@ const Home = () => {
             <p className="kicker text-center">MEET OUR TEAM</p>
             <h2 className="section-heading text-center">Your Smile Avenue Doctors</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-10">
-              {doctors.map((doc, i) => (
-                <Link key={i} to={doc.href} className="text-center group">
-                  <div className="w-24 h-24 rounded-full bg-muted mx-auto mb-3 group-hover:ring-4 ring-primary/20 transition-all" />
-                  <h3 className="font-sans text-sm font-semibold text-foreground">{doc.name}</h3>
-                  <p className="text-xs font-sans text-muted-foreground">{doc.credentials}</p>
-                  <p className="text-xs font-sans text-primary mt-1">{doc.role}</p>
-                </Link>
-              ))}
+              {doctors.map((doc, i) => {
+                const img = DOCTOR_IMAGES[doc.imgKey];
+                return (
+                  <Link key={i} to={doc.href} className="text-center group">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 group-hover:ring-4 ring-primary/20 transition-all overflow-hidden">
+                      <img src={img.url} alt={img.alt} className="w-full h-full object-cover" loading="lazy" width={96} height={96} />
+                    </div>
+                    <h3 className="font-sans text-sm font-semibold text-foreground">{doc.name}</h3>
+                    <p className="text-xs font-sans text-muted-foreground">{doc.credentials}</p>
+                    <p className="text-xs font-sans text-primary mt-1">{doc.role}</p>
+                  </Link>
+                );
+              })}
             </div>
             <div className="text-center mt-8">
               <Link to="/doctors" className="btn-secondary">Meet All Doctors</Link>
@@ -247,7 +289,9 @@ const Home = () => {
             <div className="max-w-3xl mx-auto">
               {activeTab === "cypress" ? (
                 <div className="bg-card rounded-2xl border border-border p-8 grid md:grid-cols-2 gap-8">
-                  <div className="aspect-video rounded-xl bg-muted flex items-center justify-center text-sm font-sans text-muted-foreground">Map — Cypress</div>
+                  <div className="aspect-video rounded-xl overflow-hidden">
+                    <img src={OFFICE_IMAGES.cypressHero} alt="Smile Avenue Cypress office on Fry Road" className="w-full h-full object-cover" loading="lazy" width={600} height={400} />
+                  </div>
                   <div>
                     <h3 className="font-display text-xl font-bold text-foreground mb-4">Smile Avenue Cypress</h3>
                     <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
@@ -260,7 +304,9 @@ const Home = () => {
                 </div>
               ) : (
                 <div className="bg-card rounded-2xl border border-border p-8 grid md:grid-cols-2 gap-8">
-                  <div className="aspect-video rounded-xl bg-muted flex items-center justify-center text-sm font-sans text-muted-foreground">Map — Katy</div>
+                  <div className="aspect-video rounded-xl overflow-hidden">
+                    <img src={OFFICE_IMAGES.katyHero} alt="Smile Avenue Katy office on Westheimer Parkway" className="w-full h-full object-cover" loading="lazy" width={600} height={400} />
+                  </div>
                   <div>
                     <h3 className="font-display text-xl font-bold text-foreground mb-4">Smile Avenue Katy</h3>
                     <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
@@ -276,8 +322,33 @@ const Home = () => {
           </div>
         </section>
 
-        {/* TESTIMONIALS */}
+        {/* VIDEO TESTIMONIALS */}
         <section className="section-padding section-alt">
+          <div className="container mx-auto">
+            <p className="kicker text-center">PATIENT STORIES</p>
+            <h2 className="section-heading text-center">Watch Real Patient Experiences</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+              {VIDEO_TESTIMONIALS.map((v, i) => (
+                <figure key={i} className="bg-card rounded-xl border border-border overflow-hidden group cursor-pointer">
+                  <div className="aspect-video relative overflow-hidden">
+                    <img src={v.thumbnail} alt={`Video testimonial: ${v.title}`} className="w-full h-full object-cover" loading="lazy" width={640} height={360} />
+                    <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors flex items-center justify-center">
+                      <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Play className="w-6 h-6 text-primary-foreground ml-1" aria-hidden="true" />
+                      </div>
+                    </div>
+                  </div>
+                  <figcaption className="p-4">
+                    <h3 className="font-sans text-sm font-semibold text-foreground">{v.title}</h3>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* TESTIMONIALS */}
+        <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker text-center">PATIENT REVIEWS</p>
             <h2 className="section-heading text-center">What Our Patients Say</h2>

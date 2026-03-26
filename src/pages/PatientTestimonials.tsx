@@ -8,17 +8,11 @@ import TestimonialCard from "@/components/TestimonialCard";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
+import { VIDEO_TESTIMONIALS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
-
-const videoTestimonials = [
-  { name: "Maria's Implant Journey", procedure: "Dental Implants" },
-  { name: "The Johnson Family", procedure: "Pediatric Dentistry" },
-  { name: "Robert's Smile Makeover", procedure: "Veneers" },
-  { name: "Sarah's Invisalign Results", procedure: "Invisalign" },
-];
 
 const reviews = [
   { quote: "I always love to come to Smile Dentistry. I trust the care that they give me. The team makes me feel so special every time.", name: "Thao H.", source: "Google Review" },
@@ -93,17 +87,19 @@ const PatientTestimonials = () => {
           <div className="container mx-auto">
             <p className="kicker text-center">VIDEO STORIES</p>
             <h2 className="section-heading text-center">Watch Real Patient Experiences</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-              {videoTestimonials.map((v, i) => (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+              {VIDEO_TESTIMONIALS.map((v, i) => (
                 <figure key={i} className="bg-card rounded-xl border border-border overflow-hidden group cursor-pointer">
-                  <div className="aspect-video bg-muted relative flex items-center justify-center" role="img" aria-label={`Video testimonial: ${v.name} — ${v.procedure}`}>
-                    <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play className="w-6 h-6 text-primary-foreground ml-1" aria-hidden="true" />
+                  <div className="aspect-video relative overflow-hidden">
+                    <img src={v.thumbnail} alt={`Video testimonial: ${v.title}`} className="w-full h-full object-cover" loading="lazy" width={640} height={360} />
+                    <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors flex items-center justify-center">
+                      <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Play className="w-6 h-6 text-primary-foreground ml-1" aria-hidden="true" />
+                      </div>
                     </div>
                   </div>
                   <figcaption className="p-4">
-                    <h3 className="font-sans text-sm font-semibold text-foreground">{v.name}</h3>
-                    <p className="text-xs font-sans text-muted-foreground">{v.procedure}</p>
+                    <h3 className="font-sans text-sm font-semibold text-foreground">{v.title}</h3>
                   </figcaption>
                 </figure>
               ))}

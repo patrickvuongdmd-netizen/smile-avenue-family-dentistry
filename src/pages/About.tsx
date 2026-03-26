@@ -5,15 +5,16 @@ import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import DoctorCard from "@/components/DoctorCard";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756";
 const PHONE_FORMATTED = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 
 const doctors = [
-  { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Lead dentist with a focus on comprehensive family and implant dentistry.", href: "/cypress-tx/doctors/dr-patrick-vuong/" },
-  { name: "Dr. Peter Kim", credentials: "DDS", bio: "Trusted for his gentle approach and commitment to patient comfort.", href: "/cypress-tx/doctors/dr-peter-kim/" },
-  { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Known for his integrity, precision, and passion for restorative care.", href: "/cypress-tx/doctors/dr-laith-yahya/" },
+  { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Lead dentist with a focus on comprehensive family and implant dentistry.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
+  { name: "Dr. Peter Kim", credentials: "DDS", bio: "Trusted for his gentle approach and commitment to patient comfort.", href: "/doctors/peter-kim-dds", imgKey: "peter-kim" },
+  { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Known for his integrity, precision, and passion for restorative care.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
 ];
 
 const values = [
@@ -50,8 +51,8 @@ const About = () => {
                   With two convenient locations in Cypress and Katy, TX, we've grown into a trusted practice serving thousands of families across the greater Houston area — and we're just getting started.
                 </p>
               </div>
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md">
-                <span className="text-sm font-sans text-muted-foreground">Team Photo</span>
+              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
+                <img src={OFFICE_IMAGES.aboutHero} alt="Smile Avenue Family Dentistry team photo" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
               </div>
             </div>
           </div>

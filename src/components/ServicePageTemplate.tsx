@@ -11,6 +11,7 @@ import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import { ReactNode } from "react";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 interface SubService {
   title: string;
@@ -316,8 +317,21 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   <a href={`tel:${loc.phone}`} className="btn-secondary" aria-label={`Call ${loc.phoneFormatted}`}>{data.heroCta2}</a>
                 </div>
               </div>
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md" role="img" aria-label={`${data.serviceName} treatment at Smile Avenue ${loc.name} office`}>
-                <span className="text-sm font-sans text-muted-foreground">{data.heroImage}</span>
+              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
+                {SERVICE_IMAGES[data.serviceSlug] ? (
+                  <img
+                    src={SERVICE_IMAGES[data.serviceSlug].url}
+                    alt={SERVICE_IMAGES[data.serviceSlug].alt}
+                    className="w-full h-full object-cover"
+                    fetchPriority="high"
+                    width={640}
+                    height={480}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted flex items-center justify-center">
+                    <span className="text-sm font-sans text-muted-foreground">{data.heroImage}</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
