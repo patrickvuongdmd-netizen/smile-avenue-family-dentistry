@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone, ChevronDown, Globe } from "lucide-react";
 
 interface NavbarProps {
   phone: string;
