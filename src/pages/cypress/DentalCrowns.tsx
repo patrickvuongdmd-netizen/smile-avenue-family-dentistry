@@ -12,17 +12,17 @@ const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 
 const whyChoose = [
-  { title: "Same-Day CEREC Crowns", description: "Designed, milled, and placed in a single appointment — about 2 hours from start to finish. No temporary, no second visit.", icon: <Zap className="w-5 h-5" /> },
+  { title: "In-House Smile Dental Lab", description: "Custom crowns designed and fabricated on-site for precise fit, faster turnaround, and perfect shade matching — no outsourcing.", icon: <Zap className="w-5 h-5" /> },
   { title: "Digital Medit Impressions", description: "No goopy molds. We use Medit digital scanners for precise, comfortable impressions that produce better-fitting crowns.", icon: <Scan className="w-5 h-5" /> },
-  { title: "In-House Smile Dental Lab", description: "For complex cases, our on-site lab fabricates custom crowns with precise shade matching and faster turnaround.", icon: <Wrench className="w-5 h-5" /> },
+  { title: "Porcelain & Zirconia Options", description: "We offer both Emax porcelain and zirconia crown materials — each custom-selected to match your tooth and functional needs.", icon: <Wrench className="w-5 h-5" /> },
   { title: "Natural Shade-Matched Appearance", description: "Every crown is custom color-matched to blend seamlessly with your natural teeth for an invisible restoration.", icon: <Crown className="w-5 h-5" /> },
 ];
 
 const processSteps = [
-  { number: "01", title: "Exam & 3D Digital Scan", description: "We examine the tooth and take a precise 3D digital scan — no goopy impressions needed." },
-  { number: "02", title: "Chairside Crown Design", description: "Your crown is designed right in front of you using CEREC software for a custom, precise fit." },
-  { number: "03", title: "In-Office Milling", description: "The crown is milled from a solid block of porcelain right here in our office while you wait." },
-  { number: "04", title: "Permanent Bonding — Same Visit", description: "The finished crown is bonded to your tooth, polished, and adjusted for a perfect bite. You leave with your final crown." },
+  { number: "01", title: "Examination & Digital Scan", description: "We examine the tooth and take a precise 3D digital scan using our Medit scanner — no goopy impressions needed." },
+  { number: "02", title: "Crown Design", description: "Your crown is designed using a digital workflow for a custom, precise fit and natural appearance." },
+  { number: "03", title: "In-House Fabrication", description: "Your crown is fabricated in our Smile Dental Lab using high-quality porcelain or zirconia for strength and beauty." },
+  { number: "04", title: "Fitting & Permanent Bonding", description: "Your finished crown is fitted, adjusted for a perfect bite, and permanently bonded at your follow-up appointment." },
 ];
 
 const testimonials = [
