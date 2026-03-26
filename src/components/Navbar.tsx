@@ -52,7 +52,30 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const navRef = useRef<HTMLDivElement>(null);
 
-  const locationPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
+  const location = useLocation();
+  const isSpanish = location.pathname.startsWith("/es");
+  const locationPrefix = location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
+
+  const LanguageToggle = ({ className = "" }: { className?: string }) => (
+    <div className={`flex items-center gap-1.5 text-xs font-sans font-semibold ${className}`}>
+      <Globe className="w-3.5 h-3.5 text-muted-foreground" />
+      <Link
+        to="/"
+        className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+        onClick={() => setMobileOpen(false)}
+      >
+        EN
+      </Link>
+      <span className="text-border">|</span>
+      <Link
+        to="/es"
+        className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+        onClick={() => setMobileOpen(false)}
+      >
+        ES
+      </Link>
+    </div>
+  );
 
   const openDropdown = (key: DropdownKey) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
