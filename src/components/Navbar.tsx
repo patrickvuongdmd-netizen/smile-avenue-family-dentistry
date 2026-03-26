@@ -260,7 +260,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             <Link to="/convenient-locations" className="py-3" onClick={() => setMobileOpen(false)}>Locations</Link>
             <Link to="/contact" className="py-3" onClick={() => setMobileOpen(false)}>Contact</Link>
             <Link to="/blog" className="py-3" onClick={() => setMobileOpen(false)}>Blog</Link>
-            <Link to="/es" className="py-3 text-primary" onClick={() => setMobileOpen(false)}>Español</Link>
+            <div className="py-3"><LanguageToggle /></div>
             <a href={`tel:${phone}`} className="flex items-center gap-2 py-3 text-primary font-semibold">
               <Phone className="w-4 h-4" /> {phoneFormatted}
             </a>
