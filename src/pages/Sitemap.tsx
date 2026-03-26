@@ -96,15 +96,16 @@ const sections = [
     ],
   },
   {
-    title: "Doctors",
+    title: "Team & Doctors",
     links: [
+      { label: "Meet Our Team", href: "/our-team" },
       { label: "Meet Our Doctors", href: "/doctors" },
       { label: "Dr. Patrick Vuong, DMD", href: "/doctors/patrick-vuong-dmd" },
       { label: "Dr. Peter Kim, DDS", href: "/doctors/peter-kim-dds" },
       { label: "Dr. Laith Yahya, DDS", href: "/doctors/laith-yahya-dds" },
-      { label: "Dr. Weiyen Chang, DDS", href: "/doctors/weiyen-chang-dds" },
-      { label: "Dr. Christian Lopez, DDS", href: "/doctors/christian-lopez-dds" },
-      { label: "Dr. Tamaara Willis, DDS, MS", href: "/doctors/tamaara-willis-dds-ms" },
+      { label: "Dr. Sameer Bilal, DDS", href: "/doctors/sameer-bilal-dds" },
+      { label: "Dr. Sarah Maredia, DDS", href: "/doctors/sarah-maredia-dds" },
+      { label: "Dr. Shayan Alkhiro, DDS", href: "/doctors/shayan-alkhiro-dds" },
     ],
   },
   {

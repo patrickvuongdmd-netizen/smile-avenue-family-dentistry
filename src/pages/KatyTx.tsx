@@ -18,11 +18,10 @@ const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc
 const KATY_MAPS = "https://maps.app.goo.gl/katyoffice";
 
 const doctors = [
+const doctors = [
   { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Founder of Smile Avenue, known for his comprehensive approach to family and implant dentistry.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
-  { name: "Dr. Weiyen Chang", credentials: "DDS", bio: "Passionate about technology-driven dentistry and delivering precise, comfortable care.", href: "/doctors/weiyen-chang-dds", imgKey: "weiyen-chang" },
-  { name: "Dr. Christian Lopez", credentials: "DDS", bio: "Dedicated to patient education and building lasting relationships with every family.", href: "/doctors/christian-lopez-dds", imgKey: "christian-lopez" },
-  { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Known for his integrity, precision, and passion for restorative care.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
-  { name: "Dr. Tamaara Willis", credentials: "DDS, MS", bio: "Specialist bringing advanced training and a gentle touch to every procedure.", href: "/doctors/tamaara-willis-dds-ms", imgKey: "tamaara-willis" },
+  { name: "Dr. Sameer Bilal", credentials: "DDS", bio: "Compassionate, detail-oriented approach to general dentistry.", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
+  { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry at both locations.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
 ];
 
 const services = [

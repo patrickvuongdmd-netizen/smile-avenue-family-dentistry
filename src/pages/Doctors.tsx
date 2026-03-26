@@ -13,10 +13,10 @@ import { DOCTOR_IMAGES } from "@/lib/images";
 const doctors = [
   { name: "Dr. Patrick Vuong", credentials: "DMD", title: "Founder", tagline: "Comprehensive, patient-centered implant and digital dentistry", locations: "Cypress & Katy", slug: "patrick-vuong-dmd", imgKey: "patrick-vuong" },
   { name: "Dr. Peter Kim", credentials: "DDS", title: "General Dentist", tagline: "Known for gentle approach and patient comfort", locations: "Cypress", slug: "peter-kim-dds", imgKey: "peter-kim" },
-  { name: "Dr. Laith Yahya", credentials: "DDS", title: "General Dentist", tagline: "Integrity, precision & passion for restorative care", locations: "Cypress & Katy", slug: "laith-yahya-dds", imgKey: "laith-yahya" },
-  { name: "Dr. Weiyen Chang", credentials: "DDS", title: "General Dentist", tagline: "Technology-driven dentistry", locations: "Katy", slug: "weiyen-chang-dds", imgKey: "weiyen-chang" },
-  { name: "Dr. Christian Lopez", credentials: "DDS", title: "General Dentist", tagline: "Dedicated to compassionate, high-quality care", locations: "Katy", slug: "christian-lopez-dds", imgKey: "christian-lopez" },
-  { name: "Dr. Tamaara Willis", credentials: "DDS, MS", title: "Specialist", tagline: "Advanced specialty training with MS credential", locations: "Both Locations", slug: "tamaara-willis-dds-ms", imgKey: "tamaara-willis" },
+  { name: "Dr. Laith Yahya", credentials: "DDS", title: "General Dentist", tagline: "Integrity, precision & passion for restorative care", locations: "Cypress", slug: "laith-yahya-dds", imgKey: "laith-yahya" },
+  { name: "Dr. Sameer Bilal", credentials: "DDS", title: "General Dentist", tagline: "Compassionate, detail-oriented general dentistry", locations: "Katy", slug: "sameer-bilal-dds", imgKey: "sameer-bilal" },
+  { name: "Dr. Sarah Maredia", credentials: "DDS", title: "General Dentist", tagline: "Passionate about cosmetic and family dentistry", locations: "Cypress & Katy", slug: "sarah-maredia-dds", imgKey: "sarah-maredia" },
+  { name: "Dr. Shayan Alkhiro", credentials: "DDS", title: "General Dentist", tagline: "Dedicated to gentle, high-quality dental care", locations: "Cypress", slug: "shayan-alkhiro-dds", imgKey: "shayan-alkhiro" },
 ];
 
 const PHONE = "8326481756";
@@ -49,6 +49,7 @@ const Doctors = () => {
             <p className="kicker">OUR TEAM</p>
             <h1 className="section-heading text-4xl md:text-5xl">Meet Your Smile Avenue Dentists</h1>
             <p className="section-body">Our team of experienced dentists combines advanced training with genuine compassion to deliver the best care for your family.</p>
+            <Link to="/our-team" className="btn-secondary mt-4">Meet the Full Team →</Link>
           </div>
         </div>
       </section>
@@ -61,15 +62,21 @@ const Doctors = () => {
               const img = DOCTOR_IMAGES[doc.imgKey];
               return (
                 <div key={doc.slug} className="bg-card rounded-2xl border border-border overflow-hidden group hover:shadow-lg transition-shadow">
-                  <div className="aspect-[3/4] overflow-hidden">
-                    <img
-                      src={img.url}
-                      alt={img.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      width={400}
-                      height={533}
-                    />
+                  <div className="aspect-[3/4] overflow-hidden bg-muted">
+                    {img ? (
+                      <img
+                        src={img.url}
+                        alt={img.alt}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                        width={400}
+                        height={533}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-4xl font-display font-bold text-primary/30">{doc.name.split(" ").slice(1, 2).join("")[0]}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <h2 className="font-display text-xl font-bold text-foreground">{doc.name}</h2>

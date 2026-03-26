@@ -142,9 +142,10 @@ const App = () => (
             <Route path="/doctors/patrick-vuong-dmd" element={<DrPatrickVuong />} />
             <Route path="/doctors/peter-kim-dds" element={<DrPeterKim />} />
             <Route path="/doctors/laith-yahya-dds" element={<DrLaithYahya />} />
-            <Route path="/doctors/weiyen-chang-dds" element={<DrWeiyenChang />} />
-            <Route path="/doctors/christian-lopez-dds" element={<DrChristianLopez />} />
-            <Route path="/doctors/tamaara-willis-dds-ms" element={<DrTamaaraWillis />} />
+            <Route path="/doctors/sameer-bilal-dds" element={<DrSameerBilal />} />
+            <Route path="/doctors/sarah-maredia-dds" element={<DrSarahMaredia />} />
+            <Route path="/doctors/shayan-alkhiro-dds" element={<DrShayanAlkhiro />} />
+            <Route path="/our-team" element={<OurTeam />} />
             <Route path="/free-consultation" element={<FreeConsultation />} />
             <Route path="/specials" element={<Specials />} />
             <Route path="/membership-plan" element={<MembershipPlan />} />
