@@ -22,6 +22,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/cypress-tx" element={<CypressTx />} />
+            <Route path="/convenient-locations" element={<Locations />} />
+            <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
