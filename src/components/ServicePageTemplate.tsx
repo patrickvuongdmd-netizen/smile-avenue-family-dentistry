@@ -11,6 +11,7 @@ import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import { ReactNode } from "react";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 interface SubService {
   title: string;
