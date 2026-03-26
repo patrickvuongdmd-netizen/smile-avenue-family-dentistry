@@ -51,8 +51,8 @@ const About = () => {
                   With two convenient locations in Cypress and Katy, TX, we've grown into a trusted practice serving thousands of families across the greater Houston area — and we're just getting started.
                 </p>
               </div>
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md">
-                <span className="text-sm font-sans text-muted-foreground">Team Photo</span>
+              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
+                <img src={OFFICE_IMAGES.aboutHero} alt="Smile Avenue Family Dentistry team photo" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
               </div>
             </div>
           </div>
