@@ -23,8 +23,31 @@ import DentalBridgesCypress from "./pages/cypress/DentalBridges.tsx";
 import ToothExtractionCypress from "./pages/cypress/ToothExtraction.tsx";
 import OralSurgeryCypress from "./pages/cypress/OralSurgery.tsx";
 import SedationDentistryCypress from "./pages/cypress/SedationDentistry.tsx";
+import EmergencyDentistKaty from "./pages/katy/EmergencyDentist.tsx";
+import DentalImplantsKaty from "./pages/katy/DentalImplants.tsx";
+import CosmeticDentistryKaty from "./pages/katy/CosmeticDentistry.tsx";
+import TeethWhiteningKaty from "./pages/katy/TeethWhitening.tsx";
+import DentalCrownsKaty from "./pages/katy/DentalCrowns.tsx";
+import AllOnXKaty from "./pages/katy/AllOnX.tsx";
+import InvisalignKaty from "./pages/katy/Invisalign.tsx";
+import RootCanalKaty from "./pages/katy/RootCanal.tsx";
+import DentalCleaningKaty from "./pages/katy/DentalCleaning.tsx";
+import PediatricDentistryKaty from "./pages/katy/PediatricDentistry.tsx";
+import DenturesKaty from "./pages/katy/Dentures.tsx";
+import VeneersKaty from "./pages/katy/Veneers.tsx";
+import DentalBridgesKaty from "./pages/katy/DentalBridges.tsx";
+import ToothExtractionKaty from "./pages/katy/ToothExtraction.tsx";
+import OralSurgeryKaty from "./pages/katy/OralSurgery.tsx";
+import SedationDentistryKaty from "./pages/katy/SedationDentistry.tsx";
 import Locations from "./pages/Locations.tsx";
 import NewPatientHub from "./pages/NewPatientHub.tsx";
+import Doctors from "./pages/Doctors.tsx";
+import DrPatrickVuong from "./pages/doctors/PatrickVuong.tsx";
+import DrPeterKim from "./pages/doctors/PeterKim.tsx";
+import DrLaithYahya from "./pages/doctors/LaithYahya.tsx";
+import DrWeiyenChang from "./pages/doctors/WeiyenChang.tsx";
+import DrChristianLopez from "./pages/doctors/ChristianLopez.tsx";
+import DrTamaaraWillis from "./pages/doctors/TamaaraWillis.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -56,9 +79,31 @@ const App = () => (
             <Route path="/cypress-tx/oral-surgery" element={<OralSurgeryCypress />} />
             <Route path="/cypress-tx/sedation-dentistry" element={<SedationDentistryCypress />} />
             <Route path="/katy-tx" element={<KatyTx />} />
+            <Route path="/katy-tx/emergency-dentist" element={<EmergencyDentistKaty />} />
+            <Route path="/katy-tx/dental-implants" element={<DentalImplantsKaty />} />
+            <Route path="/katy-tx/cosmetic-dentistry" element={<CosmeticDentistryKaty />} />
+            <Route path="/katy-tx/teeth-whitening" element={<TeethWhiteningKaty />} />
+            <Route path="/katy-tx/dental-crowns" element={<DentalCrownsKaty />} />
+            <Route path="/katy-tx/all-on-x-implants" element={<AllOnXKaty />} />
+            <Route path="/katy-tx/invisalign" element={<InvisalignKaty />} />
+            <Route path="/katy-tx/root-canal" element={<RootCanalKaty />} />
+            <Route path="/katy-tx/dental-cleaning" element={<DentalCleaningKaty />} />
+            <Route path="/katy-tx/pediatric-dentistry" element={<PediatricDentistryKaty />} />
+            <Route path="/katy-tx/dentures" element={<DenturesKaty />} />
+            <Route path="/katy-tx/veneers" element={<VeneersKaty />} />
+            <Route path="/katy-tx/dental-bridges" element={<DentalBridgesKaty />} />
+            <Route path="/katy-tx/tooth-extraction" element={<ToothExtractionKaty />} />
+            <Route path="/katy-tx/oral-surgery" element={<OralSurgeryKaty />} />
+            <Route path="/katy-tx/sedation-dentistry" element={<SedationDentistryKaty />} />
             <Route path="/convenient-locations" element={<Locations />} />
             <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/doctors" element={<Doctors />} />
+            <Route path="/doctors/patrick-vuong-dmd" element={<DrPatrickVuong />} />
+            <Route path="/doctors/peter-kim-dds" element={<DrPeterKim />} />
+            <Route path="/doctors/laith-yahya-dds" element={<DrLaithYahya />} />
+            <Route path="/doctors/weiyen-chang-dds" element={<DrWeiyenChang />} />
+            <Route path="/doctors/christian-lopez-dds" element={<DrChristianLopez />} />
+            <Route path="/doctors/tamaara-willis-dds-ms" element={<DrTamaaraWillis />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
