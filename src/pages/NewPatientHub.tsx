@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, Clock, ClipboardList, Stethoscope, FileText, Check, Download } from "lucide-react";
+import { OFFICE_IMAGES } from "@/lib/images";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
