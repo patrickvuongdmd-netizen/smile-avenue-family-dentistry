@@ -87,11 +87,11 @@ const Home = () => {
       <Helmet>
         <title>Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX</title>
         <meta name="description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments. Book online today." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/" />
         <meta property="og:title" content="Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX" />
         <meta property="og:description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments." />
         <meta property="og:image" content={OFFICE_IMAGES.homepageHero} />
-        <meta property="og:url" content="https://smileavenuedentistry.com/" />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>
