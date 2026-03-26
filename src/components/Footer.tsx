@@ -107,8 +107,10 @@ const Footer = () => {
               className="flex gap-2 max-w-sm w-full lg:w-auto"
             >
               <div className="relative flex-1">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 opacity-40" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 opacity-40" aria-hidden="true" />
+                <label htmlFor="footer-email" className="sr-only">Email address</label>
                 <input
+                  id="footer-email"
                   type="email"
                   required
                   value={email}

@@ -8,6 +8,8 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
+import SkipToContent from "@/components/SkipToContent";
+import { Play } from "lucide-react";
 import { useState } from "react";
 
 const CYPRESS_PHONE = "8326481756";
@@ -72,6 +74,7 @@ const Home = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX</title>
         <meta name="description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments. Book online today." />
@@ -116,7 +119,7 @@ const Home = () => {
       <Navbar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <TrustStrip />
 
-      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
@@ -142,7 +145,7 @@ const Home = () => {
                   <span>4.9 from 5,000+ reviews</span>
                 </div>
               </div>
-              <div className="aspect-[4/3] rounded-2xl bg-muted flex items-center justify-center text-muted-foreground text-sm font-sans">Hero Image — Happy Family Smiling</div>
+              <div className="aspect-[4/3] rounded-2xl bg-muted flex items-center justify-center text-muted-foreground text-sm font-sans" role="img" aria-label="Happy family smiling at Smile Avenue Family Dentistry">Hero Image — Happy Family Smiling</div>
             </div>
           </div>
         </section>
@@ -183,8 +186,26 @@ const Home = () => {
           </div>
         </section>
 
-        {/* BRAND STATEMENT */}
+        {/* SEE OUR OFFICE — VIDEO */}
         <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">SEE OUR OFFICE</p>
+            <h2 className="section-heading">Take a Virtual Tour</h2>
+            <p className="section-body max-w-2xl mx-auto">Step inside Smile Avenue and see why thousands of Houston families trust us with their smiles.</p>
+            <div className="max-w-4xl mx-auto mt-8">
+              <div className="aspect-video rounded-2xl bg-muted relative flex items-center justify-center overflow-hidden group cursor-pointer shadow-lg" role="img" aria-label="Virtual tour video of Smile Avenue Family Dentistry office">
+                <div className="absolute inset-0 bg-foreground/5 group-hover:bg-foreground/10 transition-colors" />
+                <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform z-10 shadow-xl">
+                  <Play className="w-8 h-8 text-primary-foreground ml-1" aria-hidden="true" />
+                </div>
+                <span className="absolute bottom-4 left-4 text-xs font-sans text-muted-foreground bg-background/80 px-3 py-1 rounded-full">YouTube Video Embed</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* BRAND STATEMENT */}
+        <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
             <p className="kicker">OUR MISSION</p>
             <h2 className="section-heading text-3xl md:text-4xl">Helping Houston Families Love Their Smiles Again</h2>

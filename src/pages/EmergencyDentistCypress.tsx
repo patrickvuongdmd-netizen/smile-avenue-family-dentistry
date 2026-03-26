@@ -8,6 +8,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
+import SkipToContent from "@/components/SkipToContent";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -71,6 +72,7 @@ const faqs = [
 const EmergencyDentistCypress = () => {
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Emergency Dentist Cypress, TX | Same-Day Care | Smile Avenue</title>
         <meta name="description" content="Dental emergency in Cypress, TX? Smile Avenue offers same-day emergency appointments for toothaches, broken teeth, lost fillings & more. Call (832) 648-1756." />
@@ -84,7 +86,17 @@ const EmergencyDentistCypress = () => {
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
 
-      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      {/* Emergency Banner */}
+      <div className="bg-destructive text-destructive-foreground py-3 text-center" role="alert">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-sans font-bold">
+            🦷 Dental Emergency? Call Now — Same-Day Appointments Available:{" "}
+            <a href={`tel:${CYPRESS_PHONE}`} className="underline hover:no-underline">{CYPRESS_PHONE_FORMATTED}</a>
+          </p>
+        </div>
+      </div>
+
+      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
