@@ -5,6 +5,9 @@ import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import TrustStrip from "@/components/TrustStrip";
+import BackToTop from "@/components/BackToTop";
+import SkipToContent from "@/components/SkipToContent";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -31,28 +34,57 @@ const reviews = [
 const PatientTestimonials = () => {
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Patient Testimonials | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Read what 5,000+ patients say about Smile Avenue Family Dentistry. Real reviews from real families in Cypress and Katy, TX." />
         <link rel="canonical" href="https://smileavenuedentistry.com/patient-testimonials/" />
+        <meta property="og:title" content="Patient Testimonials | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Read what 5,000+ patients say about Smile Avenue. Real reviews from Cypress and Katy, TX families." />
+        <meta property="og:url" content="https://smileavenuedentistry.com/patient-testimonials/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center max-w-3xl">
-            <nav className="mb-6 text-xs font-sans text-muted-foreground text-left">
+            <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground text-left">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span className="mx-2">›</span>
+              <span className="mx-2" aria-hidden="true">›</span>
               <span className="text-foreground">Patient Testimonials</span>
             </nav>
             <p className="kicker">PATIENT STORIES</p>
             <h1 className="section-heading text-4xl md:text-5xl">What Our Patients Say</h1>
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />)}</div>
+              <div className="flex gap-0.5" aria-label="4.9 out of 5 stars">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-primary text-primary" />)}
+              </div>
               <span className="font-display text-2xl font-bold text-foreground">4.9</span>
             </div>
             <p className="section-body">from 5,000+ verified reviews across Google, Yelp, and Facebook</p>
+          </div>
+        </section>
+
+        {/* Google Reviews Widget */}
+        <section className="py-12 bg-card border-y border-border">
+          <div className="container mx-auto text-center">
+            <h2 className="font-display text-2xl font-bold text-foreground mb-2">See Us On Google</h2>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="flex gap-0.5" aria-label="4.9 stars on Google">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
+              </div>
+              <span className="font-display text-xl font-bold text-foreground">4.9</span>
+              <span className="text-sm font-sans text-muted-foreground">· 5,000+ reviews</span>
+            </div>
+            <div className="bg-muted rounded-xl p-8 max-w-2xl mx-auto border border-border">
+              <p className="text-sm font-sans text-muted-foreground">Google Reviews Widget — Embed your Google Business Profile reviews here</p>
+            </div>
+            <a href="https://g.page/smileavenuedentistry/review" target="_blank" rel="noopener noreferrer" className="btn-secondary mt-6 inline-flex items-center gap-2" aria-label="Leave a review on Google">
+              Leave Us a Review <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
         </section>
 
@@ -63,17 +95,17 @@ const PatientTestimonials = () => {
             <h2 className="section-heading text-center">Watch Real Patient Experiences</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
               {videoTestimonials.map((v, i) => (
-                <div key={i} className="bg-card rounded-xl border border-border overflow-hidden group cursor-pointer">
-                  <div className="aspect-video bg-muted relative flex items-center justify-center">
+                <figure key={i} className="bg-card rounded-xl border border-border overflow-hidden group cursor-pointer">
+                  <div className="aspect-video bg-muted relative flex items-center justify-center" role="img" aria-label={`Video testimonial: ${v.name} — ${v.procedure}`}>
                     <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play className="w-6 h-6 text-primary-foreground ml-1" />
+                      <Play className="w-6 h-6 text-primary-foreground ml-1" aria-hidden="true" />
                     </div>
                   </div>
-                  <div className="p-4">
+                  <figcaption className="p-4">
                     <h3 className="font-sans text-sm font-semibold text-foreground">{v.name}</h3>
                     <p className="text-xs font-sans text-muted-foreground">{v.procedure}</p>
-                  </div>
-                </div>
+                  </figcaption>
+                </figure>
               ))}
             </div>
           </div>
@@ -96,23 +128,24 @@ const PatientTestimonials = () => {
             <h2 className="section-heading">Read More Reviews</h2>
             <p className="section-body max-w-2xl mx-auto">See all of our reviews on Google and Yelp.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="#" className="btn-primary flex items-center gap-2">Google Reviews <ExternalLink className="w-4 h-4" /></a>
-              <a href="#" className="btn-secondary flex items-center gap-2">Yelp Reviews <ExternalLink className="w-4 h-4" /></a>
+              <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2" aria-label="View Google Reviews">Google Reviews <ExternalLink className="w-4 h-4" aria-hidden="true" /></a>
+              <a href="#" className="btn-secondary flex items-center gap-2" aria-label="View Yelp Reviews">Yelp Reviews <ExternalLink className="w-4 h-4" aria-hidden="true" /></a>
             </div>
           </div>
         </section>
 
         <section className="section-padding gradient-cta text-center">
           <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Ready to Experience the Difference?</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Join thousands of happy families at Smile Avenue.</p>
-            <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Your Appointment</a>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Ready to Experience the Difference?</h2>
+            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">Join thousands of happy families at Smile Avenue.</p>
+            <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light" aria-label="Book your appointment">Book Your Appointment</a>
           </div>
         </section>
       </main>
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <Footer />
+      <BackToTop />
     </>
   );
 };
