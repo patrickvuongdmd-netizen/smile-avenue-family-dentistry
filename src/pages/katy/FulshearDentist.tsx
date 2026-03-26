@@ -43,8 +43,8 @@ const data: NeighborhoodPageData = {
   ],
   doctors: [
     { name: "Dr. Patrick Vuong", credentials: "DMD — Founder", bio: "Comprehensive care with a gentle touch.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
-    { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Skilled in implants and oral surgery.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
-    { name: "Dr. Tamaara Willis", credentials: "DDS, MS", bio: "Specialist in advanced dental procedures.", href: "/doctors/tamaara-willis-dds-ms", imgKey: "tamaara-willis" },
+    { name: "Dr. Sameer Bilal", credentials: "DDS", bio: "Compassionate, detail-oriented general dentistry.", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
+    { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
   ],
   testimonials: [
     { quote: "We moved to Fulshear recently and Smile Avenue has been a lifesaver. Great dentists, modern office, and so close to home.", name: "Emily R.", source: "Google Review" },

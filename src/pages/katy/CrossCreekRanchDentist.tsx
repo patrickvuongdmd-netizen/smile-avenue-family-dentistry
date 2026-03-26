@@ -43,8 +43,8 @@ const data: NeighborhoodPageData = {
   ],
   doctors: [
     { name: "Dr. Patrick Vuong", credentials: "DMD — Founder", bio: "Comprehensive care with a gentle touch.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
-    { name: "Dr. Christian Lopez", credentials: "DDS", bio: "Passionate about patient education and gentle care.", href: "/doctors/christian-lopez-dds", imgKey: "christian-lopez" },
-    { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Skilled in implants and oral surgery.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
+    { name: "Dr. Sameer Bilal", credentials: "DDS", bio: "Compassionate, detail-oriented general dentistry.", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
+    { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
   ],
   testimonials: [
     { quote: "We moved to Cross Creek Ranch and needed a new dentist. Smile Avenue exceeded our expectations in every way.", name: "Daniel H.", source: "Google Review" },
