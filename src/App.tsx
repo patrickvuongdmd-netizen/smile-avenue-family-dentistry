@@ -24,6 +24,14 @@ import ToothExtractionCypress from "./pages/cypress/ToothExtraction.tsx";
 import OralSurgeryCypress from "./pages/cypress/OralSurgery.tsx";
 import SedationDentistryCypress from "./pages/cypress/SedationDentistry.tsx";
 import PreventiveDentistryCypress from "./pages/cypress/PreventiveDentistry.tsx";
+import BoneGraftingCypress from "./pages/cypress/BoneGrafting.tsx";
+import GumDiseaseTreatmentCypress from "./pages/cypress/GumDiseaseTreatment.tsx";
+import WisdomTeethCypress from "./pages/cypress/WisdomTeeth.tsx";
+import DentalBondingCypress from "./pages/cypress/DentalBonding.tsx";
+import SmileMakeoverCypress from "./pages/cypress/SmileMakeover.tsx";
+import GumRecessionTreatmentCypress from "./pages/cypress/GumRecessionTreatment.tsx";
+import FamilyDentistryCypress from "./pages/cypress/FamilyDentistry.tsx";
+import GeneralDentistryCypress from "./pages/cypress/GeneralDentistry.tsx";
 import EmergencyDentistKaty from "./pages/katy/EmergencyDentist.tsx";
 import DentalImplantsKaty from "./pages/katy/DentalImplants.tsx";
 import CosmeticDentistryKaty from "./pages/katy/CosmeticDentistry.tsx";
@@ -41,6 +49,14 @@ import ToothExtractionKaty from "./pages/katy/ToothExtraction.tsx";
 import OralSurgeryKaty from "./pages/katy/OralSurgery.tsx";
 import SedationDentistryKaty from "./pages/katy/SedationDentistry.tsx";
 import PreventiveDentistryKaty from "./pages/katy/PreventiveDentistry.tsx";
+import BoneGraftingKaty from "./pages/katy/BoneGrafting.tsx";
+import GumDiseaseTreatmentKaty from "./pages/katy/GumDiseaseTreatment.tsx";
+import WisdomTeethKaty from "./pages/katy/WisdomTeeth.tsx";
+import DentalBondingKaty from "./pages/katy/DentalBonding.tsx";
+import SmileMakeoverKaty from "./pages/katy/SmileMakeover.tsx";
+import GumRecessionTreatmentKaty from "./pages/katy/GumRecessionTreatment.tsx";
+import FamilyDentistryKaty from "./pages/katy/FamilyDentistry.tsx";
+import GeneralDentistryKaty from "./pages/katy/GeneralDentistry.tsx";
 import Locations from "./pages/Locations.tsx";
 import NewPatientHub from "./pages/NewPatientHub.tsx";
 import Doctors from "./pages/Doctors.tsx";
@@ -96,6 +112,14 @@ const App = () => (
             <Route path="/cypress-tx/oral-surgery" element={<OralSurgeryCypress />} />
             <Route path="/cypress-tx/sedation-dentistry" element={<SedationDentistryCypress />} />
             <Route path="/cypress-tx/preventive-dentistry" element={<PreventiveDentistryCypress />} />
+            <Route path="/cypress-tx/bone-grafting" element={<BoneGraftingCypress />} />
+            <Route path="/cypress-tx/gum-disease-treatment" element={<GumDiseaseTreatmentCypress />} />
+            <Route path="/cypress-tx/wisdom-teeth" element={<WisdomTeethCypress />} />
+            <Route path="/cypress-tx/dental-bonding" element={<DentalBondingCypress />} />
+            <Route path="/cypress-tx/smile-makeover" element={<SmileMakeoverCypress />} />
+            <Route path="/cypress-tx/gum-recession-treatment" element={<GumRecessionTreatmentCypress />} />
+            <Route path="/cypress-tx/family-dentistry" element={<FamilyDentistryCypress />} />
+            <Route path="/cypress-tx/general-dentistry" element={<GeneralDentistryCypress />} />
             <Route path="/katy-tx" element={<KatyTx />} />
             <Route path="/katy-tx/emergency-dentist" element={<EmergencyDentistKaty />} />
             <Route path="/katy-tx/dental-implants" element={<DentalImplantsKaty />} />
@@ -114,6 +138,14 @@ const App = () => (
             <Route path="/katy-tx/oral-surgery" element={<OralSurgeryKaty />} />
             <Route path="/katy-tx/sedation-dentistry" element={<SedationDentistryKaty />} />
             <Route path="/katy-tx/preventive-dentistry" element={<PreventiveDentistryKaty />} />
+            <Route path="/katy-tx/bone-grafting" element={<BoneGraftingKaty />} />
+            <Route path="/katy-tx/gum-disease-treatment" element={<GumDiseaseTreatmentKaty />} />
+            <Route path="/katy-tx/wisdom-teeth" element={<WisdomTeethKaty />} />
+            <Route path="/katy-tx/dental-bonding" element={<DentalBondingKaty />} />
+            <Route path="/katy-tx/smile-makeover" element={<SmileMakeoverKaty />} />
+            <Route path="/katy-tx/gum-recession-treatment" element={<GumRecessionTreatmentKaty />} />
+            <Route path="/katy-tx/family-dentistry" element={<FamilyDentistryKaty />} />
+            <Route path="/katy-tx/general-dentistry" element={<GeneralDentistryKaty />} />
             <Route path="/convenient-locations" element={<Locations />} />
             <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
             <Route path="/doctors" element={<Doctors />} />
