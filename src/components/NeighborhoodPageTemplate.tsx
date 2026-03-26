@@ -140,7 +140,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
-      { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://smileavenuedentistry.com${loc.path}/` },
+      { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://www.smileavenuefamilydentistry.com${loc.path}/` },
       { "@type": "ListItem", position: 3, name: `${data.neighborhoodName} Dentist`, item: canonicalUrl },
     ],
   };

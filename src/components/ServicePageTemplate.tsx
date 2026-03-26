@@ -351,7 +351,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {/* TRUST BADGES */}
         <section className="py-10 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
               {data.trustBadges.map((badge) => (
                 <div key={badge.label} className="flex flex-col items-center text-center gap-2">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">{badge.icon}</div>
