@@ -52,7 +52,7 @@ const data: NeighborhoodPageData = {
   testimonials: [
     { quote: "We live in Cinco Ranch and this is hands-down the best dental office in the area. The whole family comes here.", name: "Stephanie L.", source: "Google Review" },
     { quote: "Love that they're right on Westheimer Parkway. I pop in during lunch for my appointments. So convenient!", name: "Kevin W.", source: "Google Review" },
-    { quote: "Dr. Chang is amazing with my kids. They actually enjoy going to the dentist now!", name: "Natalie B.", source: "Google Review" },
+    { quote: "Dr. Bilal is amazing with my kids. They actually enjoy going to the dentist now!", name: "Natalie B.", source: "Google Review" },
   ],
   faqs: [
     { question: "Where exactly is Smile Avenue in Cinco Ranch?", answer: "We're located at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — right on Westheimer Parkway in the heart of Cinco Ranch. Most residents can reach us in under 5 minutes." },

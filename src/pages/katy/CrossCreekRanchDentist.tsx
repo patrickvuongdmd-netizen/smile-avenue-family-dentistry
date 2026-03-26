@@ -50,7 +50,7 @@ const data: NeighborhoodPageData = {
   ],
   testimonials: [
     { quote: "We moved to Cross Creek Ranch and needed a new dentist. Smile Avenue exceeded our expectations in every way.", name: "Daniel H.", source: "Google Review" },
-    { quote: "Convenient location on Westheimer Parkway, professional staff, and Dr. Lopez is fantastic with kids.", name: "Patricia K.", source: "Google Review" },
+    { quote: "Convenient location on Westheimer Parkway, professional staff, and Dr. Maredia is fantastic with kids.", name: "Patricia K.", source: "Google Review" },
     { quote: "Been going here for two years from Cross Creek Ranch. Wouldn't go anywhere else — they truly care about their patients.", name: "Ryan S.", source: "Google Review" },
   ],
   faqs: [
