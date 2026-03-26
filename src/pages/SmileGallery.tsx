@@ -62,6 +62,22 @@ const SmileGallery = () => {
               <p className="section-body">Every smile tells a story. Browse real results from patients at Smile Avenue — proof that the smile you've always wanted is within reach.</p>
             </div>
 
+            {/* Real Before/After Photos */}
+            <div className="grid sm:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
+              {beforeAfterPhotos.map((photo, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden border border-border shadow-sm">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-auto"
+                    loading={i < 2 ? undefined : "lazy"}
+                    width={774}
+                    height={797}
+                  />
+                </div>
+              ))}
+            </div>
+
             {/* Filters */}
             <div className="flex flex-wrap justify-center gap-2 mb-10">
               {categories.map(cat => (

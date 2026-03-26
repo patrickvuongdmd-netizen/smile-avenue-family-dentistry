@@ -61,7 +61,15 @@ const DentalLab = () => {
                 <p className="section-body">Most dental offices send your crown or veneer to an outside lab and ask you to come back weeks later. Not us. Our in-house digital lab lets us design, fabricate, and place precision restorations — often in a single visit.</p>
                 <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book an Appointment</a>
               </div>
-              <div className="aspect-[4/3] rounded-2xl bg-muted flex items-center justify-center text-muted-foreground text-sm font-sans">Digital Dental Lab Photo</div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src="https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-in-house-implant-manufacturing-for-convenience-savings.webp"
+                  alt="Smile Dental Lab — in-house digital dental lab at Smile Avenue Family Dentistry"
+                  className="w-full h-full object-cover"
+                  width={600}
+                  height={450}
+                />
+              </div>
             </div>
           </div>
         </section>
