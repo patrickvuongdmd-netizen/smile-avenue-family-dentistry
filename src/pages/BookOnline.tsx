@@ -69,7 +69,7 @@ const BookOnline = () => {
         </section>
       </main>
 
-      <MobileStickyBar phone={CYPRESS_PHONE} bookingUrl={CYPRESS_BOOKING} />
+      <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <Footer />
     </>
   );
