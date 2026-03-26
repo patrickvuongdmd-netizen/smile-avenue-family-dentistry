@@ -311,7 +311,7 @@ const KatyTx = () => {
                 <Phone className="w-5 h-5 text-primary shrink-0" />
                 <a href="tel:8326481756" className="text-sm font-sans text-foreground hover:text-primary transition-colors">(832) 648-1756</a>
               </div>
-              <Link to="/cypress-tx/" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+              <Link to="/cypress-tx" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
                 Visit Cypress Page →
               </Link>
             </div>

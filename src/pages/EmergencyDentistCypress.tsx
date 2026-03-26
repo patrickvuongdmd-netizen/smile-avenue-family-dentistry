@@ -106,7 +106,7 @@ const EmergencyDentistCypress = () => {
             <nav className="mb-6 text-xs font-sans text-muted-foreground">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2">›</span>
-              <Link to="/cypress-tx/" className="hover:text-primary transition-colors">Cypress, TX</Link>
+              <Link to="/cypress-tx" className="hover:text-primary transition-colors">Cypress, TX</Link>
               <span className="mx-2">›</span>
               <span className="text-foreground">Emergency Dentist</span>
             </nav>
