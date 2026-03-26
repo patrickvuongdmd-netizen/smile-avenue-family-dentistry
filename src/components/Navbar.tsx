@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 
 interface NavbarProps {
   phone: string;
@@ -8,11 +8,70 @@ interface NavbarProps {
   bookingUrl: string;
 }
 
+const serviceLinks = [
+  { label: "Preventive Dentistry", slug: "preventive-dentistry" },
+  { label: "Dental Implants", slug: "dental-implants" },
+  { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+  { label: "Invisalign®", slug: "invisalign" },
+  { label: "Teeth Whitening", slug: "teeth-whitening" },
+  { label: "Dental Crowns", slug: "dental-crowns" },
+  { label: "Veneers", slug: "veneers" },
+  { label: "All-on-X Implants", slug: "all-on-x-implants" },
+  { label: "Root Canal", slug: "root-canal" },
+  { label: "Dental Cleaning", slug: "dental-cleaning" },
+  { label: "Pediatric Dentistry", slug: "pediatric-dentistry" },
+  { label: "Dentures", slug: "dentures" },
+  { label: "Dental Bridges", slug: "dental-bridges" },
+  { label: "Tooth Extraction", slug: "tooth-extraction" },
+  { label: "Oral Surgery", slug: "oral-surgery" },
+  { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+  { label: "Emergency Dentist", slug: "emergency-dentist" },
+];
+
+const patientLinks = [
+  { label: "New Patient Hub", href: "/patients/new-patient-hub" },
+  { label: "Insurance & Financing", href: "/insurance" },
+  { label: "Membership Plan", href: "/membership-plan" },
+  { label: "Specials & Offers", href: "/specials" },
+  { label: "FAQ", href: "/faq" },
+];
+
+const aboutLinks = [
+  { label: "About Smile Avenue", href: "/about" },
+  { label: "Meet Our Doctors", href: "/doctors" },
+  { label: "Dental Lab", href: "/dental-lab" },
+  { label: "Patient Testimonials", href: "/patient-testimonials" },
+  { label: "Smile Gallery", href: "/smile-gallery" },
+];
+
+type DropdownKey = "services" | "patients" | "about" | null;
+
 const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const navRef = useRef<HTMLDivElement>(null);
+
+  // Determine location prefix from current path
+  const locationPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
+
+  const openDropdown = (key: DropdownKey) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setActiveDropdown(key);
+  };
+
+  const closeDropdown = () => {
+    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 150);
+  };
+
+  useEffect(() => {
+    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
+  }, []);
+
+  const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border" ref={navRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -22,15 +81,101 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
-            <div className="flex items-center gap-6 text-sm font-sans font-medium text-foreground">
-              <Link to="/services/" className="hover:text-primary transition-colors">Services</Link>
-              <Link to="/convenient-locations/" className="hover:text-primary transition-colors">Locations</Link>
-              <Link to="/patients/new-patient-hub/" className="hover:text-primary transition-colors">Patients</Link>
-              <Link to="/about" className="hover:text-primary transition-colors">About</Link>
-              <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
+          <div className="hidden lg:flex items-center gap-6">
+            <div className="flex items-center gap-1 text-sm font-sans font-medium text-foreground">
+              {/* Services Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => openDropdown("services")}
+                onMouseLeave={closeDropdown}
+              >
+                <Link to="/services" className="flex items-center gap-1 px-3 py-2 hover:text-primary transition-colors">
+                  Services <ChevronDown className="w-3.5 h-3.5" />
+                </Link>
+                {activeDropdown === "services" && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
+                    <div className="bg-popover border border-border rounded-xl shadow-xl p-5 w-[540px]">
+                      <div className="grid grid-cols-3 gap-x-6 gap-y-1.5">
+                        {serviceLinks.map((s) => (
+                          <Link
+                            key={s.slug}
+                            to={`${locationPrefix}/${s.slug}`}
+                            className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {s.label}
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="border-t border-border mt-3 pt-3">
+                        <Link to="/services" className="text-sm font-sans font-semibold text-primary hover:underline" onClick={() => setActiveDropdown(null)}>
+                          View All Services →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Patients Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => openDropdown("patients")}
+                onMouseLeave={closeDropdown}
+              >
+                <Link to="/patients/new-patient-hub" className="flex items-center gap-1 px-3 py-2 hover:text-primary transition-colors">
+                  Patients <ChevronDown className="w-3.5 h-3.5" />
+                </Link>
+                {activeDropdown === "patients" && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
+                    <div className="bg-popover border border-border rounded-xl shadow-xl p-4 w-56">
+                      {patientLinks.map((l) => (
+                        <Link
+                          key={l.href}
+                          to={l.href}
+                          className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          {l.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* About Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => openDropdown("about")}
+                onMouseLeave={closeDropdown}
+              >
+                <Link to="/about" className="flex items-center gap-1 px-3 py-2 hover:text-primary transition-colors">
+                  About <ChevronDown className="w-3.5 h-3.5" />
+                </Link>
+                {activeDropdown === "about" && (
+                  <div className="absolute top-full right-0 pt-2 z-50">
+                    <div className="bg-popover border border-border rounded-xl shadow-xl p-4 w-56">
+                      {aboutLinks.map((l) => (
+                        <Link
+                          key={l.href}
+                          to={l.href}
+                          className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          {l.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <Link to="/convenient-locations" className="px-3 py-2 hover:text-primary transition-colors">Locations</Link>
+              <Link to="/blog" className="px-3 py-2 hover:text-primary transition-colors">Blog</Link>
             </div>
-            <div className="flex items-center gap-4">
+
+            <div className="flex items-center gap-3">
               <span className="text-xs font-sans font-semibold bg-primary/10 text-primary px-2.5 py-1 rounded-full">Hablamos Español</span>
               <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
@@ -54,17 +199,66 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-background border-t border-border pb-4">
-          <div className="container mx-auto px-4 pt-4 flex flex-col gap-4 font-sans text-sm font-medium text-foreground">
-            <Link to="/services/" className="py-2" onClick={() => setMobileOpen(false)}>Services</Link>
-            <Link to="/convenient-locations/" className="py-2" onClick={() => setMobileOpen(false)}>Locations</Link>
-            <Link to="/patients/new-patient-hub/" className="py-2" onClick={() => setMobileOpen(false)}>Patients</Link>
-            <Link to="/about" className="py-2" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link to="/blog" className="py-2" onClick={() => setMobileOpen(false)}>Blog</Link>
-            <a href={`tel:${phone}`} className="flex items-center gap-2 py-2 text-primary font-semibold">
+        <div className="lg:hidden bg-background border-t border-border pb-4 max-h-[80vh] overflow-y-auto">
+          <div className="container mx-auto px-4 pt-4 flex flex-col gap-1 font-sans text-sm font-medium text-foreground">
+            {/* Services accordion */}
+            <button
+              className="flex items-center justify-between py-3 w-full text-left"
+              onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
+            >
+              Services <ChevronDown className={`w-4 h-4 transition-transform ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
+            </button>
+            {mobileExpanded === "services" && (
+              <div className="pl-4 pb-2 space-y-1">
+                {serviceLinks.map((s) => (
+                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-1.5 text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                    {s.label}
+                  </Link>
+                ))}
+                <Link to="/services" className="block py-1.5 text-primary font-semibold" onClick={() => setMobileOpen(false)}>View All Services →</Link>
+              </div>
+            )}
+
+            {/* Patients accordion */}
+            <button
+              className="flex items-center justify-between py-3 w-full text-left"
+              onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
+            >
+              Patients <ChevronDown className={`w-4 h-4 transition-transform ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
+            </button>
+            {mobileExpanded === "patients" && (
+              <div className="pl-4 pb-2 space-y-1">
+                {patientLinks.map((l) => (
+                  <Link key={l.href} to={l.href} className="block py-1.5 text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {/* About accordion */}
+            <button
+              className="flex items-center justify-between py-3 w-full text-left"
+              onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
+            >
+              About <ChevronDown className={`w-4 h-4 transition-transform ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
+            </button>
+            {mobileExpanded === "about" && (
+              <div className="pl-4 pb-2 space-y-1">
+                {aboutLinks.map((l) => (
+                  <Link key={l.href} to={l.href} className="block py-1.5 text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <Link to="/convenient-locations" className="py-3" onClick={() => setMobileOpen(false)}>Locations</Link>
+            <Link to="/blog" className="py-3" onClick={() => setMobileOpen(false)}>Blog</Link>
+            <a href={`tel:${phone}`} className="flex items-center gap-2 py-3 text-primary font-semibold">
               <Phone className="w-4 h-4" /> {phoneFormatted}
             </a>
-            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-center">
+            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-center mt-2">
               Book Now
             </a>
           </div>
