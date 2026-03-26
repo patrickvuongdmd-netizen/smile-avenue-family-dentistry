@@ -50,7 +50,7 @@ const data: NeighborhoodPageData = {
   ],
   testimonials: [
     { quote: "We live in Firethorne and Smile Avenue is our go-to dentist. Friendly team, modern office, and excellent care.", name: "Chris P.", source: "Google Review" },
-    { quote: "So happy we found a quality dentist this close to Firethorne. Dr. Willis is incredibly skilled and kind.", name: "Samantha J.", source: "Google Review" },
+    { quote: "So happy we found a quality dentist this close to Firethorne. Dr. Vuong is incredibly skilled and kind.", name: "Samantha J.", source: "Google Review" },
     { quote: "The entire experience from booking to treatment was seamless. Best dental office near Firethorne.", name: "Marcus D.", source: "Google Review" },
   ],
   faqs: [

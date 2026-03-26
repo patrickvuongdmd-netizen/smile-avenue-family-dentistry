@@ -8,6 +8,7 @@ const data: NeighborhoodPageData = {
   metaTitle: "Dentist Near Bridgeland, TX | Smile Avenue Family Dentistry",
   metaDescription: "Looking for a dentist near Bridgeland, Cypress TX? Smile Avenue Family Dentistry is just 8 minutes from Bridgeland. Same-day appointments, family-friendly care. Call (832) 648-1756.",
   heroHeading: "Your Bridgeland Family Dentist — Just Minutes Away",
+  heroImage: OFFICE_IMAGES.hallway,
   heroSubheading: "Serving Bridgeland families with modern, comfortable dental care since 2018.",
   heroBody: "Smile Avenue Family Dentistry is the trusted dental home for Bridgeland residents. Located on Fry Road, just 8 minutes from Bridgeland via Tuckerton Road, we offer comprehensive dental care for the whole family — from routine cleanings to dental implants and Invisalign.",
   contentParagraphs: [

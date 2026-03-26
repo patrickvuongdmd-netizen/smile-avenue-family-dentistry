@@ -9,6 +9,7 @@ const data: NeighborhoodPageData = {
   metaTitle: "Dentist on Westheimer Parkway, Katy TX | Smile Avenue Family Dentistry",
   metaDescription: "Dentist right on Westheimer Parkway in Katy, TX. Smile Avenue offers walk-in emergency care, implants, Invisalign & family dentistry at Ste #170. Call (281) 800-5008.",
   heroHeading: "Your Dentist on Westheimer Parkway — Walk In, Walk Out Smiling",
+  heroImage: OFFICE_IMAGES.contactHero,
   heroSubheading: "Walk-in from the Westheimer Parkway corridor — we're right here at Ste #170.",
   heroBody: "Looking for a dentist right on Westheimer Parkway? You've found us. Smile Avenue Family Dentistry is located at 23541 Westheimer Pkwy Ste #170 — right in the middle of Katy's busiest corridor. Whether you work nearby, live in the area, or are just passing through, quality dental care is steps away.",
   contentParagraphs: [

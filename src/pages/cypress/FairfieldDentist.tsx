@@ -9,6 +9,7 @@ const data: NeighborhoodPageData = {
   metaTitle: "Dentist Near Fairfield, Cypress TX | Smile Avenue Family Dentistry",
   metaDescription: "Fairfield residents in Cypress, TX — find quality dental care minutes from home. Smile Avenue offers implants, cleanings, emergency care & more. Call (832) 648-1756.",
   heroHeading: "Your Fairfield Neighborhood Dentist — Quality Care, Close to Home",
+  heroImage: OFFICE_IMAGES.treatmentRoom,
   heroSubheading: "Serving Fairfield Village and southeast Cypress with expert dental care.",
   heroBody: "Fairfield families deserve a dentist who combines convenience with excellence. Smile Avenue Family Dentistry on Fry Road is just a short drive from Fairfield Village, offering the full spectrum of dental services — from children's checkups to dental implants and cosmetic makeovers.",
   contentParagraphs: [
