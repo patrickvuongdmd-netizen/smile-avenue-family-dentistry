@@ -37,6 +37,11 @@ interface FaqItem {
   answer: string;
 }
 
+interface RelatedService {
+  title: string;
+  href: string;
+}
+
 export interface ServicePageData {
   location: "cypress" | "katy";
   serviceName: string;
@@ -68,6 +73,7 @@ export interface ServicePageData {
   testimonials: Testimonial[];
   ctaHeading: string;
   ctaBody: string;
+  relatedServices?: RelatedService[];
 }
 
 const LOCATIONS = {
@@ -78,6 +84,7 @@ const LOCATIONS = {
     address: "9212 Fry Rd #120, Cypress, TX 77433",
     name: "Cypress",
     path: "/cypress-tx",
+    geo: { lat: "29.9691", lng: "-95.6972" },
   },
   katy: {
     phone: "2818005008",
@@ -86,6 +93,7 @@ const LOCATIONS = {
     address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494",
     name: "Katy",
     path: "/katy-tx",
+    geo: { lat: "29.7357", lng: "-95.7575" },
   },
 };
 
@@ -94,15 +102,157 @@ const insuranceLogos = [
   "MetLife", "United Healthcare", "Guardian", "Humana",
 ];
 
+// Default related services mapping by slug
+const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
+  "dental-implants": [
+    { title: "All-on-X Implants", slug: "all-on-x-implants" },
+    { title: "Dental Crowns", slug: "dental-crowns" },
+    { title: "Dental Bridges", slug: "dental-bridges" },
+    { title: "Oral Surgery", slug: "oral-surgery" },
+  ],
+  "cosmetic-dentistry": [
+    { title: "Veneers", slug: "veneers" },
+    { title: "Teeth Whitening", slug: "teeth-whitening" },
+    { title: "Invisalign®", slug: "invisalign" },
+    { title: "Dental Crowns", slug: "dental-crowns" },
+  ],
+  "teeth-whitening": [
+    { title: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+    { title: "Veneers", slug: "veneers" },
+    { title: "Dental Cleaning", slug: "dental-cleaning" },
+  ],
+  "dental-crowns": [
+    { title: "Dental Bridges", slug: "dental-bridges" },
+    { title: "Dental Implants", slug: "dental-implants" },
+    { title: "Root Canal", slug: "root-canal" },
+    { title: "Veneers", slug: "veneers" },
+  ],
+  "all-on-x-implants": [
+    { title: "Dental Implants", slug: "dental-implants" },
+    { title: "Dentures", slug: "dentures" },
+    { title: "Oral Surgery", slug: "oral-surgery" },
+    { title: "Sedation Dentistry", slug: "sedation-dentistry" },
+  ],
+  "invisalign": [
+    { title: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+    { title: "Teeth Whitening", slug: "teeth-whitening" },
+    { title: "Dental Cleaning", slug: "dental-cleaning" },
+  ],
+  "root-canal": [
+    { title: "Dental Crowns", slug: "dental-crowns" },
+    { title: "Emergency Dentist", slug: "emergency-dentist" },
+    { title: "Tooth Extraction", slug: "tooth-extraction" },
+    { title: "Sedation Dentistry", slug: "sedation-dentistry" },
+  ],
+  "dental-cleaning": [
+    { title: "Preventive Dentistry", slug: "preventive-dentistry" },
+    { title: "Pediatric Dentistry", slug: "pediatric-dentistry" },
+    { title: "Teeth Whitening", slug: "teeth-whitening" },
+  ],
+  "pediatric-dentistry": [
+    { title: "Dental Cleaning", slug: "dental-cleaning" },
+    { title: "Preventive Dentistry", slug: "preventive-dentistry" },
+    { title: "Sedation Dentistry", slug: "sedation-dentistry" },
+  ],
+  "dentures": [
+    { title: "Dental Implants", slug: "dental-implants" },
+    { title: "All-on-X Implants", slug: "all-on-x-implants" },
+    { title: "Dental Bridges", slug: "dental-bridges" },
+  ],
+  "veneers": [
+    { title: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+    { title: "Teeth Whitening", slug: "teeth-whitening" },
+    { title: "Dental Crowns", slug: "dental-crowns" },
+    { title: "Dental Bonding", slug: "cosmetic-dentistry" },
+  ],
+  "dental-bridges": [
+    { title: "Dental Crowns", slug: "dental-crowns" },
+    { title: "Dental Implants", slug: "dental-implants" },
+    { title: "Dentures", slug: "dentures" },
+  ],
+  "tooth-extraction": [
+    { title: "Oral Surgery", slug: "oral-surgery" },
+    { title: "Dental Implants", slug: "dental-implants" },
+    { title: "Sedation Dentistry", slug: "sedation-dentistry" },
+    { title: "Emergency Dentist", slug: "emergency-dentist" },
+  ],
+  "oral-surgery": [
+    { title: "Tooth Extraction", slug: "tooth-extraction" },
+    { title: "Dental Implants", slug: "dental-implants" },
+    { title: "All-on-X Implants", slug: "all-on-x-implants" },
+    { title: "Sedation Dentistry", slug: "sedation-dentistry" },
+  ],
+  "sedation-dentistry": [
+    { title: "Oral Surgery", slug: "oral-surgery" },
+    { title: "Root Canal", slug: "root-canal" },
+    { title: "Dental Implants", slug: "dental-implants" },
+    { title: "Pediatric Dentistry", slug: "pediatric-dentistry" },
+  ],
+  "emergency-dentist": [
+    { title: "Root Canal", slug: "root-canal" },
+    { title: "Tooth Extraction", slug: "tooth-extraction" },
+    { title: "Dental Crowns", slug: "dental-crowns" },
+    { title: "Sedation Dentistry", slug: "sedation-dentistry" },
+  ],
+  "preventive-dentistry": [
+    { title: "Dental Cleaning", slug: "dental-cleaning" },
+    { title: "Pediatric Dentistry", slug: "pediatric-dentistry" },
+    { title: "Teeth Whitening", slug: "teeth-whitening" },
+  ],
+};
+
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const loc = LOCATIONS[data.location];
+  const canonicalUrl = `https://smileavenuedentistry.com${loc.path}/${data.serviceSlug}/`;
+
+  // Related services
+  const related = data.relatedServices || (DEFAULT_RELATED[data.serviceSlug] || []).map(r => ({
+    title: r.title,
+    href: `${loc.path}/${r.slug}`,
+  }));
+
+  // JSON-LD
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "DentalService" as const,
+    name: data.serviceName,
+    description: data.metaDescription,
+    url: canonicalUrl,
+    provider: {
+      "@type": "Dentist",
+      name: "Smile Avenue Family Dentistry",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: loc.address.split(",")[0],
+        addressLocality: loc.name,
+        addressRegion: "TX",
+        postalCode: loc.address.match(/\d{5}/)?.[0],
+        addressCountry: "US",
+      },
+      telephone: loc.phoneFormatted,
+      geo: { "@type": "GeoCoordinates", latitude: loc.geo.lat, longitude: loc.geo.lng },
+    },
+    areaServed: { "@type": "City", name: `${loc.name}, TX` },
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: data.faqs.map(f => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
 
   return (
     <>
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
-        <link rel="canonical" href={`https://smileavenuedentistry.com${loc.path}/${data.serviceSlug}/`} />
+        <link rel="canonical" href={canonicalUrl} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
 
@@ -241,8 +391,29 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* RELATED SERVICES */}
+        {related.length > 0 && (
+          <section className="section-padding bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">EXPLORE MORE</p>
+              <h2 className="section-heading">Related Services</h2>
+              <div className="flex flex-wrap justify-center gap-3 mt-8">
+                {related.map((r) => (
+                  <Link
+                    key={r.href}
+                    to={r.href}
+                    className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all"
+                  >
+                    {r.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* LOCATION INFO */}
-        <section className="section-padding bg-background">
+        <section className="section-padding section-alt">
           <div className="container mx-auto">
             <div className="max-w-lg mx-auto bg-card rounded-xl p-8 border border-border text-center">
               <h3 className="font-display text-xl font-bold text-foreground mb-4">{loc.name} Office</h3>

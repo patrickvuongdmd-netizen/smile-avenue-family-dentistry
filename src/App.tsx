@@ -23,6 +23,7 @@ import DentalBridgesCypress from "./pages/cypress/DentalBridges.tsx";
 import ToothExtractionCypress from "./pages/cypress/ToothExtraction.tsx";
 import OralSurgeryCypress from "./pages/cypress/OralSurgery.tsx";
 import SedationDentistryCypress from "./pages/cypress/SedationDentistry.tsx";
+import PreventiveDentistryCypress from "./pages/cypress/PreventiveDentistry.tsx";
 import EmergencyDentistKaty from "./pages/katy/EmergencyDentist.tsx";
 import DentalImplantsKaty from "./pages/katy/DentalImplants.tsx";
 import CosmeticDentistryKaty from "./pages/katy/CosmeticDentistry.tsx";
@@ -39,6 +40,7 @@ import DentalBridgesKaty from "./pages/katy/DentalBridges.tsx";
 import ToothExtractionKaty from "./pages/katy/ToothExtraction.tsx";
 import OralSurgeryKaty from "./pages/katy/OralSurgery.tsx";
 import SedationDentistryKaty from "./pages/katy/SedationDentistry.tsx";
+import PreventiveDentistryKaty from "./pages/katy/PreventiveDentistry.tsx";
 import Locations from "./pages/Locations.tsx";
 import NewPatientHub from "./pages/NewPatientHub.tsx";
 import Doctors from "./pages/Doctors.tsx";
@@ -62,6 +64,7 @@ import SitemapPage from "./pages/Sitemap.tsx";
 import Blog from "./pages/Blog.tsx";
 import About from "./pages/About.tsx";
 import Services from "./pages/Services.tsx";
+import Faq from "./pages/Faq.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -92,6 +95,7 @@ const App = () => (
             <Route path="/cypress-tx/tooth-extraction" element={<ToothExtractionCypress />} />
             <Route path="/cypress-tx/oral-surgery" element={<OralSurgeryCypress />} />
             <Route path="/cypress-tx/sedation-dentistry" element={<SedationDentistryCypress />} />
+            <Route path="/cypress-tx/preventive-dentistry" element={<PreventiveDentistryCypress />} />
             <Route path="/katy-tx" element={<KatyTx />} />
             <Route path="/katy-tx/emergency-dentist" element={<EmergencyDentistKaty />} />
             <Route path="/katy-tx/dental-implants" element={<DentalImplantsKaty />} />
@@ -109,6 +113,7 @@ const App = () => (
             <Route path="/katy-tx/tooth-extraction" element={<ToothExtractionKaty />} />
             <Route path="/katy-tx/oral-surgery" element={<OralSurgeryKaty />} />
             <Route path="/katy-tx/sedation-dentistry" element={<SedationDentistryKaty />} />
+            <Route path="/katy-tx/preventive-dentistry" element={<PreventiveDentistryKaty />} />
             <Route path="/convenient-locations" element={<Locations />} />
             <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
             <Route path="/doctors" element={<Doctors />} />
@@ -132,6 +137,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/faq" element={<Faq />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

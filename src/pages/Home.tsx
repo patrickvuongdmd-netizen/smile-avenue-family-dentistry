@@ -69,6 +69,37 @@ const Home = () => {
         <title>Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX</title>
         <meta name="description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments. Book online today." />
         <link rel="canonical" href="https://smileavenuedentistry.com/" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Smile Avenue Family Dentistry",
+          url: "https://smileavenuedentistry.com",
+          logo: "https://smileavenuedentistry.com/logo-full.png",
+          sameAs: ["https://facebook.com/smileavenuedentistry", "https://instagram.com/smileavenuedentistry"],
+          contactPoint: [
+            { "@type": "ContactPoint", telephone: "+1-832-648-1756", contactType: "customer service", areaServed: "US" },
+            { "@type": "ContactPoint", telephone: "+1-281-800-5008", contactType: "customer service", areaServed: "US" },
+          ],
+          location: [
+            {
+              "@type": "Dentist",
+              name: "Smile Avenue Family Dentistry - Cypress",
+              address: { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+              telephone: "+1-832-648-1756",
+              geo: { "@type": "GeoCoordinates", latitude: "29.9691", longitude: "-95.6972" },
+              openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:00", closes: "17:00" },
+              aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "5000" },
+            },
+            {
+              "@type": "Dentist",
+              name: "Smile Avenue Family Dentistry - Katy",
+              address: { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+              telephone: "+1-281-800-5008",
+              geo: { "@type": "GeoCoordinates", latitude: "29.7357", longitude: "-95.7575" },
+              openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:00", closes: "17:00" },
+            },
+          ],
+        })}</script>
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 
