@@ -24,6 +24,11 @@ import ToothExtractionCypress from "./pages/cypress/ToothExtraction.tsx";
 import OralSurgeryCypress from "./pages/cypress/OralSurgery.tsx";
 import SedationDentistryCypress from "./pages/cypress/SedationDentistry.tsx";
 import PreventiveDentistryCypress from "./pages/cypress/PreventiveDentistry.tsx";
+import BridgelandDentist from "./pages/cypress/BridgelandDentist.tsx";
+import TowneLakeDentist from "./pages/cypress/TowneLakeDentist.tsx";
+import FairfieldDentist from "./pages/cypress/FairfieldDentist.tsx";
+import CyFairDentist from "./pages/cypress/CyFairDentist.tsx";
+import JerseyVillageDentist from "./pages/cypress/JerseyVillageDentist.tsx";
 import EmergencyDentistKaty from "./pages/katy/EmergencyDentist.tsx";
 import DentalImplantsKaty from "./pages/katy/DentalImplants.tsx";
 import CosmeticDentistryKaty from "./pages/katy/CosmeticDentistry.tsx";
@@ -41,6 +46,11 @@ import ToothExtractionKaty from "./pages/katy/ToothExtraction.tsx";
 import OralSurgeryKaty from "./pages/katy/OralSurgery.tsx";
 import SedationDentistryKaty from "./pages/katy/SedationDentistry.tsx";
 import PreventiveDentistryKaty from "./pages/katy/PreventiveDentistry.tsx";
+import CincoRanchDentist from "./pages/katy/CincoRanchDentist.tsx";
+import FirethorneDentist from "./pages/katy/FirethorneDentist.tsx";
+import CrossCreekRanchDentist from "./pages/katy/CrossCreekRanchDentist.tsx";
+import WestheimerParkwayDentist from "./pages/katy/WestheimerParkwayDentist.tsx";
+import FulshearDentist from "./pages/katy/FulshearDentist.tsx";
 import Locations from "./pages/Locations.tsx";
 import NewPatientHub from "./pages/NewPatientHub.tsx";
 import Doctors from "./pages/Doctors.tsx";
@@ -96,6 +106,11 @@ const App = () => (
             <Route path="/cypress-tx/oral-surgery" element={<OralSurgeryCypress />} />
             <Route path="/cypress-tx/sedation-dentistry" element={<SedationDentistryCypress />} />
             <Route path="/cypress-tx/preventive-dentistry" element={<PreventiveDentistryCypress />} />
+            <Route path="/cypress-tx/bridgeland-dentist" element={<BridgelandDentist />} />
+            <Route path="/cypress-tx/towne-lake-dentist" element={<TowneLakeDentist />} />
+            <Route path="/cypress-tx/fairfield-dentist" element={<FairfieldDentist />} />
+            <Route path="/cypress-tx/cyfair-dentist" element={<CyFairDentist />} />
+            <Route path="/cypress-tx/jersey-village-dentist" element={<JerseyVillageDentist />} />
             <Route path="/katy-tx" element={<KatyTx />} />
             <Route path="/katy-tx/emergency-dentist" element={<EmergencyDentistKaty />} />
             <Route path="/katy-tx/dental-implants" element={<DentalImplantsKaty />} />
@@ -114,6 +129,11 @@ const App = () => (
             <Route path="/katy-tx/oral-surgery" element={<OralSurgeryKaty />} />
             <Route path="/katy-tx/sedation-dentistry" element={<SedationDentistryKaty />} />
             <Route path="/katy-tx/preventive-dentistry" element={<PreventiveDentistryKaty />} />
+            <Route path="/katy-tx/cinco-ranch-dentist" element={<CincoRanchDentist />} />
+            <Route path="/katy-tx/firethorne-dentist" element={<FirethorneDentist />} />
+            <Route path="/katy-tx/cross-creek-ranch-dentist" element={<CrossCreekRanchDentist />} />
+            <Route path="/katy-tx/westheimer-parkway-dentist" element={<WestheimerParkwayDentist />} />
+            <Route path="/katy-tx/fulshear-dentist" element={<FulshearDentist />} />
             <Route path="/convenient-locations" element={<Locations />} />
             <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
             <Route path="/doctors" element={<Doctors />} />

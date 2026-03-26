@@ -30,6 +30,26 @@ const sections = [
     ],
   },
   {
+    title: "Neighborhoods — Cypress",
+    links: [
+      { label: "Bridgeland Dentist", href: "/cypress-tx/bridgeland-dentist" },
+      { label: "Towne Lake Dentist", href: "/cypress-tx/towne-lake-dentist" },
+      { label: "Fairfield Dentist", href: "/cypress-tx/fairfield-dentist" },
+      { label: "Cy-Fair Dentist", href: "/cypress-tx/cyfair-dentist" },
+      { label: "Jersey Village Dentist", href: "/cypress-tx/jersey-village-dentist" },
+    ],
+  },
+  {
+    title: "Neighborhoods — Katy",
+    links: [
+      { label: "Cinco Ranch Dentist", href: "/katy-tx/cinco-ranch-dentist" },
+      { label: "Firethorne Dentist", href: "/katy-tx/firethorne-dentist" },
+      { label: "Cross Creek Ranch Dentist", href: "/katy-tx/cross-creek-ranch-dentist" },
+      { label: "Westheimer Parkway Dentist", href: "/katy-tx/westheimer-parkway-dentist" },
+      { label: "Fulshear Dentist", href: "/katy-tx/fulshear-dentist" },
+    ],
+  },
+  {
     title: "Services — Cypress",
     links: [
       { label: "Emergency Dentist", href: "/cypress-tx/emergency-dentist" },
