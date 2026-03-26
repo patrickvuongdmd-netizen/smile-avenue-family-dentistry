@@ -21,7 +21,7 @@ const products = [
 
 const techFeatures = [
   { icon: <ScanLine className="w-6 h-6" />, title: "Digital Scanning", description: "Medit and Imetric intraoral scanners capture a precise 3D model of your teeth in seconds — no goopy impressions needed." },
-  { icon: <Zap className="w-6 h-6" />, title: "CEREC Same-Day Crowns", description: "Our CEREC milling unit creates porcelain crowns, inlays, and onlays in a single visit. Walk in with a broken tooth, walk out with a permanent restoration." },
+  { icon: <Zap className="w-6 h-6" />, title: "Digital Crown Fabrication", description: "Our lab fabricates custom porcelain and zirconia crowns, inlays, and onlays with precise digital workflows — faster turnaround than outside labs." },
   { icon: <Clock className="w-6 h-6" />, title: "Rapid Turnaround", description: "Because we design and fabricate in-house, many restorations are ready the same day — no waiting weeks for an outside lab." },
 ];
 
