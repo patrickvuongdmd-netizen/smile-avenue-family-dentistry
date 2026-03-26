@@ -87,8 +87,8 @@ const CypressTx = () => {
                   ⭐ 4.9 from 300+ Cypress Reviews · Same-Day Appointments · All Ages Welcome
                 </p>
               </div>
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md">
-                <span className="text-sm font-sans text-muted-foreground">Cypress Office Photo</span>
+              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
+                <img src={OFFICE_IMAGES.cypressHero} alt="Smile Avenue Cypress office exterior on Fry Road" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
               </div>
             </div>
           </div>
