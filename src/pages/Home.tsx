@@ -316,18 +316,7 @@ const Home = () => {
             <h2 className="section-heading text-center">Watch Real Patient Experiences</h2>
             <div className="grid sm:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
               {VIDEO_TESTIMONIALS.slice(0, 4).map((vid, i) => (
-                <div key={i} className="aspect-video rounded-2xl overflow-hidden relative shadow-md bg-muted group">
-                  <img src={vid.thumbnail} alt={vid.title} className="w-full h-full object-cover" loading="lazy" width={1280} height={720} />
-                  <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
-                      <Play className="w-7 h-7 text-primary-foreground ml-1" aria-hidden="true" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-foreground/60 to-transparent">
-                    <p className="text-sm font-sans font-semibold text-background text-left">{vid.title}</p>
-                  </div>
-                </div>
+                <LazyYouTube key={i} videoId={vid.youtubeId} title={vid.title} />
               ))}
             </div>
             <div className="text-center mt-8">

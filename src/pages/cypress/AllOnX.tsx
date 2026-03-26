@@ -51,7 +51,7 @@ const AllOnXCypress = () => (
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">
       <section className="section-padding bg-background"><div className="container mx-auto">
-        <nav className="mb-6 text-xs font-sans text-muted-foreground"><Link to="/" className="hover:text-primary transition-colors">Home</Link><span className="mx-2">›</span><Link to="/cypress-tx/" className="hover:text-primary transition-colors">Cypress, TX</Link><span className="mx-2">›</span><span className="text-foreground">All-on-X Implants</span></nav>
+        <nav className="mb-6 text-xs font-sans text-muted-foreground"><Link to="/" className="hover:text-primary transition-colors">Home</Link><span className="mx-2">›</span><Link to="/cypress-tx" className="hover:text-primary transition-colors">Cypress, TX</Link><span className="mx-2">›</span><span className="text-foreground">All-on-X Implants</span></nav>
         <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center"><div>
           <p className="kicker">FULL ARCH RESTORATION IN CYPRESS</p>
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">All-on-X Full Mouth Implants in Cypress, TX</h1>

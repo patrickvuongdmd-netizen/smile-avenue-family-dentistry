@@ -91,7 +91,7 @@ const DentalImplantsCypress = () => (
         <div className="container mx-auto">
           <nav className="mb-6 text-xs font-sans text-muted-foreground">
             <Link to="/" className="hover:text-primary transition-colors">Home</Link><span className="mx-2">›</span>
-            <Link to="/cypress-tx/" className="hover:text-primary transition-colors">Cypress, TX</Link><span className="mx-2">›</span>
+            <Link to="/cypress-tx" className="hover:text-primary transition-colors">Cypress, TX</Link><span className="mx-2">›</span>
             <span className="text-foreground">Dental Implants</span>
           </nav>
           <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">

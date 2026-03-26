@@ -115,28 +115,34 @@ export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
 
 export const VIDEO_TESTIMONIALS = [
   {
-    title: "Found My Perfect Dentist",
+    title: "Can One Visit Change Your Smile?",
     thumbnail: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Can-One-Visit-Change-Your-Smile-Watch-This-Incredible-Adjustment-at-Smile-Avenue-Family-Dentistry.webp",
+    youtubeId: "wiocP_nsFPY",
   },
   {
-    title: "From Uncomfortable to Confident",
+    title: "From Uncomfortable to Confident Smiles",
     thumbnail: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/From-Uncomfortable-to-Confident-Smiles.webp",
+    youtubeId: "Do_22b5MX_M",
   },
   {
-    title: "Found My Go-To Spot",
+    title: "Needed A Dentist? Found My Go-To Spot!",
     thumbnail: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Needed-A-Dentist-Found-My-Go-To-Spot.webp",
+    youtubeId: "ilqukqtmvjY",
   },
   {
-    title: "More Than a Dentist Office",
+    title: "Why Smile Avenue is Trusted for Caring for Patients & Families",
     thumbnail: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Why-Smile-Avenue-Family-Dentistry-is-Trusted-for-Caring-for-Patients-Families.webp",
+    youtubeId: "EtAuvGSjEnI",
   },
   {
-    title: "Dental Fun with Andrew",
+    title: "Discover the World Inside Your Mouth with Andrew",
     thumbnail: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Discover-the-Fascinating-World-Inside-Your-Mouth-with-Andrew-at-Smile-Avenue.webp",
+    youtubeId: "zKD0AARsWTk",
   },
   {
-    title: "Invisalign Testimonial",
+    title: "Invisalign Patient Testimonial",
     thumbnail: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Invisalign-Patient-Testimonial.webp",
+    youtubeId: "nS2MUEQXbWE",
   },
 ];
 

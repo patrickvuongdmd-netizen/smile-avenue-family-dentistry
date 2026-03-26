@@ -105,7 +105,7 @@ const Insurance = () => {
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 text-primary"><Shield className="w-8 h-8" /></div>
             <h2 className="section-heading">No Insurance? Try Our Membership Plan</h2>
             <p className="section-body">For patients without dental insurance, our in-house membership plan covers cleanings, exams, X-rays, and gives you 15% off all additional treatments — starting at just $25/month.</p>
-            <Link to="/membership-plan/" className="btn-primary">View Membership Plan</Link>
+            <Link to="/membership-plan" className="btn-primary">View Membership Plan</Link>
           </div>
         </section>
 
