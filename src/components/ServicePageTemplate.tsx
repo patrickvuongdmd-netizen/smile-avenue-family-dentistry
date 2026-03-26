@@ -450,6 +450,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* FREE CONSULTATION BANNER */}
+        {showFreeConsult && <FreeConsultationBanner />}
+
         {/* CTA BAR */}
         <section className="gradient-cta py-16 text-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -465,6 +468,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
       <Footer />
       <MobileStickyBar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
+      <BackToTop />
     </>
   );
 };
