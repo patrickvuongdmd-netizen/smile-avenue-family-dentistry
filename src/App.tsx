@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index.tsx";
 import CypressTx from "./pages/CypressTx.tsx";
+import Locations from "./pages/Locations.tsx";
+import NewPatientHub from "./pages/NewPatientHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -20,6 +22,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/cypress-tx" element={<CypressTx />} />
+            <Route path="/convenient-locations" element={<Locations />} />
+            <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
