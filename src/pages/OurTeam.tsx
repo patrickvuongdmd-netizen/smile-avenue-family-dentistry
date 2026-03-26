@@ -11,6 +11,7 @@ import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import ScrollReveal from "@/components/ScrollReveal";
 import { DOCTOR_IMAGES, TEAM_MEMBERS } from "@/lib/images";
+import { TEAM_IMAGES } from "@/lib/team-images";
 
 const PHONE = "8326481756";
 const PHONE_FMT = "(832) 648-1756";
@@ -40,18 +41,25 @@ const LocationBadge = ({ locations }: { locations: string[] }) => (
   </div>
 );
 
-const TeamCard = ({ name, credentials, role, locations }: { name: string; credentials?: string; role: string; locations: string[] }) => (
-  <div className="bg-card rounded-xl border border-border p-5 text-center hover:shadow-md hover:border-primary/20 transition-all">
-    <div className="w-20 h-20 rounded-full mx-auto mb-3 bg-muted flex items-center justify-center overflow-hidden">
-      <span className="text-lg font-display font-bold text-primary">
-        {name.split(" ").map(n => n[0]).join("").slice(0, 2)}
-      </span>
+const TeamCard = ({ name, credentials, role, locations, imgKey }: { name: string; credentials?: string; role: string; locations: string[]; imgKey?: string }) => {
+  const img = imgKey ? TEAM_IMAGES[imgKey] : null;
+  return (
+    <div className="bg-card rounded-xl border border-border p-5 text-center hover:shadow-md hover:border-primary/20 transition-all">
+      <div className="w-20 h-20 rounded-full mx-auto mb-3 bg-muted flex items-center justify-center overflow-hidden">
+        {img ? (
+          <img src={img.url} alt={img.alt} className="w-full h-full object-cover" loading="lazy" width={80} height={80} />
+        ) : (
+          <span className="text-lg font-display font-bold text-primary">
+            {name.split(" ").map(n => n[0]).join("").slice(0, 2)}
+          </span>
+        )}
+      </div>
+      <h3 className="font-display text-sm font-bold text-foreground">{name}</h3>
+      <p className="text-xs font-sans text-primary font-medium">{credentials ? `${credentials} — ` : ""}{role}</p>
+      <LocationBadge locations={locations} />
     </div>
-    <h3 className="font-display text-sm font-bold text-foreground">{name}</h3>
-    <p className="text-xs font-sans text-primary font-medium">{credentials ? `${credentials} — ` : ""}{role}</p>
-    <LocationBadge locations={locations} />
-  </div>
-);
+  );
+};
 
 const OurTeam = () => {
   useDocTitle("Meet Our Team | Smile Avenue Family Dentistry");
