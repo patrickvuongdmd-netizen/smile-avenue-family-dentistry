@@ -172,7 +172,7 @@ const CypressTx = () => {
                 <TestimonialCard key={t.name} {...t} />
               ))}
             </div>
-            <Link to="/cypress-tx/reviews/" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+            <Link to="/patient-testimonials" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               Read More Cypress Reviews →
             </Link>
           </div>
