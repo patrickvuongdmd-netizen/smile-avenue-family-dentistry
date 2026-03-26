@@ -21,12 +21,12 @@ const products = [
 
 const techFeatures = [
   { icon: <ScanLine className="w-6 h-6" />, title: "Digital Scanning", description: "Medit and Imetric intraoral scanners capture a precise 3D model of your teeth in seconds — no goopy impressions needed." },
-  { icon: <Zap className="w-6 h-6" />, title: "CEREC Same-Day Crowns", description: "Our CEREC milling unit creates porcelain crowns, inlays, and onlays in a single visit. Walk in with a broken tooth, walk out with a permanent restoration." },
+  { icon: <Zap className="w-6 h-6" />, title: "Digital Crown Fabrication", description: "Our lab fabricates custom porcelain and zirconia crowns, inlays, and onlays with precise digital workflows — faster turnaround than outside labs." },
   { icon: <Clock className="w-6 h-6" />, title: "Rapid Turnaround", description: "Because we design and fabricate in-house, many restorations are ready the same day — no waiting weeks for an outside lab." },
 ];
 
 const benefits = [
-  { icon: <Clock className="w-5 h-5" />, label: "Same-day restorations available" },
+  { icon: <Clock className="w-5 h-5" />, label: "Faster turnaround than outside labs" },
   { icon: <CheckCircle className="w-5 h-5" />, label: "Precise, custom fit every time" },
   { icon: <Shield className="w-5 h-5" />, label: "No goopy impressions" },
   { icon: <Zap className="w-5 h-5" />, label: "Fewer appointments needed" },
@@ -41,7 +41,7 @@ const DentalLab = () => {
     <>
       <Helmet>
         <title>In-House Digital Dental Lab | Smile Avenue Family Dentistry</title>
-        <meta name="description" content="Smile Dental Lab — our in-house digital dental lab creates same-day crowns, veneers, aligners, and more with CEREC and digital scanning technology." />
+        <meta name="description" content="Smile Dental Lab — our in-house digital dental lab creates custom crowns, veneers, aligners, and more with advanced digital scanning technology." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/dental-lab/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
@@ -58,7 +58,7 @@ const DentalLab = () => {
               <div>
                 <p className="kicker">SMILE DENTAL LAB</p>
                 <h1 className="section-heading text-4xl md:text-5xl leading-tight">In-House Digital Dental Lab</h1>
-                <p className="section-body">Most dental offices send your crown or veneer to an outside lab and ask you to come back weeks later. Not us. Our in-house digital lab lets us design, fabricate, and place precision restorations — often in a single visit.</p>
+                <p className="section-body">Most dental offices send your crown or veneer to an outside lab and ask you to come back weeks later. Not us. Our in-house digital lab lets us design and fabricate precision restorations with faster turnaround and better quality control.</p>
                 <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book an Appointment</a>
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
@@ -122,8 +122,8 @@ const DentalLab = () => {
 
         <section className="section-padding gradient-cta text-center">
           <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Experience Same-Day Dentistry</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Walk in with a dental problem, walk out with a permanent solution — all in one visit.</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Experience In-House Lab Precision</h2>
+            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Custom restorations with faster turnaround and better quality — all from our in-house Smile Dental Lab.</p>
             <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Now</a>
           </div>
         </section>

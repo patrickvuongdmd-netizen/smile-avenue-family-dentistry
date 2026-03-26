@@ -14,7 +14,7 @@ const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/Smil
 const whyChoose = [
   { title: "Gentle Modern Approach", description: "Advanced rotary instruments and precise techniques make modern root canals comfortable and efficient.", icon: <Heart className="w-5 h-5" /> },
   { title: "Sedation for Comfort", description: "Anxious about dental work? We offer sedation options so you can relax completely during your procedure.", icon: <Shield className="w-5 h-5" /> },
-  { title: "Same-Day CEREC Crown", description: "Get your root canal and permanent crown in a single visit — no temporary, no second appointment.", icon: <Crown className="w-5 h-5" /> },
+  { title: "Crown Placement After Treatment", description: "Our in-house Smile Dental Lab fabricates your permanent crown quickly — faster turnaround than practices that outsource.", icon: <Crown className="w-5 h-5" /> },
   { title: "Pain Relief, Not Pain", description: "Root canal treatment relieves the severe pain of infection. Most patients feel dramatically better immediately.", icon: <Zap className="w-5 h-5" /> },
 ];
 
@@ -23,7 +23,7 @@ const processSteps = [
   { number: "02", title: "Anesthesia & Sedation", description: "Thorough local anesthesia ensures complete comfort. Optional sedation available for anxious patients." },
   { number: "03", title: "Infected Pulp Removal", description: "Infected tissue is carefully removed, and the canals are cleaned, shaped, and disinfected." },
   { number: "04", title: "Canals Filled & Sealed", description: "The canals are filled with biocompatible material and sealed to prevent reinfection." },
-  { number: "05", title: "Same-Day Crown", description: "A CEREC crown is designed, milled, and placed the same visit to protect and restore the tooth." },
+  { number: "05", title: "Crown Placement", description: "A custom crown is fabricated in our in-house Smile Dental Lab and placed at your follow-up visit to protect and restore the tooth." },
 ];
 
 const testimonials = [
@@ -35,9 +35,9 @@ const testimonials = [
 const faqs = [
   { question: "How much does a root canal cost in Cypress, TX?", answer: "Costs vary by tooth — front teeth are simpler than molars. Most dental insurance plans cover a significant portion of root canal treatment. CareCredit financing and our membership plan are also available." },
   { question: "Is a root canal painful?", answer: "No — modern root canals actually relieve the severe pain caused by infection. We use advanced anesthesia and sedation options to ensure complete comfort throughout the procedure." },
-  { question: "How long does a root canal take?", answer: "Most root canals are completed in 60-90 minutes. With our same-day CEREC crown option, you can have the entire treatment — root canal and permanent crown — done in a single visit." },
+  { question: "How long does a root canal take?", answer: "Most root canals are completed in 60-90 minutes. A follow-up visit is typically needed for crown placement, which our in-house lab fabricates with faster turnaround than outside labs." },
   { question: "What happens if I skip a root canal?", answer: "An untreated infected tooth will worsen. The infection can spread to surrounding teeth and bone, cause an abscess, and ultimately result in tooth loss. The tooth will eventually need to be extracted." },
-  { question: "Do I need a crown after a root canal?", answer: "Usually yes — a crown protects the treated tooth from fracture and restores full strength. Our CEREC same-day crowns mean you can complete everything in one visit." },
+  { question: "Do I need a crown after a root canal?", answer: "Usually yes — a crown protects the treated tooth from fracture and restores full strength. Our in-house Smile Dental Lab fabricates crowns with faster turnaround than practices that outsource." },
 ];
 
 const faqSchema = {

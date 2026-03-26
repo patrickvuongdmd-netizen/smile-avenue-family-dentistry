@@ -23,7 +23,7 @@ const reviews = [
   { quote: "Best dental experience I've ever had. The staff is incredibly professional and the office is beautiful. I drive from Katy just to come here.", name: "Jennifer L.", source: "Google Review" },
   { quote: "I was terrified of the dentist for years. The sedation dentistry option changed everything. I finally got the care I needed without any anxiety.", name: "David M.", source: "Google Review" },
   { quote: "My kids actually look forward to their dental visits now. The team is so gentle and patient with children. Highly recommend for families!", name: "Amanda K.", source: "Google Review" },
-  { quote: "Got my CEREC crown done in one visit — no temporary, no second appointment. The technology here is incredible. Highly recommend.", name: "Chris T.", source: "Google Review" },
+  { quote: "Got my crown done at Smile Avenue and the in-house lab made all the difference — perfect fit and the color matches perfectly. Highly recommend.", name: "Chris T.", source: "Google Review" },
   { quote: "I've been to many dentists and Smile Avenue is by far the best. They genuinely care about their patients and it shows in everything they do.", name: "Patricia W.", source: "Google Review" },
 ];
 
