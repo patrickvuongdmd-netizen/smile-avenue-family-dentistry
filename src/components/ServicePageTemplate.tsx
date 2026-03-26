@@ -208,7 +208,7 @@ const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
 
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const loc = LOCATIONS[data.location];
-  const canonicalUrl = `https://smileavenuedentistry.com${loc.path}/${data.serviceSlug}/`;
+  const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.serviceSlug}/`;
   useDocTitle(data.metaTitle);
 
   // Related services
