@@ -9,7 +9,7 @@ const data: ServicePageData = {
   metaDescription: "Painless root canal in Katy, TX. Save your tooth with modern care. Sedation available. Call (281) 800-5008.",
   heroKicker: "GENTLE ROOT CANAL IN KATY",
   heroHeading: "Root Canal Treatment in Katy, TX",
-  heroBody: "Modern root canal at Smile Avenue Katy is nothing like its reputation. Gentle technique, sedation options, and same-day crown option make it comfortable.",
+  heroBody: "Modern root canal at Smile Avenue Katy is nothing like its reputation. Gentle technique, sedation options, and our in-house lab for fast crown turnaround make it comfortable.",
   heroCta1: "Book Appointment",
   heroCta2: "Call (281) 800-5008",
   heroImage: "Root Canal Photo",
