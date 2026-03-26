@@ -26,16 +26,16 @@ const processSteps = [
 ];
 
 const testimonials = [
-  { quote: "I got a same-day crown at Smile Avenue and couldn't believe it. Walked in with a broken tooth, walked out with a brand new crown — all in one visit!", name: "Amanda T.", source: "Google Review" },
-  { quote: "The CEREC crown looks just like my natural teeth. No one can tell the difference. And not having to wear a temporary for weeks was such a relief.", name: "Steve R.", source: "Google Review" },
+  { quote: "My crown from Smile Avenue looks just like my natural teeth. The digital scan was comfortable and the in-house lab did an incredible job with the color match.", name: "Amanda T.", source: "Google Review" },
+  { quote: "I was impressed by how fast I got my crown — much quicker than my old dentist who sent everything to an outside lab. And the fit is perfect.", name: "Steve R.", source: "Google Review" },
   { quote: "Dr. Vuong replaced an old metal crown with a beautiful porcelain one. The color match is perfect. I'm so happy with how it turned out.", name: "Diana K.", source: "Google Review" },
 ];
 
 const faqs = [
   { question: "How much do crowns cost in Cypress?", answer: "Depends on material and insurance coverage. Most PPO plans provide partial coverage for dental crowns. We also offer CareCredit financing and our membership plan for uninsured patients." },
-  { question: "How long does a same-day crown take?", answer: "About 2 hours from start to finish — exam, digital scan, design, milling, and bonding all in one appointment." },
+  { question: "How many visits for a crown?", answer: "Our in-house Smile Dental Lab allows for faster turnaround than practices that outsource to external labs. Most crown cases are completed in two visits — one for preparation and impressions, and one for final placement." },
   { question: "How long do dental crowns last?", answer: "10–15+ years with proper care. Regular checkups, good hygiene, and avoiding habits like teeth grinding help extend their lifespan." },
-  { question: "CEREC vs traditional crowns?", answer: "Same quality restoration, but CEREC eliminates the temporary crown, goopy impressions, and the need for a second visit weeks later." },
+  { question: "What crown materials do you offer?", answer: "We offer both Emax porcelain and zirconia crowns. Our in-house Smile Dental Lab fabricates each crown with precise shade matching for a natural, seamless result." },
   { question: "Does getting a crown hurt?", answer: "No. Local anesthesia ensures complete comfort during the procedure. Sedation is also available for anxious patients." },
 ];
 
