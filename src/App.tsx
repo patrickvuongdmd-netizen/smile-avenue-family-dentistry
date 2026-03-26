@@ -75,6 +75,7 @@ import Blog from "./pages/Blog.tsx";
 import About from "./pages/About.tsx";
 import Services from "./pages/Services.tsx";
 import Faq from "./pages/Faq.tsx";
+import Espanol from "./pages/Espanol.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -158,6 +159,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/es" element={<Espanol />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

@@ -124,7 +124,7 @@ const EmergencyDentistCypress = () => {
                   <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
                     Book Emergency Appointment
                   </a>
-                  <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary">
+                  <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary pulse-glow">
                     Call for Immediate Help
                   </a>
                 </div>

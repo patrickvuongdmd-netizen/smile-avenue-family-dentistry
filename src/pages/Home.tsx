@@ -10,6 +10,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
+import TechnologyTrust from "@/components/TechnologyTrust";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Play } from "lucide-react";
 import { useState } from "react";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
@@ -151,6 +153,7 @@ const Home = () => {
         </section>
 
         {/* SERVICES */}
+        <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">OUR SERVICES</p>
@@ -171,6 +174,12 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </ScrollReveal>
+
+        {/* TECHNOLOGY TRUST */}
+        <ScrollReveal>
+          <TechnologyTrust />
+        </ScrollReveal>
 
         {/* SEE OUR OFFICE — VIDEO */}
         <section className="section-padding bg-background">
@@ -216,6 +225,7 @@ const Home = () => {
         </section>
 
         {/* BRAND STATEMENT */}
+        <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
             <p className="kicker">OUR MISSION</p>
@@ -224,8 +234,10 @@ const Home = () => {
             <Link to="/about" className="btn-primary">Learn About Us</Link>
           </div>
         </section>
+        </ScrollReveal>
 
         {/* DOCTORS */}
+        <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">MEET OUR TEAM</p>
@@ -250,6 +262,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
         {/* LOCATIONS */}
         <section className="section-padding bg-background">

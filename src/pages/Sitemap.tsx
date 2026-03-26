@@ -119,6 +119,7 @@ const sections = [
       { label: "Smile Gallery", href: "/smile-gallery" },
       { label: "Dental Lab", href: "/dental-lab" },
       { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Español", href: "/es" },
     ],
   },
 ];
