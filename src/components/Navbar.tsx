@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone, ChevronDown, Globe } from "lucide-react";
 
 interface NavbarProps {
   phone: string;
@@ -52,7 +52,30 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const navRef = useRef<HTMLDivElement>(null);
 
-  const locationPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
+  const location = useLocation();
+  const isSpanish = location.pathname.startsWith("/es");
+  const locationPrefix = location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
+
+  const LanguageToggle = ({ className = "" }: { className?: string }) => (
+    <div className={`flex items-center gap-1.5 text-xs font-sans font-semibold ${className}`}>
+      <Globe className="w-3.5 h-3.5 text-muted-foreground" />
+      <Link
+        to="/"
+        className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+        onClick={() => setMobileOpen(false)}
+      >
+        EN
+      </Link>
+      <span className="text-border">|</span>
+      <Link
+        to="/es"
+        className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+        onClick={() => setMobileOpen(false)}
+      >
+        ES
+      </Link>
+    </div>
+  );
 
   const openDropdown = (key: DropdownKey) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -150,7 +173,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
-              <Link to="/es" className="text-xs font-sans font-semibold bg-primary/10 text-primary px-2 py-1 rounded-full hover:bg-primary/20 transition-colors hidden lg:inline-flex">Español</Link>
+              <LanguageToggle className="hidden lg:flex" />
               <a href={`tel:${phone}`} className="flex items-center gap-1.5 text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap">
                 <Phone className="w-4 h-4" />
                 <span className="hidden lg:inline">{phoneFormatted}</span>
@@ -163,6 +186,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
           {/* Mobile menu button — visible below md */}
           <div className="md:hidden flex items-center gap-2">
+            <LanguageToggle />
             <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs !px-3 !py-2">
               Book Now
             </a>
@@ -236,7 +260,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             <Link to="/convenient-locations" className="py-3" onClick={() => setMobileOpen(false)}>Locations</Link>
             <Link to="/contact" className="py-3" onClick={() => setMobileOpen(false)}>Contact</Link>
             <Link to="/blog" className="py-3" onClick={() => setMobileOpen(false)}>Blog</Link>
-            <Link to="/es" className="py-3 text-primary" onClick={() => setMobileOpen(false)}>Español</Link>
+            <div className="py-3"><LanguageToggle /></div>
             <a href={`tel:${phone}`} className="flex items-center gap-2 py-3 text-primary font-semibold">
               <Phone className="w-4 h-4" /> {phoneFormatted}
             </a>
