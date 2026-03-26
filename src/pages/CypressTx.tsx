@@ -153,7 +153,7 @@ const CypressTx = () => {
                 <ServiceCard key={svc.title} {...svc} />
               ))}
             </div>
-            <Link to="/cypress-tx/services/" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+            <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               Explore All Cypress Services →
             </Link>
           </div>
