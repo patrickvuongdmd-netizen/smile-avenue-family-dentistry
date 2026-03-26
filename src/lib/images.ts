@@ -1,24 +1,29 @@
 // Central image URL constants for the entire site
+import patrickVuongImg from "@/assets/doctors/patrick-vuong.png";
+import peterKimImg from "@/assets/doctors/peter-kim.png";
+import laithYahyaImg from "@/assets/doctors/laith-yahya.png";
+import sameerBilalImg from "@/assets/doctors/sameer-bilal.png";
+import sarahMarediaImg from "@/assets/doctors/sarah-maredia.png";
 
 export const DOCTOR_IMAGES: Record<string, { url: string; alt: string }> = {
   "patrick-vuong": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/01/image-dr-patrick-vuong.webp",
-    alt: "Dr. Patrick Vuong, DMD - Founder of Smile Avenue Family Dentistry",
+    url: patrickVuongImg,
+    alt: "Dr. Patrick Vuong, DMD - Dentist at Smile Avenue Family Dentistry Cypress & Katy TX",
   },
   "peter-kim": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/01/image-dr-peter-kim.webp",
+    url: peterKimImg,
     alt: "Dr. Peter Kim, DDS - Dentist at Smile Avenue Family Dentistry Cypress TX",
   },
   "laith-yahya": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/01/image-dr-laith-yahya.webp",
+    url: laithYahyaImg,
     alt: "Dr. Laith Yahya, DDS - Dentist at Smile Avenue Family Dentistry Cypress TX",
   },
   "sameer-bilal": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/03/image-dr-sameer-bilal.webp",
+    url: sameerBilalImg,
     alt: "Dr. Sameer Bilal, DDS - Dentist at Smile Avenue Family Dentistry Katy TX",
   },
   "sarah-maredia": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/03/image-dr-sarah-maredia.webp",
+    url: sarahMarediaImg,
     alt: "Dr. Sarah Maredia, DDS - Dentist at Smile Avenue Family Dentistry Cypress & Katy TX",
   },
   "shayan-alkhiro": {
@@ -44,13 +49,13 @@ export const TEAM_MEMBERS = {
     { name: "London Robinson", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"], imgKey: "london-robinson" },
     { name: "Stephanie Tabora", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"], imgKey: "stephanie-tabora" },
     { name: "Tania Hernandez", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"], imgKey: "tania-hernandez" },
-    { name: "Violetta Arroyo", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"], imgKey: "" },
-    { name: "Whitney Darden", credentials: "RDA", role: "Dental Assistant", locations: ["Katy"], imgKey: "" },
+    { name: "Violetta Arroyo", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"], imgKey: "violetta-arroyo" },
+    { name: "Whitney Darden", credentials: "RDA", role: "Dental Assistant", locations: ["Katy"], imgKey: "whitney-darden" },
   ],
   frontOffice: [
     { name: "Kerstin Villasenor", credentials: "", role: "Office Manager", locations: ["Cypress", "Katy"], imgKey: "" },
     { name: "Duaa Shawkat", credentials: "", role: "Office Manager", locations: ["Cypress"], imgKey: "duaa-shawkat" },
-    { name: "Emmanuel Jaimes", credentials: "", role: "Office Manager", locations: ["Katy"], imgKey: "" },
+    { name: "Emmanuel Jaimes", credentials: "", role: "Office Manager", locations: ["Katy"], imgKey: "emmanuel-jaimes" },
     { name: "Walter Perez", credentials: "", role: "Treatment Coordinator", locations: ["Cypress"], imgKey: "walter-perez" },
     { name: "Clara Atencio", credentials: "", role: "Schedule Coordinator", locations: ["Cypress"], imgKey: "clara-atencio" },
     { name: "Aleydis Melendez", credentials: "", role: "Schedule Coordinator", locations: ["Cypress", "Katy"], imgKey: "" },
