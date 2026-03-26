@@ -52,7 +52,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const navRef = useRef<HTMLDivElement>(null);
 
-  // Determine location prefix from current path
   const locationPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
 
   const openDropdown = (key: DropdownKey) => {
@@ -75,21 +74,21 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center shrink-0">
             <img src="/logo-full.png" alt="Smile Avenue Family Dentistry" className="hidden sm:block h-20 w-auto" />
             <img src="/logo-mark.png" alt="Smile Avenue" className="sm:hidden h-10 w-auto" />
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-6">
-            <div className="flex items-center gap-1 text-sm font-sans font-medium text-foreground">
+          {/* Desktop Nav — visible at md (768px+) */}
+          <div className="hidden md:flex items-center gap-1 lg:gap-4">
+            <div className="flex items-center text-sm font-sans font-medium text-foreground">
               {/* Services Dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => openDropdown("services")}
                 onMouseLeave={closeDropdown}
               >
-                <Link to="/services" className="flex items-center gap-1 px-3 py-2 hover:text-primary transition-colors">
+                <Link to="/services" className="flex items-center gap-1 px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">
                   Services <ChevronDown className="w-3.5 h-3.5" />
                 </Link>
                 {activeDropdown === "services" && (
@@ -117,32 +116,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
-              {/* Patients Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => openDropdown("patients")}
-                onMouseLeave={closeDropdown}
-              >
-                <Link to="/patients/new-patient-hub" className="flex items-center gap-1 px-3 py-2 hover:text-primary transition-colors">
-                  Patients <ChevronDown className="w-3.5 h-3.5" />
-                </Link>
-                {activeDropdown === "patients" && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
-                    <div className="bg-popover border border-border rounded-xl shadow-xl p-4 w-56">
-                      {patientLinks.map((l) => (
-                        <Link
-                          key={l.href}
-                          to={l.href}
-                          className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          {l.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+              <Link to="/convenient-locations" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Locations</Link>
 
               {/* About Dropdown */}
               <div
@@ -150,7 +124,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 onMouseEnter={() => openDropdown("about")}
                 onMouseLeave={closeDropdown}
               >
-                <Link to="/about" className="flex items-center gap-1 px-3 py-2 hover:text-primary transition-colors">
+                <Link to="/about" className="flex items-center gap-1 px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">
                   About <ChevronDown className="w-3.5 h-3.5" />
                 </Link>
                 {activeDropdown === "about" && (
@@ -171,35 +145,41 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
-              <Link to="/convenient-locations" className="px-3 py-2 hover:text-primary transition-colors">Locations</Link>
-              <Link to="/blog" className="px-3 py-2 hover:text-primary transition-colors">Blog</Link>
+              <Link to="/contact" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Contact</Link>
+              <Link to="/blog" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap hidden lg:block">Blog</Link>
             </div>
 
-            <div className="flex items-center gap-3">
-              <Link to="/es" className="text-xs font-sans font-semibold bg-primary/10 text-primary px-2.5 py-1 rounded-full hover:bg-primary/20 transition-colors">Español</Link>
-              <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors">
+            <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
+              <Link to="/es" className="text-xs font-sans font-semibold bg-primary/10 text-primary px-2 py-1 rounded-full hover:bg-primary/20 transition-colors hidden lg:inline-flex">Español</Link>
+              <a href={`tel:${phone}`} className="flex items-center gap-1.5 text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap">
                 <Phone className="w-4 h-4" />
-                {phoneFormatted}
+                <span className="hidden lg:inline">{phoneFormatted}</span>
               </a>
-              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">
+              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
                 Book Now
               </a>
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile menu button — visible below md */}
+          <div className="md:hidden flex items-center gap-2">
+            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs !px-3 !py-2">
+              Book Now
+            </a>
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-background border-t border-border pb-4 max-h-[80vh] overflow-y-auto">
+        <div className="md:hidden bg-background border-t border-border pb-4 max-h-[80vh] overflow-y-auto">
           <div className="container mx-auto px-4 pt-4 flex flex-col gap-1 font-sans text-sm font-medium text-foreground">
             {/* Services accordion */}
             <button
@@ -254,7 +234,9 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             )}
 
             <Link to="/convenient-locations" className="py-3" onClick={() => setMobileOpen(false)}>Locations</Link>
+            <Link to="/contact" className="py-3" onClick={() => setMobileOpen(false)}>Contact</Link>
             <Link to="/blog" className="py-3" onClick={() => setMobileOpen(false)}>Blog</Link>
+            <Link to="/es" className="py-3 text-primary" onClick={() => setMobileOpen(false)}>Español</Link>
             <a href={`tel:${phone}`} className="flex items-center gap-2 py-3 text-primary font-semibold">
               <Phone className="w-4 h-4" /> {phoneFormatted}
             </a>

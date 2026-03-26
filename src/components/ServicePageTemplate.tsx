@@ -108,7 +108,6 @@ const insuranceLogos = [
   "MetLife", "United Healthcare", "Guardian", "Humana",
 ];
 
-// Default related services mapping by slug
 const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
   "dental-implants": [
     { title: "All-on-X Implants", slug: "all-on-x-implants" },
@@ -211,13 +210,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.serviceSlug}/`;
   useDocTitle(data.metaTitle);
 
-  // Related services
   const related = data.relatedServices || (DEFAULT_RELATED[data.serviceSlug] || []).map(r => ({
     title: r.title,
     href: `${loc.path}/${r.slug}`,
   }));
 
-  // JSON-LD
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService" as const,
@@ -253,7 +250,6 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
   const FREE_CONSULT_SLUGS = ["dental-implants", "all-on-x-implants", "cosmetic-dentistry", "veneers", "invisalign"];
   const showFreeConsult = FREE_CONSULT_SLUGS.includes(data.serviceSlug);
-
   const isEmergency = data.serviceSlug === "emergency-dentist";
 
   const breadcrumbJsonLd = {
@@ -265,6 +261,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       { "@type": "ListItem", position: 3, name: data.serviceName, item: canonicalUrl },
     ],
   };
+
+  const heroImage = SERVICE_IMAGES[data.serviceSlug];
 
   return (
     <>
@@ -295,41 +293,50 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       )}
 
       <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
-        {/* HERO */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">
-              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span className="mx-2" aria-hidden="true">›</span>
-              <Link to={loc.path} className="hover:text-primary transition-colors">{loc.name}, TX</Link>
-              <span className="mx-2" aria-hidden="true">›</span>
-              <span className="text-foreground">{data.serviceName}</span>
-            </nav>
-            <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
-              <div>
-                <p className="kicker">{data.heroKicker}</p>
-                <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">{data.heroHeading}</h1>
-                <p className="section-body">{data.heroBody}</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>{data.heroCta1}</a>
-                  <a href={`tel:${loc.phone}`} className="btn-secondary" aria-label={`Call ${loc.phoneFormatted}`}>{data.heroCta2}</a>
+        {/* HERO — Full-width banner with background image */}
+        <section
+          className="relative min-h-[300px] md:min-h-[400px] flex items-end"
+          style={heroImage ? {
+            backgroundImage: `url(${heroImage.url})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          } : undefined}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+
+          <div className="relative z-10 w-full">
+            {/* Breadcrumb — inside the hero, tight to top */}
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+              <nav aria-label="Breadcrumb" className="mb-4 text-xs font-sans text-white/70">
+                <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                <span className="mx-2" aria-hidden="true">›</span>
+                <Link to={loc.path} className="hover:text-white transition-colors">{loc.name}, TX</Link>
+                <span className="mx-2" aria-hidden="true">›</span>
+                <span className="text-white">{data.serviceName}</span>
+              </nav>
+            </div>
+
+            {/* Hero content */}
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:pb-14">
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold tracking-[0.15em] uppercase mb-3 text-primary" style={{ fontFamily: "var(--font-sans)" }}>
+                  {data.heroKicker}
+                </p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "var(--font-display)" }}>
+                  {data.heroHeading}
+                </h1>
+                <p className="text-base md:text-lg leading-relaxed mb-6 text-white/85 max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>
+                  {data.heroBody}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>
+                    {data.heroCta1}
+                  </a>
+                  <a href={`tel:${loc.phone}`} className="btn-cta-outline" aria-label={`Call ${loc.phoneFormatted}`}>
+                    {data.heroCta2}
+                  </a>
                 </div>
-              </div>
-              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                {SERVICE_IMAGES[data.serviceSlug] ? (
-                  <img
-                    src={SERVICE_IMAGES[data.serviceSlug].url}
-                    alt={SERVICE_IMAGES[data.serviceSlug].alt}
-                    className="w-full h-full object-cover"
-                    fetchPriority="high"
-                    width={640}
-                    height={480}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-muted flex items-center justify-center">
-                    <span className="text-sm font-sans text-muted-foreground">{data.heroImage}</span>
-                  </div>
-                )}
               </div>
             </div>
           </div>
