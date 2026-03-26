@@ -174,6 +174,12 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </ScrollReveal>
+
+        {/* TECHNOLOGY TRUST */}
+        <ScrollReveal>
+          <TechnologyTrust />
+        </ScrollReveal>
 
         {/* SEE OUR OFFICE — VIDEO */}
         <section className="section-padding bg-background">
