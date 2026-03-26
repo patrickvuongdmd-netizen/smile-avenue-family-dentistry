@@ -228,6 +228,15 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
       <Footer />
       <MobileStickyBar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
       <BackToTop />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     </>
   );
 };
