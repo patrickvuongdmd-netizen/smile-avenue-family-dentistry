@@ -24,7 +24,7 @@ const data: NeighborhoodPageData = {
     { icon: <MapPin className="w-5 h-5" />, title: "On Westheimer Parkway", description: "Right in the heart of Cinco Ranch at 23541 Westheimer Pkwy. No driving across Katy — we're in your neighborhood." },
     { icon: <Clock className="w-5 h-5" />, title: "Same-Day Appointments", description: "Walk-in emergency care and same-day scheduling for busy Cinco Ranch families." },
     { icon: <Shield className="w-5 h-5" />, title: "All Major Insurance Accepted", description: "Aetna, BCBS, Cigna, Delta Dental, MetLife, United Healthcare — we've got you covered." },
-    { icon: <Stethoscope className="w-5 h-5" />, title: "5 Dentists on Staff", description: "Our Katy team includes Dr. Vuong, Dr. Chang, Dr. Lopez, Dr. Yahya, and Dr. Willis." },
+    { icon: <Stethoscope className="w-5 h-5" />, title: "Experienced Dentists", description: "Our Katy team includes Dr. Vuong, Dr. Bilal, Dr. Maredia, and more — serving families with excellence." },
     { icon: <Sparkles className="w-5 h-5" />, title: "Advanced Cosmetic Options", description: "Veneers, Invisalign, teeth whitening, and complete smile makeovers — all on Westheimer Pkwy." },
     { icon: <Heart className="w-5 h-5" />, title: "Bilingual Care", description: "Hablamos Español. Our multilingual team ensures every patient feels understood." },
   ],
