@@ -9,6 +9,7 @@ const data: NeighborhoodPageData = {
   metaTitle: "Dentist Near Firethorne, Katy TX | Smile Avenue Family Dentistry",
   metaDescription: "Firethorne families: find your trusted Katy dentist at Smile Avenue on Westheimer Parkway. Implants, cleanings, Invisalign & emergency care. Call (281) 800-5008.",
   heroHeading: "Firethorne's Neighborhood Dentist — Expert Care on Westheimer Parkway",
+  heroImage: OFFICE_IMAGES.aboutKatyTeam,
   heroSubheading: "A short drive from the Firethorne community to modern, full-service dental care.",
   heroBody: "Firethorne families deserve a dentist who combines proximity with excellence. Smile Avenue Family Dentistry on Westheimer Parkway offers the comprehensive dental care your family needs — from children's checkups to dental implants — just minutes from the Firethorne community.",
   contentParagraphs: [
