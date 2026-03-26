@@ -66,18 +66,23 @@ export const TEAM_MEMBERS = {
 };
 
 export const OFFICE_IMAGES = {
-  homepageHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Smile-Avenue-Family-Dentistry.jpg.webp",
+  homepageHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-bg-new.webp",
+  homepageHeroMobile: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-bg-mobile.webp",
   cypressHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour.webp",
   katyHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Office-Tour.jpg",
-  aboutHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-about-us.webp",
-  contactHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-contact-cypress.webp",
-  newPatientHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-new-patients-cypress.webp",
+  aboutHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/10/img-about-us.webp",
+  aboutTeamAction: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
+  aboutKatyTeam: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-about-us.webp",
+  contactHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-contact-us.webp",
+  newPatientHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-New-Patients.jpg",
+  newPatientFirstVisit: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-new-patients-cypress.webp",
+  patientCare: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-new-patients-cypress.webp",
   waitingRoom: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-9.jpg",
   treatmentRoom: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-5.webp",
   hallway: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-1.webp",
   coffeeStation: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-6.webp",
-  teamPhoto: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
-  smileGallery: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-smile-gallery-cypress.webp",
+  teamPhoto: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/team-img.jpg",
+  smileGallery: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-bf.webp",
 };
 
 export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
