@@ -4,6 +4,8 @@ import { MapPin, Phone, GraduationCap, Stethoscope, Heart, Award } from "lucide-
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import BackToTop from "@/components/BackToTop";
 
 export interface DoctorPageData {
   name: string;
