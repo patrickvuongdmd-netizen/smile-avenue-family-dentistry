@@ -95,7 +95,7 @@ const DentalCrownsCypress = () => (
 
       {/* PROCESS */}
       <section className="section-padding section-alt"><div className="container mx-auto text-center">
-        <p className="kicker">THE CEREC PROCESS</p>
+        <p className="kicker">YOUR CROWN PROCESS</p>
         <h2 className="section-heading">What to Expect</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">{processSteps.map(s => (
           <div key={s.number} className="bg-card rounded-2xl p-6 border border-border text-left">
