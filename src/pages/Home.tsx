@@ -12,6 +12,7 @@ import SkipToContent from "@/components/SkipToContent";
 import { Play } from "lucide-react";
 import { useState } from "react";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -322,27 +323,16 @@ const Home = () => {
           </div>
         </section>
 
-        {/* VIDEO TESTIMONIALS */}
+        {/* YOUTUBE VIDEO TESTIMONIALS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">PATIENT STORIES</p>
             <h2 className="section-heading text-center">Watch Real Patient Experiences</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-              {VIDEO_TESTIMONIALS.map((v, i) => (
-                <figure key={i} className="bg-card rounded-xl border border-border overflow-hidden group cursor-pointer">
-                  <div className="aspect-video relative overflow-hidden">
-                    <img src={v.thumbnail} alt={`Video testimonial: ${v.title}`} className="w-full h-full object-cover" loading="lazy" width={640} height={360} />
-                    <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors flex items-center justify-center">
-                      <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Play className="w-6 h-6 text-primary-foreground ml-1" aria-hidden="true" />
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption className="p-4">
-                    <h3 className="font-sans text-sm font-semibold text-foreground">{v.title}</h3>
-                  </figcaption>
-                </figure>
-              ))}
+            <div className="grid sm:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
+              <LazyYouTube videoId="dQw4w9WgXcQ" title="Why Smile Avenue is Trusted for Caring for Patients & Families" />
+              <LazyYouTube videoId="dQw4w9WgXcQ" title="The Road to Your Best Smile" />
+              <LazyYouTube videoId="dQw4w9WgXcQ" title="Right Across the Street, Right for My Smile!" />
+              <LazyYouTube videoId="dQw4w9WgXcQ" title="Office Tour — See Our Modern Dental Office" />
             </div>
           </div>
         </section>
@@ -442,6 +432,32 @@ const Home = () => {
       <MobileStickyBar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <Footer />
       <BackToTop />
+
+      {/* Inline JSON-LD for guaranteed rendering */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Dentist",
+            name: "Smile Avenue Family Dentistry",
+            url: "https://www.smileavenuefamilydentistry.com",
+            telephone: ["+18326481756", "+12818005008"],
+            address: [
+              { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+              { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+            ],
+            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "5000" },
+            priceRange: "$$",
+            openingHours: "Mo-Fr 08:00-17:00",
+            sameAs: [
+              "https://www.facebook.com/SmileAvenueFamilyDentistry/",
+              "https://www.instagram.com/smileavenuefamilydentistry/",
+              "https://www.tiktok.com/@smileavenuetx",
+            ],
+          }),
+        }}
+      />
     </>
   );
 };
