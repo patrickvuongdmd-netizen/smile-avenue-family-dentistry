@@ -29,9 +29,9 @@ const SLUG_TO_IMG_KEY: Record<string, string> = {
   "patrick-vuong-dmd": "patrick-vuong",
   "peter-kim-dds": "peter-kim",
   "laith-yahya-dds": "laith-yahya",
-  "weiyen-chang-dds": "weiyen-chang",
-  "christian-lopez-dds": "christian-lopez",
-  "tamaara-willis-dds-ms": "tamaara-willis",
+  "sameer-bilal-dds": "sameer-bilal",
+  "sarah-maredia-dds": "sarah-maredia",
+  "shayan-alkhiro-dds": "shayan-alkhiro",
 };
 
 const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {

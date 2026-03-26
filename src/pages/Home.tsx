@@ -42,9 +42,9 @@ const doctors = [
   { name: "Dr. Patrick Vuong", credentials: "DMD", role: "Founder", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
   { name: "Dr. Peter Kim", credentials: "DDS", role: "General Dentist", href: "/doctors/peter-kim-dds", imgKey: "peter-kim" },
   { name: "Dr. Laith Yahya", credentials: "DDS", role: "General Dentist", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
-  { name: "Dr. Weiyen Chang", credentials: "DDS", role: "General Dentist", href: "/doctors/weiyen-chang-dds", imgKey: "weiyen-chang" },
-  { name: "Dr. Christian Lopez", credentials: "DDS", role: "General Dentist", href: "/doctors/christian-lopez-dds", imgKey: "christian-lopez" },
-  { name: "Dr. Tamaara Willis", credentials: "DDS, MS", role: "Specialist", href: "/doctors/tamaara-willis-dds-ms", imgKey: "tamaara-willis" },
+  { name: "Dr. Sameer Bilal", credentials: "DDS", role: "General Dentist", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
+  { name: "Dr. Sarah Maredia", credentials: "DDS", role: "General Dentist", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
+  { name: "Dr. Shayan Alkhiro", credentials: "DDS", role: "General Dentist", href: "/doctors/shayan-alkhiro-dds", imgKey: "shayan-alkhiro" },
 ];
 
 const testimonials = [

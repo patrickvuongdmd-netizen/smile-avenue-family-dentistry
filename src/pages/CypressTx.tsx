@@ -18,9 +18,11 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 const CYPRESS_MAPS = "https://maps.app.goo.gl/DgZBrfjyNed7qKxs8";
 
 const doctors = [
-  { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Lead dentist with a focus on comprehensive family and implant dentistry.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
+  { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Founder with a focus on comprehensive family and implant dentistry.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
   { name: "Dr. Peter Kim", credentials: "DDS", bio: "Trusted for his gentle approach and commitment to patient comfort.", href: "/doctors/peter-kim-dds", imgKey: "peter-kim" },
   { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Known for his integrity, precision, and passion for restorative care.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
+  { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry at both locations.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
+  { name: "Dr. Shayan Alkhiro", credentials: "DDS", bio: "Dedicated to gentle, high-quality dental care with a calm demeanor.", href: "/doctors/shayan-alkhiro-dds", imgKey: "shayan-alkhiro" },
 ];
 
 const services = [

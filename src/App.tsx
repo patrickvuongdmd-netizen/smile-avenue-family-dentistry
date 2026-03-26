@@ -57,9 +57,10 @@ import Doctors from "./pages/Doctors.tsx";
 import DrPatrickVuong from "./pages/doctors/PatrickVuong.tsx";
 import DrPeterKim from "./pages/doctors/PeterKim.tsx";
 import DrLaithYahya from "./pages/doctors/LaithYahya.tsx";
-import DrWeiyenChang from "./pages/doctors/WeiyenChang.tsx";
-import DrChristianLopez from "./pages/doctors/ChristianLopez.tsx";
-import DrTamaaraWillis from "./pages/doctors/TamaaraWillis.tsx";
+import DrSameerBilal from "./pages/doctors/SameerBilal.tsx";
+import DrSarahMaredia from "./pages/doctors/SarahMaredia.tsx";
+import DrShayanAlkhiro from "./pages/doctors/ShayanAlkhiro.tsx";
+import OurTeam from "./pages/OurTeam.tsx";
 import FreeConsultation from "./pages/FreeConsultation.tsx";
 import Specials from "./pages/Specials.tsx";
 import MembershipPlan from "./pages/MembershipPlan.tsx";
@@ -141,9 +142,10 @@ const App = () => (
             <Route path="/doctors/patrick-vuong-dmd" element={<DrPatrickVuong />} />
             <Route path="/doctors/peter-kim-dds" element={<DrPeterKim />} />
             <Route path="/doctors/laith-yahya-dds" element={<DrLaithYahya />} />
-            <Route path="/doctors/weiyen-chang-dds" element={<DrWeiyenChang />} />
-            <Route path="/doctors/christian-lopez-dds" element={<DrChristianLopez />} />
-            <Route path="/doctors/tamaara-willis-dds-ms" element={<DrTamaaraWillis />} />
+            <Route path="/doctors/sameer-bilal-dds" element={<DrSameerBilal />} />
+            <Route path="/doctors/sarah-maredia-dds" element={<DrSarahMaredia />} />
+            <Route path="/doctors/shayan-alkhiro-dds" element={<DrShayanAlkhiro />} />
+            <Route path="/our-team" element={<OurTeam />} />
             <Route path="/free-consultation" element={<FreeConsultation />} />
             <Route path="/specials" element={<Specials />} />
             <Route path="/membership-plan" element={<MembershipPlan />} />
