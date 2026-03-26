@@ -12,6 +12,13 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 
 const categories = ["All", "Implants", "Veneers", "Whitening", "Invisalign", "Crowns"];
 
+const beforeAfterPhotos = [
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile1.webp", alt: "Before and after smile transformation — dental implants at Smile Avenue" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile2.webp", alt: "Before and after smile transformation — porcelain veneers at Smile Avenue" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile3.webp", alt: "Before and after smile transformation — teeth whitening at Smile Avenue" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile4.webp", alt: "Before and after smile transformation — Invisalign at Smile Avenue" },
+];
+
 const galleryItems = [
   { category: "Implants", label: "Single Implant — Front Tooth", before: "Missing front tooth", after: "Natural-looking implant" },
   { category: "Implants", label: "All-on-4 Full Arch", before: "Multiple missing teeth", after: "Full arch restoration" },
