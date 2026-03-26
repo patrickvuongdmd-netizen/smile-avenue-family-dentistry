@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
+import SkipToContent from "@/components/SkipToContent";
 
 export interface DoctorPageData {
   name: string;
