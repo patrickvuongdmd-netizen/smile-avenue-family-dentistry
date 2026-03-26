@@ -10,6 +10,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
+import TechnologyTrust from "@/components/TechnologyTrust";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Play } from "lucide-react";
 import { useState } from "react";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
