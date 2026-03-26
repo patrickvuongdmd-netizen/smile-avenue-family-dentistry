@@ -347,8 +347,9 @@ const Home = () => {
         </section>
       </main>
 
-      <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <MobileStickyBar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <Footer />
+      <BackToTop />
     </>
   );
 };
