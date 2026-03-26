@@ -186,6 +186,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
           {/* Mobile menu button — visible below md */}
           <div className="md:hidden flex items-center gap-2">
+            <LanguageToggle />
             <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs !px-3 !py-2">
               Book Now
             </a>
