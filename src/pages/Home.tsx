@@ -74,6 +74,7 @@ const Home = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX</title>
         <meta name="description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments. Book online today." />
