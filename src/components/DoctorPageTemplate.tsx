@@ -186,6 +186,7 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
 
       <Footer />
       <MobileStickyBar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
+      <BackToTop />
     </>
   );
 };
