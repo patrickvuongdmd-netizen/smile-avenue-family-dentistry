@@ -8,17 +8,11 @@ import TestimonialCard from "@/components/TestimonialCard";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
+import { VIDEO_TESTIMONIALS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
-
-const videoTestimonials = [
-  { name: "Maria's Implant Journey", procedure: "Dental Implants" },
-  { name: "The Johnson Family", procedure: "Pediatric Dentistry" },
-  { name: "Robert's Smile Makeover", procedure: "Veneers" },
-  { name: "Sarah's Invisalign Results", procedure: "Invisalign" },
-];
 
 const reviews = [
   { quote: "I always love to come to Smile Dentistry. I trust the care that they give me. The team makes me feel so special every time.", name: "Thao H.", source: "Google Review" },
