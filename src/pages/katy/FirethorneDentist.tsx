@@ -43,8 +43,8 @@ const data: NeighborhoodPageData = {
   ],
   doctors: [
     { name: "Dr. Patrick Vuong", credentials: "DMD — Founder", bio: "Comprehensive care with a gentle touch.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
-    { name: "Dr. Weiyen Chang", credentials: "DDS", bio: "Skilled in restorative and family dentistry.", href: "/doctors/weiyen-chang-dds", imgKey: "weiyen-chang" },
-    { name: "Dr. Tamaara Willis", credentials: "DDS, MS", bio: "Specialist in advanced dental procedures.", href: "/doctors/tamaara-willis-dds-ms", imgKey: "tamaara-willis" },
+    { name: "Dr. Sameer Bilal", credentials: "DDS", bio: "Compassionate, detail-oriented general dentistry.", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
+    { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
   ],
   testimonials: [
     { quote: "We live in Firethorne and Smile Avenue is our go-to dentist. Friendly team, modern office, and excellent care.", name: "Chris P.", source: "Google Review" },
