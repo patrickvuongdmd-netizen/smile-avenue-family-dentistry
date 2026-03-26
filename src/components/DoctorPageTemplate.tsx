@@ -46,8 +46,19 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
     medicalSpecialty: data.specialties,
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://smileavenuedentistry.com/" },
+      { "@type": "ListItem", position: 2, name: "Our Doctors", item: "https://smileavenuedentistry.com/doctors/" },
+      { "@type": "ListItem", position: 3, name: data.name, item: `https://smileavenuedentistry.com/doctors/${data.slug}/` },
+    ],
+  };
+
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
@@ -58,23 +69,24 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <Navbar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
       <TrustStrip />
 
-      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <nav className="mb-6 text-xs font-sans text-muted-foreground">
+            <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span className="mx-2">›</span>
+              <span className="mx-2" aria-hidden="true">›</span>
               <Link to="/doctors" className="hover:text-primary transition-colors">Our Doctors</Link>
-              <span className="mx-2">›</span>
+              <span className="mx-2" aria-hidden="true">›</span>
               <span className="text-foreground">{data.name}</span>
             </nav>
             <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
-              <div className="bg-muted rounded-2xl aspect-[3/4] flex items-center justify-center shadow-md">
+              <div className="bg-muted rounded-2xl aspect-[3/4] flex items-center justify-center shadow-md" role="img" aria-label={`${data.name}, ${data.credentials} — ${data.title} at Smile Avenue Family Dentistry`}>
                 <span className="text-sm font-sans text-muted-foreground">Doctor Headshot</span>
               </div>
               <div>
