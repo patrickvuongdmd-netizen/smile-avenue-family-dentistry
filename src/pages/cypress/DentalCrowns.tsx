@@ -76,7 +76,7 @@ const DentalCrownsCypress = () => (
         <h2 className="section-heading">What Is a Dental Crown?</h2>
         <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
           <p>A dental crown is a custom cap that covers and protects a damaged tooth, restoring its shape, size, strength, and appearance. Crowns are used for post-<Link to="/cypress-tx/root-canal" className="text-primary hover:underline">root canal</Link> protection, severe decay repair, cracked tooth repair, <Link to="/cypress-tx/dental-implants" className="text-primary hover:underline">dental implant</Link> coverage, cosmetic improvement, and <Link to="/cypress-tx/dental-bridges" className="text-primary hover:underline">bridge</Link> anchoring.</p>
-          <p>At Smile Avenue Cypress, we use CEREC technology to create precision-milled porcelain crowns in-office. No goopy impressions, no temporaries, no second appointment. Patients from Towne Lake, Spring Cypress, and Cypress get permanent crowns in one visit.</p>
+          <p>At Smile Avenue Cypress, our in-house Smile Dental Lab fabricates custom crowns using digital Medit impressions — no goopy molds. We offer both porcelain and zirconia options with precise shade matching for a natural result. Patients from Towne Lake, Spring Cypress, and Cypress trust us for quality crown restorations with faster turnaround than practices that outsource to external labs.</p>
         </div>
       </div></section>
 
