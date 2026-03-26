@@ -212,7 +212,7 @@ const NewPatientHub = () => {
               ))}
             </div>
             <p className="text-xs font-sans text-muted-foreground mt-6">
-              Don't see your plan? <Link to="/patients/insurance/" className="text-primary hover:underline">Contact us to verify your coverage.</Link>
+              Don't see your plan? <Link to="/insurance" className="text-primary hover:underline">Contact us to verify your coverage.</Link>
             </p>
           </div>
         </section>
