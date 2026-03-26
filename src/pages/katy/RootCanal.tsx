@@ -41,7 +41,7 @@ const data: ServicePageData = {
     { number: "02", title: "Anesthesia & Sedation", description: "The area is thoroughly numbed. Sedation options are available for anxious patients.", icon: <Syringe className="w-5 h-5" /> },
     { number: "03", title: "Infected Pulp Removal", description: "The infected pulp is carefully removed using advanced rotary instruments.", icon: <Stethoscope className="w-5 h-5" /> },
     { number: "04", title: "Canal Filling & Sealing", description: "The cleaned canals are filled with biocompatible material and sealed to prevent reinfection.", icon: <Shield className="w-5 h-5" /> },
-    { number: "05", title: "Same-Day Crown", description: "A CEREC crown is designed, milled, and placed in the same visit to protect your treated tooth.", icon: <Zap className="w-5 h-5" /> },
+    { number: "05", title: "Crown Placement", description: "A custom crown is fabricated in our in-house Smile Dental Lab and placed at your follow-up visit to protect your treated tooth.", icon: <Zap className="w-5 h-5" /> },
   ],
   faqHeading: "Root Canal Questions",
   faqs: [
