@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -22,7 +23,9 @@ const PHONE = "8326481756";
 const PHONE_FMT = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 
-const Doctors = () => (
+const Doctors = () => {
+  useDocTitle("Meet Our Doctors | Smile Avenue Family Dentistry");
+  return (
   <>
     <SkipToContent />
     <Helmet>
@@ -105,5 +108,6 @@ const Doctors = () => (
     <BackToTop />
   </>
 );
+};
 
 export default Doctors;

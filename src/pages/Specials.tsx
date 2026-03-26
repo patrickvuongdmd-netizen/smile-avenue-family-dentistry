@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { Gift, Users, Sparkles, Tag, Phone, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -57,6 +58,8 @@ const offers = [
 ];
 
 const Specials = () => {
+  useDocTitle("Dental Specials & Offers | Smile Avenue Family Dentistry");
+
   return (
     <>
       <Helmet>

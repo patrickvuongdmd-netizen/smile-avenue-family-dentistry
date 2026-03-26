@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -71,7 +72,9 @@ const categories = [
   },
 ];
 
-const Faq = () => (
+const Faq = () => {
+  useDocTitle("Frequently Asked Questions | Smile Avenue Family Dentistry");
+  return (
   <>
     <Helmet>
       <title>FAQ | Smile Avenue Family Dentistry — Cypress & Katy, TX</title>
@@ -128,5 +131,6 @@ const Faq = () => (
     <MobileStickyBar phone={PHONE} phoneFormatted={PHONE_FMT} bookingUrl={BOOKING} />
   </>
 );
+};
 
 export default Faq;

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, GraduationCap, Stethoscope, Heart, Award } from "lucide-react";
+import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
@@ -34,6 +35,7 @@ const SLUG_TO_IMG_KEY: Record<string, string> = {
 };
 
 const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
+  useDocTitle(data.metaTitle);
   const primary = data.locations[0];
   const imgKey = SLUG_TO_IMG_KEY[data.slug];
   const doctorImg = imgKey ? DOCTOR_IMAGES[imgKey] : null;

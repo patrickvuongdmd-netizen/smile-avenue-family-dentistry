@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { Phone, MapPin, Clock, Check, Sparkles, Shield, Heart, Star } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -34,6 +35,9 @@ const FreeConsultation = () => {
     e.preventDefault();
     setSubmitted(true);
   };
+
+  useDocTitle("Free Dental Consultation | Smile Avenue Family Dentistry");
+
 
   return (
     <>

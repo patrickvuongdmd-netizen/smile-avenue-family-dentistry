@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, Clock } from "lucide-react";
+import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
@@ -208,6 +209,7 @@ const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const loc = LOCATIONS[data.location];
   const canonicalUrl = `https://smileavenuedentistry.com${loc.path}/${data.serviceSlug}/`;
+  useDocTitle(data.metaTitle);
 
   // Related services
   const related = data.relatedServices || (DEFAULT_RELATED[data.serviceSlug] || []).map(r => ({

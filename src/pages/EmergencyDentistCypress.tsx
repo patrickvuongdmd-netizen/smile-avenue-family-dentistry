@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, Phone, Clock, Check, Shield, Zap, Users, PhoneCall, Scan, Stethoscope, Syringe } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -70,6 +71,8 @@ const faqs = [
 ];
 
 const EmergencyDentistCypress = () => {
+  useDocTitle("Emergency Dentist Cypress, TX | Smile Avenue Family Dentistry");
+
   return (
     <>
       <SkipToContent />

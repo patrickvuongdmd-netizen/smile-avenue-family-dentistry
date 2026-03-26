@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, Phone, Clock, Mail, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -23,6 +24,9 @@ const Contact = () => {
     e.preventDefault();
     setSubmitted(true);
   };
+
+  useDocTitle("Contact Us | Smile Avenue Family Dentistry");
+
 
   return (
     <>

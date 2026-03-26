@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -74,6 +75,9 @@ const Home = () => {
   const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
   const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
   const heroBooking = heroLoc === "cypress" ? CYPRESS_BOOKING : KATY_BOOKING;
+
+  useDocTitle("Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX");
+
 
   return (
     <>
