@@ -156,9 +156,6 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <TrustStrip />
