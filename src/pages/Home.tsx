@@ -262,6 +262,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
         {/* LOCATIONS */}
         <section className="section-padding bg-background">
