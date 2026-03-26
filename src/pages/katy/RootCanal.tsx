@@ -47,9 +47,9 @@ const data: ServicePageData = {
   faqs: [
     { question: "How much does a root canal cost?", answer: "Costs vary by tooth — front teeth are simpler than molars. Insurance usually covers a significant portion of root canal treatment. CareCredit financing available for any remaining balance." },
     { question: "Is a root canal painful?", answer: "No — a root canal actually relieves the pain caused by infection. With modern anesthesia and sedation, the procedure itself is comfortable. Most patients are surprised how easy it is." },
-    { question: "How long does a root canal take?", answer: "Typically 60-90 minutes. With our same-day CEREC crown option, you can have both the root canal and permanent crown placed in one visit." },
+    { question: "How long does a root canal take?", answer: "Typically 60-90 minutes. A follow-up visit is usually needed for crown placement. Our in-house lab provides faster turnaround than outside labs." },
     { question: "What happens if I skip the root canal?", answer: "The infection will worsen, potentially spreading to surrounding bone and tissue. The tooth will eventually be lost, and you'll need a more expensive replacement like an implant." },
-    { question: "Do I need a crown after a root canal?", answer: "Usually yes — a crown protects the treated tooth from fracturing. Our CEREC same-day crown technology means you can get both done in one visit." },
+    { question: "Do I need a crown after a root canal?", answer: "Usually yes — a crown protects the treated tooth from fracturing. Our in-house Smile Dental Lab fabricates your crown with faster turnaround than practices that outsource." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
