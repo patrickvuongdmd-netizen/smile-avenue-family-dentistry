@@ -7,24 +7,57 @@ export const DOCTOR_IMAGES: Record<string, { url: string; alt: string }> = {
   },
   "peter-kim": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/01/image-dr-peter-kim.webp",
-    alt: "Dr. Peter Kim, DDS - General Dentist at Smile Avenue Family Dentistry",
+    alt: "Dr. Peter Kim, DDS - Dentist at Smile Avenue Family Dentistry Cypress TX",
   },
   "laith-yahya": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/01/image-dr-laith-yahya.webp",
-    alt: "Dr. Laith Yahya, DDS - General Dentist at Smile Avenue Family Dentistry",
+    alt: "Dr. Laith Yahya, DDS - Dentist at Smile Avenue Family Dentistry Cypress TX",
   },
-  "weiyen-chang": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/01/image-dr-weiyen-chang.webp",
-    alt: "Dr. Weiyen Chang, DDS - General Dentist at Smile Avenue Family Dentistry",
+  "sameer-bilal": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/03/image-dr-sameer-bilal.webp",
+    alt: "Dr. Sameer Bilal, DDS - Dentist at Smile Avenue Family Dentistry Katy TX",
   },
-  "christian-lopez": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/01/image-dr-christian-lopez.webp",
-    alt: "Dr. Christian Lopez, DDS - General Dentist at Smile Avenue Family Dentistry",
+  "sarah-maredia": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/03/image-dr-sarah-maredia.webp",
+    alt: "Dr. Sarah Maredia, DDS - Dentist at Smile Avenue Family Dentistry Cypress & Katy TX",
   },
-  "tamaara-willis": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dr-Tamaara-Willis-DDS-MS.webp",
-    alt: "Dr. Tamaara Willis, DDS, MS - Specialist at Smile Avenue Family Dentistry",
+  "shayan-alkhiro": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/03/image-dr-shayan-alkhiro.webp",
+    alt: "Dr. Shayan Alkhiro, DDS - Dentist at Smile Avenue Family Dentistry Cypress TX",
   },
+};
+
+export const TEAM_MEMBERS = {
+  hygienists: [
+    { name: "Arpine Janbazian", credentials: "RDH", role: "Dental Hygienist", locations: ["Cypress"] },
+    { name: "Ivy Doan", credentials: "RDH", role: "Dental Hygienist", locations: ["Cypress"] },
+    { name: "Ngoc \"Jen\" Huynh", credentials: "RDH", role: "Dental Hygienist", locations: ["Cypress"] },
+  ],
+  assistants: [
+    { name: "Ali Hiti", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"] },
+    { name: "Ashton Mitchell", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"] },
+    { name: "Daniel Rodriguez", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"] },
+    { name: "Diana Ortiz", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"] },
+    { name: "Eva Wing", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"] },
+    { name: "Gisselle Gomez", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"] },
+    { name: "Kristen Davison", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"] },
+    { name: "London Robinson", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"] },
+    { name: "Stephanie Tabora", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"] },
+    { name: "Tania Hernandez", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"] },
+    { name: "Violetta Arroyo", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"] },
+    { name: "Whitney Darden", credentials: "RDA", role: "Dental Assistant", locations: ["Katy"] },
+  ],
+  frontOffice: [
+    { name: "Kerstin Villasenor", credentials: "", role: "Office Manager", locations: ["Cypress", "Katy"] },
+    { name: "Duaa Shawkat", credentials: "", role: "Office Manager", locations: ["Cypress"] },
+    { name: "Emmanuel Jaimes", credentials: "", role: "Office Manager", locations: ["Katy"] },
+    { name: "Walter Perez", credentials: "", role: "Treatment Coordinator", locations: ["Cypress"] },
+    { name: "Clara Atencio", credentials: "", role: "Schedule Coordinator", locations: ["Cypress"] },
+    { name: "Aleydis Melendez", credentials: "", role: "Schedule Coordinator", locations: ["Cypress", "Katy"] },
+    { name: "Lara Hull", credentials: "", role: "Insurance Coordinator", locations: ["Cypress"] },
+    { name: "Rebekah Petry", credentials: "", role: "Insurance Coordinator", locations: ["Cypress", "Katy"] },
+    { name: "Ronald Grady", credentials: "", role: "Insurance Coordinator", locations: ["Cypress", "Katy"] },
+  ],
 };
 
 export const OFFICE_IMAGES = {
