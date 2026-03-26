@@ -340,17 +340,7 @@ const Home = () => {
         </section>
 
         {/* INSURANCE */}
-        <section className="py-12 bg-background border-y border-border">
-          <div className="container mx-auto text-center">
-            <p className="kicker">INSURANCE ACCEPTED</p>
-            <div className="flex flex-wrap justify-center gap-6 mt-6">
-              {insuranceLogos.map((name, i) => (
-                <div key={i} className="px-5 py-3 bg-card rounded-lg border border-border text-sm font-sans font-medium text-muted-foreground">{name}</div>
-              ))}
-            </div>
-            <Link to="/insurance" className="inline-block mt-6 text-sm font-sans font-semibold text-primary hover:underline">View all accepted plans →</Link>
-          </div>
-        </section>
+        <InsuranceLogoBar />
 
         {/* BEFORE/AFTER PREVIEW */}
         <section className="section-padding section-alt">
