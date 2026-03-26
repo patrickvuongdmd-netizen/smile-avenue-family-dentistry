@@ -18,7 +18,7 @@ const whyChoose = [
   { title: "Same-Day Emergency Appointments", description: "We reserve time daily for urgent cases so you're never left waiting in pain.", icon: <Zap className="w-5 h-5" /> },
   { title: "Sedation for Anxious Patients", description: "Dental emergencies are stressful. We offer sedation options to keep you calm and comfortable during treatment.", icon: <Shield className="w-5 h-5" /> },
   { title: "Advanced Digital X-Rays & 3D CBCT", description: "Quick, accurate diagnosis with digital radiography and 3D cone beam imaging — no guesswork.", icon: <Scan className="w-5 h-5" /> },
-  { title: "Comprehensive In-House Care", description: "From root canals to extractions to same-day crowns, we handle everything under one roof — no referrals needed.", icon: <Stethoscope className="w-5 h-5" /> },
+  { title: "Comprehensive In-House Care", description: "From root canals to extractions to custom crowns, we handle everything under one roof — no referrals needed.", icon: <Stethoscope className="w-5 h-5" /> },
 ];
 
 const processSteps = [
