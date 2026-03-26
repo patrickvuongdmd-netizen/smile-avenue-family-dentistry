@@ -21,12 +21,35 @@ export interface DoctorPageData {
 
 const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
   const primary = data.locations[0];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    name: `${data.name}, ${data.credentials}`,
+    description: data.metaDescription,
+    url: `https://smileavenuedentistry.com/doctors/${data.slug}/`,
+    jobTitle: data.title,
+    worksFor: {
+      "@type": "Dentist",
+      name: "Smile Avenue Family Dentistry",
+    },
+    address: data.locations.map(loc => ({
+      "@type": "PostalAddress",
+      streetAddress: loc.address.split(",")[0],
+      addressLocality: loc.name,
+      addressRegion: "TX",
+      addressCountry: "US",
+    })),
+    medicalSpecialty: data.specialties,
+  };
+
   return (
     <>
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
         <link rel="canonical" href={`https://smileavenuedentistry.com/doctors/${data.slug}/`} />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <Navbar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
 
