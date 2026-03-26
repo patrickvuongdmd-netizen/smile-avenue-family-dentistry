@@ -35,6 +35,7 @@ const SLUG_TO_IMG_KEY: Record<string, string> = {
 };
 
 const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
+  useDocTitle(data.metaTitle);
   const primary = data.locations[0];
   const imgKey = SLUG_TO_IMG_KEY[data.slug];
   const doctorImg = imgKey ? DOCTOR_IMAGES[imgKey] : null;

@@ -97,6 +97,7 @@ const insuranceLogos = [
 const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
   const loc = LOCATIONS[data.location];
   const canonicalUrl = `https://smileavenuedentistry.com${loc.path}/${data.slug}/`;
+  useDocTitle(data.metaTitle);
 
   const jsonLd = {
     "@context": "https://schema.org",
