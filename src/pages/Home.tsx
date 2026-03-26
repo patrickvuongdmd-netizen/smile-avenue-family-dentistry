@@ -234,8 +234,10 @@ const Home = () => {
             <Link to="/about" className="btn-primary">Learn About Us</Link>
           </div>
         </section>
+        </ScrollReveal>
 
         {/* DOCTORS */}
+        <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">MEET OUR TEAM</p>
