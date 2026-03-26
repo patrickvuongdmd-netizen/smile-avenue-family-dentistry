@@ -53,7 +53,7 @@ const testimonials = [
   { quote: "Dr. Vuong and his team are absolutely amazing. They made me feel comfortable throughout my implant procedure. Highly recommend!", name: "Michael R.", source: "Google Review" },
 ];
 
-const insuranceLogos = ["Aetna", "Blue Cross Blue Shield", "Cigna", "Delta Dental", "MetLife", "United Healthcare", "Guardian", "Humana"];
+// Insurance logos moved to InsuranceLogoBar component
 
 const blogPosts = [
   { title: "5 Signs You May Need a Dental Implant", category: "Implants", date: "Mar 15, 2026" },
