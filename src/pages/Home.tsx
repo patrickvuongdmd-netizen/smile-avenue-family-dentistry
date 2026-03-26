@@ -145,7 +145,7 @@ const Home = () => {
                   <span>4.9 from 5,000+ reviews</span>
                 </div>
               </div>
-              <div className="aspect-[4/3] rounded-2xl bg-muted flex items-center justify-center text-muted-foreground text-sm font-sans">Hero Image — Happy Family Smiling</div>
+              <div className="aspect-[4/3] rounded-2xl bg-muted flex items-center justify-center text-muted-foreground text-sm font-sans" role="img" aria-label="Happy family smiling at Smile Avenue Family Dentistry">Hero Image — Happy Family Smiling</div>
             </div>
           </div>
         </section>
