@@ -252,8 +252,21 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const FREE_CONSULT_SLUGS = ["dental-implants", "all-on-x-implants", "cosmetic-dentistry", "veneers", "invisalign"];
   const showFreeConsult = FREE_CONSULT_SLUGS.includes(data.serviceSlug);
 
+  const isEmergency = data.serviceSlug === "emergency-dentist";
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://smileavenuedentistry.com/" },
+      { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://smileavenuedentistry.com${loc.path}/` },
+      { "@type": "ListItem", position: 3, name: data.serviceName, item: canonicalUrl },
+    ],
+  };
+
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
@@ -265,19 +278,32 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <TrustStrip />
 
-      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      {/* Emergency Banner */}
+      {isEmergency && (
+        <div className="bg-destructive text-destructive-foreground py-3 text-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-sm font-sans font-bold">
+              🦷 Dental Emergency? Call Now — Same-Day Appointments Available:{" "}
+              <a href={`tel:${loc.phone}`} className="underline hover:no-underline">{loc.phoneFormatted}</a>
+            </p>
+          </div>
+        </div>
+      )}
+
+      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <nav className="mb-6 text-xs font-sans text-muted-foreground">
+            <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span className="mx-2">›</span>
+              <span className="mx-2" aria-hidden="true">›</span>
               <Link to={loc.path} className="hover:text-primary transition-colors">{loc.name}, TX</Link>
-              <span className="mx-2">›</span>
+              <span className="mx-2" aria-hidden="true">›</span>
               <span className="text-foreground">{data.serviceName}</span>
             </nav>
             <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
@@ -286,11 +312,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">{data.heroHeading}</h1>
                 <p className="section-body">{data.heroBody}</p>
                 <div className="flex flex-wrap gap-3 mb-6">
-                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">{data.heroCta1}</a>
-                  <a href={`tel:${loc.phone}`} className="btn-secondary">{data.heroCta2}</a>
+                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>{data.heroCta1}</a>
+                  <a href={`tel:${loc.phone}`} className="btn-secondary" aria-label={`Call ${loc.phoneFormatted}`}>{data.heroCta2}</a>
                 </div>
               </div>
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md">
+              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md" role="img" aria-label={`${data.serviceName} treatment at Smile Avenue ${loc.name} office`}>
                 <span className="text-sm font-sans text-muted-foreground">{data.heroImage}</span>
               </div>
             </div>
