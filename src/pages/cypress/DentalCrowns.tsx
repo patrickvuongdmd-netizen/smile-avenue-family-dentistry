@@ -63,9 +63,9 @@ const DentalCrownsCypress = () => (
       <section className="section-padding bg-background"><div className="container mx-auto">
         <nav className="mb-6 text-xs font-sans text-muted-foreground"><Link to="/" className="hover:text-primary transition-colors">Home</Link><span className="mx-2">›</span><Link to="/cypress-tx" className="hover:text-primary transition-colors">Cypress, TX</Link><span className="mx-2">›</span><span className="text-foreground">Dental Crowns</span></nav>
         <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center"><div>
-          <p className="kicker">SAME-DAY CEREC CROWNS IN CYPRESS</p>
+          <p className="kicker">CUSTOM CROWNS IN CYPRESS</p>
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Dental Crowns in Cypress, TX</h1>
-          <p className="section-body">A damaged tooth does not have to mean weeks of waiting with a temporary crown. At Smile Avenue Cypress, we offer same-day CEREC crowns designed, milled, and placed in a single appointment. One visit. One crown. Done.</p>
+          <p className="section-body">A damaged tooth deserves a restoration that looks and feels natural. At Smile Avenue Cypress, our in-house Smile Dental Lab designs and fabricates custom porcelain and zirconia crowns with digital precision — faster turnaround than practices that outsource their lab work.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Crown Appointment</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
         </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["dental-crowns"] ? (<img src={SERVICE_IMAGES["dental-crowns"].url} alt="patient receiving dental crown at Smile Avenue Family Dentistry Cypress TX" className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
