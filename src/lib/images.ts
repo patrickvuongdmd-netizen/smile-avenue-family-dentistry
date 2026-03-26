@@ -31,7 +31,7 @@ export const TEAM_MEMBERS = {
   hygienists: [
     { name: "Arpine Janbazian", credentials: "RDH", role: "Dental Hygienist", locations: ["Cypress"], imgKey: "arpine-janbazian" },
     { name: "Ivy Doan", credentials: "RDH", role: "Dental Hygienist", locations: ["Cypress"], imgKey: "ivy-doan" },
-    { name: "Ngoc \"Jen\" Huynh", credentials: "RDH", role: "Dental Hygienist", locations: ["Cypress"], imgKey: "" },
+    { name: "Ngoc \"Jen\" Huynh", credentials: "RDH", role: "Dental Hygienist", locations: ["Cypress"], imgKey: "ngoc-huynh" },
   ],
   assistants: [
     { name: "Ali Hiti", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"], imgKey: "" },
