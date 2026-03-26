@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756";
 const PHONE_F = "(832) 648-1756";
@@ -39,7 +40,36 @@ const faqs = [
   { question: "Do you offer same-day dental implants?", answer: "In some cases, yes. Immediate-load implants allow us to place the implant and a temporary crown in a single visit. We'll determine if this option is right for you during your consultation." },
 ];
 
+const relatedServices = [
+  { title: "All-on-X Implants", href: "/cypress-tx/all-on-x-implants" },
+  { title: "Dental Crowns", href: "/cypress-tx/dental-crowns" },
+  { title: "Dental Bridges", href: "/cypress-tx/dental-bridges" },
+  { title: "Oral Surgery", href: "/cypress-tx/oral-surgery" },
+];
+
 const insuranceLogos = ["Aetna", "Blue Cross Blue Shield", "Cigna", "Delta Dental", "MetLife", "United Healthcare", "Guardian", "Humana"];
+
+const heroImg = SERVICE_IMAGES["dental-implants"];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DentalService",
+  name: "Dental Implants",
+  description: "Dental implants in Cypress, TX. Permanent tooth replacement with single implants, All-on-X, and full mouth reconstruction.",
+  url: "https://smileavenuedentistry.com/cypress-tx/dental-implants/",
+  provider: {
+    "@type": "Dentist",
+    name: "Smile Avenue Family Dentistry",
+    address: { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+    telephone: "(832) 648-1756",
+  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+};
 
 const DentalImplantsCypress = () => (
   <>
@@ -47,6 +77,13 @@ const DentalImplantsCypress = () => (
       <title>Dental Implants Cypress, TX | Smile Avenue Family Dentistry</title>
       <meta name="description" content="Dental implants in Cypress, TX. Permanent tooth replacement with single implants, All-on-X, and full mouth reconstruction. Call (832) 648-1756." />
       <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/dental-implants/" />
+      <meta property="og:title" content="Dental Implants Cypress, TX | Smile Avenue Family Dentistry" />
+      <meta property="og:description" content="Dental implants in Cypress, TX. Permanent tooth replacement with single implants, All-on-X, and full mouth reconstruction." />
+      <meta property="og:url" content="https://smileavenuedentistry.com/cypress-tx/dental-implants/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">
@@ -67,7 +104,16 @@ const DentalImplantsCypress = () => (
                 <a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a>
               </div>
             </div>
-            <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Dental Implants Photo</span></div>
+            <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
+              <img
+                src={heroImg.url}
+                alt={heroImg.alt}
+                className="w-full h-full object-cover"
+                fetchPriority="high"
+                width={640}
+                height={480}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -108,7 +154,22 @@ const DentalImplantsCypress = () => (
 
       <section className="section-padding section-alt"><div className="container mx-auto text-center"><p className="kicker">PATIENT REVIEWS</p><h2 className="section-heading">What Patients Are Saying</h2><div className="grid md:grid-cols-3 gap-6 mt-10 text-left">{testimonials.map(t => (<TestimonialCard key={t.name} {...t} />))}</div></div></section>
 
-      <section className="section-padding bg-background"><div className="container mx-auto"><div className="max-w-lg mx-auto bg-card rounded-xl p-8 border border-border text-center"><h3 className="font-display text-xl font-bold text-foreground mb-4">Cypress Office</h3><div className="space-y-3 text-sm font-sans text-muted-foreground mb-6"><div className="flex items-start justify-center gap-2"><MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" /><span>9212 Fry Rd #120, Cypress, TX 77433</span></div><div className="flex items-center justify-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${PHONE}`} className="hover:text-primary transition-colors">{PHONE_F}</a></div><div className="flex items-center justify-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" /><span>Mon–Fri 8am–5pm | Sat by Appointment</span></div></div><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">Book Implant Consultation</a></div></div></section>
+      {/* RELATED SERVICES */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto text-center">
+          <p className="kicker">EXPLORE MORE</p>
+          <h2 className="section-heading">Related Services</h2>
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
+            {relatedServices.map(r => (
+              <Link key={r.href} to={r.href} className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                {r.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding section-alt"><div className="container mx-auto"><div className="max-w-lg mx-auto bg-card rounded-xl p-8 border border-border text-center"><h3 className="font-display text-xl font-bold text-foreground mb-4">Cypress Office</h3><div className="space-y-3 text-sm font-sans text-muted-foreground mb-6"><div className="flex items-start justify-center gap-2"><MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" /><span>9212 Fry Rd #120, Cypress, TX 77433</span></div><div className="flex items-center justify-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${PHONE}`} className="hover:text-primary transition-colors">{PHONE_F}</a></div><div className="flex items-center justify-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" /><span>Mon–Fri 8am–5pm | Sat by Appointment</span></div></div><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">Book Implant Consultation</a></div></div></section>
 
       <section className="gradient-cta py-16 text-center"><div className="container mx-auto px-4 sm:px-6 lg:px-8"><h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Start Your Implant Journey Today</h2><p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">Schedule a consultation and discover how dental implants can restore your smile permanently.</p><div className="flex flex-wrap justify-center gap-4"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Consultation</a><a href={`tel:${PHONE}`} className="btn-cta-outline">Call {PHONE_F}</a></div></div></section>
     </main>
