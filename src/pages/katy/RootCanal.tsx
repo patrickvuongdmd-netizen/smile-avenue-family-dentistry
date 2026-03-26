@@ -17,7 +17,7 @@ const data: ServicePageData = {
   introHeading: "Modern Root Canal Treatment",
   introParas: [
     "A root canal saves a tooth with infected or inflamed pulp — the soft tissue inside the tooth containing nerves and blood vessels. Infection is typically caused by deep decay, repeated dental procedures, cracks, or trauma. During treatment, the infected pulp is removed, the inside is cleaned, disinfected, and shaped, then filled, sealed, and crowned.",
-    "Without treatment, infection can spread to surrounding bone and tissue, and the tooth will eventually be lost. At Smile Avenue Katy, we use advanced rotary instruments and gentle technique to make root canals comfortable and efficient. Our CEREC technology allows same-day crown placement after your root canal — one visit, done. Patients across Cinco Ranch, Firethorne, and Westheimer Parkway trust us for pain-free root canal treatment.",
+    "Without treatment, infection can spread to surrounding bone and tissue, and the tooth will eventually be lost. At Smile Avenue Katy, we use advanced rotary instruments and gentle technique to make root canals comfortable and efficient. Our in-house Smile Dental Lab fabricates your permanent crown with faster turnaround than practices that outsource. Patients across Cinco Ranch, Firethorne, and Westheimer Parkway trust us for pain-free root canal treatment.",
   ],
   trustBadges: [
     { icon: <Star className="w-5 h-5" />, label: "4.9★ Rating" },
