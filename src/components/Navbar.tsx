@@ -173,7 +173,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
-              <Link to="/es" className="text-xs font-sans font-semibold bg-primary/10 text-primary px-2 py-1 rounded-full hover:bg-primary/20 transition-colors hidden lg:inline-flex">Español</Link>
+              <LanguageToggle className="hidden lg:flex" />
               <a href={`tel:${phone}`} className="flex items-center gap-1.5 text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap">
                 <Phone className="w-4 h-4" />
                 <span className="hidden lg:inline">{phoneFormatted}</span>
