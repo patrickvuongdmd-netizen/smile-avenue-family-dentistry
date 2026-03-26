@@ -11,7 +11,7 @@ const ServiceCard = ({ title, description, href, icon }: ServiceCardProps) => {
   return (
     <Link
       to={href}
-      className="group bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+      className="group bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
     >
       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
         {icon}
