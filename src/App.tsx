@@ -8,6 +8,21 @@ import Index from "./pages/Index.tsx";
 import CypressTx from "./pages/CypressTx.tsx";
 import KatyTx from "./pages/KatyTx.tsx";
 import EmergencyDentistCypress from "./pages/EmergencyDentistCypress.tsx";
+import DentalImplantsCypress from "./pages/cypress/DentalImplants.tsx";
+import CosmeticDentistryCypress from "./pages/cypress/CosmeticDentistry.tsx";
+import TeethWhiteningCypress from "./pages/cypress/TeethWhitening.tsx";
+import DentalCrownsCypress from "./pages/cypress/DentalCrowns.tsx";
+import AllOnXCypress from "./pages/cypress/AllOnX.tsx";
+import InvisalignCypress from "./pages/cypress/Invisalign.tsx";
+import RootCanalCypress from "./pages/cypress/RootCanal.tsx";
+import DentalCleaningCypress from "./pages/cypress/DentalCleaning.tsx";
+import PediatricDentistryCypress from "./pages/cypress/PediatricDentistry.tsx";
+import DenturesCypress from "./pages/cypress/Dentures.tsx";
+import VeneersCypress from "./pages/cypress/Veneers.tsx";
+import DentalBridgesCypress from "./pages/cypress/DentalBridges.tsx";
+import ToothExtractionCypress from "./pages/cypress/ToothExtraction.tsx";
+import OralSurgeryCypress from "./pages/cypress/OralSurgery.tsx";
+import SedationDentistryCypress from "./pages/cypress/SedationDentistry.tsx";
 import Locations from "./pages/Locations.tsx";
 import NewPatientHub from "./pages/NewPatientHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -25,6 +40,21 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/cypress-tx" element={<CypressTx />} />
             <Route path="/cypress-tx/emergency-dentist" element={<EmergencyDentistCypress />} />
+            <Route path="/cypress-tx/dental-implants" element={<DentalImplantsCypress />} />
+            <Route path="/cypress-tx/cosmetic-dentistry" element={<CosmeticDentistryCypress />} />
+            <Route path="/cypress-tx/teeth-whitening" element={<TeethWhiteningCypress />} />
+            <Route path="/cypress-tx/dental-crowns" element={<DentalCrownsCypress />} />
+            <Route path="/cypress-tx/all-on-x-implants" element={<AllOnXCypress />} />
+            <Route path="/cypress-tx/invisalign" element={<InvisalignCypress />} />
+            <Route path="/cypress-tx/root-canal" element={<RootCanalCypress />} />
+            <Route path="/cypress-tx/dental-cleaning" element={<DentalCleaningCypress />} />
+            <Route path="/cypress-tx/pediatric-dentistry" element={<PediatricDentistryCypress />} />
+            <Route path="/cypress-tx/dentures" element={<DenturesCypress />} />
+            <Route path="/cypress-tx/veneers" element={<VeneersCypress />} />
+            <Route path="/cypress-tx/dental-bridges" element={<DentalBridgesCypress />} />
+            <Route path="/cypress-tx/tooth-extraction" element={<ToothExtractionCypress />} />
+            <Route path="/cypress-tx/oral-surgery" element={<OralSurgeryCypress />} />
+            <Route path="/cypress-tx/sedation-dentistry" element={<SedationDentistryCypress />} />
             <Route path="/katy-tx" element={<KatyTx />} />
             <Route path="/convenient-locations" element={<Locations />} />
             <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
