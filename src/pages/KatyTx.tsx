@@ -18,7 +18,6 @@ const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc
 const KATY_MAPS = "https://maps.app.goo.gl/katyoffice";
 
 const doctors = [
-const doctors = [
   { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Founder of Smile Avenue, known for his comprehensive approach to family and implant dentistry.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
   { name: "Dr. Sameer Bilal", credentials: "DDS", bio: "Compassionate, detail-oriented approach to general dentistry.", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
   { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry at both locations.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
