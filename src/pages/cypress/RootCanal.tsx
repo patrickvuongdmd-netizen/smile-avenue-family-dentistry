@@ -14,7 +14,7 @@ const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/Smil
 const whyChoose = [
   { title: "Gentle Modern Approach", description: "Advanced rotary instruments and precise techniques make modern root canals comfortable and efficient.", icon: <Heart className="w-5 h-5" /> },
   { title: "Sedation for Comfort", description: "Anxious about dental work? We offer sedation options so you can relax completely during your procedure.", icon: <Shield className="w-5 h-5" /> },
-  { title: "Same-Day CEREC Crown", description: "Get your root canal and permanent crown in a single visit — no temporary, no second appointment.", icon: <Crown className="w-5 h-5" /> },
+  { title: "Crown Placement After Treatment", description: "Our in-house Smile Dental Lab fabricates your permanent crown quickly — faster turnaround than practices that outsource.", icon: <Crown className="w-5 h-5" /> },
   { title: "Pain Relief, Not Pain", description: "Root canal treatment relieves the severe pain of infection. Most patients feel dramatically better immediately.", icon: <Zap className="w-5 h-5" /> },
 ];
 
