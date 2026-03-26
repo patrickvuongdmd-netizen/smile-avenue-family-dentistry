@@ -6,6 +6,9 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import TrustStrip from "@/components/TrustStrip";
+import FreeConsultationBanner from "@/components/FreeConsultationBanner";
+import BackToTop from "@/components/BackToTop";
 import { ReactNode } from "react";
 
 interface SubService {
@@ -245,18 +248,27 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     })),
   };
 
+  const FREE_CONSULT_SLUGS = ["dental-implants", "all-on-x-implants", "cosmetic-dentistry", "veneers", "invisalign"];
+  const showFreeConsult = FREE_CONSULT_SLUGS.includes(data.serviceSlug);
+
   return (
     <>
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={data.metaTitle} />
+        <meta property="og:description" content={data.metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
@@ -438,6 +450,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* FREE CONSULTATION BANNER */}
+        {showFreeConsult && <FreeConsultationBanner />}
+
         {/* CTA BAR */}
         <section className="gradient-cta py-16 text-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -453,6 +468,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
       <Footer />
       <MobileStickyBar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
+      <BackToTop />
     </>
   );
 };

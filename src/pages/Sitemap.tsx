@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import BackToTop from "@/components/BackToTop";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -16,6 +18,7 @@ const sections = [
       { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
       { label: "Book Online", href: "/book-online" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
   {
@@ -29,6 +32,7 @@ const sections = [
   {
     title: "Services — Cypress",
     links: [
+      { label: "Preventive Dentistry", href: "/cypress-tx/preventive-dentistry" },
       { label: "Emergency Dentist", href: "/cypress-tx/emergency-dentist" },
       { label: "Dental Implants", href: "/cypress-tx/dental-implants" },
       { label: "Cosmetic Dentistry", href: "/cypress-tx/cosmetic-dentistry" },
@@ -50,6 +54,7 @@ const sections = [
   {
     title: "Services — Katy",
     links: [
+      { label: "Preventive Dentistry", href: "/katy-tx/preventive-dentistry" },
       { label: "Emergency Dentist", href: "/katy-tx/emergency-dentist" },
       { label: "Dental Implants", href: "/katy-tx/dental-implants" },
       { label: "Cosmetic Dentistry", href: "/katy-tx/cosmetic-dentistry" },
@@ -87,9 +92,9 @@ const sections = [
       { label: "Insurance & Financing", href: "/insurance" },
       { label: "Membership Plan", href: "/membership-plan" },
       { label: "Specials & Offers", href: "/specials" },
+      { label: "Free Consultation", href: "/free-consultation" },
       { label: "Patient Testimonials", href: "/patient-testimonials" },
       { label: "Smile Gallery", href: "/smile-gallery" },
-      { label: "Free Consultation", href: "/free-consultation" },
       { label: "Dental Lab", href: "/dental-lab" },
       { label: "Privacy Policy", href: "/privacy-policy" },
     ],
@@ -103,10 +108,16 @@ const SitemapPage = () => {
         <title>Sitemap | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Complete sitemap for Smile Avenue Family Dentistry. Find all pages for our Cypress and Katy dental offices." />
         <link rel="canonical" href="https://smileavenuedentistry.com/sitemap/" />
+        <meta property="og:title" content="Sitemap | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Complete sitemap for Smile Avenue Family Dentistry." />
+        <meta property="og:url" content="https://smileavenuedentistry.com/sitemap/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav className="mb-6 text-xs font-sans text-muted-foreground">
@@ -135,6 +146,7 @@ const SitemapPage = () => {
       </main>
 
       <Footer />
+      <BackToTop />
     </>
   );
 };

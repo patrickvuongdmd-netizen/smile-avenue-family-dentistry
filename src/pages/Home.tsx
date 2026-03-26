@@ -6,6 +6,8 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import TrustStrip from "@/components/TrustStrip";
+import BackToTop from "@/components/BackToTop";
 import { useState } from "react";
 
 const CYPRESS_PHONE = "8326481756";
@@ -62,6 +64,11 @@ const faqs = [
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState<"cypress" | "katy">("cypress");
+  const [heroLoc, setHeroLoc] = useState<"cypress" | "katy">("cypress");
+
+  const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
+  const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
+  const heroBooking = heroLoc === "cypress" ? CYPRESS_BOOKING : KATY_BOOKING;
 
   return (
     <>
@@ -100,10 +107,16 @@ const Home = () => {
             },
           ],
         })}</script>
+        <meta property="og:title" content="Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX" />
+        <meta property="og:description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments." />
+        <meta property="og:url" content="https://smileavenuedentistry.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>
-      <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <Navbar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
@@ -112,12 +125,20 @@ const Home = () => {
                 <p className="kicker">CYPRESS & KATY, TEXAS</p>
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.5rem] leading-tight">Helping Houston Families Love Their Smiles</h1>
                 <p className="section-body">From routine checkups to full smile makeovers, Smile Avenue delivers hospitality-driven dental care with modern technology at two convenient Houston-area locations.</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <Link to="/book-online" className="btn-primary">Book Appointment</Link>
+                {/* Location selector */}
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
+                  <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
+                  <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
+                </div>
+                <div className="flex flex-wrap gap-3 mb-4">
+                  <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Appointment</a>
                   <Link to="/convenient-locations" className="btn-secondary">Find a Location</Link>
                 </div>
-                <div className="flex items-center gap-2 text-sm font-sans text-muted-foreground">
-                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}</div>
+                <div className="flex items-center gap-3 text-sm font-sans text-muted-foreground">
+                  <a href={`tel:${heroPhone}`} className="flex items-center gap-1 hover:text-primary transition-colors"><Phone className="w-3.5 h-3.5" /> {heroPhoneFmt}</a>
+                  <span className="text-border">|</span>
+                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
                   <span>4.9 from 5,000+ reviews</span>
                 </div>
               </div>
@@ -326,8 +347,9 @@ const Home = () => {
         </section>
       </main>
 
-      <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <MobileStickyBar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <Footer />
+      <BackToTop />
     </>
   );
 };
