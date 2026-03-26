@@ -24,7 +24,7 @@ const data: NeighborhoodPageData = {
     { icon: <Clock className="w-5 h-5" />, title: "Same-Day Availability", description: "Emergency or routine — we'll find you an appointment that works with your schedule." },
     { icon: <Shield className="w-5 h-5" />, title: "All Major Insurance Accepted", description: "We work with most insurance plans and offer a membership plan for uninsured patients." },
     { icon: <Stethoscope className="w-5 h-5" />, title: "Comprehensive Services", description: "Implants, Invisalign, crowns, veneers, pediatric care, and more — all under one roof." },
-    { icon: <Sparkles className="w-5 h-5" />, title: "In-House Dental Lab", description: "Same-day crowns and faster restorations thanks to our on-site lab." },
+    { icon: <Sparkles className="w-5 h-5" />, title: "In-House Dental Lab", description: "Custom crowns and faster restorations thanks to our on-site Smile Dental Lab." },
     { icon: <Heart className="w-5 h-5" />, title: "Bilingual Staff", description: "Our team speaks English and Spanish to ensure every patient feels comfortable." },
   ],
   directionsHeading: "Getting Here from Towne Lake",

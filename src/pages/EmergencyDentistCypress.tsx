@@ -119,7 +119,7 @@ const EmergencyDentistCypress = () => (
               A dental emergency is any situation involving sudden pain, trauma, or a condition requiring immediate attention. Common emergencies include severe toothaches, cracked, chipped, or broken teeth, knocked-out teeth, lost fillings or crowns, dental abscesses, uncontrolled bleeding, and broken dentures.
             </p>
             <p>
-              Families in Cy-Fair, Spring Cypress, and the Fry Road corridor trust Smile Avenue for fast, compassionate emergency care. Whether you need a same-day <Link to="/cypress-tx/root-canal" className="text-primary hover:underline">root canal</Link>, an emergency <Link to="/cypress-tx/tooth-extraction" className="text-primary hover:underline">tooth extraction</Link>, or a <Link to="/cypress-tx/dental-crowns" className="text-primary hover:underline">same-day CEREC crown</Link> to restore a broken tooth, we handle it all under one roof with no referrals to outside specialists.
+              Families in Cy-Fair, Spring Cypress, and the Fry Road corridor trust Smile Avenue for fast, compassionate emergency care. Whether you need a <Link to="/cypress-tx/root-canal" className="text-primary hover:underline">root canal</Link>, an emergency <Link to="/cypress-tx/tooth-extraction" className="text-primary hover:underline">tooth extraction</Link>, or a <Link to="/cypress-tx/dental-crowns" className="text-primary hover:underline">custom crown</Link> to restore a broken tooth, we handle it all under one roof with no referrals to outside specialists.
             </p>
           </div>
         </div>

@@ -36,7 +36,7 @@ const faqs = [
   { question: "How long do dental bridges last?", answer: "With proper care, dental bridges typically last 10-15+ years. Implant-supported bridges can last even longer. Good oral hygiene and regular checkups are key to longevity." },
   { question: "Bridge vs implant — which is better?", answer: "Both are excellent options. Implants preserve bone and don't require altering adjacent teeth, but require surgery and healing time. Bridges are faster and less invasive. We'll help you choose the best option for your situation." },
   { question: "Can I eat normally with a dental bridge?", answer: "Yes — dental bridges function like natural teeth. Once placed and adjusted, you can eat most foods normally without restriction." },
-  { question: "How long does the bridge process take?", answer: "Usually 2 visits over 2-3 weeks. In some cases, same-day completion is possible using our in-house lab and CEREC technology." },
+  { question: "How long does the bridge process take?", answer: "Usually 2 visits over 2-3 weeks. Our in-house lab provides faster turnaround than practices that outsource to external labs." },
 ];
 
 const faqSchema = {

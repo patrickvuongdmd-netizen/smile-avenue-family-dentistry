@@ -24,7 +24,7 @@ const data: NeighborhoodPageData = {
     { icon: <Clock className="w-5 h-5" />, title: "Same-Day Appointments", description: "Emergency or routine, we offer same-day scheduling for Fulshear families." },
     { icon: <Shield className="w-5 h-5" />, title: "Insurance & Membership Plans", description: "We accept most insurance and offer an affordable membership plan for uninsured patients." },
     { icon: <Stethoscope className="w-5 h-5" />, title: "5 Dentists, Full Service", description: "A large team ensures availability. Implants, Invisalign, pediatric, cosmetic — all under one roof." },
-    { icon: <Sparkles className="w-5 h-5" />, title: "In-House Dental Lab", description: "Same-day crowns and faster restorations so you spend less time in the chair." },
+    { icon: <Sparkles className="w-5 h-5" />, title: "In-House Dental Lab", description: "Custom crowns and faster restorations from our on-site Smile Dental Lab." },
     { icon: <Heart className="w-5 h-5" />, title: "New Patient Friendly", description: "New to Fulshear? We make the new patient process simple, fast, and welcoming." },
   ],
   directionsHeading: "Getting Here from Fulshear",

@@ -33,7 +33,7 @@ const galleryItems = [
   { category: "Whitening", label: "Take-Home Whitening", before: "Coffee and wine stains", after: "Bright, even tone" },
   { category: "Invisalign", label: "Adult Invisalign", before: "Crowded lower teeth", after: "Straight, aligned smile" },
   { category: "Invisalign", label: "Teen Invisalign", before: "Overbite with spacing", after: "Corrected bite and alignment" },
-  { category: "Crowns", label: "CEREC Same-Day Crown", before: "Cracked molar", after: "Porcelain crown, same day" },
+  { category: "Crowns", label: "Custom Porcelain Crown", before: "Cracked molar", after: "Natural porcelain crown" },
   { category: "Crowns", label: "Zirconia Crown", before: "Large filling failure", after: "Durable, natural crown" },
 ];
 
