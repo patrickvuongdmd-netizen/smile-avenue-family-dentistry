@@ -9,6 +9,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import BeforeAfterCard from "@/components/BeforeAfterCard";
 import DoctorCard from "@/components/DoctorCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const KATY_PHONE = "2818005008";
 const KATY_PHONE_FORMATTED = "(281) 800-5008";
@@ -16,11 +17,11 @@ const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc
 const KATY_MAPS = "https://maps.app.goo.gl/katyoffice";
 
 const doctors = [
-  { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Founder of Smile Avenue, known for his comprehensive approach to family and implant dentistry.", href: "/katy-tx/doctors/dr-patrick-vuong/" },
-  { name: "Dr. Weiyen Chang", credentials: "DDS", bio: "Passionate about technology-driven dentistry and delivering precise, comfortable care.", href: "/katy-tx/doctors/dr-weiyen-chang/" },
-  { name: "Dr. Christian Lopez", credentials: "DDS", bio: "Dedicated to patient education and building lasting relationships with every family.", href: "/katy-tx/doctors/dr-christian-lopez/" },
-  { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Known for his integrity, precision, and passion for restorative care.", href: "/katy-tx/doctors/dr-laith-yahya/" },
-  { name: "Dr. Tamaara Willis", credentials: "DDS, MS", bio: "Specialist bringing advanced training and a gentle touch to every procedure.", href: "/katy-tx/doctors/dr-tamaara-willis/" },
+  { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Founder of Smile Avenue, known for his comprehensive approach to family and implant dentistry.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
+  { name: "Dr. Weiyen Chang", credentials: "DDS", bio: "Passionate about technology-driven dentistry and delivering precise, comfortable care.", href: "/doctors/weiyen-chang-dds", imgKey: "weiyen-chang" },
+  { name: "Dr. Christian Lopez", credentials: "DDS", bio: "Dedicated to patient education and building lasting relationships with every family.", href: "/doctors/christian-lopez-dds", imgKey: "christian-lopez" },
+  { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Known for his integrity, precision, and passion for restorative care.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
+  { name: "Dr. Tamaara Willis", credentials: "DDS, MS", bio: "Specialist bringing advanced training and a gentle touch to every procedure.", href: "/doctors/tamaara-willis-dds-ms", imgKey: "tamaara-willis" },
 ];
 
 const services = [
