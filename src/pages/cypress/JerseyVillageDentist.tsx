@@ -1,5 +1,6 @@
 import { MapPin, Clock, Shield, Stethoscope, Sparkles, Heart } from "lucide-react";
 import NeighborhoodPageTemplate, { NeighborhoodPageData } from "@/components/NeighborhoodPageTemplate";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const data: NeighborhoodPageData = {
   location: "cypress",
@@ -8,6 +9,7 @@ const data: NeighborhoodPageData = {
   metaTitle: "Dentist Near Jersey Village, TX | Smile Avenue Family Dentistry",
   metaDescription: "Jersey Village dentist near Jones Road & FM 529. Smile Avenue offers dental implants, cleanings, Invisalign & emergency care. Call (832) 648-1756 today.",
   heroHeading: "Jersey Village Families — Your Trusted Dentist Is Just Minutes Away",
+  heroImage: OFFICE_IMAGES.coffeeStation,
   heroSubheading: "Convenient, high-quality dental care for the Jersey Village and Jones Road corridor.",
   heroBody: "Jersey Village residents no longer need to drive into Houston for top-tier dental care. Smile Avenue Family Dentistry on Fry Road in Cypress is just 15 minutes from Jersey Village, offering a full range of services from routine cleanings to dental implants and Invisalign.",
   contentParagraphs: [

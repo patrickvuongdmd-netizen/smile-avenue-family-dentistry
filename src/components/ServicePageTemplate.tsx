@@ -208,7 +208,7 @@ const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
 
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const loc = LOCATIONS[data.location];
-  const canonicalUrl = `https://smileavenuedentistry.com${loc.path}/${data.serviceSlug}/`;
+  const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.serviceSlug}/`;
   useDocTitle(data.metaTitle);
 
   // Related services
@@ -261,7 +261,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
-      { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://smileavenuedentistry.com${loc.path}/` },
+      { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://www.smileavenuefamilydentistry.com${loc.path}/` },
       { "@type": "ListItem", position: 3, name: data.serviceName, item: canonicalUrl },
     ],
   };
@@ -351,7 +351,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {/* TRUST BADGES */}
         <section className="py-10 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
               {data.trustBadges.map((badge) => (
                 <div key={badge.label} className="flex flex-col items-center text-center gap-2">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">{badge.icon}</div>

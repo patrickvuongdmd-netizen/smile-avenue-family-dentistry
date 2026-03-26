@@ -53,6 +53,7 @@ export interface NeighborhoodPageData {
   heroHeading: string;
   heroSubheading: string;
   heroBody: string;
+  heroImage?: string;
   whyChooseHeading: string;
   whyChooseItems: WhyChooseItem[];
   directionsHeading: string;
@@ -96,7 +97,7 @@ const insuranceLogos = [
 
 const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
   const loc = LOCATIONS[data.location];
-  const canonicalUrl = `https://smileavenuedentistry.com${loc.path}/${data.slug}/`;
+  const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.slug}/`;
   useDocTitle(data.metaTitle);
 
   const jsonLd = {
@@ -139,7 +140,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
-      { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://smileavenuedentistry.com${loc.path}/` },
+      { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://www.smileavenuefamilydentistry.com${loc.path}/` },
       { "@type": "ListItem", position: 3, name: `${data.neighborhoodName} Dentist`, item: canonicalUrl },
     ],
   };
@@ -188,7 +189,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
               </div>
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
                 <img
-                  src={data.location === "cypress" ? OFFICE_IMAGES.cypressHero : OFFICE_IMAGES.katyHero}
+                  src={data.heroImage || (data.location === "cypress" ? OFFICE_IMAGES.cypressHero : OFFICE_IMAGES.katyHero)}
                   alt={`Smile Avenue Family Dentistry ${loc.name} office near ${data.neighborhoodName}`}
                   className="w-full h-full object-cover"
                   fetchPriority="high"

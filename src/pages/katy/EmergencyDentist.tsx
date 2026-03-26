@@ -55,7 +55,7 @@ const data: ServicePageData = {
   reviewsHeading: "Emergency Care Reviews",
   testimonials: [
     { quote: "My daughter fell off her bike and knocked her front tooth loose. They got us in within an hour and saved the tooth. Incredible team!", name: "Amanda R.", source: "Google Review" },
-    { quote: "Had a terrible toothache on a Wednesday morning. Called Smile Avenue Katy and they saw me that same afternoon. Dr. Chang was amazing.", name: "David M.", source: "Google Review" },
+    { quote: "Had a terrible toothache on a Wednesday morning. Called Smile Avenue Katy and they saw me that same afternoon. Dr. Bilal was amazing.", name: "David M.", source: "Google Review" },
     { quote: "Lost a crown while eating dinner. They fit me in first thing the next morning and had a new crown ready the same visit. So impressed!", name: "Patricia L.", source: "Google Review" },
   ],
   ctaHeading: "Book Your Emergency Appointment Today",

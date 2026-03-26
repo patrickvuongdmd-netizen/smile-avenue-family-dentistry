@@ -54,7 +54,7 @@ const data: ServicePageData = {
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING",
   reviewsHeading: "Cosmetic Dentistry Reviews",
   testimonials: [
-    { quote: "Got 8 veneers at the Katy office and my smile has never looked better. Dr. Chang's attention to detail is remarkable. I smile all the time now!", name: "Michelle T.", source: "Google Review" },
+    { quote: "Got 8 veneers at the Katy office and my smile has never looked better. Dr. Vuong's attention to detail is remarkable. I smile all the time now!", name: "Michelle T.", source: "Google Review" },
     { quote: "The teeth whitening results were amazing — my teeth are so bright and the process was comfortable. Best investment I've made in myself.", name: "Kevin R.", source: "Google Review" },
     { quote: "Had bonding done on two front teeth and you honestly can't tell which ones were repaired. Natural-looking and affordable. Love this practice!", name: "Laura G.", source: "Google Review" },
   ],

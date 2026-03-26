@@ -1,5 +1,6 @@
 import { MapPin, Clock, Shield, Stethoscope, Sparkles, Heart } from "lucide-react";
 import NeighborhoodPageTemplate, { NeighborhoodPageData } from "@/components/NeighborhoodPageTemplate";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const data: NeighborhoodPageData = {
   location: "katy",
@@ -8,6 +9,7 @@ const data: NeighborhoodPageData = {
   metaTitle: "Dentist Near Fulshear, TX | Smile Avenue Family Dentistry",
   metaDescription: "Fulshear residents: quality dental care is just 15 minutes away on Westheimer Parkway. Smile Avenue offers implants, cleanings, Invisalign & more. Call (281) 800-5008.",
   heroHeading: "Fulshear Families — Your Trusted Dentist Is Just Down the Road",
+  heroImage: OFFICE_IMAGES.aboutTeamAction,
   heroSubheading: "Expanding west to serve the growing Fulshear community with modern dental care.",
   heroBody: "Fulshear is booming — and its families deserve a dental practice that can keep up. Smile Avenue Family Dentistry on Westheimer Parkway in Katy is the closest top-rated dental office to Fulshear, offering everything from routine cleanings to dental implants and cosmetic transformations.",
   contentParagraphs: [

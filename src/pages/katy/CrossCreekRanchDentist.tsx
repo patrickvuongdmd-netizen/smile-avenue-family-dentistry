@@ -1,5 +1,6 @@
 import { MapPin, Clock, Shield, Stethoscope, Sparkles, Heart } from "lucide-react";
 import NeighborhoodPageTemplate, { NeighborhoodPageData } from "@/components/NeighborhoodPageTemplate";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const data: NeighborhoodPageData = {
   location: "katy",
@@ -8,6 +9,7 @@ const data: NeighborhoodPageData = {
   metaTitle: "Dentist Near Cross Creek Ranch, Katy TX | Smile Avenue Family Dentistry",
   metaDescription: "Cross Creek Ranch dentist on Westheimer Parkway. Smile Avenue offers implants, Invisalign, cleanings & family dental care near Fulshear. Call (281) 800-5008.",
   heroHeading: "Cross Creek Ranch Families — Your Dentist on Westheimer Parkway",
+  heroImage: OFFICE_IMAGES.patientCare,
   heroSubheading: "Comprehensive dental care minutes from Cross Creek Ranch and Fulshear.",
   heroBody: "Cross Creek Ranch and the growing Fulshear corridor deserve a dental practice that matches the quality of their community. Smile Avenue Family Dentistry on Westheimer Parkway delivers modern, full-service dental care for families of all sizes — and we're just a short drive away.",
   contentParagraphs: [
@@ -48,7 +50,7 @@ const data: NeighborhoodPageData = {
   ],
   testimonials: [
     { quote: "We moved to Cross Creek Ranch and needed a new dentist. Smile Avenue exceeded our expectations in every way.", name: "Daniel H.", source: "Google Review" },
-    { quote: "Convenient location on Westheimer Parkway, professional staff, and Dr. Lopez is fantastic with kids.", name: "Patricia K.", source: "Google Review" },
+    { quote: "Convenient location on Westheimer Parkway, professional staff, and Dr. Maredia is fantastic with kids.", name: "Patricia K.", source: "Google Review" },
     { quote: "Been going here for two years from Cross Creek Ranch. Wouldn't go anywhere else — they truly care about their patients.", name: "Ryan S.", source: "Google Review" },
   ],
   faqs: [

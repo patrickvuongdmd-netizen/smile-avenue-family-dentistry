@@ -80,6 +80,7 @@ const Footer = () => {
               <Link to="/insurance" className="block hover:opacity-100 transition-opacity">Insurance</Link>
               <Link to="/membership-plan" className="block hover:opacity-100 transition-opacity">Membership Plan</Link>
               <Link to="/specials" className="block hover:opacity-100 transition-opacity">Specials</Link>
+              <Link to="/our-team" className="block hover:opacity-100 transition-opacity">Our Team</Link>
               <Link to="/blog" className="block hover:opacity-100 transition-opacity">Blog</Link>
               <Link to="/faq" className="block hover:opacity-100 transition-opacity">FAQ</Link>
             </div>

@@ -1,5 +1,6 @@
 import { MapPin, Clock, Shield, Stethoscope, Sparkles, Heart } from "lucide-react";
 import NeighborhoodPageTemplate, { NeighborhoodPageData } from "@/components/NeighborhoodPageTemplate";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const data: NeighborhoodPageData = {
   location: "cypress",
@@ -8,6 +9,7 @@ const data: NeighborhoodPageData = {
   metaTitle: "Dentist in Cy-Fair, TX | Smile Avenue Family Dentistry",
   metaDescription: "Top-rated Cy-Fair dentist serving the Cy-Fair ISD area, Jersey Village & Willowbrook. Full-service dental care at Smile Avenue on Fry Road. Call (832) 648-1756.",
   heroHeading: "Your Cy-Fair Dentist — Comprehensive Care for the Whole Family",
+  heroImage: OFFICE_IMAGES.teamPhoto,
   heroSubheading: "Proudly serving the greater Cy-Fair community from our Fry Road office.",
   heroBody: "The Cy-Fair area is home to some of Houston's best families — and Smile Avenue Family Dentistry is proud to be their trusted dental practice. Located on Fry Road in the heart of Cypress, we serve patients from across the Cy-Fair ISD area, Jersey Village, and the Willowbrook corridor.",
   contentParagraphs: [
