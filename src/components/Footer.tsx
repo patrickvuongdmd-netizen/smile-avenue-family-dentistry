@@ -76,7 +76,7 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Patients & Resources</h4>
             <div className="space-y-2 text-sm font-sans opacity-70">
-              <Link to="/patients/new-patient-hub/" className="block hover:opacity-100 transition-opacity">New Patient Hub</Link>
+              <Link to="/patients/new-patient-hub" className="block hover:opacity-100 transition-opacity">New Patient Hub</Link>
               <Link to="/insurance" className="block hover:opacity-100 transition-opacity">Insurance</Link>
               <Link to="/membership-plan" className="block hover:opacity-100 transition-opacity">Membership Plan</Link>
               <Link to="/specials" className="block hover:opacity-100 transition-opacity">Specials</Link>

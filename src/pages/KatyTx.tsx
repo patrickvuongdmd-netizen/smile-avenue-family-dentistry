@@ -243,17 +243,17 @@ const KatyTx = () => {
               <div className="bg-card rounded-xl p-6 border border-border">
                 <h3 className="font-display text-lg font-semibold text-foreground mb-2">Most Insurance Accepted</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept most major PPO plans and will verify your benefits before your visit.</p>
-                <Link to="/patients/insurance/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
+                <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
                 <h3 className="font-display text-lg font-semibold text-foreground mb-2">Smile Avenue Membership Plan</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">No insurance? Our in-house plan covers cleanings, exams, and gives you discounts on treatment.</p>
-                <Link to="/patients/membership-plan/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
+                <Link to="/membership-plan" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
                 <h3 className="font-display text-lg font-semibold text-foreground mb-2">Dental Financing</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Flexible monthly payment options through CareCredit and Sunbit — apply in minutes.</p>
-                <Link to="/patients/financing/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
+                <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
           </div>
