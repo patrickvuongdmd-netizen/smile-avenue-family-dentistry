@@ -23,7 +23,7 @@ const processSteps = [
   { number: "02", title: "Anesthesia & Sedation", description: "Thorough local anesthesia ensures complete comfort. Optional sedation available for anxious patients." },
   { number: "03", title: "Infected Pulp Removal", description: "Infected tissue is carefully removed, and the canals are cleaned, shaped, and disinfected." },
   { number: "04", title: "Canals Filled & Sealed", description: "The canals are filled with biocompatible material and sealed to prevent reinfection." },
-  { number: "05", title: "Same-Day Crown", description: "A CEREC crown is designed, milled, and placed the same visit to protect and restore the tooth." },
+  { number: "05", title: "Crown Placement", description: "A custom crown is fabricated in our in-house Smile Dental Lab and placed at your follow-up visit to protect and restore the tooth." },
 ];
 
 const testimonials = [
