@@ -51,7 +51,7 @@ export const TEAM_MEMBERS = {
     { name: "Kerstin Villasenor", credentials: "", role: "Office Manager", locations: ["Cypress", "Katy"], imgKey: "" },
     { name: "Duaa Shawkat", credentials: "", role: "Office Manager", locations: ["Cypress"], imgKey: "duaa-shawkat" },
     { name: "Emmanuel Jaimes", credentials: "", role: "Office Manager", locations: ["Katy"], imgKey: "" },
-    { name: "Walter Perez", credentials: "", role: "Treatment Coordinator", locations: ["Cypress"], imgKey: "" },
+    { name: "Walter Perez", credentials: "", role: "Treatment Coordinator", locations: ["Cypress"], imgKey: "walter-perez" },
     { name: "Clara Atencio", credentials: "", role: "Schedule Coordinator", locations: ["Cypress"], imgKey: "clara-atencio" },
     { name: "Aleydis Melendez", credentials: "", role: "Schedule Coordinator", locations: ["Cypress", "Katy"], imgKey: "" },
     { name: "Lara Hull", credentials: "", role: "Insurance Coordinator", locations: ["Cypress"], imgKey: "" },

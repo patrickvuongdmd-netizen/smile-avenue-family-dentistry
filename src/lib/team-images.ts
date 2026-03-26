@@ -9,46 +9,26 @@ import evaWing from "@/assets/team/eva-wing.png";
 import gisselleGomez from "@/assets/team/gisselle-gomez.png";
 import ivyDoan from "@/assets/team/ivy-doan.png";
 import kristenDavison from "@/assets/team/kristen-davison.png";
+import londonRobinson from "@/assets/team/london-robinson.png";
+import ngocHuynh from "@/assets/team/ngoc-huynh.png";
+import stephanieTabora from "@/assets/team/stephanie-tabora.png";
+import taniaHernandez from "@/assets/team/tania-hernandez.png";
+import walterPerez from "@/assets/team/walter-perez.png";
 
 export const TEAM_IMAGES: Record<string, { url: string; alt: string }> = {
-  "arpine-janbazian": {
-    url: arpineJanbazian,
-    alt: "Arpine Janbazian, RDH - Dental Hygienist at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "ashton-mitchell": {
-    url: ashtonMitchell,
-    alt: "Ashton Mitchell, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "clara-atencio": {
-    url: claraAtencio,
-    alt: "Clara Atencio, Schedule Coordinator at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "daniel-rodriguez": {
-    url: danielRodriguez,
-    alt: "Daniel Rodriguez, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "diana-ortiz": {
-    url: dianaOrtiz,
-    alt: "Diana Ortiz, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "duaa-shawkat": {
-    url: duaaShawkat,
-    alt: "Duaa Shawkat, Office Manager at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "eva-wing": {
-    url: evaWing,
-    alt: "Eva Wing, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "gisselle-gomez": {
-    url: gisselleGomez,
-    alt: "Gisselle Gomez, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "ivy-doan": {
-    url: ivyDoan,
-    alt: "Ivy Doan, RDH - Dental Hygienist at Smile Avenue Family Dentistry Cypress TX",
-  },
-  "kristen-davison": {
-    url: kristenDavison,
-    alt: "Kristen Davison, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX",
-  },
+  "arpine-janbazian": { url: arpineJanbazian, alt: "Arpine Janbazian, RDH - Dental Hygienist at Smile Avenue Family Dentistry Cypress TX" },
+  "ashton-mitchell": { url: ashtonMitchell, alt: "Ashton Mitchell, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
+  "clara-atencio": { url: claraAtencio, alt: "Clara Atencio, Schedule Coordinator at Smile Avenue Family Dentistry Cypress TX" },
+  "daniel-rodriguez": { url: danielRodriguez, alt: "Daniel Rodriguez, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
+  "diana-ortiz": { url: dianaOrtiz, alt: "Diana Ortiz, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
+  "duaa-shawkat": { url: duaaShawkat, alt: "Duaa Shawkat, Office Manager at Smile Avenue Family Dentistry Cypress TX" },
+  "eva-wing": { url: evaWing, alt: "Eva Wing, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
+  "gisselle-gomez": { url: gisselleGomez, alt: "Gisselle Gomez, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
+  "ivy-doan": { url: ivyDoan, alt: "Ivy Doan, RDH - Dental Hygienist at Smile Avenue Family Dentistry Cypress TX" },
+  "kristen-davison": { url: kristenDavison, alt: "Kristen Davison, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
+  "london-robinson": { url: londonRobinson, alt: "London Robinson, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress & Katy TX" },
+  "ngoc-huynh": { url: ngocHuynh, alt: "Ngoc 'Jen' Huynh, RDH - Dental Hygienist at Smile Avenue Family Dentistry Cypress TX" },
+  "stephanie-tabora": { url: stephanieTabora, alt: "Stephanie Tabora, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
+  "tania-hernandez": { url: taniaHernandez, alt: "Tania Hernandez, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress & Katy TX" },
+  "walter-perez": { url: walterPerez, alt: "Walter Perez, Treatment Coordinator at Smile Avenue Family Dentistry Cypress TX" },
 };
