@@ -297,6 +297,7 @@ const EmergencyDentistCypress = () => {
 
       <Footer />
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <BackToTop />
     </>
   );
 };
