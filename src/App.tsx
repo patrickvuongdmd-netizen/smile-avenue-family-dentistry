@@ -112,6 +112,14 @@ const App = () => (
             <Route path="/cypress-tx/oral-surgery" element={<OralSurgeryCypress />} />
             <Route path="/cypress-tx/sedation-dentistry" element={<SedationDentistryCypress />} />
             <Route path="/cypress-tx/preventive-dentistry" element={<PreventiveDentistryCypress />} />
+            <Route path="/cypress-tx/bone-grafting" element={<BoneGraftingCypress />} />
+            <Route path="/cypress-tx/gum-disease-treatment" element={<GumDiseaseTreatmentCypress />} />
+            <Route path="/cypress-tx/wisdom-teeth" element={<WisdomTeethCypress />} />
+            <Route path="/cypress-tx/dental-bonding" element={<DentalBondingCypress />} />
+            <Route path="/cypress-tx/smile-makeover" element={<SmileMakeoverCypress />} />
+            <Route path="/cypress-tx/gum-recession-treatment" element={<GumRecessionTreatmentCypress />} />
+            <Route path="/cypress-tx/family-dentistry" element={<FamilyDentistryCypress />} />
+            <Route path="/cypress-tx/general-dentistry" element={<GeneralDentistryCypress />} />
             <Route path="/katy-tx" element={<KatyTx />} />
             <Route path="/katy-tx/emergency-dentist" element={<EmergencyDentistKaty />} />
             <Route path="/katy-tx/dental-implants" element={<DentalImplantsKaty />} />
