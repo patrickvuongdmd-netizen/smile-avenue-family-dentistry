@@ -189,7 +189,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
               </div>
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
                 <img
-                  src={data.location === "cypress" ? OFFICE_IMAGES.cypressHero : OFFICE_IMAGES.katyHero}
+                  src={data.heroImage || (data.location === "cypress" ? OFFICE_IMAGES.cypressHero : OFFICE_IMAGES.katyHero)}
                   alt={`Smile Avenue Family Dentistry ${loc.name} office near ${data.neighborhoodName}`}
                   className="w-full h-full object-cover"
                   fetchPriority="high"
