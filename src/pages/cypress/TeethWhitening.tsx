@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const TeethWhiteningCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Teeth Whitening in Cypress, TX</h1>
           <p className="section-body">A brighter smile can transform your confidence. At Smile Avenue Cypress, we offer professional teeth whitening treatments that deliver dramatic, long-lasting results — safely and comfortably, in as little as one visit.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Whitening Appointment</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Teeth Whitening Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["teeth-whitening"] ? (<img src={SERVICE_IMAGES["teeth-whitening"].url} alt={SERVICE_IMAGES["teeth-whitening"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">PROFESSIONAL WHITENING</p><h2 className="section-heading">Why Choose Professional Whitening?</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>Over-the-counter whitening strips and toothpastes can only do so much. Professional teeth whitening uses higher-concentration gels and custom-fitted application methods that deliver results far beyond what drugstore products can achieve — safely and under the supervision of a dentist.</p><p>Whether you want quick results with our in-office treatment or prefer the flexibility of whitening at home with custom trays, Smile Avenue Cypress offers options tailored to your lifestyle, sensitivity level, and whitening goals.</p></div></div></section>

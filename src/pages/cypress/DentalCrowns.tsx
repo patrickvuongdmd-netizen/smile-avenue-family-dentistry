@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const DentalCrownsCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Dental Crowns in Cypress, TX</h1>
           <p className="section-body">A damaged or weakened tooth doesn't have to slow you down. At Smile Avenue Cypress, we offer same-day CEREC crowns — designed, milled, and placed in a single visit — so you can restore your smile without the hassle of temporaries and multiple appointments.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Crown Appointment</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Dental Crowns Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["dental-crowns"] ? (<img src={SERVICE_IMAGES["dental-crowns"].url} alt={SERVICE_IMAGES["dental-crowns"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">RESTORE & PROTECT</p><h2 className="section-heading">What Are Dental Crowns?</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>A dental crown is a custom-made cap that fits over a damaged, decayed, or weakened tooth to restore its shape, size, strength, and appearance. Crowns are one of the most common and versatile restorations in dentistry.</p><p>At Smile Avenue Cypress, we're proud to offer CEREC same-day crown technology. Using digital scanning and in-office milling, we can create a precise, high-quality ceramic crown while you wait — eliminating the need for messy impressions, temporary crowns, and a second appointment weeks later.</p></div></div></section>

@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const VeneersCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Veneers in Cypress, TX</h1>
           <p className="section-body">Veneers are the ultimate smile transformation. At Smile Avenue Cypress, we craft custom porcelain veneers that correct chips, gaps, staining, and misalignment — giving you a flawless, natural-looking smile you'll love to show off.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Veneer Consultation</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Veneers Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["veneers"] ? (<img src={SERVICE_IMAGES["veneers"].url} alt={SERVICE_IMAGES["veneers"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">SMILE TRANSFORMATION</p><h2 className="section-heading">What Are Porcelain Veneers?</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>Porcelain veneers are ultra-thin shells of ceramic that are custom-made and bonded to the front surfaces of your teeth. They can dramatically change the color, shape, size, and alignment of your smile in as few as two appointments.</p><p>Unlike crowns that cover the entire tooth, veneers are a conservative option that preserves most of your natural tooth structure while delivering transformative results. They're ideal for addressing multiple cosmetic concerns at once — creating a uniform, beautiful smile.</p></div></div></section>

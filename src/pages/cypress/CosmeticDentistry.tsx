@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const CosmeticDentistryCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Cosmetic Dentistry in Cypress, TX</h1>
           <p className="section-body">Your smile is the first thing people notice. At Smile Avenue Cypress, our cosmetic dentistry services are designed to help you achieve the beautiful, confident smile you've always wanted — using the latest techniques and materials for results that look completely natural.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Cosmetic Consultation</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Cosmetic Dentistry Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["cosmetic-dentistry"] ? (<img src={SERVICE_IMAGES["cosmetic-dentistry"].url} alt={SERVICE_IMAGES["cosmetic-dentistry"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">TRANSFORM YOUR SMILE</p><h2 className="section-heading">What Is Cosmetic Dentistry?</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>Cosmetic dentistry focuses on improving the appearance of your teeth, gums, and overall smile. While general dentistry addresses oral health needs, cosmetic treatments are designed to enhance aesthetics — correcting issues like staining, chips, gaps, misalignment, and uneven tooth shapes.</p><p>At Smile Avenue, we believe that form and function go hand in hand. Our cosmetic treatments not only make your smile more beautiful but also strengthen and protect your teeth for the long term. From quick fixes like bonding and whitening to comprehensive smile makeovers with porcelain veneers, we offer a full range of solutions tailored to your goals.</p></div></div></section>

@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const AllOnXCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">All-on-X Full Mouth Implants in Cypress, TX</h1>
           <p className="section-body">If you're living with failing teeth, ill-fitting dentures, or significant tooth loss, All-on-X implants can give you a brand-new, permanent smile in as little as one day. At Smile Avenue Cypress, we specialize in full arch implant solutions that transform lives.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book All-on-X Consultation</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">All-on-X Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["all-on-x-implants"] ? (<img src={SERVICE_IMAGES["all-on-x-implants"].url} alt={SERVICE_IMAGES["all-on-x-implants"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">FULL MOUTH IMPLANTS</p><h2 className="section-heading">What Are All-on-X Implants?</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>All-on-X is a revolutionary implant technique that replaces an entire arch of teeth using just four to six strategically placed dental implants. Unlike traditional dentures that sit on top of the gums, All-on-X teeth are permanently anchored to your jawbone — providing stability, comfort, and function that closely mimics natural teeth.</p><p>The "X" in All-on-X refers to the number of implants used (typically 4 or 6). These implants are angled to maximize contact with available bone, often eliminating the need for bone grafting. In many cases, temporary teeth can be placed the same day as surgery, so you never have to go without a smile.</p></div></div></section>

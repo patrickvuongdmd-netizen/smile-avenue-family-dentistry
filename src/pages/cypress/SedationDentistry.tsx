@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const SedationDentistryCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Sedation Dentistry in Cypress, TX</h1>
           <p className="section-body">Dental anxiety shouldn't keep you from the care you need. At Smile Avenue Cypress, we offer multiple levels of sedation — from mild relaxation to deep comfort — so every patient can receive treatment in a calm, stress-free environment.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Sedation Appointment</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Sedation Dentistry Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["sedation-dentistry"] ? (<img src={SERVICE_IMAGES["sedation-dentistry"].url} alt={SERVICE_IMAGES["sedation-dentistry"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">RELAXED, COMFORTABLE CARE</p><h2 className="section-heading">What Is Sedation Dentistry?</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>Sedation dentistry uses medication to help patients relax during dental procedures. It's ideal for people with dental anxiety, fear of needles, a strong gag reflex, or those who need extensive treatment completed in fewer visits.</p><p>From mild nitrous oxide that wears off in minutes to IV sedation that lets you sleep through complex procedures, we tailor the level of sedation to your needs. Our team is specially trained in sedation techniques and monitors your vitals continuously for your safety and comfort.</p></div></div></section>

@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const InvisalignCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Invisalign in Cypress, TX</h1>
           <p className="section-body">Straighten your teeth without the brackets and wires. Invisalign clear aligners at Smile Avenue Cypress offer a virtually invisible way to achieve the straight, confident smile you've always wanted — for teens and adults alike.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Invisalign Consultation</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Invisalign Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["invisalign"] ? (<img src={SERVICE_IMAGES["invisalign"].url} alt={SERVICE_IMAGES["invisalign"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">CLEAR ALIGNER THERAPY</p><h2 className="section-heading">What Is Invisalign?</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>Invisalign uses a series of custom-made, clear plastic aligners to gradually move your teeth into their ideal positions. Each set of aligners is worn for about 1–2 weeks before switching to the next, slowly guiding your teeth through a precisely planned sequence of movements.</p><p>Because the aligners are virtually invisible and removable, Invisalign fits seamlessly into your lifestyle. Eat what you want, brush and floss normally, and smile confidently throughout your treatment — without the restrictions of traditional braces.</p></div></div></section>
