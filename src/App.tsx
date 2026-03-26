@@ -48,6 +48,20 @@ import DrLaithYahya from "./pages/doctors/LaithYahya.tsx";
 import DrWeiyenChang from "./pages/doctors/WeiyenChang.tsx";
 import DrChristianLopez from "./pages/doctors/ChristianLopez.tsx";
 import DrTamaaraWillis from "./pages/doctors/TamaaraWillis.tsx";
+import FreeConsultation from "./pages/FreeConsultation.tsx";
+import Specials from "./pages/Specials.tsx";
+import MembershipPlan from "./pages/MembershipPlan.tsx";
+import Insurance from "./pages/Insurance.tsx";
+import Contact from "./pages/Contact.tsx";
+import BookOnline from "./pages/BookOnline.tsx";
+import PatientTestimonials from "./pages/PatientTestimonials.tsx";
+import SmileGallery from "./pages/SmileGallery.tsx";
+import DentalLab from "./pages/DentalLab.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import SitemapPage from "./pages/Sitemap.tsx";
+import Blog from "./pages/Blog.tsx";
+import About from "./pages/About.tsx";
+import Services from "./pages/Services.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -104,6 +118,20 @@ const App = () => (
             <Route path="/doctors/weiyen-chang-dds" element={<DrWeiyenChang />} />
             <Route path="/doctors/christian-lopez-dds" element={<DrChristianLopez />} />
             <Route path="/doctors/tamaara-willis-dds-ms" element={<DrTamaaraWillis />} />
+            <Route path="/free-consultation" element={<FreeConsultation />} />
+            <Route path="/specials" element={<Specials />} />
+            <Route path="/membership-plan" element={<MembershipPlan />} />
+            <Route path="/insurance" element={<Insurance />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/book-online" element={<BookOnline />} />
+            <Route path="/patient-testimonials" element={<PatientTestimonials />} />
+            <Route path="/smile-gallery" element={<SmileGallery />} />
+            <Route path="/dental-lab" element={<DentalLab />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/sitemap" element={<SitemapPage />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
