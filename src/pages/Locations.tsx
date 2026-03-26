@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, Phone, Clock, Star, Shield, Calendar, Users, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -53,6 +54,8 @@ const insuranceLogos = [
 ];
 
 const Locations = () => {
+  useDocTitle("Locations | Smile Avenue Family Dentistry");
+
   return (
     <>
       <Helmet>

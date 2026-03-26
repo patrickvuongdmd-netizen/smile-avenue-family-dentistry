@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { Search } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -24,6 +25,9 @@ const posts = [
 const Blog = () => {
   const [active, setActive] = useState("All");
   const filtered = active === "All" ? posts : posts.filter(p => p.category === active);
+
+  useDocTitle("Dental Blog | Smile Avenue Family Dentistry");
+
 
   return (
     <>

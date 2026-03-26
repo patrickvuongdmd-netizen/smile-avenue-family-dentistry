@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -8,6 +9,8 @@ const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 
 const PrivacyPolicy = () => {
+  useDocTitle("Privacy Policy | Smile Avenue Family Dentistry");
+
   return (
     <>
       <Helmet>

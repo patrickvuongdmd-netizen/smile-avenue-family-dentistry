@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { Star, ExternalLink } from "lucide-react";
 import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
@@ -27,6 +28,8 @@ const reviews = [
 ];
 
 const PatientTestimonials = () => {
+  useDocTitle("Patient Testimonials | Smile Avenue Family Dentistry");
+
   return (
     <>
       <SkipToContent />

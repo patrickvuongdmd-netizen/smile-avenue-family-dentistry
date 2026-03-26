@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Baby, Scan, Crown } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -51,6 +52,8 @@ const serviceCategories = [
 ];
 
 const Services = () => {
+  useDocTitle("Dental Services | Smile Avenue Family Dentistry");
+
   return (
     <>
       <Helmet>

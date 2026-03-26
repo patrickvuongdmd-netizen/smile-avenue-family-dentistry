@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { Zap, ScanLine, Clock, CheckCircle, Shield, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -34,6 +35,8 @@ const benefits = [
 ];
 
 const DentalLab = () => {
+  useDocTitle("In-House Dental Lab | Smile Avenue Family Dentistry");
+
   return (
     <>
       <Helmet>

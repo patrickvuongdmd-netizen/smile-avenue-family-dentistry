@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, Phone, Clock, ClipboardList, Stethoscope, FileText, Check, Download } from "lucide-react";
 import { OFFICE_IMAGES } from "@/lib/images";
 import Navbar from "@/components/Navbar";
@@ -71,6 +72,8 @@ const insuranceLogos = [
 ];
 
 const NewPatientHub = () => {
+  useDocTitle("New Patient Hub | Smile Avenue Family Dentistry");
+
   return (
     <>
       <Helmet>

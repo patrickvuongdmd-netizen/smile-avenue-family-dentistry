@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, Phone, Clock, CalendarCheck, Check, Shield, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -20,6 +21,8 @@ const reassurances = [
 ];
 
 const BookOnline = () => {
+  useDocTitle("Book Online | Smile Avenue Family Dentistry");
+
   return (
     <>
       <SkipToContent />
