@@ -30,7 +30,7 @@ const data: ServicePageData = {
   subServices: [
     { title: "Gentle Modern Approach", description: "Advanced rotary instruments and refined technique make modern root canals comfortable — nothing like the old reputation.", icon: <Heart className="w-5 h-5" /> },
     { title: "Sedation for Comfort", description: "Nitrous oxide, oral sedation, and IV sedation options ensure you're completely comfortable throughout the procedure.", icon: <Syringe className="w-5 h-5" /> },
-    { title: "Same-Day CEREC Crown", description: "After your root canal, we can place a permanent CEREC crown the same day — no temporary, no second visit.", icon: <Zap className="w-5 h-5" /> },
+    { title: "In-House Crown Fabrication", description: "After your root canal, our Smile Dental Lab fabricates your permanent crown with faster turnaround than outside labs.", icon: <Zap className="w-5 h-5" /> },
     { title: "Pain Relief, Not Pain", description: "Root canals relieve the pain of infection. Most patients feel immediate relief and are surprised how comfortable the procedure is.", icon: <Shield className="w-5 h-5" /> },
   ],
   processKicker: "THE ROOT CANAL PROCESS",
