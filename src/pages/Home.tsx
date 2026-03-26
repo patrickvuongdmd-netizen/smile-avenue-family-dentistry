@@ -225,6 +225,7 @@ const Home = () => {
         </section>
 
         {/* BRAND STATEMENT */}
+        <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
             <p className="kicker">OUR MISSION</p>
