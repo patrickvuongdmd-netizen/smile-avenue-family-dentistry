@@ -39,7 +39,7 @@ export const TEAM_MEMBERS = {
     { name: "Ngoc \"Jen\" Huynh", credentials: "RDH", role: "Dental Hygienist", locations: ["Cypress"], imgKey: "ngoc-huynh" },
   ],
   assistants: [
-    { name: "Ali Hiti", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"], imgKey: "" },
+    { name: "Ali Hiti", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress", "Katy"], imgKey: "ali-hiti" },
     { name: "Ashton Mitchell", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"], imgKey: "ashton-mitchell" },
     { name: "Daniel Rodriguez", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"], imgKey: "daniel-rodriguez" },
     { name: "Diana Ortiz", credentials: "RDA", role: "Dental Assistant", locations: ["Cypress"], imgKey: "diana-ortiz" },
@@ -53,15 +53,15 @@ export const TEAM_MEMBERS = {
     { name: "Whitney Darden", credentials: "RDA", role: "Dental Assistant", locations: ["Katy"], imgKey: "whitney-darden" },
   ],
   frontOffice: [
-    { name: "Kerstin Villasenor", credentials: "", role: "Office Manager", locations: ["Cypress", "Katy"], imgKey: "" },
+    { name: "Kerstin Villasenor", credentials: "", role: "Office Manager", locations: ["Cypress", "Katy"], imgKey: "kerstin-villasenor" },
     { name: "Duaa Shawkat", credentials: "", role: "Office Manager", locations: ["Cypress"], imgKey: "duaa-shawkat" },
     { name: "Emmanuel Jaimes", credentials: "", role: "Office Manager", locations: ["Katy"], imgKey: "emmanuel-jaimes" },
     { name: "Walter Perez", credentials: "", role: "Treatment Coordinator", locations: ["Cypress"], imgKey: "walter-perez" },
     { name: "Clara Atencio", credentials: "", role: "Schedule Coordinator", locations: ["Cypress"], imgKey: "clara-atencio" },
-    { name: "Aleydis Melendez", credentials: "", role: "Schedule Coordinator", locations: ["Cypress", "Katy"], imgKey: "" },
-    { name: "Lara Hull", credentials: "", role: "Insurance Coordinator", locations: ["Cypress"], imgKey: "" },
-    { name: "Rebekah Petry", credentials: "", role: "Insurance Coordinator", locations: ["Cypress", "Katy"], imgKey: "" },
-    { name: "Ronald Grady", credentials: "", role: "Insurance Coordinator", locations: ["Cypress", "Katy"], imgKey: "" },
+    { name: "Aleydis Melendez", credentials: "", role: "Schedule Coordinator", locations: ["Cypress", "Katy"], imgKey: "aleydis-melendez" },
+    { name: "Lara Hull", credentials: "", role: "Insurance Coordinator", locations: ["Cypress"], imgKey: "lara-hull" },
+    { name: "Rebekah Petry", credentials: "", role: "Insurance Coordinator", locations: ["Cypress", "Katy"], imgKey: "rebekah-petry" },
+    { name: "Ronald Grady", credentials: "", role: "Insurance Coordinator", locations: ["Cypress", "Katy"], imgKey: "ronald-grady" },
   ],
 };
 
