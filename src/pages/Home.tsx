@@ -186,8 +186,26 @@ const Home = () => {
           </div>
         </section>
 
-        {/* BRAND STATEMENT */}
+        {/* SEE OUR OFFICE — VIDEO */}
         <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">SEE OUR OFFICE</p>
+            <h2 className="section-heading">Take a Virtual Tour</h2>
+            <p className="section-body max-w-2xl mx-auto">Step inside Smile Avenue and see why thousands of Houston families trust us with their smiles.</p>
+            <div className="max-w-4xl mx-auto mt-8">
+              <div className="aspect-video rounded-2xl bg-muted relative flex items-center justify-center overflow-hidden group cursor-pointer shadow-lg" role="img" aria-label="Virtual tour video of Smile Avenue Family Dentistry office">
+                <div className="absolute inset-0 bg-foreground/5 group-hover:bg-foreground/10 transition-colors" />
+                <div className="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform z-10 shadow-xl">
+                  <Play className="w-8 h-8 text-primary-foreground ml-1" aria-hidden="true" />
+                </div>
+                <span className="absolute bottom-4 left-4 text-xs font-sans text-muted-foreground bg-background/80 px-3 py-1 rounded-full">YouTube Video Embed</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* BRAND STATEMENT */}
+        <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
             <p className="kicker">OUR MISSION</p>
             <h2 className="section-heading text-3xl md:text-4xl">Helping Houston Families Love Their Smiles Again</h2>
