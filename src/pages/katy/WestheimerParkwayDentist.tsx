@@ -1,5 +1,6 @@
 import { MapPin, Clock, Shield, Stethoscope, Sparkles, Heart } from "lucide-react";
 import NeighborhoodPageTemplate, { NeighborhoodPageData } from "@/components/NeighborhoodPageTemplate";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const data: NeighborhoodPageData = {
   location: "katy",
