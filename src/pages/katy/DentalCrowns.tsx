@@ -50,7 +50,7 @@ const data: ServicePageData = {
   testimonials: [
     { quote: "Got a CEREC crown at the Katy office — in and out in under 2 hours with a perfect permanent crown. No temporary, no second visit. Incredible technology!", name: "Thomas B.", source: "Google Review" },
     { quote: "Needed a crown on my molar and was dreading two appointments. Smile Avenue did it all in one visit. The crown fits perfectly and looks completely natural.", name: "Rebecca S.", source: "Google Review" },
-    { quote: "Dr. Chang replaced my old metal crown with a beautiful porcelain one. The difference is night and day. So happy I switched to Smile Avenue Katy.", name: "Frank M.", source: "Google Review" },
+    { quote: "Dr. Bilal replaced my old metal crown with a beautiful porcelain one. The difference is night and day. So happy I switched to Smile Avenue Katy.", name: "Frank M.", source: "Google Review" },
   ],
   ctaHeading: "Get Your Same-Day Crown Today",
   ctaBody: "Skip the temporary crown and second appointment. Book your same-day CEREC crown at our Katy office.",

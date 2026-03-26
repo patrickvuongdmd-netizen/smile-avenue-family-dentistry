@@ -49,7 +49,7 @@ const data: ServicePageData = {
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Bridge Reviews",
   testimonials: [
     { quote: "Got a three-unit bridge to replace a missing molar. It fits perfectly and I can chew normally again. The Katy team was professional throughout.", name: "Richard E.", source: "Google Review" },
-    { quote: "Dr. Lopez did a beautiful Maryland bridge for my front tooth gap. Minimal prep and it looks completely natural. So happy with the results!", name: "Jennifer Y.", source: "Google Review" },
+    { quote: "Dr. Maredia did a beautiful Maryland bridge for my front tooth gap. Minimal prep and it looks completely natural. So happy with the results!", name: "Jennifer Y.", source: "Google Review" },
     { quote: "Had an implant-supported bridge done and it feels like real teeth. No slipping, no worries. Best decision for my smile.", name: "Gregory N.", source: "Google Review" },
   ],
   ctaHeading: "Bridge the Gap in Your Smile",

@@ -93,6 +93,9 @@ const About = () => {
                 <DoctorCard key={doc.name} {...doc} />
               ))}
             </div>
+            <Link to="/our-team" className="inline-block mt-8 text-sm font-sans font-semibold text-primary hover:underline">
+              Meet Our Full Team →
+            </Link>
           </div>
         </section>
 
