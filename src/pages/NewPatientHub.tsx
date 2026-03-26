@@ -90,7 +90,7 @@ const NewPatientHub = () => {
             <nav className="mb-6 text-xs font-sans text-muted-foreground">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2">›</span>
-              <Link to="/patients/" className="hover:text-primary transition-colors">Patients</Link>
+              <Link to="/patients/new-patient-hub" className="hover:text-primary transition-colors">Patients</Link>
               <span className="mx-2">›</span>
               <span className="text-foreground">New Patient Hub</span>
             </nav>

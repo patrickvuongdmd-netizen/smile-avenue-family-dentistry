@@ -109,7 +109,7 @@ const About = () => {
               <a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
                 Book Your Visit
               </a>
-              <Link to="/convenient-locations/" className="btn-cta-outline">
+              <Link to="/convenient-locations" className="btn-cta-outline">
                 Find a Location
               </Link>
             </div>
