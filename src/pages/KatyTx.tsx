@@ -272,6 +272,28 @@ const KatyTx = () => {
           </div>
         </section>
 
+        {/* NEIGHBORHOODS WE SERVE */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">NEARBY COMMUNITIES</p>
+            <h2 className="section-heading">Neighborhoods We Serve in Katy</h2>
+            <p className="section-body max-w-2xl mx-auto">Smile Avenue Katy proudly serves families across these communities. Click to learn more about dental care near you.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 max-w-3xl mx-auto">
+              {[
+                { label: "Cinco Ranch Dentist", href: "/katy-tx/cinco-ranch-dentist" },
+                { label: "Firethorne Dentist", href: "/katy-tx/firethorne-dentist" },
+                { label: "Cross Creek Ranch Dentist", href: "/katy-tx/cross-creek-ranch-dentist" },
+                { label: "Westheimer Parkway Dentist", href: "/katy-tx/westheimer-parkway-dentist" },
+                { label: "Fulshear Dentist", href: "/katy-tx/fulshear-dentist" },
+              ].map((n) => (
+                <Link key={n.href} to={n.href} className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 hover:shadow-md transition-all text-sm font-sans font-semibold text-foreground hover:text-primary">
+                  {n.label} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CROSS-LINK CYPRESS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">

@@ -271,6 +271,28 @@ const CypressTx = () => {
           </div>
         </section>
 
+        {/* NEIGHBORHOODS WE SERVE */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">NEARBY COMMUNITIES</p>
+            <h2 className="section-heading">Neighborhoods We Serve in Cypress</h2>
+            <p className="section-body max-w-2xl mx-auto">Smile Avenue Cypress proudly serves families across these communities. Click to learn more about dental care near you.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 max-w-3xl mx-auto">
+              {[
+                { label: "Bridgeland Dentist", href: "/cypress-tx/bridgeland-dentist" },
+                { label: "Towne Lake Dentist", href: "/cypress-tx/towne-lake-dentist" },
+                { label: "Fairfield Dentist", href: "/cypress-tx/fairfield-dentist" },
+                { label: "Cy-Fair Dentist", href: "/cypress-tx/cyfair-dentist" },
+                { label: "Jersey Village Dentist", href: "/cypress-tx/jersey-village-dentist" },
+              ].map((n) => (
+                <Link key={n.href} to={n.href} className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 hover:shadow-md transition-all text-sm font-sans font-semibold text-foreground hover:text-primary">
+                  {n.label} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CROSS-LINK KATY */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
