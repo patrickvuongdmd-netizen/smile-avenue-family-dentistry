@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const ToothExtractionCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Tooth Extraction in Cypress, TX</h1>
           <p className="section-body">Sometimes a tooth needs to come out — whether it's damaged beyond repair, impacted, or causing crowding. At Smile Avenue Cypress, our gentle approach and sedation options make extractions as comfortable and stress-free as possible.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Appointment</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Tooth Extraction Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["tooth-extraction"] ? (<img src={SERVICE_IMAGES["tooth-extraction"].url} alt={SERVICE_IMAGES["tooth-extraction"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">WHEN EXTRACTION IS NEEDED</p><h2 className="section-heading">Understanding Tooth Extractions</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>While we always prioritize saving natural teeth, there are situations where extraction is the best course of action. Severe decay, advanced gum disease, irreparable fractures, crowding, and impacted wisdom teeth are common reasons a tooth may need to be removed.</p><p>Our team uses the latest techniques and instruments to make extractions as quick and comfortable as possible. We also discuss tooth replacement options before the procedure so you have a clear plan for restoring your smile.</p></div></div></section>

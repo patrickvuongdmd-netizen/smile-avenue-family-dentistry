@@ -6,6 +6,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import { SERVICE_IMAGES } from "@/lib/images";
 
 const PHONE = "8326481756"; const PHONE_F = "(832) 648-1756";
 const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -56,7 +57,7 @@ const DenturesCypress = () => (
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">Dentures in Cypress, TX</h1>
           <p className="section-body">Missing teeth shouldn't hold you back. At Smile Avenue Cypress, we create custom dentures that look natural, fit comfortably, and restore your confidence — from full and partial dentures to advanced implant-supported options.</p>
           <div className="flex flex-wrap gap-3 mb-6"><a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Denture Consultation</a><a href={`tel:${PHONE}`} className="btn-secondary">Call {PHONE_F}</a></div>
-        </div><div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md"><span className="text-sm font-sans text-muted-foreground">Dentures Photo</span></div></div>
+        </div><div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">{SERVICE_IMAGES["dentures"] ? (<img src={SERVICE_IMAGES["dentures"].url} alt={SERVICE_IMAGES["dentures"].alt} className="w-full h-full object-cover" fetchPriority="high" width={640} height={480} />) : (<div className="w-full h-full bg-muted flex items-center justify-center"><span className="text-sm font-sans text-muted-foreground">Service Photo</span></div>)}</div></div>
       </div></section>
 
       <section className="section-padding section-alt"><div className="container mx-auto max-w-3xl"><p className="kicker">RESTORE YOUR SMILE</p><h2 className="section-heading">Modern Denture Solutions</h2><div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed"><p>Today's dentures are nothing like the bulky, obvious prosthetics of the past. Advances in materials and fabrication techniques mean modern dentures look remarkably natural and fit more comfortably than ever before.</p><p>Whether you need to replace all of your teeth or just a few, we offer solutions ranging from traditional removable dentures to implant-supported options that snap securely into place. We'll work with you to find the right balance of function, aesthetics, and budget.</p></div></div></section>
