@@ -6,6 +6,11 @@ import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 
+import beforeAfterImplants from "@/assets/gallery/before-after-implants.jpg";
+import beforeAfterVeneers from "@/assets/gallery/before-after-veneers.jpg";
+import beforeAfterWhitening from "@/assets/gallery/before-after-whitening.jpg";
+import beforeAfterInvisalign from "@/assets/gallery/before-after-invisalign.jpg";
+
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
@@ -13,10 +18,10 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 const categories = ["All", "Implants", "Veneers", "Whitening", "Invisalign", "Crowns"];
 
 const beforeAfterPhotos = [
-  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile1.webp", alt: "Before and after smile transformation — dental implants at Smile Avenue" },
-  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile2.webp", alt: "Before and after smile transformation — porcelain veneers at Smile Avenue" },
-  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile3.webp", alt: "Before and after smile transformation — teeth whitening at Smile Avenue" },
-  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile4.webp", alt: "Before and after smile transformation — Invisalign at Smile Avenue" },
+  { src: beforeAfterImplants, alt: "Before and after smile transformation — dental implants at Smile Avenue", label: "Dental Implants" },
+  { src: beforeAfterVeneers, alt: "Before and after smile transformation — porcelain veneers at Smile Avenue", label: "Porcelain Veneers" },
+  { src: beforeAfterWhitening, alt: "Before and after smile transformation — teeth whitening at Smile Avenue", label: "Teeth Whitening" },
+  { src: beforeAfterInvisalign, alt: "Before and after smile transformation — Invisalign at Smile Avenue", label: "Invisalign" },
 ];
 
 const galleryItems = [
@@ -65,15 +70,18 @@ const SmileGallery = () => {
             {/* Real Before/After Photos */}
             <div className="grid sm:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
               {beforeAfterPhotos.map((photo, i) => (
-                <div key={i} className="rounded-2xl overflow-hidden border border-border shadow-sm">
+                <div key={i} className="rounded-2xl overflow-hidden border border-border shadow-sm bg-card">
                   <img
                     src={photo.src}
                     alt={photo.alt}
                     className="w-full h-auto"
                     loading={i < 2 ? undefined : "lazy"}
-                    width={774}
-                    height={797}
+                    width={1024}
+                    height={768}
                   />
+                  <div className="px-4 py-3 text-center">
+                    <span className="text-sm font-sans font-semibold text-foreground">{photo.label}</span>
+                  </div>
                 </div>
               ))}
             </div>
