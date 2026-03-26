@@ -52,8 +52,8 @@ const faqJsonLd = {
 const DentalCrownsCypress = () => (
   <>
     <Helmet>
-      <title>Dental Crowns in Cypress, TX - Same-Day CEREC - Smile Avenue</title>
-      <meta name="description" content="Same-day CEREC dental crowns in Cypress, TX. No temporary, no second visit. Digital precision, in-house lab. Call (832) 648-1756." />
+      <title>Custom Dental Crowns in Cypress, TX - Smile Avenue Family Dentistry</title>
+      <meta name="description" content="Custom porcelain and zirconia dental crowns in Cypress, TX. In-house lab precision, digital impressions. Call (832) 648-1756." />
       <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/dental-crowns/" />
       <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
     </Helmet>
