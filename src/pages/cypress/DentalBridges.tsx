@@ -14,7 +14,7 @@ const BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/Smil
 const whyChoose = [
   { title: "In-House Lab Fabrication", description: "Our Smile Dental Lab fabricates your bridge on-site for precise fit, natural appearance, and faster completion.", icon: <Crown className="w-5 h-5" /> },
   { title: "Digital Impressions", description: "Comfortable digital scanning replaces goopy molds for more accurate results.", icon: <Scan className="w-5 h-5" /> },
-  { title: "Same-Day Options", description: "For some cases, we can complete your bridge in a single visit using our in-house lab and CEREC technology.", icon: <Zap className="w-5 h-5" /> },
+  { title: "Faster Turnaround", description: "Our in-house lab fabricates bridges faster than practices that outsource — fewer appointments and shorter wait times.", icon: <Zap className="w-5 h-5" /> },
   { title: "Implant-Supported Bridges", description: "For maximum durability, we offer bridges anchored by dental implants — preserving bone and adjacent teeth.", icon: <Shield className="w-5 h-5" /> },
 ];
 
