@@ -12,6 +12,7 @@ import SkipToContent from "@/components/SkipToContent";
 import { Play } from "lucide-react";
 import { useState } from "react";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";

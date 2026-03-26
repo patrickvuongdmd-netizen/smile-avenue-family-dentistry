@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Star, Play, ExternalLink } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
+import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
