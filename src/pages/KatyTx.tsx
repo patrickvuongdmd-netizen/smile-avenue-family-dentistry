@@ -26,12 +26,12 @@ const doctors = [
 ];
 
 const services = [
-  { title: "Preventive Dentistry", description: "Cleanings, exams, and proactive care to keep your smile healthy.", href: "/katy-tx/preventive-dentistry/", icon: <Shield className="w-5 h-5" /> },
-  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and smile design for a confident new look.", href: "/katy-tx/cosmetic-dentistry/", icon: <Sparkles className="w-5 h-5" /> },
-  { title: "Dental Implants", description: "Permanent tooth replacement that looks and functions like natural teeth.", href: "/katy-tx/dental-implants/", icon: <SmilePlus className="w-5 h-5" /> },
-  { title: "Invisalign®", description: "Clear aligners for a straighter smile without traditional braces.", href: "/katy-tx/invisalign/", icon: <Zap className="w-5 h-5" /> },
-  { title: "Emergency Dentistry", description: "Same-day urgent care when you need it most.", href: "/katy-tx/emergency-dentistry/", icon: <AlertCircle className="w-5 h-5" /> },
-  { title: "Sedation Dentistry", description: "Relaxed, anxiety-free dental care for nervous patients.", href: "/katy-tx/sedation-dentistry/", icon: <Pill className="w-5 h-5" /> },
+  { title: "Preventive Dentistry", description: "Cleanings, exams, and proactive care to keep your smile healthy.", href: "/katy-tx/preventive-dentistry", icon: <Shield className="w-5 h-5" /> },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and smile design for a confident new look.", href: "/katy-tx/cosmetic-dentistry", icon: <Sparkles className="w-5 h-5" /> },
+  { title: "Dental Implants", description: "Permanent tooth replacement that looks and functions like natural teeth.", href: "/katy-tx/dental-implants", icon: <SmilePlus className="w-5 h-5" /> },
+  { title: "Invisalign®", description: "Clear aligners for a straighter smile without traditional braces.", href: "/katy-tx/invisalign", icon: <Zap className="w-5 h-5" /> },
+  { title: "Emergency Dentistry", description: "Same-day urgent care when you need it most.", href: "/katy-tx/emergency-dentist", icon: <AlertCircle className="w-5 h-5" /> },
+  { title: "Sedation Dentistry", description: "Relaxed, anxiety-free dental care for nervous patients.", href: "/katy-tx/sedation-dentistry", icon: <Pill className="w-5 h-5" /> },
 ];
 
 const testimonials = [
@@ -154,7 +154,7 @@ const KatyTx = () => {
                 <ServiceCard key={svc.title} {...svc} />
               ))}
             </div>
-            <Link to="/katy-tx/services/" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+            <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               Explore All Katy Services →
             </Link>
           </div>
@@ -173,7 +173,7 @@ const KatyTx = () => {
                 <TestimonialCard key={t.name} {...t} />
               ))}
             </div>
-            <Link to="/katy-tx/reviews/" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+            <Link to="/patient-testimonials" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               Read More Katy Reviews →
             </Link>
           </div>
@@ -189,7 +189,7 @@ const KatyTx = () => {
               <BeforeAfterCard label="Dental Implants" />
               <BeforeAfterCard label="Invisalign® Treatment" />
             </div>
-            <Link to="/katy-tx/smile-gallery/" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+            <Link to="/smile-gallery" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               View Full Katy Gallery →
             </Link>
           </div>
@@ -243,17 +243,17 @@ const KatyTx = () => {
               <div className="bg-card rounded-xl p-6 border border-border">
                 <h3 className="font-display text-lg font-semibold text-foreground mb-2">Most Insurance Accepted</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept most major PPO plans and will verify your benefits before your visit.</p>
-                <Link to="/patients/insurance/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
+                <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
                 <h3 className="font-display text-lg font-semibold text-foreground mb-2">Smile Avenue Membership Plan</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">No insurance? Our in-house plan covers cleanings, exams, and gives you discounts on treatment.</p>
-                <Link to="/patients/membership-plan/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
+                <Link to="/membership-plan" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
                 <h3 className="font-display text-lg font-semibold text-foreground mb-2">Dental Financing</h3>
                 <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Flexible monthly payment options through CareCredit and Sunbit — apply in minutes.</p>
-                <Link to="/patients/financing/" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
+                <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
           </div>
