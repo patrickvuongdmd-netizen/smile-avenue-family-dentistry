@@ -1,4 +1,6 @@
 // Team member headshot imports
+import aleydisMelendez from "@/assets/team/aleydis-melendez.png";
+import aliHiti from "@/assets/team/ali-hiti.png";
 import arpineJanbazian from "@/assets/team/arpine-janbazian.png";
 import ashtonMitchell from "@/assets/team/ashton-mitchell.png";
 import claraAtencio from "@/assets/team/clara-atencio.png";
@@ -9,9 +11,13 @@ import emmanuelJaimes from "@/assets/team/emmanuel-jaimes.png";
 import evaWing from "@/assets/team/eva-wing.png";
 import gisselleGomez from "@/assets/team/gisselle-gomez.png";
 import ivyDoan from "@/assets/team/ivy-doan.png";
+import kerstinVillasenor from "@/assets/team/kerstin-villasenor.png";
 import kristenDavison from "@/assets/team/kristen-davison.png";
+import laraHull from "@/assets/team/lara-hull.png";
 import londonRobinson from "@/assets/team/london-robinson.png";
 import ngocHuynh from "@/assets/team/ngoc-huynh.png";
+import rebekahPetry from "@/assets/team/rebekah-petry.png";
+import ronaldGrady from "@/assets/team/ronald-grady.png";
 import stephanieTabora from "@/assets/team/stephanie-tabora.png";
 import taniaHernandez from "@/assets/team/tania-hernandez.png";
 import violettaArroyo from "@/assets/team/violetta-arroyo.png";
@@ -19,6 +25,8 @@ import walterPerez from "@/assets/team/walter-perez.png";
 import whitneyDarden from "@/assets/team/whitney-darden.png";
 
 export const TEAM_IMAGES: Record<string, { url: string; alt: string }> = {
+  "aleydis-melendez": { url: aleydisMelendez, alt: "Aleydis Melendez, Schedule Coordinator at Smile Avenue Family Dentistry Cypress & Katy TX" },
+  "ali-hiti": { url: aliHiti, alt: "Ali Hiti, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress & Katy TX" },
   "arpine-janbazian": { url: arpineJanbazian, alt: "Arpine Janbazian, RDH - Dental Hygienist at Smile Avenue Family Dentistry Cypress TX" },
   "ashton-mitchell": { url: ashtonMitchell, alt: "Ashton Mitchell, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
   "clara-atencio": { url: claraAtencio, alt: "Clara Atencio, Schedule Coordinator at Smile Avenue Family Dentistry Cypress TX" },
@@ -29,9 +37,13 @@ export const TEAM_IMAGES: Record<string, { url: string; alt: string }> = {
   "eva-wing": { url: evaWing, alt: "Eva Wing, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
   "gisselle-gomez": { url: gisselleGomez, alt: "Gisselle Gomez, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
   "ivy-doan": { url: ivyDoan, alt: "Ivy Doan, RDH - Dental Hygienist at Smile Avenue Family Dentistry Cypress TX" },
+  "kerstin-villasenor": { url: kerstinVillasenor, alt: "Kerstin Villasenor, Office Manager at Smile Avenue Family Dentistry Cypress & Katy TX" },
   "kristen-davison": { url: kristenDavison, alt: "Kristen Davison, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
+  "lara-hull": { url: laraHull, alt: "Lara Hull, Insurance Coordinator at Smile Avenue Family Dentistry Cypress TX" },
   "london-robinson": { url: londonRobinson, alt: "London Robinson, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress & Katy TX" },
   "ngoc-huynh": { url: ngocHuynh, alt: "Ngoc 'Jen' Huynh, RDH - Dental Hygienist at Smile Avenue Family Dentistry Cypress TX" },
+  "rebekah-petry": { url: rebekahPetry, alt: "Rebekah Petry, Insurance Coordinator at Smile Avenue Family Dentistry Cypress & Katy TX" },
+  "ronald-grady": { url: ronaldGrady, alt: "Ronald Grady, Insurance Coordinator at Smile Avenue Family Dentistry Cypress & Katy TX" },
   "stephanie-tabora": { url: stephanieTabora, alt: "Stephanie Tabora, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress TX" },
   "tania-hernandez": { url: taniaHernandez, alt: "Tania Hernandez, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress & Katy TX" },
   "violetta-arroyo": { url: violettaArroyo, alt: "Violetta Arroyo, RDA - Dental Assistant at Smile Avenue Family Dentistry Cypress & Katy TX" },
