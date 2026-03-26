@@ -8,6 +8,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
+import SkipToContent from "@/components/SkipToContent";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
