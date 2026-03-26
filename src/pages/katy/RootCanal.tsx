@@ -22,7 +22,7 @@ const data: ServicePageData = {
   trustBadges: [
     { icon: <Star className="w-5 h-5" />, label: "4.9★ Rating" },
     { icon: <Heart className="w-5 h-5" />, label: "Gentle Approach" },
-    { icon: <Zap className="w-5 h-5" />, label: "Same-Day Crown Option" },
+    { icon: <Zap className="w-5 h-5" />, label: "In-House Crown Lab" },
   ],
   subServicesKicker: "WHY CHOOSE SMILE AVENUE",
   subServicesHeading: "Why Patients Choose Us for Root Canals",
