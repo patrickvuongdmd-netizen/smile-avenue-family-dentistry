@@ -6,6 +6,8 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import TrustStrip from "@/components/TrustStrip";
+import BackToTop from "@/components/BackToTop";
 import { useState } from "react";
 
 const CYPRESS_PHONE = "8326481756";
