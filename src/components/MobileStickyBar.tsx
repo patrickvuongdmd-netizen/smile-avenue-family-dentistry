@@ -27,7 +27,7 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl }: MobileStickyBarP
           Book
         </a>
         <a
-          href="/locations"
+          href="/convenient-locations"
           className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-medium text-foreground"
         >
           <MapPin className="w-4 h-4 text-primary" />

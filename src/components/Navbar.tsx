@@ -31,6 +31,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
             </div>
             <div className="flex items-center gap-4">
+              <span className="text-xs font-sans font-semibold bg-primary/10 text-primary px-2.5 py-1 rounded-full">Hablamos Español</span>
               <a href={`tel:${phone}`} className="flex items-center gap-2 text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
                 {phoneFormatted}
