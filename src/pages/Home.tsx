@@ -153,6 +153,7 @@ const Home = () => {
         </section>
 
         {/* SERVICES */}
+        <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">OUR SERVICES</p>
