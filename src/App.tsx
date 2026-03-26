@@ -114,14 +114,6 @@ const App = () => (
             <Route path="/katy-tx/oral-surgery" element={<OralSurgeryKaty />} />
             <Route path="/katy-tx/sedation-dentistry" element={<SedationDentistryKaty />} />
             <Route path="/katy-tx/preventive-dentistry" element={<PreventiveDentistryKaty />} />
-            <Route path="/katy-tx/bone-grafting" element={<BoneGraftingKaty />} />
-            <Route path="/katy-tx/gum-disease-treatment" element={<GumDiseaseTreatmentKaty />} />
-            <Route path="/katy-tx/wisdom-teeth" element={<WisdomTeethKaty />} />
-            <Route path="/katy-tx/dental-bonding" element={<DentalBondingKaty />} />
-            <Route path="/katy-tx/smile-makeover" element={<SmileMakeoverKaty />} />
-            <Route path="/katy-tx/gum-recession-treatment" element={<GumRecessionTreatmentKaty />} />
-            <Route path="/katy-tx/family-dentistry" element={<FamilyDentistryKaty />} />
-            <Route path="/katy-tx/general-dentistry" element={<GeneralDentistryKaty />} />
             <Route path="/convenient-locations" element={<Locations />} />
             <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
             <Route path="/doctors" element={<Doctors />} />

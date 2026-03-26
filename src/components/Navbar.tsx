@@ -9,31 +9,23 @@ interface NavbarProps {
 }
 
 const serviceLinks = [
-  { label: "General Dentistry", slug: "general-dentistry" },
-  { label: "Family Dentistry", slug: "family-dentistry" },
-  { label: "Preventive Dentistry", slug: "preventive-dentistry" },
+  { label: "Emergency Dentist", slug: "emergency-dentist" },
   { label: "Dental Implants", slug: "dental-implants" },
   { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
-  { label: "Smile Makeover", slug: "smile-makeover" },
-  { label: "Invisalign®", slug: "invisalign" },
   { label: "Teeth Whitening", slug: "teeth-whitening" },
-  { label: "Veneers", slug: "veneers" },
-  { label: "Dental Bonding", slug: "dental-bonding" },
   { label: "Dental Crowns", slug: "dental-crowns" },
   { label: "All-on-X Implants", slug: "all-on-x-implants" },
+  { label: "Invisalign®", slug: "invisalign" },
   { label: "Root Canal", slug: "root-canal" },
   { label: "Dental Cleaning", slug: "dental-cleaning" },
   { label: "Pediatric Dentistry", slug: "pediatric-dentistry" },
   { label: "Dentures", slug: "dentures" },
+  { label: "Veneers", slug: "veneers" },
   { label: "Dental Bridges", slug: "dental-bridges" },
   { label: "Tooth Extraction", slug: "tooth-extraction" },
-  { label: "Wisdom Teeth", slug: "wisdom-teeth" },
   { label: "Oral Surgery", slug: "oral-surgery" },
-  { label: "Bone Grafting", slug: "bone-grafting" },
-  { label: "Gum Disease Treatment", slug: "gum-disease-treatment" },
-  { label: "Gum Recession Treatment", slug: "gum-recession-treatment" },
   { label: "Sedation Dentistry", slug: "sedation-dentistry" },
-  { label: "Emergency Dentist", slug: "emergency-dentist" },
+  { label: "Preventive Dentistry", slug: "preventive-dentistry" },
 ];
 
 const patientLinks = [

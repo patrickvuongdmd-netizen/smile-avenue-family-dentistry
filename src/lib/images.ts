@@ -107,22 +107,6 @@ export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Crown-Bridges.webp",
     alt: "Dental bridges at Smile Avenue Family Dentistry",
   },
-  "bone-grafting": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Bone-Grafting.jpg",
-    alt: "Bone grafting procedure at Smile Avenue Family Dentistry",
-  },
-  "gum-disease-treatment": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/01/Gum-Disease-Treatment-Solutions-in-Cypress.jpg",
-    alt: "Gum disease treatment at Smile Avenue Family Dentistry",
-  },
-  "smile-makeover": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Smile-Makeover-2.jpg",
-    alt: "Smile makeover transformation at Smile Avenue Family Dentistry",
-  },
-  "gum-recession-treatment": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-gum-recession-treatment.webp",
-    alt: "Gum recession treatment at Smile Avenue Family Dentistry",
-  },
   "tooth-extraction": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Oral-Surgery-1.jpg",
     alt: "Tooth extraction at Smile Avenue Family Dentistry",

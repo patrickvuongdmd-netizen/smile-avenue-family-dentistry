@@ -14,9 +14,7 @@ const serviceCategories = [
   {
     heading: "Preventive & General",
     services: [
-      { title: "General Dentistry", description: "Exams, X-rays, fillings, and comprehensive oral care.", href: "/cypress-tx/general-dentistry/", icon: <Shield className="w-5 h-5" /> },
       { title: "Preventive Dentistry", description: "Cleanings, exams, digital X-rays, and proactive care to keep your smile healthy.", href: "/cypress-tx/preventive-dentistry/", icon: <Shield className="w-5 h-5" /> },
-      { title: "Family Dentistry", description: "Dental care for all ages — children, teens, adults, and seniors.", href: "/cypress-tx/family-dentistry/", icon: <Baby className="w-5 h-5" /> },
       { title: "Dental Cleaning", description: "Professional cleanings to remove plaque, tartar, and surface stains.", href: "/cypress-tx/dental-cleaning/", icon: <Shield className="w-5 h-5" /> },
       { title: "Children's Dentistry", description: "Gentle, fun-focused dental care designed especially for your little ones.", href: "/cypress-tx/pediatric-dentistry/", icon: <Baby className="w-5 h-5" /> },
       { title: "Emergency Dentistry", description: "Same-day urgent care for toothaches, broken teeth, and dental emergencies.", href: "/cypress-tx/emergency-dentist/", icon: <AlertCircle className="w-5 h-5" /> },
@@ -26,9 +24,7 @@ const serviceCategories = [
     heading: "Cosmetic & Aesthetic",
     services: [
       { title: "Cosmetic Dentistry", description: "Veneers, bonding, and smile design for the radiant smile you deserve.", href: "/cypress-tx/cosmetic-dentistry/", icon: <Sparkles className="w-5 h-5" /> },
-      { title: "Smile Makeover", description: "Comprehensive cosmetic transformation with digital smile design.", href: "/cypress-tx/smile-makeover/", icon: <Sparkles className="w-5 h-5" /> },
       { title: "Veneers", description: "Porcelain veneers for a picture-perfect smile.", href: "/cypress-tx/veneers/", icon: <Sparkles className="w-5 h-5" /> },
-      { title: "Dental Bonding", description: "Quick, affordable repair for chipped, gapped, or discolored teeth.", href: "/cypress-tx/dental-bonding/", icon: <Sparkles className="w-5 h-5" /> },
       { title: "Invisalign®", description: "Clear aligners for a straighter smile — no metal brackets.", href: "/cypress-tx/invisalign/", icon: <Zap className="w-5 h-5" /> },
       { title: "Teeth Whitening", description: "Professional-grade whitening with dramatic results.", href: "/cypress-tx/teeth-whitening/", icon: <Scan className="w-5 h-5" /> },
     ],
@@ -49,10 +45,6 @@ const serviceCategories = [
     services: [
       { title: "Oral Surgery", description: "Surgical extractions, bone grafting, and advanced procedures.", href: "/cypress-tx/oral-surgery/", icon: <SmilePlus className="w-5 h-5" /> },
       { title: "Tooth Extraction", description: "Simple and surgical tooth removal with comfort-focused care.", href: "/cypress-tx/tooth-extraction/", icon: <SmilePlus className="w-5 h-5" /> },
-      { title: "Wisdom Teeth Removal", description: "Safe third molar extraction with sedation options.", href: "/cypress-tx/wisdom-teeth/", icon: <SmilePlus className="w-5 h-5" /> },
-      { title: "Bone Grafting", description: "Jawbone restoration for dental implant candidates.", href: "/cypress-tx/bone-grafting/", icon: <SmilePlus className="w-5 h-5" /> },
-      { title: "Gum Disease Treatment", description: "Scaling, root planing, laser therapy, and periodontal maintenance.", href: "/cypress-tx/gum-disease-treatment/", icon: <Shield className="w-5 h-5" /> },
-      { title: "Gum Recession Treatment", description: "Gum grafting and Pinhole Technique to restore your gumline.", href: "/cypress-tx/gum-recession-treatment/", icon: <Shield className="w-5 h-5" /> },
       { title: "Sedation Dentistry", description: "Relaxed, anxiety-free treatment options.", href: "/cypress-tx/sedation-dentistry/", icon: <Pill className="w-5 h-5" /> },
     ],
   },
