@@ -70,15 +70,18 @@ const SmileGallery = () => {
             {/* Real Before/After Photos */}
             <div className="grid sm:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
               {beforeAfterPhotos.map((photo, i) => (
-                <div key={i} className="rounded-2xl overflow-hidden border border-border shadow-sm">
+                <div key={i} className="rounded-2xl overflow-hidden border border-border shadow-sm bg-card">
                   <img
                     src={photo.src}
                     alt={photo.alt}
                     className="w-full h-auto"
                     loading={i < 2 ? undefined : "lazy"}
-                    width={774}
-                    height={797}
+                    width={1024}
+                    height={768}
                   />
+                  <div className="px-4 py-3 text-center">
+                    <span className="text-sm font-sans font-semibold text-foreground">{photo.label}</span>
+                  </div>
                 </div>
               ))}
             </div>
