@@ -51,11 +51,17 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
         <link rel="canonical" href={`https://smileavenuedentistry.com/doctors/${data.slug}/`} />
+        <meta property="og:title" content={data.metaTitle} />
+        <meta property="og:description" content={data.metaDescription} />
+        <meta property="og:url" content={`https://smileavenuedentistry.com/doctors/${data.slug}/`} />
+        <meta property="og:type" content="profile" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <Navbar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
