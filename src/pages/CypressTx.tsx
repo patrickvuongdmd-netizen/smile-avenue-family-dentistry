@@ -188,7 +188,7 @@ const CypressTx = () => {
               <BeforeAfterCard label="Dental Implants" />
               <BeforeAfterCard label="Invisalign® Treatment" />
             </div>
-            <Link to="/cypress-tx/smile-gallery/" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+            <Link to="/smile-gallery" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               View Full Cypress Gallery →
             </Link>
           </div>
