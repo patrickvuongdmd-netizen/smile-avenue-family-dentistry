@@ -87,51 +87,51 @@ export const OFFICE_IMAGES = {
 
 export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
   "dental-implants": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Implants.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-single-tooth-implant-1.webp",
     alt: "Dental implants procedure at Smile Avenue Family Dentistry",
   },
   "cosmetic-dentistry": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Cosmetic-Dentistry-1.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-cosmetic-dentistry.webp",
     alt: "Cosmetic dentistry smile makeover at Smile Avenue Family Dentistry",
   },
   "emergency-dentist": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Emergency-Dental-Care.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-dental-emergencies.webp",
     alt: "Emergency dental care at Smile Avenue Family Dentistry",
   },
   "invisalign": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Invisalign-1.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-invisalign-clear-aligners.webp",
     alt: "Invisalign clear aligners at Smile Avenue Family Dentistry",
   },
   "dental-crowns": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Crown-Bridges.webp",
-    alt: "Dental crowns and bridges at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-restorative-dentistry.webp",
+    alt: "Dental crowns and restorative dentistry at Smile Avenue Family Dentistry",
   },
   "oral-surgery": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Oral-Surgery-1.jpg",
     alt: "Oral surgery at Smile Avenue Family Dentistry",
   },
   "dental-cleaning": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-General-Dentistry-1.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-preventive-dentistry.webp",
     alt: "Professional dental cleaning at Smile Avenue Family Dentistry",
   },
   "preventive-dentistry": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-General-Dentistry-1.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-preventive-dentistry.webp",
     alt: "Preventive dentistry at Smile Avenue Family Dentistry",
   },
   "veneers": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Smile-Makeover-2.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-cosmetic-dentistry.webp",
     alt: "Porcelain veneers smile makeover at Smile Avenue Family Dentistry",
   },
   "all-on-x-implants": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Implants.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-all-on-x-dental-implants-1.webp",
     alt: "All-on-X full arch implants at Smile Avenue Family Dentistry",
   },
   "teeth-whitening": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Cosmetic-Dentistry-1.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-teeth-whitening.webp",
     alt: "Professional teeth whitening at Smile Avenue Family Dentistry",
   },
   "root-canal": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-General-Dentistry-1.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-restorative-dentistry.webp",
     alt: "Root canal therapy at Smile Avenue Family Dentistry",
   },
   "sedation-dentistry": {
@@ -139,15 +139,15 @@ export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
     alt: "Sedation dentistry for comfortable care at Smile Avenue Family Dentistry",
   },
   "pediatric-dentistry": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-General-Dentistry-1.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-preventive-dentistry.webp",
     alt: "Pediatric dentistry for children at Smile Avenue Family Dentistry",
   },
   "dentures": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Implants.jpg",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-multiple-dental-implants-1.webp",
     alt: "Dentures and tooth replacement at Smile Avenue Family Dentistry",
   },
   "dental-bridges": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Crown-Bridges.webp",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-restorative-dentistry.webp",
     alt: "Dental bridges at Smile Avenue Family Dentistry",
   },
   "tooth-extraction": {
