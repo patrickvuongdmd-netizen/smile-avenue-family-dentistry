@@ -86,16 +86,26 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
-        {/* YouTube Video Testimonials */}
+        {/* Video Testimonials */}
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">VIDEO STORIES</p>
             <h2 className="section-heading text-center">Watch Real Patient Experiences</h2>
             <div className="grid sm:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
-              <LazyYouTube videoId="dQw4w9WgXcQ" title="Why Smile Avenue is Trusted for Caring for Patients & Families" />
-              <LazyYouTube videoId="dQw4w9WgXcQ" title="The Road to Your Best Smile" />
-              <LazyYouTube videoId="dQw4w9WgXcQ" title="Right Across the Street, Right for My Smile!" />
-              <LazyYouTube videoId="dQw4w9WgXcQ" title="Office Tour — See Our Modern Dental Office" />
+              {VIDEO_TESTIMONIALS.map((vid, i) => (
+                <div key={i} className="aspect-video rounded-2xl overflow-hidden relative shadow-md bg-muted group">
+                  <img src={vid.thumbnail} alt={vid.title} className="w-full h-full object-cover" loading="lazy" width={1280} height={720} />
+                  <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+                      <Play className="w-7 h-7 text-primary-foreground ml-1" aria-hidden="true" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-foreground/60 to-transparent">
+                    <p className="text-sm font-sans font-semibold text-background text-left">{vid.title}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
