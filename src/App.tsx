@@ -106,6 +106,11 @@ const App = () => (
             <Route path="/cypress-tx/oral-surgery" element={<OralSurgeryCypress />} />
             <Route path="/cypress-tx/sedation-dentistry" element={<SedationDentistryCypress />} />
             <Route path="/cypress-tx/preventive-dentistry" element={<PreventiveDentistryCypress />} />
+            <Route path="/cypress-tx/bridgeland-dentist" element={<BridgelandDentist />} />
+            <Route path="/cypress-tx/towne-lake-dentist" element={<TowneLakeDentist />} />
+            <Route path="/cypress-tx/fairfield-dentist" element={<FairfieldDentist />} />
+            <Route path="/cypress-tx/cyfair-dentist" element={<CyFairDentist />} />
+            <Route path="/cypress-tx/jersey-village-dentist" element={<JerseyVillageDentist />} />
             <Route path="/katy-tx" element={<KatyTx />} />
             <Route path="/katy-tx/emergency-dentist" element={<EmergencyDentistKaty />} />
             <Route path="/katy-tx/dental-implants" element={<DentalImplantsKaty />} />
