@@ -85,8 +85,6 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
         <meta property="og:url" content={`https://smileavenuedentistry.com/doctors/${data.slug}/`} />
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <Navbar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
       <TrustStrip />
