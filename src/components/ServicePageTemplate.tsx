@@ -168,7 +168,6 @@ const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
     { title: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
     { title: "Teeth Whitening", slug: "teeth-whitening" },
     { title: "Dental Crowns", slug: "dental-crowns" },
-    { title: "Dental Bonding", slug: "cosmetic-dentistry" },
   ],
   "dental-bridges": [
     { title: "Dental Crowns", slug: "dental-crowns" },
