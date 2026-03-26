@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
+import { DOCTOR_IMAGES } from "@/lib/images";
 
 export interface DoctorPageData {
   name: string;
@@ -22,8 +23,20 @@ export interface DoctorPageData {
   bio: string[];
 }
 
+// Map slug to image key
+const SLUG_TO_IMG_KEY: Record<string, string> = {
+  "patrick-vuong-dmd": "patrick-vuong",
+  "peter-kim-dds": "peter-kim",
+  "laith-yahya-dds": "laith-yahya",
+  "weiyen-chang-dds": "weiyen-chang",
+  "christian-lopez-dds": "christian-lopez",
+  "tamaara-willis-dds-ms": "tamaara-willis",
+};
+
 const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
   const primary = data.locations[0];
+  const imgKey = SLUG_TO_IMG_KEY[data.slug];
+  const doctorImg = imgKey ? DOCTOR_IMAGES[imgKey] : null;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -31,6 +44,7 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
     name: `${data.name}, ${data.credentials}`,
     description: data.metaDescription,
     url: `https://smileavenuedentistry.com/doctors/${data.slug}/`,
+    image: doctorImg?.url,
     jobTitle: data.title,
     worksFor: {
       "@type": "Dentist",
@@ -65,6 +79,7 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
         <link rel="canonical" href={`https://smileavenuedentistry.com/doctors/${data.slug}/`} />
         <meta property="og:title" content={data.metaTitle} />
         <meta property="og:description" content={data.metaDescription} />
+        <meta property="og:image" content={doctorImg?.url} />
         <meta property="og:url" content={`https://smileavenuedentistry.com/doctors/${data.slug}/`} />
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
@@ -86,8 +101,21 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
               <span className="text-foreground">{data.name}</span>
             </nav>
             <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
-              <div className="bg-muted rounded-2xl aspect-[3/4] flex items-center justify-center shadow-md" role="img" aria-label={`${data.name}, ${data.credentials} — ${data.title} at Smile Avenue Family Dentistry`}>
-                <span className="text-sm font-sans text-muted-foreground">Doctor Headshot</span>
+              <div className="rounded-2xl aspect-[3/4] overflow-hidden shadow-md">
+                {doctorImg ? (
+                  <img
+                    src={doctorImg.url}
+                    alt={doctorImg.alt}
+                    className="w-full h-full object-cover"
+                    fetchPriority="high"
+                    width={480}
+                    height={640}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted flex items-center justify-center">
+                    <span className="text-sm font-sans text-muted-foreground">Doctor Headshot</span>
+                  </div>
+                )}
               </div>
               <div>
                 <p className="kicker">MEET YOUR DENTIST</p>
