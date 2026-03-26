@@ -56,7 +56,7 @@ const jsonLd = {
   "@type": "DentalService",
   name: "Dental Implants",
   description: "Dental implants in Cypress, TX. Permanent tooth replacement with single implants, All-on-X, and full mouth reconstruction.",
-  url: "https://smileavenuedentistry.com/cypress-tx/dental-implants/",
+  url: "https://www.smileavenuefamilydentistry.com/cypress-tx/dental-implants/",
   provider: {
     "@type": "Dentist",
     name: "Smile Avenue Family Dentistry",
@@ -76,10 +76,10 @@ const DentalImplantsCypress = () => (
     <Helmet>
       <title>Dental Implants Cypress, TX | Smile Avenue Family Dentistry</title>
       <meta name="description" content="Dental implants in Cypress, TX. Permanent tooth replacement with single implants, All-on-X, and full mouth reconstruction. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/dental-implants/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/dental-implants/" />
       <meta property="og:title" content="Dental Implants Cypress, TX | Smile Avenue Family Dentistry" />
       <meta property="og:description" content="Dental implants in Cypress, TX. Permanent tooth replacement with single implants, All-on-X, and full mouth reconstruction." />
-      <meta property="og:url" content="https://smileavenuedentistry.com/cypress-tx/dental-implants/" />
+      <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/cypress-tx/dental-implants/" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

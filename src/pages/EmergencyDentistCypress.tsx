@@ -79,10 +79,10 @@ const EmergencyDentistCypress = () => {
       <Helmet>
         <title>Emergency Dentist Cypress, TX | Same-Day Care | Smile Avenue</title>
         <meta name="description" content="Dental emergency in Cypress, TX? Smile Avenue offers same-day emergency appointments for toothaches, broken teeth, lost fillings & more. Call (832) 648-1756." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/emergency-dentist/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/emergency-dentist/" />
         <meta property="og:title" content="Emergency Dentist Cypress, TX | Same-Day Care | Smile Avenue" />
         <meta property="og:description" content="Dental emergency in Cypress, TX? Same-day emergency appointments available. Call (832) 648-1756." />
-        <meta property="og:url" content="https://smileavenuedentistry.com/cypress-tx/emergency-dentist/" />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/cypress-tx/emergency-dentist/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>

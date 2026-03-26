@@ -65,7 +65,7 @@ const Specials = () => {
       <Helmet>
         <title>Dental Specials & Offers | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Save on dental care with our current specials. New patient exam for $99, free implant consultations, and referral rewards at Smile Avenue." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/specials/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/specials/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

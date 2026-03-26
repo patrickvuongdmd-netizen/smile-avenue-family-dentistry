@@ -78,7 +78,7 @@ const OurTeam = () => {
       <Helmet>
         <title>Meet Our Team | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Meet the 30 dedicated dental professionals at Smile Avenue Family Dentistry in Cypress and Katy, TX. Doctors, hygienists, assistants, and office staff committed to your comfort." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/our-team/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/our-team/" />
       </Helmet>
       <Navbar phone={PHONE} phoneFormatted={PHONE_FMT} bookingUrl={BOOKING} />
       <TrustStrip />

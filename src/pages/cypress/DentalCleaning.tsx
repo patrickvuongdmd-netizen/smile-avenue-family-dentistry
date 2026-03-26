@@ -46,7 +46,7 @@ const DentalCleaningCypress = () => (
     <Helmet>
       <title>Dental Cleaning Cypress, TX | Smile Avenue Family Dentistry</title>
       <meta name="description" content="Professional dental cleanings in Cypress, TX. Routine cleanings, deep cleanings & periodontal care for the whole family. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/dental-cleaning/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/dental-cleaning/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

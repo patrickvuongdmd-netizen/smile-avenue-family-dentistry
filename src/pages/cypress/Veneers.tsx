@@ -46,7 +46,7 @@ const VeneersCypress = () => (
     <Helmet>
       <title>Veneers Cypress, TX | Porcelain Veneers | Smile Avenue</title>
       <meta name="description" content="Porcelain veneers in Cypress, TX. Transform your smile with custom veneers — Emax, minimal-prep & traditional options. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/veneers/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/veneers/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

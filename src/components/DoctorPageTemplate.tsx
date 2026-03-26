@@ -45,7 +45,7 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
     "@type": "Dentist",
     name: `${data.name}, ${data.credentials}`,
     description: data.metaDescription,
-    url: `https://smileavenuedentistry.com/doctors/${data.slug}/`,
+    url: `https://www.smileavenuefamilydentistry.com/doctors/${data.slug}/`,
     image: doctorImg?.url,
     jobTitle: data.title,
     worksFor: {
@@ -66,9 +66,9 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://smileavenuedentistry.com/" },
-      { "@type": "ListItem", position: 2, name: "Our Doctors", item: "https://smileavenuedentistry.com/doctors/" },
-      { "@type": "ListItem", position: 3, name: data.name, item: `https://smileavenuedentistry.com/doctors/${data.slug}/` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
+      { "@type": "ListItem", position: 2, name: "Our Doctors", item: "https://www.smileavenuefamilydentistry.com/doctors/" },
+      { "@type": "ListItem", position: 3, name: data.name, item: `https://www.smileavenuefamilydentistry.com/doctors/${data.slug}/` },
     ],
   };
 
@@ -78,11 +78,11 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
-        <link rel="canonical" href={`https://smileavenuedentistry.com/doctors/${data.slug}/`} />
+        <link rel="canonical" href={`https://www.smileavenuefamilydentistry.com/doctors/${data.slug}/`} />
         <meta property="og:title" content={data.metaTitle} />
         <meta property="og:description" content={data.metaDescription} />
         <meta property="og:image" content={doctorImg?.url} />
-        <meta property="og:url" content={`https://smileavenuedentistry.com/doctors/${data.slug}/`} />
+        <meta property="og:url" content={`https://www.smileavenuefamilydentistry.com/doctors/${data.slug}/`} />
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>

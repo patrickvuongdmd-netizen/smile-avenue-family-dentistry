@@ -34,7 +34,7 @@ const Blog = () => {
       <Helmet>
         <title>Dental Health Blog | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Expert dental health tips, treatment guides, and oral care advice from the doctors at Smile Avenue Family Dentistry in Cypress and Katy, TX." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/blog/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/blog/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

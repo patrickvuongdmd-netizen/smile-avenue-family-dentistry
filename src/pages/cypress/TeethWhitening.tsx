@@ -46,7 +46,7 @@ const TeethWhiteningCypress = () => (
     <Helmet>
       <title>Teeth Whitening Cypress, TX | Smile Avenue Family Dentistry</title>
       <meta name="description" content="Professional teeth whitening in Cypress, TX. In-office and take-home options for a brighter smile. Call (832) 648-1756 to book." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/teeth-whitening/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/teeth-whitening/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

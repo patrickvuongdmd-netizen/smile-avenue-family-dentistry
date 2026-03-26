@@ -46,7 +46,7 @@ const RootCanalCypress = () => (
     <Helmet>
       <title>Root Canal Cypress, TX | Pain-Free Treatment | Smile Avenue</title>
       <meta name="description" content="Root canal treatment in Cypress, TX. Pain-free endodontic therapy to save your tooth. Same-day crowns available. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/root-canal/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/root-canal/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

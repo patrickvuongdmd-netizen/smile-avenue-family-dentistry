@@ -46,7 +46,7 @@ const AllOnXCypress = () => (
     <Helmet>
       <title>All-on-X Full Mouth Implants Cypress, TX | Smile Avenue</title>
       <meta name="description" content="All-on-4 and All-on-6 full mouth implants in Cypress, TX. Restore your entire smile with permanent implant-supported teeth. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/all-on-x-implants/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/all-on-x-implants/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

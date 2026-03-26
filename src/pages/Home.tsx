@@ -12,6 +12,7 @@ import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import TechnologyTrust from "@/components/TechnologyTrust";
 import ScrollReveal from "@/components/ScrollReveal";
+import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import { Play } from "lucide-react";
 import { useState } from "react";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
@@ -53,7 +54,7 @@ const testimonials = [
   { quote: "Dr. Vuong and his team are absolutely amazing. They made me feel comfortable throughout my implant procedure. Highly recommend!", name: "Michael R.", source: "Google Review" },
 ];
 
-const insuranceLogos = ["Aetna", "Blue Cross Blue Shield", "Cigna", "Delta Dental", "MetLife", "United Healthcare", "Guardian", "Humana"];
+// Insurance logos moved to InsuranceLogoBar component
 
 const blogPosts = [
   { title: "5 Signs You May Need a Dental Implant", category: "Implants", date: "Mar 15, 2026" },
@@ -87,11 +88,11 @@ const Home = () => {
       <Helmet>
         <title>Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX</title>
         <meta name="description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments. Book online today." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/" />
         <meta property="og:title" content="Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX" />
         <meta property="og:description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments." />
         <meta property="og:image" content={OFFICE_IMAGES.homepageHero} />
-        <meta property="og:url" content="https://smileavenuedentistry.com/" />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>
@@ -340,17 +341,7 @@ const Home = () => {
         </section>
 
         {/* INSURANCE */}
-        <section className="py-12 bg-background border-y border-border">
-          <div className="container mx-auto text-center">
-            <p className="kicker">INSURANCE ACCEPTED</p>
-            <div className="flex flex-wrap justify-center gap-6 mt-6">
-              {insuranceLogos.map((name, i) => (
-                <div key={i} className="px-5 py-3 bg-card rounded-lg border border-border text-sm font-sans font-medium text-muted-foreground">{name}</div>
-              ))}
-            </div>
-            <Link to="/insurance" className="inline-block mt-6 text-sm font-sans font-semibold text-primary hover:underline">View all accepted plans →</Link>
-          </div>
-        </section>
+        <InsuranceLogoBar />
 
         {/* BEFORE/AFTER PREVIEW */}
         <section className="section-padding section-alt">

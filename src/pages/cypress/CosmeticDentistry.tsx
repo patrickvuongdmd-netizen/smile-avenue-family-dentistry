@@ -46,7 +46,7 @@ const CosmeticDentistryCypress = () => (
     <Helmet>
       <title>Cosmetic Dentistry Cypress, TX | Smile Avenue Family Dentistry</title>
       <meta name="description" content="Cosmetic dentistry in Cypress, TX. Veneers, teeth whitening, bonding & smile makeovers. Transform your smile at Smile Avenue. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/cosmetic-dentistry/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/cosmetic-dentistry/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

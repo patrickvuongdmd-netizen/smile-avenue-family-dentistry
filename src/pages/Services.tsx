@@ -59,7 +59,7 @@ const Services = () => {
       <Helmet>
         <title>Dental Services | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Explore our full range of dental services — from preventive cleanings and Invisalign to dental implants and emergency care. Two convenient locations in Cypress and Katy, TX." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/services/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/services/" />
       </Helmet>
       <Navbar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
 

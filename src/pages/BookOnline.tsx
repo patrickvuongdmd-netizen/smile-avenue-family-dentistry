@@ -29,10 +29,10 @@ const BookOnline = () => {
       <Helmet>
         <title>Book Online | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Book your dental appointment online at Smile Avenue. Choose your preferred location — Cypress or Katy, TX — and schedule in minutes." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/book-online/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/book-online/" />
         <meta property="og:title" content="Book Online | Smile Avenue Family Dentistry" />
         <meta property="og:description" content="Book your dental appointment online at Smile Avenue in Cypress or Katy, TX." />
-        <meta property="og:url" content="https://smileavenuedentistry.com/book-online/" />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/book-online/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>

@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
       <Helmet>
         <title>Privacy Policy | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Privacy policy and HIPAA notice for Smile Avenue Family Dentistry. Learn how we protect your personal health information." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/privacy-policy/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/privacy-policy/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

@@ -61,7 +61,7 @@ const Locations = () => {
       <Helmet>
         <title>Locations | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Two convenient Houston-area locations in Cypress and Katy, TX. Serving Bridgeland, Cinco Ranch, Fairfield & surrounding communities. Book your visit today." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/convenient-locations/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/convenient-locations/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

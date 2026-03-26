@@ -12,6 +12,13 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 
 const categories = ["All", "Implants", "Veneers", "Whitening", "Invisalign", "Crowns"];
 
+const beforeAfterPhotos = [
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile1.webp", alt: "Before and after smile transformation — dental implants at Smile Avenue" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile2.webp", alt: "Before and after smile transformation — porcelain veneers at Smile Avenue" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile3.webp", alt: "Before and after smile transformation — teeth whitening at Smile Avenue" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/smile4.webp", alt: "Before and after smile transformation — Invisalign at Smile Avenue" },
+];
+
 const galleryItems = [
   { category: "Implants", label: "Single Implant — Front Tooth", before: "Missing front tooth", after: "Natural-looking implant" },
   { category: "Implants", label: "All-on-4 Full Arch", before: "Multiple missing teeth", after: "Full arch restoration" },
@@ -37,7 +44,7 @@ const SmileGallery = () => {
       <Helmet>
         <title>Smile Gallery — Before & After | Smile Avenue Family Dentistry</title>
         <meta name="description" content="See real before and after results from Smile Avenue patients. Browse transformations including implants, veneers, whitening, Invisalign, and crowns." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/smile-gallery/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/smile-gallery/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 
@@ -53,6 +60,22 @@ const SmileGallery = () => {
               <p className="kicker">REAL RESULTS</p>
               <h1 className="section-heading text-4xl md:text-5xl">Before & After Smile Gallery</h1>
               <p className="section-body">Every smile tells a story. Browse real results from patients at Smile Avenue — proof that the smile you've always wanted is within reach.</p>
+            </div>
+
+            {/* Real Before/After Photos */}
+            <div className="grid sm:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
+              {beforeAfterPhotos.map((photo, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden border border-border shadow-sm">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-auto"
+                    loading={i < 2 ? undefined : "lazy"}
+                    width={774}
+                    height={797}
+                  />
+                </div>
+              ))}
             </div>
 
             {/* Filters */}

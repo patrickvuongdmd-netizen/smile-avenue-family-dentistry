@@ -46,7 +46,7 @@ const PediatricDentistryCypress = () => (
     <Helmet>
       <title>Pediatric Dentist Cypress, TX | Kids Dentistry | Smile Avenue</title>
       <meta name="description" content="Pediatric dentist in Cypress, TX. Gentle, fun dental care for kids of all ages. First visits, sealants, fluoride & more. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/pediatric-dentistry/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/pediatric-dentistry/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">

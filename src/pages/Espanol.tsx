@@ -46,7 +46,7 @@ const Espanol = () => {
       <Helmet>
         <title>Dentista en Cypress y Katy, TX | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Smile Avenue Family Dentistry — su dentista familiar en Cypress y Katy, TX. Más de 5,000 reseñas de 5 estrellas. Hablamos Español. Reserve en línea hoy." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/es/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/es/" />
         <html lang="es" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />

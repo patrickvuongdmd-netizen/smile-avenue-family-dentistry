@@ -50,7 +50,7 @@ const MembershipPlan = () => {
       <Helmet>
         <title>Membership Plan — No Insurance? No Problem | Smile Avenue</title>
         <meta name="description" content="Save on dental care without insurance. Smile Avenue's membership plan includes cleanings, exams, X-rays, and 15% off treatments. From $25/month." />
-        <link rel="canonical" href="https://smileavenuedentistry.com/membership-plan/" />
+        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/membership-plan/" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

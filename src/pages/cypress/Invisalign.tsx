@@ -46,7 +46,7 @@ const InvisalignCypress = () => (
     <Helmet>
       <title>Invisalign Cypress, TX | Clear Aligners | Smile Avenue</title>
       <meta name="description" content="Invisalign clear aligners in Cypress, TX. Straighten your teeth discreetly with custom clear aligners for teens and adults. Call (832) 648-1756." />
-      <link rel="canonical" href="https://smileavenuedentistry.com/cypress-tx/invisalign/" />
+      <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/invisalign/" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_F} bookingUrl={BOOKING} />
     <main className="pb-14 lg:pb-0">
