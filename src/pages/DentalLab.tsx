@@ -58,7 +58,7 @@ const DentalLab = () => {
               <div>
                 <p className="kicker">SMILE DENTAL LAB</p>
                 <h1 className="section-heading text-4xl md:text-5xl leading-tight">In-House Digital Dental Lab</h1>
-                <p className="section-body">Most dental offices send your crown or veneer to an outside lab and ask you to come back weeks later. Not us. Our in-house digital lab lets us design, fabricate, and place precision restorations — often in a single visit.</p>
+                <p className="section-body">Most dental offices send your crown or veneer to an outside lab and ask you to come back weeks later. Not us. Our in-house digital lab lets us design and fabricate precision restorations with faster turnaround and better quality control.</p>
                 <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">Book an Appointment</a>
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
