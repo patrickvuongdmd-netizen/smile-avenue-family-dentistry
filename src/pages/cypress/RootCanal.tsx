@@ -35,9 +35,9 @@ const testimonials = [
 const faqs = [
   { question: "How much does a root canal cost in Cypress, TX?", answer: "Costs vary by tooth — front teeth are simpler than molars. Most dental insurance plans cover a significant portion of root canal treatment. CareCredit financing and our membership plan are also available." },
   { question: "Is a root canal painful?", answer: "No — modern root canals actually relieve the severe pain caused by infection. We use advanced anesthesia and sedation options to ensure complete comfort throughout the procedure." },
-  { question: "How long does a root canal take?", answer: "Most root canals are completed in 60-90 minutes. With our same-day CEREC crown option, you can have the entire treatment — root canal and permanent crown — done in a single visit." },
+  { question: "How long does a root canal take?", answer: "Most root canals are completed in 60-90 minutes. A follow-up visit is typically needed for crown placement, which our in-house lab fabricates with faster turnaround than outside labs." },
   { question: "What happens if I skip a root canal?", answer: "An untreated infected tooth will worsen. The infection can spread to surrounding teeth and bone, cause an abscess, and ultimately result in tooth loss. The tooth will eventually need to be extracted." },
-  { question: "Do I need a crown after a root canal?", answer: "Usually yes — a crown protects the treated tooth from fracture and restores full strength. Our CEREC same-day crowns mean you can complete everything in one visit." },
+  { question: "Do I need a crown after a root canal?", answer: "Usually yes — a crown protects the treated tooth from fracture and restores full strength. Our in-house Smile Dental Lab fabricates crowns with faster turnaround than practices that outsource." },
 ];
 
 const faqSchema = {
