@@ -9,6 +9,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import BackToTop from "@/components/BackToTop";
+import SkipToContent from "@/components/SkipToContent";
 import { ReactNode } from "react";
 
 interface SubService {
