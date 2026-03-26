@@ -26,7 +26,7 @@ const techFeatures = [
 ];
 
 const benefits = [
-  { icon: <Clock className="w-5 h-5" />, label: "Same-day restorations available" },
+  { icon: <Clock className="w-5 h-5" />, label: "Faster turnaround than outside labs" },
   { icon: <CheckCircle className="w-5 h-5" />, label: "Precise, custom fit every time" },
   { icon: <Shield className="w-5 h-5" />, label: "No goopy impressions" },
   { icon: <Zap className="w-5 h-5" />, label: "Fewer appointments needed" },
