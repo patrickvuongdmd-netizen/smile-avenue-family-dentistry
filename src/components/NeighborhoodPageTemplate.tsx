@@ -446,6 +446,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
       <Footer />
       <MobileStickyBar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <BackToTop />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
 
       <script
         type="application/ld+json"
