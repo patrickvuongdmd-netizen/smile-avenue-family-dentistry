@@ -237,9 +237,9 @@ const KatyTx = () => {
                     </li>
                   ))}
                 </ul>
-                <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
                   Book at Katy
-                </a>
+                </button>
               </div>
             </div>
           </div>
