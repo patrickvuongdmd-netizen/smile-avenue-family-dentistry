@@ -132,6 +132,22 @@ const Home = () => {
                   <span className="font-semibold text-foreground">4.9</span>
                   <span>from 5,000+ verified reviews</span>
                 </div>
+
+                {/* Intent Quick-Paths */}
+                <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-border">
+                  <Link to="/patients/new-patient-hub" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Check className="w-3.5 h-3.5 text-primary" /> New Patient? Start Here
+                  </Link>
+                  <a href={`tel:${heroPhone}`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-destructive/10 border border-destructive/20 text-xs font-sans font-semibold text-destructive hover:bg-destructive/20 transition-all">
+                    <AlertCircle className="w-3.5 h-3.5" /> Dental Emergency
+                  </a>
+                  <Link to="/insurance" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Shield className="w-3.5 h-3.5 text-primary" /> Check Insurance
+                  </Link>
+                  <Link to="/free-consultation" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Sparkles className="w-3.5 h-3.5 text-primary" /> Free Consultation
+                  </Link>
+                </div>
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <img
@@ -273,6 +289,25 @@ const Home = () => {
         </section>
         </ScrollReveal>
 
+        {/* MID-PAGE BOOKING CTA — recapture scrollers */}
+        <section className="py-10 bg-primary/5 border-y border-primary/10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
+              <div>
+                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">
+                  Ready to Book? It Takes 60 Seconds.
+                </h3>
+                <p className="text-sm font-body text-muted-foreground">
+                  Same-day appointments available · Most insurance accepted · 0% financing
+                </p>
+              </div>
+              <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0">
+                Book Online Now
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* LOCATIONS */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
@@ -358,6 +393,26 @@ const Home = () => {
             <h2 className="section-heading">See Real Patient Transformations</h2>
             <p className="section-body">Browse before-and-after photos from real Smile Avenue patients — dental implants, veneers, Invisalign, and more.</p>
             <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
+          </div>
+        </section>
+
+        {/* FREE CONSULTATION CTA */}
+        <section className="py-12 bg-primary/5 border-y border-primary/10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+              <div>
+                <p className="kicker mb-1">CONSIDERING A SMILE MAKEOVER?</p>
+                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">
+                  Get a Free Consultation — No Obligation
+                </h3>
+                <p className="text-sm font-body text-muted-foreground">
+                  Implants, veneers, Invisalign, or cosmetic dentistry — get a personalized treatment plan at no cost.
+                </p>
+              </div>
+              <Link to="/free-consultation" className="btn-primary shrink-0">
+                Claim Your Free Visit
+              </Link>
+            </div>
           </div>
         </section>
 

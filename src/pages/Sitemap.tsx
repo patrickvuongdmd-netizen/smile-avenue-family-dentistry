@@ -112,10 +112,10 @@ const sections = [
     title: "Patient Resources",
     links: [
       { label: "New Patient Hub", href: "/patients/new-patient-hub" },
+      { label: "Free Consultation", href: "/free-consultation" },
       { label: "Insurance & Financing", href: "/insurance" },
       { label: "Membership Plan", href: "/membership-plan" },
       { label: "Specials & Offers", href: "/specials" },
-      { label: "Free Consultation", href: "/free-consultation" },
       { label: "Patient Testimonials", href: "/patient-testimonials" },
       { label: "Smile Gallery", href: "/smile-gallery" },
       { label: "Dental Lab", href: "/dental-lab" },
