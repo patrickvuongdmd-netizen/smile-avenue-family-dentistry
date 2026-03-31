@@ -10,6 +10,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
+import ReviewsWidget from "@/components/ReviewsWidget";
 import { VIDEO_TESTIMONIALS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
