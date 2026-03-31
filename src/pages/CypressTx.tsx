@@ -48,16 +48,18 @@ const testimonials = [
 ];
 
 const faqs = [
-  { question: "Where is Smile Avenue Cypress located?", answer: "We're at 9212 Fry Rd #120, Cypress, TX 77433 — conveniently located near HEB on Fry Road, serving Cypress, Bridgeland, Fairfield, and Towne Lake." },
-  { question: "What insurance do you accept at the Cypress office?", answer: "We accept most major PPO plans including Aetna, Blue Cross Blue Shield, Cigna, Delta Dental, and more. Our team will verify your coverage before your visit." },
-  { question: "Do you offer same-day emergency appointments in Cypress?", answer: "Yes. If you're experiencing a dental emergency, call us at (832) 648-1756 and we'll do our best to see you the same day." },
-  { question: "What are your Cypress office hours?", answer: "We're open Monday through Friday, 8am to 5pm, with Saturday appointments available by request." },
-  { question: "Can my whole family be seen at the Cypress location?", answer: "Absolutely. We treat patients of all ages — from toddlers to grandparents. Our team specializes in gentle care for kids and comprehensive treatment for adults." },
+  { question: "Where exactly is Smile Avenue Cypress located?", answer: "We're at 9212 Fry Rd #120, Cypress, TX 77433 — directly across from the HEB on Fry Road, just south of the Fry Road and Jones Road intersection. We're minutes from Bridgeland, Towne Lake, Fairfield, and Cy-Fair." },
+  { question: "What insurance plans do you accept at the Cypress location?", answer: "We accept most major PPO dental insurance plans including Aetna, Blue Cross Blue Shield, Cigna, Delta Dental, MetLife, United Healthcare, Guardian, and Humana. Our team will verify your benefits before your visit — no surprise bills." },
+  { question: "Do you offer same-day emergency dental appointments in Cypress?", answer: "Yes. If you're experiencing a dental emergency — toothache, broken tooth, knocked-out tooth, or swelling — call us at (832) 648-1756 and we'll do our best to see you the same day. We keep emergency slots available daily." },
+  { question: "What are the office hours for the Cypress dental office?", answer: "We're open Monday through Friday, 8am to 5pm, with Saturday appointments available by request. We also offer early morning availability for patients who need to get in before work or school." },
+  { question: "Is Smile Avenue a good dentist for kids in Cypress?", answer: "Absolutely. We treat patients of all ages — from first-tooth toddlers to grandparents. Our CFISD families love our gentle approach to pediatric dentistry, plus our kid-friendly amenities like Netflix and cozy blankets make every visit fun." },
+  { question: "Do you offer dental implants at the Cypress office?", answer: "Yes. Our Cypress office offers full-service dental implant treatment, including single implants, implant bridges, and All-on-X full-arch restorations. With our in-house dental lab, we can fabricate your custom restoration faster than practices that outsource." },
+  { question: "What's different about Smile Avenue compared to other Cypress dentists?", answer: "We combine modern technology (digital scanners, 3D imaging, in-house dental lab) with a hospitality-first experience. Every room has Netflix, we offer warm blankets and noise-canceling headphones, and our doctors spend real time listening to your concerns before recommending treatment." },
 ];
 
 const CypressTx = () => {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  useDocTitle("Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue");
+  useDocTitle("Dentist in Cypress, TX | Fry Rd Family Dentist | Smile Avenue");
 
   return (
     <>
