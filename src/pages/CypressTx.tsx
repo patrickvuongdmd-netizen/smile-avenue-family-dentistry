@@ -210,12 +210,12 @@ const CypressTx = () => {
         </section>
 
         {/* SERVICES */}
-        <section className="section-padding section-alt">
+        <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
-            <p className="kicker">COMPREHENSIVE DENTAL CARE IN CYPRESS</p>
-            <h2 className="section-heading">Dental Services for Your Entire Family</h2>
+            <p className="kicker">DENTAL SERVICES IN CYPRESS, TX</p>
+            <h2 className="section-heading">Complete Family & Cosmetic Dentistry on Fry Road</h2>
             <p className="section-body max-w-2xl mx-auto">
-              From preventive care to advanced cosmetic treatments, Smile Avenue Cypress offers complete dental solutions for your whole family.
+              From your child's first cleaning to your smile makeover, Smile Avenue Cypress offers every dental service your family needs — no referrals, no runaround. Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> means faster, more precise results.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
               {services.map((svc) => (
@@ -223,7 +223,7 @@ const CypressTx = () => {
               ))}
             </div>
             <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-              Explore All Cypress Services →
+              View All 17 Cypress Services →
             </Link>
           </div>
         </section>
