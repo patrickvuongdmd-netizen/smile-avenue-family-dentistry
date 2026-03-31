@@ -138,10 +138,10 @@ const NewPatientHub = () => {
         {/* 3-STEP WALKTHROUGH */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">YOUR FIRST VISIT IN 3 EASY STEPS</p>
-            <h2 className="section-heading">What to Expect at Smile Avenue</h2>
+            <p className="kicker">3 SIMPLE STEPS</p>
+            <h2 className="section-heading">Here's Exactly What Happens</h2>
             <p className="section-body max-w-2xl mx-auto">
-              We've designed every step of your first appointment to be efficient, comfortable, and transparent.
+              No guesswork. We've designed every step to respect your time and keep you comfortable.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               {steps.map((step) => (
