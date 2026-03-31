@@ -46,16 +46,18 @@ const testimonials = [
 ];
 
 const faqs = [
-  { question: "Where is Smile Avenue Katy located?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — conveniently located along Westheimer Parkway, serving Katy, Cinco Ranch, Cross Creek Ranch, Firethorne, and surrounding communities." },
-  { question: "What insurance do you accept at the Katy office?", answer: "We accept most major PPO plans including Aetna, Blue Cross Blue Shield, Cigna, Delta Dental, MetLife, United Healthcare, and more. Our team will verify your coverage before your visit." },
-  { question: "Do you offer same-day emergency appointments in Katy?", answer: "Yes. If you're experiencing a dental emergency, call us at (281) 800-5008 and we'll do our best to see you the same day." },
-  { question: "What are your Katy office hours?", answer: "We're open Monday through Friday, 8am to 5pm, with Saturday appointments available by request." },
-  { question: "Can my whole family be seen at the Katy location?", answer: "Absolutely. We treat patients of all ages — from toddlers to grandparents. Our team specializes in gentle care for kids and comprehensive treatment for adults." },
+  { question: "Where exactly is Smile Avenue Katy located?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — along Westheimer Parkway between Cinco Ranch Blvd and Peek Road, minutes from LaCenterra at Cinco Ranch. We're centrally located for families in Cinco Ranch, Cross Creek Ranch, Firethorne, Elyson, Cane Island, and Fulshear." },
+  { question: "What dental insurance do you accept at the Katy office?", answer: "We accept most major PPO dental insurance plans including Aetna, Blue Cross Blue Shield, Cigna, Delta Dental, MetLife, United Healthcare, Guardian, and Humana. Our team verifies your benefits before your visit so there are no surprise bills." },
+  { question: "Do you offer same-day emergency dental appointments in Katy?", answer: "Yes. If you have a dental emergency — toothache, broken tooth, knocked-out tooth, or swelling — call us at (281) 800-5008. We keep emergency slots available daily and will do our best to see you the same day." },
+  { question: "What are the office hours for the Katy dental office?", answer: "We're open Monday through Friday, 8am to 5pm, with Saturday appointments available by request. We also offer early morning availability for patients with busy schedules." },
+  { question: "Is Smile Avenue a good family dentist for kids in Katy?", answer: "Absolutely. We treat patients of all ages — from toddlers getting their first checkup to grandparents needing dentures. Katy ISD families love our gentle approach to pediatric dentistry, and our kid-friendly amenities make every visit fun." },
+  { question: "Do you offer dental implants at the Katy office?", answer: "Yes. Our Katy office provides comprehensive dental implant services including single implants, implant bridges, and All-on-X full-arch restorations. With our in-house dental lab, we deliver faster turnaround and more precise results than practices that outsource." },
+  { question: "How is Smile Avenue different from other dentists in Katy?", answer: "We're not your typical Katy dentist. We combine advanced technology (digital scanners, 3D imaging, in-house lab) with hotel-level hospitality — Netflix in every room, warm blankets, noise-canceling headphones. Our doctors spend real time with you before recommending any treatment." },
 ];
 
 const KatyTx = () => {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  useDocTitle("Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue");
+  useDocTitle("Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue");
 
   return (
     <>
