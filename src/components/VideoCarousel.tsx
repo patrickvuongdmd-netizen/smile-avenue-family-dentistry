@@ -7,6 +7,26 @@ interface VideoCarouselProps {
   videos: { youtubeId: string; title: string }[];
 }
 
+const ThumbImg = ({ youtubeId, title }: { youtubeId: string; title: string }) => {
+  const [src, setSrc] = useState(`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`);
+  const handleError = useCallback(() => {
+    if (src.includes("mqdefault")) {
+      setSrc(`https://img.youtube.com/vi/${youtubeId}/default.jpg`);
+    }
+  }, [src, youtubeId]);
+  return (
+    <img
+      src={src}
+      alt={title}
+      className="w-full aspect-video object-cover"
+      loading="lazy"
+      width={320}
+      height={180}
+      onError={handleError}
+    />
+  );
+};
+
 const VideoCarousel = ({ videos }: VideoCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
