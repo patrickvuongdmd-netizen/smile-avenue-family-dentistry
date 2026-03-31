@@ -354,7 +354,7 @@ const KatyTx = () => {
             "@context": "https://schema.org",
             "@type": ["LocalBusiness", "Dentist"],
             name: "Smile Avenue Family Dentistry - Katy",
-            image: "",
+            image: OFFICE_IMAGES.katyHero,
             telephone: "+1-281-800-5008",
             address: {
               "@type": "PostalAddress",
@@ -363,6 +363,11 @@ const KatyTx = () => {
               addressRegion: "TX",
               postalCode: "77494",
               addressCountry: "US",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 29.7357,
+              longitude: -95.7575,
             },
             url: "https://www.smileavenuefamilydentistry.com/katy-tx/",
             openingHoursSpecification: [
@@ -373,6 +378,41 @@ const KatyTx = () => {
               ratingValue: "4.9",
               reviewCount: "200",
             },
+            areaServed: [
+              { "@type": "City", name: "Katy, TX" },
+              { "@type": "Place", name: "Cinco Ranch" },
+              { "@type": "Place", name: "Firethorne" },
+              { "@type": "Place", name: "Cross Creek Ranch" },
+              { "@type": "Place", name: "Fulshear" },
+            ],
+            priceRange: "$$",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
+              { "@type": "ListItem", position: 2, name: "Dentist in Katy, TX", item: "https://www.smileavenuefamilydentistry.com/katy-tx/" },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(f => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
           }),
         }}
       />
