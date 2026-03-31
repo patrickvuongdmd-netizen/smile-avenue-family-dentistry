@@ -78,9 +78,9 @@ const Specials = () => {
               <span className="text-foreground">Specials</span>
             </nav>
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <p className="kicker">LIMITED TIME OFFERS</p>
-              <h1 className="section-heading text-4xl md:text-5xl">Current Specials & Offers</h1>
-              <p className="section-body">Quality dental care should be affordable. Take advantage of our current specials — available at both our Cypress and Katy locations.</p>
+              <p className="kicker">SAVE ON YOUR SMILE</p>
+              <h1 className="section-heading text-4xl md:text-5xl">Exclusive Offers for New & Existing Patients</h1>
+              <p className="section-body">Great dental care shouldn't break the bank. These limited-time offers are available at both our Cypress and Katy offices — claim yours before they're gone.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
