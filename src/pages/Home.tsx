@@ -49,9 +49,9 @@ const doctors = [
 ];
 
 const testimonials = [
-  { quote: "I always love to come to Smile Dentistry. I trust the care that they give me. The team makes me feel so special every time.", name: "Thao H.", source: "Google Review" },
-  { quote: "From the moment I walked in I was greeted so kindly. Everyone made me feel so welcome. I was offered a cozy blanket and my choice of Netflix!", name: "Kashayn P.", source: "Google Review" },
-  { quote: "Dr. Vuong and his team are absolutely amazing. They made me feel comfortable throughout my implant procedure. Highly recommend!", name: "Michael R.", source: "Google Review" },
+  { quote: "I trust Smile Avenue completely. The team makes my family feel like VIPs every single visit. We wouldn't go anywhere else.", name: "Thao H.", source: "Google Review" },
+  { quote: "From the moment I walked in, I felt welcome. They offered me a blanket and Netflix during my cleaning — this is NOT your typical dentist.", name: "Kashayn P.", source: "Google Review" },
+  { quote: "Dr. Vuong and his team did my implants and the results are incredible. Professional, gentle, and genuinely caring. 10/10.", name: "Michael R.", source: "Google Review" },
 ];
 
 // Insurance logos moved to InsuranceLogoBar component
