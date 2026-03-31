@@ -73,7 +73,7 @@ const Contact = () => {
                       <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 shrink-0 text-primary" /><span>{loc.address}</span></div>
                       <div className="flex items-center gap-2"><Phone className="w-4 h-4 shrink-0 text-primary" /><a href={`tel:${loc.phonePlain}`} className="hover:text-primary transition-colors">{loc.phone}</a></div>
                       <div className="flex items-center gap-2"><Clock className="w-4 h-4 shrink-0 text-primary" /><span>{loc.hours}</span></div>
-                      <div className="flex items-center gap-2"><Mail className="w-4 h-4 shrink-0 text-primary" /><span>info@smileavenuedentistry.com</span></div>
+                      <div className="flex items-center gap-2"><Mail className="w-4 h-4 shrink-0 text-primary" /><a href={`mailto:${loc.email}`} className="hover:text-primary transition-colors">{loc.email}</a></div>
                     </div>
                   </div>
                 </div>
