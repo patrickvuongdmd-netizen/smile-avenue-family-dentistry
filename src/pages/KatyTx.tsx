@@ -261,26 +261,28 @@ const KatyTx = () => {
         </section>
 
         {/* WHY CHOOSE KATY */}
+        <ScrollReveal>
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-16 items-center">
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.treatmentRoom} alt="Smile Avenue Katy treatment room interior" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
+                <img src={OFFICE_IMAGES.treatmentRoom} alt="Smile Avenue Katy treatment room with Netflix and patient amenities" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
               </div>
               <div>
-                <p className="kicker">WHY FAMILIES CHOOSE SMILE AVENUE KATY</p>
-                <h2 className="section-heading">Your Neighborhood Dentist in Katy, TX</h2>
+                <p className="kicker">THE KATY DENTAL EXPERIENCE</p>
+                <h2 className="section-heading">Not Your Typical Dentist in Katy, TX</h2>
                 <p className="section-body">
-                  Located along Westheimer Parkway, Smile Avenue Katy serves families across Cinco Ranch, Firethorne, Cross Creek Ranch, and the greater Katy area. Our state-of-the-art office was designed with your comfort in mind.
+                  Cinco Ranch, Firethorne, and Cross Creek Ranch families choose Smile Avenue because we don't rush. Our doctors listen, explain clearly, and never push unnecessary treatment. It's why 200+ Katy patients rate us 4.9 stars.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "Conveniently located on Westheimer Parkway near LaCenterra",
-                    "Same-day emergency appointments available",
-                    "Cozy blankets, Netflix, and noise-canceling headphones",
-                    "Digital impressions — no goopy molds",
-                    "Serving Cinco Ranch, Firethorne, Cross Creek & Katy",
-                    "Most major insurance plans accepted",
+                    "3 experienced dentists — personalized, unhurried care",
+                    "In-house dental lab — faster crowns, veneers & aligners",
+                    "Same-day emergency appointments — call and come in today",
+                    "Netflix, blankets & noise-canceling headphones in every room",
+                    "Digital impressions — no goopy molds, ever",
+                    "0% financing through CareCredit & Sunbit",
+                    "Most PPO insurance plans accepted — we verify for you",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm font-sans text-foreground">
                       <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -295,29 +297,36 @@ const KatyTx = () => {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
-        {/* INSURANCE & PAYMENT */}
+        {/* INSURANCE LOGOS */}
+        <InsuranceLogoBar />
+
+        {/* FREE CONSULTATION */}
+        <FreeConsultationBanner />
+
+        {/* FINANCING OPTIONS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">FLEXIBLE PAYMENT OPTIONS</p>
-            <h2 className="section-heading">Making Dental Care Affordable</h2>
+            <p className="kicker">AFFORDABLE DENTAL CARE IN KATY</p>
+            <h2 className="section-heading">Flexible Payment Options for Katy Families</h2>
             <p className="section-body max-w-2xl mx-auto">
-              At our Katy office, we believe great dental care should be accessible. We offer multiple ways to make your treatment affordable.
+              Don't let cost keep you from the dentist. Between insurance, our membership plan, and 0% financing — we'll find a way to make it work.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Most Insurance Accepted</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept most major PPO plans and will verify your benefits before your visit.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Insurance Accepted</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept Aetna, BCBS, Cigna, Delta Dental, MetLife, United Healthcare, Guardian, Humana, and more. We verify your benefits before your visit.</p>
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Smile Avenue Membership Plan</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">No insurance? Our in-house plan covers cleanings, exams, and gives you discounts on treatment.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">No Insurance? Join Our Membership</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Our in-house membership plan covers cleanings, exams, X-rays, and gives you 20% off all treatment. No deductibles, no waiting periods.</p>
                 <Link to="/membership-plan" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Dental Financing</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Flexible monthly payment options through CareCredit and Sunbit — apply in minutes.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">0% Dental Financing</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Spread the cost with CareCredit or Sunbit — apply in minutes, get approved instantly, and pay monthly with 0% interest options.</p>
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
