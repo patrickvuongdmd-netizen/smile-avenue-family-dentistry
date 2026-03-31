@@ -165,9 +165,9 @@ const Home = () => {
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
-            <p className="kicker text-center">OUR SERVICES</p>
-            <h2 className="section-heading text-center">Comprehensive Dental Care</h2>
-            <p className="section-body text-center max-w-2xl mx-auto">Everything your family needs under one roof — from preventive care to advanced restorative and cosmetic treatments.</p>
+            <p className="kicker text-center">WHAT WE DO</p>
+            <h2 className="section-heading text-center">Everything Your Family Needs, Under One Roof</h2>
+            <p className="section-body text-center max-w-2xl mx-auto">No referrals, no runaround. From your child's first checkup to your smile makeover, our team handles it all — with an in-house dental lab for faster, more precise results.</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
               {services.map((s, i) => (
                 <Link key={i} to={s.href} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
