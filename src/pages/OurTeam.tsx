@@ -153,7 +153,7 @@ const OurTeam = () => {
                 </div>
               </div>
             </section>
-          </ScrollReveal>
+          </section>
         )}
 
         {/* HYGIENISTS */}
