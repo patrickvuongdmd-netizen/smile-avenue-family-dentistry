@@ -270,7 +270,7 @@ const NewPatientHub = () => {
                 <div className="space-y-2 text-sm font-sans text-muted-foreground mb-4">
                   <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" /><span>9212 Fry Rd #120, Cypress, TX 77433</span></div>
                   <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${CYPRESS_PHONE}`} className="hover:text-primary transition-colors">{CYPRESS_PHONE_FORMATTED}</a></div>
-                  <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" /><span>Mon–Fri 8am–5pm</span></div>
+                  <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" /><span>Mon–Fri 8:30am–5pm</span></div>
                 </div>
                 <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary text-center w-full">Book at Cypress</a>
               </div>
@@ -279,7 +279,7 @@ const NewPatientHub = () => {
                 <div className="space-y-2 text-sm font-sans text-muted-foreground mb-4">
                   <div className="flex items-start gap-2"><MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" /><span>23541 Westheimer Pkwy Ste #170, Katy, TX 77494</span></div>
                   <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${KATY_PHONE}`} className="hover:text-primary transition-colors">{KATY_PHONE_FORMATTED}</a></div>
-                  <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" /><span>Mon–Fri 8am–5pm</span></div>
+                  <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" /><span>Mon–Fri 8:30am–5pm · Sat 8am–2pm</span></div>
                 </div>
                 <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="btn-primary text-center w-full">Book at Katy</a>
               </div>

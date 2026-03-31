@@ -155,8 +155,8 @@ const FreeConsultation = () => {
             <h2 className="section-heading text-center">Visit Us at Either Location</h2>
             <div className="grid md:grid-cols-2 gap-8 mt-10">
               {[
-                { name: "Cypress", address: "9212 Fry Rd #120, Cypress, TX 77433", phone: "(832) 648-1756", phonePlain: "8326481756", hours: "Mon–Fri 8am–5pm, Sat by Appt" },
-                { name: "Katy", address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494", phone: "(281) 800-5008", phonePlain: "2818005008", hours: "Mon–Fri 8am–5pm, Sat by Appt" },
+                { name: "Cypress", address: "9212 Fry Rd #120, Cypress, TX 77433", phone: "(832) 648-1756", phonePlain: "8326481756", hours: "Mon–Fri 8:30am–5pm" },
+                { name: "Katy", address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494", phone: "(281) 800-5008", phonePlain: "2818005008", hours: "Mon–Fri 8:30am–5pm · Sat 8am–2pm" },
               ].map((loc, i) => (
                 <div key={i} className="bg-card rounded-xl border border-border p-6">
                   <h3 className="font-display text-xl font-bold text-foreground mb-4">Smile Avenue {loc.name}</h3>
