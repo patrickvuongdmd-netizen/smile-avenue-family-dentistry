@@ -289,6 +289,25 @@ const Home = () => {
         </section>
         </ScrollReveal>
 
+        {/* MID-PAGE BOOKING CTA — recapture scrollers */}
+        <section className="py-10 bg-primary/5 border-y border-primary/10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
+              <div>
+                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">
+                  Ready to Book? It Takes 60 Seconds.
+                </h3>
+                <p className="text-sm font-body text-muted-foreground">
+                  Same-day appointments available · Most insurance accepted · 0% financing
+                </p>
+              </div>
+              <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0">
+                Book Online Now
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* LOCATIONS */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
