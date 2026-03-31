@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Clock, Facebook, Instagram, Globe, Mail } from "lucide-react";
-import { useState } from "react";
 import { SOCIAL_LINKS } from "@/lib/images";
 
 const Footer = () => {
