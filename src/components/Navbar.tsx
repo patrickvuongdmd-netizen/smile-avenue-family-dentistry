@@ -93,6 +93,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   }, []);
 
   const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border" ref={navRef}>
