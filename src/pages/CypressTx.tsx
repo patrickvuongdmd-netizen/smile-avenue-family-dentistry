@@ -246,9 +246,9 @@ const CypressTx = () => {
                     </li>
                   ))}
                 </ul>
-                <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
                   Book at Cypress
-                </a>
+                </button>
               </div>
             </div>
           </div>
