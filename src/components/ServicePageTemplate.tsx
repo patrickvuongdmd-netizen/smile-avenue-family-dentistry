@@ -566,6 +566,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       <Footer />
       <MobileStickyBar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <BackToTop />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
 
       {/* Inline JSON-LD for guaranteed rendering */}
       <script
