@@ -59,6 +59,7 @@ const faqs = [
 ];
 
 const CypressTx = () => {
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
   useDocTitle("Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue");
 
   return (
