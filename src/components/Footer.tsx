@@ -16,7 +16,7 @@ const Footer = () => {
               <img src="/logo-full.png" alt="Smile Avenue Family Dentistry" className="h-12 w-auto brightness-0 invert" />
             </Link>
             <p className="text-sm font-body leading-relaxed opacity-70 mb-4">
-              Hospitality-driven dental care for the whole family. Two convenient locations in Cypress and Katy, TX.
+              The dental experience your family deserves. Netflix in every room, warm blankets, and doctors who listen. Two locations in Cypress and Katy, TX.
             </p>
             <div className="flex items-center gap-3">
               <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="Facebook">
