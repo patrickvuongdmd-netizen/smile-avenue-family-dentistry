@@ -13,7 +13,7 @@ import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS } from "@/lib/images";
-import LazyYouTube from "@/components/LazyYouTube";
+import VideoCarousel from "@/components/VideoCarousel";
 
 interface SubService {
   title: string;
