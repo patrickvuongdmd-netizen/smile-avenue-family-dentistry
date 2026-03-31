@@ -166,10 +166,10 @@ const NewPatientHub = () => {
                 <img src={OFFICE_IMAGES.waitingRoom} alt="Smile Avenue waiting room with comfortable seating" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
               </div>
               <div>
-                <p className="kicker">BE PREPARED</p>
-                <h2 className="section-heading">What to Bring to Your First Visit</h2>
+                <p className="kicker">COME PREPARED</p>
+                <h2 className="section-heading">What to Bring (Quick Checklist)</h2>
                 <p className="section-body">
-                  Having these items ready will help us get you checked in quickly and ensure we can provide the best possible care.
+                  Bring these items and we'll handle the rest — no paperwork at the front desk.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {bringItems.map((item) => (
