@@ -83,6 +83,16 @@ const Faq = lazy(() => import("./pages/Faq.tsx"));
 const Espanol = lazy(() => import("./pages/Espanol.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
+// Google Ads Landing Pages
+const CypressNewPatientLP = lazy(() => import("./pages/cypress/lp/NewPatient.tsx"));
+const CypressEmergencyLP = lazy(() => import("./pages/cypress/lp/EmergencyDentist.tsx"));
+const CypressInvisalignLP = lazy(() => import("./pages/cypress/lp/Invisalign.tsx"));
+const CypressDentalImplantsLP = lazy(() => import("./pages/cypress/lp/DentalImplants.tsx"));
+const KatyNewPatientLP = lazy(() => import("./pages/katy/lp/NewPatient.tsx"));
+const KatyEmergencyLP = lazy(() => import("./pages/katy/lp/EmergencyDentist.tsx"));
+const KatyInvisalignLP = lazy(() => import("./pages/katy/lp/Invisalign.tsx"));
+const KatyDentalImplantsLP = lazy(() => import("./pages/katy/lp/DentalImplants.tsx"));
+
 const queryClient = new QueryClient();
 
 // Minimal loading shell that matches site chrome to prevent layout shift
