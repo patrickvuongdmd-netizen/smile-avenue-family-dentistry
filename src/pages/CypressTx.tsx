@@ -57,6 +57,13 @@ const CypressTx = () => {
         <title>Dentist in Cypress, TX | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Your family dentist in Cypress, TX. Personalized care, advanced comfort, and same-day appointments at 9212 Fry Rd. Serving Cypress, Bridgeland, Fairfield, and Towne Lake families." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
+        <meta property="og:title" content="Dentist in Cypress, TX | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Your family dentist in Cypress, TX. Personalized care, advanced comfort, and same-day appointments." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content={OFFICE_IMAGES.cypressHero} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 
@@ -351,7 +358,7 @@ const CypressTx = () => {
             "@context": "https://schema.org",
             "@type": ["LocalBusiness", "Dentist"],
             name: "Smile Avenue Family Dentistry - Cypress",
-            image: "",
+            image: OFFICE_IMAGES.cypressHero,
             telephone: "+1-832-648-1756",
             address: {
               "@type": "PostalAddress",

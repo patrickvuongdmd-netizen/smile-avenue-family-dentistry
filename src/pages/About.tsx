@@ -34,6 +34,13 @@ const About = () => {
         <title>About Us | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Learn about Smile Avenue Family Dentistry — our story, our values, and the team of dedicated professionals behind your smile in Cypress and Katy, TX." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/about/" />
+        <meta property="og:title" content="About Us | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Learn about Smile Avenue Family Dentistry — our story, our values, and the team behind your smile in Cypress and Katy, TX." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/about/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content={OFFICE_IMAGES.aboutHero} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
 
@@ -122,6 +129,25 @@ const About = () => {
 
       <MobileStickyBar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Smile Avenue Family Dentistry",
+        url: "https://www.smileavenuefamilydentistry.com",
+        logo: "https://www.smileavenuefamilydentistry.com/logo-full.png",
+        description: "Hospitality-driven dental care for families in Cypress and Katy, TX. 5,000+ five-star reviews.",
+        telephone: ["+18326481756", "+12818005008"],
+        address: [
+          { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+          { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+        ],
+        sameAs: [
+          "https://www.facebook.com/SmileAvenueFamilyDentistry/",
+          "https://www.instagram.com/smileavenuefamilydentistry/",
+          "https://www.tiktok.com/@smileavenuetx",
+          "https://www.youtube.com/@SmileAvenueTX",
+        ],
+      }) }} />
     </>
   );
 };
