@@ -10,14 +10,16 @@ const values = [
 ];
 
 const TrustStrip = () => (
-  <div className="py-3 bg-card border-b border-border overflow-hidden">
+  <div className="py-2.5 md:py-3 bg-card border-b border-border overflow-hidden">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs font-sans font-semibold text-muted-foreground">
+      <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-0.5 text-xs font-sans font-semibold text-muted-foreground">
         {values.map((v, i) => (
-          <span key={i} className="flex items-center gap-1.5 text-foreground/70">
+          <span
+            key={i}
+            className={`flex items-center gap-1.5 text-foreground/70 ${i >= 3 ? "hidden md:flex" : ""}`}
+          >
             <span className="text-primary">{v.icon}</span>
             {v.text}
-            {i < values.length - 1 && <span className="hidden sm:inline ml-4 text-border">·</span>}
           </span>
         ))}
       </div>
