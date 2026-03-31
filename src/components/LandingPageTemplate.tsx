@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Phone, Star, Shield, Clock, CreditCard, MessageCircle, Zap, Users, Sparkles, FlaskConical, Award } from "lucide-react";
+import { Phone, Star, Shield, Clock, CreditCard, MessageCircle, Zap, Users, Sparkles, FlaskConical, Award, CheckCircle2, MapPin } from "lucide-react";
 import { ReactNode } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import {
@@ -22,23 +22,30 @@ interface FaqItem {
   answer: string;
 }
 
+interface Testimonial {
+  quote: string;
+  name: string;
+  service: string;
+}
+
 export interface LandingPageData {
   location: "cypress" | "katy";
-  /** Page type for granular conversion tracking */
   pageType: "new-patient" | "emergency" | "invisalign" | "dental-implants";
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
   heroSubheadline: string;
   heroCtaLabel: string;
-  /** "book" → opens Modento link; "call" → tel: link */
   heroCtaType: "book" | "call";
   isEmergency?: boolean;
+  /** Reassurance line under hero CTA */
+  heroReassurance?: string;
   benefits: Benefit[];
-  /** Optional extra content block between benefits and FAQ */
+  /** Quick trust bullets shown below benefits */
+  trustBullets?: string[];
+  testimonials?: Testimonial[];
   extraSection?: ReactNode;
   faqs: FaqItem[];
-  /** Bottom CTA copy */
   finalCtaHeadline: string;
   finalCtaBody: string;
 }
@@ -54,6 +61,7 @@ const LOCATIONS = {
     name: "Cypress",
     hours: "Mon–Fri 8:30 AM – 5:00 PM",
     mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.123!2d-95.6972!3d29.9691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d0a6a0000001%3A0x1!2s9212+Fry+Rd+%23120%2C+Cypress%2C+TX+77433!5e0!3m2!1sen!2sus!4v1",
+    geo: { lat: 29.9691, lng: -95.6972 },
   },
   katy: {
     phone: "2818005008",
@@ -63,6 +71,7 @@ const LOCATIONS = {
     name: "Katy",
     hours: "Mon–Fri 8:30 AM – 5:00 PM · Sat 8:00 AM – 2:00 PM",
     mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.123!2d-95.7575!3d29.7357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e0a6a0000001%3A0x1!2s23541+Westheimer+Pkwy+Ste+%23170%2C+Katy%2C+TX+77494!5e0!3m2!1sen!2sus!4v1",
+    geo: { lat: 29.7357, lng: -95.7575 },
   },
 };
 
@@ -85,9 +94,8 @@ const fireConversion = (label: string) => {
 const UTM_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
 const GCLID_KEY = "sa_gclid";
 const GCLID_TS_KEY = "sa_gclid_ts";
-const GCLID_TTL = 90 * 24 * 60 * 60 * 1000; // 90 days
+const GCLID_TTL = 90 * 24 * 60 * 60 * 1000;
 
-/** Capture gclid from URL on landing and persist to localStorage */
 const captureGclid = () => {
   if (typeof window === "undefined") return;
   const params = new URLSearchParams(window.location.search);
@@ -98,7 +106,6 @@ const captureGclid = () => {
   }
 };
 
-/** Retrieve stored gclid if still within TTL */
 const getStoredGclid = (): string | null => {
   try {
     const gclid = localStorage.getItem(GCLID_KEY);
@@ -123,12 +130,68 @@ const appendUtmParams = (baseUrl: string): string => {
     const val = incoming.get(key);
     if (val) url.searchParams.set(key, val);
   });
-  // Also append stored gclid if not already present from URL
   if (!url.searchParams.has("gclid")) {
     const stored = getStoredGclid();
     if (stored) url.searchParams.set("gclid", stored);
   }
   return url.toString();
+};
+
+/* ── JSON-LD helpers ──────────────────────────────────────── */
+
+const buildJsonLd = (data: LandingPageData, loc: typeof LOCATIONS.cypress) => {
+  const schemas: object[] = [];
+
+  // LocalBusiness / Dentist schema
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    name: `Smile Avenue Family Dentistry — ${loc.name}`,
+    image: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Smile-Avenue-Family-Dentistry.jpg.webp",
+    url: `https://www.smileavenuefamilydentistry.com/${data.location === "cypress" ? "cypress-tx" : "katy-tx"}/`,
+    telephone: loc.phoneFormatted,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: loc.address.split(",")[0],
+      addressLocality: loc.name,
+      addressRegion: "TX",
+      postalCode: loc.address.match(/\d{5}/)?.[0] || "",
+      addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: loc.geo.lat,
+      longitude: loc.geo.lng,
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "5000",
+      bestRating: "5",
+    },
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+      ...(data.location === "katy" ? [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "08:00", closes: "14:00" }] : []),
+    ],
+  });
+
+  // FAQPage schema
+  if (data.faqs.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: data.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  return schemas;
 };
 
 /* ── Component ────────────────────────────────────────────── */
@@ -144,6 +207,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
   const bookLabel = `lp_${data.pageType}_book_${data.location}`;
   const callLabel = `lp_${data.pageType}_call_${data.location}`;
   const conversionLabel = data.heroCtaType === "call" ? callLabel : bookLabel;
+  const jsonLdSchemas = buildJsonLd(data, loc);
 
   return (
     <>
@@ -151,20 +215,27 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
         <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:title" content={data.metaTitle} />
+        <meta property="og:description" content={data.metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Smile-Avenue-Family-Dentistry.jpg.webp" />
+        {jsonLdSchemas.map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
       </Helmet>
 
       {/* ── STICKY HEADER ─────────────────────────────────── */}
       <header className="fixed top-0 inset-x-0 z-50 bg-white shadow-sm">
         <div className="flex items-center justify-between px-4 py-2 max-w-5xl mx-auto">
-          {/* Logo */}
           <a href="/" aria-label="Smile Avenue Home">
             <img
               src="https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/11/logo-mark.webp"
-              alt="Smile Avenue"
+              alt="Smile Avenue Family Dentistry"
               className="h-8 w-auto"
+              width={120}
+              height={32}
             />
           </a>
-          {/* Phone */}
           <a
             href={`tel:${loc.phone}`}
             onClick={() => fireConversion(callLabel)}
@@ -174,7 +245,6 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
             <Phone className="w-4 h-4" />
             {loc.phoneFormatted}
           </a>
-          {/* CTA */}
           <a
             href={ctaHref}
             target={ctaTarget}
@@ -188,26 +258,31 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </div>
       </header>
 
-      <main className="pt-12">
+      <main className="pt-12 pb-16 sm:pb-0">
         {/* ── EMERGENCY URGENCY BANNER ───────────────────── */}
         {data.isEmergency && (
-          <div className="bg-destructive text-white text-center py-2 text-sm font-sans font-bold animate-pulse">
-            🦷 Same-Day Emergency Appointments — Call{" "}
-            <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="underline">{loc.phoneFormatted}</a>{" "}
-            Now
+          <div className="bg-destructive text-white text-center py-2.5 text-sm font-sans font-bold">
+            <span className="inline-flex items-center gap-2">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white" />
+              </span>
+              Same-Day Emergency Appointments — Call{" "}
+              <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="underline font-extrabold">{loc.phoneFormatted}</a>
+            </span>
           </div>
         )}
 
         {/* ── HERO SECTION ───────────────────────────────── */}
-        <section className="text-white py-14 px-4" style={{ backgroundColor: "#2B5DA7" }}>
+        <section className="text-white py-16 px-4" style={{ backgroundColor: "#2B5DA7" }}>
           <div className="max-w-3xl mx-auto text-center">
             <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {data.heroHeadline}
             </h1>
-            <p className="text-base md:text-lg opacity-90 mb-8 max-w-2xl mx-auto" style={{ fontFamily: "var(--font-body)" }}>
+            <p className="text-base md:text-lg opacity-90 mb-8 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
               {data.heroSubheadline}
             </p>
             <a
@@ -215,11 +290,16 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
               target={ctaTarget}
               rel={ctaTarget ? "noopener noreferrer" : undefined}
               onClick={() => fireConversion(conversionLabel)}
-              className="inline-block text-white text-lg font-sans font-bold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105"
+              className="inline-block text-white text-lg font-sans font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl"
               style={{ backgroundColor: "#D4A853" }}
             >
               {data.heroCtaLabel}
             </a>
+
+            {/* Reassurance microcopy */}
+            {data.heroReassurance && (
+              <p className="mt-3 text-xs text-white/70 font-sans">{data.heroReassurance}</p>
+            )}
 
             {/* Trust badges */}
             <div className="flex flex-wrap items-center justify-center gap-4 mt-8 text-sm opacity-90">
@@ -236,9 +316,9 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         <section className="bg-muted py-4">
           <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-6 px-4 text-sm font-sans">
             <div className="flex items-center gap-1.5">
-              <img src="https://www.google.com/favicon.ico" alt="" className="w-4 h-4" loading="lazy" />
+              <img src="https://www.google.com/favicon.ico" alt="" className="w-4 h-4" loading="lazy" width={16} height={16} />
               <span className="font-semibold text-foreground">4.9</span>
-              <div className="flex">
+              <div className="flex" aria-label="5 out of 5 stars">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
                 ))}
@@ -265,7 +345,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
             </h2>
             <div className="grid sm:grid-cols-3 gap-6">
               {data.benefits.map((b) => (
-                <div key={b.title} className="text-center p-6 rounded-2xl border border-border bg-card">
+                <div key={b.title} className="text-center p-6 rounded-2xl border border-border bg-card shadow-sm">
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4 text-white"
                     style={{ backgroundColor: "#2B5DA7" }}
@@ -273,12 +353,75 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
                     {b.icon}
                   </div>
                   <h3 className="font-sans font-bold text-foreground mb-2">{b.title}</h3>
-                  <p className="text-sm text-muted-foreground" style={{ fontFamily: "var(--font-body)" }}>
+                  <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
                     {b.description}
                   </p>
                 </div>
               ))}
             </div>
+
+            {/* Trust bullets */}
+            {data.trustBullets && data.trustBullets.length > 0 && (
+              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8 text-sm text-muted-foreground font-sans">
+                {data.trustBullets.map((bullet, i) => (
+                  <span key={i} className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                    {bullet}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* ── TESTIMONIALS ────────────────────────────────── */}
+        {data.testimonials && data.testimonials.length > 0 && (
+          <section className="py-14 px-4 bg-card border-y border-border">
+            <div className="max-w-4xl mx-auto">
+              <h2
+                className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                What Our Patients Say
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {data.testimonials.map((t, i) => (
+                  <blockquote key={i} className="bg-background rounded-2xl border border-border p-6 shadow-sm">
+                    <div className="flex gap-0.5 mb-3">
+                      {[...Array(5)].map((_, j) => (
+                        <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-foreground leading-relaxed mb-4 italic" style={{ fontFamily: "var(--font-body)" }}>
+                      "{t.quote}"
+                    </p>
+                    <footer className="text-xs font-sans">
+                      <span className="font-bold text-foreground">{t.name}</span>
+                      <span className="text-muted-foreground"> · {t.service}</span>
+                    </footer>
+                  </blockquote>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ── MID-PAGE CTA ────────────────────────────────── */}
+        <section className="py-10 px-4 text-center bg-background">
+          <div className="max-w-xl mx-auto">
+            <a
+              href={ctaHref}
+              target={ctaTarget}
+              rel={ctaTarget ? "noopener noreferrer" : undefined}
+              onClick={() => fireConversion(conversionLabel)}
+              className="inline-block text-white text-base font-sans font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+              style={{ backgroundColor: "#D4A853" }}
+            >
+              {data.heroCtaLabel}
+            </a>
+            <p className="mt-3 text-xs text-muted-foreground font-sans">
+              {data.heroReassurance || "Booking takes less than 60 seconds · We confirm within 1 hour"}
+            </p>
           </div>
         </section>
 
@@ -300,7 +443,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
                   <AccordionTrigger className="text-left font-sans font-semibold text-foreground text-sm">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm text-muted-foreground" style={{ fontFamily: "var(--font-body)" }}>
+                  <AccordionContent className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -313,11 +456,14 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         <section className="py-10 px-4 bg-background">
           <div className="max-w-3xl mx-auto">
             <h2
-              className="text-xl font-bold text-center mb-4 text-foreground"
+              className="text-xl font-bold text-center mb-2 text-foreground"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Find Us in {loc.name}
             </h2>
+            <p className="text-center text-sm text-muted-foreground mb-4 font-sans flex items-center justify-center gap-1.5">
+              <MapPin className="w-4 h-4" /> {loc.address}
+            </p>
             <div className="rounded-xl overflow-hidden border border-border aspect-video">
               <iframe
                 src={loc.mapsEmbed}
@@ -334,7 +480,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </section>
 
         {/* ── FINAL CTA ───────────────────────────────────── */}
-        <section className="py-14 px-4 text-white text-center" style={{ backgroundColor: "#2B5DA7" }}>
+        <section className="py-16 px-4 text-white text-center" style={{ backgroundColor: "#2B5DA7" }}>
           <div className="max-w-2xl mx-auto">
             <h2
               className="text-2xl md:text-3xl font-bold mb-4"
@@ -342,7 +488,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
             >
               {data.finalCtaHeadline}
             </h2>
-            <p className="opacity-90 mb-8" style={{ fontFamily: "var(--font-body)" }}>
+            <p className="opacity-90 mb-8 leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
               {data.finalCtaBody}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -351,7 +497,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
                 target={ctaTarget}
                 rel={ctaTarget ? "noopener noreferrer" : undefined}
                 onClick={() => fireConversion(conversionLabel)}
-                className="inline-block text-white text-lg font-sans font-bold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105"
+                className="inline-block text-white text-lg font-sans font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                 style={{ backgroundColor: "#D4A853" }}
               >
                 {data.heroCtaLabel}
@@ -365,6 +511,9 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
                 {loc.phoneFormatted}
               </a>
             </div>
+            <p className="mt-4 text-xs text-white/60 font-sans">
+              {data.heroReassurance || "Booking takes less than 60 seconds · We confirm within 1 hour"}
+            </p>
           </div>
         </section>
       </main>
@@ -386,7 +535,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           <a
             href={`tel:${loc.phone}`}
             onClick={() => fireConversion(callLabel)}
-            className="flex-1 text-center text-sm font-sans font-bold py-2 rounded-l-full border border-border"
+            className="flex-1 text-center text-sm font-sans font-bold py-2.5 rounded-l-full border border-border"
             style={{ color: "#2B5DA7" }}
           >
             <Phone className="w-4 h-4 inline mr-1" />
@@ -397,7 +546,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
             target={ctaTarget}
             rel={ctaTarget ? "noopener noreferrer" : undefined}
             onClick={() => fireConversion(conversionLabel)}
-            className="flex-1 text-center text-sm font-sans font-bold py-2 rounded-r-full text-white"
+            className="flex-1 text-center text-sm font-sans font-bold py-2.5 rounded-r-full text-white"
             style={{ backgroundColor: "#D4A853" }}
           >
             Book Now
