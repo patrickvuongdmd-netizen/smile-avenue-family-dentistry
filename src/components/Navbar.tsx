@@ -210,9 +210,9 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 <Phone className="w-4 h-4" />
                 <span className="hidden lg:inline">{phoneFormatted}</span>
               </a>
-              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
                 Book Now
-              </a>
+              </button>
             </div>
           </div>
 
