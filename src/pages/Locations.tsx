@@ -37,7 +37,7 @@ const locations = [
     bookingUrl: KATY_BOOKING,
     pageUrl: "/katy-tx/",
     communities: "Katy, Cinco Ranch, Seven Meadows, Firethorne",
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.2!2d-95.7563!3d29.7354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e5a4b0c3d7f1%3A0x3a2b4c5d6e7f8091!2s23541%20Westheimer%20Pkwy%20%23170%2C%20Katy%2C%20TX%2077494!5e0!3m2!1sen!2sus!4v1",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
   },
 ];
 

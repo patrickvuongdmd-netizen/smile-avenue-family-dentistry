@@ -88,7 +88,7 @@ const LOCATIONS = {
     name: "Katy",
     path: "/katy-tx",
     geo: { lat: "29.7357", lng: "-95.7575" },
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.0!2d-95.7575!3d29.7357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDQ0JzA4LjUiTiA5NcKwNDUnMjcuMCJX!5e0!3m2!1sen!2sus!4v1",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
   },
 };
 
