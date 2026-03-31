@@ -76,7 +76,7 @@ const BookingLocationModal = ({ open, onClose }: BookingLocationModalProps) => {
         </div>
 
         {/* Location cards */}
-        <div className="px-6 pb-6 pt-3 space-y-3">
+        <div className="px-6 pb-4 pt-3 space-y-3">
           {locations.map((loc) => (
             <a
               key={loc.name}
@@ -110,6 +110,12 @@ const BookingLocationModal = ({ open, onClose }: BookingLocationModalProps) => {
               </div>
             </a>
           ))}
+        </div>
+        {/* Reassurance footer */}
+        <div className="px-6 pb-6 text-center">
+          <p className="text-xs font-sans text-muted-foreground">
+            ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ Same-day appointments available
+          </p>
         </div>
       </div>
     </div>
