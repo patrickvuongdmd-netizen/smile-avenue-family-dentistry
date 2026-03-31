@@ -164,7 +164,7 @@ const buildJsonLd = (data: LandingPageData, loc: typeof LOCATIONS.cypress) => {
     "@context": "https://schema.org",
     "@type": "Dentist",
     name: `Smile Avenue Family Dentistry — ${loc.name}`,
-    image: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Smile-Avenue-Family-Dentistry.jpg.webp",
+    image: "https://www.smileavenuefamilydentistry.com/og-image.webp",
     url: `https://www.smileavenuefamilydentistry.com/${data.location === "cypress" ? "cypress-tx" : "katy-tx"}/`,
     telephone: loc.phoneFormatted,
     address: { "@type": "PostalAddress", streetAddress: loc.address.split(",")[0], addressLocality: loc.name, addressRegion: "TX", postalCode: loc.address.match(/\d{5}/)?.[0] || "", addressCountry: "US" },
