@@ -10,6 +10,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
+import ReviewsWidget from "@/components/ReviewsWidget";
 import { VIDEO_TESTIMONIALS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
@@ -66,23 +67,34 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
-        {/* Google Reviews Widget */}
+        {/* Google Reviews Widgets */}
         <section className="py-12 bg-card border-y border-border">
-          <div className="container mx-auto text-center">
-            <h2 className="font-display text-2xl font-bold text-foreground mb-2">See Us On Google</h2>
-            <div className="flex items-center justify-center gap-2 mb-4">
+          <div className="container mx-auto">
+            <h2 className="font-display text-2xl font-bold text-foreground mb-2 text-center">See Us On Google</h2>
+            <div className="flex items-center justify-center gap-2 mb-8">
               <div className="flex gap-0.5" aria-label="4.9 stars on Google">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
               </div>
               <span className="font-display text-xl font-bold text-foreground">4.9</span>
               <span className="text-sm font-sans text-muted-foreground">· 5,000+ reviews</span>
             </div>
-            <div className="bg-muted rounded-xl p-8 max-w-2xl mx-auto border border-border">
-              <p className="text-sm font-sans text-muted-foreground">Google Reviews Widget — Embed your Google Business Profile reviews here</p>
+
+            <div className="space-y-10 max-w-5xl mx-auto">
+              <div>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-3 text-center">Cypress Office Reviews</h3>
+                <ReviewsWidget location="cypress" title="Cypress Google Reviews" />
+              </div>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-3 text-center">Katy Office Reviews</h3>
+                <ReviewsWidget location="katy" title="Katy Google Reviews" />
+              </div>
             </div>
-            <a href="https://g.page/smileavenuedentistry/review" target="_blank" rel="noopener noreferrer" className="btn-secondary mt-6 inline-flex items-center gap-2" aria-label="Leave a review on Google">
-              Leave Us a Review <ExternalLink className="w-4 h-4" />
-            </a>
+
+            <div className="text-center mt-8">
+              <a href="https://g.page/smileavenuedentistry/review" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center gap-2" aria-label="Leave a review on Google">
+                Leave Us a Review <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </section>
 
