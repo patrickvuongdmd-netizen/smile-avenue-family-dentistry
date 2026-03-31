@@ -24,16 +24,9 @@ const testimonials = [
   { quote: "Best dental consultation I've ever had. They took the time to explain every option and the costs upfront. Highly recommend Smile Avenue.", name: "David K.", source: "Google Review" },
 ];
 
-const serviceOptions = ["Dental Implants", "Cosmetic Dentistry", "Invisalign", "All-on-X Full Mouth Implants", "Veneers", "Teeth Whitening", "Other"];
+const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
 
 const FreeConsultation = () => {
-  const [formData, setFormData] = useState({ name: "", phone: "", email: "", service: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   useDocTitle("Free Dental Consultation | Smile Avenue Family Dentistry");
 
