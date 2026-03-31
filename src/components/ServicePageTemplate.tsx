@@ -355,6 +355,19 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ 0% financing available
                 </p>
               </div>
+
+              {/* Mobile-only compact hero image for visual engagement */}
+              {heroImage && (
+                <div className="mt-6 md:hidden">
+                  <img
+                    src={heroImage.url}
+                    alt={heroImage.alt}
+                    className="w-full h-40 object-cover rounded-xl border border-white/10 shadow-lg"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </section>
