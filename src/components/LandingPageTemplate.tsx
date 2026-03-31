@@ -293,6 +293,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
                 href={ctaHref}
                 target={ctaTarget}
                 rel={ctaTarget ? "noopener noreferrer" : undefined}
+                onClick={() => fireConversion(conversionLabel)}
                 className="inline-block text-white text-lg font-sans font-bold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105"
                 style={{ backgroundColor: "#D4A853" }}
               >
@@ -300,6 +301,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
               </a>
               <a
                 href={`tel:${loc.phone}`}
+                onClick={() => fireConversion("lp_call_click")}
                 className="inline-flex items-center gap-2 text-white font-sans font-semibold text-lg underline hover:no-underline"
               >
                 <Phone className="w-5 h-5" />
