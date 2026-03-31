@@ -394,6 +394,7 @@ const Home = () => {
         </LazySection>
 
         {/* TESTIMONIALS */}
+        <LazySection>
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker text-center">5,000+ FIVE-STAR REVIEWS</p>
@@ -406,6 +407,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </LazySection>
 
         {/* INSURANCE */}
         <InsuranceLogoBar />
