@@ -77,12 +77,12 @@ const KatyTx = () => {
 
             <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
               <div>
-                <p className="kicker">SERVING KATY, CINCO RANCH & CROSS CREEK FAMILIES</p>
+                <p className="kicker">DENTIST IN KATY, TX · WESTHEIMER PARKWAY</p>
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
-                  Your Family Dentist in Katy, TX
+                  Top-Rated Family Dentist in Katy, TX
                 </h1>
                 <p className="section-body">
-                  At Smile Avenue Katy, we combine modern technology with hospitality-driven care to create a dental experience your whole family will love. Whether you need a routine cleaning, a same-day emergency visit, or a complete smile makeover — we're here for you.
+                  Looking for a dentist in Katy, TX? Smile Avenue on Westheimer Parkway delivers hospitality-driven dental care for the whole family — from routine cleanings and pediatric checkups to dental implants, Invisalign, and same-day emergency visits. Proudly serving Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear families with 200+ five-star Google reviews.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
                   <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
