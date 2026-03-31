@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill } from "lucide-react";
+import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, Building, GraduationCap, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -14,6 +14,9 @@ import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import BookingLocationModal from "@/components/BookingLocationModal";
+import InsuranceLogoBar from "@/components/InsuranceLogoBar";
+import FreeConsultationBanner from "@/components/FreeConsultationBanner";
+import ScrollReveal from "@/components/ScrollReveal";
 import { OFFICE_IMAGES } from "@/lib/images";
 
 const KATY_PHONE = "2818005008";
@@ -43,30 +46,34 @@ const testimonials = [
 ];
 
 const faqs = [
-  { question: "Where is Smile Avenue Katy located?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — conveniently located along Westheimer Parkway, serving Katy, Cinco Ranch, Cross Creek Ranch, Firethorne, and surrounding communities." },
-  { question: "What insurance do you accept at the Katy office?", answer: "We accept most major PPO plans including Aetna, Blue Cross Blue Shield, Cigna, Delta Dental, MetLife, United Healthcare, and more. Our team will verify your coverage before your visit." },
-  { question: "Do you offer same-day emergency appointments in Katy?", answer: "Yes. If you're experiencing a dental emergency, call us at (281) 800-5008 and we'll do our best to see you the same day." },
-  { question: "What are your Katy office hours?", answer: "We're open Monday through Friday, 8am to 5pm, with Saturday appointments available by request." },
-  { question: "Can my whole family be seen at the Katy location?", answer: "Absolutely. We treat patients of all ages — from toddlers to grandparents. Our team specializes in gentle care for kids and comprehensive treatment for adults." },
+  { question: "Where exactly is Smile Avenue Katy located?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — along Westheimer Parkway between Cinco Ranch Blvd and Peek Road, minutes from LaCenterra at Cinco Ranch. We're centrally located for families in Cinco Ranch, Cross Creek Ranch, Firethorne, Elyson, Cane Island, and Fulshear." },
+  { question: "What dental insurance do you accept at the Katy office?", answer: "We accept most major PPO dental insurance plans including Aetna, Blue Cross Blue Shield, Cigna, Delta Dental, MetLife, United Healthcare, Guardian, and Humana. Our team verifies your benefits before your visit so there are no surprise bills." },
+  { question: "Do you offer same-day emergency dental appointments in Katy?", answer: "Yes. If you have a dental emergency — toothache, broken tooth, knocked-out tooth, or swelling — call us at (281) 800-5008. We keep emergency slots available daily and will do our best to see you the same day." },
+  { question: "What are the office hours for the Katy dental office?", answer: "We're open Monday through Friday, 8am to 5pm, with Saturday appointments available by request. We also offer early morning availability for patients with busy schedules." },
+  { question: "Is Smile Avenue a good family dentist for kids in Katy?", answer: "Absolutely. We treat patients of all ages — from toddlers getting their first checkup to grandparents needing dentures. Katy ISD families love our gentle approach to pediatric dentistry, and our kid-friendly amenities make every visit fun." },
+  { question: "Do you offer dental implants at the Katy office?", answer: "Yes. Our Katy office provides comprehensive dental implant services including single implants, implant bridges, and All-on-X full-arch restorations. With our in-house dental lab, we deliver faster turnaround and more precise results than practices that outsource." },
+  { question: "How is Smile Avenue different from other dentists in Katy?", answer: "We're not your typical Katy dentist. We combine advanced technology (digital scanners, 3D imaging, in-house lab) with hotel-level hospitality — Netflix in every room, warm blankets, noise-canceling headphones. Our doctors spend real time with you before recommending any treatment." },
 ];
 
 const KatyTx = () => {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  useDocTitle("Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue");
+  useDocTitle("Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue");
 
   return (
     <>
       <Helmet>
-        <title>Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue</title>
-        <meta name="description" content="Top-rated family dentist in Katy, TX on Westheimer Parkway. 4.9★ from 200+ reviews. Same-day appointments, dental implants, Invisalign, emergency care. Serving Cinco Ranch, Firethorne, Cross Creek Ranch. Call (281) 800-5008." />
+        <title>Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue</title>
+        <meta name="description" content="Looking for a dentist in Katy, TX? Smile Avenue on Westheimer Parkway — 4.9★ from 200+ reviews, same-day appointments, in-house dental lab. Implants, Invisalign, emergency care. Serving Cinco Ranch, Firethorne, Cross Creek Ranch & Fulshear. Call (281) 800-5008." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/katy-tx/" />
-        <meta property="og:title" content="Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue" />
-        <meta property="og:description" content="Top-rated family dentist in Katy, TX. 4.9★ from 200+ reviews. Same-day appointments. Serving Cinco Ranch, Firethorne & Cross Creek Ranch." />
+        <meta property="og:title" content="Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue" />
+        <meta property="og:description" content="Top-rated family & cosmetic dentist in Katy, TX on Westheimer Parkway. 4.9★ from 200+ reviews. Same-day appointments. In-house dental lab. Serving Cinco Ranch, Firethorne & Cross Creek Ranch." />
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/katy-tx/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content={OFFICE_IMAGES.katyHero} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue" />
+        <meta name="twitter:description" content="4.9★ family dentist in Katy, TX on Westheimer Parkway. Same-day appointments, dental implants, Invisalign. In-house lab. Call (281) 800-5008." />
       </Helmet>
       <Navbar phone={KATY_PHONE} phoneFormatted={KATY_PHONE_FORMATTED} bookingUrl={KATY_BOOKING} />
       <TrustStrip />
@@ -75,20 +82,20 @@ const KatyTx = () => {
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <nav className="mb-6 text-xs font-sans text-muted-foreground">
+            <nav className="mb-6 text-xs font-sans text-muted-foreground" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span className="mx-2">›</span>
-              <span className="text-foreground">Katy, TX</span>
+              <span className="mx-2" aria-hidden="true">›</span>
+              <span className="text-foreground">Dentist in Katy, TX</span>
             </nav>
 
             <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
               <div>
-                <p className="kicker">DENTIST IN KATY, TX · WESTHEIMER PARKWAY</p>
+                <p className="kicker">DENTIST IN KATY, TX · WESTHEIMER PARKWAY · NEAR LACENTERRA</p>
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
-                  Top-Rated Family Dentist in Katy, TX
+                  Your Family Dentist on Westheimer Parkway in Katy, TX
                 </h1>
                 <p className="section-body">
-                  Looking for a dentist in Katy, TX? Smile Avenue on Westheimer Parkway delivers hospitality-driven dental care for the whole family — from routine cleanings and pediatric checkups to dental implants, Invisalign, and same-day emergency visits. Proudly serving Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear families with 200+ five-star Google reviews.
+                  Smile Avenue on Westheimer Parkway is the Katy dentist that makes dental care feel effortless. From <Link to="/katy-tx/dental-cleaning" className="text-primary hover:underline">routine cleanings</Link> and <Link to="/katy-tx/pediatric-dentistry" className="text-primary hover:underline">kids' checkups</Link> to <Link to="/katy-tx/dental-implants" className="text-primary hover:underline">dental implants</Link>, <Link to="/katy-tx/invisalign" className="text-primary hover:underline">Invisalign</Link>, and <Link to="/katy-tx/emergency-dentist" className="text-primary hover:underline">same-day emergencies</Link> — we do it all with our in-house dental lab. Proudly serving Cinco Ranch, Cross Creek Ranch, Firethorne, Fulshear, and Katy ISD families.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-4">
                   <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
@@ -101,12 +108,14 @@ const KatyTx = () => {
                 <p className="text-xs font-sans text-muted-foreground mb-2">
                   ✓ We confirm within 1 hour · ✓ Same-day appointments · ✓ 0% financing available
                 </p>
-                <p className="text-sm font-sans text-muted-foreground">
-                  ⭐ 4.9 from 200+ Katy Reviews · All Ages Welcome
-                </p>
+                <div className="flex items-center gap-3 text-sm font-sans text-muted-foreground">
+                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
+                  <span className="font-semibold text-foreground">4.9</span>
+                  <span>from 200+ verified Katy reviews</span>
+                </div>
               </div>
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.katyHero} alt="Smile Avenue Katy office on Westheimer Parkway" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
+                <img src={OFFICE_IMAGES.katyHero} alt="Smile Avenue Katy dental office on Westheimer Parkway, Katy TX 77494" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
               </div>
             </div>
           </div>
@@ -139,15 +148,57 @@ const KatyTx = () => {
           </div>
         </section>
 
-        {/* MEET OUR DOCTORS */}
+        {/* ABOUT OUR KATY LOCATION — unique geo content */}
+        <ScrollReveal>
         <section className="section-padding bg-background">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto">
+              <p className="kicker">ABOUT OUR KATY DENTAL OFFICE</p>
+              <h2 className="section-heading">Why Katy, TX Families Choose Smile Avenue on Westheimer Parkway</h2>
+              <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
+                <p>
+                  Katy, Texas has become one of the fastest-growing family communities west of Houston — and Smile Avenue is proud to be the neighborhood dentist these families trust. Located at 23541 Westheimer Pkwy Ste #170, just minutes from LaCenterra at Cinco Ranch and the Katy Mills corridor, our office is easy to reach from every corner of the Katy area.
+                </p>
+                <p>
+                  We serve families throughout <Link to="/katy-tx/cinco-ranch-dentist" className="text-primary hover:underline">Cinco Ranch</Link>, <Link to="/katy-tx/firethorne-dentist" className="text-primary hover:underline">Firethorne</Link>, <Link to="/katy-tx/cross-creek-ranch-dentist" className="text-primary hover:underline">Cross Creek Ranch</Link>, <Link to="/katy-tx/fulshear-dentist" className="text-primary hover:underline">Fulshear</Link>, Elyson, Cane Island, and the <Link to="/katy-tx/westheimer-parkway-dentist" className="text-primary hover:underline">Westheimer Parkway</Link> corridor. Whether your kids are in Katy ISD schools or you commute along I-10, our Westheimer Parkway location puts exceptional dental care within a short drive.
+                </p>
+                <p>
+                  Our Katy team — led by founder Dr. Patrick Vuong alongside Dr. Sameer Bilal and Dr. Sarah Maredia — specializes in comprehensive family dentistry, <Link to="/katy-tx/cosmetic-dentistry" className="text-primary hover:underline">cosmetic transformations</Link>, and complex <Link to="/katy-tx/dental-implants" className="text-primary hover:underline">implant cases</Link>. With our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link>, we fabricate crowns, veneers, and aligners on-site for faster, more precise results. That means fewer visits and better outcomes for Katy families.
+                </p>
+              </div>
+              {/* Local landmark badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-sans font-semibold text-foreground">Minutes from LaCenterra</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
+                  <ShoppingBag className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-sans font-semibold text-foreground">Near Katy Mills & I-10</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
+                  <GraduationCap className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-sans font-semibold text-foreground">Serving Katy ISD Families</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
+                  <Building className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-sans font-semibold text-foreground">Central to Cinco Ranch & Fulshear</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </ScrollReveal>
+
+        {/* MEET OUR DOCTORS */}
+        <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">YOUR KATY CARE TEAM</p>
-            <h2 className="section-heading">Meet Our Katy Doctors</h2>
+            <p className="kicker">YOUR KATY DENTAL TEAM</p>
+            <h2 className="section-heading">3 Experienced Dentists at Our Katy Office</h2>
             <p className="section-body max-w-2xl mx-auto">
-              Our Katy team brings exceptional skill and genuine compassion to every visit. Get to know the doctors behind your smile.
+              Our Katy team combines expertise in family, cosmetic, and implant dentistry with genuine compassion. Every doctor takes time to listen before recommending treatment.
             </p>
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+            <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-3xl mx-auto">
               {doctors.map((doc) => (
                 <DoctorCard key={doc.name} {...doc} />
               ))}
@@ -156,12 +207,12 @@ const KatyTx = () => {
         </section>
 
         {/* SERVICES */}
-        <section className="section-padding section-alt">
+        <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
-            <p className="kicker">COMPREHENSIVE DENTAL CARE IN KATY</p>
-            <h2 className="section-heading">Dental Services for Your Entire Family</h2>
+            <p className="kicker">DENTAL SERVICES IN KATY, TX</p>
+            <h2 className="section-heading">Complete Family & Cosmetic Dentistry on Westheimer Parkway</h2>
             <p className="section-body max-w-2xl mx-auto">
-              From preventive care to advanced cosmetic treatments, Smile Avenue Katy offers complete dental solutions for your whole family.
+              Everything your family needs under one roof — no referrals needed. Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> delivers faster, more precise results.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
               {services.map((svc) => (
@@ -169,7 +220,7 @@ const KatyTx = () => {
               ))}
             </div>
             <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-              Explore All Katy Services →
+              View All 17 Katy Services →
             </Link>
           </div>
         </section>
@@ -210,26 +261,28 @@ const KatyTx = () => {
         </section>
 
         {/* WHY CHOOSE KATY */}
+        <ScrollReveal>
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-16 items-center">
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.treatmentRoom} alt="Smile Avenue Katy treatment room interior" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
+                <img src={OFFICE_IMAGES.treatmentRoom} alt="Smile Avenue Katy treatment room with Netflix and patient amenities" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
               </div>
               <div>
-                <p className="kicker">WHY FAMILIES CHOOSE SMILE AVENUE KATY</p>
-                <h2 className="section-heading">Your Neighborhood Dentist in Katy, TX</h2>
+                <p className="kicker">THE KATY DENTAL EXPERIENCE</p>
+                <h2 className="section-heading">Not Your Typical Dentist in Katy, TX</h2>
                 <p className="section-body">
-                  Located along Westheimer Parkway, Smile Avenue Katy serves families across Cinco Ranch, Firethorne, Cross Creek Ranch, and the greater Katy area. Our state-of-the-art office was designed with your comfort in mind.
+                  Cinco Ranch, Firethorne, and Cross Creek Ranch families choose Smile Avenue because we don't rush. Our doctors listen, explain clearly, and never push unnecessary treatment. It's why 200+ Katy patients rate us 4.9 stars.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "Conveniently located on Westheimer Parkway near LaCenterra",
-                    "Same-day emergency appointments available",
-                    "Cozy blankets, Netflix, and noise-canceling headphones",
-                    "Digital impressions — no goopy molds",
-                    "Serving Cinco Ranch, Firethorne, Cross Creek & Katy",
-                    "Most major insurance plans accepted",
+                    "3 experienced dentists — personalized, unhurried care",
+                    "In-house dental lab — faster crowns, veneers & aligners",
+                    "Same-day emergency appointments — call and come in today",
+                    "Netflix, blankets & noise-canceling headphones in every room",
+                    "Digital impressions — no goopy molds, ever",
+                    "0% financing through CareCredit & Sunbit",
+                    "Most PPO insurance plans accepted — we verify for you",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm font-sans text-foreground">
                       <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -244,29 +297,36 @@ const KatyTx = () => {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
-        {/* INSURANCE & PAYMENT */}
+        {/* INSURANCE LOGOS */}
+        <InsuranceLogoBar />
+
+        {/* FREE CONSULTATION */}
+        <FreeConsultationBanner />
+
+        {/* FINANCING OPTIONS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">FLEXIBLE PAYMENT OPTIONS</p>
-            <h2 className="section-heading">Making Dental Care Affordable</h2>
+            <p className="kicker">AFFORDABLE DENTAL CARE IN KATY</p>
+            <h2 className="section-heading">Flexible Payment Options for Katy Families</h2>
             <p className="section-body max-w-2xl mx-auto">
-              At our Katy office, we believe great dental care should be accessible. We offer multiple ways to make your treatment affordable.
+              Don't let cost keep you from the dentist. Between insurance, our membership plan, and 0% financing — we'll find a way to make it work.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Most Insurance Accepted</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept most major PPO plans and will verify your benefits before your visit.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Insurance Accepted</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept Aetna, BCBS, Cigna, Delta Dental, MetLife, United Healthcare, Guardian, Humana, and more. We verify your benefits before your visit.</p>
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Smile Avenue Membership Plan</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">No insurance? Our in-house plan covers cleanings, exams, and gives you discounts on treatment.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">No Insurance? Join Our Membership</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Our in-house membership plan covers cleanings, exams, X-rays, and gives you 20% off all treatment. No deductibles, no waiting periods.</p>
                 <Link to="/membership-plan" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Dental Financing</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Flexible monthly payment options through CareCredit and Sunbit — apply in minutes.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">0% Dental Financing</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Spread the cost with CareCredit or Sunbit — apply in minutes, get approved instantly, and pay monthly with 0% interest options.</p>
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
