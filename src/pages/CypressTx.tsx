@@ -381,6 +381,43 @@ const CypressTx = () => {
               ratingValue: "4.9",
               reviewCount: "300",
             },
+            areaServed: [
+              { "@type": "City", name: "Cypress, TX" },
+              { "@type": "Place", name: "Bridgeland" },
+              { "@type": "Place", name: "Towne Lake" },
+              { "@type": "Place", name: "Fairfield" },
+              { "@type": "Place", name: "Cy-Fair" },
+              { "@type": "Place", name: "Jersey Village" },
+            ],
+            priceRange: "$$",
+            hasMap: "https://maps.app.goo.gl/DgZBrfjyNed7qKxs8",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
+              { "@type": "ListItem", position: 2, name: "Dentist in Cypress, TX", item: "https://www.smileavenuefamilydentistry.com/cypress-tx/" },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(f => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
           }),
         }}
       />
