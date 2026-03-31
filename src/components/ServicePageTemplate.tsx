@@ -446,9 +446,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </p>
               </div>
               <div className="flex gap-3 shrink-0">
-                <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
                   Book Online
-                </a>
+                </button>
                 <a href={`tel:${loc.phone}`} className="btn-secondary">
                   Call Now
                 </a>
