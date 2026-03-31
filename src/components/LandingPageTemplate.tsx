@@ -332,7 +332,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         <div className="flex items-center justify-between px-3 py-2">
           <a
             href={`tel:${loc.phone}`}
-            onClick={() => fireConversion("lp_call_click")}
+            onClick={() => fireConversion(callLabel)}
             className="flex-1 text-center text-sm font-sans font-bold py-2 rounded-l-full border border-border"
             style={{ color: "#2B5DA7" }}
           >
