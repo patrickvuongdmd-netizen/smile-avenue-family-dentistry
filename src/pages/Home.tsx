@@ -119,7 +119,7 @@ const Home = () => {
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
                 </div>
                 <div className="flex flex-wrap gap-3 mb-3">
-                  <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Online — Takes 60 Seconds</a>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary">Book Online — Takes 60 Seconds</button>
                   <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2"><Phone className="w-4 h-4" /> Call {heroPhoneFmt}</a>
                 </div>
                 <p className="text-xs font-sans text-muted-foreground mb-3">
