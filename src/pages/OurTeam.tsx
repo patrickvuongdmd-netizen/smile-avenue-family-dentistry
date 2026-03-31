@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
-import ScrollReveal from "@/components/ScrollReveal";
+
 import { DOCTOR_IMAGES, TEAM_MEMBERS } from "@/lib/images";
 import { TEAM_IMAGES } from "@/lib/team-images";
 
