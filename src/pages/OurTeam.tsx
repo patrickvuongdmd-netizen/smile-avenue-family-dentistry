@@ -177,7 +177,7 @@ const OurTeam = () => {
 
         {/* ASSISTANTS */}
         {filteredAssistants.length > 0 && (
-          <ScrollReveal>
+            <section className="section-padding section-alt animate-in fade-in duration-500">
             <section className="section-padding section-alt">
               <div className="container mx-auto">
                 <div className="flex items-center gap-2 mb-8">
