@@ -105,8 +105,8 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Dentist",
-    name: "Smile Avenue Family Dentistry",
+    "@type": ["Dentist", "LocalBusiness"],
+    name: `Smile Avenue Family Dentistry - ${loc.name}`,
     description: data.metaDescription,
     url: canonicalUrl,
     address: {
@@ -119,13 +119,24 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
     },
     telephone: loc.phoneFormatted,
     geo: { "@type": "GeoCoordinates", latitude: loc.geo.lat, longitude: loc.geo.lng },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: data.location === "cypress" ? "3000" : "2000",
+      bestRating: "5",
+      worstRating: "1",
+    },
     areaServed: [
       { "@type": "City", name: `${loc.name}, TX` },
       { "@type": "Place", name: data.neighborhoodName },
     ],
-    openingHoursSpecification: [
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:00" },
-    ],
+    openingHoursSpecification: data.location === "cypress"
+      ? [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" }]
+      : [
+          { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+          { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "08:00", closes: "14:00" },
+        ],
+    priceRange: "$$",
   };
 
   const faqJsonLd = {
