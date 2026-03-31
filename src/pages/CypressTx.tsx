@@ -363,6 +363,8 @@ const CypressTx = () => {
 
       <Footer />
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <BackToTop />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
 
       {/* LocalBusiness + Dentist Schema */}
       <script

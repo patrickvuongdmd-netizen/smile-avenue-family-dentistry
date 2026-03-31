@@ -19,6 +19,13 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
   return (
     <>
     <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background border-t border-border shadow-[0_-2px_10px_hsl(var(--foreground)/0.08)]">
+      {/* Open Now indicator */}
+      <div className="bg-primary/5 text-center py-1 border-b border-border">
+        <span className="text-[10px] font-sans font-semibold text-muted-foreground tracking-wide">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-1 animate-pulse" />
+          OPEN NOW · Same-Day Appointments Available
+        </span>
+      </div>
       <div className="grid grid-cols-3 h-14">
         <a
           href={`tel:${phone}`}
@@ -29,7 +36,7 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
         </a>
         <button
           onClick={() => setBookingModalOpen(true)}
-          className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-bold min-h-[48px] bg-primary text-primary-foreground"
+          className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-bold min-h-[48px] bg-primary text-primary-foreground relative"
         >
           <Calendar className="w-5 h-5" />
           Book Now
