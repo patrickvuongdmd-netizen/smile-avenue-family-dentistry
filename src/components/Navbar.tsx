@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Globe } from "lucide-react";
+import BookingLocationModal from "@/components/BookingLocationModal";
 
 interface NavbarProps {
   phone: string;
@@ -92,8 +93,10 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   }, []);
 
   const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   return (
+    <>
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border" ref={navRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -208,18 +211,18 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 <Phone className="w-4 h-4" />
                 <span className="hidden lg:inline">{phoneFormatted}</span>
               </a>
-              <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
                 Book Now
-              </a>
+              </button>
             </div>
           </div>
 
           {/* Mobile menu button — visible below md */}
           <div className="md:hidden flex items-center gap-2">
             <LanguageToggle />
-            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs !px-3 !py-2">
+            <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-xs !px-3 !py-2">
               Book Now
-            </a>
+            </button>
             <button
               className="p-2 text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -294,13 +297,15 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             <a href={`tel:${phone}`} className="flex items-center gap-2 py-3 text-primary font-semibold">
               <Phone className="w-4 h-4" /> {phoneFormatted}
             </a>
-            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-center mt-2">
+            <button onClick={() => { setMobileOpen(false); setBookingModalOpen(true); }} className="btn-primary text-center mt-2 w-full">
               Book Now
-            </a>
+            </button>
           </div>
         </div>
       )}
     </nav>
+    <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
+    </>
   );
 };
 

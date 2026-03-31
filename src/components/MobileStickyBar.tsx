@@ -1,4 +1,6 @@
 import { Phone, Calendar, Navigation } from "lucide-react";
+import { useState } from "react";
+import BookingLocationModal from "@/components/BookingLocationModal";
 
 interface MobileStickyBarProps {
   phone: string;
@@ -12,8 +14,10 @@ const KATY_DIRECTIONS = "https://maps.app.goo.gl/katy-smile-avenue";
 
 const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: MobileStickyBarProps) => {
   const mapsLink = directionsUrl || (phone === "2818005008" ? KATY_DIRECTIONS : CYPRESS_DIRECTIONS);
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   return (
+    <>
     <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background border-t border-border shadow-[0_-2px_10px_hsl(var(--foreground)/0.08)]">
       <div className="grid grid-cols-3 h-14">
         <a
@@ -23,15 +27,13 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
           <Phone className="w-5 h-5 text-primary" />
           Call Now
         </a>
-        <a
-          href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={() => setBookingModalOpen(true)}
           className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-bold min-h-[48px] bg-primary text-primary-foreground"
         >
           <Calendar className="w-5 h-5" />
           Book Now
-        </a>
+        </button>
         <a
           href={mapsLink}
           target="_blank"
@@ -43,6 +45,8 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
         </a>
       </div>
     </div>
+    <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
+    </>
   );
 };
 
