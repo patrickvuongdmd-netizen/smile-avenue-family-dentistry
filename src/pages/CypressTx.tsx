@@ -358,7 +358,7 @@ const CypressTx = () => {
             "@context": "https://schema.org",
             "@type": ["LocalBusiness", "Dentist"],
             name: "Smile Avenue Family Dentistry - Cypress",
-            image: "",
+            image: OFFICE_IMAGES.cypressHero,
             telephone: "+1-832-648-1756",
             address: {
               "@type": "PostalAddress",
