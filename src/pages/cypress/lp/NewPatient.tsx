@@ -3,6 +3,7 @@ import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTe
 
 const data: LandingPageData = {
   location: "cypress",
+  pageType: "new-patient",
   metaTitle: "New Patient Dentist Cypress TX | Smile Avenue Family Dentistry",
   metaDescription: "Now accepting new patients in Cypress, TX. Comprehensive exam, X-rays, and cleaning. Same-day appointments. Most insurance accepted. Book online now.",
   heroHeadline: "Welcome to Smile Avenue — Cypress' Trusted Family Dentist",

@@ -3,6 +3,7 @@ import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTe
 
 const data: LandingPageData = {
   location: "katy",
+  pageType: "new-patient",
   metaTitle: "New Patient Dentist Katy TX | Smile Avenue Family Dentistry",
   metaDescription: "Now accepting new patients in Katy, TX. Comprehensive exam, X-rays, and cleaning. Serving Cinco Ranch, Cross Creek Ranch & Firethorne. Book now.",
   heroHeadline: "Welcome to Smile Avenue — Katy's Trusted Family Dentist",

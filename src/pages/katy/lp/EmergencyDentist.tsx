@@ -3,6 +3,7 @@ import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTe
 
 const data: LandingPageData = {
   location: "katy",
+  pageType: "emergency",
   metaTitle: "Emergency Dentist Katy TX | Same-Day Care | Smile Avenue",
   metaDescription: "Dental emergency in Katy? Same-day appointments for toothaches, broken teeth, and more. Walk-ins welcome. Call (281) 800-5008 now.",
   heroHeadline: "Dental Emergency in Katy? We're Here Now.",

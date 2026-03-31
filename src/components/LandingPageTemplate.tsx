@@ -24,6 +24,8 @@ interface FaqItem {
 
 export interface LandingPageData {
   location: "cypress" | "katy";
+  /** Page type for granular conversion tracking */
+  pageType: "new-patient" | "emergency" | "invisalign" | "dental-implants";
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
@@ -86,7 +88,9 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
 
   const ctaHref = data.heroCtaType === "call" ? `tel:${loc.phone}` : loc.booking;
   const ctaTarget = data.heroCtaType === "book" ? "_blank" : undefined;
-  const conversionLabel = data.heroCtaType === "call" ? "lp_call_click" : "lp_book_click";
+  const bookLabel = `lp_${data.pageType}_book_${data.location}`;
+  const callLabel = `lp_${data.pageType}_call_${data.location}`;
+  const conversionLabel = data.heroCtaType === "call" ? callLabel : bookLabel;
 
   return (
     <>
@@ -110,7 +114,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           {/* Phone */}
           <a
             href={`tel:${loc.phone}`}
-            onClick={() => fireConversion("lp_call_click")}
+            onClick={() => fireConversion(callLabel)}
             className="hidden sm:flex items-center gap-1.5 text-sm font-sans font-semibold"
             style={{ color: "#2B5DA7" }}
           >
@@ -136,7 +140,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         {data.isEmergency && (
           <div className="bg-destructive text-white text-center py-2 text-sm font-sans font-bold animate-pulse">
             🦷 Same-Day Emergency Appointments — Call{" "}
-            <a href={`tel:${loc.phone}`} onClick={() => fireConversion("lp_call_click")} className="underline">{loc.phoneFormatted}</a>{" "}
+            <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="underline">{loc.phoneFormatted}</a>{" "}
             Now
           </div>
         )}
@@ -301,7 +305,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
               </a>
               <a
                 href={`tel:${loc.phone}`}
-                onClick={() => fireConversion("lp_call_click")}
+                onClick={() => fireConversion(callLabel)}
                 className="inline-flex items-center gap-2 text-white font-sans font-semibold text-lg underline hover:no-underline"
               >
                 <Phone className="w-5 h-5" />
@@ -328,7 +332,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         <div className="flex items-center justify-between px-3 py-2">
           <a
             href={`tel:${loc.phone}`}
-            onClick={() => fireConversion("lp_call_click")}
+            onClick={() => fireConversion(callLabel)}
             className="flex-1 text-center text-sm font-sans font-bold py-2 rounded-l-full border border-border"
             style={{ color: "#2B5DA7" }}
           >

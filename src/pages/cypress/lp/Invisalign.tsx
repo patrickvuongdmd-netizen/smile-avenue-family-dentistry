@@ -4,6 +4,7 @@ import beforeAfterInvisalign from "@/assets/gallery/before-after-invisalign.jpg"
 
 const data: LandingPageData = {
   location: "cypress",
+  pageType: "invisalign",
   metaTitle: "Invisalign Cypress TX | Free Consultation | Smile Avenue",
   metaDescription: "Straighter teeth without metal braces. Invisalign clear aligners for teens and adults in Cypress, TX. Free consultation available. Book today.",
   heroHeadline: "Straighter Teeth Without Metal Braces — Invisalign in Cypress",
