@@ -33,12 +33,12 @@ const trustStats = [
 ];
 
 const services = [
-  { title: "Dental Implants", description: "Replace missing teeth permanently — eat, smile, and live without limits.", href: "/cypress-tx/dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
-  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers designed to turn heads.", href: "/cypress-tx/cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
-  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets, no lifestyle disruption.", href: "/cypress-tx/invisalign", icon: <Zap className="w-6 h-6" /> },
-  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today — call now.", href: "/cypress-tx/emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
-  { title: "Preventive Care", description: "Gentle cleanings and thorough exams to protect your family's smiles for life.", href: "/cypress-tx/dental-cleaning", icon: <Shield className="w-6 h-6" /> },
-  { title: "Sedation Dentistry", description: "Nervous about the dentist? Relax completely with our sedation options.", href: "/cypress-tx/sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
+  { title: "Dental Implants", description: "Replace missing teeth permanently — eat, smile, and live without limits.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers designed to turn heads.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
+  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets, no lifestyle disruption.", slug: "invisalign", icon: <Zap className="w-6 h-6" /> },
+  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today — call now.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
+  { title: "Preventive Care", description: "Gentle cleanings and thorough exams to protect your family's smiles for life.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" /> },
+  { title: "Sedation Dentistry", description: "Nervous about the dentist? Relax completely with our sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
 ];
 
 const doctors = [
@@ -200,7 +200,7 @@ const Home = () => {
             <p className="section-body text-center max-w-2xl mx-auto">No referrals, no runaround. From your child's first checkup to your smile makeover, our team handles it all — with an in-house dental lab for faster, more precise results.</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
               {services.map((s, i) => (
-                <Link key={i} to={s.href} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
+                <Link key={i} to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">{s.icon}</div>
                   <h3 className="font-display text-lg font-bold text-foreground mb-2">{s.title}</h3>
                   <p className="text-sm font-body text-muted-foreground mb-3">{s.description}</p>
