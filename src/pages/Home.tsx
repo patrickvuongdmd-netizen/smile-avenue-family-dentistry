@@ -366,26 +366,13 @@ const Home = () => {
           </div>
         </section>
 
-        {/* BLOG FEED */}
+        {/* BLOG CTA — clean, no placeholder images */}
         <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <p className="kicker text-center">FROM THE BLOG</p>
-            <h2 className="section-heading text-center">Latest Dental Health Tips</h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-10">
-              {blogPosts.map((post, i) => (
-                <article key={i} className="bg-card rounded-xl border border-border overflow-hidden">
-                  <div className="aspect-video bg-muted" />
-                  <div className="p-5">
-                    <span className="text-[10px] font-sans font-bold tracking-wider uppercase text-primary">{post.category}</span>
-                    <h3 className="font-display text-base font-bold text-foreground mt-1 mb-2">{post.title}</h3>
-                    <span className="text-xs font-sans text-muted-foreground">{post.date}</span>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link to="/blog" className="btn-secondary">Read All Posts</Link>
-            </div>
+          <div className="container mx-auto text-center max-w-2xl">
+            <p className="kicker">FROM THE BLOG</p>
+            <h2 className="section-heading">Dental Health Tips & Guides</h2>
+            <p className="section-body">Get expert advice from our doctors on dental implants, cosmetic dentistry, oral health, and more.</p>
+            <Link to="/blog" className="btn-secondary">Read Our Blog</Link>
           </div>
         </section>
 
