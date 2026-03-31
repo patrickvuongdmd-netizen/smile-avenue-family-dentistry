@@ -349,9 +349,9 @@ const CypressTx = () => {
               Join 300+ families who rate us 4.9 stars. Same-day appointments available at our Fry Road office.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">
                 Book Online — Takes 60 Seconds
-              </a>
+              </button>
               <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
                 Call {CYPRESS_PHONE_FORMATTED}
               </a>
