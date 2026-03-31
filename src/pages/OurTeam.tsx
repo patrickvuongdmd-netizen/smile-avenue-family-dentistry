@@ -181,7 +181,7 @@ const OurTeam = () => {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                 {filteredAssistants.map(m => (
-                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
+                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} imgKey={m.imgKey} />
                 ))}
               </div>
             </div>
