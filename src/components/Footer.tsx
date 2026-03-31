@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <img src="/logo-white.webp" alt="Smile Avenue Family Dentistry" className="h-16 w-auto" width={200} height={64} />
+              <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-16 w-auto" width={200} height={64} />
             </Link>
             <p className="text-sm font-body leading-relaxed opacity-70 mb-4">
               The dental experience your family deserves. Netflix in every room, warm blankets, and doctors who listen. Two locations in Cypress and Katy, TX.
