@@ -51,6 +51,7 @@ const faqs = [
 ];
 
 const KatyTx = () => {
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
   useDocTitle("Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue");
 
   return (
