@@ -321,8 +321,8 @@ const Home = () => {
         {/* VIDEO TESTIMONIALS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto">
-            <p className="kicker text-center">PATIENT STORIES</p>
-            <h2 className="section-heading text-center">Watch Real Patient Experiences</h2>
+            <p className="kicker text-center">REAL PATIENTS, REAL STORIES</p>
+            <h2 className="section-heading text-center">Hear It Directly from Our Patients</h2>
             <div className="grid sm:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
               {VIDEO_TESTIMONIALS.slice(0, 4).map((vid, i) => (
                 <LazyYouTube key={i} videoId={vid.youtubeId} title={vid.title} />
