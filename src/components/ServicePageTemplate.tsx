@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, Clock } from "lucide-react";
+import { useState } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -11,6 +12,7 @@ import TrustStrip from "@/components/TrustStrip";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
+import BookingLocationModal from "@/components/BookingLocationModal";
 import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
@@ -209,6 +211,7 @@ const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const loc = LOCATIONS[data.location];
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.serviceSlug}/`;
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
   useDocTitle(data.metaTitle);
 
   const related = data.relatedServices || (DEFAULT_RELATED[data.serviceSlug] || []).map(r => ({
@@ -336,9 +339,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   {data.heroBody}
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>
                     {data.heroCta1}
-                  </a>
+                  </button>
                   <a href={`tel:${loc.phone}`} className="btn-cta-outline" aria-label={`Call ${loc.phoneFormatted}`}>
                     {data.heroCta2}
                   </a>
@@ -443,9 +446,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </p>
               </div>
               <div className="flex gap-3 shrink-0">
-                <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
                   Book Online
-                </a>
+                </button>
                 <a href={`tel:${loc.phone}`} className="btn-secondary">
                   Call Now
                 </a>
@@ -535,9 +538,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   <span>Mon–Fri 8am–5pm | Sat by Appointment</span>
                 </div>
               </div>
-              <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-primary w-full text-center">
                 Book Appointment Online
-              </a>
+              </button>
               <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>
             </div>
           </div>
@@ -552,7 +555,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">{data.ctaHeading}</h2>
             <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">{data.ctaBody}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Online — Takes 60 Seconds</a>
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">Book Online — Takes 60 Seconds</button>
               <a href={`tel:${loc.phone}`} className="btn-cta-outline">Call {loc.phoneFormatted}</a>
             </div>
             <p className="text-xs font-sans text-primary-foreground/60 mt-4">Most insurance accepted · 0% financing · Same-day appointments available</p>
@@ -563,6 +566,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       <Footer />
       <MobileStickyBar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <BackToTop />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
 
       {/* Inline JSON-LD for guaranteed rendering */}
       <script

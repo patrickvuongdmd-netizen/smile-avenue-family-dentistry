@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, Clock, Star, Shield, Users, Stethoscope, Sparkles, Heart, Baby, Smile } from "lucide-react";
+import { useState } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
@@ -11,6 +12,7 @@ import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import DoctorCard from "@/components/DoctorCard";
+import BookingLocationModal from "@/components/BookingLocationModal";
 import { DOCTOR_IMAGES, OFFICE_IMAGES } from "@/lib/images";
 
 interface WhyChooseItem {
@@ -98,6 +100,7 @@ const insuranceLogos = [
 const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
   const loc = LOCATIONS[data.location];
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.slug}/`;
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
   useDocTitle(data.metaTitle);
 
   const jsonLd = {
@@ -182,10 +185,13 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">{data.heroHeading}</h1>
                 <p className="text-lg font-display font-semibold text-foreground mb-2">{data.heroSubheading}</p>
                 <p className="section-body">{data.heroBody}</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Your Visit</a>
+                <div className="flex flex-wrap gap-3 mb-4">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary">Book Your Visit</button>
                   <a href={`tel:${loc.phone}`} className="btn-secondary">Call {loc.phoneFormatted}</a>
                 </div>
+                <p className="text-xs font-sans text-muted-foreground mb-2">
+                  ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ Same-day appointments available
+                </p>
                 <div className="flex items-center gap-2 text-sm font-sans text-muted-foreground">
                   <MapPin className="w-4 h-4 text-primary" />
                   <span>{loc.address}</span>
@@ -411,9 +417,10 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                   <span>Mon–Fri 8am–5pm | Sat by Appointment</span>
                 </div>
               </div>
-              <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-primary w-full text-center">
                 Book Appointment
-              </a>
+              </button>
+              <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>
             </div>
           </div>
         </section>
@@ -428,9 +435,10 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
               Conveniently located just minutes from {data.neighborhoodName}. New patients welcome — call or book online today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Now</a>
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">Book Online — Takes 60 Seconds</button>
               <a href={`tel:${loc.phone}`} className="btn-cta-outline">Call {loc.phoneFormatted}</a>
             </div>
+            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Most insurance accepted · 0% financing · Same-day appointments available</p>
           </div>
         </section>
       </main>
@@ -438,6 +446,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
       <Footer />
       <MobileStickyBar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <BackToTop />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
 
       <script
         type="application/ld+json"
