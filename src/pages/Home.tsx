@@ -455,7 +455,7 @@ const Home = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Your New Smile Starts Today</h2>
             <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Join 5,000+ families who trust Smile Avenue. Same-day appointments available at both Houston-area locations.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Online Now</a>
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">Book Online Now</button>
               <a href={`tel:${heroPhone}`} className="btn-cta-outline">Call {heroPhoneFmt}</a>
             </div>
             <p className="text-xs font-sans text-primary-foreground/60 mt-4">Booking takes less than 60 seconds · No obligation · We confirm within 1 hour</p>
