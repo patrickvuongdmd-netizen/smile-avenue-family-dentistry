@@ -475,8 +475,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {related.length > 0 && (
           <section className="section-padding bg-background">
             <div className="container mx-auto text-center">
-              <p className="kicker">EXPLORE MORE</p>
-              <h2 className="section-heading">Related Services</h2>
+              <p className="kicker">YOU MIGHT ALSO NEED</p>
+              <h2 className="section-heading">Related Treatments</h2>
               <div className="flex flex-wrap justify-center gap-3 mt-8">
                 {related.map((r) => (
                   <Link
