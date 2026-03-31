@@ -118,98 +118,90 @@ const OurTeam = () => {
 
         {/* DOCTORS */}
         {filteredDoctors.length > 0 && (
-            <section className="section-padding section-alt animate-in fade-in duration-500">
-            <section className="section-padding section-alt">
-              <div className="container mx-auto">
-                <div className="flex items-center gap-2 mb-8">
-                  <Users className="w-5 h-5 text-primary" />
-                  <h2 className="font-display text-2xl font-bold text-foreground">Doctors ({filteredDoctors.length})</h2>
-                </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredDoctors.map(doc => {
-                    const img = DOCTOR_IMAGES[doc.imgKey];
-                    return (
-                      <div key={doc.slug} className="bg-card rounded-2xl border border-border overflow-hidden group hover:shadow-lg hover:border-primary/20 transition-all">
-                        <div className="aspect-[3/4] overflow-hidden bg-muted">
-                          {img ? (
-                            <img src={img.url} alt={img.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={400} height={533} />
-                          ) : (
-                            <div className="w-full h-full flex items-center justify-center">
-                              <span className="text-4xl font-display font-bold text-primary/30">{doc.name.split(" ").slice(1, 2).join("")[0]}</span>
-                            </div>
-                          )}
-                        </div>
-                        <div className="p-6">
-                          <h3 className="font-display text-xl font-bold text-foreground">{doc.name}</h3>
-                          <p className="text-sm font-sans text-primary font-medium">{doc.credentials} — {doc.role}</p>
-                          <LocationBadge locations={doc.locations} />
-                          <Link to={`/doctors/${doc.slug}`} className="inline-flex items-center gap-1.5 text-sm font-sans font-semibold text-primary hover:underline mt-4">
-                            Meet {doc.name.split(" ").slice(0, 2).join(" ")} <ArrowRight className="w-4 h-4" />
-                          </Link>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+          <section className="section-padding section-alt animate-in fade-in duration-500">
+            <div className="container mx-auto">
+              <div className="flex items-center gap-2 mb-8">
+                <Users className="w-5 h-5 text-primary" />
+                <h2 className="font-display text-2xl font-bold text-foreground">Doctors ({filteredDoctors.length})</h2>
               </div>
-            </section>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredDoctors.map(doc => {
+                  const img = DOCTOR_IMAGES[doc.imgKey];
+                  return (
+                    <div key={doc.slug} className="bg-card rounded-2xl border border-border overflow-hidden group hover:shadow-lg hover:border-primary/20 transition-all">
+                      <div className="aspect-[3/4] overflow-hidden bg-muted">
+                        {img ? (
+                          <img src={img.url} alt={img.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={400} height={533} />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center">
+                            <span className="text-4xl font-display font-bold text-primary/30">{doc.name.split(" ").slice(1, 2).join("")[0]}</span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-display text-xl font-bold text-foreground">{doc.name}</h3>
+                        <p className="text-sm font-sans text-primary font-medium">{doc.credentials} — {doc.role}</p>
+                        <LocationBadge locations={doc.locations} />
+                        <Link to={`/doctors/${doc.slug}`} className="inline-flex items-center gap-1.5 text-sm font-sans font-semibold text-primary hover:underline mt-4">
+                          Meet {doc.name.split(" ").slice(0, 2).join(" ")} <ArrowRight className="w-4 h-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </section>
         )}
 
         {/* HYGIENISTS */}
         {filteredHygienists.length > 0 && (
-            <section className="section-padding bg-background animate-in fade-in duration-500">
-            <section className="section-padding bg-background">
-              <div className="container mx-auto">
-                <div className="flex items-center gap-2 mb-8">
-                  <Users className="w-5 h-5 text-primary" />
-                  <h2 className="font-display text-2xl font-bold text-foreground">Dental Hygienists ({filteredHygienists.length})</h2>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-                  {filteredHygienists.map(m => (
-                    <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
-                  ))}
-                </div>
+          <section className="section-padding bg-background animate-in fade-in duration-500">
+            <div className="container mx-auto">
+              <div className="flex items-center gap-2 mb-8">
+                <Users className="w-5 h-5 text-primary" />
+                <h2 className="font-display text-2xl font-bold text-foreground">Dental Hygienists ({filteredHygienists.length})</h2>
               </div>
-            </section>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+                {filteredHygienists.map(m => (
+                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
+                ))}
+              </div>
+            </div>
           </section>
         )}
 
         {/* ASSISTANTS */}
         {filteredAssistants.length > 0 && (
-            <section className="section-padding section-alt animate-in fade-in duration-500">
-            <section className="section-padding section-alt">
-              <div className="container mx-auto">
-                <div className="flex items-center gap-2 mb-8">
-                  <Users className="w-5 h-5 text-primary" />
-                  <h2 className="font-display text-2xl font-bold text-foreground">Dental Assistants ({filteredAssistants.length})</h2>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-                  {filteredAssistants.map(m => (
-                    <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
-                  ))}
-                </div>
+          <section className="section-padding section-alt animate-in fade-in duration-500">
+            <div className="container mx-auto">
+              <div className="flex items-center gap-2 mb-8">
+                <Users className="w-5 h-5 text-primary" />
+                <h2 className="font-display text-2xl font-bold text-foreground">Dental Assistants ({filteredAssistants.length})</h2>
               </div>
-            </section>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+                {filteredAssistants.map(m => (
+                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
+                ))}
+              </div>
+            </div>
           </section>
         )}
 
         {/* FRONT OFFICE */}
         {filteredFrontOffice.length > 0 && (
           <section className="section-padding bg-background animate-in fade-in duration-500">
-            <section className="section-padding bg-background">
-              <div className="container mx-auto">
-                <div className="flex items-center gap-2 mb-8">
-                  <Users className="w-5 h-5 text-primary" />
-                  <h2 className="font-display text-2xl font-bold text-foreground">Front Office & Administration ({filteredFrontOffice.length})</h2>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-                  {filteredFrontOffice.map(m => (
-                    <TeamCard key={m.name} name={m.name} role={m.role} locations={m.locations} />
-                  ))}
-                </div>
+            <div className="container mx-auto">
+              <div className="flex items-center gap-2 mb-8">
+                <Users className="w-5 h-5 text-primary" />
+                <h2 className="font-display text-2xl font-bold text-foreground">Front Office & Administration ({filteredFrontOffice.length})</h2>
               </div>
-            </section>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+                {filteredFrontOffice.map(m => (
+                  <TeamCard key={m.name} name={m.name} role={m.role} locations={m.locations} />
+                ))}
+              </div>
+            </div>
           </section>
         )}
 
