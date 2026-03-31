@@ -88,7 +88,9 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
 
   const ctaHref = data.heroCtaType === "call" ? `tel:${loc.phone}` : loc.booking;
   const ctaTarget = data.heroCtaType === "book" ? "_blank" : undefined;
-  const conversionLabel = data.heroCtaType === "call" ? "lp_call_click" : "lp_book_click";
+  const bookLabel = `lp_${data.pageType}_book_${data.location}`;
+  const callLabel = `lp_${data.pageType}_call_${data.location}`;
+  const conversionLabel = data.heroCtaType === "call" ? callLabel : bookLabel;
 
   return (
     <>
