@@ -3,9 +3,9 @@ import { Scan, Crown, CreditCard, CalendarCheck, Sparkles } from "lucide-react";
 const techs = [
   { icon: <Sparkles className="w-6 h-6" />, label: "Invisalign® Provider" },
   { icon: <Crown className="w-6 h-6" />, label: "In-House Dental Lab" },
-  { icon: <Scan className="w-6 h-6" />, label: "Medit Digital Scanner" },
-  { icon: <CreditCard className="w-6 h-6" />, label: "CareCredit Financing" },
-  { icon: <CalendarCheck className="w-6 h-6" />, label: "Modento Online Booking" },
+  { icon: <Scan className="w-6 h-6" />, label: "Digital Impressions" },
+  { icon: <CreditCard className="w-6 h-6" />, label: "0% Financing" },
+  { icon: <CalendarCheck className="w-6 h-6" />, label: "Online Booking" },
 ];
 
 const TechnologyTrust = () => (
