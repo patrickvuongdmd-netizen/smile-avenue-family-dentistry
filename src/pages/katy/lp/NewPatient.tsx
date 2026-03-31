@@ -1,5 +1,6 @@
 import { Clock, Shield, MessageCircle } from "lucide-react";
 import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTemplate";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const data: LandingPageData = {
   location: "katy",
@@ -8,6 +9,7 @@ const data: LandingPageData = {
   metaDescription: "Now accepting new patients in Katy, TX. Serving Cinco Ranch, Cross Creek Ranch & Firethorne. Comprehensive exam, X-rays, cleaning. Open Saturdays. 4.9★ rated. Book now.",
   heroHeadline: "Your Family Deserves a Dentist Who Actually Cares",
   heroSubheadline: "Comprehensive exam, digital X-rays, and professional cleaning — all in one visit. Proudly serving families from Cinco Ranch, Cross Creek Ranch, and Firethorne. Open Saturdays.",
+  heroImage: OFFICE_IMAGES.katyHero,
   heroCtaLabel: "Book Your First Visit",
   heroCtaType: "book",
   heroReassurance: "Takes less than 60 seconds · We confirm within 1 hour · Open Saturdays",
@@ -21,6 +23,16 @@ const data: LandingPageData = {
     "In-House Smile Dental Lab",
     "0% Financing Available",
     "Open Saturdays 8 AM – 2 PM",
+  ],
+  doctors: [
+    { slug: "sameer-bilal", name: "Dr. Sameer Bilal", credentials: "DDS", specialty: "General & Family Dentistry" },
+    { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "General & Cosmetic Dentistry" },
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "General & Restorative Dentistry" },
+  ],
+  videos: [
+    { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
+    { youtubeId: "Do_22b5MX_M", title: "From Uncomfortable to Confident Smiles" },
+    { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
   ],
   testimonials: [
     { quote: "We moved to Cinco Ranch and needed a new dentist for the whole family. Smile Avenue exceeded every expectation. The office is gorgeous, the staff remembers our names, and the kids actually enjoy going!", name: "The Garcia Family", service: "New Patients" },

@@ -1,5 +1,6 @@
 import { Clock, Shield, MessageCircle } from "lucide-react";
 import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTemplate";
+import { OFFICE_IMAGES } from "@/lib/images";
 
 const data: LandingPageData = {
   location: "cypress",
@@ -8,6 +9,7 @@ const data: LandingPageData = {
   metaDescription: "Now accepting new patients in Cypress, TX. Comprehensive exam, digital X-rays, and professional cleaning. Same-day appointments available. 4.9★ rated with 5,000+ reviews. Book online in 60 seconds.",
   heroHeadline: "Finally, a Dentist You'll Actually Look Forward To",
   heroSubheadline: "Comprehensive exam, digital X-rays, and professional cleaning — all in one visit. Same-day appointments available for families in Cypress.",
+  heroImage: OFFICE_IMAGES.newPatientHero,
   heroCtaLabel: "Book Your First Visit",
   heroCtaType: "book",
   heroReassurance: "Takes less than 60 seconds · We confirm within 1 hour · No surprise fees",
@@ -21,6 +23,17 @@ const data: LandingPageData = {
     "In-House Smile Dental Lab",
     "0% Financing Available",
     "Open Saturdays in Katy",
+  ],
+  doctors: [
+    { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "General & Cosmetic Dentistry" },
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "General & Restorative Dentistry" },
+    { slug: "peter-kim", name: "Dr. Peter Kim", credentials: "DDS", specialty: "Implants & Oral Surgery" },
+    { slug: "laith-yahya", name: "Dr. Laith Yahya", credentials: "DDS", specialty: "General Dentistry" },
+  ],
+  videos: [
+    { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
+    { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
+    { youtubeId: "ilqukqtmvjY", title: "Needed A Dentist? Found My Go-To Spot!" },
   ],
   testimonials: [
     { quote: "Best dental experience I've ever had. The office is beautiful, the staff is incredibly kind, and Dr. Maredia explained everything clearly. I actually look forward to my cleanings now!", name: "Sarah M.", service: "New Patient" },
