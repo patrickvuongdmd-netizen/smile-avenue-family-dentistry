@@ -200,7 +200,7 @@ const Home = () => {
             <p className="section-body text-center max-w-2xl mx-auto">No referrals, no runaround. From your child's first checkup to your smile makeover, our team handles it all — with an in-house dental lab for faster, more precise results.</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
               {services.map((s, i) => (
-                <Link key={i} to={s.href} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
+                <Link key={i} to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">{s.icon}</div>
                   <h3 className="font-display text-lg font-bold text-foreground mb-2">{s.title}</h3>
                   <p className="text-sm font-body text-muted-foreground mb-3">{s.description}</p>

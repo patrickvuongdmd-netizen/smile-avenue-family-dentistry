@@ -26,7 +26,8 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    // Fire analytics event for 404 tracking instead of console.error
+    window.gtag?.("event", "page_not_found", { page_path: location.pathname });
   }, [location.pathname]);
 
   useDocTitle("Page Not Found | Smile Avenue Family Dentistry");
