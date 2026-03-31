@@ -354,6 +354,8 @@ const KatyTx = () => {
 
       <Footer />
       <MobileStickyBar phone={KATY_PHONE} phoneFormatted={KATY_PHONE_FORMATTED} bookingUrl={KATY_BOOKING} />
+      <BackToTop />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
 
       {/* LocalBusiness + Dentist Schema */}
       <script
