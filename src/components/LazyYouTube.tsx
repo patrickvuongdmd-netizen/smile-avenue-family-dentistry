@@ -12,6 +12,14 @@ const LazyYouTube = ({ videoId, title }: LazyYouTubeProps) => {
     `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
   );
 
+  const handleThumbLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    // YouTube returns a 120x90 grey placeholder when maxresdefault doesn't exist
+    if (img.naturalWidth <= 120 && thumbSrc.includes("maxresdefault")) {
+      setThumbSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`);
+    }
+  };
+
   const handleThumbError = () => {
     if (thumbSrc.includes("maxresdefault")) {
       setThumbSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`);
