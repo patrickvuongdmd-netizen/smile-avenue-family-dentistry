@@ -90,16 +90,19 @@ const KatyTx = () => {
                 <p className="section-body">
                   Looking for a dentist in Katy, TX? Smile Avenue on Westheimer Parkway delivers hospitality-driven dental care for the whole family — from routine cleanings and pediatric checkups to dental implants, Invisalign, and same-day emergency visits. Proudly serving Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear families with 200+ five-star Google reviews.
                 </p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    Book at Katy
-                  </a>
+                <div className="flex flex-wrap gap-3 mb-4">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
+                    Book at Katy — Takes 60 Seconds
+                  </button>
                   <a href={`tel:${KATY_PHONE}`} className="btn-secondary">
                     Call {KATY_PHONE_FORMATTED}
                   </a>
                 </div>
+                <p className="text-xs font-sans text-muted-foreground mb-2">
+                  ✓ We confirm within 1 hour · ✓ Same-day appointments · ✓ 0% financing available
+                </p>
                 <p className="text-sm font-sans text-muted-foreground">
-                  ⭐ 4.9 from 200+ Katy Reviews · Same-Day Appointments · All Ages Welcome
+                  ⭐ 4.9 from 200+ Katy Reviews · All Ages Welcome
                 </p>
               </div>
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
