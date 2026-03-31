@@ -136,6 +136,7 @@ const appendUtmParams = (baseUrl: string): string => {
 const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
   const loc = LOCATIONS[data.location];
   useDocTitle(data.metaTitle);
+  captureGclid();
 
   const bookingUrl = appendUtmParams(loc.booking);
   const ctaHref = data.heroCtaType === "call" ? `tel:${loc.phone}` : bookingUrl;
