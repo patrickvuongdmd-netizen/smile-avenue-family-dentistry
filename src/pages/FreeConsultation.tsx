@@ -64,50 +64,19 @@ const FreeConsultation = () => {
                 </div>
               </div>
 
-              {/* Form */}
-              <div className="bg-card rounded-2xl border border-border p-8 shadow-lg">
-                {submitted ? (
-                  <div className="text-center py-8">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <Check className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="font-display text-2xl font-bold text-foreground mb-2">Thank You!</h3>
-                    <p className="font-body text-muted-foreground">We'll be in touch within 1 business hour to schedule your free consultation.</p>
-                  </div>
-                ) : (
-                  <>
-                    <h2 className="font-display text-xl font-bold text-foreground mb-1">Request Your Free Consultation</h2>
-                    <p className="text-sm font-sans text-muted-foreground mb-6">Fill out the form and we'll reach out within 1 business hour.</p>
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                      <div>
-                        <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Full Name *</label>
-                        <input type="text" required value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="John Smith" />
-                      </div>
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Phone *</label>
-                          <input type="tel" required value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="(555) 123-4567" />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Email *</label>
-                          <input type="email" required value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="john@email.com" />
-                        </div>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Service of Interest *</label>
-                        <select required value={formData.service} onChange={e => setFormData(p => ({ ...p, service: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
-                          <option value="">Select a service…</option>
-                          {serviceOptions.map(s => <option key={s} value={s}>{s}</option>)}
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Message (optional)</label>
-                        <textarea rows={3} value={formData.message} onChange={e => setFormData(p => ({ ...p, message: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="Tell us about your goals…" />
-                      </div>
-                      <button type="submit" className="btn-primary w-full">Request Free Consultation</button>
-                    </form>
-                  </>
-                )}
+              {/* Booking CTAs */}
+              <div className="bg-card rounded-2xl border border-border p-8 shadow-lg text-center">
+                <h2 className="font-display text-xl font-bold text-foreground mb-2">Book Your Free Consultation</h2>
+                <p className="text-sm font-sans text-muted-foreground mb-6">Choose your preferred location to schedule online — takes less than 60 seconds.</p>
+                <div className="space-y-3">
+                  <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full block text-center">Book at Cypress</a>
+                  <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full block text-center">Book at Katy</a>
+                </div>
+                <div className="mt-6 pt-6 border-t border-border space-y-3">
+                  <p className="text-xs font-sans font-semibold uppercase tracking-wider text-muted-foreground">Or call us directly</p>
+                  <a href="tel:8326481756" className="flex items-center justify-center gap-2 text-sm font-sans font-semibold text-primary hover:underline"><Phone className="w-4 h-4" /> Cypress: (832) 648-1756</a>
+                  <a href="tel:2818005008" className="flex items-center justify-center gap-2 text-sm font-sans font-semibold text-primary hover:underline"><Phone className="w-4 h-4" /> Katy: (281) 800-5008</a>
+                </div>
               </div>
             </div>
           </div>
