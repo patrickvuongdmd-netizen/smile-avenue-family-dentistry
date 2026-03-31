@@ -12,5 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$
 
 Sitemap: https://www.smileavenuefamilydentistry.com/sitemap.xml
