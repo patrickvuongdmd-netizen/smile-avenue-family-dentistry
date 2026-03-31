@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import BookingLocationModal from "@/components/BookingLocationModal";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -69,6 +70,7 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState<"cypress" | "katy">("cypress");
   const [heroLoc, setHeroLoc] = useState<"cypress" | "katy">("cypress");
   const [videoPlaying, setVideoPlaying] = useState(false);
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
   const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
@@ -117,7 +119,7 @@ const Home = () => {
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
                 </div>
                 <div className="flex flex-wrap gap-3 mb-3">
-                  <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Online — Takes 60 Seconds</a>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary">Book Online — Takes 60 Seconds</button>
                   <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2"><Phone className="w-4 h-4" /> Call {heroPhoneFmt}</a>
                 </div>
                 <p className="text-xs font-sans text-muted-foreground mb-3">
@@ -313,9 +315,9 @@ const Home = () => {
                   Same-day appointments available · Most insurance accepted · 0% financing
                 </p>
               </div>
-              <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-primary shrink-0">
                 Book Online Now
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -453,7 +455,7 @@ const Home = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Your New Smile Starts Today</h2>
             <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Join 5,000+ families who trust Smile Avenue. Same-day appointments available at both Houston-area locations.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Online Now</a>
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">Book Online Now</button>
               <a href={`tel:${heroPhone}`} className="btn-cta-outline">Call {heroPhoneFmt}</a>
             </div>
             <p className="text-xs font-sans text-primary-foreground/60 mt-4">Booking takes less than 60 seconds · No obligation · We confirm within 1 hour</p>
@@ -490,6 +492,7 @@ const Home = () => {
           }),
         }}
       />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
     </>
   );
 };
