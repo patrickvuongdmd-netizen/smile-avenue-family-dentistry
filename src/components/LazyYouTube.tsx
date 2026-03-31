@@ -8,6 +8,25 @@ interface LazyYouTubeProps {
 
 const LazyYouTube = ({ videoId, title }: LazyYouTubeProps) => {
   const [playing, setPlaying] = useState(false);
+  const [thumbSrc, setThumbSrc] = useState(
+    `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+  );
+
+  const handleThumbLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    // YouTube returns a 120x90 grey placeholder when maxresdefault doesn't exist
+    if (img.naturalWidth <= 120 && thumbSrc.includes("maxresdefault")) {
+      setThumbSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`);
+    }
+  };
+
+  const handleThumbError = () => {
+    if (thumbSrc.includes("maxresdefault")) {
+      setThumbSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`);
+    } else if (thumbSrc.includes("hqdefault")) {
+      setThumbSrc(`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`);
+    }
+  };
 
   return (
     <div className="aspect-video rounded-2xl overflow-hidden relative shadow-md bg-muted">
@@ -27,12 +46,14 @@ const LazyYouTube = ({ videoId, title }: LazyYouTubeProps) => {
           aria-label={`Play video: ${title}`}
         >
           <img
-            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            src={thumbSrc}
             alt={title}
             className="w-full h-full object-cover"
             loading="lazy"
             width={1280}
             height={720}
+            onError={handleThumbError}
+            onLoad={handleThumbLoad}
           />
           <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
           <div className="absolute inset-0 flex items-center justify-center">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import LazyYouTube from "@/components/LazyYouTube";
 import { cn } from "@/lib/utils";
@@ -6,6 +6,26 @@ import { cn } from "@/lib/utils";
 interface VideoCarouselProps {
   videos: { youtubeId: string; title: string }[];
 }
+
+const ThumbImg = ({ youtubeId, title }: { youtubeId: string; title: string }) => {
+  const [src, setSrc] = useState(`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`);
+  const handleError = useCallback(() => {
+    if (src.includes("mqdefault")) {
+      setSrc(`https://img.youtube.com/vi/${youtubeId}/default.jpg`);
+    }
+  }, [src, youtubeId]);
+  return (
+    <img
+      src={src}
+      alt={title}
+      className="w-full aspect-video object-cover"
+      loading="lazy"
+      width={320}
+      height={180}
+      onError={handleError}
+    />
+  );
+};
 
 const VideoCarousel = ({ videos }: VideoCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -59,14 +79,7 @@ const VideoCarousel = ({ videos }: VideoCarouselProps) => {
               aria-label={`Play: ${video.title}`}
               aria-current={i === activeIndex ? "true" : undefined}
             >
-              <img
-                src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
-                alt={video.title}
-                className="w-full aspect-video object-cover"
-                loading="lazy"
-                width={320}
-                height={180}
-              />
+              <ThumbImg youtubeId={video.youtubeId} title={video.title} />
               <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
               {i === activeIndex && (
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
