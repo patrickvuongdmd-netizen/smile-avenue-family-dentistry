@@ -492,6 +492,7 @@ const Home = () => {
           }),
         }}
       />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
     </>
   );
 };
