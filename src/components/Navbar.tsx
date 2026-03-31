@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Globe, Check, AlertCircle, Shield, Sparkles } from "lucide-react";
 import BookingLocationModal from "@/components/BookingLocationModal";
 
 interface NavbarProps {
@@ -98,6 +98,26 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   return (
     <>
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border" ref={navRef}>
+      {/* Intent-routing utility bar — always visible */}
+      <div className="hidden md:block bg-card border-b border-border">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-9">
+          <div className="flex items-center gap-1">
+            <Link to="/patients/new-patient-hub" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">New Patients</Link>
+            <span className="text-border">·</span>
+            <Link to={`${locationPrefix}/emergency-dentist`} className="px-3 py-1 text-xs font-sans font-semibold text-destructive/80 hover:text-destructive transition-colors">Dental Emergency</Link>
+            <span className="text-border">·</span>
+            <Link to="/insurance" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">Insurance & Financing</Link>
+            <span className="text-border">·</span>
+            <Link to="/specials" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">Specials</Link>
+          </div>
+          <div className="flex items-center gap-3">
+            <LanguageToggle />
+            <a href={`tel:${phone}`} className="flex items-center gap-1 text-xs font-sans font-semibold text-foreground hover:text-primary transition-colors">
+              <Phone className="w-3 h-3" /> {phoneFormatted}
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -206,11 +226,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
-              <LanguageToggle className="hidden lg:flex" />
-              <a href={`tel:${phone}`} className="flex items-center gap-1.5 text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap">
-                <Phone className="w-4 h-4" />
-                <span className="hidden lg:inline">{phoneFormatted}</span>
-              </a>
               <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
                 Book Now
               </button>
@@ -238,6 +253,22 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       {mobileOpen && (
         <div className="md:hidden bg-background border-t border-border pb-4 max-h-[80vh] overflow-y-auto">
           <div className="container mx-auto px-4 pt-4 flex flex-col gap-1 font-sans text-sm font-medium text-foreground">
+            {/* Intent quick-paths — most common reasons to visit */}
+            <div className="grid grid-cols-2 gap-2 pb-3 mb-2 border-b border-border">
+              <Link to="/patients/new-patient-hub" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-primary/5 border border-primary/20 text-primary font-semibold text-xs">
+                <Check className="w-4 h-4 shrink-0" /> New Patient? Start Here
+              </Link>
+              <Link to={`${locationPrefix}/emergency-dentist`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-destructive/5 border border-destructive/20 text-destructive font-semibold text-xs">
+                <AlertCircle className="w-4 h-4 shrink-0" /> Emergency
+              </Link>
+              <Link to="/insurance" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-card border border-border text-foreground font-semibold text-xs">
+                <Shield className="w-4 h-4 shrink-0 text-primary" /> Insurance
+              </Link>
+              <Link to="/services" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-card border border-border text-foreground font-semibold text-xs">
+                <Sparkles className="w-4 h-4 shrink-0 text-primary" /> All Services
+              </Link>
+            </div>
+
             {/* Services accordion */}
             <button
               className="flex items-center justify-between py-3 w-full text-left"

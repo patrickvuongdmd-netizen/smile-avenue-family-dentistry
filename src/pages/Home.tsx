@@ -140,9 +140,9 @@ const Home = () => {
                   <Link to="/patients/new-patient-hub" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
                     <Check className="w-3.5 h-3.5 text-primary" /> New Patient? Start Here
                   </Link>
-                  <a href={`tel:${heroPhone}`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-destructive/10 border border-destructive/20 text-xs font-sans font-semibold text-destructive hover:bg-destructive/20 transition-all">
+                  <Link to={`${heroLoc === "cypress" ? "/cypress-tx" : "/katy-tx"}/emergency-dentist`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-destructive/10 border border-destructive/20 text-xs font-sans font-semibold text-destructive hover:bg-destructive/20 transition-all">
                     <AlertCircle className="w-3.5 h-3.5" /> Dental Emergency
-                  </a>
+                  </Link>
                   <Link to="/insurance" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
                     <Shield className="w-3.5 h-3.5 text-primary" /> Check Insurance
                   </Link>
