@@ -182,15 +182,41 @@ const Home = () => {
                   poster={OFFICE_IMAGES.homepageHero}
                   className="hidden lg:block w-full h-full object-cover"
                 />
-                {/* Mobile / tablet fallback image */}
-                <img
-                  src={OFFICE_IMAGES.homepageHero}
-                  alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice in Cypress and Katy, TX"
-                  className="lg:hidden w-full h-full object-cover"
-                  fetchPriority="high"
-                  width={800}
-                  height={600}
-                />
+                {/* Mobile / tablet — tap to play video */}
+                <div className="lg:hidden w-full h-full">
+                  {mobileHeroPlaying ? (
+                    <video
+                      src={HERO_VIDEO_URL}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <button
+                      onClick={() => setMobileHeroPlaying(true)}
+                      className="w-full h-full relative group cursor-pointer"
+                      aria-label="Play office tour video"
+                    >
+                      <img
+                        src={OFFICE_IMAGES.homepageHero}
+                        alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice in Cypress and Katy, TX"
+                        className="w-full h-full object-cover"
+                        fetchPriority="high"
+                        width={800}
+                        height={600}
+                      />
+                      <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <Play className="w-6 h-6 text-primary-foreground ml-0.5" fill="currentColor" />
+                        </div>
+                      </div>
+                    </button>
+                  )}
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
               </div>
             </div>
