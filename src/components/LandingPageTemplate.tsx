@@ -656,7 +656,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="flex-1 text-center text-sm font-sans font-bold py-2.5 rounded-l-full border border-border" style={{ color: "#2B5DA7" }}>
             <Phone className="w-4 h-4 inline mr-1" />Call Now
           </a>
-          <a href={ctaHref} target={ctaTarget} rel={ctaTarget ? "noopener noreferrer" : undefined} onClick={() => fireConversion(conversionLabel)} className="flex-1 text-center text-sm font-sans font-bold py-2.5 rounded-r-full text-white" style={{ backgroundColor: "#D4A853" }}>
+          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" onClick={() => fireConversion(bookLabel)} className="flex-1 text-center text-sm font-sans font-bold py-2.5 rounded-r-full text-white" style={{ backgroundColor: "#D4A853" }}>
             Book Now
           </a>
         </div>
