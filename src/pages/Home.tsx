@@ -14,6 +14,7 @@ import SkipToContent from "@/components/SkipToContent";
 import TechnologyTrust from "@/components/TechnologyTrust";
 import ScrollReveal from "@/components/ScrollReveal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
+import LazySection from "@/components/LazySection";
 import { Play } from "lucide-react";
 import { useState } from "react";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
