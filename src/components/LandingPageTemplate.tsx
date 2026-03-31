@@ -649,7 +649,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
 
       {/* ═══ FOOTER ═══ */}
       <footer className="bg-foreground text-white/70 py-10 px-4 text-center text-sm font-sans">
-        <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-10 w-auto mx-auto mb-4 brightness-0 invert opacity-80" width={160} height={40} />
+        <img src="/logo-white.webp" alt="Smile Avenue Family Dentistry" className="h-10 w-auto mx-auto mb-4 opacity-80" width={160} height={40} />
         <p className="font-semibold text-white mb-1">Smile Avenue Family Dentistry — {loc.name}</p>
         <p>{loc.address}</p>
         <p><a href={`tel:${loc.phone}`} className="text-white hover:underline">{loc.phoneFormatted}</a></p>
