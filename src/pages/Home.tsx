@@ -237,10 +237,10 @@ const Home = () => {
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
-            <p className="kicker">OUR MISSION</p>
-            <h2 className="section-heading text-3xl md:text-4xl">Helping Houston Families Love Their Smiles Again</h2>
-            <p className="section-body">At Smile Avenue, we believe every patient deserves to feel heard, comfortable, and confident in their care. Our team combines clinical excellence with genuine hospitality — because a great dental experience starts with how you feel the moment you walk through our door.</p>
-            <Link to="/about" className="btn-primary">Learn About Us</Link>
+            <p className="kicker">WHY FAMILIES SWITCH TO US</p>
+            <h2 className="section-heading text-3xl md:text-4xl">You Deserve a Dentist Who Actually Cares</h2>
+            <p className="section-body">Most dental offices rush you in and out. At Smile Avenue, we slow down, listen, and build a plan around your goals — not a billing code. That's why 5,000+ families rate us 4.9 stars and keep coming back.</p>
+            <Link to="/about" className="btn-primary">Meet Our Team</Link>
           </div>
         </section>
         </ScrollReveal>
