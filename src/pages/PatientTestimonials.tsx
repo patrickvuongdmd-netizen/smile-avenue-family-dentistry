@@ -91,8 +91,11 @@ const PatientTestimonials = () => {
             </div>
 
             <div className="text-center mt-8">
-              <a href="https://g.page/smileavenuedentistry/review" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center gap-2" aria-label="Leave a review on Google">
-                Leave Us a Review <ExternalLink className="w-4 h-4" />
+              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-cypress" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center gap-2" aria-label="Leave a review for Cypress on Google">
+                Review Cypress <ExternalLink className="w-4 h-4" />
+              </a>
+              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-katy" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center gap-2" aria-label="Leave a review for Katy on Google">
+                Review Katy <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -128,7 +131,8 @@ const PatientTestimonials = () => {
             <h2 className="section-heading">Read More Reviews</h2>
             <p className="section-body max-w-2xl mx-auto">See all of our reviews on Google and Yelp.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2" aria-label="View Google Reviews">Google Reviews <ExternalLink className="w-4 h-4" aria-hidden="true" /></a>
+              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-cypress" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2" aria-label="Review Cypress on Google">Cypress Reviews <ExternalLink className="w-4 h-4" aria-hidden="true" /></a>
+              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-katy" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2" aria-label="Review Katy on Google">Katy Reviews <ExternalLink className="w-4 h-4" aria-hidden="true" /></a>
               <a href="#" className="btn-secondary flex items-center gap-2" aria-label="View Yelp Reviews">Yelp Reviews <ExternalLink className="w-4 h-4" aria-hidden="true" /></a>
             </div>
           </div>
