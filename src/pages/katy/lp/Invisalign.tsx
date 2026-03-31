@@ -1,5 +1,6 @@
 import { Sparkles, CreditCard, Award } from "lucide-react";
 import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTemplate";
+import beforeAfterInvisalign from "@/assets/gallery/before-after-invisalign.jpg";
 
 const data: LandingPageData = {
   location: "katy",
