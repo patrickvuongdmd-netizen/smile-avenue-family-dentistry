@@ -71,6 +71,7 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState<"cypress" | "katy">("cypress");
   const [heroLoc, setHeroLoc] = useState<"cypress" | "katy">("cypress");
   const [videoPlaying, setVideoPlaying] = useState(false);
+  const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
   const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
