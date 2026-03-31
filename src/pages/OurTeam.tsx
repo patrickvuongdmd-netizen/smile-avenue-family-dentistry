@@ -173,20 +173,18 @@ const OurTeam = () => {
 
         {/* ASSISTANTS */}
         {filteredAssistants.length > 0 && (
-            <section className="section-padding section-alt animate-in fade-in duration-500">
-            <section className="section-padding section-alt">
-              <div className="container mx-auto">
-                <div className="flex items-center gap-2 mb-8">
-                  <Users className="w-5 h-5 text-primary" />
-                  <h2 className="font-display text-2xl font-bold text-foreground">Dental Assistants ({filteredAssistants.length})</h2>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-                  {filteredAssistants.map(m => (
-                    <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
-                  ))}
-                </div>
+          <section className="section-padding section-alt animate-in fade-in duration-500">
+            <div className="container mx-auto">
+              <div className="flex items-center gap-2 mb-8">
+                <Users className="w-5 h-5 text-primary" />
+                <h2 className="font-display text-2xl font-bold text-foreground">Dental Assistants ({filteredAssistants.length})</h2>
               </div>
-            </section>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+                {filteredAssistants.map(m => (
+                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
+                ))}
+              </div>
+            </div>
           </section>
         )}
 
