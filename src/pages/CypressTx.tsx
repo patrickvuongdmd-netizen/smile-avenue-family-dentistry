@@ -273,10 +273,8 @@ const CypressTx = () => {
             <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
               <div>
                 <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading">Common Questions About Our Cypress Office</h2>
-                <div className="bg-muted rounded-2xl aspect-square hidden lg:flex items-center justify-center mt-6">
-                  <span className="text-sm font-sans text-muted-foreground">FAQ Image</span>
-                </div>
+                <h2 className="section-heading">Cypress Dental FAQs</h2>
+                <p className="section-body">Have more questions about our Cypress office? Call <a href={`tel:${CYPRESS_PHONE}`} className="text-primary hover:underline">{CYPRESS_PHONE_FORMATTED}</a>.</p>
               </div>
               <FaqAccordion items={faqs} />
             </div>
