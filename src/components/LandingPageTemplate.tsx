@@ -1,15 +1,13 @@
 import { Helmet } from "react-helmet-async";
-import { Phone, Star, Shield, Clock, CreditCard, MessageCircle, Zap, Users, Sparkles, FlaskConical, Award, CheckCircle2, MapPin, ArrowRight, X, Heart, ThumbsUp } from "lucide-react";
+import { Phone, Star, Shield, Clock, CreditCard, Zap, CheckCircle2, MapPin, X as XIcon } from "lucide-react";
 import { ReactNode } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { DOCTOR_IMAGES, SERVICE_IMAGES, OFFICE_IMAGES } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
+import FaqAccordion from "@/components/FaqAccordion";
+import InsuranceLogoBar from "@/components/InsuranceLogoBar";
+import BackToTop from "@/components/BackToTop";
+import ScrollReveal from "@/components/ScrollReveal";
 
 /* ── Types ─────────────────────────────────────────────────── */
 
@@ -53,7 +51,6 @@ export interface LandingPageData {
   pageType: "new-patient" | "emergency" | "invisalign" | "dental-implants";
   metaTitle: string;
   metaDescription: string;
-  /* ── HOOK ── */
   heroHeadline: string;
   heroSubheadline: string;
   heroCtaLabel: string;
@@ -61,18 +58,13 @@ export interface LandingPageData {
   heroImage?: string;
   isEmergency?: boolean;
   heroReassurance?: string;
-  /* ── PAIN POINTS ── */
   painPoints?: PainPoint[];
-  /* ── SOLUTION / BENEFITS ── */
   benefits: Benefit[];
   trustBullets?: string[];
-  /* ── PROOF ── */
   doctors?: DoctorFeature[];
   videos?: { youtubeId: string; title: string }[];
   testimonials?: Testimonial[];
-  /* ── OBJECTION HANDLING ── */
   objections?: Objection[];
-  /* ── EXTRA ── */
   extraSection?: ReactNode;
   faqs: FaqItem[];
   finalCtaHeadline: string;
@@ -193,27 +185,8 @@ const buildJsonLd = (data: LandingPageData, loc: typeof LOCATIONS.cypress) => {
   return schemas;
 };
 
-/* ── Reusable CTA Button ──────────────────────────────────── */
-
-const CtaButton = ({ href, target, label, onClick, size = "lg" }: { href: string; target?: string; label: string; onClick?: () => void; size?: "lg" | "md" }) => (
-  <a
-    href={href}
-    target={target}
-    rel={target ? "noopener noreferrer" : undefined}
-    onClick={onClick}
-    className={`inline-block text-white font-sans font-bold rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl ${size === "lg" ? "text-lg px-10 py-4" : "text-base px-8 py-3.5"}`}
-    style={{ backgroundColor: "#D4A853" }}
-  >
-    {label}
-  </a>
-);
-
-/* ── Insurance names ──────────────────────────────────────── */
-
-const INSURANCE_NAMES = ["Aetna", "Blue Cross Blue Shield", "Cigna", "Delta Dental", "MetLife", "United Healthcare", "Guardian", "Humana"];
-
 /* ═══════════════════════════════════════════════════════════
-   COMPONENT — STRICT SALES FUNNEL STRUCTURE
+   COMPONENT — STRICT SALES FUNNEL
    Hook → Pain → Solution → Proof → Objections → CTA
    ═══════════════════════════════════════════════════════════ */
 
@@ -250,25 +223,31 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
       </Helmet>
 
       {/* ═══ STICKY HEADER ═══ */}
-      <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+      <header className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur-sm shadow-sm border-b border-border">
         <div className="flex items-center justify-between px-4 py-2.5 max-w-5xl mx-auto">
           <a href="/" aria-label="Smile Avenue Home">
             <img src="/logo-mark.webp" alt="Smile Avenue Family Dentistry" className="h-8 w-auto sm:hidden" width={32} height={32} />
             <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="hidden sm:block h-12 w-auto" width={160} height={48} />
           </a>
-          <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="hidden sm:flex items-center gap-1.5 text-sm font-sans font-semibold" style={{ color: "#2B5DA7" }}>
+          <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="hidden sm:flex items-center gap-1.5 text-sm font-sans font-semibold text-primary-dark">
             <Phone className="w-4 h-4" />{loc.phoneFormatted}
           </a>
-          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" onClick={() => fireConversion(bookLabel)} className="text-sm font-sans font-bold text-white px-5 py-2.5 rounded-full transition-all hover:opacity-90 hover:shadow-lg" style={{ backgroundColor: "#D4A853" }}>
+          <a
+            href={bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => fireConversion(bookLabel)}
+            className="btn-primary rounded-full !px-5 !py-2.5 text-sm"
+          >
             Book Now
           </a>
         </div>
       </header>
 
-      <main className="pt-12 pb-16 sm:pb-0">
+      <main className="pt-12 pb-16 lg:pb-0 animate-in fade-in duration-500">
         {/* ═══ EMERGENCY BANNER ═══ */}
         {data.isEmergency && (
-          <div className="bg-destructive text-white text-center py-3 text-sm font-sans font-bold">
+          <div className="bg-destructive text-destructive-foreground text-center py-3 text-sm font-sans font-bold">
             <span className="inline-flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
@@ -283,38 +262,54 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         {/* ╔═══════════════════════════════════════════════════╗
            ║  SECTION 1: HOOK — Above the fold                ║
            ╚═══════════════════════════════════════════════════╝ */}
-        <section className="relative min-h-[440px] md:min-h-[520px] flex items-center" style={{ backgroundImage: `url(${heroImageUrl})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30" />
-          <div className="relative z-10 w-full py-16 md:py-20 px-4">
-            <div className="max-w-5xl mx-auto">
+        <section
+          className="relative min-h-[400px] md:min-h-[500px] flex items-end"
+          style={{ backgroundImage: `url(${heroImageUrl})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+
+          <div className="relative z-10 w-full">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
               <div className="max-w-2xl">
                 {/* Urgency badge */}
-                <span className="inline-block text-xs font-sans font-bold tracking-[0.15em] uppercase mb-4 px-3 py-1.5 rounded-full animate-pulse" style={{ backgroundColor: data.isEmergency ? "#ef4444" : "rgba(212, 168, 83, 0.95)", color: "#fff" }}>
+                <span className={`inline-block text-xs font-sans font-bold tracking-[0.15em] uppercase mb-4 px-3 py-1.5 rounded-full ${data.isEmergency ? "bg-destructive pulse-glow" : "bg-primary"} text-white`}>
                   {data.isEmergency ? "🔴 URGENT — Same-Day Care" : `📍 ${loc.name}, TX — Now Accepting Patients`}
                 </span>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-white" style={{ fontFamily: "var(--font-display)" }}>
+
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-white font-display">
                   {data.heroHeadline}
                 </h1>
-                <p className="text-base md:text-lg text-white/85 mb-6 max-w-xl leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-base md:text-lg text-white/85 mb-6 max-w-xl leading-relaxed font-body">
                   {data.heroSubheadline}
                 </p>
+
                 {/* CTA cluster */}
                 <div className="flex flex-wrap gap-3 mb-4">
-                  <CtaButton href={ctaHref} target={ctaTarget} label={data.heroCtaLabel} onClick={() => fireConversion(conversionLabel)} />
+                  <a
+                    href={ctaHref}
+                    target={ctaTarget}
+                    rel={ctaTarget ? "noopener noreferrer" : undefined}
+                    onClick={() => fireConversion(conversionLabel)}
+                    className="btn-primary rounded-full !px-8 !py-4 text-base"
+                  >
+                    {data.heroCtaLabel}
+                  </a>
                   {data.heroCtaType === "book" && (
-                    <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="inline-flex items-center gap-2 text-white font-sans font-semibold text-base px-6 py-4 rounded-full border-2 border-white/40 hover:border-white/70 transition-colors">
-                      <Phone className="w-5 h-5" />{loc.phoneFormatted}
+                    <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="btn-cta-outline rounded-full !px-6 !py-4">
+                      <Phone className="w-5 h-5 mr-2" />{loc.phoneFormatted}
                     </a>
                   )}
                 </div>
+
                 {/* Reassurance strip */}
                 {data.heroReassurance && (
                   <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/70 font-sans">
                     {data.heroReassurance.split(" · ").map((item, i) => (
-                      <span key={i} className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3" style={{ color: "#D4A853" }} />{item}</span>
+                      <span key={i} className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-primary" />{item}</span>
                     ))}
                   </div>
                 )}
+
                 {/* Star rating */}
                 <div className="flex items-center gap-2 mt-4 text-sm text-white/80">
                   <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
@@ -327,10 +322,10 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </section>
 
         {/* Social proof strip */}
-        <section className="py-3.5" style={{ backgroundColor: "#2B5DA7" }}>
+        <section className="py-3.5 gradient-cta">
           <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-4 text-sm font-sans text-white">
             <span className="flex items-center gap-1.5">
-              <img src="https://www.google.com/favicon.ico" alt="" className="w-4 h-4" loading="lazy" width={16} height={16} />
+              <Star className="w-4 h-4 fill-yellow-300 text-yellow-300" />
               <span className="font-bold">4.9★</span> 5,000+ Reviews
             </span>
             <span className="hidden sm:inline text-white/30">|</span>
@@ -346,73 +341,83 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
            ║  SECTION 2: PAIN POINTS — Agitate the problem    ║
            ╚═══════════════════════════════════════════════════╝ */}
         {data.painPoints && data.painPoints.length > 0 && (
-          <section className="py-14 px-4 bg-background">
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
-                SOUND FAMILIAR?
-              </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-                We Get It — Finding the Right Dentist Is Hard
-              </h2>
-              <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {data.painPoints.map((p, i) => (
-                  <div key={i} className="bg-card rounded-2xl border border-border p-6 shadow-sm">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-destructive/10 text-destructive">
-                      {p.icon}
+          <ScrollReveal>
+            <section className="section-padding bg-background">
+              <div className="max-w-4xl mx-auto">
+                <p className="kicker text-center">SOUND FAMILIAR?</p>
+                <h2 className="section-heading text-center">
+                  We Get It — Finding the Right Dentist Is Hard
+                </h2>
+                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {data.painPoints.map((p, i) => (
+                    <div key={i} className="bg-card rounded-2xl border border-border p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-destructive/10 text-destructive">
+                        {p.icon}
+                      </div>
+                      <p className="text-sm font-sans font-semibold text-destructive/80 mb-2 line-through decoration-destructive/30">{p.problem}</p>
+                      <p className="text-sm font-sans font-semibold text-foreground flex items-start gap-1.5">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
+                        {p.solution}
+                      </p>
                     </div>
-                    <p className="text-sm font-sans font-semibold text-destructive/80 mb-2 line-through decoration-destructive/30">{p.problem}</p>
-                    <p className="text-sm font-sans font-semibold text-foreground flex items-start gap-1.5">
-                      <CheckCircle2 className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: "#D4A853" }} />
-                      {p.solution}
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </ScrollReveal>
         )}
 
         {/* ═══ CTA #2 — After pain points ═══ */}
-        <section className="py-6 px-4 text-center" style={{ backgroundColor: "#f7f4ef" }}>
+        <section className="py-8 px-4 text-center section-alt">
           <div className="max-w-xl mx-auto">
-            <p className="text-sm font-sans font-semibold text-foreground mb-3">Stop settling for less. You deserve better.</p>
-            <CtaButton href={ctaHref} target={ctaTarget} label={data.heroCtaLabel} onClick={() => fireConversion(conversionLabel)} size="md" />
+            <p className="text-sm font-sans font-semibold text-foreground mb-4">Stop settling for less. You deserve better.</p>
+            <a
+              href={ctaHref}
+              target={ctaTarget}
+              rel={ctaTarget ? "noopener noreferrer" : undefined}
+              onClick={() => fireConversion(conversionLabel)}
+              className="btn-primary rounded-full !px-8 !py-3.5"
+            >
+              {data.heroCtaLabel}
+            </a>
           </div>
         </section>
 
         {/* ╔═══════════════════════════════════════════════════╗
            ║  SECTION 3: SOLUTION — Benefits grid             ║
            ╚═══════════════════════════════════════════════════╝ */}
-        <section className="py-16 px-4 bg-background">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>THE SMILE AVENUE DIFFERENCE</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-              Here's Why {data.location === "cypress" ? "Cypress" : "Katy"} Families Choose Us
-            </h2>
-            <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
-            <div className="grid sm:grid-cols-3 gap-8">
-              {data.benefits.map((b) => (
-                <div key={b.title} className="text-center group">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white shadow-lg transition-transform group-hover:scale-105" style={{ background: "linear-gradient(135deg, #2B5DA7, #1a3f75)" }}>
-                    {b.icon}
+        <ScrollReveal>
+          <section className="section-padding bg-background">
+            <div className="max-w-5xl mx-auto">
+              <p className="kicker text-center">THE SMILE AVENUE DIFFERENCE</p>
+              <h2 className="section-heading text-center">
+                Here's Why {loc.name} Families Choose Us
+              </h2>
+              <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+              <div className="grid sm:grid-cols-3 gap-8">
+                {data.benefits.map((b) => (
+                  <div key={b.title} className="text-center group">
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-primary-foreground shadow-lg transition-transform group-hover:scale-105 gradient-cta">
+                      {b.icon}
+                    </div>
+                    <h3 className="font-sans font-bold text-foreground mb-2 text-lg">{b.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed font-body">{b.description}</p>
                   </div>
-                  <h3 className="font-sans font-bold text-foreground mb-2 text-lg">{b.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{b.description}</p>
-                </div>
-              ))}
-            </div>
-            {data.trustBullets && data.trustBullets.length > 0 && (
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-10 text-sm font-sans">
-                {data.trustBullets.map((bullet, i) => (
-                  <span key={i} className="flex items-center gap-1.5 text-foreground">
-                    <CheckCircle2 className="w-4 h-4 flex-shrink-0" style={{ color: "#D4A853" }} />{bullet}
-                  </span>
                 ))}
               </div>
-            )}
-          </div>
-        </section>
+              {data.trustBullets && data.trustBullets.length > 0 && (
+                <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-10 text-sm font-sans">
+                  {data.trustBullets.map((bullet, i) => (
+                    <span key={i} className="flex items-center gap-1.5 text-foreground">
+                      <CheckCircle2 className="w-4 h-4 flex-shrink-0 text-primary" />{bullet}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        </ScrollReveal>
 
         {/* ╔═══════════════════════════════════════════════════╗
            ║  SECTION 4: PROOF — Doctors + Testimonials + Video║
@@ -420,193 +425,186 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
 
         {/* 4a. Meet Your Doctors */}
         {data.doctors && data.doctors.length > 0 && (
-          <section className="py-16 px-4" style={{ backgroundColor: "#f7f4ef" }}>
-            <div className="max-w-5xl mx-auto">
-              <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>YOUR CARE TEAM</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-                Meet Your {loc.name} Doctors
-              </h2>
-              <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
-              <div className={`grid gap-8 ${data.doctors.length <= 2 ? "sm:grid-cols-2 max-w-2xl mx-auto" : data.doctors.length === 3 ? "sm:grid-cols-3 max-w-4xl mx-auto" : "sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto"}`}>
-                {data.doctors.map((doc) => {
-                  const img = DOCTOR_IMAGES[doc.slug];
-                  return (
-                    <div key={doc.slug} className="text-center group">
-                      <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden shadow-lg border-4 border-white group-hover:shadow-xl transition-shadow">
-                        {img && <img src={img.url} alt={img.alt} className="w-full h-full object-cover object-top" loading="lazy" width={144} height={144} />}
+          <ScrollReveal>
+            <section className="section-padding section-alt">
+              <div className="max-w-5xl mx-auto">
+                <p className="kicker text-center">YOUR CARE TEAM</p>
+                <h2 className="section-heading text-center">
+                  Meet Your {loc.name} Doctors
+                </h2>
+                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+                <div className={`grid gap-8 ${data.doctors.length <= 2 ? "sm:grid-cols-2 max-w-2xl mx-auto" : data.doctors.length === 3 ? "sm:grid-cols-3 max-w-4xl mx-auto" : "sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto"}`}>
+                  {data.doctors.map((doc) => {
+                    const img = DOCTOR_IMAGES[doc.slug];
+                    return (
+                      <div key={doc.slug} className="text-center group">
+                        <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden shadow-lg border-4 border-card group-hover:shadow-xl transition-shadow duration-300 ring-2 ring-transparent group-hover:ring-primary/30">
+                          {img && <img src={img.url} alt={img.alt} className="w-full h-full object-cover object-top" loading="lazy" width={144} height={144} />}
+                        </div>
+                        <h3 className="font-sans font-bold text-foreground text-base">{doc.name}</h3>
+                        <p className="text-sm font-sans font-medium text-primary-dark">{doc.credentials}</p>
+                        <p className="text-xs text-muted-foreground mt-1 font-body">{doc.specialty}</p>
                       </div>
-                      <h3 className="font-sans font-bold text-foreground text-base">{doc.name}</h3>
-                      <p className="text-sm font-sans font-medium" style={{ color: "#2B5DA7" }}>{doc.credentials}</p>
-                      <p className="text-xs text-muted-foreground mt-1" style={{ fontFamily: "var(--font-body)" }}>{doc.specialty}</p>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </ScrollReveal>
         )}
 
         {/* 4b. Written Testimonials */}
         {data.testimonials && data.testimonials.length > 0 && (
-          <section className="py-16 px-4 bg-card border-y border-border">
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>REAL PATIENT STORIES</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-                Don't Take Our Word for It
-              </h2>
-              <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
-              <div className="grid sm:grid-cols-2 gap-6">
-                {data.testimonials.map((t, i) => (
-                  <blockquote key={i} className="bg-background rounded-2xl border border-border p-6 shadow-sm relative">
-                    <span className="absolute -top-3 left-6 text-4xl font-serif leading-none" style={{ color: "#D4A853" }}>"</span>
-                    <div className="flex gap-0.5 mb-3 mt-1">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
-                    <p className="text-sm text-foreground leading-relaxed mb-4" style={{ fontFamily: "var(--font-body)" }}>{t.quote}</p>
-                    <footer className="text-xs font-sans">
-                      <span className="font-bold text-foreground">{t.name}</span>
-                      <span className="text-muted-foreground"> · {t.service}</span>
-                    </footer>
-                  </blockquote>
-                ))}
+          <ScrollReveal>
+            <section className="section-padding bg-card border-y border-border">
+              <div className="max-w-4xl mx-auto">
+                <p className="kicker text-center">REAL PATIENT STORIES</p>
+                <h2 className="section-heading text-center">
+                  Don't Take Our Word for It
+                </h2>
+                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+                <div className="grid sm:grid-cols-2 gap-6">
+                  {data.testimonials.map((t, i) => (
+                    <blockquote key={i} className="bg-background rounded-2xl border border-border p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative">
+                      <span className="absolute -top-3 left-6 text-4xl font-serif leading-none text-primary">"</span>
+                      <div className="flex gap-0.5 mb-3 mt-1">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
+                      <p className="text-sm text-foreground leading-relaxed mb-4 font-body">{t.quote}</p>
+                      <footer className="text-xs font-sans">
+                        <span className="font-bold text-foreground">{t.name}</span>
+                        <span className="text-muted-foreground"> · {t.service}</span>
+                      </footer>
+                    </blockquote>
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </ScrollReveal>
         )}
 
         {/* ═══ CTA #3 — After proof ═══ */}
-        <section className="py-12 px-4 text-center relative overflow-hidden" style={{ background: "linear-gradient(135deg, #2B5DA7, #1a3f75)" }}>
+        <section className="py-12 px-4 text-center relative overflow-hidden gradient-cta">
           <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-5 bg-white -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full opacity-5 bg-white translate-y-1/2 -translate-x-1/2" />
           <div className="relative z-10 max-w-xl mx-auto">
-            <h2 className="text-xl md:text-2xl font-bold text-white mb-2" style={{ fontFamily: "var(--font-display)" }}>
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-2 font-display">
               Thousands of Families Trust Us. You Can Too.
             </h2>
-            <p className="text-white/70 text-sm mb-5" style={{ fontFamily: "var(--font-body)" }}>
+            <p className="text-white/70 text-sm mb-5 font-body">
               Book in 60 seconds. We confirm within 1 hour. No surprises, ever.
             </p>
-            <CtaButton href={ctaHref} target={ctaTarget} label={data.heroCtaLabel} onClick={() => fireConversion(conversionLabel)} size="md" />
+            <a
+              href={ctaHref}
+              target={ctaTarget}
+              rel={ctaTarget ? "noopener noreferrer" : undefined}
+              onClick={() => fireConversion(conversionLabel)}
+              className="btn-cta-light rounded-full !px-8 !py-3.5"
+            >
+              {data.heroCtaLabel}
+            </a>
           </div>
         </section>
 
         {/* 4c. Video Testimonials */}
         {data.videos && data.videos.length > 0 && (
-          <section className="py-16 px-4 bg-background">
-            <div className="max-w-5xl mx-auto">
-              <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>SEE FOR YOURSELF</p>
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-                Watch Real Patients Share Their Experience
-              </h2>
-              <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
-              <VideoCarousel videos={data.videos} />
-            </div>
-          </section>
+          <ScrollReveal>
+            <section className="section-padding bg-background">
+              <div className="max-w-5xl mx-auto">
+                <p className="kicker text-center">SEE FOR YOURSELF</p>
+                <h2 className="section-heading text-center">
+                  Watch Real Patients Share Their Experience
+                </h2>
+                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+                <VideoCarousel videos={data.videos} />
+              </div>
+            </section>
+          </ScrollReveal>
         )}
 
         {/* ╔═══════════════════════════════════════════════════╗
            ║  SECTION 5: OBJECTION HANDLING                    ║
            ╚═══════════════════════════════════════════════════╝ */}
         {data.objections && data.objections.length > 0 && (
-          <section className="py-14 px-4" style={{ backgroundColor: "#f7f4ef" }}>
-            <div className="max-w-3xl mx-auto">
-              <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
-                STILL ON THE FENCE?
-              </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-                We Get These Questions All the Time
+          <ScrollReveal>
+            <section className="section-padding section-alt">
+              <div className="max-w-3xl mx-auto">
+                <p className="kicker text-center">STILL ON THE FENCE?</p>
+                <h2 className="section-heading text-center">
+                  We Get These Questions All the Time
+                </h2>
+                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+                <div className="space-y-4">
+                  {data.objections.map((obj, i) => (
+                    <div key={i} className="bg-card rounded-2xl border border-border p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                      <p className="text-sm font-sans font-bold text-foreground mb-2 flex items-start gap-2">
+                        <XIcon className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                        "{obj.objection}"
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed pl-6 font-body">
+                        <span className="font-semibold text-foreground">→ </span>{obj.answer}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          </ScrollReveal>
+        )}
+
+        {/* ═══ Insurance Section — Shared Component ═══ */}
+        <InsuranceLogoBar />
+
+        {/* ═══ Office Tour Photos ═══ */}
+        <ScrollReveal>
+          <section className="section-padding bg-background">
+            <div className="max-w-5xl mx-auto">
+              <p className="kicker text-center">STEP INSIDE</p>
+              <h2 className="section-heading text-center">
+                Not Your Typical Dental Office
               </h2>
-              <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
-              <div className="space-y-4">
-                {data.objections.map((obj, i) => (
-                  <div key={i} className="bg-card rounded-2xl border border-border p-6 shadow-sm">
-                    <p className="text-sm font-sans font-bold text-foreground mb-2 flex items-start gap-2">
-                      <span className="text-destructive shrink-0 mt-0.5">✕</span>
-                      "{obj.objection}"
-                    </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed pl-6" style={{ fontFamily: "var(--font-body)" }}>
-                      <span className="font-semibold text-foreground">→ </span>{obj.answer}
-                    </p>
+              <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {[
+                  { url: OFFICE_IMAGES.waitingRoom, alt: "Modern waiting room at Smile Avenue" },
+                  { url: OFFICE_IMAGES.treatmentRoom, alt: "State-of-the-art treatment room with Netflix" },
+                  { url: OFFICE_IMAGES.hallway, alt: "Welcoming hallway at Smile Avenue" },
+                  { url: OFFICE_IMAGES.coffeeStation, alt: "Complimentary refreshment station" },
+                ].map((img, i) => (
+                  <div key={i} className="rounded-xl overflow-hidden shadow-sm border border-border aspect-[4/3] group">
+                    <img src={img.url} alt={img.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={400} height={300} />
                   </div>
                 ))}
               </div>
             </div>
           </section>
-        )}
+        </ScrollReveal>
 
-        {/* ═══ Insurance Section ═══ */}
-        <section className="py-12 px-4 bg-muted">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase mb-2" style={{ color: "#D4A853" }}>NO FINANCIAL SURPRISES</p>
-            <h2 className="text-xl md:text-2xl font-bold mb-2 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-              We Accept Your Insurance & Offer 0% Financing
-            </h2>
-            <div className="w-12 h-0.5 mx-auto mb-8" style={{ backgroundColor: "#D4A853" }} />
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
-              {INSURANCE_NAMES.map((name) => (
-                <div key={name} className="bg-card rounded-xl border border-border py-4 px-3 flex items-center justify-center shadow-sm">
-                  <span className="text-sm font-sans font-medium text-muted-foreground">{name}</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground mt-4 font-sans">
-              Don't see your plan? We also offer an in-house membership plan & CareCredit / Sunbit financing.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ Office Tour Photos ═══ */}
-        <section className="py-12 px-4 bg-background">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>STEP INSIDE</p>
-            <h2 className="text-xl md:text-2xl font-bold text-center mb-2 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-              Not Your Typical Dental Office
-            </h2>
-            <div className="w-12 h-0.5 mx-auto mb-8" style={{ backgroundColor: "#D4A853" }} />
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {[
-                { url: OFFICE_IMAGES.waitingRoom, alt: "Modern waiting room at Smile Avenue" },
-                { url: OFFICE_IMAGES.treatmentRoom, alt: "State-of-the-art treatment room with Netflix" },
-                { url: OFFICE_IMAGES.hallway, alt: "Welcoming hallway at Smile Avenue" },
-                { url: OFFICE_IMAGES.coffeeStation, alt: "Complimentary refreshment station" },
-              ].map((img, i) => (
-                <div key={i} className="rounded-xl overflow-hidden shadow-sm border border-border aspect-[4/3]">
-                  <img src={img.url} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" width={400} height={300} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ Extra Section (before/after, etc.) ═══ */}
+        {/* Extra section (before/after, etc.) */}
         {data.extraSection}
 
         {/* ╔═══════════════════════════════════════════════════╗
-           ║  SECTION 6: FAQ                                   ║
+           ║  SECTION 6: FAQ — Shared Component               ║
            ╚═══════════════════════════════════════════════════╝ */}
-        <section className="py-16 px-4 bg-muted">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>COMMON QUESTIONS</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-              Frequently Asked Questions
-            </h2>
-            <div className="w-12 h-0.5 mx-auto mb-8" style={{ backgroundColor: "#D4A853" }} />
-            <Accordion type="single" collapsible className="space-y-2">
-              {data.faqs.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-xl border border-border px-5">
-                  <AccordionTrigger className="text-left font-sans font-semibold text-foreground text-sm py-4">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4" style={{ fontFamily: "var(--font-body)" }}>{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </section>
+        <ScrollReveal>
+          <section className="section-padding bg-muted">
+            <div className="max-w-2xl mx-auto">
+              <p className="kicker text-center">COMMON QUESTIONS</p>
+              <h2 className="section-heading text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-8 rounded-full" />
+              <FaqAccordion items={data.faqs} />
+            </div>
+          </section>
+        </ScrollReveal>
 
         {/* ═══ Google Maps ═══ */}
-        <section className="py-12 px-4 bg-background">
+        <section className="section-padding bg-background">
           <div className="max-w-3xl mx-auto">
-            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>VISIT US</p>
-            <h2 className="text-xl md:text-2xl font-bold text-center mb-2 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
+            <p className="kicker text-center">VISIT US</p>
+            <h2 className="section-heading text-center">
               Find Us in {loc.name}
             </h2>
-            <p className="text-center text-sm text-muted-foreground mb-1 font-sans flex items-center justify-center gap-1.5"><MapPin className="w-4 h-4" /> {loc.address}</p>
+            <p className="text-center text-sm text-muted-foreground mb-1 font-sans flex items-center justify-center gap-1.5"><MapPin className="w-4 h-4 text-primary" /> {loc.address}</p>
             <p className="text-center text-xs text-muted-foreground mb-6 font-sans flex items-center justify-center gap-1.5"><Clock className="w-3.5 h-3.5" /> {loc.hours}</p>
             <div className="rounded-xl overflow-hidden border border-border aspect-video shadow-sm">
               <iframe src={loc.mapsEmbed} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={`Smile Avenue ${loc.name} location map`} />
@@ -617,17 +615,25 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         {/* ╔═══════════════════════════════════════════════════╗
            ║  SECTION 7: FINAL CTA — Close the deal           ║
            ╚═══════════════════════════════════════════════════╝ */}
-        <section className="py-20 px-4 text-white text-center relative overflow-hidden" style={{ background: "linear-gradient(135deg, #1a3f75, #2B5DA7)" }}>
+        <section className="py-20 px-4 text-white text-center relative overflow-hidden gradient-cta">
           <div className="absolute top-0 left-1/2 w-96 h-96 rounded-full opacity-5 bg-white -translate-y-1/2 -translate-x-1/2" />
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-display">
               {data.finalCtaHeadline}
             </h2>
-            <p className="opacity-85 mb-8 leading-relaxed text-lg" style={{ fontFamily: "var(--font-body)" }}>
+            <p className="opacity-85 mb-8 leading-relaxed text-lg font-body">
               {data.finalCtaBody}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <CtaButton href={ctaHref} target={ctaTarget} label={data.heroCtaLabel} onClick={() => fireConversion(conversionLabel)} />
+              <a
+                href={ctaHref}
+                target={ctaTarget}
+                rel={ctaTarget ? "noopener noreferrer" : undefined}
+                onClick={() => fireConversion(conversionLabel)}
+                className="btn-cta-light rounded-full !px-10 !py-4 text-lg"
+              >
+                {data.heroCtaLabel}
+              </a>
               <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="inline-flex items-center gap-2 text-white font-sans font-semibold text-lg underline hover:no-underline">
                 <Phone className="w-5 h-5" />{loc.phoneFormatted}
               </a>
@@ -642,7 +648,8 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
       </main>
 
       {/* ═══ FOOTER ═══ */}
-      <footer className="bg-foreground text-white/70 py-8 px-4 text-center text-sm font-sans">
+      <footer className="bg-foreground text-white/70 py-10 px-4 text-center text-sm font-sans">
+        <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-10 w-auto mx-auto mb-4 brightness-0 invert opacity-80" width={160} height={40} />
         <p className="font-semibold text-white mb-1">Smile Avenue Family Dentistry — {loc.name}</p>
         <p>{loc.address}</p>
         <p><a href={`tel:${loc.phone}`} className="text-white hover:underline">{loc.phoneFormatted}</a></p>
@@ -651,16 +658,35 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
       </footer>
 
       {/* ═══ MOBILE STICKY BAR ═══ */}
-      <div className="fixed bottom-0 inset-x-0 z-50 sm:hidden bg-white border-t border-border shadow-lg">
-        <div className="flex items-center justify-between px-3 py-2">
-          <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="flex-1 text-center text-sm font-sans font-bold py-2.5 rounded-l-full border border-border" style={{ color: "#2B5DA7" }}>
-            <Phone className="w-4 h-4 inline mr-1" />Call Now
+      <div className="fixed bottom-0 inset-x-0 z-50 lg:hidden bg-background border-t border-border shadow-[0_-2px_10px_hsl(var(--foreground)/0.08)]">
+        <div className="bg-primary/5 text-center py-1 border-b border-border">
+          <span className="text-[10px] font-sans font-semibold text-muted-foreground tracking-wide">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mr-1 animate-pulse" />
+            OPEN NOW · Same-Day Appointments Available
+          </span>
+        </div>
+        <div className="grid grid-cols-2 h-14">
+          <a
+            href={`tel:${loc.phone}`}
+            onClick={() => fireConversion(callLabel)}
+            className="flex items-center justify-center gap-2 text-sm font-sans font-bold text-foreground min-h-[48px] border-r border-border"
+          >
+            <Phone className="w-5 h-5 text-primary" />
+            Call Now
           </a>
-          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" onClick={() => fireConversion(bookLabel)} className="flex-1 text-center text-sm font-sans font-bold py-2.5 rounded-r-full text-white" style={{ backgroundColor: "#D4A853" }}>
+          <a
+            href={bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => fireConversion(bookLabel)}
+            className="flex items-center justify-center gap-2 text-sm font-sans font-bold min-h-[48px] bg-primary text-primary-foreground"
+          >
             Book Now
           </a>
         </div>
       </div>
+
+      <BackToTop />
     </>
   );
 };
