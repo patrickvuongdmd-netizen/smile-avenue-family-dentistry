@@ -140,7 +140,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         {data.isEmergency && (
           <div className="bg-destructive text-white text-center py-2 text-sm font-sans font-bold animate-pulse">
             🦷 Same-Day Emergency Appointments — Call{" "}
-            <a href={`tel:${loc.phone}`} onClick={() => fireConversion("lp_call_click")} className="underline">{loc.phoneFormatted}</a>{" "}
+            <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="underline">{loc.phoneFormatted}</a>{" "}
             Now
           </div>
         )}
