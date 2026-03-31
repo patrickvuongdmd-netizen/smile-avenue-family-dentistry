@@ -55,6 +55,13 @@ const KatyTx = () => {
         <title>Dentist in Katy, TX | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Your family dentist in Katy, TX. Personalized care, advanced comfort, and same-day appointments at 23541 Westheimer Pkwy. Serving Katy, Cinco Ranch, Cross Creek Ranch, and Firethorne families." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/katy-tx/" />
+        <meta property="og:title" content="Dentist in Katy, TX | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Your family dentist in Katy, TX. Personalized care, advanced comfort, and same-day appointments." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/katy-tx/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content={OFFICE_IMAGES.katyHero} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={KATY_PHONE} phoneFormatted={KATY_PHONE_FORMATTED} bookingUrl={KATY_BOOKING} />
 

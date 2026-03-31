@@ -277,6 +277,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        {heroImage && <meta property="og:image" content={heroImage.url} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={data.metaTitle} />
+        <meta name="twitter:description" content={data.metaDescription} />
+        {heroImage && <meta name="twitter:image" content={heroImage.url} />}
       </Helmet>
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <TrustStrip />

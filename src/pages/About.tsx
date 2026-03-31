@@ -34,6 +34,13 @@ const About = () => {
         <title>About Us | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Learn about Smile Avenue Family Dentistry — our story, our values, and the team of dedicated professionals behind your smile in Cypress and Katy, TX." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/about/" />
+        <meta property="og:title" content="About Us | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Learn about Smile Avenue Family Dentistry — our story, our values, and the team behind your smile in Cypress and Katy, TX." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/about/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content={OFFICE_IMAGES.aboutHero} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
 
