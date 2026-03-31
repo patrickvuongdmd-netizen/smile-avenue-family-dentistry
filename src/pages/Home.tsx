@@ -168,26 +168,29 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative hidden lg:block">
+              {/* Hero media — static image on mobile, autoplay video on desktop */}
+              <div className="aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
+                {/* Desktop autoplay video */}
                 <video
                   src={HERO_VIDEO_URL}
                   autoPlay
                   loop
                   muted
                   playsInline
-                  preload="none"
+                  preload="metadata"
                   poster={OFFICE_IMAGES.homepageHero}
-                  className="w-full h-full object-cover"
+                  className="hidden lg:block w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
+                {/* Mobile / tablet fallback image */}
                 <img
                   src={OFFICE_IMAGES.homepageHero}
                   alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice in Cypress and Katy, TX"
-                  className="absolute inset-0 w-full h-full object-cover -z-10"
+                  className="lg:hidden w-full h-full object-cover"
                   fetchPriority="high"
                   width={800}
                   height={600}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
