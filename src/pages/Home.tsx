@@ -337,8 +337,8 @@ const Home = () => {
         {/* TESTIMONIALS */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <p className="kicker text-center">PATIENT REVIEWS</p>
-            <h2 className="section-heading text-center">What Our Patients Say</h2>
+            <p className="kicker text-center">5,000+ FIVE-STAR REVIEWS</p>
+            <h2 className="section-heading text-center">Trusted by Houston Families</h2>
             <div className="grid md:grid-cols-3 gap-6 mt-10">
               {testimonials.map((t, i) => <TestimonialCard key={i} {...t} />)}
             </div>
