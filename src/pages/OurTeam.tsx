@@ -191,7 +191,7 @@ const OurTeam = () => {
                 </div>
               </div>
             </section>
-          </ScrollReveal>
+          </section>
         )}
 
         {/* FRONT OFFICE */}
