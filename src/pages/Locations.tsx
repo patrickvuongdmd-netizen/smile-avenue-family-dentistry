@@ -25,7 +25,7 @@ const locations = [
     bookingUrl: CYPRESS_BOOKING,
     pageUrl: "/cypress-tx/",
     communities: "Cypress, Bridgeland, Fairfield, Towne Lake",
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.2!2d-95.7351!3d29.9585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d0a4a0d3c7e7%3A0x5e3b4a7c8f9d2e1a!2s9212%20Fry%20Rd%20%23120%2C%20Cypress%2C%20TX%2077433!5e0!3m2!1sen!2sus!4v1",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
   },
   {
     name: "Katy Office",
