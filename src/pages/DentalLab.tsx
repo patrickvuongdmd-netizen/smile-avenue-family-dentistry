@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Zap, ScanLine, Clock, CheckCircle, Shield, Sparkles } from "lucide-react";
+import { PAGE_VIDEOS } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
@@ -87,6 +89,17 @@ const DentalLab = () => {
                   <p className="text-sm font-body text-muted-foreground">{p.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Video: Meet the Tools */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">SEE IT IN ACTION</p>
+            <h2 className="section-heading">Meet the Tools Behind Every Smile</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.dentalLab.youtubeId} title={PAGE_VIDEOS.dentalLab.title} />
             </div>
           </div>
         </section>

@@ -12,7 +12,8 @@ import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import { ReactNode } from "react";
-import { SERVICE_IMAGES } from "@/lib/images";
+import { SERVICE_IMAGES, SERVICE_VIDEOS } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 interface SubService {
   title: string;
@@ -420,6 +421,22 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             </div>
           </div>
         </section>
+
+        {/* VIDEO */}
+        {SERVICE_VIDEOS[data.serviceSlug] && (
+          <section className="section-padding bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">WATCH & LEARN</p>
+              <h2 className="section-heading">See How It Works</h2>
+              <div className="max-w-2xl mx-auto mt-8">
+                <LazyYouTube
+                  videoId={SERVICE_VIDEOS[data.serviceSlug].youtubeId}
+                  title={SERVICE_VIDEOS[data.serviceSlug].title}
+                />
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* FAQ */}
         <section className="section-padding bg-background">
