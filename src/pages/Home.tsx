@@ -132,6 +132,22 @@ const Home = () => {
                   <span className="font-semibold text-foreground">4.9</span>
                   <span>from 5,000+ verified reviews</span>
                 </div>
+
+                {/* Intent Quick-Paths */}
+                <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-border">
+                  <Link to="/patients/new-patient-hub" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Check className="w-3.5 h-3.5 text-primary" /> New Patient? Start Here
+                  </Link>
+                  <a href={`tel:${heroPhone}`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-destructive/10 border border-destructive/20 text-xs font-sans font-semibold text-destructive hover:bg-destructive/20 transition-all">
+                    <AlertCircle className="w-3.5 h-3.5" /> Dental Emergency
+                  </a>
+                  <Link to="/insurance" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Shield className="w-3.5 h-3.5 text-primary" /> Check Insurance
+                  </Link>
+                  <Link to="/free-consultation" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Sparkles className="w-3.5 h-3.5 text-primary" /> Free Consultation
+                  </Link>
+                </div>
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <img
