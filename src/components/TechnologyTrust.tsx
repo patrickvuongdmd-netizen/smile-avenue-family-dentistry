@@ -11,8 +11,8 @@ const techs = [
 const TechnologyTrust = () => (
   <section className="py-12 bg-background border-y border-border">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="kicker text-center">OUR TECHNOLOGY</p>
-      <h2 className="section-heading text-center text-2xl md:text-3xl">Advanced Tools for Better Care</h2>
+      <p className="kicker text-center">TRUSTED BY 5,000+ FAMILIES</p>
+      <h2 className="section-heading text-center text-2xl md:text-3xl">Modern Technology, Personalized Care</h2>
       {/* Desktop grid */}
       <div className="hidden sm:grid sm:grid-cols-5 gap-6 mt-8">
         {techs.map((t) => (
