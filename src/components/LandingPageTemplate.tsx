@@ -305,7 +305,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
               </a>
               <a
                 href={`tel:${loc.phone}`}
-                onClick={() => fireConversion("lp_call_click")}
+                onClick={() => fireConversion(callLabel)}
                 className="inline-flex items-center gap-2 text-white font-sans font-semibold text-lg underline hover:no-underline"
               >
                 <Phone className="w-5 h-5" />
