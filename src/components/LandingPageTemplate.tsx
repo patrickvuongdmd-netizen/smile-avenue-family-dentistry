@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Phone, Star, Shield, Clock, CreditCard, MessageCircle, Zap, Users, Sparkles, FlaskConical, Award, CheckCircle2, MapPin } from "lucide-react";
+import { Phone, Star, Shield, Clock, CreditCard, MessageCircle, Zap, Users, Sparkles, FlaskConical, Award, CheckCircle2, MapPin, Play } from "lucide-react";
 import { ReactNode } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import {
@@ -8,6 +8,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { DOCTOR_IMAGES, SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES, VIDEO_TESTIMONIALS } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
+import VideoCarousel from "@/components/VideoCarousel";
 
 /* ── Types ─────────────────────────────────────────────────── */
 
@@ -28,6 +31,13 @@ interface Testimonial {
   service: string;
 }
 
+interface DoctorFeature {
+  slug: string;
+  name: string;
+  credentials: string;
+  specialty: string;
+}
+
 export interface LandingPageData {
   location: "cypress" | "katy";
   pageType: "new-patient" | "emergency" | "invisalign" | "dental-implants";
@@ -37,6 +47,7 @@ export interface LandingPageData {
   heroSubheadline: string;
   heroCtaLabel: string;
   heroCtaType: "book" | "call";
+  heroImage?: string;
   isEmergency?: boolean;
   /** Reassurance line under hero CTA */
   heroReassurance?: string;
@@ -44,6 +55,10 @@ export interface LandingPageData {
   /** Quick trust bullets shown below benefits */
   trustBullets?: string[];
   testimonials?: Testimonial[];
+  /** Doctors to feature on this page */
+  doctors?: DoctorFeature[];
+  /** YouTube video IDs to show */
+  videos?: { youtubeId: string; title: string }[];
   extraSection?: ReactNode;
   faqs: FaqItem[];
   finalCtaHeadline: string;
@@ -142,7 +157,6 @@ const appendUtmParams = (baseUrl: string): string => {
 const buildJsonLd = (data: LandingPageData, loc: typeof LOCATIONS.cypress) => {
   const schemas: object[] = [];
 
-  // LocalBusiness / Dentist schema
   schemas.push({
     "@context": "https://schema.org",
     "@type": "Dentist",
@@ -175,7 +189,6 @@ const buildJsonLd = (data: LandingPageData, loc: typeof LOCATIONS.cypress) => {
     ],
   });
 
-  // FAQPage schema
   if (data.faqs.length > 0) {
     schemas.push({
       "@context": "https://schema.org",
@@ -194,6 +207,13 @@ const buildJsonLd = (data: LandingPageData, loc: typeof LOCATIONS.cypress) => {
   return schemas;
 };
 
+/* ── Insurance logos ──────────────────────────────────────── */
+
+const INSURANCE_NAMES = [
+  "Aetna", "Blue Cross Blue Shield", "Cigna", "Delta Dental",
+  "MetLife", "United Healthcare", "Guardian", "Humana",
+];
+
 /* ── Component ────────────────────────────────────────────── */
 
 const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
@@ -209,6 +229,11 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
   const conversionLabel = data.heroCtaType === "call" ? callLabel : bookLabel;
   const jsonLdSchemas = buildJsonLd(data, loc);
 
+  // Resolve hero image: explicit prop → service image mapping → fallback
+  const heroImageUrl = data.heroImage
+    || SERVICE_IMAGES[data.pageType === "new-patient" ? "dental-cleaning" : data.pageType === "emergency" ? "emergency-dentist" : data.pageType]?.url
+    || OFFICE_IMAGES.newPatientHero;
+
   return (
     <>
       <Helmet>
@@ -218,15 +243,15 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         <meta property="og:title" content={data.metaTitle} />
         <meta property="og:description" content={data.metaDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Smile-Avenue-Family-Dentistry.jpg.webp" />
+        <meta property="og:image" content={heroImageUrl} />
         {jsonLdSchemas.map((schema, i) => (
           <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
         ))}
       </Helmet>
 
       {/* ── STICKY HEADER ─────────────────────────────────── */}
-      <header className="fixed top-0 inset-x-0 z-50 bg-white shadow-sm">
-        <div className="flex items-center justify-between px-4 py-2 max-w-5xl mx-auto">
+      <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <div className="flex items-center justify-between px-4 py-2.5 max-w-5xl mx-auto">
           <a href="/" aria-label="Smile Avenue Home">
             <img
               src="https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/11/logo-mark.webp"
@@ -250,7 +275,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
             target={ctaTarget}
             rel={ctaTarget ? "noopener noreferrer" : undefined}
             onClick={() => fireConversion(conversionLabel)}
-            className="text-sm font-sans font-bold text-white px-4 py-2 rounded-full transition-opacity hover:opacity-90"
+            className="text-sm font-sans font-bold text-white px-5 py-2.5 rounded-full transition-all hover:opacity-90 hover:shadow-lg"
             style={{ backgroundColor: "#D4A853" }}
           >
             Book Now
@@ -261,7 +286,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
       <main className="pt-12 pb-16 sm:pb-0">
         {/* ── EMERGENCY URGENCY BANNER ───────────────────── */}
         {data.isEmergency && (
-          <div className="bg-destructive text-white text-center py-2.5 text-sm font-sans font-bold">
+          <div className="bg-destructive text-white text-center py-3 text-sm font-sans font-bold">
             <span className="inline-flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
@@ -273,86 +298,122 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           </div>
         )}
 
-        {/* ── HERO SECTION ───────────────────────────────── */}
-        <section className="text-white py-16 px-4" style={{ backgroundColor: "#2B5DA7" }}>
-          <div className="max-w-3xl mx-auto text-center">
-            <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              {data.heroHeadline}
-            </h1>
-            <p className="text-base md:text-lg opacity-90 mb-8 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
-              {data.heroSubheadline}
-            </p>
-            <a
-              href={ctaHref}
-              target={ctaTarget}
-              rel={ctaTarget ? "noopener noreferrer" : undefined}
-              onClick={() => fireConversion(conversionLabel)}
-              className="inline-block text-white text-lg font-sans font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-              style={{ backgroundColor: "#D4A853" }}
-            >
-              {data.heroCtaLabel}
-            </a>
+        {/* ── HERO SECTION — Full-width with background image ── */}
+        <section
+          className="relative min-h-[420px] md:min-h-[500px] flex items-center"
+          style={{
+            backgroundImage: `url(${heroImageUrl})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Dark overlay with gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
 
-            {/* Reassurance microcopy */}
-            {data.heroReassurance && (
-              <p className="mt-3 text-xs text-white/70 font-sans">{data.heroReassurance}</p>
-            )}
+          <div className="relative z-10 w-full py-16 md:py-20 px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="max-w-2xl">
+                {/* Kicker badge */}
+                <span
+                  className="inline-block text-xs font-sans font-bold tracking-[0.15em] uppercase mb-4 px-3 py-1 rounded-full"
+                  style={{ backgroundColor: "rgba(212, 168, 83, 0.9)", color: "#fff" }}
+                >
+                  {data.location === "cypress" ? "Cypress, TX" : "Katy, TX"} · {data.isEmergency ? "Same-Day Care" : "Now Accepting Patients"}
+                </span>
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mt-8 text-sm opacity-90">
-              <span className="flex items-center gap-1"><Star className="w-4 h-4 fill-yellow-400 text-yellow-400" /> 4.9 Stars</span>
-              <span className="hidden sm:inline text-white/40">|</span>
-              <span>5,000+ Reviews</span>
-              <span className="hidden sm:inline text-white/40">|</span>
-              <span className="flex items-center gap-1"><Zap className="w-4 h-4" /> Same-Day Available</span>
+                <h1
+                  className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-white"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  {data.heroHeadline}
+                </h1>
+                <p className="text-base md:text-lg text-white/85 mb-8 max-w-xl leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
+                  {data.heroSubheadline}
+                </p>
+
+                {/* CTA buttons */}
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={ctaHref}
+                    target={ctaTarget}
+                    rel={ctaTarget ? "noopener noreferrer" : undefined}
+                    onClick={() => fireConversion(conversionLabel)}
+                    className="inline-block text-white text-lg font-sans font-bold px-10 py-4 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                    style={{ backgroundColor: "#D4A853" }}
+                  >
+                    {data.heroCtaLabel}
+                  </a>
+                  {data.heroCtaType === "book" && (
+                    <a
+                      href={`tel:${loc.phone}`}
+                      onClick={() => fireConversion(callLabel)}
+                      className="inline-flex items-center gap-2 text-white font-sans font-semibold text-base px-6 py-4 rounded-full border-2 border-white/40 hover:border-white/70 transition-colors"
+                    >
+                      <Phone className="w-5 h-5" />
+                      {loc.phoneFormatted}
+                    </a>
+                  )}
+                </div>
+
+                {/* Reassurance */}
+                {data.heroReassurance && (
+                  <p className="mt-4 text-xs text-white/60 font-sans">
+                    ✓ {data.heroReassurance.split(" · ").join(" · ✓ ")}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </section>
 
         {/* ── SOCIAL PROOF STRIP ─────────────────────────── */}
-        <section className="bg-muted py-4">
-          <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-6 px-4 text-sm font-sans">
+        <section className="py-4 border-b border-border" style={{ backgroundColor: "#2B5DA7" }}>
+          <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-6 px-4 text-sm font-sans text-white">
             <div className="flex items-center gap-1.5">
               <img src="https://www.google.com/favicon.ico" alt="" className="w-4 h-4" loading="lazy" width={16} height={16} />
-              <span className="font-semibold text-foreground">4.9</span>
+              <span className="font-bold">4.9</span>
               <div className="flex" aria-label="5 out of 5 stars">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
             </div>
-            <span className="text-muted-foreground">5,000+ Google Reviews</span>
-            <span
-              className="text-xs font-bold px-2 py-1 rounded-full text-white"
-              style={{ backgroundColor: "#2B5DA7" }}
-            >
-              TOP RATED
+            <span className="text-white/80">5,000+ Google Reviews</span>
+            <span className="hidden sm:inline text-white/40">|</span>
+            <span className="hidden sm:flex items-center gap-1.5 text-white/80">
+              <Shield className="w-4 h-4" /> Most Insurance Accepted
+            </span>
+            <span className="hidden sm:inline text-white/40">|</span>
+            <span className="hidden sm:flex items-center gap-1.5 text-white/80">
+              <Zap className="w-4 h-4" /> Same-Day Available
             </span>
           </div>
         </section>
 
-        {/* ── BENEFITS ───────────────────────────────────── */}
-        <section className="py-14 px-4 bg-background">
+        {/* ── BENEFITS SECTION ───────────────────────────── */}
+        <section className="py-16 px-4 bg-background">
           <div className="max-w-5xl mx-auto">
+            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
+              WHY CHOOSE US
+            </p>
             <h2
-              className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground"
+              className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              Why Choose Smile Avenue {loc.name}
+              Why Families Choose Smile Avenue {loc.name}
             </h2>
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
+
+            <div className="grid sm:grid-cols-3 gap-8">
               {data.benefits.map((b) => (
-                <div key={b.title} className="text-center p-6 rounded-2xl border border-border bg-card shadow-sm">
+                <div key={b.title} className="text-center group">
                   <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4 text-white"
-                    style={{ backgroundColor: "#2B5DA7" }}
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white shadow-lg transition-transform group-hover:scale-105"
+                    style={{ background: "linear-gradient(135deg, #2B5DA7, #1a3f75)" }}
                   >
                     {b.icon}
                   </div>
-                  <h3 className="font-sans font-bold text-foreground mb-2">{b.title}</h3>
+                  <h3 className="font-sans font-bold text-foreground mb-2 text-lg">{b.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
                     {b.description}
                   </p>
@@ -362,10 +423,10 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
 
             {/* Trust bullets */}
             {data.trustBullets && data.trustBullets.length > 0 && (
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8 text-sm text-muted-foreground font-sans">
+              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-10 text-sm font-sans">
                 {data.trustBullets.map((bullet, i) => (
-                  <span key={i} className="flex items-center gap-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
+                  <span key={i} className="flex items-center gap-1.5 text-foreground">
+                    <CheckCircle2 className="w-4 h-4 flex-shrink-0" style={{ color: "#D4A853" }} />
                     {bullet}
                   </span>
                 ))}
@@ -374,26 +435,90 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           </div>
         </section>
 
+        {/* ── MEET YOUR DOCTORS ──────────────────────────── */}
+        {data.doctors && data.doctors.length > 0 && (
+          <section className="py-16 px-4" style={{ backgroundColor: "#f7f4ef" }}>
+            <div className="max-w-5xl mx-auto">
+              <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
+                YOUR CARE TEAM
+              </p>
+              <h2
+                className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                Meet Your {loc.name} Doctors
+              </h2>
+              <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
+
+              <div className={`grid gap-8 ${data.doctors.length <= 2 ? "sm:grid-cols-2 max-w-2xl mx-auto" : data.doctors.length === 3 ? "sm:grid-cols-3 max-w-4xl mx-auto" : "sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto"}`}>
+                {data.doctors.map((doc) => {
+                  const img = DOCTOR_IMAGES[doc.slug];
+                  return (
+                    <div key={doc.slug} className="text-center group">
+                      <div className="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden shadow-lg border-4 border-white group-hover:shadow-xl transition-shadow">
+                        {img && (
+                          <img
+                            src={img.url}
+                            alt={img.alt}
+                            className="w-full h-full object-cover object-top"
+                            loading="lazy"
+                            width={160}
+                            height={160}
+                          />
+                        )}
+                      </div>
+                      <h3 className="font-sans font-bold text-foreground text-lg">{doc.name}</h3>
+                      <p className="text-sm font-sans font-medium" style={{ color: "#2B5DA7" }}>{doc.credentials}</p>
+                      <p className="text-xs text-muted-foreground mt-1" style={{ fontFamily: "var(--font-body)" }}>{doc.specialty}</p>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* CTA under doctors */}
+              <div className="text-center mt-10">
+                <a
+                  href={ctaHref}
+                  target={ctaTarget}
+                  rel={ctaTarget ? "noopener noreferrer" : undefined}
+                  onClick={() => fireConversion(conversionLabel)}
+                  className="inline-block text-white text-base font-sans font-bold px-8 py-3.5 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                  style={{ backgroundColor: "#D4A853" }}
+                >
+                  {data.heroCtaLabel}
+                </a>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* ── TESTIMONIALS ────────────────────────────────── */}
         {data.testimonials && data.testimonials.length > 0 && (
-          <section className="py-14 px-4 bg-card border-y border-border">
+          <section className="py-16 px-4 bg-card border-y border-border">
             <div className="max-w-4xl mx-auto">
+              <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
+                PATIENT STORIES
+              </p>
               <h2
-                className="text-2xl md:text-3xl font-bold text-center mb-10 text-foreground"
+                className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 What Our Patients Say
               </h2>
+              <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
+
               <div className="grid sm:grid-cols-2 gap-6">
                 {data.testimonials.map((t, i) => (
-                  <blockquote key={i} className="bg-background rounded-2xl border border-border p-6 shadow-sm">
-                    <div className="flex gap-0.5 mb-3">
+                  <blockquote key={i} className="bg-background rounded-2xl border border-border p-6 shadow-sm relative">
+                    {/* Decorative quote mark */}
+                    <span className="absolute -top-3 left-6 text-4xl font-serif leading-none" style={{ color: "#D4A853" }}>"</span>
+                    <div className="flex gap-0.5 mb-3 mt-1">
                       {[...Array(5)].map((_, j) => (
                         <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-sm text-foreground leading-relaxed mb-4 italic" style={{ fontFamily: "var(--font-body)" }}>
-                      "{t.quote}"
+                    <p className="text-sm text-foreground leading-relaxed mb-4" style={{ fontFamily: "var(--font-body)" }}>
+                      {t.quote}
                     </p>
                     <footer className="text-xs font-sans">
                       <span className="font-bold text-foreground">{t.name}</span>
@@ -406,22 +531,125 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           </section>
         )}
 
+        {/* ── VIDEO TESTIMONIALS ──────────────────────────── */}
+        {data.videos && data.videos.length > 0 && (
+          <section className="py-16 px-4 bg-background">
+            <div className="max-w-5xl mx-auto">
+              <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
+                WATCH & LEARN
+              </p>
+              <h2
+                className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                See the Smile Avenue Difference
+              </h2>
+              <div className="w-12 h-0.5 mx-auto mb-10" style={{ backgroundColor: "#D4A853" }} />
+
+              <VideoCarousel videos={data.videos} />
+            </div>
+          </section>
+        )}
+
         {/* ── MID-PAGE CTA ────────────────────────────────── */}
-        <section className="py-10 px-4 text-center bg-background">
-          <div className="max-w-xl mx-auto">
-            <a
-              href={ctaHref}
-              target={ctaTarget}
-              rel={ctaTarget ? "noopener noreferrer" : undefined}
-              onClick={() => fireConversion(conversionLabel)}
-              className="inline-block text-white text-base font-sans font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl"
-              style={{ backgroundColor: "#D4A853" }}
-            >
-              {data.heroCtaLabel}
-            </a>
-            <p className="mt-3 text-xs text-muted-foreground font-sans">
-              {data.heroReassurance || "Booking takes less than 60 seconds · We confirm within 1 hour"}
+        <section
+          className="py-14 px-4 text-center relative overflow-hidden"
+          style={{ background: "linear-gradient(135deg, #2B5DA7, #1a3f75)" }}
+        >
+          {/* Decorative circles */}
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-5 bg-white -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full opacity-5 bg-white translate-y-1/2 -translate-x-1/2" />
+
+          <div className="relative z-10 max-w-xl mx-auto">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-3" style={{ fontFamily: "var(--font-display)" }}>
+              Ready to Experience the Difference?
+            </h2>
+            <p className="text-white/80 text-sm mb-6" style={{ fontFamily: "var(--font-body)" }}>
+              Join thousands of happy patients at Smile Avenue {loc.name}. Booking takes just 60 seconds.
             </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={ctaHref}
+                target={ctaTarget}
+                rel={ctaTarget ? "noopener noreferrer" : undefined}
+                onClick={() => fireConversion(conversionLabel)}
+                className="inline-block text-white text-base font-sans font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                style={{ backgroundColor: "#D4A853" }}
+              >
+                {data.heroCtaLabel}
+              </a>
+              <a
+                href={`tel:${loc.phone}`}
+                onClick={() => fireConversion(callLabel)}
+                className="inline-flex items-center gap-2 text-white/90 font-sans font-semibold text-sm hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                Or Call {loc.phoneFormatted}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── INSURANCE LOGOS ─────────────────────────────── */}
+        <section className="py-12 px-4 bg-muted">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase mb-2" style={{ color: "#D4A853" }}>
+              WE ACCEPT YOUR INSURANCE
+            </p>
+            <h2
+              className="text-xl md:text-2xl font-bold mb-2 text-foreground"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Use Your Benefits — We Handle the Paperwork
+            </h2>
+            <div className="w-12 h-0.5 mx-auto mb-8" style={{ backgroundColor: "#D4A853" }} />
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
+              {INSURANCE_NAMES.map((name) => (
+                <div key={name} className="bg-card rounded-xl border border-border py-4 px-3 flex items-center justify-center shadow-sm">
+                  <span className="text-sm font-sans font-medium text-muted-foreground">{name}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground mt-4 font-sans">
+              Don't see your plan? We also offer an affordable in-house membership plan & 0% CareCredit financing.
+            </p>
+          </div>
+        </section>
+
+        {/* ── OFFICE TOUR PHOTOS ──────────────────────────── */}
+        <section className="py-12 px-4 bg-background">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
+              OUR OFFICE
+            </p>
+            <h2
+              className="text-xl md:text-2xl font-bold text-center mb-2 text-foreground"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              A Dental Office You'll Actually Enjoy Visiting
+            </h2>
+            <div className="w-12 h-0.5 mx-auto mb-8" style={{ backgroundColor: "#D4A853" }} />
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                { url: OFFICE_IMAGES.waitingRoom, alt: "Modern waiting room at Smile Avenue" },
+                { url: OFFICE_IMAGES.treatmentRoom, alt: "State-of-the-art treatment room" },
+                { url: OFFICE_IMAGES.hallway, alt: "Welcoming hallway at Smile Avenue" },
+                { url: OFFICE_IMAGES.coffeeStation, alt: "Complimentary refreshment station" },
+              ].map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden shadow-sm border border-border aspect-[4/3]">
+                  <img
+                    src={img.url}
+                    alt={img.alt}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    width={400}
+                    height={300}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -429,21 +657,26 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         {data.extraSection}
 
         {/* ── FAQ ─────────────────────────────────────────── */}
-        <section className="py-14 px-4 bg-muted">
+        <section className="py-16 px-4 bg-muted">
           <div className="max-w-2xl mx-auto">
+            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
+              COMMON QUESTIONS
+            </p>
             <h2
-              className="text-2xl md:text-3xl font-bold text-center mb-8 text-foreground"
+              className="text-2xl md:text-3xl font-bold text-center mb-3 text-foreground"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Frequently Asked Questions
             </h2>
+            <div className="w-12 h-0.5 mx-auto mb-8" style={{ backgroundColor: "#D4A853" }} />
+
             <Accordion type="single" collapsible className="space-y-2">
               {data.faqs.map((faq, i) => (
-                <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-xl border border-border px-4">
-                  <AccordionTrigger className="text-left font-sans font-semibold text-foreground text-sm">
+                <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-xl border border-border px-5">
+                  <AccordionTrigger className="text-left font-sans font-semibold text-foreground text-sm py-4">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
+                  <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4" style={{ fontFamily: "var(--font-body)" }}>
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -453,18 +686,24 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </section>
 
         {/* ── GOOGLE MAPS ─────────────────────────────────── */}
-        <section className="py-10 px-4 bg-background">
+        <section className="py-12 px-4 bg-background">
           <div className="max-w-3xl mx-auto">
+            <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase text-center mb-2" style={{ color: "#D4A853" }}>
+              VISIT US
+            </p>
             <h2
-              className="text-xl font-bold text-center mb-2 text-foreground"
+              className="text-xl md:text-2xl font-bold text-center mb-2 text-foreground"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Find Us in {loc.name}
             </h2>
-            <p className="text-center text-sm text-muted-foreground mb-4 font-sans flex items-center justify-center gap-1.5">
+            <p className="text-center text-sm text-muted-foreground mb-1 font-sans flex items-center justify-center gap-1.5">
               <MapPin className="w-4 h-4" /> {loc.address}
             </p>
-            <div className="rounded-xl overflow-hidden border border-border aspect-video">
+            <p className="text-center text-xs text-muted-foreground mb-6 font-sans flex items-center justify-center gap-1.5">
+              <Clock className="w-3.5 h-3.5" /> {loc.hours}
+            </p>
+            <div className="rounded-xl overflow-hidden border border-border aspect-video shadow-sm">
               <iframe
                 src={loc.mapsEmbed}
                 width="100%"
@@ -480,15 +719,20 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </section>
 
         {/* ── FINAL CTA ───────────────────────────────────── */}
-        <section className="py-16 px-4 text-white text-center" style={{ backgroundColor: "#2B5DA7" }}>
-          <div className="max-w-2xl mx-auto">
+        <section
+          className="py-20 px-4 text-white text-center relative overflow-hidden"
+          style={{ background: "linear-gradient(135deg, #1a3f75, #2B5DA7)" }}
+        >
+          <div className="absolute top-0 left-1/2 w-96 h-96 rounded-full opacity-5 bg-white -translate-y-1/2 -translate-x-1/2" />
+
+          <div className="relative z-10 max-w-2xl mx-auto">
             <h2
-              className="text-2xl md:text-3xl font-bold mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {data.finalCtaHeadline}
             </h2>
-            <p className="opacity-90 mb-8 leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
+            <p className="opacity-85 mb-8 leading-relaxed text-lg" style={{ fontFamily: "var(--font-body)" }}>
               {data.finalCtaBody}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -511,8 +755,8 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
                 {loc.phoneFormatted}
               </a>
             </div>
-            <p className="mt-4 text-xs text-white/60 font-sans">
-              {data.heroReassurance || "Booking takes less than 60 seconds · We confirm within 1 hour"}
+            <p className="mt-5 text-xs text-white/50 font-sans">
+              ✓ {(data.heroReassurance || "Booking takes less than 60 seconds · We confirm within 1 hour").split(" · ").join(" · ✓ ")}
             </p>
           </div>
         </section>

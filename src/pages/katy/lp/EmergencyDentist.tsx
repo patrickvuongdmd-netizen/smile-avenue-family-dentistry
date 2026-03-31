@@ -23,9 +23,18 @@ const data: LandingPageData = {
     "CareCredit & Insurance Accepted",
     "Sedation Options Available",
   ],
+  doctors: [
+    { slug: "sameer-bilal", name: "Dr. Sameer Bilal", credentials: "DDS", specialty: "General & Emergency Dentistry" },
+    { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "General & Emergency Dentistry" },
+  ],
+  videos: [
+    { youtubeId: "HB_uTHUfm-o", title: "What To Do During a Dental Emergency | Quick Tips" },
+    { youtubeId: "y1YYnlsar3U", title: "Is It Time for a Root Canal?" },
+    { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
+  ],
   testimonials: [
     { quote: "My son chipped his front tooth at a baseball game on Saturday morning. Smile Avenue saw him within 45 minutes and fixed it beautifully. We're so grateful they're open on weekends.", name: "Mark D.", service: "Emergency Patient" },
-    { quote: "I had the worst toothache of my life and they got me in the same morning. The pain was gone within an hour of walking in the door. This is what dental care should be.", name: "Angela W.", service: "Emergency Patient" },
+    { quote: "I was in severe pain from an abscess and they got me in the same morning. The pain was gone within an hour of walking in the door. This is what dental care should be.", name: "Angela W.", service: "Emergency Patient" },
   ],
   faqs: [
     { question: "What counts as a dental emergency?", answer: "Severe toothaches, knocked-out teeth, broken or cracked teeth, lost fillings or crowns, dental abscesses, facial swelling, uncontrolled bleeding, and jaw injuries all require immediate care. When in doubt, call us — we'll advise you right away." },

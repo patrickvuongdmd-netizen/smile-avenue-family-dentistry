@@ -22,6 +22,15 @@ const data: LandingPageData = {
     "Single Teeth to Full Arch",
     "Sedation Options Available",
   ],
+  doctors: [
+    { slug: "peter-kim", name: "Dr. Peter Kim", credentials: "DDS", specialty: "Implants & Oral Surgery" },
+    { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "Restorative Dentistry" },
+  ],
+  videos: [
+    { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
+    { youtubeId: "wiocP_nsFPY", title: "Can One Visit Change Your Smile?" },
+    { youtubeId: "1nicifZjXoA", title: "Restore Confidence with Advanced Bone Grafting" },
+  ],
   testimonials: [
     { quote: "I had been missing my front tooth for years and was embarrassed to smile. The implant looks completely natural — even my dentist friends can't tell. The in-house lab made the whole process so much faster.", name: "Robert H.", service: "Single Implant" },
     { quote: "I got All-on-4 implants and it changed my life. I can eat anything, smile without thinking about it, and it was more affordable than I expected with their financing options.", name: "Patricia W.", service: "All-on-X Patient" },
@@ -29,11 +38,15 @@ const data: LandingPageData = {
   extraSection: (
     <section className="py-14 px-4 bg-muted">
       <div className="max-w-3xl mx-auto text-center">
+        <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase mb-2" style={{ color: "#D4A853" }}>
+          FULL ARCH SOLUTIONS
+        </p>
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
-          Full Arch Solutions — All-on-X Implants
+          All-on-X Dental Implants
         </h2>
+        <div className="w-12 h-0.5 mx-auto mb-6" style={{ backgroundColor: "#D4A853" }} />
         <p className="text-muted-foreground mb-4 leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
-          Missing most or all of your teeth? All-on-X dental implants replace a full arch with just 4–6 implants — a permanent, beautiful solution that lets you eat, smile, and live with confidence.
+          Missing most or all of your teeth? All-on-X dental implants replace a full arch with just 4–6 implants — a permanent, beautiful solution.
         </p>
         <ul className="text-sm text-muted-foreground space-y-2 mb-6 max-w-md mx-auto text-left" style={{ fontFamily: "var(--font-body)" }}>
           <li className="flex items-start gap-2"><span style={{ color: "#D4A853" }}>✓</span> Permanent — no more removable dentures</li>
@@ -41,15 +54,6 @@ const data: LandingPageData = {
           <li className="flex items-start gap-2"><span style={{ color: "#D4A853" }}>✓</span> In-house lab = faster delivery & precise fit</li>
           <li className="flex items-start gap-2"><span style={{ color: "#D4A853" }}>✓</span> Sedation available for anxious patients</li>
         </ul>
-        <a
-          href="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block text-white font-sans font-bold px-6 py-3 rounded-full transition-transform hover:scale-105"
-          style={{ backgroundColor: "#D4A853" }}
-        >
-          Book Your All-on-X Consultation
-        </a>
       </div>
     </section>
   ),

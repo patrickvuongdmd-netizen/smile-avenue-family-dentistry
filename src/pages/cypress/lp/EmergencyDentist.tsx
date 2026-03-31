@@ -23,6 +23,16 @@ const data: LandingPageData = {
     "CareCredit & Insurance Accepted",
     "Sedation Options Available",
   ],
+  doctors: [
+    { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "General & Emergency Dentistry" },
+    { slug: "shayan-alkhiro", name: "Dr. Shayan Alkhiro", credentials: "DDS", specialty: "General Dentistry" },
+    { slug: "laith-yahya", name: "Dr. Laith Yahya", credentials: "DDS", specialty: "General Dentistry" },
+  ],
+  videos: [
+    { youtubeId: "HB_uTHUfm-o", title: "What To Do During a Dental Emergency | Quick Tips" },
+    { youtubeId: "y1YYnlsar3U", title: "Is It Time for a Root Canal?" },
+    { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
+  ],
   testimonials: [
     { quote: "I broke my tooth on a Saturday and they got me in within an hour. The pain was gone immediately. I can't thank this team enough — they truly saved my smile.", name: "Michael T.", service: "Emergency Patient" },
     { quote: "I was in severe pain from an abscess and they squeezed me in the same morning I called. Dr. Bilal was calm, reassuring, and fixed my tooth quickly. Amazing care.", name: "Jennifer L.", service: "Emergency Patient" },

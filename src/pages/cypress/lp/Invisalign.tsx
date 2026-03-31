@@ -23,6 +23,15 @@ const data: LandingPageData = {
     "Virtually Invisible",
     "Teens & Adults Welcome",
   ],
+  doctors: [
+    { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "Invisalign & Cosmetic Dentistry" },
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "Invisalign Provider" },
+  ],
+  videos: [
+    { youtubeId: "qMXDWzTh3Cs", title: "Essential Teeth Care Tips for Your Invisalign Journey" },
+    { youtubeId: "nS2MUEQXbWE", title: "Invisalign Patient Testimonial" },
+    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
+  ],
   testimonials: [
     { quote: "I was self-conscious about my smile for years. After 10 months of Invisalign at Smile Avenue, I can't stop smiling. The process was so easy — and nobody even noticed I was wearing aligners!", name: "Amanda K.", service: "Invisalign Patient" },
     { quote: "My teenage daughter finished her Invisalign treatment in 8 months. The staff made her feel comfortable at every visit. The results are absolutely stunning — worth every penny.", name: "Lisa P.", service: "Teen Invisalign" },
@@ -30,11 +39,15 @@ const data: LandingPageData = {
   extraSection: (
     <section className="py-14 px-4 bg-muted">
       <div className="max-w-3xl mx-auto text-center">
+        <p className="text-xs font-sans font-bold tracking-[0.15em] uppercase mb-2" style={{ color: "#D4A853" }}>
+          REAL RESULTS
+        </p>
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground" style={{ fontFamily: "var(--font-display)" }}>
           Real Smiles, Real Results
         </h2>
+        <div className="w-12 h-0.5 mx-auto mb-6" style={{ backgroundColor: "#D4A853" }} />
         <p className="text-muted-foreground mb-8" style={{ fontFamily: "var(--font-body)" }}>
-          See actual before-and-after transformations from our Invisalign patients. Straighter teeth, more confidence — without metal braces.
+          See actual before-and-after transformations from our Invisalign patients.
         </p>
         <div className="max-w-2xl mx-auto">
           <img
