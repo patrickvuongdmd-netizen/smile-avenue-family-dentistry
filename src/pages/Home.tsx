@@ -356,23 +356,13 @@ const Home = () => {
         {/* INSURANCE */}
         <InsuranceLogoBar />
 
-        {/* BEFORE/AFTER PREVIEW */}
+        {/* SMILE GALLERY CTA */}
         <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
+          <div className="container mx-auto text-center max-w-2xl">
             <p className="kicker">REAL RESULTS</p>
-            <h2 className="section-heading">See the Transformations</h2>
-            <div className="grid sm:grid-cols-3 gap-6 mt-10 max-w-4xl mx-auto">
-              {["Dental Implants", "Veneers", "Invisalign"].map((label, i) => (
-                <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
-                  <div className="grid grid-cols-2">
-                    <div className="aspect-square bg-muted flex items-center justify-center text-xs font-sans text-muted-foreground border-r border-border">Before</div>
-                    <div className="aspect-square bg-muted flex items-center justify-center text-xs font-sans text-muted-foreground">After</div>
-                  </div>
-                  <div className="p-3 text-center"><span className="text-sm font-sans font-semibold text-foreground">{label}</span></div>
-                </div>
-              ))}
-            </div>
-            <Link to="/smile-gallery" className="btn-secondary mt-8 inline-flex">View Full Gallery</Link>
+            <h2 className="section-heading">See Real Patient Transformations</h2>
+            <p className="section-body">Browse before-and-after photos from real Smile Avenue patients — dental implants, veneers, Invisalign, and more.</p>
+            <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
           </div>
         </section>
 
