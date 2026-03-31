@@ -110,10 +110,10 @@ const NewPatientHub = () => {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    Book Appointment
+                    Book Your First Visit
                   </a>
-                  <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary">
-                    Call Us
+                  <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary flex items-center gap-2">
+                    <Phone className="w-4 h-4" /> Call {CYPRESS_PHONE_FORMATTED}
                   </a>
                 </div>
               </div>
