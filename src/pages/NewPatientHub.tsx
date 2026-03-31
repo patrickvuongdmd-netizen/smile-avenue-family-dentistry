@@ -124,6 +124,17 @@ const NewPatientHub = () => {
           </div>
         </section>
 
+        {/* Video: Your First Visit */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH</p>
+            <h2 className="section-heading">What to Expect on Your First Visit</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.newPatient.youtubeId} title={PAGE_VIDEOS.newPatient.title} />
+            </div>
+          </div>
+        </section>
+
         {/* 3-STEP WALKTHROUGH */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
