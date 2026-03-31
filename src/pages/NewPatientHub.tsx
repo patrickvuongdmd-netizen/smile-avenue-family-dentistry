@@ -298,7 +298,7 @@ const NewPatientHub = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
-                Book Appointment
+                Book Your First Visit
               </a>
               <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
                 Call {CYPRESS_PHONE_FORMATTED}

@@ -121,9 +121,9 @@ const Specials = () => {
 
         <section className="section-padding gradient-cta text-center">
           <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Don't Wait — These Offers Won't Last</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Book today to lock in your special pricing.</p>
-            <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Now</a>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">These Offers Won't Last — Book Today</h2>
+            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Lock in your special pricing before availability runs out. Online booking takes 60 seconds.</p>
+            <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Online Now</a>
           </div>
         </section>
       </main>
