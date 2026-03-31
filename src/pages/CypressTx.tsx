@@ -327,20 +327,21 @@ const CypressTx = () => {
         {/* FINAL CTA */}
         <section className="gradient-cta py-16 md:py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4" style={{ color: 'hsl(0 0% 100%)' }}>
-              Ready to Book Your Cypress Appointment?
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              Book Your Cypress Dental Appointment Today
             </h2>
-            <p className="font-body text-lg mb-8 max-w-xl mx-auto" style={{ color: 'hsl(0 0% 100% / 0.85)' }}>
-              Schedule your visit today at our Cypress office. Your best smile is closer than you think.
+            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto">
+              Join 300+ families who rate us 4.9 stars. Same-day appointments available at our Fry Road office.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-block bg-background text-foreground font-sans font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity">
-                Book at Cypress
+              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
+                Book Online — Takes 60 Seconds
               </a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="inline-block bg-transparent border-2 border-background text-background font-sans font-semibold px-8 py-4 rounded-xl hover:bg-background/10 transition-colors">
+              <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
                 Call {CYPRESS_PHONE_FORMATTED}
               </a>
             </div>
+            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Most insurance accepted · 0% financing · No obligation</p>
           </div>
         </section>
       </main>
