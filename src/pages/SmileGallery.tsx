@@ -10,6 +10,8 @@ import beforeAfterImplants from "@/assets/gallery/before-after-implants.jpg";
 import beforeAfterVeneers from "@/assets/gallery/before-after-veneers.jpg";
 import beforeAfterWhitening from "@/assets/gallery/before-after-whitening.jpg";
 import beforeAfterInvisalign from "@/assets/gallery/before-after-invisalign.jpg";
+import beforeAfterCrown from "@/assets/gallery/before-after-crown.jpg";
+import beforeAfterAllon4 from "@/assets/gallery/before-after-allon4.jpg";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -17,24 +19,13 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 
 const categories = ["All", "Implants", "Veneers", "Whitening", "Invisalign", "Crowns"];
 
-const beforeAfterPhotos = [
-  { src: beforeAfterImplants, alt: "Before and after smile transformation — dental implants at Smile Avenue", label: "Dental Implants" },
-  { src: beforeAfterVeneers, alt: "Before and after smile transformation — porcelain veneers at Smile Avenue", label: "Porcelain Veneers" },
-  { src: beforeAfterWhitening, alt: "Before and after smile transformation — teeth whitening at Smile Avenue", label: "Teeth Whitening" },
-  { src: beforeAfterInvisalign, alt: "Before and after smile transformation — Invisalign at Smile Avenue", label: "Invisalign" },
-];
-
 const galleryItems = [
-  { category: "Implants", label: "Single Implant — Front Tooth", before: "Missing front tooth", after: "Natural-looking implant" },
-  { category: "Implants", label: "All-on-4 Full Arch", before: "Multiple missing teeth", after: "Full arch restoration" },
-  { category: "Veneers", label: "Porcelain Veneers — Full Set", before: "Uneven, stained teeth", after: "Uniform, bright smile" },
-  { category: "Veneers", label: "Minimal-Prep Veneers", before: "Small gaps and chips", after: "Seamless, natural result" },
-  { category: "Whitening", label: "In-Office Whitening", before: "Yellow, stained teeth", after: "8 shades whiter" },
-  { category: "Whitening", label: "Take-Home Whitening", before: "Coffee and wine stains", after: "Bright, even tone" },
-  { category: "Invisalign", label: "Adult Invisalign", before: "Crowded lower teeth", after: "Straight, aligned smile" },
-  { category: "Invisalign", label: "Teen Invisalign", before: "Overbite with spacing", after: "Corrected bite and alignment" },
-  { category: "Crowns", label: "Custom Porcelain Crown", before: "Cracked molar", after: "Natural porcelain crown" },
-  { category: "Crowns", label: "Zirconia Crown", before: "Large filling failure", after: "Durable, natural crown" },
+  { category: "Implants", src: beforeAfterImplants, label: "Dental Implants", alt: "Before and after dental implants transformation at Smile Avenue Family Dentistry" },
+  { category: "Implants", src: beforeAfterAllon4, label: "All-on-4 Full Arch", alt: "Before and after All-on-4 full arch implant restoration at Smile Avenue" },
+  { category: "Veneers", src: beforeAfterVeneers, label: "Porcelain Veneers", alt: "Before and after porcelain veneers smile makeover at Smile Avenue" },
+  { category: "Whitening", src: beforeAfterWhitening, label: "Teeth Whitening", alt: "Before and after professional teeth whitening at Smile Avenue" },
+  { category: "Invisalign", src: beforeAfterInvisalign, label: "Invisalign", alt: "Before and after Invisalign clear aligner treatment at Smile Avenue" },
+  { category: "Crowns", src: beforeAfterCrown, label: "Custom Porcelain Crown", alt: "Before and after custom porcelain crown at Smile Avenue" },
 ];
 
 const SmileGallery = () => {
@@ -42,7 +33,6 @@ const SmileGallery = () => {
   const filtered = active === "All" ? galleryItems : galleryItems.filter(g => g.category === active);
 
   useDocTitle("Smile Gallery | Smile Avenue Family Dentistry");
-
 
   return (
     <>
@@ -67,25 +57,6 @@ const SmileGallery = () => {
               <p className="section-body">Every smile tells a story. Browse real results from patients at Smile Avenue — proof that the smile you've always wanted is within reach.</p>
             </div>
 
-            {/* Real Before/After Photos */}
-            <div className="grid sm:grid-cols-2 gap-6 mb-14 max-w-4xl mx-auto">
-              {beforeAfterPhotos.map((photo, i) => (
-                <div key={i} className="rounded-2xl overflow-hidden border border-border shadow-sm bg-card">
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="w-full h-auto"
-                    loading={i < 2 ? undefined : "lazy"}
-                    width={1024}
-                    height={768}
-                  />
-                  <div className="px-4 py-3 text-center">
-                    <span className="text-sm font-sans font-semibold text-foreground">{photo.label}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
             {/* Filters */}
             <div className="flex flex-wrap justify-center gap-2 mb-10">
               {categories.map(cat => (
@@ -96,16 +67,20 @@ const SmileGallery = () => {
             </div>
 
             {/* Gallery Grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {filtered.map((item, i) => (
-                <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
-                  <div className="grid grid-cols-2">
-                    <div className="aspect-square bg-muted flex items-center justify-center text-xs font-sans text-muted-foreground p-2 text-center border-r border-border">Before<br />{item.before}</div>
-                    <div className="aspect-square bg-muted flex items-center justify-center text-xs font-sans text-muted-foreground p-2 text-center">After<br />{item.after}</div>
-                  </div>
-                  <div className="p-4">
+                <div key={i} className="rounded-2xl overflow-hidden border border-border shadow-sm bg-card">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-auto"
+                    loading={i < 2 ? undefined : "lazy"}
+                    width={1024}
+                    height={1024}
+                  />
+                  <div className="px-4 py-3 text-center">
                     <span className="text-[10px] font-sans font-bold tracking-wider uppercase text-primary">{item.category}</span>
-                    <h3 className="font-sans text-sm font-semibold text-foreground mt-1">{item.label}</h3>
+                    <h3 className="text-sm font-sans font-semibold text-foreground mt-0.5">{item.label}</h3>
                   </div>
                 </div>
               ))}
