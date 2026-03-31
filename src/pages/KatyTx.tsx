@@ -69,6 +69,7 @@ const KatyTx = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={KATY_PHONE} phoneFormatted={KATY_PHONE_FORMATTED} bookingUrl={KATY_BOOKING} />
+      <TrustStrip />
 
       <main className="pb-14 lg:pb-0">
         {/* HERO */}
