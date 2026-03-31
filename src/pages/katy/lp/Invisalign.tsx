@@ -24,16 +24,16 @@ const data: LandingPageData = {
         <p className="text-muted-foreground mb-8" style={{ fontFamily: "var(--font-body)" }}>
           See the transformations our Invisalign patients have experienced. Straighter teeth, more confidence — without metal braces.
         </p>
-        <div className="grid grid-cols-2 gap-4">
-          {[1, 2].map((i) => (
-            <div key={i} className="bg-card rounded-xl border border-border p-4">
-              <div className="flex items-center gap-2 mb-2 text-xs font-sans font-semibold text-muted-foreground">
-                <span className="px-2 py-0.5 rounded bg-destructive/10 text-destructive">Before</span>
-                <span className="px-2 py-0.5 rounded text-white" style={{ backgroundColor: "#2B5DA7" }}>After</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Invisalign Patient {i}</p>
-            </div>
-          ))}
+        <div className="max-w-2xl mx-auto">
+          <img
+            src={beforeAfterInvisalign}
+            alt="Before and after Invisalign treatment at Smile Avenue Katy TX"
+            className="w-full h-auto rounded-2xl border border-border shadow-sm"
+            loading="lazy"
+            width={1024}
+            height={768}
+          />
+          <p className="text-sm font-sans font-semibold text-foreground mt-3">Invisalign — Actual Patient Result</p>
         </div>
       </div>
     </section>
