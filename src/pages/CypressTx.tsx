@@ -49,16 +49,16 @@ const faqs = [
 ];
 
 const CypressTx = () => {
-  useDocTitle("Dentist in Cypress, TX | Smile Avenue Family Dentistry");
+  useDocTitle("Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue");
 
   return (
     <>
       <Helmet>
-        <title>Dentist in Cypress, TX | Smile Avenue Family Dentistry</title>
-        <meta name="description" content="Your family dentist in Cypress, TX. Personalized care, advanced comfort, and same-day appointments at 9212 Fry Rd. Serving Cypress, Bridgeland, Fairfield, and Towne Lake families." />
+        <title>Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue</title>
+        <meta name="description" content="Top-rated family dentist in Cypress, TX on Fry Road. 4.9★ from 300+ reviews. Same-day appointments, dental implants, Invisalign, emergency care. Serving Bridgeland, Fairfield, Towne Lake. Call (832) 648-1756." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
-        <meta property="og:title" content="Dentist in Cypress, TX | Smile Avenue Family Dentistry" />
-        <meta property="og:description" content="Your family dentist in Cypress, TX. Personalized care, advanced comfort, and same-day appointments." />
+        <meta property="og:title" content="Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue" />
+        <meta property="og:description" content="Top-rated family dentist in Cypress, TX. 4.9★ from 300+ reviews. Same-day appointments. Serving Bridgeland, Fairfield & Towne Lake." />
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
