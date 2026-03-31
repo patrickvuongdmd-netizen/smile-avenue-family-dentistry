@@ -24,6 +24,8 @@ interface FaqItem {
 
 export interface LandingPageData {
   location: "cypress" | "katy";
+  /** Page type for granular conversion tracking */
+  pageType: "new-patient" | "emergency" | "invisalign" | "dental-implants";
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
