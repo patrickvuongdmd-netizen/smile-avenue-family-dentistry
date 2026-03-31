@@ -15,14 +15,6 @@ const locations = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", location: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   useDocTitle("Contact Us | Smile Avenue Family Dentistry");
 
 
