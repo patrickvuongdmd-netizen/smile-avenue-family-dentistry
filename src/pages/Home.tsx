@@ -315,9 +315,9 @@ const Home = () => {
                   Same-day appointments available · Most insurance accepted · 0% financing
                 </p>
               </div>
-              <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-primary shrink-0">
                 Book Online Now
-              </a>
+              </button>
             </div>
           </div>
         </section>
