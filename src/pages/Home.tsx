@@ -108,8 +108,8 @@ const Home = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="kicker">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
-                <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.5rem] leading-tight">The Dental Experience Your Family Deserves</h1>
-                <p className="section-body">Netflix in every room. Warm blankets. Doctors who listen. Smile Avenue isn't your typical dentist — it's where Houston families come for exceptional care, advanced technology, and a team that treats you like family.</p>
+                <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.75rem] leading-[1.1]">Finally, a Dentist You'll Actually Look Forward To</h1>
+                <p className="section-body">Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second. This is dentistry done differently.</p>
                 {/* Location selector */}
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
