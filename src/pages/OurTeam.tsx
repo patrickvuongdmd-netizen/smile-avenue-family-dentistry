@@ -210,7 +210,7 @@ const OurTeam = () => {
                 </div>
               </div>
             </section>
-          </ScrollReveal>
+          </section>
         )}
 
         {/* CAREERS CTA */}
