@@ -512,8 +512,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </div>
               </div>
               <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">
-                Book Appointment
+                Book Appointment Online
               </a>
+              <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>
             </div>
           </div>
         </section>
