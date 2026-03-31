@@ -47,16 +47,16 @@ const faqs = [
 ];
 
 const KatyTx = () => {
-  useDocTitle("Dentist in Katy, TX | Smile Avenue Family Dentistry");
+  useDocTitle("Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue");
 
   return (
     <>
       <Helmet>
-        <title>Dentist in Katy, TX | Smile Avenue Family Dentistry</title>
-        <meta name="description" content="Your family dentist in Katy, TX. Personalized care, advanced comfort, and same-day appointments at 23541 Westheimer Pkwy. Serving Katy, Cinco Ranch, Cross Creek Ranch, and Firethorne families." />
+        <title>Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue</title>
+        <meta name="description" content="Top-rated family dentist in Katy, TX on Westheimer Parkway. 4.9★ from 200+ reviews. Same-day appointments, dental implants, Invisalign, emergency care. Serving Cinco Ranch, Firethorne, Cross Creek Ranch. Call (281) 800-5008." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/katy-tx/" />
-        <meta property="og:title" content="Dentist in Katy, TX | Smile Avenue Family Dentistry" />
-        <meta property="og:description" content="Your family dentist in Katy, TX. Personalized care, advanced comfort, and same-day appointments." />
+        <meta property="og:title" content="Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue" />
+        <meta property="og:description" content="Top-rated family dentist in Katy, TX. 4.9★ from 200+ reviews. Same-day appointments. Serving Cinco Ranch, Firethorne & Cross Creek Ranch." />
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/katy-tx/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
