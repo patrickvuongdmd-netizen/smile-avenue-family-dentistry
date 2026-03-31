@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Zap, ScanLine, Clock, CheckCircle, Shield, Sparkles } from "lucide-react";
+import { PAGE_VIDEOS } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
