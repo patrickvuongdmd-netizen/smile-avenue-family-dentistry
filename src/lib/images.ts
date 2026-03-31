@@ -191,6 +191,34 @@ export const VIDEO_TESTIMONIALS = [
 
 export const HERO_VIDEO_URL = "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Smile-Avenue-TX-NOVEMBER-HERO-VIDEO-MADISON-FEEL_WIP2.mp4";
 
+// YouTube channel videos mapped to service slugs for embedding on relevant pages
+export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }> = {
+  "dental-implants": { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
+  "all-on-x-implants": { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
+  "cosmetic-dentistry": { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
+  "teeth-whitening": { youtubeId: "QRpwLPBJkS0", title: "Get a Brighter, Whiter Smile — Fast & Hassle-Free!" },
+  "veneers": { youtubeId: "qMAw3tPCLxk", title: "Porcelain Veneers: Strong, Stunning, and Built to Last" },
+  "invisalign": { youtubeId: "qMXDWzTh3Cs", title: "Essential Teeth Care Tips for Your Invisalign Journey" },
+  "dental-crowns": { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
+  "root-canal": { youtubeId: "y1YYnlsar3U", title: "Is It Time for a Root Canal?" },
+  "sedation-dentistry": { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
+  "pediatric-dentistry": { youtubeId: "5NHuCuktCPI", title: "Making Dental Visits Fun – Children's Dental Health Month" },
+  "preventive-dentistry": { youtubeId: "O91Y4M9liYs", title: "Comprehensive Gum Care: Prevent, Treat, and Heal" },
+  "dental-cleaning": { youtubeId: "O91Y4M9liYs", title: "Comprehensive Gum Care: Prevent, Treat, and Heal" },
+  "oral-surgery": { youtubeId: "1nicifZjXoA", title: "Restore Confidence with Advanced Bone Grafting" },
+  "tooth-extraction": { youtubeId: "1nicifZjXoA", title: "Restore Confidence with Advanced Bone Grafting" },
+  "emergency-dentist": { youtubeId: "HB_uTHUfm-o", title: "What To Do During a Dental Emergency | Quick Tips" },
+  "dental-bridges": { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
+  "dentures": { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
+};
+
+// Additional standalone page videos
+export const PAGE_VIDEOS = {
+  newPatient: { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
+  dentalLab: { youtubeId: "pvWwvLOzCY0", title: "Meet the Tools Behind Every Smile" },
+  cypressIntro: { youtubeId: "ovn9F8ascxc", title: "Dentist Cypress: Smile Avenue Family Dentistry" },
+};
+
 export const SOCIAL_LINKS = {
   facebook: "https://www.facebook.com/SmileAvenueFamilyDentistry/",
   instagram: "https://www.instagram.com/smileavenuefamilydentistry/",
