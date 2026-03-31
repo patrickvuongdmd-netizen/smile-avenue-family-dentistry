@@ -187,10 +187,10 @@ const NewPatientHub = () => {
         {/* PATIENT FORMS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">SAVE TIME AT YOUR VISIT</p>
-            <h2 className="section-heading">Download Patient Forms</h2>
+            <p className="kicker">SKIP THE CLIPBOARD</p>
+            <h2 className="section-heading">Complete Your Forms from Home</h2>
             <p className="section-body max-w-2xl mx-auto">
-              Complete your paperwork at home and bring it with you, or fill out our digital forms online after booking.
+              Fill out your paperwork before you arrive and walk straight into your appointment — no waiting room delays.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mt-10 max-w-3xl mx-auto text-left">
               {patientForms.map((form) => (
