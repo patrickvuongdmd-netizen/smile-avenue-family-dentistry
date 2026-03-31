@@ -422,17 +422,14 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* VIDEO */}
-        {SERVICE_VIDEOS[data.serviceSlug] && (
+        {/* VIDEO CAROUSEL */}
+        {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
           <section className="section-padding bg-background">
             <div className="container mx-auto text-center">
               <p className="kicker">WATCH & LEARN</p>
               <h2 className="section-heading">See How It Works</h2>
-              <div className="max-w-2xl mx-auto mt-8">
-                <LazyYouTube
-                  videoId={SERVICE_VIDEOS[data.serviceSlug].youtubeId}
-                  title={SERVICE_VIDEOS[data.serviceSlug].title}
-                />
+              <div className="mt-8">
+                <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
               </div>
             </div>
           </section>
