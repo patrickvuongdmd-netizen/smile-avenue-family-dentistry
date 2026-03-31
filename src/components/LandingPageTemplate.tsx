@@ -64,6 +64,20 @@ const LOCATIONS = {
   },
 };
 
+/* ── Conversion tracking helper ────────────────────────────── */
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+const fireConversion = (label: string) => {
+  window.gtag?.("event", "conversion", {
+    send_to: `AW-XXXXXXXXX/${label}`,
+  });
+};
+
 /* ── Component ────────────────────────────────────────────── */
 
 const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
@@ -72,6 +86,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
 
   const ctaHref = data.heroCtaType === "call" ? `tel:${loc.phone}` : loc.booking;
   const ctaTarget = data.heroCtaType === "book" ? "_blank" : undefined;
+  const conversionLabel = data.heroCtaType === "call" ? "lp_call_click" : "lp_book_click";
 
   return (
     <>
