@@ -340,9 +340,9 @@ const KatyTx = () => {
               Join 200+ families who rate us 4.9 stars. Same-day appointments available at our Westheimer Parkway office.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">
                 Book Online — Takes 60 Seconds
-              </a>
+              </button>
               <a href={`tel:${KATY_PHONE}`} className="btn-cta-outline">
                 Call {KATY_PHONE_FORMATTED}
               </a>
