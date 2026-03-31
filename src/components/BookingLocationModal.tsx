@@ -60,6 +60,11 @@ const BookingLocationModal = ({ open, onClose }: BookingLocationModalProps) => {
           <div>
             <h2 className="font-display text-xl font-bold text-foreground">Choose Your Location</h2>
             <p className="text-sm font-body text-muted-foreground mt-0.5">Select the office nearest you to book online.</p>
+            <div className="flex flex-wrap items-center gap-3 mt-2 text-xs font-sans text-muted-foreground">
+              <span className="flex items-center gap-1"><Star className="w-3 h-3 fill-primary text-primary" />4.9★ from 5,000+ reviews</span>
+              <span className="flex items-center gap-1"><Shield className="w-3 h-3 text-primary" />Insurance accepted</span>
+              <span className="flex items-center gap-1"><CreditCard className="w-3 h-3 text-primary" />0% financing</span>
+            </div>
           </div>
           <button
             onClick={onClose}
