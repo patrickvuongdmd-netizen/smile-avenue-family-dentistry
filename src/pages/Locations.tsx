@@ -25,7 +25,7 @@ const locations = [
     bookingUrl: CYPRESS_BOOKING,
     pageUrl: "/cypress-tx/",
     communities: "Cypress, Bridgeland, Fairfield, Towne Lake",
-    mapPlaceholder: "Cypress Google Map",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.2!2d-95.7351!3d29.9585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d0a4a0d3c7e7%3A0x5e3b4a7c8f9d2e1a!2s9212%20Fry%20Rd%20%23120%2C%20Cypress%2C%20TX%2077433!5e0!3m2!1sen!2sus!4v1",
   },
   {
     name: "Katy Office",
@@ -37,7 +37,7 @@ const locations = [
     bookingUrl: KATY_BOOKING,
     pageUrl: "/katy-tx/",
     communities: "Katy, Cinco Ranch, Seven Meadows, Firethorne",
-    mapPlaceholder: "Katy Google Map",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.2!2d-95.7563!3d29.7354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e5a4b0c3d7f1%3A0x3a2b4c5d6e7f8091!2s23541%20Westheimer%20Pkwy%20%23170%2C%20Katy%2C%20TX%2077494!5e0!3m2!1sen!2sus!4v1",
   },
 ];
 
