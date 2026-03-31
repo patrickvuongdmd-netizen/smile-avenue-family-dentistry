@@ -15,12 +15,6 @@ import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import { OFFICE_IMAGES } from "@/lib/images";
-import ServiceCard from "@/components/ServiceCard";
-import TestimonialCard from "@/components/TestimonialCard";
-import BeforeAfterCard from "@/components/BeforeAfterCard";
-import DoctorCard from "@/components/DoctorCard";
-import FaqAccordion from "@/components/FaqAccordion";
-import { OFFICE_IMAGES } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";

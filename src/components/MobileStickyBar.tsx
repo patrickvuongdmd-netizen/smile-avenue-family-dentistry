@@ -22,7 +22,7 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
       {/* Open Now indicator */}
       <div className="bg-primary/5 text-center py-1 border-b border-border">
         <span className="text-[10px] font-sans font-semibold text-muted-foreground tracking-wide">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-1 animate-pulse" />
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mr-1 animate-pulse" />
           OPEN NOW · Same-Day Appointments Available
         </span>
       </div>
