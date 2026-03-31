@@ -266,6 +266,7 @@ const Home = () => {
         </section>
 
         {/* BRAND STATEMENT */}
+        <LazySection>
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
@@ -276,6 +277,7 @@ const Home = () => {
           </div>
         </section>
         </ScrollReveal>
+        </LazySection>
 
         {/* DOCTORS */}
         <ScrollReveal>
