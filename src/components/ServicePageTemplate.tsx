@@ -238,8 +238,17 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       },
       telephone: loc.phoneFormatted,
       geo: { "@type": "GeoCoordinates", latitude: loc.geo.lat, longitude: loc.geo.lng },
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: data.location === "cypress" ? "3000" : "2000", bestRating: "5", worstRating: "1" },
     },
     areaServed: { "@type": "City", name: `${loc.name}, TX` },
+  };
+
+  const speakableJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: data.metaTitle,
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+    url: canonicalUrl,
   };
 
   const faqJsonLd = {

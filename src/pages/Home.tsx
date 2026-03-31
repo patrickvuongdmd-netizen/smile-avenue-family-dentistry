@@ -100,6 +100,22 @@ const Home = () => {
         <link rel="alternate" hrefLang="es" href="https://www.smileavenuefamilydentistry.com/es/" />
         <link rel="alternate" hrefLang="en" href="https://www.smileavenuefamilydentistry.com/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.smileavenuefamilydentistry.com/" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Smile Avenue Family Dentistry",
+          url: "https://www.smileavenuefamilydentistry.com",
+          logo: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "5000", bestRating: "5", worstRating: "1" },
+          sameAs: ["https://www.facebook.com/smileavenuedentistry", "https://www.instagram.com/smileavenuedentistry", "https://g.page/smileavenuedentistry"]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+          url: "https://www.smileavenuefamilydentistry.com/"
+        })}</script>
       </Helmet>
       <Navbar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <TrustStrip />
