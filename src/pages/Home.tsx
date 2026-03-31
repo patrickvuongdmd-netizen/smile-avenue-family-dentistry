@@ -106,38 +106,38 @@ const Home = () => {
 
       <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
         {/* HERO */}
-        <section className="section-padding bg-background">
+        <section className="px-4 sm:px-6 lg:px-8 py-8 md:py-20 bg-background">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               <div>
-                <p className="kicker">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
-                <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.75rem] leading-[1.1]">Finally, a Dentist You'll Actually Look Forward To</h1>
-                <p className="section-body">Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second. This is dentistry done differently.</p>
+                <p className="kicker mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
+                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Finally, a Dentist You'll Actually Look Forward To</h1>
+                <p className="font-body text-base md:text-lg leading-relaxed mb-4 md:mb-8 text-muted-foreground">Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second.</p>
                 {/* Location selector */}
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-2 mb-3 md:mb-4">
                   <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
-                  <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
-                  <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
+                  <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
+                  <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
                 </div>
-                <div className="flex flex-wrap gap-3 mb-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary">Book Online — Takes 60 Seconds</button>
-                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2"><Phone className="w-4 h-4" /> Call {heroPhoneFmt}</a>
+                <div className="flex flex-wrap gap-2 md:gap-3 mb-2 md:mb-3">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm md:text-base">Book Online — Takes 60 Seconds</button>
+                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2 text-sm md:text-base"><Phone className="w-4 h-4" /> Call {heroPhoneFmt}</a>
                 </div>
-                <p className="text-xs font-sans text-muted-foreground mb-3">
-                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />We confirm your appointment within 1 hour
-                  <span className="mx-2 text-border">·</span>
-                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />Most insurance accepted
-                  <span className="mx-2 text-border">·</span>
-                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />0% financing available
+                <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-2 md:mb-3">
+                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
+                  <span className="mx-1.5 md:mx-2 text-border">·</span>
+                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Insurance accepted
+                  <span className="mx-1.5 md:mx-2 text-border">·</span>
+                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />0% financing
                 </p>
-                <div className="flex items-center gap-3 text-sm font-sans text-muted-foreground">
-                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
+                <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm font-sans text-muted-foreground">
+                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 md:w-3.5 md:h-3.5 fill-primary text-primary" />)}</div>
                   <span className="font-semibold text-foreground">4.9</span>
-                  <span>from 5,000+ verified reviews</span>
+                  <span>from 5,000+ reviews</span>
                 </div>
 
-                {/* Intent Quick-Paths */}
-                <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-border">
+                {/* Intent Quick-Paths — hidden on mobile, shown on md+ */}
+                <div className="hidden md:flex flex-wrap gap-2 mt-5 pt-5 border-t border-border">
                   <Link to="/patients/new-patient-hub" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
                     <Check className="w-3.5 h-3.5 text-primary" /> New Patient? Start Here
                   </Link>
@@ -152,7 +152,7 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative hidden lg:block">
                 <video
                   src={HERO_VIDEO_URL}
                   autoPlay
@@ -163,9 +163,7 @@ const Home = () => {
                   poster={OFFICE_IMAGES.homepageHero}
                   className="w-full h-full object-cover"
                 />
-                {/* Dark gradient overlay for readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
-                {/* Fallback image for browsers that block autoplay */}
                 <img
                   src={OFFICE_IMAGES.homepageHero}
                   alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice in Cypress and Katy, TX"
