@@ -158,6 +158,7 @@ const Home = () => {
                   loop
                   muted
                   playsInline
+                  preload="none"
                   poster={OFFICE_IMAGES.homepageHero}
                   className="w-full h-full object-cover"
                 />
