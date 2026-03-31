@@ -258,6 +258,22 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       {mobileOpen && (
         <div className="md:hidden bg-background border-t border-border pb-4 max-h-[80vh] overflow-y-auto">
           <div className="container mx-auto px-4 pt-4 flex flex-col gap-1 font-sans text-sm font-medium text-foreground">
+            {/* Intent quick-paths — most common reasons to visit */}
+            <div className="grid grid-cols-2 gap-2 pb-3 mb-2 border-b border-border">
+              <Link to="/patients/new-patient-hub" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-primary/5 border border-primary/20 text-primary font-semibold text-xs">
+                <Check className="w-4 h-4 shrink-0" /> New Patient? Start Here
+              </Link>
+              <Link to={`${locationPrefix}/emergency-dentist`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-destructive/5 border border-destructive/20 text-destructive font-semibold text-xs">
+                <AlertCircle className="w-4 h-4 shrink-0" /> Emergency
+              </Link>
+              <Link to="/insurance" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-card border border-border text-foreground font-semibold text-xs">
+                <Shield className="w-4 h-4 shrink-0 text-primary" /> Insurance
+              </Link>
+              <Link to="/services" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-card border border-border text-foreground font-semibold text-xs">
+                <Sparkles className="w-4 h-4 shrink-0 text-primary" /> All Services
+              </Link>
+            </div>
+
             {/* Services accordion */}
             <button
               className="flex items-center justify-between py-3 w-full text-left"
