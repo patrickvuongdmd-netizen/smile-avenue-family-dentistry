@@ -157,6 +157,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
               href={ctaHref}
               target={ctaTarget}
               rel={ctaTarget ? "noopener noreferrer" : undefined}
+              onClick={() => fireConversion(conversionLabel)}
               className="inline-block text-white text-lg font-sans font-bold px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105"
               style={{ backgroundColor: "#D4A853" }}
             >
