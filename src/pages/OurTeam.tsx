@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
-import ScrollReveal from "@/components/ScrollReveal";
+
 import { DOCTOR_IMAGES, TEAM_MEMBERS } from "@/lib/images";
 import { TEAM_IMAGES } from "@/lib/team-images";
 
@@ -118,7 +118,7 @@ const OurTeam = () => {
 
         {/* DOCTORS */}
         {filteredDoctors.length > 0 && (
-          <ScrollReveal>
+            <section className="section-padding section-alt animate-in fade-in duration-500">
             <section className="section-padding section-alt">
               <div className="container mx-auto">
                 <div className="flex items-center gap-2 mb-8">
@@ -153,12 +153,12 @@ const OurTeam = () => {
                 </div>
               </div>
             </section>
-          </ScrollReveal>
+          </section>
         )}
 
         {/* HYGIENISTS */}
         {filteredHygienists.length > 0 && (
-          <ScrollReveal>
+            <section className="section-padding bg-background animate-in fade-in duration-500">
             <section className="section-padding bg-background">
               <div className="container mx-auto">
                 <div className="flex items-center gap-2 mb-8">
@@ -172,12 +172,12 @@ const OurTeam = () => {
                 </div>
               </div>
             </section>
-          </ScrollReveal>
+          </section>
         )}
 
         {/* ASSISTANTS */}
         {filteredAssistants.length > 0 && (
-          <ScrollReveal>
+            <section className="section-padding section-alt animate-in fade-in duration-500">
             <section className="section-padding section-alt">
               <div className="container mx-auto">
                 <div className="flex items-center gap-2 mb-8">
@@ -191,12 +191,12 @@ const OurTeam = () => {
                 </div>
               </div>
             </section>
-          </ScrollReveal>
+          </section>
         )}
 
         {/* FRONT OFFICE */}
         {filteredFrontOffice.length > 0 && (
-          <ScrollReveal>
+          <section className="section-padding bg-background animate-in fade-in duration-500">
             <section className="section-padding bg-background">
               <div className="container mx-auto">
                 <div className="flex items-center gap-2 mb-8">
@@ -210,7 +210,7 @@ const OurTeam = () => {
                 </div>
               </div>
             </section>
-          </ScrollReveal>
+          </section>
         )}
 
         {/* CAREERS CTA */}
