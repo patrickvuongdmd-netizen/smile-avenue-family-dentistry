@@ -184,6 +184,15 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/es" element={<Espanol />} />
+              {/* Google Ads Landing Pages */}
+              <Route path="/cypress-tx/lp/new-patient" element={<CypressNewPatientLP />} />
+              <Route path="/cypress-tx/lp/emergency-dentist" element={<CypressEmergencyLP />} />
+              <Route path="/cypress-tx/lp/invisalign" element={<CypressInvisalignLP />} />
+              <Route path="/cypress-tx/lp/dental-implants" element={<CypressDentalImplantsLP />} />
+              <Route path="/katy-tx/lp/new-patient" element={<KatyNewPatientLP />} />
+              <Route path="/katy-tx/lp/emergency-dentist" element={<KatyEmergencyLP />} />
+              <Route path="/katy-tx/lp/invisalign" element={<KatyInvisalignLP />} />
+              <Route path="/katy-tx/lp/dental-implants" element={<KatyDentalImplantsLP />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
