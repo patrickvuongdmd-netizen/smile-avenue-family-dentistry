@@ -226,11 +226,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
-              <LanguageToggle className="hidden lg:flex" />
-              <a href={`tel:${phone}`} className="flex items-center gap-1.5 text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors whitespace-nowrap">
-                <Phone className="w-4 h-4" />
-                <span className="hidden lg:inline">{phoneFormatted}</span>
-              </a>
               <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
                 Book Now
               </button>
