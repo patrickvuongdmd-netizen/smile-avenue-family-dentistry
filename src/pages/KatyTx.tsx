@@ -74,6 +74,27 @@ const KatyTx = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue" />
         <meta name="twitter:description" content="4.9★ family dentist in Katy, TX on Westheimer Parkway. Same-day appointments, dental implants, Invisalign. In-house lab. Call (281) 800-5008." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Dentist",
+          name: "Smile Avenue Family Dentistry - Katy",
+          url: "https://www.smileavenuefamilydentistry.com/katy-tx/",
+          telephone: "(281) 800-5008",
+          address: { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+          geo: { "@type": "GeoCoordinates", latitude: "29.7357", longitude: "-95.7575" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "2000", bestRating: "5", worstRating: "1" },
+          openingHoursSpecification: [
+            { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:30", closes: "17:00" },
+            { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "08:00", closes: "14:00" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Dentist in Katy, TX | Smile Avenue",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+          url: "https://www.smileavenuefamilydentistry.com/katy-tx/"
+        })}</script>
       </Helmet>
       <Navbar phone={KATY_PHONE} phoneFormatted={KATY_PHONE_FORMATTED} bookingUrl={KATY_BOOKING} />
       <TrustStrip />

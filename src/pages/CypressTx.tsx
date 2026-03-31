@@ -76,6 +76,24 @@ const CypressTx = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dentist in Cypress, TX | Fry Rd Family Dentist | Smile Avenue" />
         <meta name="twitter:description" content="4.9★ family dentist in Cypress, TX on Fry Road. Same-day appointments, dental implants, Invisalign. In-house lab. Call (832) 648-1756." />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Dentist",
+          name: "Smile Avenue Family Dentistry - Cypress",
+          url: "https://www.smileavenuefamilydentistry.com/cypress-tx/",
+          telephone: "(832) 648-1756",
+          address: { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+          geo: { "@type": "GeoCoordinates", latitude: "29.9691", longitude: "-95.6972" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "3000", bestRating: "5", worstRating: "1" },
+          openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:30", closes: "17:00" }]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Dentist in Cypress, TX | Smile Avenue",
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+          url: "https://www.smileavenuefamilydentistry.com/cypress-tx/"
+        })}</script>
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
