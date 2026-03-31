@@ -270,10 +270,8 @@ const KatyTx = () => {
             <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
               <div>
                 <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading">Common Questions About Our Katy Office</h2>
-                <div className="bg-muted rounded-2xl aspect-square hidden lg:flex items-center justify-center mt-6">
-                  <span className="text-sm font-sans text-muted-foreground">FAQ Image</span>
-                </div>
+                <h2 className="section-heading">Katy Dental FAQs</h2>
+                <p className="section-body">Have more questions about our Katy office? Call <a href={`tel:${KATY_PHONE}`} className="text-primary hover:underline">{KATY_PHONE_FORMATTED}</a>.</p>
               </div>
               <FaqAccordion items={faqs} />
             </div>
