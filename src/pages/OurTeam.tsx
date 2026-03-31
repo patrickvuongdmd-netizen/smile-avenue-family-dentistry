@@ -173,7 +173,7 @@ const OurTeam = () => {
 
         {/* ASSISTANTS */}
         {filteredAssistants.length > 0 && (
-          <section className="section-padding section-alt animate-in fade-in duration-500">
+          <section className="section-padding section-alt">
             <div className="container mx-auto">
               <div className="flex items-center gap-2 mb-8">
                 <Users className="w-5 h-5 text-primary" />
