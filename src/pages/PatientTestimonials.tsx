@@ -91,8 +91,11 @@ const PatientTestimonials = () => {
             </div>
 
             <div className="text-center mt-8">
-              <a href="https://g.page/smileavenuedentistry/review" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center gap-2" aria-label="Leave a review on Google">
-                Leave Us a Review <ExternalLink className="w-4 h-4" />
+              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-cypress" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center gap-2" aria-label="Leave a review for Cypress on Google">
+                Review Cypress <ExternalLink className="w-4 h-4" />
+              </a>
+              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-katy" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center gap-2" aria-label="Leave a review for Katy on Google">
+                Review Katy <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
