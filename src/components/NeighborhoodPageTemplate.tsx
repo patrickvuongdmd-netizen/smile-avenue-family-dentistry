@@ -100,6 +100,7 @@ const insuranceLogos = [
 const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
   const loc = LOCATIONS[data.location];
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.slug}/`;
+  const [bookingModalOpen, setBookingModalOpen] = useState(false);
   useDocTitle(data.metaTitle);
 
   const jsonLd = {
