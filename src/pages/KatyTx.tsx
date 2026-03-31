@@ -148,15 +148,57 @@ const KatyTx = () => {
           </div>
         </section>
 
-        {/* MEET OUR DOCTORS */}
+        {/* ABOUT OUR KATY LOCATION — unique geo content */}
+        <ScrollReveal>
         <section className="section-padding bg-background">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto">
+              <p className="kicker">ABOUT OUR KATY DENTAL OFFICE</p>
+              <h2 className="section-heading">Why Katy, TX Families Choose Smile Avenue on Westheimer Parkway</h2>
+              <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
+                <p>
+                  Katy, Texas has become one of the fastest-growing family communities west of Houston — and Smile Avenue is proud to be the neighborhood dentist these families trust. Located at 23541 Westheimer Pkwy Ste #170, just minutes from LaCenterra at Cinco Ranch and the Katy Mills corridor, our office is easy to reach from every corner of the Katy area.
+                </p>
+                <p>
+                  We serve families throughout <Link to="/katy-tx/cinco-ranch-dentist" className="text-primary hover:underline">Cinco Ranch</Link>, <Link to="/katy-tx/firethorne-dentist" className="text-primary hover:underline">Firethorne</Link>, <Link to="/katy-tx/cross-creek-ranch-dentist" className="text-primary hover:underline">Cross Creek Ranch</Link>, <Link to="/katy-tx/fulshear-dentist" className="text-primary hover:underline">Fulshear</Link>, Elyson, Cane Island, and the <Link to="/katy-tx/westheimer-parkway-dentist" className="text-primary hover:underline">Westheimer Parkway</Link> corridor. Whether your kids are in Katy ISD schools or you commute along I-10, our Westheimer Parkway location puts exceptional dental care within a short drive.
+                </p>
+                <p>
+                  Our Katy team — led by founder Dr. Patrick Vuong alongside Dr. Sameer Bilal and Dr. Sarah Maredia — specializes in comprehensive family dentistry, <Link to="/katy-tx/cosmetic-dentistry" className="text-primary hover:underline">cosmetic transformations</Link>, and complex <Link to="/katy-tx/dental-implants" className="text-primary hover:underline">implant cases</Link>. With our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link>, we fabricate crowns, veneers, and aligners on-site for faster, more precise results. That means fewer visits and better outcomes for Katy families.
+                </p>
+              </div>
+              {/* Local landmark badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-sans font-semibold text-foreground">Minutes from LaCenterra</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
+                  <ShoppingBag className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-sans font-semibold text-foreground">Near Katy Mills & I-10</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
+                  <GraduationCap className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-sans font-semibold text-foreground">Serving Katy ISD Families</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
+                  <Building className="w-5 h-5 text-primary" />
+                  <span className="text-xs font-sans font-semibold text-foreground">Central to Cinco Ranch & Fulshear</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </ScrollReveal>
+
+        {/* MEET OUR DOCTORS */}
+        <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">YOUR KATY CARE TEAM</p>
-            <h2 className="section-heading">Meet Our Katy Doctors</h2>
+            <p className="kicker">YOUR KATY DENTAL TEAM</p>
+            <h2 className="section-heading">3 Experienced Dentists at Our Katy Office</h2>
             <p className="section-body max-w-2xl mx-auto">
-              Our Katy team brings exceptional skill and genuine compassion to every visit. Get to know the doctors behind your smile.
+              Our Katy team combines expertise in family, cosmetic, and implant dentistry with genuine compassion. Every doctor takes time to listen before recommending treatment.
             </p>
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+            <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-3xl mx-auto">
               {doctors.map((doc) => (
                 <DoctorCard key={doc.name} {...doc} />
               ))}
