@@ -23,6 +23,7 @@ const data: LandingPageData = {
   ],
   trustBullets: ["Lifetime Implant Warranty", "3D CT Scan Technology", "Single Teeth to Full Arch", "Sedation Options Available"],
   doctors: [
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "Founder · General & Restorative" },
     { slug: "peter-kim", name: "Dr. Peter Kim", credentials: "DDS", specialty: "Implants & Oral Surgery" },
     { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "Restorative Dentistry" },
   ],
