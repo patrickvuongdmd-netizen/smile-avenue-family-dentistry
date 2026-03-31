@@ -100,13 +100,13 @@ const NewPatientHub = () => {
               <div>
                 <p className="kicker">NEW PATIENTS</p>
                 <h1 className="section-heading text-4xl md:text-5xl leading-tight">
-                  Welcome to Smile Avenue
+                  Your First Visit — Stress-Free, Start to Finish
                 </h1>
                 <p className="font-display text-xl md:text-2xl font-medium text-muted-foreground mb-4">
-                  Your First Visit, Simplified
+                  No Surprises. No Long Waits. Just Great Care.
                 </p>
                 <p className="section-body">
-                  We know that choosing a new dentist is a big decision. That's why we've made your first visit as smooth, comfortable, and stress-free as possible — from online check-in to walking out with a clear plan for your smile.
+                  Switching dentists can feel like a hassle. We eliminated every friction point — online paperwork, insurance verification before you arrive, and a team that's ready for you the moment you walk in. Your first visit takes about 60 minutes and you'll leave with a clear plan.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
