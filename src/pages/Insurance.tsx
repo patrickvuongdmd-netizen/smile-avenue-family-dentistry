@@ -38,8 +38,8 @@ const Insurance = () => {
             </nav>
             <div className="text-center max-w-3xl mx-auto">
               <p className="kicker">INSURANCE & FINANCING</p>
-              <h1 className="section-heading text-4xl md:text-5xl">We Make Dental Care Affordable</h1>
-              <p className="section-body">We accept most major insurance plans, offer flexible financing, and have an in-house membership plan for uninsured patients. No one should skip dental care because of cost.</p>
+              <h1 className="section-heading text-4xl md:text-5xl">Don't Let Cost Stop You from Getting the Care You Need</h1>
+              <p className="section-body">We accept most major insurance plans, offer 0% financing through CareCredit and Sunbit, and have an in-house membership plan starting at $25/month. Our team verifies your benefits before you even walk in.</p>
             </div>
           </div>
         </section>
