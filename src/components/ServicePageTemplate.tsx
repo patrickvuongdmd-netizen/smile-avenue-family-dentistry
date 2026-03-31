@@ -343,6 +343,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                     {data.heroCta2}
                   </a>
                 </div>
+                <p className="text-xs font-sans text-white/60 mt-3">
+                  ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ 0% financing available
+                </p>
               </div>
             </div>
           </div>
