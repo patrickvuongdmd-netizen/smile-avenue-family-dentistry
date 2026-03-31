@@ -196,7 +196,7 @@ const OurTeam = () => {
 
         {/* FRONT OFFICE */}
         {filteredFrontOffice.length > 0 && (
-          <ScrollReveal>
+          <section className="section-padding bg-background animate-in fade-in duration-500">
             <section className="section-padding bg-background">
               <div className="container mx-auto">
                 <div className="flex items-center gap-2 mb-8">
