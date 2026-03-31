@@ -14,6 +14,7 @@ import SkipToContent from "@/components/SkipToContent";
 import TechnologyTrust from "@/components/TechnologyTrust";
 import ScrollReveal from "@/components/ScrollReveal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
+import LazySection from "@/components/LazySection";
 import { Play } from "lucide-react";
 import { useState } from "react";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
@@ -265,6 +266,7 @@ const Home = () => {
         </section>
 
         {/* BRAND STATEMENT */}
+        <LazySection>
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
@@ -275,8 +277,10 @@ const Home = () => {
           </div>
         </section>
         </ScrollReveal>
+        </LazySection>
 
         {/* DOCTORS */}
+        <LazySection>
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
@@ -303,6 +307,7 @@ const Home = () => {
           </div>
         </section>
         </ScrollReveal>
+        </LazySection>
 
         {/* MID-PAGE BOOKING CTA — recapture scrollers */}
         <section className="py-10 bg-primary/5 border-y border-primary/10">
@@ -324,6 +329,7 @@ const Home = () => {
         </section>
 
         {/* LOCATIONS */}
+        <LazySection>
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker text-center">TWO CONVENIENT LOCATIONS</p>
@@ -367,8 +373,10 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </LazySection>
 
         {/* VIDEO TESTIMONIALS */}
+        <LazySection>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">REAL PATIENTS, REAL STORIES</p>
@@ -383,8 +391,10 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </LazySection>
 
         {/* TESTIMONIALS */}
+        <LazySection>
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker text-center">5,000+ FIVE-STAR REVIEWS</p>
@@ -397,11 +407,14 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </LazySection>
 
-        {/* INSURANCE */}
-        <InsuranceLogoBar />
+        <LazySection>
+          <InsuranceLogoBar />
+        </LazySection>
 
         {/* SMILE GALLERY CTA */}
+        <LazySection>
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-2xl">
             <p className="kicker">REAL RESULTS</p>
@@ -410,6 +423,7 @@ const Home = () => {
             <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
           </div>
         </section>
+        </LazySection>
 
         {/* FREE CONSULTATION CTA */}
         <section className="py-12 bg-primary/5 border-y border-primary/10">
@@ -432,6 +446,7 @@ const Home = () => {
         </section>
 
         {/* BLOG CTA — clean, no placeholder images */}
+        <LazySection>
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center max-w-2xl">
             <p className="kicker">FROM THE BLOG</p>
@@ -440,8 +455,10 @@ const Home = () => {
             <Link to="/blog" className="btn-secondary">Read Our Blog</Link>
           </div>
         </section>
+        </LazySection>
 
         {/* FAQ */}
+        <LazySection>
         <section className="section-padding section-alt">
           <div className="container mx-auto max-w-3xl">
             <p className="kicker text-center">FAQ</p>
@@ -449,6 +466,7 @@ const Home = () => {
             <div className="mt-10"><FaqAccordion items={faqs} /></div>
           </div>
         </section>
+        </LazySection>
 
         {/* CTA */}
         <section className="section-padding gradient-cta text-center">
