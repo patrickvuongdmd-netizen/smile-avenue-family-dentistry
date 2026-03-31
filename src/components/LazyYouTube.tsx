@@ -53,6 +53,7 @@ const LazyYouTube = ({ videoId, title }: LazyYouTubeProps) => {
             width={1280}
             height={720}
             onError={handleThumbError}
+            onLoad={handleThumbLoad}
           />
           <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
           <div className="absolute inset-0 flex items-center justify-center">
