@@ -100,20 +100,20 @@ const NewPatientHub = () => {
               <div>
                 <p className="kicker">NEW PATIENTS</p>
                 <h1 className="section-heading text-4xl md:text-5xl leading-tight">
-                  Welcome to Smile Avenue
+                  Your First Visit — Stress-Free, Start to Finish
                 </h1>
                 <p className="font-display text-xl md:text-2xl font-medium text-muted-foreground mb-4">
-                  Your First Visit, Simplified
+                  No Surprises. No Long Waits. Just Great Care.
                 </p>
                 <p className="section-body">
-                  We know that choosing a new dentist is a big decision. That's why we've made your first visit as smooth, comfortable, and stress-free as possible — from online check-in to walking out with a clear plan for your smile.
+                  Switching dentists can feel like a hassle. We eliminated every friction point — online paperwork, insurance verification before you arrive, and a team that's ready for you the moment you walk in. Your first visit takes about 60 minutes and you'll leave with a clear plan.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    Book Appointment
+                    Book Your First Visit
                   </a>
-                  <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary">
-                    Call Us
+                  <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary flex items-center gap-2">
+                    <Phone className="w-4 h-4" /> Call {CYPRESS_PHONE_FORMATTED}
                   </a>
                 </div>
               </div>
@@ -138,10 +138,10 @@ const NewPatientHub = () => {
         {/* 3-STEP WALKTHROUGH */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">YOUR FIRST VISIT IN 3 EASY STEPS</p>
-            <h2 className="section-heading">What to Expect at Smile Avenue</h2>
+            <p className="kicker">3 SIMPLE STEPS</p>
+            <h2 className="section-heading">Here's Exactly What Happens</h2>
             <p className="section-body max-w-2xl mx-auto">
-              We've designed every step of your first appointment to be efficient, comfortable, and transparent.
+              No guesswork. We've designed every step to respect your time and keep you comfortable.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               {steps.map((step) => (
@@ -162,14 +162,14 @@ const NewPatientHub = () => {
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-16 items-center">
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md">
-                <span className="text-sm font-sans text-muted-foreground">Checklist Illustration</span>
+              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
+                <img src={OFFICE_IMAGES.waitingRoom} alt="Smile Avenue waiting room with comfortable seating" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
               </div>
               <div>
-                <p className="kicker">BE PREPARED</p>
-                <h2 className="section-heading">What to Bring to Your First Visit</h2>
+                <p className="kicker">COME PREPARED</p>
+                <h2 className="section-heading">What to Bring (Quick Checklist)</h2>
                 <p className="section-body">
-                  Having these items ready will help us get you checked in quickly and ensure we can provide the best possible care.
+                  Bring these items and we'll handle the rest — no paperwork at the front desk.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {bringItems.map((item) => (
@@ -187,10 +187,10 @@ const NewPatientHub = () => {
         {/* PATIENT FORMS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">SAVE TIME AT YOUR VISIT</p>
-            <h2 className="section-heading">Download Patient Forms</h2>
+            <p className="kicker">SKIP THE CLIPBOARD</p>
+            <h2 className="section-heading">Complete Your Forms from Home</h2>
             <p className="section-body max-w-2xl mx-auto">
-              Complete your paperwork at home and bring it with you, or fill out our digital forms online after booking.
+              Fill out your paperwork before you arrive and walk straight into your appointment — no waiting room delays.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mt-10 max-w-3xl mx-auto text-left">
               {patientForms.map((form) => (
@@ -291,14 +291,14 @@ const NewPatientHub = () => {
         <section className="gradient-cta py-16 text-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Join the Smile Avenue Family?
+              Your First Visit Is Just a Click Away
             </h2>
             <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Your first visit is just a click away. Book online or call us — we can't wait to welcome you.
+              Book online in 60 seconds. We'll confirm within 1 hour and have everything ready when you arrive.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
-                Book Appointment
+                Book Your First Visit
               </a>
               <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
                 Call {CYPRESS_PHONE_FORMATTED}

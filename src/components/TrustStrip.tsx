@@ -6,22 +6,22 @@ const TrustStrip = () => (
       <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs font-sans font-medium text-muted-foreground">
         <span className="flex items-center gap-1.5">
           <Star className="w-3.5 h-3.5 fill-primary text-primary" />
-          5,000+ Five-Star Reviews
+          4.9★ from 5,000+ Reviews
         </span>
         <span className="hidden sm:inline text-border">|</span>
         <span className="flex items-center gap-1.5">
           <Clock className="w-3.5 h-3.5 text-primary" />
-          Same-Day Appointments
+          Same-Day Visits Available
         </span>
         <span className="hidden sm:inline text-border">|</span>
         <span className="flex items-center gap-1.5">
           <Globe className="w-3.5 h-3.5 text-primary" />
-          Hablamos Español
+          Se Habla Español
         </span>
         <span className="hidden sm:inline text-border">|</span>
         <span className="flex items-center gap-1.5">
           <MapPin className="w-3.5 h-3.5 text-primary" />
-          2 Houston Locations
+          Cypress & Katy Locations
         </span>
       </div>
     </div>

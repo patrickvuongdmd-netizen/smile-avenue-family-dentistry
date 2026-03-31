@@ -3,16 +3,16 @@ import { Scan, Crown, CreditCard, CalendarCheck, Sparkles } from "lucide-react";
 const techs = [
   { icon: <Sparkles className="w-6 h-6" />, label: "Invisalign® Provider" },
   { icon: <Crown className="w-6 h-6" />, label: "In-House Dental Lab" },
-  { icon: <Scan className="w-6 h-6" />, label: "Medit Digital Scanner" },
-  { icon: <CreditCard className="w-6 h-6" />, label: "CareCredit Financing" },
-  { icon: <CalendarCheck className="w-6 h-6" />, label: "Modento Online Booking" },
+  { icon: <Scan className="w-6 h-6" />, label: "Digital Impressions" },
+  { icon: <CreditCard className="w-6 h-6" />, label: "0% Financing" },
+  { icon: <CalendarCheck className="w-6 h-6" />, label: "Online Booking" },
 ];
 
 const TechnologyTrust = () => (
   <section className="py-12 bg-background border-y border-border">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="kicker text-center">OUR TECHNOLOGY</p>
-      <h2 className="section-heading text-center text-2xl md:text-3xl">Advanced Tools for Better Care</h2>
+      <p className="kicker text-center">TRUSTED BY 5,000+ FAMILIES</p>
+      <h2 className="section-heading text-center text-2xl md:text-3xl">Modern Technology, Personalized Care</h2>
       {/* Desktop grid */}
       <div className="hidden sm:grid sm:grid-cols-5 gap-6 mt-8">
         {techs.map((t) => (

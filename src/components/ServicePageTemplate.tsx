@@ -381,8 +381,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {/* INSURANCE */}
         <section className="py-12 section-alt">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="kicker">INSURANCE WE ACCEPT</p>
-            <h2 className="section-heading">Most Major Plans Accepted</h2>
+            <p className="kicker">WE ACCEPT YOUR INSURANCE</p>
+            <h2 className="section-heading">Use Your Benefits — We Handle the Paperwork</h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-3xl mx-auto">
               {insuranceLogos.map((name) => (
                 <div key={name} className="bg-card rounded-xl border border-border py-5 px-4 flex items-center justify-center">
@@ -434,8 +434,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
           <section className="section-padding bg-background">
             <div className="container mx-auto text-center">
-              <p className="kicker">WATCH & LEARN</p>
-              <h2 className="section-heading">See How It Works</h2>
+              <p className="kicker">SEE IT IN ACTION</p>
+              <h2 className="section-heading">Watch Real Procedures & Results</h2>
               <div className="mt-8">
                 <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
               </div>
@@ -475,8 +475,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {related.length > 0 && (
           <section className="section-padding bg-background">
             <div className="container mx-auto text-center">
-              <p className="kicker">EXPLORE MORE</p>
-              <h2 className="section-heading">Related Services</h2>
+              <p className="kicker">YOU MIGHT ALSO NEED</p>
+              <h2 className="section-heading">Related Treatments</h2>
               <div className="flex flex-wrap justify-center gap-3 mt-8">
                 {related.map((r) => (
                   <Link

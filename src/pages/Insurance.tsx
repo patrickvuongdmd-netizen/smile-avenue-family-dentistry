@@ -38,8 +38,8 @@ const Insurance = () => {
             </nav>
             <div className="text-center max-w-3xl mx-auto">
               <p className="kicker">INSURANCE & FINANCING</p>
-              <h1 className="section-heading text-4xl md:text-5xl">We Make Dental Care Affordable</h1>
-              <p className="section-body">We accept most major insurance plans, offer flexible financing, and have an in-house membership plan for uninsured patients. No one should skip dental care because of cost.</p>
+              <h1 className="section-heading text-4xl md:text-5xl">Don't Let Cost Stop You from Getting the Care You Need</h1>
+              <p className="section-body">We accept most major insurance plans, offer 0% financing through CareCredit and Sunbit, and have an in-house membership plan starting at $25/month. Our team verifies your benefits before you even walk in.</p>
             </div>
           </div>
         </section>
@@ -70,8 +70,8 @@ const Insurance = () => {
         {/* Financing */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <p className="kicker text-center">FLEXIBLE FINANCING</p>
-            <h2 className="section-heading text-center">Payment Plans That Fit Your Budget</h2>
+            <p className="kicker text-center">0% INTEREST OPTIONS</p>
+            <h2 className="section-heading text-center">Get the Treatment You Want — Pay Over Time</h2>
             <div className="grid md:grid-cols-2 gap-8 mt-10 max-w-4xl mx-auto">
               <div className="bg-card rounded-2xl border border-border p-8">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary"><CreditCard className="w-6 h-6" /></div>
@@ -111,9 +111,9 @@ const Insurance = () => {
 
         <section className="section-padding gradient-cta text-center">
           <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Questions About Insurance or Financing?</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Our team will help you maximize your benefits and find the most affordable path to great dental care.</p>
-            <a href="tel:8326481756" className="btn-cta-light">Call Us Today</a>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Not Sure What's Covered? We'll Find Out for You.</h2>
+            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Call us and we'll verify your insurance benefits before your visit — completely free.</p>
+            <a href="tel:8326481756" className="btn-cta-light">Call (832) 648-1756</a>
           </div>
         </section>
       </main>

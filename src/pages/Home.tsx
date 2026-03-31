@@ -24,19 +24,19 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
 
 const trustStats = [
-  { value: "5,000+", label: "Five-Star Reviews" },
-  { value: "Most", label: "Insurance Accepted" },
-  { value: "Same-Day", label: "Appointments" },
-  { value: "2", label: "Houston Locations" },
+  { value: "5,000+", label: "Five-Star Google Reviews" },
+  { value: "Most", label: "Insurance Plans Accepted" },
+  { value: "Same-Day", label: "Appointments Available" },
+  { value: "2", label: "Convenient Locations" },
 ];
 
 const services = [
-  { title: "Dental Implants", description: "Permanent tooth replacement that looks and functions like natural teeth.", href: "/cypress-tx/dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
-  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and smile design for a confident new look.", href: "/cypress-tx/cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
-  { title: "Invisalign®", description: "Clear aligners for a straighter smile without traditional braces.", href: "/cypress-tx/invisalign", icon: <Zap className="w-6 h-6" /> },
-  { title: "Emergency Dentistry", description: "Same-day urgent care when you need it most.", href: "/cypress-tx/emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
-  { title: "Preventive Care", description: "Cleanings, exams, and proactive care to keep your smile healthy.", href: "/cypress-tx/dental-cleaning", icon: <Shield className="w-6 h-6" /> },
-  { title: "Sedation Dentistry", description: "Relaxed, anxiety-free dental care for nervous patients.", href: "/cypress-tx/sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
+  { title: "Dental Implants", description: "Replace missing teeth permanently — eat, smile, and live without limits.", href: "/cypress-tx/dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers designed to turn heads.", href: "/cypress-tx/cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
+  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets, no lifestyle disruption.", href: "/cypress-tx/invisalign", icon: <Zap className="w-6 h-6" /> },
+  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today — call now.", href: "/cypress-tx/emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
+  { title: "Preventive Care", description: "Gentle cleanings and thorough exams to protect your family's smiles for life.", href: "/cypress-tx/dental-cleaning", icon: <Shield className="w-6 h-6" /> },
+  { title: "Sedation Dentistry", description: "Nervous about the dentist? Relax completely with our sedation options.", href: "/cypress-tx/sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
 ];
 
 const doctors = [
@@ -49,9 +49,9 @@ const doctors = [
 ];
 
 const testimonials = [
-  { quote: "I always love to come to Smile Dentistry. I trust the care that they give me. The team makes me feel so special every time.", name: "Thao H.", source: "Google Review" },
-  { quote: "From the moment I walked in I was greeted so kindly. Everyone made me feel so welcome. I was offered a cozy blanket and my choice of Netflix!", name: "Kashayn P.", source: "Google Review" },
-  { quote: "Dr. Vuong and his team are absolutely amazing. They made me feel comfortable throughout my implant procedure. Highly recommend!", name: "Michael R.", source: "Google Review" },
+  { quote: "I trust Smile Avenue completely. The team makes my family feel like VIPs every single visit. We wouldn't go anywhere else.", name: "Thao H.", source: "Google Review" },
+  { quote: "From the moment I walked in, I felt welcome. They offered me a blanket and Netflix during my cleaning — this is NOT your typical dentist.", name: "Kashayn P.", source: "Google Review" },
+  { quote: "Dr. Vuong and his team did my implants and the results are incredible. Professional, gentle, and genuinely caring. 10/10.", name: "Michael R.", source: "Google Review" },
 ];
 
 // Insurance logos moved to InsuranceLogoBar component
@@ -107,9 +107,9 @@ const Home = () => {
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="kicker">CYPRESS & KATY, TEXAS</p>
-                <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.5rem] leading-tight">Helping Houston Families Love Their Smiles</h1>
-                <p className="section-body">From routine checkups to full smile makeovers, Smile Avenue delivers hospitality-driven dental care with modern technology at two convenient Houston-area locations.</p>
+                <p className="kicker">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
+                <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.5rem] leading-tight">The Dental Experience Your Family Deserves</h1>
+                <p className="section-body">Netflix in every room. Warm blankets. Doctors who listen. Smile Avenue isn't your typical dentist — it's where Houston families come for exceptional care, advanced technology, and a team that treats you like family.</p>
                 {/* Location selector */}
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
@@ -165,9 +165,9 @@ const Home = () => {
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
-            <p className="kicker text-center">OUR SERVICES</p>
-            <h2 className="section-heading text-center">Comprehensive Dental Care</h2>
-            <p className="section-body text-center max-w-2xl mx-auto">Everything your family needs under one roof — from preventive care to advanced restorative and cosmetic treatments.</p>
+            <p className="kicker text-center">WHAT WE DO</p>
+            <h2 className="section-heading text-center">Everything Your Family Needs, Under One Roof</h2>
+            <p className="section-body text-center max-w-2xl mx-auto">No referrals, no runaround. From your child's first checkup to your smile makeover, our team handles it all — with an in-house dental lab for faster, more precise results.</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
               {services.map((s, i) => (
                 <Link key={i} to={s.href} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
@@ -193,9 +193,9 @@ const Home = () => {
         {/* SEE OUR OFFICE — VIDEO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
-            <p className="kicker">SEE OUR OFFICE</p>
-            <h2 className="section-heading">Take a Virtual Tour</h2>
-            <p className="section-body max-w-2xl mx-auto">Step inside Smile Avenue and see why thousands of Houston families trust us with their smiles.</p>
+            <p className="kicker">STEP INSIDE</p>
+            <h2 className="section-heading">See Why Families Choose Us</h2>
+            <p className="section-body max-w-2xl mx-auto">Walk through our office and see the difference — from the warm welcome to the Netflix-equipped treatment rooms.</p>
             <div className="max-w-4xl mx-auto mt-8">
               <div className="aspect-video rounded-2xl overflow-hidden relative shadow-lg">
                 {videoPlaying ? (
@@ -237,10 +237,10 @@ const Home = () => {
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
-            <p className="kicker">OUR MISSION</p>
-            <h2 className="section-heading text-3xl md:text-4xl">Helping Houston Families Love Their Smiles Again</h2>
-            <p className="section-body">At Smile Avenue, we believe every patient deserves to feel heard, comfortable, and confident in their care. Our team combines clinical excellence with genuine hospitality — because a great dental experience starts with how you feel the moment you walk through our door.</p>
-            <Link to="/about" className="btn-primary">Learn About Us</Link>
+            <p className="kicker">WHY FAMILIES SWITCH TO US</p>
+            <h2 className="section-heading text-3xl md:text-4xl">You Deserve a Dentist Who Actually Cares</h2>
+            <p className="section-body">Most dental offices rush you in and out. At Smile Avenue, we slow down, listen, and build a plan around your goals — not a billing code. That's why 5,000+ families rate us 4.9 stars and keep coming back.</p>
+            <Link to="/about" className="btn-primary">Meet Our Team</Link>
           </div>
         </section>
         </ScrollReveal>
@@ -249,8 +249,8 @@ const Home = () => {
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
-            <p className="kicker text-center">MEET OUR TEAM</p>
-            <h2 className="section-heading text-center">Your Smile Avenue Doctors</h2>
+            <p className="kicker text-center">YOUR CARE TEAM</p>
+            <h2 className="section-heading text-center">6 Experienced Doctors, 2 Locations</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-10">
               {doctors.map((doc, i) => {
                 const img = DOCTOR_IMAGES[doc.imgKey];
@@ -321,8 +321,8 @@ const Home = () => {
         {/* VIDEO TESTIMONIALS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto">
-            <p className="kicker text-center">PATIENT STORIES</p>
-            <h2 className="section-heading text-center">Watch Real Patient Experiences</h2>
+            <p className="kicker text-center">REAL PATIENTS, REAL STORIES</p>
+            <h2 className="section-heading text-center">Hear It Directly from Our Patients</h2>
             <div className="grid sm:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
               {VIDEO_TESTIMONIALS.slice(0, 4).map((vid, i) => (
                 <LazyYouTube key={i} videoId={vid.youtubeId} title={vid.title} />
@@ -337,8 +337,8 @@ const Home = () => {
         {/* TESTIMONIALS */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <p className="kicker text-center">PATIENT REVIEWS</p>
-            <h2 className="section-heading text-center">What Our Patients Say</h2>
+            <p className="kicker text-center">5,000+ FIVE-STAR REVIEWS</p>
+            <h2 className="section-heading text-center">Trusted by Houston Families</h2>
             <div className="grid md:grid-cols-3 gap-6 mt-10">
               {testimonials.map((t, i) => <TestimonialCard key={i} {...t} />)}
             </div>
