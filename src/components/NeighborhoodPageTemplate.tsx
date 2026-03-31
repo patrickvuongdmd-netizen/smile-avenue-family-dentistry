@@ -185,10 +185,13 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">{data.heroHeading}</h1>
                 <p className="text-lg font-display font-semibold text-foreground mb-2">{data.heroSubheading}</p>
                 <p className="section-body">{data.heroBody}</p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Your Visit</a>
+                <div className="flex flex-wrap gap-3 mb-4">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary">Book Your Visit</button>
                   <a href={`tel:${loc.phone}`} className="btn-secondary">Call {loc.phoneFormatted}</a>
                 </div>
+                <p className="text-xs font-sans text-muted-foreground mb-2">
+                  ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ Same-day appointments available
+                </p>
                 <div className="flex items-center gap-2 text-sm font-sans text-muted-foreground">
                   <MapPin className="w-4 h-4 text-primary" />
                   <span>{loc.address}</span>
