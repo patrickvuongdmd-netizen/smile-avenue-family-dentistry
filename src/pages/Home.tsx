@@ -159,6 +159,8 @@ const Home = () => {
                   poster={OFFICE_IMAGES.homepageHero}
                   className="w-full h-full object-cover"
                 />
+                {/* Dark gradient overlay for readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
                 {/* Fallback image for browsers that block autoplay */}
                 <img
                   src={OFFICE_IMAGES.homepageHero}
