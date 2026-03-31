@@ -10,7 +10,7 @@ const locations = [
     address: "9212 Fry Rd, Ste 120, Cypress, TX 77433",
     phone: "(832) 648-1756",
     phoneTel: "8326481756",
-    hours: "Mon–Fri 9am–6pm · Sat 9am–3pm",
+    hours: "Mon–Fri 8:30am–5pm",
     booking: CYPRESS_BOOKING,
   },
   {
@@ -18,7 +18,7 @@ const locations = [
     address: "23541 Westheimer Pkwy, Ste 170, Katy, TX 77494",
     phone: "(281) 800-5008",
     phoneTel: "2818005008",
-    hours: "Mon–Fri 9am–6pm · Sat 9am–3pm",
+    hours: "Mon–Fri 8:30am–5pm · Sat 8am–2pm",
     booking: KATY_BOOKING,
   },
 ];

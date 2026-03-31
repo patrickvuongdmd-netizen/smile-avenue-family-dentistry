@@ -15,7 +15,7 @@ const categories = [
     title: "General",
     faqs: [
       { question: "What locations do you have?", answer: "We have two offices — Cypress (9212 Fry Rd #120, Cypress, TX 77433) and Katy (23541 Westheimer Pkwy Ste #170, Katy, TX 77494). Both serve the greater Houston area." },
-      { question: "What are your office hours?", answer: "Both offices are open Monday through Friday, 8am to 5pm. Saturday appointments are available by request at select locations." },
+      { question: "What are your office hours?", answer: "Both offices are open Monday through Friday, 8:30am to 5pm. Saturday hours are available at the Katy location (8am–2pm)." },
       { question: "Do you offer same-day appointments?", answer: "Yes! We reserve time for emergencies and often have same-day availability for routine visits. Call us to check." },
       { question: "What ages do you treat?", answer: "We treat patients of all ages — from toddlers to seniors. Our team includes pediatric and geriatric dental expertise." },
       { question: "Do you speak Spanish?", answer: "¡Sí! Hablamos Español. We have bilingual team members at both locations to ensure every patient feels comfortable and understood." },

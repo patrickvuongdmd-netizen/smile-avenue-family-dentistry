@@ -65,8 +65,8 @@ const BookOnline = () => {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
-                { name: "Cypress", address: "9212 Fry Rd #120, Cypress, TX 77433", phone: "(832) 648-1756", phonePlain: "8326481756", hours: "Mon–Fri 8am–5pm", booking: CYPRESS_BOOKING },
-                { name: "Katy", address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494", phone: "(281) 800-5008", phonePlain: "2818005008", hours: "Mon–Fri 8am–5pm", booking: KATY_BOOKING },
+                { name: "Cypress", address: "9212 Fry Rd #120, Cypress, TX 77433", phone: "(832) 648-1756", phonePlain: "8326481756", hours: "Mon–Fri 8:30am–5pm", booking: CYPRESS_BOOKING },
+                { name: "Katy", address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494", phone: "(281) 800-5008", phonePlain: "2818005008", hours: "Mon–Fri 8:30am–5pm", booking: KATY_BOOKING },
               ].map((loc, i) => (
                 <div key={i} className="bg-card rounded-2xl border border-border p-8 text-center shadow-sm">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 text-primary">

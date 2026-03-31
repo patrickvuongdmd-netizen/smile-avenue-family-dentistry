@@ -349,7 +349,7 @@ const Home = () => {
                     <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
                       <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />9212 Fry Rd #120, Cypress, TX 77433</div>
                       <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href="tel:8326481756" className="hover:text-primary">(832) 648-1756</a></div>
-                      <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" />Mon–Fri 8am–5pm</div>
+                      <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" />Mon–Fri 8:30am–5pm</div>
                     </div>
                     <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">Book at Cypress</a>
                   </div>
@@ -364,7 +364,7 @@ const Home = () => {
                     <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
                       <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />23541 Westheimer Pkwy Ste #170, Katy, TX 77494</div>
                       <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href="tel:2818005008" className="hover:text-primary">(281) 800-5008</a></div>
-                      <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" />Mon–Fri 8am–5pm</div>
+                      <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" />Mon–Fri 8:30am–5pm · Sat 8am–2pm</div>
                     </div>
                     <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">Book at Katy</a>
                   </div>
@@ -502,7 +502,7 @@ const Home = () => {
             ],
             aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "5000" },
             priceRange: "$$",
-            openingHours: "Mo-Fr 08:00-17:00",
+            openingHours: ["Mo-Fr 08:30-17:00", "Sa 08:00-14:00"],
             sameAs: [
               "https://www.facebook.com/SmileAvenueFamilyDentistry/",
               "https://www.instagram.com/smileavenuefamilydentistry/",

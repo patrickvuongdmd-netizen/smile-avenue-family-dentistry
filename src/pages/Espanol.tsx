@@ -137,7 +137,7 @@ const Espanol = () => {
                 <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
                   <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />9212 Fry Rd #120, Cypress, TX 77433</div>
                   <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${CYPRESS_PHONE}`} className="hover:text-primary text-lg font-bold text-foreground">{CYPRESS_PHONE_FORMATTED}</a></div>
-                  <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" />Lun–Vie 8am–5pm</div>
+                  <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" />Lun–Vie 8:30am–5pm</div>
                 </div>
                 <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">Reserve en Cypress</a>
               </div>
@@ -147,7 +147,7 @@ const Espanol = () => {
                 <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
                   <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />23541 Westheimer Pkwy Ste #170, Katy, TX 77494</div>
                   <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${KATY_PHONE}`} className="hover:text-primary text-lg font-bold text-foreground">{KATY_PHONE_FORMATTED}</a></div>
-                  <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" />Lun–Vie 8am–5pm</div>
+                  <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" />Lun–Vie 8:30am–5pm · Sáb 8am–2pm</div>
                 </div>
                 <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">Reserve en Katy</a>
               </div>

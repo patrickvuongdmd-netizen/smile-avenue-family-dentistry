@@ -56,7 +56,7 @@ const data: NeighborhoodPageData = {
   faqs: [
     { question: "Where exactly on Westheimer Parkway is Smile Avenue?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — on the south side of Westheimer Parkway between Grand Parkway (99) and Cinco Ranch Boulevard." },
     { question: "Do you accept walk-in patients from Westheimer Parkway?", answer: "Yes! We welcome walk-in patients, especially for dental emergencies. For routine care, we recommend booking online or calling (281) 800-5008." },
-    { question: "What are your hours on Westheimer Parkway?", answer: "We're open Monday through Friday 8am–5pm, with Saturday appointments available by request." },
+    { question: "What are your hours on Westheimer Parkway?", answer: "We're open Monday through Friday 8:30am–5pm, with Saturday hours (8am–2pm) available at the Katy location." },
     { question: "Is parking available at your Westheimer Parkway office?", answer: "Yes, we have free parking directly in front of our suite. The office is ground-level with easy access." },
     { question: "Do you accept dental insurance?", answer: "Yes, we accept most major dental insurance plans including Aetna, BCBS, Cigna, Delta Dental, MetLife, and United Healthcare." },
   ],
