@@ -70,8 +70,8 @@ const Insurance = () => {
         {/* Financing */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <p className="kicker text-center">FLEXIBLE FINANCING</p>
-            <h2 className="section-heading text-center">Payment Plans That Fit Your Budget</h2>
+            <p className="kicker text-center">0% INTEREST OPTIONS</p>
+            <h2 className="section-heading text-center">Get the Treatment You Want — Pay Over Time</h2>
             <div className="grid md:grid-cols-2 gap-8 mt-10 max-w-4xl mx-auto">
               <div className="bg-card rounded-2xl border border-border p-8">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary"><CreditCard className="w-6 h-6" /></div>
