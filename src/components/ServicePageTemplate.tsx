@@ -299,6 +299,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(speakableJsonLd)}</script>
       </Helmet>
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <TrustStrip />
