@@ -193,9 +193,9 @@ const Home = () => {
         {/* SEE OUR OFFICE — VIDEO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
-            <p className="kicker">SEE OUR OFFICE</p>
-            <h2 className="section-heading">Take a Virtual Tour</h2>
-            <p className="section-body max-w-2xl mx-auto">Step inside Smile Avenue and see why thousands of Houston families trust us with their smiles.</p>
+            <p className="kicker">STEP INSIDE</p>
+            <h2 className="section-heading">See Why Families Choose Us</h2>
+            <p className="section-body max-w-2xl mx-auto">Walk through our office and see the difference — from the warm welcome to the Netflix-equipped treatment rooms.</p>
             <div className="max-w-4xl mx-auto mt-8">
               <div className="aspect-video rounded-2xl overflow-hidden relative shadow-lg">
                 {videoPlaying ? (
