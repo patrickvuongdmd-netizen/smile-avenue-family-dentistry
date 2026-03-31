@@ -24,6 +24,7 @@ const data: LandingPageData = {
   ],
   trustBullets: ["Results in as Few as 6 Months", "No Food Restrictions", "Virtually Invisible", "Teens & Adults Welcome"],
   doctors: [
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "Founder · Invisalign Provider" },
     { slug: "sameer-bilal", name: "Dr. Sameer Bilal", credentials: "DDS", specialty: "Invisalign Provider" },
     { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "Invisalign & Cosmetic Dentistry" },
   ],

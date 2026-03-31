@@ -24,6 +24,7 @@ const data: LandingPageData = {
   ],
   trustBullets: ["Same-Day Pain Relief", "No Referral Needed", "CareCredit & Insurance Accepted", "Sedation Options Available"],
   doctors: [
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "Founder · General & Restorative" },
     { slug: "sameer-bilal", name: "Dr. Sameer Bilal", credentials: "DDS", specialty: "General & Emergency Dentistry" },
     { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "General & Emergency Dentistry" },
   ],

@@ -23,6 +23,7 @@ const data: LandingPageData = {
   ],
   trustBullets: ["Lifetime Implant Warranty", "3D CT Scan Technology", "Single Teeth to Full Arch", "Open Saturdays"],
   doctors: [
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "Founder · General & Restorative" },
     { slug: "sameer-bilal", name: "Dr. Sameer Bilal", credentials: "DDS", specialty: "Implants & Restorative Dentistry" },
     { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "Restorative Dentistry" },
   ],

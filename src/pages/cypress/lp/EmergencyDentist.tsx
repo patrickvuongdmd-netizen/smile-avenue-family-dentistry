@@ -24,6 +24,7 @@ const data: LandingPageData = {
   ],
   trustBullets: ["Same-Day Pain Relief", "No Referral Needed", "CareCredit & Insurance Accepted", "Sedation Options Available"],
   doctors: [
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "Founder · General & Restorative" },
     { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "General & Emergency Dentistry" },
     { slug: "shayan-alkhiro", name: "Dr. Shayan Alkhiro", credentials: "DDS", specialty: "General Dentistry" },
     { slug: "laith-yahya", name: "Dr. Laith Yahya", credentials: "DDS", specialty: "General Dentistry" },
