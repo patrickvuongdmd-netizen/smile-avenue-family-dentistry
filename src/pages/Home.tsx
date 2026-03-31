@@ -280,6 +280,7 @@ const Home = () => {
         </LazySection>
 
         {/* DOCTORS */}
+        <LazySection>
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
@@ -306,6 +307,7 @@ const Home = () => {
           </div>
         </section>
         </ScrollReveal>
+        </LazySection>
 
         {/* MID-PAGE BOOKING CTA — recapture scrollers */}
         <section className="py-10 bg-primary/5 border-y border-primary/10">
