@@ -391,9 +391,10 @@ const Home = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Ready to Love Your Smile?</h2>
             <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Book your appointment at Smile Avenue today. Two locations, same exceptional care.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/book-online" className="btn-cta-light">Book Online</Link>
-              <a href="tel:8326481756" className="btn-cta-outline">Call (832) 648-1756</a>
+              <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Online Now</a>
+              <a href={`tel:${heroPhone}`} className="btn-cta-outline">Call {heroPhoneFmt}</a>
             </div>
+            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Booking takes less than 60 seconds · No obligation · We confirm within 1 hour</p>
           </div>
         </section>
       </main>
