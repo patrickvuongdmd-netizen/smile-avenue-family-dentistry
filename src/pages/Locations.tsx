@@ -94,9 +94,14 @@ const Locations = () => {
               {locations.map((loc) => (
                 <div key={loc.name} className="bg-card rounded-2xl border border-border overflow-hidden shadow-sm">
                   {/* Map placeholder */}
-                  <div className="bg-muted aspect-video flex items-center justify-center">
-                    <span className="text-sm font-sans text-muted-foreground">{loc.mapPlaceholder}</span>
-                  </div>
+                  <iframe
+                    src={loc.mapEmbed}
+                    className="w-full aspect-video border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Google Map — ${loc.name}`}
+                  />
 
                   <div className="p-6 md:p-8">
                     <h2 className="font-display text-2xl font-bold text-foreground mb-4">{loc.name}</h2>

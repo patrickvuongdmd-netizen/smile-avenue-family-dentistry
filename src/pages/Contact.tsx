@@ -59,9 +59,14 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {locations.map((loc, i) => (
                 <div key={i} className="bg-card rounded-2xl border border-border overflow-hidden">
-                  <div className="aspect-video bg-muted flex items-center justify-center text-muted-foreground text-sm font-sans">
-                    Google Map Embed — {loc.name} Office
-                  </div>
+                  <iframe
+                    src={loc.mapEmbed}
+                    className="w-full aspect-video border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Google Map — ${loc.name} Office`}
+                  />
                   <div className="p-6">
                     <h2 className="font-display text-xl font-bold text-foreground mb-4">Smile Avenue {loc.name}</h2>
                     <div className="space-y-3 text-sm font-sans text-muted-foreground">
