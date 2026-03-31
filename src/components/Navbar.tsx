@@ -296,9 +296,9 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             <a href={`tel:${phone}`} className="flex items-center gap-2 py-3 text-primary font-semibold">
               <Phone className="w-4 h-4" /> {phoneFormatted}
             </a>
-            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-center mt-2">
+            <button onClick={() => { setMobileOpen(false); setBookingModalOpen(true); }} className="btn-primary text-center mt-2 w-full">
               Book Now
-            </a>
+            </button>
           </div>
         </div>
       )}
