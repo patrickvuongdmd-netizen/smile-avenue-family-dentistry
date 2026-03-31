@@ -33,12 +33,12 @@ const trustStats = [
 ];
 
 const services = [
-  { title: "Dental Implants", description: "Replace missing teeth permanently — eat, smile, and live without limits.", href: "/cypress-tx/dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
-  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers designed to turn heads.", href: "/cypress-tx/cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
-  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets, no lifestyle disruption.", href: "/cypress-tx/invisalign", icon: <Zap className="w-6 h-6" /> },
-  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today — call now.", href: "/cypress-tx/emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
-  { title: "Preventive Care", description: "Gentle cleanings and thorough exams to protect your family's smiles for life.", href: "/cypress-tx/dental-cleaning", icon: <Shield className="w-6 h-6" /> },
-  { title: "Sedation Dentistry", description: "Nervous about the dentist? Relax completely with our sedation options.", href: "/cypress-tx/sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
+  { title: "Dental Implants", description: "Replace missing teeth permanently — eat, smile, and live without limits.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers designed to turn heads.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
+  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets, no lifestyle disruption.", slug: "invisalign", icon: <Zap className="w-6 h-6" /> },
+  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today — call now.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
+  { title: "Preventive Care", description: "Gentle cleanings and thorough exams to protect your family's smiles for life.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" /> },
+  { title: "Sedation Dentistry", description: "Nervous about the dentist? Relax completely with our sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
 ];
 
 const doctors = [
