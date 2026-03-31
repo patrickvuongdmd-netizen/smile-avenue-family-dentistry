@@ -80,9 +80,40 @@ const fireConversion = (label: string) => {
   });
 };
 
-/* ── UTM passthrough helper ────────────────────────────────── */
+/* ── UTM & gclid passthrough helper ────────────────────────── */
 
 const UTM_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
+const GCLID_KEY = "sa_gclid";
+const GCLID_TS_KEY = "sa_gclid_ts";
+const GCLID_TTL = 90 * 24 * 60 * 60 * 1000; // 90 days
+
+/** Capture gclid from URL on landing and persist to localStorage */
+const captureGclid = () => {
+  if (typeof window === "undefined") return;
+  const params = new URLSearchParams(window.location.search);
+  const gclid = params.get("gclid");
+  if (gclid) {
+    localStorage.setItem(GCLID_KEY, gclid);
+    localStorage.setItem(GCLID_TS_KEY, String(Date.now()));
+  }
+};
+
+/** Retrieve stored gclid if still within TTL */
+const getStoredGclid = (): string | null => {
+  try {
+    const gclid = localStorage.getItem(GCLID_KEY);
+    const ts = localStorage.getItem(GCLID_TS_KEY);
+    if (!gclid || !ts) return null;
+    if (Date.now() - Number(ts) > GCLID_TTL) {
+      localStorage.removeItem(GCLID_KEY);
+      localStorage.removeItem(GCLID_TS_KEY);
+      return null;
+    }
+    return gclid;
+  } catch {
+    return null;
+  }
+};
 
 const appendUtmParams = (baseUrl: string): string => {
   if (typeof window === "undefined") return baseUrl;
@@ -92,6 +123,11 @@ const appendUtmParams = (baseUrl: string): string => {
     const val = incoming.get(key);
     if (val) url.searchParams.set(key, val);
   });
+  // Also append stored gclid if not already present from URL
+  if (!url.searchParams.has("gclid")) {
+    const stored = getStoredGclid();
+    if (stored) url.searchParams.set("gclid", stored);
+  }
   return url.toString();
 };
 
