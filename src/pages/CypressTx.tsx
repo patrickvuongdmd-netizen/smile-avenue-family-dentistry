@@ -64,16 +64,18 @@ const CypressTx = () => {
   return (
     <>
       <Helmet>
-        <title>Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue</title>
-        <meta name="description" content="Top-rated family dentist in Cypress, TX on Fry Road. 4.9★ from 300+ reviews. Same-day appointments, dental implants, Invisalign, emergency care. Serving Bridgeland, Fairfield, Towne Lake. Call (832) 648-1756." />
+        <title>Dentist in Cypress, TX | Fry Rd Family Dentist | Smile Avenue</title>
+        <meta name="description" content="Looking for a dentist in Cypress, TX? Smile Avenue on Fry Road — 4.9★ from 300+ reviews, same-day appointments, in-house dental lab. Implants, Invisalign, emergency care. Serving Bridgeland, Towne Lake, Fairfield & Cy-Fair. Call (832) 648-1756." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
-        <meta property="og:title" content="Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue" />
-        <meta property="og:description" content="Top-rated family dentist in Cypress, TX. 4.9★ from 300+ reviews. Same-day appointments. Serving Bridgeland, Fairfield & Towne Lake." />
+        <meta property="og:title" content="Dentist in Cypress, TX | Fry Rd Family Dentist | Smile Avenue" />
+        <meta property="og:description" content="Top-rated family & cosmetic dentist in Cypress, TX on Fry Road. 4.9★ from 300+ reviews. Same-day appointments. In-house dental lab. Serving Bridgeland, Towne Lake, Fairfield & Cy-Fair." />
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content={OFFICE_IMAGES.cypressHero} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dentist in Cypress, TX | Fry Rd Family Dentist | Smile Avenue" />
+        <meta name="twitter:description" content="4.9★ family dentist in Cypress, TX on Fry Road. Same-day appointments, dental implants, Invisalign. In-house lab. Call (832) 648-1756." />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
@@ -83,20 +85,20 @@ const CypressTx = () => {
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-xs font-sans text-muted-foreground">
+            <nav className="mb-6 text-xs font-sans text-muted-foreground" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span className="mx-2">›</span>
-              <span className="text-foreground">Cypress, TX</span>
+              <span className="mx-2" aria-hidden="true">›</span>
+              <span className="text-foreground">Dentist in Cypress, TX</span>
             </nav>
 
             <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
               <div>
-                <p className="kicker">DENTIST IN CYPRESS, TX · FRY ROAD</p>
+                <p className="kicker">DENTIST IN CYPRESS, TX · FRY ROAD · NEAR HEB</p>
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
-                  Top-Rated Family Dentist in Cypress, TX
+                  Your Family Dentist on Fry Road in Cypress, TX
                 </h1>
                 <p className="section-body">
-                  Looking for a dentist in Cypress, TX? Smile Avenue on Fry Road delivers hospitality-driven dental care for the whole family — from routine cleanings and pediatric checkups to dental implants, Invisalign, and same-day emergency visits. Proudly serving Bridgeland, Towne Lake, Fairfield, and Cy-Fair families with 300+ five-star Google reviews.
+                  Smile Avenue on Fry Road is the Cypress dentist families actually look forward to visiting. From <Link to="/cypress-tx/dental-cleaning" className="text-primary hover:underline">routine cleanings</Link> and <Link to="/cypress-tx/pediatric-dentistry" className="text-primary hover:underline">pediatric checkups</Link> to <Link to="/cypress-tx/dental-implants" className="text-primary hover:underline">dental implants</Link>, <Link to="/cypress-tx/invisalign" className="text-primary hover:underline">Invisalign</Link>, and <Link to="/cypress-tx/emergency-dentist" className="text-primary hover:underline">same-day emergency visits</Link> — we handle it all under one roof with our in-house dental lab. Proudly serving Bridgeland, Towne Lake, Fairfield, Cy-Fair, and CFISD families.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-4">
                   <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
@@ -109,12 +111,14 @@ const CypressTx = () => {
                 <p className="text-xs font-sans text-muted-foreground mb-2">
                   ✓ We confirm within 1 hour · ✓ Same-day appointments · ✓ 0% financing available
                 </p>
-                <p className="text-sm font-sans text-muted-foreground">
-                  ⭐ 4.9 from 300+ Cypress Reviews · All Ages Welcome
-                </p>
+                <div className="flex items-center gap-3 text-sm font-sans text-muted-foreground">
+                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
+                  <span className="font-semibold text-foreground">4.9</span>
+                  <span>from 300+ verified Cypress reviews</span>
+                </div>
               </div>
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.cypressHero} alt="Smile Avenue Cypress office exterior on Fry Road" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
+                <img src={OFFICE_IMAGES.cypressHero} alt="Smile Avenue Cypress dental office exterior on Fry Road, Cypress TX 77433" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
               </div>
             </div>
           </div>
