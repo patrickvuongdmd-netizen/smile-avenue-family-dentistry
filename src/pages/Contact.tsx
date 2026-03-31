@@ -12,8 +12,8 @@ const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 
 const locations = [
-  { name: "Cypress", address: "9212 Fry Rd #120, Cypress, TX 77433", phone: "(832) 648-1756", phonePlain: "8326481756", hours: "Mon–Fri 8:30am–5pm", mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.0!2d-95.75!3d29.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU3JzAzLjAiTiA5NcKwNDUnMDAuMCJX!5e0!3m2!1sen!2sus!4v1" },
-  { name: "Katy", address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494", phone: "(281) 800-5008", phonePlain: "2818005008", hours: "Mon–Fri 8:30am–5pm · Sat 8am–2pm", mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.0!2d-95.75!3d29.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDQ1JzAwLjAiTiA5NcKwNDUnMDAuMCJX!5e0!3m2!1sen!2sus!4v1" },
+  { name: "Cypress", address: "9212 Fry Rd #120, Cypress, TX 77433", phone: "(832) 648-1756", phonePlain: "8326481756", hours: "Mon–Fri 8:30am–5pm", mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.2!2d-95.7351!3d29.9585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d0a4a0d3c7e7%3A0x5e3b4a7c8f9d2e1a!2s9212%20Fry%20Rd%20%23120%2C%20Cypress%2C%20TX%2077433!5e0!3m2!1sen!2sus!4v1" },
+  { name: "Katy", address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494", phone: "(281) 800-5008", phonePlain: "2818005008", hours: "Mon–Fri 8:30am–5pm · Sat 8am–2pm", mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.2!2d-95.7563!3d29.7354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e5a4b0c3d7f1%3A0x3a2b4c5d6e7f8091!2s23541%20Westheimer%20Pkwy%20%23170%2C%20Katy%2C%20TX%2077494!5e0!3m2!1sen!2sus!4v1" },
 ];
 
 const Contact = () => {
