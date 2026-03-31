@@ -446,6 +446,7 @@ const Home = () => {
         </section>
 
         {/* BLOG CTA — clean, no placeholder images */}
+        <LazySection>
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center max-w-2xl">
             <p className="kicker">FROM THE BLOG</p>
@@ -454,8 +455,10 @@ const Home = () => {
             <Link to="/blog" className="btn-secondary">Read Our Blog</Link>
           </div>
         </section>
+        </LazySection>
 
         {/* FAQ */}
+        <LazySection>
         <section className="section-padding section-alt">
           <div className="container mx-auto max-w-3xl">
             <p className="kicker text-center">FAQ</p>
@@ -463,6 +466,7 @@ const Home = () => {
             <div className="mt-10"><FaqAccordion items={faqs} /></div>
           </div>
         </section>
+        </LazySection>
 
         {/* CTA */}
         <section className="section-padding gradient-cta text-center">
