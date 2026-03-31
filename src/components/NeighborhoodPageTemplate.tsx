@@ -78,7 +78,7 @@ const LOCATIONS = {
     name: "Cypress",
     path: "/cypress-tx",
     geo: { lat: "29.9691", lng: "-95.6972" },
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.0!2d-95.6972!3d29.9691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU4JzA4LjgiTiA5NcKwNDEnNTAuMCJX!5e0!3m2!1sen!2sus!4v1",
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
   },
   katy: {
     phone: "2818005008",
