@@ -192,12 +192,12 @@ export const VIDEO_TESTIMONIALS = [
 export const HERO_VIDEO_URL = "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/Smile-Avenue-TX-NOVEMBER-HERO-VIDEO-MADISON-FEEL_WIP2.mp4";
 
 // YouTube channel videos mapped to service slugs for embedding on relevant pages
-// Each service gets 2-3 curated videos displayed in a carousel
+// Each service gets 2-3 curated FULL-LENGTH videos (no Shorts) displayed in a carousel
 export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }[]> = {
   "dental-implants": [
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
-    { youtubeId: "9whx2HIA4eU", title: "Love Your Smile Again: Small Fixes That Make a Big Difference" },
     { youtubeId: "wiocP_nsFPY", title: "Can One Visit Change Your Smile?" },
+    { youtubeId: "1nicifZjXoA", title: "Restore Confidence with Advanced Bone Grafting" },
   ],
   "all-on-x-implants": [
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
@@ -206,78 +206,78 @@ export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }
   ],
   "cosmetic-dentistry": [
     { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
-    { youtubeId: "xVUfQ49j-_U", title: "What People Notice First? Your Smile!" },
-    { youtubeId: "vHAJ6C71SoY", title: "Invisalign, Veneers & Your Best Smile Yet" },
+    { youtubeId: "qMAw3tPCLxk", title: "Porcelain Veneers: Strong, Stunning, and Built to Last" },
+    { youtubeId: "QRpwLPBJkS0", title: "Get a Brighter, Whiter Smile — Fast & Hassle-Free!" },
   ],
   "teeth-whitening": [
     { youtubeId: "QRpwLPBJkS0", title: "Get a Brighter, Whiter Smile — Fast & Hassle-Free!" },
-    { youtubeId: "xVUfQ49j-_U", title: "What People Notice First? Your Smile!" },
-    { youtubeId: "9whx2HIA4eU", title: "Love Your Smile Again: Small Fixes That Make a Big Difference" },
+    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
+    { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
   ],
   "veneers": [
     { youtubeId: "qMAw3tPCLxk", title: "Porcelain Veneers: Strong, Stunning, and Built to Last" },
-    { youtubeId: "vHAJ6C71SoY", title: "Invisalign, Veneers & Your Best Smile Yet" },
+    { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
     { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
   ],
   "invisalign": [
     { youtubeId: "qMXDWzTh3Cs", title: "Essential Teeth Care Tips for Your Invisalign Journey" },
-    { youtubeId: "bpskdQmFoJk", title: "Don't Miss Months of Invisalign Progress!" },
-    { youtubeId: "vHAJ6C71SoY", title: "Invisalign, Veneers & Your Best Smile Yet" },
+    { youtubeId: "nS2MUEQXbWE", title: "Invisalign Patient Testimonial" },
+    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
   ],
   "dental-crowns": [
     { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
-    { youtubeId: "9whx2HIA4eU", title: "Love Your Smile Again: Small Fixes That Make a Big Difference" },
+    { youtubeId: "qMAw3tPCLxk", title: "Porcelain Veneers: Strong, Stunning, and Built to Last" },
     { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
   ],
   "root-canal": [
     { youtubeId: "y1YYnlsar3U", title: "Is It Time for a Root Canal?" },
-    { youtubeId: "jSxCcSgRhq8", title: "Hidden Cavities? Here's How We Catch Them Early!" },
-    { youtubeId: "wg1lOqtY2hc", title: "Relaxing Dental Care Exists — At Smile Avenue" },
+    { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
+    { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
   ],
   "sedation-dentistry": [
     { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
-    { youtubeId: "wg1lOqtY2hc", title: "Relaxing Dental Care Exists — At Smile Avenue" },
     { youtubeId: "Do_22b5MX_M", title: "From Uncomfortable to Confident Smiles" },
+    { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
   ],
   "pediatric-dentistry": [
     { youtubeId: "5NHuCuktCPI", title: "Making Dental Visits Fun – Children's Dental Health Month" },
-    { youtubeId: "m7MHyY-w5cY", title: "Yes vs No: How to Brush Properly" },
-    { youtubeId: "JYSwkheGdZ0", title: "Catch It Early. Save Your Smile (and Wallet)" },
+    { youtubeId: "zKD0AARsWTk", title: "Discover the World Inside Your Mouth with Andrew" },
+    { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
   ],
   "preventive-dentistry": [
     { youtubeId: "O91Y4M9liYs", title: "Comprehensive Gum Care: Prevent, Treat, and Heal" },
-    { youtubeId: "GPtmeA4UHdo", title: "Winter Damage? Time for a Spring Smile Check" },
-    { youtubeId: "JYSwkheGdZ0", title: "Catch It Early. Save Your Smile (and Wallet)" },
+    { youtubeId: "5NHuCuktCPI", title: "Making Dental Visits Fun – Children's Dental Health Month" },
+    { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
   ],
   "dental-cleaning": [
     { youtubeId: "O91Y4M9liYs", title: "Comprehensive Gum Care: Prevent, Treat, and Heal" },
-    { youtubeId: "GPtmeA4UHdo", title: "Winter Damage? Time for a Spring Smile Check" },
-    { youtubeId: "m7MHyY-w5cY", title: "Yes vs No: How to Brush Properly" },
+    { youtubeId: "5NHuCuktCPI", title: "Making Dental Visits Fun – Children's Dental Health Month" },
+    { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
   ],
   "oral-surgery": [
     { youtubeId: "1nicifZjXoA", title: "Restore Confidence with Advanced Bone Grafting" },
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
-    { youtubeId: "wg1lOqtY2hc", title: "Relaxing Dental Care Exists — At Smile Avenue" },
+    { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
   ],
   "tooth-extraction": [
     { youtubeId: "1nicifZjXoA", title: "Restore Confidence with Advanced Bone Grafting" },
-    { youtubeId: "wg1lOqtY2hc", title: "Relaxing Dental Care Exists — At Smile Avenue" },
     { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
+    { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
   ],
   "emergency-dentist": [
     { youtubeId: "HB_uTHUfm-o", title: "What To Do During a Dental Emergency | Quick Tips" },
-    { youtubeId: "JYSwkheGdZ0", title: "Catch It Early. Save Your Smile (and Wallet)" },
-    { youtubeId: "jSxCcSgRhq8", title: "Hidden Cavities? Here's How We Catch Them Early!" },
+    { youtubeId: "y1YYnlsar3U", title: "Is It Time for a Root Canal?" },
+    { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
   ],
   "dental-bridges": [
     { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
-    { youtubeId: "9whx2HIA4eU", title: "Love Your Smile Again: Small Fixes That Make a Big Difference" },
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
+    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
   ],
   "dentures": [
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
     { youtubeId: "Do_22b5MX_M", title: "From Uncomfortable to Confident Smiles" },
-    { youtubeId: "9whx2HIA4eU", title: "Love Your Smile Again: Small Fixes That Make a Big Difference" },
+    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
   ],
 };
 
