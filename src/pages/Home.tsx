@@ -24,19 +24,19 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
 
 const trustStats = [
-  { value: "5,000+", label: "Five-Star Reviews" },
-  { value: "Most", label: "Insurance Accepted" },
-  { value: "Same-Day", label: "Appointments" },
-  { value: "2", label: "Houston Locations" },
+  { value: "5,000+", label: "Five-Star Google Reviews" },
+  { value: "Most", label: "Insurance Plans Accepted" },
+  { value: "Same-Day", label: "Appointments Available" },
+  { value: "2", label: "Convenient Locations" },
 ];
 
 const services = [
-  { title: "Dental Implants", description: "Permanent tooth replacement that looks and functions like natural teeth.", href: "/cypress-tx/dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
-  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and smile design for a confident new look.", href: "/cypress-tx/cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
-  { title: "Invisalign®", description: "Clear aligners for a straighter smile without traditional braces.", href: "/cypress-tx/invisalign", icon: <Zap className="w-6 h-6" /> },
-  { title: "Emergency Dentistry", description: "Same-day urgent care when you need it most.", href: "/cypress-tx/emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
-  { title: "Preventive Care", description: "Cleanings, exams, and proactive care to keep your smile healthy.", href: "/cypress-tx/dental-cleaning", icon: <Shield className="w-6 h-6" /> },
-  { title: "Sedation Dentistry", description: "Relaxed, anxiety-free dental care for nervous patients.", href: "/cypress-tx/sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
+  { title: "Dental Implants", description: "Replace missing teeth permanently — eat, smile, and live without limits.", href: "/cypress-tx/dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers designed to turn heads.", href: "/cypress-tx/cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
+  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets, no lifestyle disruption.", href: "/cypress-tx/invisalign", icon: <Zap className="w-6 h-6" /> },
+  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today — call now.", href: "/cypress-tx/emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
+  { title: "Preventive Care", description: "Gentle cleanings and thorough exams to protect your family's smiles for life.", href: "/cypress-tx/dental-cleaning", icon: <Shield className="w-6 h-6" /> },
+  { title: "Sedation Dentistry", description: "Nervous about the dentist? Relax completely with our sedation options.", href: "/cypress-tx/sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
 ];
 
 const doctors = [
