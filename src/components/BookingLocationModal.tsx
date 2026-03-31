@@ -18,7 +18,7 @@ const locations = [
     address: "23541 Westheimer Pkwy, Ste 170, Katy, TX 77494",
     phone: "(281) 800-5008",
     phoneTel: "2818005008",
-    hours: "Mon–Fri 8:30am–5pm",
+    hours: "Mon–Fri 8:30am–5pm · Sat 8am–2pm",
     booking: KATY_BOOKING,
   },
 ];
