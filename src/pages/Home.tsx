@@ -56,11 +56,6 @@ const testimonials = [
 
 // Insurance logos moved to InsuranceLogoBar component
 
-const blogPosts = [
-  { title: "5 Signs You May Need a Dental Implant", category: "Implants", date: "Mar 15, 2026" },
-  { title: "Porcelain Veneers vs. Dental Bonding", category: "Cosmetic", date: "Mar 8, 2026" },
-  { title: "What to Do When You Knock Out a Tooth", category: "Emergency", date: "Feb 28, 2026" },
-];
 
 const faqs = [
   { question: "What locations do you serve?", answer: "We have two convenient offices — one in Cypress, TX (9212 Fry Rd) and one in Katy, TX (23541 Westheimer Pkwy). We serve families throughout the greater Houston area." },
