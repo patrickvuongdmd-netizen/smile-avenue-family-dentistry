@@ -77,6 +77,7 @@ const CypressTx = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
       <main className="pb-14 lg:pb-0">
         {/* HERO */}
