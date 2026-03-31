@@ -80,13 +80,29 @@ const fireConversion = (label: string) => {
   });
 };
 
+/* ── UTM passthrough helper ────────────────────────────────── */
+
+const UTM_PARAMS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
+
+const appendUtmParams = (baseUrl: string): string => {
+  if (typeof window === "undefined") return baseUrl;
+  const incoming = new URLSearchParams(window.location.search);
+  const url = new URL(baseUrl);
+  UTM_PARAMS.forEach((key) => {
+    const val = incoming.get(key);
+    if (val) url.searchParams.set(key, val);
+  });
+  return url.toString();
+};
+
 /* ── Component ────────────────────────────────────────────── */
 
 const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
   const loc = LOCATIONS[data.location];
   useDocTitle(data.metaTitle);
 
-  const ctaHref = data.heroCtaType === "call" ? `tel:${loc.phone}` : loc.booking;
+  const bookingUrl = appendUtmParams(loc.booking);
+  const ctaHref = data.heroCtaType === "call" ? `tel:${loc.phone}` : bookingUrl;
   const ctaTarget = data.heroCtaType === "book" ? "_blank" : undefined;
   const bookLabel = `lp_${data.pageType}_book_${data.location}`;
   const callLabel = `lp_${data.pageType}_call_${data.location}`;
