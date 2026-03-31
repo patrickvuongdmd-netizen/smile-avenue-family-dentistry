@@ -573,19 +573,6 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       <BackToTop />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
 
-      {/* Inline JSON-LD for guaranteed rendering */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
     </>
   );
 };
