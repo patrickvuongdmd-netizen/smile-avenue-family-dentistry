@@ -422,6 +422,22 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* VIDEO */}
+        {SERVICE_VIDEOS[data.serviceSlug] && (
+          <section className="section-padding bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">WATCH & LEARN</p>
+              <h2 className="section-heading">See How It Works</h2>
+              <div className="max-w-2xl mx-auto mt-8">
+                <LazyYouTube
+                  videoId={SERVICE_VIDEOS[data.serviceSlug].youtubeId}
+                  title={SERVICE_VIDEOS[data.serviceSlug].title}
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* FAQ */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
