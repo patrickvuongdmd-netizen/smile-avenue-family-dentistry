@@ -80,12 +80,12 @@ const CypressTx = () => {
 
             <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
               <div>
-                <p className="kicker">SERVING CYPRESS, BRIDGELAND & FAIRFIELD FAMILIES</p>
+                <p className="kicker">DENTIST IN CYPRESS, TX · FRY ROAD</p>
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
-                  Your Family Dentist in Cypress, TX
+                  Top-Rated Family Dentist in Cypress, TX
                 </h1>
                 <p className="section-body">
-                  At Smile Avenue Cypress, we combine modern technology with hospitality-driven care to create a dental experience your whole family will love. Whether you need a routine cleaning, a same-day emergency visit, or a complete smile makeover — we're here for you.
+                  Looking for a dentist in Cypress, TX? Smile Avenue on Fry Road delivers hospitality-driven dental care for the whole family — from routine cleanings and pediatric checkups to dental implants, Invisalign, and same-day emergency visits. Proudly serving Bridgeland, Towne Lake, Fairfield, and Cy-Fair families with 300+ five-star Google reviews.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
                   <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
