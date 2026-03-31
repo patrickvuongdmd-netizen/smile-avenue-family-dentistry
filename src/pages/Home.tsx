@@ -329,6 +329,7 @@ const Home = () => {
         </section>
 
         {/* LOCATIONS */}
+        <LazySection>
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker text-center">TWO CONVENIENT LOCATIONS</p>
@@ -372,6 +373,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </LazySection>
 
         {/* VIDEO TESTIMONIALS */}
         <section className="section-padding section-alt">
