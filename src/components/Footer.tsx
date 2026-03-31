@@ -104,8 +104,8 @@ const Footer = () => {
         <div className="border-t border-background/10 mt-12 pt-8">
           <div className="max-w-md mx-auto text-center lg:text-left lg:mx-0 lg:max-w-none lg:flex lg:items-center lg:justify-between">
             <div className="mb-4 lg:mb-0">
-              <h4 className="text-sm font-sans font-semibold mb-1">Stay Updated</h4>
-              <p className="text-xs font-sans opacity-60">Get dental tips & exclusive offers delivered to your inbox.</p>
+              <h4 className="text-sm font-sans font-semibold mb-1">Join 5,000+ Happy Families</h4>
+              <p className="text-xs font-sans opacity-60">Get dental tips, exclusive offers & appointment reminders.</p>
             </div>
             <form
               onSubmit={(e) => { e.preventDefault(); setEmail(""); }}
