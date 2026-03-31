@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Clock, Facebook, Instagram, Globe, Mail } from "lucide-react";
-import { useState } from "react";
+import { Phone, MapPin, Clock, Facebook, Instagram, Globe } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/images";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
 
   return (
     <footer className="bg-foreground text-background">
@@ -100,34 +98,21 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter */}
+        {/* Book Online CTA */}
         <div className="border-t border-background/10 mt-12 pt-8">
           <div className="max-w-md mx-auto text-center lg:text-left lg:mx-0 lg:max-w-none lg:flex lg:items-center lg:justify-between">
             <div className="mb-4 lg:mb-0">
-              <h4 className="text-sm font-sans font-semibold mb-1">Join 5,000+ Happy Families</h4>
-              <p className="text-xs font-sans opacity-60">Get dental tips, exclusive offers & appointment reminders.</p>
+              <h4 className="text-sm font-sans font-semibold mb-1">Ready to Book?</h4>
+              <p className="text-xs font-sans opacity-60">Schedule your appointment online — takes less than 60 seconds.</p>
             </div>
-            <form
-              onSubmit={(e) => { e.preventDefault(); setEmail(""); }}
-              className="flex gap-2 max-w-sm w-full lg:w-auto"
-            >
-              <div className="relative flex-1">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 opacity-40" aria-hidden="true" />
-                <label htmlFor="footer-email" className="sr-only">Email address</label>
-                <input
-                  id="footer-email"
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
-                  className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-background/10 border border-background/20 text-sm font-sans text-background placeholder:text-background/40 focus:outline-none focus:border-background/40"
-                />
-              </div>
-              <button type="submit" className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors shrink-0">
-                Subscribe
-              </button>
-            </form>
+            <div className="flex gap-3">
+              <a href="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors shrink-0">
+                Book Cypress
+              </a>
+              <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors shrink-0">
+                Book Katy
+              </a>
+            </div>
           </div>
         </div>
 

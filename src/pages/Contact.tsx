@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { MapPin, Phone, Clock, Mail, Check } from "lucide-react";
+import { MapPin, Phone, Clock, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
@@ -17,14 +16,6 @@ const locations = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", location: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   useDocTitle("Contact Us | Smile Avenue Family Dentistry");
 
 
@@ -82,51 +73,19 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Form */}
+        {/* Book Online CTA */}
         <section className="section-padding bg-background">
-          <div className="container mx-auto max-w-2xl">
-            <h2 className="section-heading text-center">Send Us a Message</h2>
-            <p className="text-center text-sm font-sans text-muted-foreground mb-8">We typically respond within 1 business hour during office hours.</p>
-
-            {submitted ? (
-              <div className="text-center py-12 bg-card rounded-2xl border border-border">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4"><Check className="w-8 h-8 text-primary" /></div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-2">Message Sent!</h3>
-                <p className="font-body text-muted-foreground">We'll get back to you within 1 business hour.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="bg-card rounded-2xl border border-border p-8 space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Full Name *</label>
-                    <input type="text" required value={formData.name} onChange={e => setFormData(p => ({ ...p, name: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="John Smith" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Email *</label>
-                    <input type="email" required value={formData.email} onChange={e => setFormData(p => ({ ...p, email: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="john@email.com" />
-                  </div>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Phone *</label>
-                    <input type="tel" required value={formData.phone} onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="(555) 123-4567" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Preferred Location</label>
-                    <select value={formData.location} onChange={e => setFormData(p => ({ ...p, location: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
-                      <option value="">No preference</option>
-                      <option value="cypress">Cypress</option>
-                      <option value="katy">Katy</option>
-                    </select>
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-sans font-medium text-foreground mb-1.5">Message *</label>
-                  <textarea rows={4} required value={formData.message} onChange={e => setFormData(p => ({ ...p, message: e.target.value }))} className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none" placeholder="How can we help?" />
-                </div>
-                <button type="submit" className="btn-primary w-full">Send Message</button>
-              </form>
-            )}
+          <div className="container mx-auto max-w-2xl text-center">
+            <h2 className="section-heading">Ready to Book?</h2>
+            <p className="section-body">Schedule your appointment online in under 60 seconds — or call us directly.</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress" target="_blank" rel="noopener noreferrer" className="btn-primary">Book Cypress Online</a>
+              <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="btn-primary">Book Katy Online</a>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 mt-6">
+              <a href="tel:8326481756" className="text-sm font-sans font-semibold text-primary hover:underline flex items-center gap-1.5"><Phone className="w-4 h-4" /> Cypress: (832) 648-1756</a>
+              <a href="tel:2818005008" className="text-sm font-sans font-semibold text-primary hover:underline flex items-center gap-1.5"><Phone className="w-4 h-4" /> Katy: (281) 800-5008</a>
+            </div>
           </div>
         </section>
 
