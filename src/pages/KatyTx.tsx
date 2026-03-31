@@ -62,16 +62,18 @@ const KatyTx = () => {
   return (
     <>
       <Helmet>
-        <title>Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue</title>
-        <meta name="description" content="Top-rated family dentist in Katy, TX on Westheimer Parkway. 4.9★ from 200+ reviews. Same-day appointments, dental implants, Invisalign, emergency care. Serving Cinco Ranch, Firethorne, Cross Creek Ranch. Call (281) 800-5008." />
+        <title>Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue</title>
+        <meta name="description" content="Looking for a dentist in Katy, TX? Smile Avenue on Westheimer Parkway — 4.9★ from 200+ reviews, same-day appointments, in-house dental lab. Implants, Invisalign, emergency care. Serving Cinco Ranch, Firethorne, Cross Creek Ranch & Fulshear. Call (281) 800-5008." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/katy-tx/" />
-        <meta property="og:title" content="Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue" />
-        <meta property="og:description" content="Top-rated family dentist in Katy, TX. 4.9★ from 200+ reviews. Same-day appointments. Serving Cinco Ranch, Firethorne & Cross Creek Ranch." />
+        <meta property="og:title" content="Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue" />
+        <meta property="og:description" content="Top-rated family & cosmetic dentist in Katy, TX on Westheimer Parkway. 4.9★ from 200+ reviews. Same-day appointments. In-house dental lab. Serving Cinco Ranch, Firethorne & Cross Creek Ranch." />
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/katy-tx/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content={OFFICE_IMAGES.katyHero} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dentist in Katy, TX | Westheimer Pkwy Dentist | Smile Avenue" />
+        <meta name="twitter:description" content="4.9★ family dentist in Katy, TX on Westheimer Parkway. Same-day appointments, dental implants, Invisalign. In-house lab. Call (281) 800-5008." />
       </Helmet>
       <Navbar phone={KATY_PHONE} phoneFormatted={KATY_PHONE_FORMATTED} bookingUrl={KATY_BOOKING} />
       <TrustStrip />
@@ -80,20 +82,20 @@ const KatyTx = () => {
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <nav className="mb-6 text-xs font-sans text-muted-foreground">
+            <nav className="mb-6 text-xs font-sans text-muted-foreground" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span className="mx-2">›</span>
-              <span className="text-foreground">Katy, TX</span>
+              <span className="mx-2" aria-hidden="true">›</span>
+              <span className="text-foreground">Dentist in Katy, TX</span>
             </nav>
 
             <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
               <div>
-                <p className="kicker">DENTIST IN KATY, TX · WESTHEIMER PARKWAY</p>
+                <p className="kicker">DENTIST IN KATY, TX · WESTHEIMER PARKWAY · NEAR LACENTERRA</p>
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
-                  Top-Rated Family Dentist in Katy, TX
+                  Your Family Dentist on Westheimer Parkway in Katy, TX
                 </h1>
                 <p className="section-body">
-                  Looking for a dentist in Katy, TX? Smile Avenue on Westheimer Parkway delivers hospitality-driven dental care for the whole family — from routine cleanings and pediatric checkups to dental implants, Invisalign, and same-day emergency visits. Proudly serving Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear families with 200+ five-star Google reviews.
+                  Smile Avenue on Westheimer Parkway is the Katy dentist that makes dental care feel effortless. From <Link to="/katy-tx/dental-cleaning" className="text-primary hover:underline">routine cleanings</Link> and <Link to="/katy-tx/pediatric-dentistry" className="text-primary hover:underline">kids' checkups</Link> to <Link to="/katy-tx/dental-implants" className="text-primary hover:underline">dental implants</Link>, <Link to="/katy-tx/invisalign" className="text-primary hover:underline">Invisalign</Link>, and <Link to="/katy-tx/emergency-dentist" className="text-primary hover:underline">same-day emergencies</Link> — we do it all with our in-house dental lab. Proudly serving Cinco Ranch, Cross Creek Ranch, Firethorne, Fulshear, and Katy ISD families.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-4">
                   <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
@@ -106,12 +108,14 @@ const KatyTx = () => {
                 <p className="text-xs font-sans text-muted-foreground mb-2">
                   ✓ We confirm within 1 hour · ✓ Same-day appointments · ✓ 0% financing available
                 </p>
-                <p className="text-sm font-sans text-muted-foreground">
-                  ⭐ 4.9 from 200+ Katy Reviews · All Ages Welcome
-                </p>
+                <div className="flex items-center gap-3 text-sm font-sans text-muted-foreground">
+                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
+                  <span className="font-semibold text-foreground">4.9</span>
+                  <span>from 200+ verified Katy reviews</span>
+                </div>
               </div>
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.katyHero} alt="Smile Avenue Katy office on Westheimer Parkway" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
+                <img src={OFFICE_IMAGES.katyHero} alt="Smile Avenue Katy dental office on Westheimer Parkway, Katy TX 77494" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
               </div>
             </div>
           </div>
