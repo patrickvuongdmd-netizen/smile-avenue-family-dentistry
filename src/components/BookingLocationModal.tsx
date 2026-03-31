@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, X } from "lucide-react";
+import { MapPin, Clock, Phone, X, Star, Shield, CreditCard } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
