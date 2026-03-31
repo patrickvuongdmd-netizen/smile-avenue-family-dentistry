@@ -253,7 +253,8 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
       <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
         <div className="flex items-center justify-between px-4 py-2.5 max-w-5xl mx-auto">
           <a href="/" aria-label="Smile Avenue Home">
-            <img src="https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/11/logo-mark.webp" alt="Smile Avenue Family Dentistry" className="h-8 w-auto" width={120} height={32} />
+            <img src="/logo-mark.webp" alt="Smile Avenue Family Dentistry" className="h-8 w-auto sm:hidden" width={32} height={32} />
+            <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="hidden sm:block h-12 w-auto" width={160} height={48} />
           </a>
           <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="hidden sm:flex items-center gap-1.5 text-sm font-sans font-semibold" style={{ color: "#2B5DA7" }}>
             <Phone className="w-4 h-4" />{loc.phoneFormatted}
