@@ -3,6 +3,7 @@ import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTe
 
 const data: LandingPageData = {
   location: "katy",
+  pageType: "dental-implants",
   metaTitle: "Dental Implants Katy TX | Free Consultation | Smile Avenue",
   metaDescription: "Missing teeth? Natural-looking dental implants with our in-house Smile Dental Lab in Katy, TX. Free implant consultation. Financing available.",
   heroHeadline: "Missing Teeth? Dental Implants That Look and Feel Natural",

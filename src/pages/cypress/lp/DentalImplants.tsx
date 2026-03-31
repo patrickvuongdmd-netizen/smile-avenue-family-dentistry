@@ -3,6 +3,7 @@ import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTe
 
 const data: LandingPageData = {
   location: "cypress",
+  pageType: "dental-implants",
   metaTitle: "Dental Implants Cypress TX | Free Consultation | Smile Avenue",
   metaDescription: "Missing teeth? Natural-looking dental implants with our in-house Smile Dental Lab. Free implant consultation. Financing available. Book today.",
   heroHeadline: "Missing Teeth? Dental Implants That Look and Feel Natural",

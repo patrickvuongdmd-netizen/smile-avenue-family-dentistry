@@ -3,6 +3,7 @@ import LandingPageTemplate, { LandingPageData } from "@/components/LandingPageTe
 
 const data: LandingPageData = {
   location: "cypress",
+  pageType: "emergency",
   metaTitle: "Emergency Dentist Cypress TX | Same-Day Care | Smile Avenue",
   metaDescription: "Dental emergency in Cypress? Same-day appointments for toothaches, broken teeth, and more. Walk-ins welcome. Call (832) 648-1756 now.",
   heroHeadline: "Dental Emergency in Cypress? We're Here Now.",
