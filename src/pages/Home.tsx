@@ -409,8 +409,9 @@ const Home = () => {
         </section>
         </LazySection>
 
-        {/* INSURANCE */}
-        <InsuranceLogoBar />
+        <LazySection>
+          <InsuranceLogoBar />
+        </LazySection>
 
         {/* SMILE GALLERY CTA */}
         <section className="section-padding section-alt">
