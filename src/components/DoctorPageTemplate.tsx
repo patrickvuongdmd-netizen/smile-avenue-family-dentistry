@@ -89,6 +89,8 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
         <meta name="twitter:title" content={data.metaTitle} />
         <meta name="twitter:description" content={data.metaDescription} />
         {doctorImg && <meta name="twitter:image" content={doctorImg.url} />}
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <Navbar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
       <TrustStrip />
@@ -232,15 +234,6 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
       <Footer />
       <MobileStickyBar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
       <BackToTop />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
     </>
   );
 };
