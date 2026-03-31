@@ -3,7 +3,6 @@ import { Phone, MapPin, Clock, Facebook, Instagram, Globe, Mail } from "lucide-r
 import { SOCIAL_LINKS } from "@/lib/images";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
 
   return (
     <footer className="bg-foreground text-background">
