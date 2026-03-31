@@ -63,7 +63,7 @@ export interface ServicePageData {
   heroImage: string;
   introKicker: string;
   introHeading: string;
-  introParas: string[];
+  introParas: ReactNode[];
   trustBadges: TrustBadge[];
   subServicesKicker: string;
   subServicesHeading: string;
