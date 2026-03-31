@@ -376,6 +376,7 @@ const Home = () => {
         </LazySection>
 
         {/* VIDEO TESTIMONIALS */}
+        <LazySection>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">REAL PATIENTS, REAL STORIES</p>
@@ -390,6 +391,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </LazySection>
 
         {/* TESTIMONIALS */}
         <section className="section-padding bg-background">
