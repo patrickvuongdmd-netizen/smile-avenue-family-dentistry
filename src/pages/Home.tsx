@@ -121,15 +121,21 @@ const Home = () => {
                   <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
                 </div>
-                <div className="flex flex-wrap gap-3 mb-4">
-                  <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Appointment</a>
-                  <Link to="/convenient-locations" className="btn-secondary">Find a Location</Link>
+                <div className="flex flex-wrap gap-3 mb-3">
+                  <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Online — Takes 60 Seconds</a>
+                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2"><Phone className="w-4 h-4" /> Call {heroPhoneFmt}</a>
                 </div>
+                <p className="text-xs font-sans text-muted-foreground mb-3">
+                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />We confirm your appointment within 1 hour
+                  <span className="mx-2 text-border">·</span>
+                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />Most insurance accepted
+                  <span className="mx-2 text-border">·</span>
+                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />0% financing available
+                </p>
                 <div className="flex items-center gap-3 text-sm font-sans text-muted-foreground">
-                  <a href={`tel:${heroPhone}`} className="flex items-center gap-1 hover:text-primary transition-colors"><Phone className="w-3.5 h-3.5" /> {heroPhoneFmt}</a>
-                  <span className="text-border">|</span>
                   <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
-                  <span>4.9 from 5,000+ reviews</span>
+                  <span className="font-semibold text-foreground">4.9</span>
+                  <span>from 5,000+ verified reviews</span>
                 </div>
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
