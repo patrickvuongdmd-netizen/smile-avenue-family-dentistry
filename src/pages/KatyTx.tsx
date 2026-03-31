@@ -47,16 +47,16 @@ const faqs = [
 ];
 
 const KatyTx = () => {
-  useDocTitle("Dentist in Katy, TX | Smile Avenue Family Dentistry");
+  useDocTitle("Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue");
 
   return (
     <>
       <Helmet>
-        <title>Dentist in Katy, TX | Smile Avenue Family Dentistry</title>
-        <meta name="description" content="Your family dentist in Katy, TX. Personalized care, advanced comfort, and same-day appointments at 23541 Westheimer Pkwy. Serving Katy, Cinco Ranch, Cross Creek Ranch, and Firethorne families." />
+        <title>Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue</title>
+        <meta name="description" content="Top-rated family dentist in Katy, TX on Westheimer Parkway. 4.9★ from 200+ reviews. Same-day appointments, dental implants, Invisalign, emergency care. Serving Cinco Ranch, Firethorne, Cross Creek Ranch. Call (281) 800-5008." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/katy-tx/" />
-        <meta property="og:title" content="Dentist in Katy, TX | Smile Avenue Family Dentistry" />
-        <meta property="og:description" content="Your family dentist in Katy, TX. Personalized care, advanced comfort, and same-day appointments." />
+        <meta property="og:title" content="Dentist in Katy, TX | Family & Cosmetic Dental Care | Smile Avenue" />
+        <meta property="og:description" content="Top-rated family dentist in Katy, TX. 4.9★ from 200+ reviews. Same-day appointments. Serving Cinco Ranch, Firethorne & Cross Creek Ranch." />
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/katy-tx/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
@@ -77,12 +77,12 @@ const KatyTx = () => {
 
             <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
               <div>
-                <p className="kicker">SERVING KATY, CINCO RANCH & CROSS CREEK FAMILIES</p>
+                <p className="kicker">DENTIST IN KATY, TX · WESTHEIMER PARKWAY</p>
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
-                  Your Family Dentist in Katy, TX
+                  Top-Rated Family Dentist in Katy, TX
                 </h1>
                 <p className="section-body">
-                  At Smile Avenue Katy, we combine modern technology with hospitality-driven care to create a dental experience your whole family will love. Whether you need a routine cleaning, a same-day emergency visit, or a complete smile makeover — we're here for you.
+                  Looking for a dentist in Katy, TX? Smile Avenue on Westheimer Parkway delivers hospitality-driven dental care for the whole family — from routine cleanings and pediatric checkups to dental implants, Invisalign, and same-day emergency visits. Proudly serving Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear families with 200+ five-star Google reviews.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
                   <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -270,10 +270,8 @@ const KatyTx = () => {
             <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
               <div>
                 <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading">Common Questions About Our Katy Office</h2>
-                <div className="bg-muted rounded-2xl aspect-square hidden lg:flex items-center justify-center mt-6">
-                  <span className="text-sm font-sans text-muted-foreground">FAQ Image</span>
-                </div>
+                <h2 className="section-heading">Katy Dental FAQs</h2>
+                <p className="section-body">Have more questions about our Katy office? Call <a href={`tel:${KATY_PHONE}`} className="text-primary hover:underline">{KATY_PHONE_FORMATTED}</a>.</p>
               </div>
               <FaqAccordion items={faqs} />
             </div>
@@ -327,19 +325,20 @@ const KatyTx = () => {
         <section className="gradient-cta py-16 md:py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Book Your Katy Appointment?
+              Book Your Katy Dental Appointment Today
             </h2>
             <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-              Schedule your visit today at our Katy office. Your best smile is closer than you think.
+              Join 200+ families who rate us 4.9 stars. Same-day appointments available at our Westheimer Parkway office.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
-                Book at Katy
+                Book Online — Takes 60 Seconds
               </a>
               <a href={`tel:${KATY_PHONE}`} className="btn-cta-outline">
                 Call {KATY_PHONE_FORMATTED}
               </a>
             </div>
+            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Most insurance accepted · 0% financing · No obligation</p>
           </div>
         </section>
       </main>
@@ -355,7 +354,7 @@ const KatyTx = () => {
             "@context": "https://schema.org",
             "@type": ["LocalBusiness", "Dentist"],
             name: "Smile Avenue Family Dentistry - Katy",
-            image: "",
+            image: OFFICE_IMAGES.katyHero,
             telephone: "+1-281-800-5008",
             address: {
               "@type": "PostalAddress",
@@ -364,6 +363,11 @@ const KatyTx = () => {
               addressRegion: "TX",
               postalCode: "77494",
               addressCountry: "US",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 29.7357,
+              longitude: -95.7575,
             },
             url: "https://www.smileavenuefamilydentistry.com/katy-tx/",
             openingHoursSpecification: [
@@ -374,6 +378,41 @@ const KatyTx = () => {
               ratingValue: "4.9",
               reviewCount: "200",
             },
+            areaServed: [
+              { "@type": "City", name: "Katy, TX" },
+              { "@type": "Place", name: "Cinco Ranch" },
+              { "@type": "Place", name: "Firethorne" },
+              { "@type": "Place", name: "Cross Creek Ranch" },
+              { "@type": "Place", name: "Fulshear" },
+            ],
+            priceRange: "$$",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
+              { "@type": "ListItem", position: 2, name: "Dentist in Katy, TX", item: "https://www.smileavenuefamilydentistry.com/katy-tx/" },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(f => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
           }),
         }}
       />

@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Oral Surgery",
   serviceSlug: "oral-surgery",
-  metaTitle: "Oral Surgery in Katy, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Oral Surgery Katy, TX | Wisdom Teeth & Bone Grafting | Smile Avenue",
   metaDescription: "In-office oral surgery in Katy, TX. Wisdom teeth, bone grafting. IV sedation. Call (281) 800-5008.",
   heroKicker: "ORAL SURGERY IN KATY",
   heroHeading: "Oral Surgery in Katy, TX",

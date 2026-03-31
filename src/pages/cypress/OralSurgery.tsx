@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Oral Surgery",
   serviceSlug: "oral-surgery",
-  metaTitle: "Oral Surgery in Cypress, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Oral Surgery Cypress, TX | Wisdom Teeth & Bone Grafting | Smile Avenue",
   metaDescription: "In-office oral surgery in Cypress, TX. Wisdom teeth, bone grafting, surgical extractions. IV sedation available. Call (832) 648-1756.",
   heroKicker: "ORAL SURGERY IN CYPRESS",
   heroHeading: "Oral Surgery in Cypress, TX",

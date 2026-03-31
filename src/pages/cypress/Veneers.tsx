@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Veneers",
   serviceSlug: "veneers",
-  metaTitle: "Porcelain Veneers in Cypress, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Veneers Cypress, TX | Porcelain Veneers & Smile Design | Smile Avenue",
   metaDescription: "Custom porcelain veneers in Cypress, TX. Emax and zirconia options from our in-house lab. Natural results. Call (832) 648-1756.",
   heroKicker: "VENEERS IN CYPRESS",
   heroHeading: "Porcelain Veneers in Cypress, TX",

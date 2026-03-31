@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Sedation Dentistry",
   serviceSlug: "sedation-dentistry",
-  metaTitle: "Sedation Dentistry in Cypress, TX - Anxiety-Free Care - Smile Avenue",
+  metaTitle: "Sedation Dentistry Cypress, TX | Anxiety-Free Dental Care | Smile Avenue",
   metaDescription: "Sedation dentistry in Cypress, TX. Nitrous oxide, oral and IV sedation for anxiety-free dental care. Call (832) 648-1756.",
   heroKicker: "ANXIETY-FREE DENTISTRY IN CYPRESS",
   heroHeading: "Sedation Dentistry in Cypress, TX",

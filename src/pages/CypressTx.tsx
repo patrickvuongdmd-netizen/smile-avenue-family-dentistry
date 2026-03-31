@@ -49,16 +49,16 @@ const faqs = [
 ];
 
 const CypressTx = () => {
-  useDocTitle("Dentist in Cypress, TX | Smile Avenue Family Dentistry");
+  useDocTitle("Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue");
 
   return (
     <>
       <Helmet>
-        <title>Dentist in Cypress, TX | Smile Avenue Family Dentistry</title>
-        <meta name="description" content="Your family dentist in Cypress, TX. Personalized care, advanced comfort, and same-day appointments at 9212 Fry Rd. Serving Cypress, Bridgeland, Fairfield, and Towne Lake families." />
+        <title>Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue</title>
+        <meta name="description" content="Top-rated family dentist in Cypress, TX on Fry Road. 4.9★ from 300+ reviews. Same-day appointments, dental implants, Invisalign, emergency care. Serving Bridgeland, Fairfield, Towne Lake. Call (832) 648-1756." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
-        <meta property="og:title" content="Dentist in Cypress, TX | Smile Avenue Family Dentistry" />
-        <meta property="og:description" content="Your family dentist in Cypress, TX. Personalized care, advanced comfort, and same-day appointments." />
+        <meta property="og:title" content="Dentist in Cypress, TX | Family & Cosmetic Dental Care | Smile Avenue" />
+        <meta property="og:description" content="Top-rated family dentist in Cypress, TX. 4.9★ from 300+ reviews. Same-day appointments. Serving Bridgeland, Fairfield & Towne Lake." />
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
@@ -80,12 +80,12 @@ const CypressTx = () => {
 
             <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
               <div>
-                <p className="kicker">SERVING CYPRESS, BRIDGELAND & FAIRFIELD FAMILIES</p>
+                <p className="kicker">DENTIST IN CYPRESS, TX · FRY ROAD</p>
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
-                  Your Family Dentist in Cypress, TX
+                  Top-Rated Family Dentist in Cypress, TX
                 </h1>
                 <p className="section-body">
-                  At Smile Avenue Cypress, we combine modern technology with hospitality-driven care to create a dental experience your whole family will love. Whether you need a routine cleaning, a same-day emergency visit, or a complete smile makeover — we're here for you.
+                  Looking for a dentist in Cypress, TX? Smile Avenue on Fry Road delivers hospitality-driven dental care for the whole family — from routine cleanings and pediatric checkups to dental implants, Invisalign, and same-day emergency visits. Proudly serving Bridgeland, Towne Lake, Fairfield, and Cy-Fair families with 300+ five-star Google reviews.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
                   <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -273,10 +273,8 @@ const CypressTx = () => {
             <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
               <div>
                 <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading">Common Questions About Our Cypress Office</h2>
-                <div className="bg-muted rounded-2xl aspect-square hidden lg:flex items-center justify-center mt-6">
-                  <span className="text-sm font-sans text-muted-foreground">FAQ Image</span>
-                </div>
+                <h2 className="section-heading">Cypress Dental FAQs</h2>
+                <p className="section-body">Have more questions about our Cypress office? Call <a href={`tel:${CYPRESS_PHONE}`} className="text-primary hover:underline">{CYPRESS_PHONE_FORMATTED}</a>.</p>
               </div>
               <FaqAccordion items={faqs} />
             </div>
@@ -329,20 +327,21 @@ const CypressTx = () => {
         {/* FINAL CTA */}
         <section className="gradient-cta py-16 md:py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4" style={{ color: 'hsl(0 0% 100%)' }}>
-              Ready to Book Your Cypress Appointment?
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              Book Your Cypress Dental Appointment Today
             </h2>
-            <p className="font-body text-lg mb-8 max-w-xl mx-auto" style={{ color: 'hsl(0 0% 100% / 0.85)' }}>
-              Schedule your visit today at our Cypress office. Your best smile is closer than you think.
+            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto">
+              Join 300+ families who rate us 4.9 stars. Same-day appointments available at our Fry Road office.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-block bg-background text-foreground font-sans font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity">
-                Book at Cypress
+              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
+                Book Online — Takes 60 Seconds
               </a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="inline-block bg-transparent border-2 border-background text-background font-sans font-semibold px-8 py-4 rounded-xl hover:bg-background/10 transition-colors">
+              <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
                 Call {CYPRESS_PHONE_FORMATTED}
               </a>
             </div>
+            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Most insurance accepted · 0% financing · No obligation</p>
           </div>
         </section>
       </main>
@@ -382,6 +381,43 @@ const CypressTx = () => {
               ratingValue: "4.9",
               reviewCount: "300",
             },
+            areaServed: [
+              { "@type": "City", name: "Cypress, TX" },
+              { "@type": "Place", name: "Bridgeland" },
+              { "@type": "Place", name: "Towne Lake" },
+              { "@type": "Place", name: "Fairfield" },
+              { "@type": "Place", name: "Cy-Fair" },
+              { "@type": "Place", name: "Jersey Village" },
+            ],
+            priceRange: "$$",
+            hasMap: "https://maps.app.goo.gl/DgZBrfjyNed7qKxs8",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
+              { "@type": "ListItem", position: 2, name: "Dentist in Cypress, TX", item: "https://www.smileavenuefamilydentistry.com/cypress-tx/" },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(f => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
           }),
         }}
       />

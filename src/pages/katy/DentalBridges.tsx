@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Dental Bridges",
   serviceSlug: "dental-bridges",
-  metaTitle: "Dental Bridges in Katy, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Dental Bridges Katy, TX | Fixed Bridge Restorations | Smile Avenue",
   metaDescription: "Custom dental bridges in Katy, TX. Replace missing teeth. In-house lab precision. Call (281) 800-5008.",
   heroKicker: "FIXED BRIDGES IN KATY",
   heroHeading: "Dental Bridges in Katy, TX",

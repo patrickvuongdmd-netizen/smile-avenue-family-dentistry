@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Emergency Dentist",
   serviceSlug: "emergency-dentist",
-  metaTitle: "Emergency Dentist in Cypress, TX - Same-Day Care - Smile Avenue",
+  metaTitle: "Emergency Dentist Cypress, TX | Same-Day Urgent Care | Smile Avenue",
   metaDescription: "Dental emergency in Cypress? Same-day appointments for toothaches, broken teeth and more. Sedation available. Call (832) 648-1756 now.",
   heroKicker: "SAME-DAY EMERGENCY CARE IN CYPRESS",
   heroHeading: "Emergency Dentist in Cypress, TX",

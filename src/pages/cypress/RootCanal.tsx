@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Root Canal",
   serviceSlug: "root-canal",
-  metaTitle: "Root Canal Treatment in Cypress, TX - Gentle Care - Smile Avenue",
+  metaTitle: "Root Canal Cypress, TX | Gentle, Pain-Free Treatment | Smile Avenue",
   metaDescription: "Painless root canal in Cypress, TX. Save your natural tooth with gentle modern care. Sedation available. Call (832) 648-1756.",
   heroKicker: "SAVE YOUR TOOTH IN CYPRESS",
   heroHeading: "Root Canal Treatment in Cypress, TX",

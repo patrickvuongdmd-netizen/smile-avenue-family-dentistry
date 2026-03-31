@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Veneers",
   serviceSlug: "veneers",
-  metaTitle: "Porcelain Veneers in Katy, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Veneers Katy, TX | Porcelain Veneers & Smile Design | Smile Avenue",
   metaDescription: "Custom veneers in Katy, TX. Emax and zirconia from our in-house lab. Natural results. Call (281) 800-5008.",
   heroKicker: "PORCELAIN VENEERS IN KATY",
   heroHeading: "Porcelain Veneers in Katy, TX",

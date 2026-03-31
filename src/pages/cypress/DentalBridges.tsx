@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Dental Bridges",
   serviceSlug: "dental-bridges",
-  metaTitle: "Dental Bridges in Cypress, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Dental Bridges Cypress, TX | Fixed Bridge Restorations | Smile Avenue",
   metaDescription: "Custom dental bridges in Cypress, TX. Replace missing teeth with fixed bridges. In-house lab precision. Call (832) 648-1756.",
   heroKicker: "DENTAL BRIDGES IN CYPRESS",
   heroHeading: "Dental Bridges in Cypress, TX",

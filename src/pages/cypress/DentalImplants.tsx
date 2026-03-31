@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Dental Implants",
   serviceSlug: "dental-implants",
-  metaTitle: "Dental Implants in Cypress, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Dental Implants Cypress, TX | Permanent Tooth Replacement | Smile Avenue",
   metaDescription: "Permanent dental implant solutions in Cypress, TX. Advanced 3D planning, in-house lab for precise restorations. Sedation available. Call (832) 648-1756.",
   heroKicker: "PERMANENT TOOTH REPLACEMENT IN CYPRESS",
   heroHeading: "Dental Implants in Cypress, TX",

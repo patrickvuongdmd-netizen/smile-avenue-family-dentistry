@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Tooth Extraction",
   serviceSlug: "tooth-extraction",
-  metaTitle: "Tooth Extraction in Cypress, TX - Gentle Care - Smile Avenue",
+  metaTitle: "Tooth Extraction Cypress, TX | Gentle & Safe Extractions | Smile Avenue",
   metaDescription: "Gentle tooth extractions in Cypress, TX. Wisdom teeth, damaged teeth, surgical extractions. Sedation available. Call (832) 648-1756.",
   heroKicker: "TOOTH EXTRACTION IN CYPRESS",
   heroHeading: "Tooth Extraction in Cypress, TX",

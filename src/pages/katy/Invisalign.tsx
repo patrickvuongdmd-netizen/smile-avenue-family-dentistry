@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Invisalign",
   serviceSlug: "invisalign",
-  metaTitle: "Invisalign in Katy, TX - Clear Aligners - Smile Avenue",
+  metaTitle: "Invisalign Katy, TX | Clear Aligners for Adults & Teens | Smile Avenue",
   metaDescription: "Invisalign clear aligners in Katy, TX near Cinco Ranch. Digital scanning, in-house fabrication. Call (281) 800-5008.",
   heroKicker: "CLEAR ALIGNERS IN KATY",
   heroHeading: "Invisalign Clear Aligners in Katy, TX",

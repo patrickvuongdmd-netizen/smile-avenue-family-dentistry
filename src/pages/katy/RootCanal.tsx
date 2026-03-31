@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Root Canal",
   serviceSlug: "root-canal",
-  metaTitle: "Root Canal in Katy, TX - Gentle Care - Smile Avenue",
+  metaTitle: "Root Canal Katy, TX | Gentle, Pain-Free Treatment | Smile Avenue",
   metaDescription: "Painless root canal in Katy, TX. Save your tooth with modern care. Sedation available. Call (281) 800-5008.",
   heroKicker: "GENTLE ROOT CANAL IN KATY",
   heroHeading: "Root Canal Treatment in Katy, TX",
