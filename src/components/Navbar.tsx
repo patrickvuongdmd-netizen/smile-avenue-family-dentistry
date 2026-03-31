@@ -303,6 +303,8 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
         </div>
       )}
     </nav>
+    <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
+    </>
   );
 };
 
