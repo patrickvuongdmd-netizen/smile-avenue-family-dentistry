@@ -417,9 +417,10 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                   <span>Mon–Fri 8am–5pm | Sat by Appointment</span>
                 </div>
               </div>
-              <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-primary w-full text-center">
                 Book Appointment
-              </a>
+              </button>
+              <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>
             </div>
           </div>
         </section>
