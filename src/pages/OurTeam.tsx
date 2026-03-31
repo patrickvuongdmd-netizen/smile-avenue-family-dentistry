@@ -83,7 +83,7 @@ const OurTeam = () => {
       <Navbar phone={PHONE} phoneFormatted={PHONE_FMT} bookingUrl={BOOKING} />
       <TrustStrip />
 
-      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
@@ -118,7 +118,7 @@ const OurTeam = () => {
 
         {/* DOCTORS */}
         {filteredDoctors.length > 0 && (
-          <section className="section-padding section-alt animate-in fade-in duration-500">
+          <section className="section-padding section-alt">
             <div className="container mx-auto">
               <div className="flex items-center gap-2 mb-8">
                 <Users className="w-5 h-5 text-primary" />
@@ -156,7 +156,7 @@ const OurTeam = () => {
 
         {/* HYGIENISTS */}
         {filteredHygienists.length > 0 && (
-          <section className="section-padding bg-background animate-in fade-in duration-500">
+          <section className="section-padding bg-background">
             <div className="container mx-auto">
               <div className="flex items-center gap-2 mb-8">
                 <Users className="w-5 h-5 text-primary" />
@@ -164,7 +164,7 @@ const OurTeam = () => {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                 {filteredHygienists.map(m => (
-                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
+                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} imgKey={m.imgKey} />
                 ))}
               </div>
             </div>
@@ -173,7 +173,7 @@ const OurTeam = () => {
 
         {/* ASSISTANTS */}
         {filteredAssistants.length > 0 && (
-          <section className="section-padding section-alt animate-in fade-in duration-500">
+          <section className="section-padding section-alt">
             <div className="container mx-auto">
               <div className="flex items-center gap-2 mb-8">
                 <Users className="w-5 h-5 text-primary" />
@@ -181,7 +181,7 @@ const OurTeam = () => {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                 {filteredAssistants.map(m => (
-                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} />
+                  <TeamCard key={m.name} name={m.name} credentials={m.credentials} role={m.role} locations={m.locations} imgKey={m.imgKey} />
                 ))}
               </div>
             </div>
@@ -190,7 +190,7 @@ const OurTeam = () => {
 
         {/* FRONT OFFICE */}
         {filteredFrontOffice.length > 0 && (
-          <section className="section-padding bg-background animate-in fade-in duration-500">
+          <section className="section-padding bg-background">
             <div className="container mx-auto">
               <div className="flex items-center gap-2 mb-8">
                 <Users className="w-5 h-5 text-primary" />
@@ -198,7 +198,7 @@ const OurTeam = () => {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                 {filteredFrontOffice.map(m => (
-                  <TeamCard key={m.name} name={m.name} role={m.role} locations={m.locations} />
+                  <TeamCard key={m.name} name={m.name} role={m.role} locations={m.locations} imgKey={m.imgKey} />
                 ))}
               </div>
             </div>
