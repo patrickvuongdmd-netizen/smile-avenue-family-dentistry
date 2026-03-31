@@ -207,12 +207,12 @@ const KatyTx = () => {
         </section>
 
         {/* SERVICES */}
-        <section className="section-padding section-alt">
+        <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
-            <p className="kicker">COMPREHENSIVE DENTAL CARE IN KATY</p>
-            <h2 className="section-heading">Dental Services for Your Entire Family</h2>
+            <p className="kicker">DENTAL SERVICES IN KATY, TX</p>
+            <h2 className="section-heading">Complete Family & Cosmetic Dentistry on Westheimer Parkway</h2>
             <p className="section-body max-w-2xl mx-auto">
-              From preventive care to advanced cosmetic treatments, Smile Avenue Katy offers complete dental solutions for your whole family.
+              Everything your family needs under one roof — no referrals needed. Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> delivers faster, more precise results.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
               {services.map((svc) => (
@@ -220,7 +220,7 @@ const KatyTx = () => {
               ))}
             </div>
             <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-              Explore All Katy Services →
+              View All 17 Katy Services →
             </Link>
           </div>
         </section>
