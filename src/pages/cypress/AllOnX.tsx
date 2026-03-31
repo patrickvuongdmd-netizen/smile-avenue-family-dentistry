@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "All-on-X Implants",
   serviceSlug: "all-on-x-implants",
-  metaTitle: "All-on-X Dental Implants in Cypress, TX - Full Mouth Restoration - Smile Avenue",
+  metaTitle: "All-on-4 Dental Implants Cypress, TX | Full Arch Restoration | Smile Avenue",
   metaDescription: "All-on-X full-arch dental implants in Cypress, TX. Permanent fixed smile in one day. In-house lab, 3D planning, sedation available. Call (832) 648-1756.",
   heroKicker: "FULL ARCH RESTORATION IN CYPRESS",
   heroHeading: "All-on-X Full-Arch Dental Implants in Cypress, TX",

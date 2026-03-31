@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Cosmetic Dentistry",
   serviceSlug: "cosmetic-dentistry",
-  metaTitle: "Cosmetic Dentist in Cypress, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Cosmetic Dentist Cypress, TX | Veneers, Whitening & Smile Makeovers | Smile Avenue",
   metaDescription: "Transform your smile with cosmetic dentistry in Cypress, TX. Veneers, whitening, bonding and smile makeovers. Call (832) 648-1756.",
   heroKicker: "SMILE MAKEOVERS IN CYPRESS",
   heroHeading: "Cosmetic Dentistry in Cypress, TX",

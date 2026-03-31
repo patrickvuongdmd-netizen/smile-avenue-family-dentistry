@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Pediatric Dentistry",
   serviceSlug: "pediatric-dentistry",
-  metaTitle: "Pediatric Dentist in Katy, TX - Kids Dentistry - Smile Avenue",
+  metaTitle: "Pediatric Dentist Katy, TX | Kids & Family Dentistry | Smile Avenue",
   metaDescription: "Gentle kids dentistry in Katy, TX near Cinco Ranch. First visits, cleanings, sealants. Fun environment. Call (281) 800-5008.",
   heroKicker: "KIDS DENTISTRY IN KATY",
   heroHeading: "Pediatric Dentistry in Katy, TX",

@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Dentures",
   serviceSlug: "dentures",
-  metaTitle: "Dentures in Cypress, TX - Full and Partial - Smile Avenue",
+  metaTitle: "Dentures Cypress, TX | Full & Partial Dentures | Smile Avenue",
   metaDescription: "Custom dentures in Cypress, TX. Full, partial, and implant-supported options. In-house lab precision. Call (832) 648-1756.",
   heroKicker: "DENTURES IN CYPRESS",
   heroHeading: "Dentures in Cypress, TX",

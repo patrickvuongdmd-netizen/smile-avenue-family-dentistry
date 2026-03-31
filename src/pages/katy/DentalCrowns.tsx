@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Dental Crowns",
   serviceSlug: "dental-crowns",
-  metaTitle: "Custom Dental Crowns in Katy, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Dental Crowns Katy, TX | Same-Day Custom Crowns | Smile Avenue",
   metaDescription: "Custom porcelain and zirconia crowns in Katy, TX. In-house lab precision, digital impressions. Call (281) 800-5008.",
   heroKicker: "CUSTOM CROWNS IN KATY",
   heroHeading: "Dental Crowns in Katy, TX",

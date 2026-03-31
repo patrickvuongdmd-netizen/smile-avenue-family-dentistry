@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Sedation Dentistry",
   serviceSlug: "sedation-dentistry",
-  metaTitle: "Sedation Dentistry in Katy, TX - Anxiety-Free Care - Smile Avenue",
+  metaTitle: "Sedation Dentistry Katy, TX | Anxiety-Free Dental Care | Smile Avenue",
   metaDescription: "Sedation dentistry in Katy, TX. Nitrous oxide, oral and IV sedation. Anxiety-free dental care. Call (281) 800-5008.",
   heroKicker: "ANXIETY-FREE DENTISTRY IN KATY",
   heroHeading: "Sedation Dentistry in Katy, TX",

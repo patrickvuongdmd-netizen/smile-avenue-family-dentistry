@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Emergency Dentist",
   serviceSlug: "emergency-dentist",
-  metaTitle: "Emergency Dentist in Katy, TX - Same-Day Care - Smile Avenue",
+  metaTitle: "Emergency Dentist Katy, TX | Same-Day Urgent Care | Smile Avenue",
   metaDescription: "Dental emergency near Cinco Ranch? Same-day appointments at Smile Avenue Katy. Toothaches, broken teeth. Call (281) 800-5008 now.",
   heroKicker: "SAME-DAY EMERGENCY CARE IN KATY",
   heroHeading: "Emergency Dentist in Katy, TX",

@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Dental Implants",
   serviceSlug: "dental-implants",
-  metaTitle: "Dental Implants in Katy, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Dental Implants Katy, TX | Permanent Tooth Replacement | Smile Avenue",
   metaDescription: "Permanent dental implants in Katy, TX near Cinco Ranch. 3D planning, in-house lab, sedation available. Call (281) 800-5008.",
   heroKicker: "PERMANENT TOOTH REPLACEMENT IN KATY",
   heroHeading: "Dental Implants in Katy, TX",

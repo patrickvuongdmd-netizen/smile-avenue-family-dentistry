@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "All-on-X Implants",
   serviceSlug: "all-on-x-implants",
-  metaTitle: "All-on-X Implants in Katy, TX - Full Mouth Restoration - Smile Avenue",
+  metaTitle: "All-on-4 Dental Implants Katy, TX | Full Arch Restoration | Smile Avenue",
   metaDescription: "All-on-X full-arch implants in Katy, TX. Permanent smile in one day. In-house lab, 3D planning. Call (281) 800-5008.",
   heroKicker: "FULL ARCH RESTORATION IN KATY",
   heroHeading: "All-on-X Full-Arch Dental Implants in Katy, TX",

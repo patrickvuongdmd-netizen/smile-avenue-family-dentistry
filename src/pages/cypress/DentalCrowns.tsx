@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Dental Crowns",
   serviceSlug: "dental-crowns",
-  metaTitle: "Custom Dental Crowns in Cypress, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Dental Crowns Cypress, TX | Same-Day Custom Crowns | Smile Avenue",
   metaDescription: "Custom porcelain and zirconia dental crowns in Cypress, TX. In-house lab precision, digital impressions. Call (832) 648-1756.",
   heroKicker: "CUSTOM CROWNS IN CYPRESS",
   heroHeading: "Dental Crowns in Cypress, TX",

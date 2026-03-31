@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Invisalign",
   serviceSlug: "invisalign",
-  metaTitle: "Invisalign in Cypress, TX - Clear Aligners - Smile Avenue Family Dentistry",
+  metaTitle: "Invisalign Cypress, TX | Clear Aligners for Adults & Teens | Smile Avenue",
   metaDescription: "Straighten teeth discreetly with Invisalign in Cypress, TX. Custom clear aligners, in-house fabrication, flexible payment. Call (832) 648-1756.",
   heroKicker: "CLEAR ALIGNERS IN CYPRESS",
   heroHeading: "Invisalign Clear Aligners in Cypress, TX",

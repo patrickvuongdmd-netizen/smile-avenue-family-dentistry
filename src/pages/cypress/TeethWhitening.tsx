@@ -6,7 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Teeth Whitening",
   serviceSlug: "teeth-whitening",
-  metaTitle: "Teeth Whitening in Cypress, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Teeth Whitening Cypress, TX | Professional Whitening | Smile Avenue",
   metaDescription: "Professional teeth whitening in Cypress, TX. In-office and take-home options for dramatic results. Safe, dentist-supervised. Call (832) 648-1756.",
   heroKicker: "PROFESSIONAL WHITENING IN CYPRESS",
   heroHeading: "Teeth Whitening in Cypress, TX",

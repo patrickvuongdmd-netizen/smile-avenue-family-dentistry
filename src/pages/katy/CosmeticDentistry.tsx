@@ -5,7 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Cosmetic Dentistry",
   serviceSlug: "cosmetic-dentistry",
-  metaTitle: "Cosmetic Dentist in Katy, TX - Smile Avenue Family Dentistry",
+  metaTitle: "Cosmetic Dentist Katy, TX | Veneers, Whitening & Smile Makeovers | Smile Avenue",
   metaDescription: "Smile makeovers in Katy, TX. Veneers, whitening, bonding. In-house lab for perfect results. Call (281) 800-5008.",
   heroKicker: "SMILE MAKEOVERS IN KATY",
   heroHeading: "Cosmetic Dentistry in Katy, TX",
