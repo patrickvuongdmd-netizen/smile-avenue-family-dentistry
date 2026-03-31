@@ -22,7 +22,7 @@ import { OFFICE_IMAGES } from "@/lib/images";
 const KATY_PHONE = "2818005008";
 const KATY_PHONE_FORMATTED = "(281) 800-5008";
 const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
-const KATY_MAPS = "https://maps.app.goo.gl/katyoffice";
+const KATY_MAPS = "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/@29.732508,-95.775455,17z/data=!3m1!4b1!4m6!3m5!1s0x864121d672dd8005:0xc421718f6ea402f7!8m2!3d29.732508!4d-95.775455!16s";
 
 const doctors = [
   { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Founder of Smile Avenue, known for his comprehensive approach to family and implant dentistry.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },

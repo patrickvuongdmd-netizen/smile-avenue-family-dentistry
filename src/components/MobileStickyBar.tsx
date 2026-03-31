@@ -10,7 +10,7 @@ interface MobileStickyBarProps {
 }
 
 const CYPRESS_DIRECTIONS = "https://maps.app.goo.gl/DgZBrfjyNed7qKxs8";
-const KATY_DIRECTIONS = "https://maps.app.goo.gl/katy-smile-avenue";
+const KATY_DIRECTIONS = "https://www.google.com/maps/dir//Smile+Avenue+Family+Dentistry+-+Katy,+23541+Westheimer+Pkwy+Ste+170,+Katy,+TX+77494/@29.732508,-95.775455,17z";
 
 const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: MobileStickyBarProps) => {
   const mapsLink = directionsUrl || (phone === "2818005008" ? KATY_DIRECTIONS : CYPRESS_DIRECTIONS);
