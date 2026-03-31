@@ -434,8 +434,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
           <section className="section-padding bg-background">
             <div className="container mx-auto text-center">
-              <p className="kicker">WATCH & LEARN</p>
-              <h2 className="section-heading">See How It Works</h2>
+              <p className="kicker">SEE IT IN ACTION</p>
+              <h2 className="section-heading">Watch Real Procedures & Results</h2>
               <div className="mt-8">
                 <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
               </div>
