@@ -7,17 +7,17 @@ const FreeConsultationBanner = () => (
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
         <div>
           <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">
-            Schedule Your Free Consultation
+            Your Free Consultation Is Waiting
           </h3>
           <p className="text-sm font-body text-muted-foreground">
-            No cost, no obligation — just a personalized plan for your perfect smile.
+            No cost, no obligation, no insurance needed — get a personalized treatment plan in one visit.
           </p>
         </div>
         <Link
           to="/free-consultation"
           className="btn-primary shrink-0 flex items-center gap-2"
         >
-          Book Free Consultation
+          Claim Your Free Visit
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

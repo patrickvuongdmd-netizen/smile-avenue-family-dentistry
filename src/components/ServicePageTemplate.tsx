@@ -343,6 +343,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                     {data.heroCta2}
                   </a>
                 </div>
+                <p className="text-xs font-sans text-white/60 mt-3">
+                  ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ 0% financing available
+                </p>
               </div>
             </div>
           </div>
@@ -509,8 +512,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </div>
               </div>
               <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">
-                Book Appointment
+                Book Appointment Online
               </a>
+              <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>
             </div>
           </div>
         </section>
@@ -524,9 +528,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">{data.ctaHeading}</h2>
             <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">{data.ctaBody}</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Now</a>
+              <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Online — Takes 60 Seconds</a>
               <a href={`tel:${loc.phone}`} className="btn-cta-outline">Call {loc.phoneFormatted}</a>
             </div>
+            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Most insurance accepted · 0% financing · Same-day appointments available</p>
           </div>
         </section>
       </main>

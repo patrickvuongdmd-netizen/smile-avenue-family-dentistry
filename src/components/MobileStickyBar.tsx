@@ -27,8 +27,7 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
           href={bookingUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-bold min-h-[48px]"
-          style={{ backgroundColor: "#D4A853", color: "#fff" }}
+          className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-bold min-h-[48px] bg-primary text-primary-foreground"
         >
           <Calendar className="w-5 h-5" />
           Book Now

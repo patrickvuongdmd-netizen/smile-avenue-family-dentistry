@@ -56,11 +56,6 @@ const testimonials = [
 
 // Insurance logos moved to InsuranceLogoBar component
 
-const blogPosts = [
-  { title: "5 Signs You May Need a Dental Implant", category: "Implants", date: "Mar 15, 2026" },
-  { title: "Porcelain Veneers vs. Dental Bonding", category: "Cosmetic", date: "Mar 8, 2026" },
-  { title: "What to Do When You Knock Out a Tooth", category: "Emergency", date: "Feb 28, 2026" },
-];
 
 const faqs = [
   { question: "What locations do you serve?", answer: "We have two convenient offices — one in Cypress, TX (9212 Fry Rd) and one in Katy, TX (23541 Westheimer Pkwy). We serve families throughout the greater Houston area." },
@@ -121,15 +116,21 @@ const Home = () => {
                   <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1.5 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
                 </div>
-                <div className="flex flex-wrap gap-3 mb-4">
-                  <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Appointment</a>
-                  <Link to="/convenient-locations" className="btn-secondary">Find a Location</Link>
+                <div className="flex flex-wrap gap-3 mb-3">
+                  <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-primary">Book Online — Takes 60 Seconds</a>
+                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2"><Phone className="w-4 h-4" /> Call {heroPhoneFmt}</a>
                 </div>
+                <p className="text-xs font-sans text-muted-foreground mb-3">
+                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />We confirm your appointment within 1 hour
+                  <span className="mx-2 text-border">·</span>
+                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />Most insurance accepted
+                  <span className="mx-2 text-border">·</span>
+                  <Check className="w-3.5 h-3.5 inline text-primary mr-1" />0% financing available
+                </p>
                 <div className="flex items-center gap-3 text-sm font-sans text-muted-foreground">
-                  <a href={`tel:${heroPhone}`} className="flex items-center gap-1 hover:text-primary transition-colors"><Phone className="w-3.5 h-3.5" /> {heroPhoneFmt}</a>
-                  <span className="text-border">|</span>
                   <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
-                  <span>4.9 from 5,000+ reviews</span>
+                  <span className="font-semibold text-foreground">4.9</span>
+                  <span>from 5,000+ verified reviews</span>
                 </div>
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
@@ -350,46 +351,23 @@ const Home = () => {
         {/* INSURANCE */}
         <InsuranceLogoBar />
 
-        {/* BEFORE/AFTER PREVIEW */}
+        {/* SMILE GALLERY CTA */}
         <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
+          <div className="container mx-auto text-center max-w-2xl">
             <p className="kicker">REAL RESULTS</p>
-            <h2 className="section-heading">See the Transformations</h2>
-            <div className="grid sm:grid-cols-3 gap-6 mt-10 max-w-4xl mx-auto">
-              {["Dental Implants", "Veneers", "Invisalign"].map((label, i) => (
-                <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
-                  <div className="grid grid-cols-2">
-                    <div className="aspect-square bg-muted flex items-center justify-center text-xs font-sans text-muted-foreground border-r border-border">Before</div>
-                    <div className="aspect-square bg-muted flex items-center justify-center text-xs font-sans text-muted-foreground">After</div>
-                  </div>
-                  <div className="p-3 text-center"><span className="text-sm font-sans font-semibold text-foreground">{label}</span></div>
-                </div>
-              ))}
-            </div>
-            <Link to="/smile-gallery" className="btn-secondary mt-8 inline-flex">View Full Gallery</Link>
+            <h2 className="section-heading">See Real Patient Transformations</h2>
+            <p className="section-body">Browse before-and-after photos from real Smile Avenue patients — dental implants, veneers, Invisalign, and more.</p>
+            <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
           </div>
         </section>
 
-        {/* BLOG FEED */}
+        {/* BLOG CTA — clean, no placeholder images */}
         <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <p className="kicker text-center">FROM THE BLOG</p>
-            <h2 className="section-heading text-center">Latest Dental Health Tips</h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-10">
-              {blogPosts.map((post, i) => (
-                <article key={i} className="bg-card rounded-xl border border-border overflow-hidden">
-                  <div className="aspect-video bg-muted" />
-                  <div className="p-5">
-                    <span className="text-[10px] font-sans font-bold tracking-wider uppercase text-primary">{post.category}</span>
-                    <h3 className="font-display text-base font-bold text-foreground mt-1 mb-2">{post.title}</h3>
-                    <span className="text-xs font-sans text-muted-foreground">{post.date}</span>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link to="/blog" className="btn-secondary">Read All Posts</Link>
-            </div>
+          <div className="container mx-auto text-center max-w-2xl">
+            <p className="kicker">FROM THE BLOG</p>
+            <h2 className="section-heading">Dental Health Tips & Guides</h2>
+            <p className="section-body">Get expert advice from our doctors on dental implants, cosmetic dentistry, oral health, and more.</p>
+            <Link to="/blog" className="btn-secondary">Read Our Blog</Link>
           </div>
         </section>
 
@@ -405,12 +383,13 @@ const Home = () => {
         {/* CTA */}
         <section className="section-padding gradient-cta text-center">
           <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Ready to Love Your Smile?</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Book your appointment at Smile Avenue today. Two locations, same exceptional care.</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Your New Smile Starts Today</h2>
+            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Join 5,000+ families who trust Smile Avenue. Same-day appointments available at both Houston-area locations.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/book-online" className="btn-cta-light">Book Online</Link>
-              <a href="tel:8326481756" className="btn-cta-outline">Call (832) 648-1756</a>
+              <a href={heroBooking} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Online Now</a>
+              <a href={`tel:${heroPhone}`} className="btn-cta-outline">Call {heroPhoneFmt}</a>
             </div>
+            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Booking takes less than 60 seconds · No obligation · We confirm within 1 hour</p>
           </div>
         </section>
       </main>
