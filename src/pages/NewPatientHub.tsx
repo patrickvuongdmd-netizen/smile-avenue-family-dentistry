@@ -162,8 +162,8 @@ const NewPatientHub = () => {
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-16 items-center">
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center shadow-md">
-                <span className="text-sm font-sans text-muted-foreground">Checklist Illustration</span>
+              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
+                <img src={OFFICE_IMAGES.waitingRoom} alt="Smile Avenue waiting room with comfortable seating" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
               </div>
               <div>
                 <p className="kicker">BE PREPARED</p>
