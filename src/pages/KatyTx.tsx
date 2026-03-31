@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill } from "lucide-react";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
@@ -10,6 +11,9 @@ import TestimonialCard from "@/components/TestimonialCard";
 import BeforeAfterCard from "@/components/BeforeAfterCard";
 import DoctorCard from "@/components/DoctorCard";
 import FaqAccordion from "@/components/FaqAccordion";
+import TrustStrip from "@/components/TrustStrip";
+import BackToTop from "@/components/BackToTop";
+import BookingLocationModal from "@/components/BookingLocationModal";
 import { OFFICE_IMAGES } from "@/lib/images";
 
 const KATY_PHONE = "2818005008";
