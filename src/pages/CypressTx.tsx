@@ -308,28 +308,28 @@ const CypressTx = () => {
         {/* FREE CONSULTATION */}
         <FreeConsultationBanner />
 
-        {/* INSURANCE & PAYMENT */}
+        {/* FINANCING OPTIONS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
-            <p className="kicker">FLEXIBLE PAYMENT OPTIONS</p>
-            <h2 className="section-heading">Making Dental Care Affordable</h2>
+            <p className="kicker">AFFORDABLE DENTAL CARE IN CYPRESS</p>
+            <h2 className="section-heading">Flexible Payment Options for Cypress Families</h2>
             <p className="section-body max-w-2xl mx-auto">
-              At our Cypress office, we believe great dental care should be accessible. We offer multiple ways to make your treatment affordable.
+              Don't let cost keep you from the dentist. Between insurance, our membership plan, and 0% financing — we'll find a way to make it work.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Most Insurance Accepted</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept most major PPO plans and will verify your benefits before your visit.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Insurance Accepted</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept Aetna, BCBS, Cigna, Delta Dental, MetLife, United Healthcare, Guardian, Humana, and more. We verify your benefits before your visit — no surprise bills.</p>
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Smile Avenue Membership Plan</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">No insurance? Our in-house plan covers cleanings, exams, and gives you discounts on treatment.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">No Insurance? Join Our Membership</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Our in-house membership plan covers cleanings, exams, X-rays, and gives you 20% off all treatment. No deductibles, no waiting periods.</p>
                 <Link to="/membership-plan" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
               </div>
               <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Dental Financing</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Flexible monthly payment options through CareCredit and Sunbit — apply in minutes.</p>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">0% Dental Financing</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Spread the cost with CareCredit or Sunbit — apply in minutes, get approved instantly, and pay monthly with 0% interest options.</p>
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
