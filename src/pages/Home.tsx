@@ -377,6 +377,26 @@ const Home = () => {
           </div>
         </section>
 
+        {/* FREE CONSULTATION CTA */}
+        <section className="py-12 bg-primary/5 border-y border-primary/10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+              <div>
+                <p className="kicker mb-1">CONSIDERING A SMILE MAKEOVER?</p>
+                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">
+                  Get a Free Consultation — No Obligation
+                </h3>
+                <p className="text-sm font-body text-muted-foreground">
+                  Implants, veneers, Invisalign, or cosmetic dentistry — get a personalized treatment plan at no cost.
+                </p>
+              </div>
+              <Link to="/free-consultation" className="btn-primary shrink-0">
+                Claim Your Free Visit
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* BLOG CTA — clean, no placeholder images */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center max-w-2xl">

@@ -30,6 +30,7 @@ const serviceLinks = [
 
 const patientLinks = [
   { label: "New Patient Hub", href: "/patients/new-patient-hub" },
+  { label: "Free Consultation", href: "/free-consultation" },
   { label: "Insurance & Financing", href: "/insurance" },
   { label: "Membership Plan", href: "/membership-plan" },
   { label: "Specials & Offers", href: "/specials" },

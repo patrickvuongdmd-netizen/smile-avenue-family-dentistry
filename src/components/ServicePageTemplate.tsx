@@ -430,6 +430,30 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* MID-CONTENT BOOKING CTA — recapture after education */}
+        <section className="py-10 bg-primary/5 border-y border-primary/10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
+              <div>
+                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">
+                  Ready to Get Started?
+                </h3>
+                <p className="text-sm font-body text-muted-foreground">
+                  Book online in 60 seconds or call us — same-day appointments often available.
+                </p>
+              </div>
+              <div className="flex gap-3 shrink-0">
+                <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Book Online
+                </a>
+                <a href={`tel:${loc.phone}`} className="btn-secondary">
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* VIDEO CAROUSEL */}
         {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
           <section className="section-padding bg-background">
