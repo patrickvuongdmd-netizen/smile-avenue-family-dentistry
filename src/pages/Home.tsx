@@ -414,6 +414,7 @@ const Home = () => {
         </LazySection>
 
         {/* SMILE GALLERY CTA */}
+        <LazySection>
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-2xl">
             <p className="kicker">REAL RESULTS</p>
@@ -422,6 +423,7 @@ const Home = () => {
             <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
           </div>
         </section>
+        </LazySection>
 
         {/* FREE CONSULTATION CTA */}
         <section className="py-12 bg-primary/5 border-y border-primary/10">
