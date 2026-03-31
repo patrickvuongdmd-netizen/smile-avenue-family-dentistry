@@ -146,6 +146,7 @@ const Faq = () => {
 
     <Footer />
     <MobileStickyBar phone={PHONE} phoneFormatted={PHONE_FMT} bookingUrl={BOOKING} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
   </>
 );
 };

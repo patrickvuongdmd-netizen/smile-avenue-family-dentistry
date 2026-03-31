@@ -129,6 +129,25 @@ const About = () => {
 
       <MobileStickyBar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
       <Footer />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Smile Avenue Family Dentistry",
+        url: "https://www.smileavenuefamilydentistry.com",
+        logo: "https://www.smileavenuefamilydentistry.com/logo-full.png",
+        description: "Hospitality-driven dental care for families in Cypress and Katy, TX. 5,000+ five-star reviews.",
+        telephone: ["+18326481756", "+12818005008"],
+        address: [
+          { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+          { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+        ],
+        sameAs: [
+          "https://www.facebook.com/SmileAvenueFamilyDentistry/",
+          "https://www.instagram.com/smileavenuefamilydentistry/",
+          "https://www.tiktok.com/@smileavenuetx",
+          "https://www.youtube.com/@SmileAvenueTX",
+        ],
+      }) }} />
     </>
   );
 };
