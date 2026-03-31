@@ -274,7 +274,7 @@ const BlogPostPage = () => {
             {post.faqs.length > 0 && (
               <div className="mt-12">
                 <h2 className="font-display text-2xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
-                <FaqAccordion faqs={post.faqs} />
+                <FaqAccordion items={post.faqs} />
               </div>
             )}
 
