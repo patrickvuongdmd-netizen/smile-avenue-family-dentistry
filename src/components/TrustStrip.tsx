@@ -1,28 +1,25 @@
-import { Star, Clock, Globe, MapPin } from "lucide-react";
+import { Heart, Shield, Ear, Sparkles, Clock, Globe } from "lucide-react";
+
+const values = [
+  { icon: <Heart className="w-3.5 h-3.5" />, text: "No Judgment, Ever" },
+  { icon: <Ear className="w-3.5 h-3.5" />, text: "We Listen Before We Treat" },
+  { icon: <Sparkles className="w-3.5 h-3.5" />, text: "Your Comfort Comes First" },
+  { icon: <Shield className="w-3.5 h-3.5" />, text: "Science-Backed, Patient-Led" },
+  { icon: <Clock className="w-3.5 h-3.5" />, text: "Same-Day Visits Available" },
+  { icon: <Globe className="w-3.5 h-3.5" />, text: "Se Habla Español" },
+];
 
 const TrustStrip = () => (
-  <div className="py-3 bg-card border-b border-border">
+  <div className="py-3 bg-card border-b border-border overflow-hidden">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs font-sans font-medium text-muted-foreground">
-        <span className="flex items-center gap-1.5">
-          <Star className="w-3.5 h-3.5 fill-primary text-primary" />
-          4.9★ from 5,000+ Reviews
-        </span>
-        <span className="hidden sm:inline text-border">|</span>
-        <span className="flex items-center gap-1.5">
-          <Clock className="w-3.5 h-3.5 text-primary" />
-          Same-Day Visits Available
-        </span>
-        <span className="hidden sm:inline text-border">|</span>
-        <span className="flex items-center gap-1.5">
-          <Globe className="w-3.5 h-3.5 text-primary" />
-          Se Habla Español
-        </span>
-        <span className="hidden sm:inline text-border">|</span>
-        <span className="flex items-center gap-1.5">
-          <MapPin className="w-3.5 h-3.5 text-primary" />
-          Cypress & Katy Locations
-        </span>
+      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs font-sans font-semibold text-muted-foreground">
+        {values.map((v, i) => (
+          <span key={i} className="flex items-center gap-1.5 text-foreground/70">
+            <span className="text-primary">{v.icon}</span>
+            {v.text}
+            {i < values.length - 1 && <span className="hidden sm:inline ml-4 text-border">·</span>}
+          </span>
+        ))}
       </div>
     </div>
   </div>

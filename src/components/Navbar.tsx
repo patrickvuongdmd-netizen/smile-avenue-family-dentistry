@@ -140,6 +140,33 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
+              {/* Patients Dropdown — now visible on desktop */}
+              <div
+                className="relative"
+                onMouseEnter={() => openDropdown("patients")}
+                onMouseLeave={closeDropdown}
+              >
+                <button className="flex items-center gap-1 px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">
+                  Patients <ChevronDown className="w-3.5 h-3.5" />
+                </button>
+                {activeDropdown === "patients" && (
+                  <div className="absolute top-full right-0 pt-2 z-50">
+                    <div className="bg-popover border border-border rounded-xl shadow-xl p-4 w-56">
+                      {patientLinks.map((l) => (
+                        <Link
+                          key={l.href}
+                          to={l.href}
+                          className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          {l.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
               <Link to="/convenient-locations" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Locations</Link>
 
               {/* About Dropdown */}
@@ -169,8 +196,10 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
+              {/* Emergency — top-level like Tend */}
+              <Link to={`${locationPrefix}/emergency-dentist`} className="px-2 lg:px-3 py-2 hover:text-destructive transition-colors whitespace-nowrap text-destructive/80 font-semibold">Emergency</Link>
+
               <Link to="/contact" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Contact</Link>
-              <Link to="/blog" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap hidden lg:block">Blog</Link>
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
