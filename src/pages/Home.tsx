@@ -95,6 +95,13 @@ const Home = () => {
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX" />
+        <meta name="twitter:description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews." />
+        <meta name="twitter:image" content={OFFICE_IMAGES.homepageHero} />
+        <link rel="alternate" hrefLang="es" href="https://www.smileavenuefamilydentistry.com/es/" />
+        <link rel="alternate" hrefLang="en" href="https://www.smileavenuefamilydentistry.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.smileavenuefamilydentistry.com/" />
       </Helmet>
       <Navbar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <TrustStrip />

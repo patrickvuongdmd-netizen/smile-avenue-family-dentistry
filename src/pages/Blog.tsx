@@ -35,6 +35,12 @@ const Blog = () => {
         <title>Dental Health Blog | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Expert dental health tips, treatment guides, and oral care advice from the doctors at Smile Avenue Family Dentistry in Cypress and Katy, TX." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/blog/" />
+        <meta property="og:title" content="Dental Health Blog | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Expert dental health tips, treatment guides, and oral care advice from the doctors at Smile Avenue." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/blog/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 
