@@ -110,13 +110,30 @@ const Footer = () => {
 
             <div>
               <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Services</h4>
-              <div className="space-y-2 text-sm font-sans opacity-70">
-                <Link to={`${locationPrefix}/preventive-dentistry`} className="block hover:opacity-100 transition-opacity">Preventive Dentistry</Link>
-                <Link to={`${locationPrefix}/cosmetic-dentistry`} className="block hover:opacity-100 transition-opacity">Cosmetic Dentistry</Link>
-                <Link to={`${locationPrefix}/dental-implants`} className="block hover:opacity-100 transition-opacity">Dental Implants</Link>
-                <Link to={`${locationPrefix}/invisalign`} className="block hover:opacity-100 transition-opacity">Invisalign®</Link>
-                <Link to={`${locationPrefix}/emergency-dentist`} className="block hover:opacity-100 transition-opacity">Emergency Dentistry</Link>
-                <Link to={`${locationPrefix}/sedation-dentistry`} className="block hover:opacity-100 transition-opacity">Sedation Dentistry</Link>
+              <div className="space-y-0.5 text-sm font-sans opacity-70">
+                {footerServices.map((s) => (
+                  <div key={s.label}>
+                    {s.slug ? (
+                      <>
+                        <button
+                          className="flex items-center gap-1.5 w-full text-left py-1.5 hover:opacity-100 transition-opacity"
+                          onClick={() => setExpandedService(expandedService === s.slug ? null : s.slug!)}
+                        >
+                          {s.label}
+                          <ChevronDown className={`w-3 h-3 shrink-0 transition-transform duration-200 ${expandedService === s.slug ? "rotate-180" : ""}`} />
+                        </button>
+                        <div className={`overflow-hidden transition-all duration-200 ${expandedService === s.slug ? "max-h-20 opacity-100" : "max-h-0 opacity-0"}`}>
+                          <div className="pl-3 pb-1 space-y-1 text-xs">
+                            <Link to={`/cypress-tx/${s.slug}`} className="block py-0.5 hover:opacity-100 transition-opacity">in Cypress</Link>
+                            <Link to={`/katy-tx/${s.slug}`} className="block py-0.5 hover:opacity-100 transition-opacity">in Katy</Link>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <Link to={s.href!} className="block py-1.5 hover:opacity-100 transition-opacity">{s.label}</Link>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
