@@ -41,6 +41,7 @@ const patientLinks = [
 const aboutLinks = [
   { label: "About Smile Avenue", href: "/about" },
   { label: "Meet Our Doctors", href: "/doctors" },
+  { label: "Our Team", href: "/our-team" },
   { label: "Dental Lab", href: "/dental-lab" },
   { label: "Patient Testimonials", href: "/patient-testimonials" },
   { label: "Smile Gallery", href: "/smile-gallery" },
