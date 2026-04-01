@@ -19,7 +19,7 @@ const TrustTicker = () => {
   const isSpanish = location.pathname.startsWith("/es");
 
   return (
-    <div className="overflow-hidden flex relative text-white bg-primary">
+    <div className="overflow-hidden flex relative text-white bg-primary" style={{ boxShadow: "0 2px 6px hsl(192 72% 35% / 0.35)" }}>
       <div className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 text-white">
         Why Smile Avenue?
       </div>
