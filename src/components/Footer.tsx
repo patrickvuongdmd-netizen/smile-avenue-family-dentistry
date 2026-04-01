@@ -11,13 +11,11 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Brand — spans 2 columns on lg, split into 1/3 logo + 2/3 text */}
-          <div className="grid grid-cols-3 gap-4 items-start lg:col-span-2">
-            <div className="col-span-1">
-              <Link to="/" className="inline-block">
-                <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-28 md:h-32 w-auto" width={240} height={144} />
-              </Link>
-            </div>
-            <div className="col-span-2">
+          <div className="flex gap-5 items-start lg:col-span-2">
+            <Link to="/" className="shrink-0">
+              <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-24 w-auto" width={240} height={144} />
+            </Link>
+            <div className="min-w-0">
               <p className="text-sm font-body leading-relaxed opacity-70 mb-4">
                 The dental experience your family deserves. Netflix in every room, warm blankets, and doctors who listen. Two locations in Cypress and Katy, TX.
               </p>
