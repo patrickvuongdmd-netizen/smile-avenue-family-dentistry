@@ -97,6 +97,7 @@ const LOCATIONS = {
     name: "Cypress",
     path: "/cypress-tx",
     geo: { lat: "29.9691", lng: "-95.6972" },
+    hours: "Mon–Fri 8:30am–5pm",
   },
   katy: {
     phone: "2818005008",
@@ -106,6 +107,7 @@ const LOCATIONS = {
     name: "Katy",
     path: "/katy-tx",
     geo: { lat: "29.7357", lng: "-95.7575" },
+    hours: "Mon–Fri 8:30am–5pm, Sat 8am–2pm",
   },
 };
 
