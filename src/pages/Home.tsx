@@ -156,7 +156,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               <div>
                 <p className="kicker mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
-                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Finally, a Dentist You'll Actually Look Forward To</h1>
+                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
                 <p className="font-body text-base md:text-lg leading-relaxed mb-4 md:mb-8 text-muted-foreground">Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second.</p>
                 {/* Location selector */}
                 <div className="flex items-center gap-2 mb-3 md:mb-4">
