@@ -7,6 +7,8 @@ import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -41,6 +43,7 @@ const DentalLab = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>In-House Digital Dental Lab | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Smile Dental Lab — our in-house digital dental lab creates custom crowns, veneers, aligners, and more with advanced digital scanning technology." />
@@ -54,8 +57,9 @@ const DentalLab = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav className="mb-6 text-xs font-sans text-muted-foreground">

@@ -5,6 +5,8 @@ import { Heart, Users, Award, Star } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 import DoctorCard from "@/components/DoctorCard";
 import { OFFICE_IMAGES } from "@/lib/images";
 
@@ -30,6 +32,7 @@ const About = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>About Us | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Learn about Smile Avenue Family Dentistry — our story, our values, and the team of dedicated professionals behind your smile in Cypress and Katy, TX." />
@@ -43,8 +46,9 @@ const About = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">

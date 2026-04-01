@@ -7,6 +7,8 @@ import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 
@@ -77,6 +79,7 @@ const NewPatientHub = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>New Patient Hub | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Welcome to Smile Avenue! Everything you need for your first visit — online forms, insurance info, what to expect, and how to book your appointment." />
@@ -90,8 +93,9 @@ const NewPatientHub = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">

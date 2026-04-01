@@ -5,6 +5,8 @@ import { Gift, Users, Sparkles, Tag, Phone, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -62,6 +64,7 @@ const Specials = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Dental Specials & Offers | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Save on dental care with our current specials. New patient exam for $99, free implant consultations, and referral rewards at Smile Avenue." />
@@ -75,8 +78,9 @@ const Specials = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav className="mb-6 text-xs font-sans text-muted-foreground">

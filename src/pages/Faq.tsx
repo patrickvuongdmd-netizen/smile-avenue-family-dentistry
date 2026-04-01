@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import FaqAccordion from "@/components/FaqAccordion";
 
@@ -99,8 +101,9 @@ const Faq = () => {
       <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_FMT} bookingUrl={BOOKING} />
+      <TrustStrip />
 
-    <main className="pb-14 lg:pb-0">
+    <main id="main-content" className="pb-14 lg:pb-0">
       {/* Hero */}
       <section className="section-padding bg-background">
         <div className="container mx-auto text-center">
