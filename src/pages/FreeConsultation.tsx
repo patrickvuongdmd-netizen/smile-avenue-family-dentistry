@@ -85,8 +85,8 @@ const FreeConsultation = () => {
                 <h2 className="font-display text-xl font-bold text-foreground mb-2">Book Your Free Consultation</h2>
                 <p className="text-sm font-sans text-muted-foreground mb-6">Choose your preferred location to schedule online — takes less than 60 seconds.</p>
                 <div className="space-y-3">
-                  <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full block text-center">Book at Cypress</a>
-                  <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-primary w-full block text-center">Book at Katy</a>
+                  <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta w-full block text-center">Book at Cypress</a>
+                  <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta w-full block text-center">Book at Katy</a>
                 </div>
                 <div className="mt-6 pt-6 border-t border-border space-y-3">
                   <p className="text-xs font-sans font-semibold uppercase tracking-wider text-muted-foreground">Or call us directly</p>
