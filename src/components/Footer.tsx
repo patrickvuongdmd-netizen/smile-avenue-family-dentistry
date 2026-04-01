@@ -26,8 +26,8 @@ const Footer = () => {
 
   return (
     <>
-      {/* Pre-footer marble banner — card overlaps into footer */}
-      <section className="relative overflow-hidden pt-16 md:pt-24 pb-32 md:pb-40">
+      {/* Pre-footer marble banner with floating card */}
+      <section className="relative overflow-hidden py-20 md:py-32">
         <img
           src="/images/prefooter-bg.jpg"
           alt=""
@@ -38,18 +38,11 @@ const Footer = () => {
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-foreground/10" />
-      </section>
-
-      {/* Trust ticker */}
-      <TrustTicker />
-
-      <footer className="bg-foreground text-background relative">
-        {/* Floating white card — pulled up to overlap marble */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 -mt-24 md:-mt-32">
-          <div className="bg-card rounded-3xl px-8 py-12 md:px-16 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl mb-12 md:mb-16">
-            <h2 className="font-display text-2xl md:text-4xl lg:text-[2.75rem] font-medium leading-tight text-muted-foreground text-center md:text-left max-w-2xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-card rounded-[2rem] px-10 py-14 md:px-20 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+            <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-medium leading-[1.15] text-center md:text-left max-w-2xl" style={{ color: 'hsl(192, 30%, 35%)' }}>
               Care at Smile Avenue isn't just painless,{" "}
-              <span className="text-foreground">it's a pleasure</span>
+              <span className="text-foreground font-semibold">it's a pleasure</span>
             </h2>
             <button
               onClick={() => setBookingOpen(true)}
@@ -59,8 +52,13 @@ const Footer = () => {
             </button>
           </div>
         </div>
+      </section>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-10 lg:pb-14">
+      {/* Trust ticker */}
+      <TrustTicker />
+
+      <footer className="bg-foreground text-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Brand — spans 2 columns on lg, split into 1/3 logo + 2/3 text */}
           <div className="flex gap-5 items-start lg:col-span-2">
