@@ -121,24 +121,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   return (
     <>
     <nav className="sticky top-0 z-[1000] bg-background/95 backdrop-blur-md border-b border-border" ref={navRef}>
-      {/* Intent-routing utility bar — always visible */}
-      <div className="hidden md:block bg-card border-b border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-9">
-          <div className="flex items-center gap-1">
-            <Link to="/patients/new-patient-hub" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">New Patients</Link>
-            <span className="text-border">·</span>
-            <Link to="/insurance" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">Insurance & Financing</Link>
-            <span className="text-border">·</span>
-            <Link to="/specials" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">Specials</Link>
-          </div>
-          <div className="flex items-center gap-3">
-            <LanguageToggle />
-            <a href={`tel:${phone}`} className="flex items-center gap-1 text-xs font-sans font-semibold text-foreground hover:text-primary transition-colors">
-              <Phone className="w-3 h-3" /> {phoneFormatted}
-            </a>
-          </div>
-        </div>
-      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-20">
@@ -249,6 +231,13 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
                 Book Now
               </button>
+              <a
+                href={`tel:${phone}`}
+                className="w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center rounded-full border border-border text-foreground hover:text-primary hover:border-primary transition-colors"
+                aria-label={`Call ${phoneFormatted}`}
+              >
+                <Phone className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
