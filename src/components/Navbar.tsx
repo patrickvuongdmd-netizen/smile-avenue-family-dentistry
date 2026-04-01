@@ -146,7 +146,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
         <div className="flex items-center justify-between h-14 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0">
-            <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-10 md:h-[72px] w-auto object-contain" width={200} height={155} />
+            <img src="/logo-full-alt.jpeg" alt="Smile Avenue Family Dentistry" className="h-12 md:h-[72px] w-auto object-contain" width={200} height={155} />
           </Link>
 
           {/* Desktop Nav — visible at md (768px+) */}
