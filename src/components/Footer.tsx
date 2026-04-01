@@ -103,13 +103,11 @@ const Footer = () => {
         </div>
 
         {/* Book Online CTA */}
-        <div className="border-t border-background/10 mt-12 pt-8">
-          <div className="max-w-md mx-auto text-center lg:text-left lg:mx-0 lg:max-w-none lg:flex lg:items-center lg:justify-between">
-            <div className="mb-4 lg:mb-0">
-              <h4 className="text-sm font-sans font-semibold mb-1">Ready to Book?</h4>
-              <p className="text-xs font-sans opacity-60">Schedule your appointment online — takes less than 60 seconds.</p>
-            </div>
-            <div className="flex gap-3">
+        <div className="border-t border-background/10 mt-10 pt-8">
+          <div className="text-center">
+            <h4 className="text-sm font-sans font-semibold mb-1">Ready to Book?</h4>
+            <p className="text-xs font-sans opacity-60 mb-4">Schedule your appointment online — takes less than 60 seconds.</p>
+            <div className="flex gap-3 justify-center">
               <a href="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors shrink-0">
                 Book Cypress
               </a>
