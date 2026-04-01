@@ -40,6 +40,22 @@
       gtag('js', new Date());
       gtag('config', 'AW-XXXXXXXXX');
     </script>
+
+    <!-- UserWay Accessibility Widget (free tier — WCAG 2.1 AA compliance) -->
+    <script>
+      (function(d){
+        var s = d.createElement("script");
+        s.setAttribute("data-account", "YOUR_USERWAY_ACCOUNT_ID");
+        s.setAttribute("src", "https://cdn.userway.org/widget.js");
+        s.async = true;
+        (d.body ? d.body : d.head).appendChild(s);
+      })(document);
+      // Expose toggle for our custom accessibility icon
+      window.toggleAccessibility = function() {
+        var uw = document.querySelector('.userway_buttons_wrapper');
+        if (uw) uw.click();
+      };
+    </script>
   </head>
   <body>
     <div id="root"></div>
