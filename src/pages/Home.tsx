@@ -19,7 +19,7 @@ import TechnologyTrust from "@/components/TechnologyTrust";
 import ScrollReveal from "@/components/ScrollReveal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import LazySection from "@/components/LazySection";
-import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
+import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL, SERVICE_IMAGES } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
 import CredibilityBar from "@/components/CredibilityBar";
 import SmileAvenueDifference from "@/components/SmileAveneDifference";
