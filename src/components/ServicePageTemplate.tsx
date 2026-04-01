@@ -476,18 +476,18 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* FAQ */}
-        <section className="section-padding bg-background">
+        <section className="section-padding gradient-cta">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
               <div>
-                <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading">{data.faqHeading}</h2>
-                <p className="section-body">
+                <p className="kicker text-white/70">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 className="section-heading text-white">{data.faqHeading}</h2>
+                <p className="section-body text-white/70">
                   Have more questions? Call us at{" "}
-                  <a href={`tel:${loc.phone}`} className="text-primary hover:underline">{loc.phoneFormatted}</a>.
+                  <a href={`tel:${loc.phone}`} className="text-white underline hover:no-underline">{loc.phoneFormatted}</a>.
                 </p>
               </div>
-              <FaqAccordion items={data.faqs} />
+              <FaqAccordion items={data.faqs} variant="dark" />
             </div>
           </div>
         </section>

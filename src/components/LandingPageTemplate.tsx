@@ -565,14 +565,14 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
            ║  SECTION 6: FAQ — Shared Component               ║
            ╚═══════════════════════════════════════════════════╝ */}
         <ScrollReveal>
-          <section className="section-padding bg-muted">
+          <section className="section-padding gradient-cta">
             <div className="max-w-2xl mx-auto">
-              <p className="kicker text-center">COMMON QUESTIONS</p>
-              <h2 className="section-heading text-center">
+              <p className="kicker text-center text-white/70">COMMON QUESTIONS</p>
+              <h2 className="section-heading text-center text-white">
                 Frequently Asked Questions
               </h2>
-              <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-8 rounded-full" />
-              <FaqAccordion items={data.faqs} />
+              <div className="w-12 h-0.5 bg-white/30 mx-auto mb-8 rounded-full" />
+              <FaqAccordion items={data.faqs} variant="dark" />
             </div>
           </section>
         </ScrollReveal>
