@@ -562,6 +562,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
 
+        {/* OFFICE PHOTO GRID */}
+        <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
+
         {/* RELATED SERVICES */}
         {related.length > 0 && (
           <section className="section-padding bg-background">
