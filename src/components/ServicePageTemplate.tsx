@@ -18,7 +18,7 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
-import FullWidthPhotoBreak from "@/components/FullWidthPhotoBreak";
+
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 
 

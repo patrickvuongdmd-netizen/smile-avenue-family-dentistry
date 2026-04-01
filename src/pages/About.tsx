@@ -13,7 +13,7 @@ import DoctorCard from "@/components/DoctorCard";
 import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
-import FullWidthPhotoBreak from "@/components/FullWidthPhotoBreak";
+
 
 const PHONE = "8326481756";
 const PHONE_FORMATTED = "(832) 648-1756";
