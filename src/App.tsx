@@ -180,7 +180,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/book-online" element={<BookOnline />} />
               <Route path="/patient-testimonials" element={<PatientTestimonials />} />
-              <Route path="/smile-gallery" element={<SmileGallery />} />
+              
               <Route path="/dental-lab" element={<DentalLab />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/sitemap" element={<SitemapPage />} />
