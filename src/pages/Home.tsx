@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
