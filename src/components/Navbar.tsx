@@ -254,18 +254,24 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Mobile — clean, minimal: just hamburger */}
-          <div className="md:hidden">
+          {/* Mobile — Swish-inspired: Logo | Book an Appointment pill | Hamburger */}
+          <div className="md:hidden flex items-center gap-2">
             <button
-              className="relative w-10 h-10 flex items-center justify-center rounded-full text-foreground hover:bg-muted/50 transition-colors"
+              onClick={() => { setBookingModalOpen(true); }}
+              className="bg-primary text-primary-foreground text-xs font-sans font-semibold px-4 py-2 rounded-full whitespace-nowrap transition-colors hover:bg-primary/90"
+            >
+              Book an Appointment
+            </button>
+            <button
+              className="w-10 h-10 flex items-center justify-center text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
               <span className={`absolute transition-all duration-300 ${mobileOpen ? "opacity-0 rotate-90 scale-75" : "opacity-100 rotate-0 scale-100"}`}>
-                <Menu className="w-5 h-5" />
+                <Menu className="w-6 h-6" />
               </span>
               <span className={`absolute transition-all duration-300 ${mobileOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-75"}`}>
-                <X className="w-5 h-5" />
+                <X className="w-6 h-6" />
               </span>
             </button>
           </div>
@@ -274,7 +280,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
     </nav>
 
-    {/* Mobile fullscreen menu — Tend-inspired minimal layout */}
+    {/* Mobile fullscreen menu */}
     <div
       className={`md:hidden fixed inset-0 top-[57px] z-[999] transition-all duration-300 ${
         mobileOpen
