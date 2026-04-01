@@ -76,6 +76,7 @@ const Footer = () => {
               />
             </Link>
           </div>
+        </div>
       </div>
 
       <footer className="bg-foreground text-background">
