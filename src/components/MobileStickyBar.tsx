@@ -1,4 +1,4 @@
-import { Phone, Calendar, Navigation } from "lucide-react";
+import { Phone, Calendar, MapPin } from "lucide-react";
 import { useState } from "react";
 import BookingLocationModal from "@/components/BookingLocationModal";
 
@@ -18,41 +18,34 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
 
   return (
     <>
-    <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background border-t border-border shadow-[0_-2px_10px_hsl(var(--foreground)/0.08)]">
-      {/* Open Now indicator */}
-      <div className="bg-primary/5 text-center py-1 border-b border-border">
-        <span className="text-[10px] font-sans font-semibold text-muted-foreground tracking-wide">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mr-1 animate-pulse" />
-          OPEN NOW · Same-Day Appointments Available
-        </span>
+      <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
+        <div className="mx-3 mb-3 flex items-center gap-1 rounded-full bg-foreground/90 backdrop-blur-md px-1.5 py-1.5 shadow-lg">
+          <a
+            href={`tel:${phone}`}
+            className="flex items-center justify-center w-10 h-10 rounded-full text-background/70 hover:text-background transition-colors"
+            aria-label="Call now"
+          >
+            <Phone className="w-[18px] h-[18px]" />
+          </a>
+          <button
+            onClick={() => setBookingModalOpen(true)}
+            className="flex-1 flex items-center justify-center gap-1.5 h-10 rounded-full bg-primary text-primary-foreground text-sm font-sans font-semibold tracking-wide"
+          >
+            <Calendar className="w-4 h-4" />
+            Book Now
+          </button>
+          <a
+            href={mapsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-10 h-10 rounded-full text-background/70 hover:text-background transition-colors"
+            aria-label="Get directions"
+          >
+            <MapPin className="w-[18px] h-[18px]" />
+          </a>
+        </div>
       </div>
-      <div className="grid grid-cols-3 h-14">
-        <a
-          href={`tel:${phone}`}
-          className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-bold text-foreground min-h-[48px]"
-        >
-          <Phone className="w-5 h-5 text-primary" />
-          Call Now
-        </a>
-        <button
-          onClick={() => setBookingModalOpen(true)}
-          className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-bold min-h-[48px] bg-primary text-primary-foreground relative"
-        >
-          <Calendar className="w-5 h-5" />
-          Book Now
-        </button>
-        <a
-          href={mapsLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center gap-0.5 text-xs font-sans font-bold text-foreground min-h-[48px]"
-        >
-          <Navigation className="w-5 h-5 text-primary" />
-          Directions
-        </a>
-      </div>
-    </div>
-    <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
+      <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
     </>
   );
 };
