@@ -265,7 +265,7 @@ const Home = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-6">
               <p className="text-lg md:text-xl font-display text-muted-foreground">We offer a full range of services for <strong className="text-foreground">all your needs</strong></p>
-              <div className="flex gap-2">
+              <div className="hidden md:flex gap-2">
                 <button onClick={() => scrollCarousel("left")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll left">
                   <ChevronLeft className="w-4 h-4" />
                 </button>
