@@ -286,6 +286,7 @@ export const PAGE_VIDEOS = {
   newPatient: { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
   dentalLab: { youtubeId: "pvWwvLOzCY0", title: "Meet the Tools Behind Every Smile" },
   cypressIntro: { youtubeId: "ovn9F8ascxc", title: "Dentist Cypress: Smile Avenue Family Dentistry" },
+  insurance: { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
 };
 
 export const SOCIAL_LINKS = {

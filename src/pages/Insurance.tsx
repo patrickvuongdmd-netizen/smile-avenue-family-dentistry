@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Shield, CreditCard, Phone, ArrowRight, Check } from "lucide-react";
+import { PAGE_VIDEOS } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
@@ -106,6 +108,17 @@ const Insurance = () => {
                 </ul>
                 <a href="https://www.sunbit.com" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2 justify-center">Apply for Sunbit <ArrowRight className="w-4 h-4" /></a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Video */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">SEE WHY FAMILIES TRUST US</p>
+            <h2 className="section-heading">Caring for Patients & Families</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.insurance.youtubeId} title={PAGE_VIDEOS.insurance.title} />
             </div>
           </div>
         </section>
