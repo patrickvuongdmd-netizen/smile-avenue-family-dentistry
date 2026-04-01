@@ -378,7 +378,11 @@ const Home = () => {
           </ScrollReveal>
         </LazySection>
 
-        {/* LOCATIONS WITH LIVE STATUS */}
+        {/* OFFICE PHOTO GRID */}
+        <LazySection>
+          <OfficePhotoGrid />
+        </LazySection>
+
         <LazySection>
           <section className="section-padding bg-background">
             <div className="container mx-auto">
