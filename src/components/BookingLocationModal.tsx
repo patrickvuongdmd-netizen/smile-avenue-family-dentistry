@@ -28,7 +28,7 @@ interface BookingLocationModalProps {
   onClose: () => void;
 }
 
-const BookingLocationModal = ({ open, onClose }: BookingLocationModalProps) => {
+const BookingLocationModal = forwardRef<HTMLDivElement, BookingLocationModalProps>(({ open, onClose }, _ref) => {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
