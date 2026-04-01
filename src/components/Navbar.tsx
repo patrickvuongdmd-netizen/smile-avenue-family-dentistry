@@ -337,10 +337,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               </div>
             </div>
 
-            {/* Emergency */}
-            <Link to={`${locationPrefix}/emergency-dentist`} className="block py-4 text-[15px] font-sans font-semibold text-foreground tracking-wide" onClick={() => setMobileOpen(false)}>
-              Emergency
-            </Link>
 
             {/* Patients */}
             <button
