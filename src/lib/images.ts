@@ -1,5 +1,8 @@
 // Central image URL constants for the entire site
 import patrickVuongImg from "@/assets/doctors/patrick-vuong.png";
+import heroHomepageLifestyle from "@/assets/hero-homepage-lifestyle.jpg";
+import heroCypressLifestyle from "@/assets/hero-cypress-lifestyle.jpg";
+import heroKatyLifestyle from "@/assets/hero-katy-lifestyle.jpg";
 import peterKimImg from "@/assets/doctors/peter-kim.png";
 import laithYahyaImg from "@/assets/doctors/laith-yahya.png";
 import sameerBilalImg from "@/assets/doctors/sameer-bilal.png";
