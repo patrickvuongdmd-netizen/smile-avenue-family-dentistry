@@ -507,7 +507,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </p>
               </div>
               <div className="flex gap-3 shrink-0">
-                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
                   Book Online
                 </button>
                 <a href={`tel:${loc.phone}`} className="btn-secondary">
