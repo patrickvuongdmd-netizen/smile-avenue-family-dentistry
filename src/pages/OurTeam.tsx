@@ -106,7 +106,7 @@ const OurTeam = () => {
             <div className="text-center max-w-3xl mx-auto">
               <p className="kicker">OUR TEAM</p>
               <h1 className="section-heading text-4xl md:text-5xl">Meet the Smile Avenue Team</h1>
-              <p className="section-body">30 dedicated professionals across two locations, committed to your comfort and care.</p>
+              <p className="section-body">Every smile starts with the team behind it — meet the people committed to your comfort and care.</p>
 
               {/* Location Filter */}
               <div className="flex justify-center gap-2 mt-6">
