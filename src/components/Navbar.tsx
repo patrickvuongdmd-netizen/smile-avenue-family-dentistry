@@ -56,6 +56,19 @@ type DropdownKey = "services" | "patients" | "about" | "locations" | null;
 const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null);
+  const [navHidden, setNavHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      // At top: always show. Scrolling down: hide. Scrolling up: show.
+      setNavHidden(y > 50 && y > lastScrollY.current);
+      lastScrollY.current = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const navRef = useRef<HTMLDivElement>(null);
 
