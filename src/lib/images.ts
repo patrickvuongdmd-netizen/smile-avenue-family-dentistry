@@ -1,5 +1,8 @@
 // Central image URL constants for the entire site
 import patrickVuongImg from "@/assets/doctors/patrick-vuong.png";
+import heroHomepageLifestyle from "@/assets/hero-homepage-lifestyle.jpg";
+import heroCypressLifestyle from "@/assets/hero-cypress-lifestyle.jpg";
+import heroKatyLifestyle from "@/assets/hero-katy-lifestyle.jpg";
 import peterKimImg from "@/assets/doctors/peter-kim.png";
 import laithYahyaImg from "@/assets/doctors/laith-yahya.png";
 import sameerBilalImg from "@/assets/doctors/sameer-bilal.png";
@@ -66,10 +69,10 @@ export const TEAM_MEMBERS = {
 };
 
 export const OFFICE_IMAGES = {
-  homepageHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-bg-new.webp",
-  homepageHeroMobile: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-bg-mobile.webp",
-  cypressHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour.webp",
-  katyHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Office-Tour.jpg",
+  homepageHero: heroHomepageLifestyle,
+  homepageHeroMobile: heroHomepageLifestyle,
+  cypressHero: heroCypressLifestyle,
+  katyHero: heroKatyLifestyle,
   aboutHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/10/img-about-us.webp",
   aboutTeamAction: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
   aboutKatyTeam: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-about-us.webp",
