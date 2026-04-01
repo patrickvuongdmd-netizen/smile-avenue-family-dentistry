@@ -204,7 +204,36 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
-              <Link to="/convenient-locations" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Locations</Link>
+              {/* Locations Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => openDropdown("locations")}
+                onMouseLeave={closeDropdown}
+              >
+                <Link to="/locations" className="flex items-center gap-1 px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">
+                  Locations <ChevronDown className="w-3.5 h-3.5" />
+                </Link>
+                {activeDropdown === "locations" && (
+                  <div className="absolute top-full left-0 pt-2 z-50">
+                    <div className="bg-popover border border-border rounded-xl shadow-xl p-4 w-56">
+                      <Link
+                        to="/cypress-tx"
+                        className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Cypress, TX
+                      </Link>
+                      <Link
+                        to="/katy-tx"
+                        className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Katy, TX
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* About Dropdown */}
               <div
