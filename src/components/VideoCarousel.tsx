@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import LazyYouTube from "@/components/LazyYouTube";
 import { cn } from "@/lib/utils";
