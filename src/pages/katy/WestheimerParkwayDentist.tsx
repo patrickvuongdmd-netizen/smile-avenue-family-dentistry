@@ -7,7 +7,7 @@ const data: NeighborhoodPageData = {
   neighborhoodName: "Westheimer Parkway",
   slug: "westheimer-parkway-dentist",
   metaTitle: "Dentist on Westheimer Parkway, Katy TX | Smile Avenue Family Dentistry",
-  metaDescription: "Dentist right on Westheimer Parkway in Katy, TX. Smile Avenue offers walk-in emergency care, implants, Invisalign & family dentistry at Ste #170. Call (281) 800-5008.",
+  metaDescription: "Dentist on Westheimer Pkwy in Katy, TX. Walk-ins & Saturday appointments. Implants, Invisalign, emergency & family care. 4.9★ rated. Call (281) 800-5008.",
   heroHeading: "Your Dentist on Westheimer Parkway — Walk In, Walk Out Smiling",
   heroImage: OFFICE_IMAGES.contactHero,
   heroSubheading: "Walk-in from the Westheimer Parkway corridor — we're right here at Ste #170.",

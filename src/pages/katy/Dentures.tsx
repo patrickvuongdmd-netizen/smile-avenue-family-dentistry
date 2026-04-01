@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Dentures",
   serviceSlug: "dentures",
   metaTitle: "Dentures Katy, TX | Full & Partial Dentures | Smile Avenue",
-  metaDescription: "Custom dentures in Katy, TX. Full, partial, implant-supported. In-house lab. Call (281) 800-5008.",
+  metaDescription: "Dentures in Katy, TX — full, partial & implant-supported options custom-made in our in-house lab. Natural fit guaranteed. Call (281) 800-5008.",
   heroKicker: "CUSTOM DENTURES IN KATY",
   heroHeading: "Dentures in Katy, TX",
   heroBody: "Modern dentures from Smile Avenue Katy are crafted in our in-house lab for natural appearance and comfortable fit. Full, partial, and implant-supported options available.",

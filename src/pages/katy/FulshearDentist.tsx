@@ -7,7 +7,7 @@ const data: NeighborhoodPageData = {
   neighborhoodName: "Fulshear",
   slug: "fulshear-dentist",
   metaTitle: "Dentist Near Fulshear, TX | Smile Avenue Family Dentistry",
-  metaDescription: "Fulshear residents: quality dental care is just 15 minutes away on Westheimer Parkway. Smile Avenue offers implants, cleanings, Invisalign & more. Call (281) 800-5008.",
+  metaDescription: "Fulshear dentist 15 min away on Westheimer Pkwy. Same-day & Saturday appointments. Implants, Invisalign, cleanings & more. 4.9★. Call (281) 800-5008.",
   heroHeading: "Fulshear Families — Your Trusted Dentist Is Just Down the Road",
   heroImage: OFFICE_IMAGES.aboutTeamAction,
   heroSubheading: "Expanding west to serve the growing Fulshear community with modern dental care.",
