@@ -26,7 +26,7 @@ interface FaqItem {
   answer: string;
 }
 
-interface Testimonial {
+export interface Testimonial {
   quote: string;
   name: string;
   source: string;
