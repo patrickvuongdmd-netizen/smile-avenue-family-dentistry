@@ -13,8 +13,9 @@ const items = [
 
 const doubled = [...items, ...items];
 
-const GRAY = "#374151";
-const GRAY_LIGHT = "#6B7280";
+// Dark navy matching --foreground (210 20% 14%)
+const NAVY = "hsl(210, 20%, 14%)";
+const NAVY_LIGHT = "hsl(210, 20%, 24%)";
 
 const TrustTicker = () => {
   const location = useLocation();
@@ -22,7 +23,7 @@ const TrustTicker = () => {
 
   return (
     <div className="overflow-hidden flex relative bg-primary" style={{ boxShadow: "0 2px 6px hsl(192 72% 35% / 0.35)" }}>
-      <Link to="/about" className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 hover:underline" style={{ color: GRAY }}>
+      <Link to="/about" className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 hover:underline" style={{ color: NAVY }}>
         Why Smile Avenue?
       </Link>
       <div className="relative overflow-hidden flex-1">
@@ -32,10 +33,10 @@ const TrustTicker = () => {
           {doubled.map((text, i) => (
             <span
               key={i}
-              className="inline-flex items-center shrink-0 px-4 py-2.5 text-xs tracking-wide font-semibold font-sans" style={{ color: GRAY }}
+              className="inline-flex items-center shrink-0 px-4 py-2.5 text-xs tracking-wide font-semibold font-sans" style={{ color: NAVY }}
             >
               {text}
-              <span className="ml-4" style={{ color: "rgba(55,65,81,0.3)" }}>·</span>
+              <span className="ml-4" style={{ color: "hsla(210, 20%, 14%, 0.3)" }}>·</span>
             </span>
           ))}
         </div>
@@ -46,19 +47,19 @@ const TrustTicker = () => {
         <Link
           to="/"
           className={`px-1.5 py-0.5 rounded transition-colors`}
-          style={!isSpanish ? { backgroundColor: "rgba(55,65,81,0.15)", color: GRAY } : { color: GRAY_LIGHT }}
+          style={!isSpanish ? { backgroundColor: "hsla(210, 20%, 14%, 0.15)", color: NAVY } : { color: NAVY_LIGHT }}
         >
           EN
         </Link>
-        <span style={{ color: GRAY_LIGHT }}>|</span>
+        <span style={{ color: NAVY_LIGHT }}>|</span>
         <Link
           to="/es"
           className={`px-1.5 py-0.5 rounded transition-colors`}
-          style={isSpanish ? { backgroundColor: "rgba(55,65,81,0.15)", color: GRAY } : { color: GRAY_LIGHT }}
+          style={isSpanish ? { backgroundColor: "hsla(210, 20%, 14%, 0.15)", color: NAVY } : { color: NAVY_LIGHT }}
         >
           ES
         </Link>
-        <span style={{ color: GRAY_LIGHT }}>|</span>
+        <span style={{ color: NAVY_LIGHT }}>|</span>
         <button
           onClick={() => {
             if ((window as any).toggleAccessibility) {
@@ -66,7 +67,7 @@ const TrustTicker = () => {
             }
           }}
           className="px-1.5 py-0.5 rounded transition-colors"
-          style={{ color: GRAY_LIGHT }}
+          style={{ color: NAVY_LIGHT }}
           aria-label="Accessibility options"
           title="Accessibility"
         >
