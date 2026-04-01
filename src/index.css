@@ -244,3 +244,12 @@
 .animate-ticker:hover {
   animation-play-state: paused;
 }
+
+/* Hide scrollbar for service pill carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
