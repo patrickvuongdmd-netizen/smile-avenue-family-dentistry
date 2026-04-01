@@ -230,7 +230,7 @@ const Home = () => {
                     >
                       <img
                         src={OFFICE_IMAGES.homepageHero}
-                        alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice in Cypress and Katy, TX"
+                        alt="Happy family smiling together at Smile Avenue Family Dentistry in Cypress and Katy, TX"
                         className="w-full h-full object-cover"
                         fetchPriority="high"
                         width={800}
