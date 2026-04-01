@@ -390,39 +390,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* LOCATION STRIP — Visit us (compact) */}
-        <section className="py-5 bg-muted/30 border-y border-border">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <MapPin className="w-4 h-4 text-primary shrink-0" />
-                  <span className="font-semibold text-foreground">Two locations:</span>
-                  <span className="hidden sm:inline">Cypress & Katy, TX</span>
-                </div>
-                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto">
-                  {Object.entries(LOCATIONS).map(([key, office]) => (
-                    <a
-                      key={key}
-                      href={`tel:${office.phone}`}
-                      className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Phone className="w-3.5 h-3.5 text-primary shrink-0" />
-                      <span className="font-medium">{office.name}: {office.phoneFormatted}</span>
-                    </a>
-                  ))}
-                </div>
-                <button
-                  onClick={() => setBookingModalOpen(true)}
-                  className="btn-primary !py-2 !px-5 !text-sm shrink-0 w-full sm:w-auto"
-                >
-                  <Calendar className="w-4 h-4 mr-1.5" />
-                  Book Online
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* INTRO */}
         <section className="section-padding section-alt">
