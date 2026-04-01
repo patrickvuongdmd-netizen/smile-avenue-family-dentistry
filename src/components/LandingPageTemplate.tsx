@@ -483,28 +483,6 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           </ScrollReveal>
         )}
 
-        {/* ═══ CTA #3 — After proof ═══ */}
-        <section className="py-12 px-4 text-center relative overflow-hidden gradient-cta">
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-5 bg-white -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full opacity-5 bg-white translate-y-1/2 -translate-x-1/2" />
-          <div className="relative z-10 max-w-xl mx-auto">
-            <h2 className="text-xl md:text-2xl font-bold text-white mb-2 font-display">
-              Thousands of Families Trust Us. You Can Too.
-            </h2>
-            <p className="text-white/70 text-sm mb-5 font-body">
-              Book in 60 seconds. We confirm within 1 hour. No surprises, ever.
-            </p>
-            <a
-              href={ctaHref}
-              target={ctaTarget}
-              rel={ctaTarget ? "noopener noreferrer" : undefined}
-              onClick={() => fireConversion(conversionLabel)}
-              className="btn-cta-light rounded-full !px-8 !py-3.5"
-            >
-              {data.heroCtaLabel}
-            </a>
-          </div>
-        </section>
 
         {/* 4c. Video Testimonials */}
         {data.videos && data.videos.length > 0 && (
