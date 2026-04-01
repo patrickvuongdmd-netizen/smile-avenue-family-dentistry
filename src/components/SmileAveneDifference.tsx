@@ -51,8 +51,7 @@ const SmileAvenueDifference = ({ onBook }: Props) => (
 
           <button
             onClick={onBook}
-            className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-200 font-sans"
-            style={{ backgroundColor: "hsl(40 63% 58%)", color: "#fff" }}
+            className="btn-primary"
           >
             Book Your Visit
           </button>

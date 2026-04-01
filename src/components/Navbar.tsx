@@ -285,7 +285,8 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={() => { setBookingModalOpen(true); }}
-              className="bg-primary text-primary-foreground text-xs font-sans font-semibold px-4 py-2 rounded-full whitespace-nowrap transition-colors hover:bg-primary/90"
+              className="text-xs font-sans font-semibold px-4 py-2 rounded-full whitespace-nowrap transition-colors hover:opacity-90"
+              style={{ backgroundColor: "hsl(40 63% 58%)", color: "#fff" }}
             >
               Book an Appointment
             </button>
