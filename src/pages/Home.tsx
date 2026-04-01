@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
@@ -51,9 +52,9 @@ const doctors = [
 ];
 
 const testimonials = [
-  { quote: "I trust Smile Avenue completely. The team makes my family feel like VIPs every single visit. We wouldn't go anywhere else.", name: "Thao H.", source: "Google Review" },
-  { quote: "From the moment I walked in, I felt welcome. They offered me a blanket and Netflix during my cleaning — this is NOT your typical dentist.", name: "Kashayn P.", source: "Google Review" },
-  { quote: "Dr. Vuong and his team did my implants and the results are incredible. Professional, gentle, and genuinely caring. 10/10.", name: "Michael R.", source: "Google Review" },
+  { quote: "I trust Smile Avenue completely. The team makes my family feel like VIPs every single visit. We wouldn't go anywhere else.", name: "Thao H.", source: "Google Review", location: "Bridgeland, Cypress" },
+  { quote: "From the moment I walked in, I felt welcome. They offered me a blanket and Netflix during my cleaning — this is NOT your typical dentist.", name: "Kashayn P.", source: "Google Review", location: "Towne Lake, Cypress" },
+  { quote: "Dr. Vuong and his team did my implants and the results are incredible. Professional, gentle, and genuinely caring. 10/10.", name: "Michael R.", source: "Google Review", location: "Cinco Ranch, Katy" },
 ];
 
 // Insurance logos moved to InsuranceLogoBar component
@@ -144,6 +145,7 @@ const Home = () => {
           url: "https://www.smileavenuefamilydentistry.com/"
         })}</script>
       </Helmet>
+      <TrustTicker />
       <Navbar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <TrustStrip />
 
@@ -154,7 +156,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               <div>
                 <p className="kicker mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
-                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Finally, a Dentist You'll Actually Look Forward To</h1>
+                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
                 <p className="font-body text-base md:text-lg leading-relaxed mb-4 md:mb-8 text-muted-foreground">Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second.</p>
                 {/* Location selector */}
                 <div className="flex items-center gap-2 mb-3 md:mb-4">
