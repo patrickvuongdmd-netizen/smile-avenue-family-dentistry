@@ -8,6 +8,7 @@ import TrustTicker from "@/components/TrustTicker";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import PreFooterBanner from "@/components/PreFooterBanner";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
@@ -605,6 +606,7 @@ const Home = () => {
       </main>
 
       <MobileStickyBar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
+      <PreFooterBanner />
       <Footer />
       <BackToTop />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
