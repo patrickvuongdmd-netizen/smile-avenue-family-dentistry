@@ -28,6 +28,7 @@ const ToothExtractionCypress = lazy(() => import("./pages/cypress/ToothExtractio
 const OralSurgeryCypress = lazy(() => import("./pages/cypress/OralSurgery.tsx"));
 const SedationDentistryCypress = lazy(() => import("./pages/cypress/SedationDentistry.tsx"));
 const PreventiveDentistryCypress = lazy(() => import("./pages/cypress/PreventiveDentistry.tsx"));
+const FamilyDentalCareCypress = lazy(() => import("./pages/cypress/FamilyDentalCare.tsx"));
 const BridgelandDentist = lazy(() => import("./pages/cypress/BridgelandDentist.tsx"));
 const TowneLakeDentist = lazy(() => import("./pages/cypress/TowneLakeDentist.tsx"));
 const FairfieldDentist = lazy(() => import("./pages/cypress/FairfieldDentist.tsx"));
@@ -50,6 +51,7 @@ const ToothExtractionKaty = lazy(() => import("./pages/katy/ToothExtraction.tsx"
 const OralSurgeryKaty = lazy(() => import("./pages/katy/OralSurgery.tsx"));
 const SedationDentistryKaty = lazy(() => import("./pages/katy/SedationDentistry.tsx"));
 const PreventiveDentistryKaty = lazy(() => import("./pages/katy/PreventiveDentistry.tsx"));
+const FamilyDentalCareKaty = lazy(() => import("./pages/katy/FamilyDentalCare.tsx"));
 const CincoRanchDentist = lazy(() => import("./pages/katy/CincoRanchDentist.tsx"));
 const FirethorneDentist = lazy(() => import("./pages/katy/FirethorneDentist.tsx"));
 const CrossCreekRanchDentist = lazy(() => import("./pages/katy/CrossCreekRanchDentist.tsx"));
@@ -131,6 +133,7 @@ const App = () => (
               <Route path="/cypress-tx/oral-surgery" element={<OralSurgeryCypress />} />
               <Route path="/cypress-tx/sedation-dentistry" element={<SedationDentistryCypress />} />
               <Route path="/cypress-tx/preventive-dentistry" element={<PreventiveDentistryCypress />} />
+              <Route path="/cypress-tx/family-dental-care" element={<FamilyDentalCareCypress />} />
               <Route path="/cypress-tx/bridgeland-dentist" element={<BridgelandDentist />} />
               <Route path="/cypress-tx/towne-lake-dentist" element={<TowneLakeDentist />} />
               <Route path="/cypress-tx/fairfield-dentist" element={<FairfieldDentist />} />
@@ -154,6 +157,7 @@ const App = () => (
               <Route path="/katy-tx/oral-surgery" element={<OralSurgeryKaty />} />
               <Route path="/katy-tx/sedation-dentistry" element={<SedationDentistryKaty />} />
               <Route path="/katy-tx/preventive-dentistry" element={<PreventiveDentistryKaty />} />
+              <Route path="/katy-tx/family-dental-care" element={<FamilyDentalCareKaty />} />
               <Route path="/katy-tx/cinco-ranch-dentist" element={<CincoRanchDentist />} />
               <Route path="/katy-tx/firethorne-dentist" element={<FirethorneDentist />} />
               <Route path="/katy-tx/cross-creek-ranch-dentist" element={<CrossCreekRanchDentist />} />

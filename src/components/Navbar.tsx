@@ -10,6 +10,7 @@ interface NavbarProps {
 }
 
 const generalCare = [
+  { label: "Family Dental Care", slug: "family-dental-care" },
   { label: "Dental Cleaning", slug: "dental-cleaning" },
   { label: "Pediatric Dentistry", slug: "pediatric-dentistry" },
   { label: "Root Canal", slug: "root-canal" },
