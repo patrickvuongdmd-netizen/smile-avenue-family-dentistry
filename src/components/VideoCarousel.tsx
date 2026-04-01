@@ -29,6 +29,17 @@ const ThumbImg = ({ youtubeId, title }: { youtubeId: string; title: string }) =>
 
 const VideoCarousel = ({ videos }: VideoCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const stripRef = useRef<HTMLDivElement>(null);
+
+  // Scroll the active thumbnail into view
+  useEffect(() => {
+    const strip = stripRef.current;
+    if (!strip) return;
+    const thumb = strip.children[activeIndex] as HTMLElement | undefined;
+    if (thumb) {
+      thumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+  }, [activeIndex]);
 
   if (videos.length === 0) return null;
   if (videos.length === 1) {
