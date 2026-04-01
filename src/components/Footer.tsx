@@ -42,10 +42,10 @@ const Footer = () => {
             <div>
               <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Cypress Office</h4>
               <div className="space-y-3 text-sm font-sans opacity-70">
-                <div className="flex items-start gap-2">
+                <a href="https://maps.google.com/?q=Smile+Avenue+Family+Dentistry+9212+Fry+Rd+%23120+Cypress+TX+77433" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:opacity-100 transition-opacity">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                   <span>9212 Fry Rd #120<br />Cypress, TX 77433</span>
-                </div>
+                </a>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 shrink-0" />
                   <a href="tel:8326481756" className="hover:opacity-100 transition-opacity">(832) 648-1756</a>
