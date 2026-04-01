@@ -390,37 +390,36 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* LOCATION CARDS — Visit us */}
-        <section className="py-10 bg-muted/30 border-y border-border">
+        {/* LOCATION STRIP — Visit us (compact) */}
+        <section className="py-5 bg-muted/30 border-y border-border">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-6" style={{ fontFamily: "var(--font-sans)" }}>
-              VISIT US FOR {data.serviceName.toUpperCase()}
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
-              {Object.entries(LOCATIONS).map(([key, office]) => (
-                <div key={key} className="bg-card rounded-xl border border-border p-5 flex flex-col gap-3">
-                  <h3 className="text-base font-sans font-bold text-foreground">Smile Avenue — {office.name}</h3>
-                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{office.address}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Phone className="w-4 h-4 text-primary shrink-0" />
-                    <a href={`tel:${office.phone}`} className="hover:text-primary transition-colors">{office.phoneFormatted}</a>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Clock className="w-4 h-4 text-primary shrink-0" />
-                    <span>Mon–Fri 8:30am–5pm</span>
-                  </div>
-                  <button
-                    onClick={() => setBookingModalOpen(true)}
-                    className="mt-2 btn-primary !py-2.5 !text-sm w-full"
-                  >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Book Online
-                  </button>
+            <div className="max-w-3xl mx-auto">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <MapPin className="w-4 h-4 text-primary shrink-0" />
+                  <span className="font-semibold text-foreground">Two locations:</span>
+                  <span className="hidden sm:inline">Cypress & Katy, TX</span>
                 </div>
-              ))}
+                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto">
+                  {Object.entries(LOCATIONS).map(([key, office]) => (
+                    <a
+                      key={key}
+                      href={`tel:${office.phone}`}
+                      className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Phone className="w-3.5 h-3.5 text-primary shrink-0" />
+                      <span className="font-medium">{office.name}: {office.phoneFormatted}</span>
+                    </a>
+                  ))}
+                </div>
+                <button
+                  onClick={() => setBookingModalOpen(true)}
+                  className="btn-primary !py-2 !px-5 !text-sm shrink-0 w-full sm:w-auto"
+                >
+                  <Calendar className="w-4 h-4 mr-1.5" />
+                  Book Online
+                </button>
+              </div>
             </div>
           </div>
         </section>
