@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Bridge Consultation",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Dental Bridges",
+  heroValueProps: ["Traditional, Maryland & implant-supported options", "Crafted in our in-house Smile Dental Lab", "Digital impressions for precise fit", "Natural-looking results", "Most insurance accepted · 0% financing"],
   introKicker: "REPLACE MISSING TEETH",
   introHeading: "What Are Dental Bridges?",
   introParas: [

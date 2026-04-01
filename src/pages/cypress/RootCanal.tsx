@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Appointment",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Root Canal",
+  heroValueProps: ["Gentle, virtually painless procedure", "Sedation options for complete comfort", "Save your natural tooth in one visit", "In-house lab for same-day crown", "Most insurance accepted · 0% financing"],
   introKicker: "ENDODONTIC THERAPY",
   introHeading: "What Is a Root Canal?",
   introParas: [

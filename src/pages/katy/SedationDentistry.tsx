@@ -11,6 +11,7 @@ const data: ServicePageData = {
   heroHeading: "Sedation Dentistry in Katy, TX",
   heroBody: "Dental anxiety should never prevent you from getting care. Smile Avenue Katy offers nitrous oxide, oral sedation, and IV sedation plus comfort amenities like blankets, Netflix, and noise-canceling headphones.",
   heroCta1: "Book Sedation Appointment", heroCta2: "Call (281) 800-5008", heroImage: "Sedation Dentistry Photo",
+  heroValueProps: ["Nitrous oxide, oral & IV sedation options", "Warm blankets, Netflix & noise-canceling headphones", "Ideal for dental anxiety & gag reflex", "Experienced, gentle team", "Most insurance accepted · 0% financing"],
   introKicker: "ABOUT SEDATION DENTISTRY", introHeading: "What Is Sedation Dentistry?",
   introParas: [
     "Sedation dentistry uses medication to help patients relax during dental procedures. From mild relaxation with nitrous oxide to deep sedation with IV medication, we have options for every level of anxiety.",

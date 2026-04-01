@@ -13,6 +13,7 @@ const data: ServicePageData = {
   heroCta1: "Book Your Cleaning",
   heroCta2: "Call (281) 800-5008",
   heroImage: "Preventive Dentistry Photo",
+  heroValueProps: ["Comprehensive exams with digital X-rays", "Oral cancer screening at every visit", "Fluoride treatments & dental sealants", "Catch problems early — save time & money", "Most insurance covers 100% of preventive care"],
   introKicker: "PROTECT YOUR SMILE",
   introHeading: "Comprehensive Preventive Care in Katy",
   introParas: [

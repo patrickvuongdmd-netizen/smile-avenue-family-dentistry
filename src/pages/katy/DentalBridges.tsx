@@ -11,6 +11,7 @@ const data: ServicePageData = {
   heroHeading: "Dental Bridges in Katy, TX",
   heroBody: "Bridge the gap in your smile with a fixed, natural-looking dental bridge from Smile Avenue Katy. Fabricated in our in-house lab.",
   heroCta1: "Book Bridge Consultation", heroCta2: "Call (281) 800-5008", heroImage: "Dental Bridges Photo",
+  heroValueProps: ["Traditional, Maryland & implant-supported options", "Crafted in our in-house Smile Dental Lab", "Digital impressions for precise fit", "Natural-looking results", "Most insurance accepted · 0% financing"],
   introKicker: "ABOUT DENTAL BRIDGES", introHeading: "What Are Dental Bridges?",
   introParas: [
     "A dental bridge spans the gap of one or more missing teeth. It consists of artificial teeth (pontics) anchored by crowns on adjacent teeth or dental implants.",

@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Cleaning",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Dental Cleaning",
+  heroValueProps: ["Gentle, thorough cleaning technique", "Digital X-rays & oral cancer screening included", "Fluoride & sealant treatments available", "Kid-friendly environment", "Most insurance covers 100% of preventive care"],
   introKicker: "PREVENTIVE DENTISTRY",
   introHeading: "Why Dental Cleanings Matter",
   introParas: [

@@ -13,6 +13,7 @@ const data: ServicePageData = {
   heroCta1: "Book Your Cleaning",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Preventive Dentistry Photo",
+  heroValueProps: ["Comprehensive exams with digital X-rays", "Oral cancer screening at every visit", "Fluoride treatments & dental sealants", "Catch problems early — save time & money", "Most insurance covers 100% of preventive care"],
   introKicker: "THE FOUNDATION OF ORAL HEALTH",
   introHeading: "Why Preventive Dentistry Matters",
   introParas: [

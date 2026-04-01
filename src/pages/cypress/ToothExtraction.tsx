@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Appointment",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Tooth Extraction",
+  heroValueProps: ["Gentle technique for minimal discomfort", "Sedation options available", "Same-day emergency extractions", "Tooth replacement options discussed at visit", "Most insurance accepted · 0% financing"],
   introKicker: "WHEN EXTRACTION IS NEEDED",
   introHeading: "Reasons for Tooth Extraction",
   introParas: [

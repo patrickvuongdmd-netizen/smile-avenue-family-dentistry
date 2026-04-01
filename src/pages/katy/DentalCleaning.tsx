@@ -11,6 +11,7 @@ const data: ServicePageData = {
   heroHeading: "Dental Cleaning and Preventive Care in Katy, TX",
   heroBody: "Regular cleanings are the foundation of a healthy smile. Our Katy hygienists use gentle technique and modern technology for thorough, comfortable preventive care.",
   heroCta1: "Book Cleaning Appointment", heroCta2: "Call (281) 800-5008", heroImage: "Dental Cleaning Photo",
+  heroValueProps: ["Gentle, thorough cleaning technique", "Digital X-rays & oral cancer screening included", "Fluoride & sealant treatments available", "Kid-friendly environment", "Most insurance covers 100% of preventive care"],
   introKicker: "ABOUT DENTAL CLEANINGS", introHeading: "Why Professional Cleanings Matter",
   introParas: [
     "Even with excellent home care, plaque and tartar build up in areas your toothbrush and floss can't reach. Professional cleanings remove these deposits, preventing cavities, gum disease, and other oral health problems.",

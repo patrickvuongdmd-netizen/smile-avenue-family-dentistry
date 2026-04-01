@@ -11,6 +11,7 @@ const data: ServicePageData = {
   heroHeading: "Dentures in Katy, TX",
   heroBody: "Modern dentures from Smile Avenue Katy are crafted in our in-house lab for natural appearance and comfortable fit. Full, partial, and implant-supported options available.",
   heroCta1: "Book Denture Consultation", heroCta2: "Call (281) 800-5008", heroImage: "Dentures Photo",
+  heroValueProps: ["Full, partial & implant-supported options", "Custom-crafted in our in-house lab", "Natural appearance & comfortable fit", "Same-day relines & repairs available", "Most insurance accepted · 0% financing"],
   introKicker: "ABOUT DENTURES", introHeading: "What Are Dentures?",
   introParas: [
     "Dentures are removable prosthetic devices designed to replace missing teeth and surrounding tissue. Modern dentures are more comfortable, natural-looking, and functional than ever before.",

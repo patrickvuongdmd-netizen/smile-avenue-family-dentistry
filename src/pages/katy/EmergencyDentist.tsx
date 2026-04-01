@@ -13,6 +13,7 @@ const data: ServicePageData = {
   heroCta1: "Call (281) 800-5008 Now",
   heroCta2: "Book Emergency Visit",
   heroImage: "Emergency Dentist Photo",
+  heroValueProps: ["Same-day emergency appointments", "Walk-ins welcome — no referral needed", "Sedation available for pain & anxiety", "Open Saturdays 8am–2pm", "Most insurance accepted"],
   introKicker: "IMMEDIATE DENTAL CARE",
   introHeading: "When You Need Help Now",
   introParas: [

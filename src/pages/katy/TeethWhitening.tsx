@@ -13,6 +13,7 @@ const data: ServicePageData = {
   heroCta1: "Book Whitening Appointment",
   heroCta2: "Call (281) 800-5008",
   heroImage: "Teeth Whitening Photo",
+  heroValueProps: ["Up to 8 shades brighter in one visit", "In-office Zoom whitening available", "Custom take-home trays for maintenance", "Safe for sensitive teeth", "0% financing available"],
   introKicker: "BRIGHTER SMILE, SAFELY",
   introHeading: "Professional Teeth Whitening",
   introParas: [
