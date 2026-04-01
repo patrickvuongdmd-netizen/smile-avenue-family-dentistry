@@ -295,7 +295,7 @@ const NewPatientHub = () => {
                   <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${KATY_PHONE}`} className="hover:text-primary transition-colors">{KATY_PHONE_FORMATTED}</a></div>
                   <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary shrink-0" /><span>Mon–Fri 8:30am–5pm · Sat 8am–2pm</span></div>
                 </div>
-                <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="btn-primary text-center w-full">Book at Katy</a>
+                <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="btn-cta text-center w-full">Book at Katy</a>
               </div>
             </div>
           </div>
