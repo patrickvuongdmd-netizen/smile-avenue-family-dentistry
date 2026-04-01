@@ -337,10 +337,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               </div>
             </div>
 
-            {/* Emergency */}
-            <Link to={`${locationPrefix}/emergency-dentist`} className="block py-4 text-[15px] font-sans font-semibold text-foreground tracking-wide" onClick={() => setMobileOpen(false)}>
-              Emergency
-            </Link>
 
             {/* Patients */}
             <button
@@ -389,9 +385,39 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </a>
           </div>
 
-          {/* Language & Accessibility */}
-          <div className="mt-6">
-            <LanguageToggle />
+          {/* Language, Accessibility & Emergency */}
+          <div className="mt-6 flex items-center gap-1.5 text-xs font-sans font-semibold">
+            <Link
+              to="/"
+              className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+              onClick={() => setMobileOpen(false)}
+            >
+              EN
+            </Link>
+            <span className="text-border">|</span>
+            <Link
+              to="/es"
+              className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+              onClick={() => setMobileOpen(false)}
+            >
+              ES
+            </Link>
+            <span className="text-border">|</span>
+            <button
+              onClick={() => { if ((window as any).toggleAccessibility) (window as any).toggleAccessibility(); }}
+              className="px-1.5 py-0.5 rounded text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Accessibility options"
+            >
+              <Accessibility className="w-3.5 h-3.5" />
+            </button>
+            <span className="text-border">|</span>
+            <Link
+              to={`${locationPrefix}/emergency-dentist`}
+              className="px-1.5 py-0.5 rounded text-destructive/80 hover:text-destructive transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              Emergency
+            </Link>
           </div>
         </div>
       </div>
