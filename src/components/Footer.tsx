@@ -199,6 +199,8 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+      <BookingLocationModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
+    </>
   );
 };
 
