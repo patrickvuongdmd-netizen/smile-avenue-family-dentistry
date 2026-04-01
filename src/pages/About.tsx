@@ -100,6 +100,14 @@ const About = () => {
           </div>
         </section>
 
+        {/* OFFICE PHOTO BREAK */}
+        <FullWidthPhotoBreak
+          src={OFFICE_IMAGES.gallery2}
+          alt="Smile Avenue team in action with a patient"
+          overlayText="Care at Smile Avenue Isn't Just Gentle — It's Genuine"
+          height="h-56 md:h-80"
+        />
+
         {/* DOCTORS */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
