@@ -148,7 +148,7 @@ const CypressTx = () => {
                 </div>
               </div>
               <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.cypressHero} alt="Smiling patient leaving Smile Avenue dental office on Fry Road in Cypress, TX" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
+                <img src={OFFICE_IMAGES.cypressHero} alt="Smile Avenue Cypress dental office exterior on Fry Road, Cypress TX 77433" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
               </div>
             </div>
           </div>
