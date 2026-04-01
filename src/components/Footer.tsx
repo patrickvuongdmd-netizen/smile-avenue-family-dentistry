@@ -26,8 +26,8 @@ const Footer = () => {
 
   return (
     <>
-      {/* Pre-footer marble banner with floating card */}
-      <section className="relative overflow-hidden py-20 md:py-32">
+      {/* Pre-footer CTA block — white card with ticker cutting through */}
+      <section className="relative overflow-hidden">
         <img
           src="/images/prefooter-bg.jpg"
           alt=""
@@ -38,24 +38,41 @@ const Footer = () => {
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-foreground/10" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="bg-card rounded-[2rem] px-10 py-14 md:px-20 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
-            <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-medium leading-[1.15] text-center md:text-left max-w-2xl" style={{ color: 'hsl(192, 30%, 35%)' }}>
-              Care at Smile Avenue isn't just painless,{" "}
-              <span className="text-foreground font-semibold">it's a pleasure</span>
-            </h2>
-            <button
-              onClick={() => setBookingOpen(true)}
-              className="btn-primary shrink-0 text-base md:text-lg px-10 py-4 rounded-full"
-            >
-              Book Now
-            </button>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-24">
+          <div className="bg-card rounded-[2rem] shadow-2xl overflow-hidden">
+            {/* Top half — CTA */}
+            <div className="px-10 py-14 md:px-20 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8">
+              <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-medium leading-[1.15] text-center md:text-left max-w-2xl text-muted-foreground">
+                Care at Smile Avenue isn't just painless,{" "}
+                <span className="text-foreground font-semibold">it's a pleasure</span>
+              </h2>
+              <button
+                onClick={() => setBookingOpen(true)}
+                className="btn-primary shrink-0 text-base md:text-lg px-10 py-4 rounded-full"
+              >
+                Book Now
+              </button>
+            </div>
+
+            {/* Ticker cuts through the card */}
+            <TrustTicker />
+
+            {/* Bottom half — logo */}
+            <div className="px-10 py-10 md:px-20 md:py-14">
+              <Link to="/">
+                <img
+                  src="/logo-full.webp"
+                  alt="Smile Avenue Family Dentistry"
+                  className="h-10 md:h-14 w-auto object-contain"
+                  width={1217}
+                  height={645}
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Trust ticker */}
-      <TrustTicker />
 
       <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
