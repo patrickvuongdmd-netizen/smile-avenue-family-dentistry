@@ -419,7 +419,7 @@ const Home = () => {
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">YOUR CARE TEAM</p>
-            <h2 className="section-heading text-center">6 Experienced Doctors, 2 Locations</h2>
+            <h2 className="section-heading text-center">Meet the Doctors Behind Your Smile</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-10">
               {doctors.map((doc, i) => {
                 const img = DOCTOR_IMAGES[doc.imgKey];
