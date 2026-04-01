@@ -36,7 +36,7 @@ interface TrustBadge {
   label: string;
 }
 
-interface Testimonial {
+export interface Testimonial {
   quote: string;
   name: string;
   source: string;
