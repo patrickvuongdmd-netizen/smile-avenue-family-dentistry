@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "All-on-4 changed my life. I went from being embarrassed to smile to grinning ear to ear. Dr. Vuong and the team were incredible throughout the whole process.", name: "Harold W.", source: "Google Review" },
-    { quote: "I had dentures for years and hated them. All-on-X implants gave me permanent teeth that feel completely natural. Best investment I've ever made.", name: "Carol M.", source: "Google Review" },
-    { quote: "The whole team made a scary procedure feel manageable. I walked in with failing teeth and left with a temporary smile the same day. The final result is stunning.", name: "Frank D.", source: "Google Review" },
+    { quote: "All-on-4 changed my life. I went from being embarrassed to smile to grinning ear to ear. Dr. Vuong and the team were incredible throughout the whole process.", name: "Harold W.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "I had dentures for years and hated them. All-on-X implants gave me permanent teeth that feel completely natural. Best investment I've ever made.", name: "Carol M.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "The whole team made a scary procedure feel manageable. I walked in with failing teeth and left with a temporary smile the same day. The final result is stunning.", name: "Frank D.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "A New Smile in One Day",
   ctaBody: "Schedule your All-on-X consultation and take the first step toward permanent, life-changing teeth.",

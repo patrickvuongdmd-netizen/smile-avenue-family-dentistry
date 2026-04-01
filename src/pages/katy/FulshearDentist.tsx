@@ -49,9 +49,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
   ],
   testimonials: [
-    { quote: "We moved to Fulshear recently and Smile Avenue has been a lifesaver. Great dentists, modern office, and so close to home.", name: "Emily R.", source: "Google Review" },
-    { quote: "The drive from Fulshear is easy and the care is worth every minute. Dr. Vuong and his team are top-notch.", name: "Greg M.", source: "Google Review" },
-    { quote: "Finally found a dental office near Fulshear that the whole family loves. Professional, kind, and thorough.", name: "Shannon B.", source: "Google Review" },
+    { quote: "We moved to Fulshear recently and Smile Avenue has been a lifesaver. Great dentists, modern office, and so close to home.", name: "Emily R.", source: "Google Review" , location: "Fulshear" },
+    { quote: "The drive from Fulshear is easy and the care is worth every minute. Dr. Vuong and his team are top-notch.", name: "Greg M.", source: "Google Review" , location: "Fulshear" },
+    { quote: "Finally found a dental office near Fulshear that the whole family loves. Professional, kind, and thorough.", name: "Shannon B.", source: "Google Review" , location: "Fulshear" },
   ],
   faqs: [
     { question: "How far is Smile Avenue from Fulshear?", answer: "Our Katy office at 23541 Westheimer Pkwy is approximately 12–15 minutes east of Fulshear via FM 1093/Westheimer Parkway." },

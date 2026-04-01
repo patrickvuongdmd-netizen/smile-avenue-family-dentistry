@@ -49,9 +49,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Skilled in implants and oral surgery.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
   ],
   testimonials: [
-    { quote: "We moved to Towne Lake last year and found Smile Avenue right away. Best dental experience our family has ever had!", name: "Mike D.", source: "Google Review" },
-    { quote: "The office is beautiful, the team is friendly, and Dr. Kim is so thorough. Highly recommend for Towne Lake families.", name: "Lisa P.", source: "Google Review" },
-    { quote: "Love how close this is to Towne Lake. No more driving across Houston for quality dental care.", name: "Amanda R.", source: "Google Review" },
+    { quote: "We moved to Towne Lake last year and found Smile Avenue right away. Best dental experience our family has ever had!", name: "Mike D.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "The office is beautiful, the team is friendly, and Dr. Kim is so thorough. Highly recommend for Towne Lake families.", name: "Lisa P.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "Love how close this is to Towne Lake. No more driving across Houston for quality dental care.", name: "Amanda R.", source: "Google Review" , location: "Towne Lake, Cypress" },
   ],
   faqs: [
     { question: "How far is Smile Avenue from Towne Lake?", answer: "Our Cypress office at 9212 Fry Rd is approximately 10–12 minutes from the Towne Lake community via Barker Cypress Road and Tuckerton Road." },

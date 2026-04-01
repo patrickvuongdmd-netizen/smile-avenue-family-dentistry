@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "I got 10 veneers and the transformation is unreal. My teeth were crooked and stained — now they're absolutely perfect. The in-house lab made a huge difference in quality.", name: "Vanessa R.", source: "Google Review" },
-    { quote: "The minimal-prep veneers were exactly what I needed. Very little drilling and the results are gorgeous. I get compliments on my smile constantly.", name: "Andrew L.", source: "Google Review" },
-    { quote: "Worth every penny. The Emax veneers look so natural — they have the same translucency as real teeth. Nobody can tell they're veneers.", name: "Christine M.", source: "Google Review" },
+    { quote: "I got 10 veneers and the transformation is unreal. My teeth were crooked and stained — now they're absolutely perfect. The in-house lab made a huge difference in quality.", name: "Vanessa R.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "The minimal-prep veneers were exactly what I needed. Very little drilling and the results are gorgeous. I get compliments on my smile constantly.", name: "Andrew L.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "Worth every penny. The Emax veneers look so natural — they have the same translucency as real teeth. Nobody can tell they're veneers.", name: "Christine M.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Transform Your Smile with Veneers",
   ctaBody: "Schedule your free veneer consultation and see what's possible for your smile.",

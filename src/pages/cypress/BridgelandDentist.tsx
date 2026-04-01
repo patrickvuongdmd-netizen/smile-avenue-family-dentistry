@@ -48,9 +48,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Skilled in implants and oral surgery.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
   ],
   testimonials: [
-    { quote: "We live in Bridgeland and love how close Smile Avenue is. The whole family goes here — even the kids love it!", name: "Rachel M.", source: "Google Review" },
-    { quote: "Dr. Vuong is incredibly gentle and thorough. The office is modern and the staff is always welcoming.", name: "James T.", source: "Google Review" },
-    { quote: "Switched from another dentist in the area and couldn't be happier. Easy scheduling, no wait times, and great care.", name: "Sarah L.", source: "Google Review" },
+    { quote: "We live in Bridgeland and love how close Smile Avenue is. The whole family goes here — even the kids love it!", name: "Rachel M.", source: "Google Review" , location: "Bridgeland, Cypress" },
+    { quote: "Dr. Vuong is incredibly gentle and thorough. The office is modern and the staff is always welcoming.", name: "James T.", source: "Google Review" , location: "Bridgeland, Cypress" },
+    { quote: "Switched from another dentist in the area and couldn't be happier. Easy scheduling, no wait times, and great care.", name: "Sarah L.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   faqs: [
     { question: "How far is Smile Avenue from Bridgeland?", answer: "Our Cypress office at 9212 Fry Rd is approximately 8 minutes from the Bridgeland community via Tuckerton Road. It's a quick, convenient drive with no highway needed." },

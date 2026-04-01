@@ -53,9 +53,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "My crown matches my other teeth perfectly — you can't tell which one is the crown. The digital scanning was so much better than those awful goopy impressions.", name: "Diana F.", source: "Google Review" },
-    { quote: "I was impressed by how fast I got my crown compared to my previous dentist. The in-house lab really makes a difference in turnaround time.", name: "Brian M.", source: "Google Review" },
-    { quote: "I needed a crown after a root canal and the whole process was smooth. Great fit, natural look. Very happy with the result.", name: "Tom S.", source: "Google Review" },
+    { quote: "My crown matches my other teeth perfectly — you can't tell which one is the crown. The digital scanning was so much better than those awful goopy impressions.", name: "Diana F.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "I was impressed by how fast I got my crown compared to my previous dentist. The in-house lab really makes a difference in turnaround time.", name: "Brian M.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "I needed a crown after a root canal and the whole process was smooth. Great fit, natural look. Very happy with the result.", name: "Tom S.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Restore Your Smile with a Custom Crown",
   ctaBody: "Schedule your crown consultation at Smile Avenue Katy — precision craftsmanship from our in-house lab.",

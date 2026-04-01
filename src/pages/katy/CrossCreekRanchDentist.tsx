@@ -49,9 +49,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
   ],
   testimonials: [
-    { quote: "We moved to Cross Creek Ranch and needed a new dentist. Smile Avenue exceeded our expectations in every way.", name: "Daniel H.", source: "Google Review" },
-    { quote: "Convenient location on Westheimer Parkway, professional staff, and Dr. Maredia is fantastic with kids.", name: "Patricia K.", source: "Google Review" },
-    { quote: "Been going here for two years from Cross Creek Ranch. Wouldn't go anywhere else — they truly care about their patients.", name: "Ryan S.", source: "Google Review" },
+    { quote: "We moved to Cross Creek Ranch and needed a new dentist. Smile Avenue exceeded our expectations in every way.", name: "Daniel H.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "Convenient location on Westheimer Parkway, professional staff, and Dr. Maredia is fantastic with kids.", name: "Patricia K.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "Been going here for two years from Cross Creek Ranch. Wouldn't go anywhere else — they truly care about their patients.", name: "Ryan S.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
   ],
   faqs: [
     { question: "How far is Smile Avenue from Cross Creek Ranch?", answer: "Our Katy office at 23541 Westheimer Pkwy is approximately 10–15 minutes from Cross Creek Ranch via FM 1093/Westheimer Parkway." },

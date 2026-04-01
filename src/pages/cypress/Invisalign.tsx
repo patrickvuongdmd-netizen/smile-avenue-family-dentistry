@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "I always wanted straight teeth but didn't want metal braces as an adult. Invisalign at Smile Avenue was the perfect solution — no one even noticed I was wearing them!", name: "Jessica F.", source: "Google Review" },
-    { quote: "My daughter's Invisalign treatment was so smooth. She loved that she could take them out for meals and sports. Her smile looks amazing now.", name: "Catherine P.", source: "Google Review" },
-    { quote: "10 months of Invisalign and my teeth are perfectly straight. The team at Smile Avenue was so encouraging throughout. Best decision I've made!", name: "Daniel G.", source: "Google Review" },
+    { quote: "I always wanted straight teeth but didn't want metal braces as an adult. Invisalign at Smile Avenue was the perfect solution — no one even noticed I was wearing them!", name: "Jessica F.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "My daughter's Invisalign treatment was so smooth. She loved that she could take them out for meals and sports. Her smile looks amazing now.", name: "Catherine P.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "10 months of Invisalign and my teeth are perfectly straight. The team at Smile Avenue was so encouraging throughout. Best decision I've made!", name: "Daniel G.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Start Your Invisalign Journey Today",
   ctaBody: "Book a free Invisalign consultation and see how clear aligners can transform your smile.",

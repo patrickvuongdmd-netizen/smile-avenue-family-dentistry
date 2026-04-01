@@ -49,9 +49,9 @@ const data: ServicePageData = {
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Bridge Reviews",
   testimonials: [
-    { quote: "Got a three-unit bridge to replace a missing molar. It fits perfectly and I can chew normally again. The Katy team was professional throughout.", name: "Richard E.", source: "Google Review" },
-    { quote: "Dr. Maredia did a beautiful Maryland bridge for my front tooth gap. Minimal prep and it looks completely natural.", name: "Jennifer Y.", source: "Google Review" },
-    { quote: "Had an implant-supported bridge done and it feels like real teeth. No slipping, no worries. Best decision for my smile.", name: "Gregory N.", source: "Google Review" },
+    { quote: "Got a three-unit bridge to replace a missing molar. It fits perfectly and I can chew normally again. The Katy team was professional throughout.", name: "Richard E.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "Dr. Maredia did a beautiful Maryland bridge for my front tooth gap. Minimal prep and it looks completely natural.", name: "Jennifer Y.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "Had an implant-supported bridge done and it feels like real teeth. No slipping, no worries. Best decision for my smile.", name: "Gregory N.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Bridge the Gap in Your Smile",
   ctaBody: "Book a bridge consultation at our Katy office and explore your tooth replacement options.",

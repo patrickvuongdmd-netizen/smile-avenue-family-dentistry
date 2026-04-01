@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "Best cleaning I've ever had. The hygienist was so thorough and gentle. My teeth feel amazing and the whole visit was actually enjoyable!", name: "Michelle W.", source: "Google Review" },
-    { quote: "I hadn't been to the dentist in 3 years and was embarrassed. The team at Smile Avenue was so non-judgmental and kind. They got my teeth back in great shape.", name: "Derek S.", source: "Google Review" },
-    { quote: "My kids actually look forward to their cleanings here! The hygienists are wonderful with children and make it fun. Can't recommend this place enough.", name: "Sarah T.", source: "Google Review" },
+    { quote: "Best cleaning I've ever had. The hygienist was so thorough and gentle. My teeth feel amazing and the whole visit was actually enjoyable!", name: "Michelle W.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "I hadn't been to the dentist in 3 years and was embarrassed. The team at Smile Avenue was so non-judgmental and kind. They got my teeth back in great shape.", name: "Derek S.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "My kids actually look forward to their cleanings here! The hygienists are wonderful with children and make it fun. Can't recommend this place enough.", name: "Sarah T.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Schedule Your Cleaning Today",
   ctaBody: "Keep your smile healthy with a professional cleaning at Smile Avenue Cypress.",

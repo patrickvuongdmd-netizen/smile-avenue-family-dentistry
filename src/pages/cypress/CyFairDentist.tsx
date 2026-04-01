@@ -49,9 +49,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Skilled in implants and oral surgery.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
   ],
   testimonials: [
-    { quote: "Best dentist in the Cy-Fair area, hands down. The team is professional, caring, and always on time.", name: "David K.", source: "Google Review" },
-    { quote: "I've lived in Cy-Fair for 20 years and this is the best dental office I've found. Dr. Vuong is exceptional.", name: "Maria F.", source: "Google Review" },
-    { quote: "Switched to Smile Avenue from a chain dental office and the difference is night and day. Personalized care you can trust.", name: "Brian H.", source: "Google Review" },
+    { quote: "Best dentist in the Cy-Fair area, hands down. The team is professional, caring, and always on time.", name: "David K.", source: "Google Review" , location: "Cy-Fair" },
+    { quote: "I've lived in Cy-Fair for 20 years and this is the best dental office I've found. Dr. Vuong is exceptional.", name: "Maria F.", source: "Google Review" , location: "Cy-Fair" },
+    { quote: "Switched to Smile Avenue from a chain dental office and the difference is night and day. Personalized care you can trust.", name: "Brian H.", source: "Google Review" , location: "Cy-Fair" },
   ],
   faqs: [
     { question: "Where is Smile Avenue located relative to the Cy-Fair area?", answer: "We're located at 9212 Fry Rd #120 in Cypress, TX — centrally positioned for families across the Cy-Fair ISD area, Jersey Village, and Willowbrook." },

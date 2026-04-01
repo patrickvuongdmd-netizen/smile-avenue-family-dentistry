@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PARENT REVIEWS",
   reviewsHeading: "What Parents Are Saying",
   testimonials: [
-    { quote: "My 3-year-old was so nervous for her first dentist visit, but the team made it like a fun adventure. She left saying she wants to come back!", name: "Brittany L.", source: "Google Review" },
-    { quote: "We've been bringing all three of our kids to Smile Avenue for years. The hygienists are incredibly patient and gentle. My kids actually remind me when their appointments are coming up.", name: "Jason H.", source: "Google Review" },
-    { quote: "Dr. Kim is amazing with kids. He explained everything to my son at his level and made him feel like a superhero for being brave. We'll never go anywhere else.", name: "Rebecca C.", source: "Google Review" },
+    { quote: "My 3-year-old was so nervous for her first dentist visit, but the team made it like a fun adventure. She left saying she wants to come back!", name: "Brittany L.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "We've been bringing all three of our kids to Smile Avenue for years. The hygienists are incredibly patient and gentle. My kids actually remind me when their appointments are coming up.", name: "Jason H.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "Dr. Kim is amazing with kids. He explained everything to my son at his level and made him feel like a superhero for being brave. We'll never go anywhere else.", name: "Rebecca C.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Give Your Child a Healthy Smile",
   ctaBody: "Schedule your child's dental visit today. Fun, gentle, and thorough care for kids of all ages.",

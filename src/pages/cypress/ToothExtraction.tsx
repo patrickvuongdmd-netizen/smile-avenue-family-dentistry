@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "Had a tooth extracted that was causing me pain for months. The whole thing took about 20 minutes and I barely felt anything. Healing was quick too.", name: "Marcus J.", source: "Google Review" },
-    { quote: "My daughter had all four wisdom teeth removed here. They used sedation and she had zero memory of the procedure. Recovery was smooth.", name: "Linda P.", source: "Google Review" },
-    { quote: "I was so nervous about having a tooth pulled but the doctor was incredibly gentle and calming. The extraction was painless and the follow-up care was thorough.", name: "Gregory T.", source: "Google Review" },
+    { quote: "Had a tooth extracted that was causing me pain for months. The whole thing took about 20 minutes and I barely felt anything. Healing was quick too.", name: "Marcus J.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "My daughter had all four wisdom teeth removed here. They used sedation and she had zero memory of the procedure. Recovery was smooth.", name: "Linda P.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "I was so nervous about having a tooth pulled but the doctor was incredibly gentle and calming. The extraction was painless and the follow-up care was thorough.", name: "Gregory T.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Relief Is One Call Away",
   ctaBody: "Don't suffer with tooth pain. Schedule a gentle extraction and get back to feeling great.",

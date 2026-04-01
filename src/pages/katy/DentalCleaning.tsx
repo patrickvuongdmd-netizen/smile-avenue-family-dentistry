@@ -49,9 +49,9 @@ const data: ServicePageData = {
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Cleaning Reviews",
   testimonials: [
-    { quote: "Best dental cleaning I've ever had. The hygienist was gentle, thorough, and took time to explain everything. My teeth feel amazing!", name: "Hannah J.", source: "Google Review" },
-    { quote: "Brought my whole family for cleanings at the Katy office. They were great with our kids — patient, fun, and thorough. Our new dental home!", name: "Michael & Sarah T.", source: "Google Review" },
-    { quote: "I needed a deep cleaning and was nervous, but they numbed everything and I didn't feel a thing. My gums have never been healthier.", name: "Rosa M.", source: "Google Review" },
+    { quote: "Best dental cleaning I've ever had. The hygienist was gentle, thorough, and took time to explain everything. My teeth feel amazing!", name: "Hannah J.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "Brought my whole family for cleanings at the Katy office. They were great with our kids — patient, fun, and thorough. Our new dental home!", name: "Michael & Sarah T.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "I needed a deep cleaning and was nervous, but they numbed everything and I didn't feel a thing. My gums have never been healthier.", name: "Rosa M.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Book Your Cleaning Today",
   ctaBody: "Stay ahead of cavities and gum disease with regular professional cleanings at our Katy office.",

@@ -53,9 +53,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "Cracked a tooth on a Saturday and they got me in first thing Monday morning. The pain was gone within an hour of sitting in the chair. Incredible team.", name: "Anthony R.", source: "Google Review" },
-    { quote: "My son knocked out a tooth playing soccer. We called and they saw us within an hour. Dr. Maredia saved the tooth. Can't thank them enough.", name: "Michelle K.", source: "Google Review" },
-    { quote: "I had an abscess that was getting worse by the hour. Smile Avenue got me in the same day, drained it, and started treatment. The relief was immediate.", name: "James P.", source: "Google Review" },
+    { quote: "Cracked a tooth on a Saturday and they got me in first thing Monday morning. The pain was gone within an hour of sitting in the chair. Incredible team.", name: "Anthony R.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "My son knocked out a tooth playing soccer. We called and they saw us within an hour. Dr. Maredia saved the tooth. Can't thank them enough.", name: "Michelle K.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "I had an abscess that was getting worse by the hour. Smile Avenue got me in the same day, drained it, and started treatment. The relief was immediate.", name: "James P.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Dental Emergency? Call Now",
   ctaBody: "Don't wait in pain. Call (281) 800-5008 for same-day emergency care at Smile Avenue Katy.",
