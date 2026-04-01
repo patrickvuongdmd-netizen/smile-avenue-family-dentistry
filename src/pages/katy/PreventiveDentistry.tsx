@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Preventive Dentistry",
   serviceSlug: "preventive-dentistry",
   metaTitle: "Preventive Dentistry Katy, TX | Exams & Cleanings | Smile Avenue",
-  metaDescription: "Preventive dentistry in Katy, TX near Cinco Ranch. Dental exams, cleanings, digital X-rays, oral cancer screenings & fluoride treatments. Book your visit today.",
+  metaDescription: "Preventive dentistry in Katy, TX near Cinco Ranch — exams, cleanings, digital X-rays & oral cancer screenings. Open Saturdays. Insurance accepted. Book today.",
   heroKicker: "PREVENTIVE CARE IN KATY",
   heroHeading: "Preventive Dentistry in Katy, TX",
   heroBody: "Healthy smiles start with prevention. At Smile Avenue Katy, we provide comprehensive exams, professional cleanings, and advanced digital diagnostics to families across Cinco Ranch, Firethorne, and Cross Creek Ranch.",

@@ -7,7 +7,7 @@ const data: NeighborhoodPageData = {
   neighborhoodName: "Cinco Ranch",
   slug: "cinco-ranch-dentist",
   metaTitle: "Dentist in Cinco Ranch, Katy TX | Smile Avenue Family Dentistry",
-  metaDescription: "Cinco Ranch dentist on Westheimer Parkway. Smile Avenue Family Dentistry is in the heart of Cinco Ranch — dental implants, Invisalign, cleanings & more. Call (281) 800-5008.",
+  metaDescription: "Cinco Ranch dentist on Westheimer Pkwy. Same-day & Saturday appointments. Implants, Invisalign, cleanings & emergency care. 4.9★. Call (281) 800-5008.",
   heroHeading: "Your Cinco Ranch Dentist — Right Here on Westheimer Parkway",
   heroImage: OFFICE_IMAGES.katyHero,
   heroSubheading: "Located at 23541 Westheimer Pkwy, in the heart of Cinco Ranch.",

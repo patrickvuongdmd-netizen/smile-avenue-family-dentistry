@@ -7,7 +7,7 @@ const data: NeighborhoodPageData = {
   neighborhoodName: "Cy-Fair",
   slug: "cyfair-dentist",
   metaTitle: "Dentist in Cy-Fair, TX | Smile Avenue Family Dentistry",
-  metaDescription: "Top-rated Cy-Fair dentist serving the Cy-Fair ISD area, Jersey Village & Willowbrook. Full-service dental care at Smile Avenue on Fry Road. Call (832) 648-1756.",
+  metaDescription: "Cy-Fair dentist on Fry Road serving Cy-Fair ISD, Jersey Village & Willowbrook. Same-day appointments, open Saturdays. 4.9★ Google. Call (832) 648-1756.",
   heroHeading: "Your Cy-Fair Dentist — Comprehensive Care for the Whole Family",
   heroImage: OFFICE_IMAGES.teamPhoto,
   heroSubheading: "Proudly serving the greater Cy-Fair community from our Fry Road office.",

@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Dental Bridges",
   serviceSlug: "dental-bridges",
   metaTitle: "Dental Bridges Katy, TX | Fixed Bridge Restorations | Smile Avenue",
-  metaDescription: "Custom dental bridges in Katy, TX. Replace missing teeth. In-house lab precision. Call (281) 800-5008.",
+  metaDescription: "Dental bridges in Katy, TX — traditional, Maryland & implant-supported options. Crafted in our in-house lab. Insurance accepted. Call (281) 800-5008.",
   heroKicker: "FIXED BRIDGES IN KATY",
   heroHeading: "Dental Bridges in Katy, TX",
   heroBody: "Bridge the gap in your smile with a fixed, natural-looking dental bridge from Smile Avenue Katy. Fabricated in our in-house lab.",

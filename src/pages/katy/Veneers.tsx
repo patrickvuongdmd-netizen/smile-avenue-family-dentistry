@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Veneers",
   serviceSlug: "veneers",
   metaTitle: "Veneers Katy, TX | Porcelain Veneers & Smile Design | Smile Avenue",
-  metaDescription: "Custom veneers in Katy, TX. Emax and zirconia from our in-house lab. Natural results. Call (281) 800-5008.",
+  metaDescription: "Porcelain veneers in Katy, TX — Emax & zirconia options crafted in our in-house lab. Free smile consultation. 0% financing available. Call (281) 800-5008.",
   heroKicker: "PORCELAIN VENEERS IN KATY",
   heroHeading: "Porcelain Veneers in Katy, TX",
   heroBody: "Transform your smile with custom veneers from our in-house Smile Dental Lab. Each veneer crafted for perfect color match and natural beauty.",

@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Dental Implants",
   serviceSlug: "dental-implants",
   metaTitle: "Dental Implants Katy, TX | Permanent Tooth Replacement | Smile Avenue",
-  metaDescription: "Permanent dental implants in Katy, TX near Cinco Ranch. 3D planning, in-house lab, sedation available. Call (281) 800-5008.",
+  metaDescription: "Dental implants in Katy, TX near Cinco Ranch — single teeth, bridges & All-on-4. 3D-guided placement, in-house lab, sedation. 0% financing. Call (281) 800-5008.",
   heroKicker: "PERMANENT TOOTH REPLACEMENT IN KATY",
   heroHeading: "Dental Implants in Katy, TX",
   heroBody: "Missing teeth impact your confidence, eating ability, and oral health. At Smile Avenue Katy near Cinco Ranch, Dr. Vuong and Dr. Bilal provide permanent implant solutions with 3D planning and our in-house Smile Dental Lab.",

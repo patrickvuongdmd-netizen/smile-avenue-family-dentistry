@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Cosmetic Dentistry",
   serviceSlug: "cosmetic-dentistry",
   metaTitle: "Cosmetic Dentist Katy, TX | Veneers, Whitening & Smile Makeovers | Smile Avenue",
-  metaDescription: "Smile makeovers in Katy, TX. Veneers, whitening, bonding. In-house lab for perfect results. Call (281) 800-5008.",
+  metaDescription: "Cosmetic dentistry in Katy, TX — veneers, whitening, bonding & full smile makeovers. In-house lab for precise results. 4.9★ rated. Book today.",
   heroKicker: "SMILE MAKEOVERS IN KATY",
   heroHeading: "Cosmetic Dentistry in Katy, TX",
   heroBody: "Your smile is your first impression. Cosmetic dentistry at Smile Avenue Katy helps you feel confident with natural-looking veneers, whitening, bonding, and complete smile makeovers.",

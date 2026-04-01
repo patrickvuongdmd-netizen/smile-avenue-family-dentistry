@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Pediatric Dentistry",
   serviceSlug: "pediatric-dentistry",
   metaTitle: "Pediatric Dentist Katy, TX | Kids & Family Dentistry | Smile Avenue",
-  metaDescription: "Gentle kids dentistry in Katy, TX near Cinco Ranch. First visits, cleanings, sealants. Fun environment. Call (281) 800-5008.",
+  metaDescription: "Kids dentist in Katy, TX near Cinco Ranch — gentle first visits, cleanings, sealants & cavity prevention. Netflix in every room. Open Saturdays. Call (281) 800-5008.",
   heroKicker: "KIDS DENTISTRY IN KATY",
   heroHeading: "Pediatric Dentistry in Katy, TX",
   heroBody: "At Smile Avenue Katy, we make kids dental visits fun and educational, building positive habits from the first appointment. Families across Cinco Ranch and Firethorne trust us with their children.",

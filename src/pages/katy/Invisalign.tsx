@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Invisalign",
   serviceSlug: "invisalign",
   metaTitle: "Invisalign Katy, TX | Clear Aligners for Adults & Teens | Smile Avenue",
-  metaDescription: "Invisalign clear aligners in Katy, TX near Cinco Ranch. Digital scanning, in-house fabrication. Call (281) 800-5008.",
+  metaDescription: "Invisalign in Katy, TX near Cinco Ranch — clear aligners with free consultation & digital scanning. 0% financing available. 4.9★ rated. Call (281) 800-5008.",
   heroKicker: "CLEAR ALIGNERS IN KATY",
   heroHeading: "Invisalign Clear Aligners in Katy, TX",
   heroBody: "Straighten your smile without metal brackets. Invisalign at Smile Avenue Katy offers virtually invisible alignment for teens and adults.",

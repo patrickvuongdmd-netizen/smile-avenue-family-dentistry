@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Emergency Dentist",
   serviceSlug: "emergency-dentist",
   metaTitle: "Emergency Dentist Katy, TX | Same-Day Urgent Care | Smile Avenue",
-  metaDescription: "Dental emergency near Cinco Ranch? Same-day appointments at Smile Avenue Katy. Toothaches, broken teeth. Call (281) 800-5008 now.",
+  metaDescription: "Emergency dentist in Katy, TX — same-day care for toothaches, broken teeth & abscesses. Walk-ins welcome. Open Saturdays. Call (281) 800-5008 now.",
   heroKicker: "SAME-DAY EMERGENCY CARE IN KATY",
   heroHeading: "Emergency Dentist in Katy, TX",
   heroBody: "A dental emergency demands immediate action. At Smile Avenue Katy, we provide same-day emergency care for severe toothaches, fractured teeth, knocked-out teeth, and infections. Call (281) 800-5008 for fast relief.",

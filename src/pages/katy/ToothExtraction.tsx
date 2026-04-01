@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Tooth Extraction",
   serviceSlug: "tooth-extraction",
   metaTitle: "Tooth Extraction Katy, TX | Gentle & Safe Extractions | Smile Avenue",
-  metaDescription: "Gentle tooth extractions in Katy, TX. Wisdom teeth, damaged teeth. Sedation available. Call (281) 800-5008.",
+  metaDescription: "Tooth extraction in Katy, TX — wisdom teeth, simple & surgical extractions with sedation options. Same-day appointments available. Call (281) 800-5008.",
   heroKicker: "GENTLE EXTRACTIONS IN KATY",
   heroHeading: "Tooth Extraction in Katy, TX",
   heroBody: "When extraction is necessary, Smile Avenue Katy performs gentle procedures with sedation options. We discuss replacement options to restore your smile.",
