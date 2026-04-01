@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
 
           {/* Patients & Services — 2-col on mobile */}
-          <div className="grid grid-cols-2 gap-6 md:contents">
+          <div className="grid grid-cols-2 gap-6 lg:contents">
             <div>
               <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Patients & Resources</h4>
               <div className="space-y-2 text-sm font-sans opacity-70">
