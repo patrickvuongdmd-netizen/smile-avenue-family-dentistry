@@ -112,6 +112,17 @@ const Insurance = () => {
           </div>
         </section>
 
+        {/* Video */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">SEE WHY FAMILIES TRUST US</p>
+            <h2 className="section-heading">Caring for Patients & Families</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.insurance.youtubeId} title={PAGE_VIDEOS.insurance.title} />
+            </div>
+          </div>
+        </section>
+
         {/* Membership cross-link */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center max-w-3xl">
