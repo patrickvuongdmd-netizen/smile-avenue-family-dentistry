@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Dental Crowns",
   serviceSlug: "dental-crowns",
   metaTitle: "Dental Crowns Katy, TX | Same-Day Custom Crowns | Smile Avenue",
-  metaDescription: "Same-day dental crowns in Katy, TX. Porcelain & zirconia crowns crafted in our in-house lab with digital impressions. Insurance & financing. Call (281) 800-5008.",
+  metaDescription: "Dental crowns in Katy, TX. Porcelain & zirconia crafted in our in-house lab. Digital impressions. Insurance & financing. Call (281) 800-5008.",
   heroKicker: "CUSTOM CROWNS IN KATY",
   heroHeading: "Dental Crowns in Katy, TX",
   heroBody: "A damaged tooth deserves a restoration that looks and feels natural. At Smile Avenue Katy, our in-house Smile Dental Lab fabricates custom porcelain and zirconia crowns with digital precision — faster turnaround than practices that outsource their lab work.",

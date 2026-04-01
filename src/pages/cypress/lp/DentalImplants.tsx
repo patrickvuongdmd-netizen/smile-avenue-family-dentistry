@@ -5,7 +5,7 @@ const data: LandingPageData = {
   location: "cypress",
   pageType: "dental-implants",
   metaTitle: "Dental Implants Cypress TX | Free Consultation | In-House Lab | Smile Avenue",
-  metaDescription: "Missing teeth? Natural-looking dental implants at Smile Avenue Cypress. In-house Smile Dental Lab for faster results. Free consultation & 0% financing. Book today.",
+  metaDescription: "Missing teeth? Dental implants at Smile Avenue Cypress. In-house lab for faster results. Free consultation & 0% financing. Book today.",
   heroHeadline: "Stop Hiding Your Smile. Get Permanent, Natural-Looking Teeth.",
   heroSubheadline: "Our in-house Smile Dental Lab means faster results and a perfect fit. Your free implant consultation includes a 3D CT scan and personalized treatment plan — no obligation.",
   heroCtaLabel: "Book Your Free Implant Consultation",

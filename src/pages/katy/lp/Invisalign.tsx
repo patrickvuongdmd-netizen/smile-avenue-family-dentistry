@@ -6,7 +6,7 @@ const data: LandingPageData = {
   location: "katy",
   pageType: "invisalign",
   metaTitle: "Invisalign Katy TX | Free Consultation | Clear Aligners | Smile Avenue",
-  metaDescription: "Straighter teeth without metal braces. Invisalign clear aligners for teens and adults in Katy, TX. Free consultation with 3D smile preview. 0% financing. Book today.",
+  metaDescription: "Invisalign clear aligners for teens & adults in Katy, TX. Free consultation with 3D smile preview. 0% financing. Book today.",
   heroHeadline: "Straight Teeth. No Metal. No Lifestyle Disruption.",
   heroSubheadline: "Invisalign clear aligners for teens and adults in Katy. Custom-fitted, virtually invisible, and removable. Your free consultation includes a 3D smile preview.",
   heroCtaLabel: "Book Your Free Consultation",

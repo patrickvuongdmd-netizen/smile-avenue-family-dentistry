@@ -7,7 +7,7 @@ const data: ServicePageData = {
   serviceName: "Dental Crowns",
   serviceSlug: "dental-crowns",
   metaTitle: "Dental Crowns Cypress, TX | Same-Day Custom Crowns | Smile Avenue",
-  metaDescription: "Same-day dental crowns in Cypress, TX. Porcelain & zirconia crowns crafted in our in-house lab with digital impressions. Insurance & financing. Call (832) 648-1756.",
+  metaDescription: "Dental crowns in Cypress, TX. Porcelain & zirconia crafted in our in-house lab. Digital impressions. Insurance & financing. Call (832) 648-1756.",
   heroKicker: "CUSTOM CROWNS IN CYPRESS",
   heroHeading: "Dental Crowns in Cypress, TX",
   heroBody: "A damaged tooth deserves a restoration that looks and feels natural. At Smile Avenue Cypress, our in-house Smile Dental Lab designs and fabricates custom porcelain and zirconia crowns with digital precision — faster turnaround than practices that outsource their lab work.",

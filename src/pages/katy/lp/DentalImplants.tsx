@@ -5,7 +5,7 @@ const data: LandingPageData = {
   location: "katy",
   pageType: "dental-implants",
   metaTitle: "Dental Implants Katy TX | Free Consultation | In-House Lab | Smile Avenue",
-  metaDescription: "Missing teeth? Natural-looking dental implants at Smile Avenue Katy. In-house Smile Dental Lab for faster results. Free consultation & 0% financing. Open Saturdays.",
+  metaDescription: "Missing teeth? Dental implants at Smile Avenue Katy. In-house lab for faster results. Free consultation & 0% financing. Open Saturdays.",
   heroHeadline: "Stop Hiding Your Smile. Get Permanent, Natural-Looking Teeth.",
   heroSubheadline: "In-house Smile Dental Lab means faster results and a perfect fit. Free implant consultation includes 3D CT scan. Serving Cinco Ranch, Cross Creek Ranch & Firethorne.",
   heroCtaLabel: "Book Your Free Implant Consultation",

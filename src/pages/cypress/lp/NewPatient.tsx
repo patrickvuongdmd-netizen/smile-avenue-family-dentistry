@@ -6,7 +6,7 @@ const data: LandingPageData = {
   location: "cypress",
   pageType: "new-patient",
   metaTitle: "New Patient Dentist Cypress TX | $99 Exam & Cleaning | Smile Avenue",
-  metaDescription: "Now accepting new patients in Cypress, TX. Comprehensive exam, digital X-rays, and professional cleaning. Same-day appointments available. 4.9★ rated with 5,000+ reviews. Book online in 60 seconds.",
+  metaDescription: "New patients welcome in Cypress, TX. Exam, X-rays & cleaning. Same-day appointments. 4.9★ with 5,000+ reviews. Book online in 60 seconds.",
   heroHeadline: "Finally, a Dentist You'll Actually Look Forward To",
   heroSubheadline: "Comprehensive exam, digital X-rays, and professional cleaning — all in one visit. Same-day appointments for families in Cypress. No judgment if it's been a while.",
   heroImage: OFFICE_IMAGES.newPatientHero,

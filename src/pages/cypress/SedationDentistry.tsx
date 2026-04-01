@@ -7,7 +7,7 @@ const data: ServicePageData = {
   serviceName: "Sedation Dentistry",
   serviceSlug: "sedation-dentistry",
   metaTitle: "Sedation Dentistry Cypress, TX | Anxiety-Free Dental Care | Smile Avenue",
-  metaDescription: "Sedation dentistry in Cypress, TX — nitrous oxide, oral & IV sedation for anxiety-free care. Gentle team, 4.9★ rated. Book a consultation. Call (832) 648-1756.",
+  metaDescription: "Sedation dentistry in Cypress, TX — nitrous oxide, oral & IV sedation for anxiety-free care. 4.9★ rated. Book a consultation. Call (832) 648-1756.",
   heroKicker: "ANXIETY-FREE DENTISTRY IN CYPRESS",
   heroHeading: "Sedation Dentistry in Cypress, TX",
   heroBody: "Dental anxiety is real, and it should never prevent you from getting the care you need. At Smile Avenue Cypress, we offer multiple sedation options — from mild relaxation to deep sedation — so every patient can receive treatment comfortably.",
