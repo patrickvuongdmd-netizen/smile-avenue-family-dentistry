@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import LazyYouTube from "@/components/LazyYouTube";
 import { cn } from "@/lib/utils";
@@ -29,6 +29,17 @@ const ThumbImg = ({ youtubeId, title }: { youtubeId: string; title: string }) =>
 
 const VideoCarousel = ({ videos }: VideoCarouselProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const stripRef = useRef<HTMLDivElement>(null);
+
+  // Scroll the active thumbnail into view
+  useEffect(() => {
+    const strip = stripRef.current;
+    if (!strip) return;
+    const thumb = strip.children[activeIndex] as HTMLElement | undefined;
+    if (thumb) {
+      thumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+  }, [activeIndex]);
 
   if (videos.length === 0) return null;
   if (videos.length === 1) {
@@ -65,7 +76,7 @@ const VideoCarousel = ({ videos }: VideoCarouselProps) => {
           <ChevronLeft className="w-4 h-4" />
         </button>
 
-        <div className="flex gap-3 overflow-hidden">
+        <div ref={stripRef} className="flex gap-3 overflow-x-auto scrollbar-hide scroll-smooth">
           {videos.map((video, i) => (
             <button
               key={video.youtubeId}
