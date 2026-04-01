@@ -22,14 +22,28 @@ import LazyYouTube from "@/components/LazyYouTube";
 import CredibilityBar from "@/components/CredibilityBar";
 import SmileAvenueDifference from "@/components/SmileAveneDifference";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import ServicesCarousel from "@/components/ServicesCarousel";
-import TaglineBanner from "@/components/TaglineBanner";
 import LocationCard from "@/components/LocationCard";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
+
+const trustStats = [
+  { value: "5,000+", label: "Five-Star Google Reviews" },
+  { value: "Most", label: "Insurance Plans Accepted" },
+  { value: "Same-Day", label: "Appointments Available" },
+  { value: "2", label: "Convenient Locations" },
+];
+
+const services = [
+  { title: "Dental Implants", description: "Replace missing teeth permanently — eat, smile, and live without limits.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers designed to turn heads.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
+  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets, no lifestyle disruption.", slug: "invisalign", icon: <Zap className="w-6 h-6" /> },
+  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today — call now.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
+  { title: "Preventive Care", description: "Gentle cleanings and thorough exams to protect your family's smiles for life.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" /> },
+  { title: "Sedation Dentistry", description: "Nervous about the dentist? Relax completely with our sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
+];
 
 const doctors = [
   { name: "Dr. Patrick Vuong", credentials: "DMD", role: "Founder", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
@@ -52,6 +66,14 @@ const Home = () => {
   const [heroLoc, setHeroLoc] = useState<"cypress" | "katy">("cypress");
   const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const pillCarouselRef = useRef<HTMLDivElement>(null);
+
+  const scrollCarousel = (dir: "left" | "right") => {
+    const el = pillCarouselRef.current;
+    if (!el) return;
+    const scrollAmount = el.clientWidth * 0.8;
+    el.scrollBy({ left: dir === "right" ? scrollAmount : -scrollAmount, behavior: "smooth" });
+  };
 
   const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
   const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
@@ -128,76 +150,164 @@ const Home = () => {
       <TrustStrip />
 
       <main id="main-content" className="pb-14 lg:pb-0">
+        {/* HERO — Original two-column layout */}
+        <section className="px-4 sm:px-6 lg:px-8 py-8 md:py-20 bg-background">
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+              <div>
+                <p className="kicker mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
+                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
+                <p className="font-body text-base md:text-lg leading-relaxed mb-4 md:mb-8 text-muted-foreground">Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second.</p>
+                {/* Location selector */}
+                <div className="flex items-center gap-2 mb-3 md:mb-4">
+                  <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
+                  <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
+                  <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
+                </div>
+                <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4">Book Online</button>
+                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2 text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4"><Phone className="w-4 h-4" />{heroPhoneFmt}</a>
+                </div>
+                <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-2 md:mb-3">
+                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
+                  <span className="mx-1.5 md:mx-2 text-border">·</span>
+                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Insurance accepted
+                  <span className="mx-1.5 md:mx-2 text-border">·</span>
+                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />0% financing
+                </p>
+                <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm font-sans text-muted-foreground">
+                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 md:w-3.5 md:h-3.5 fill-primary text-primary" />)}</div>
+                  <span className="font-semibold text-foreground">4.9</span>
+                  <span>from 5,000+ reviews</span>
+                </div>
 
-        {/* ═══ 1. HERO — Emotion-first ═══ */}
-        <section className="relative overflow-hidden" style={{ backgroundColor: "#1a1a2e" }}>
-          {/* Background video/image */}
-          <div className="absolute inset-0">
-            <video
-              src={HERO_VIDEO_URL}
-              autoPlay loop muted playsInline preload="metadata"
-              poster={OFFICE_IMAGES.homepageHero}
-              className="hidden lg:block w-full h-full object-cover opacity-30"
-            />
-            <img
-              src={OFFICE_IMAGES.homepageHero}
-              alt=""
-              className="lg:hidden w-full h-full object-cover opacity-25"
-              fetchPriority="high"
-              width={800}
-              height={600}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e] via-[#1a1a2e]/80 to-transparent" />
-          </div>
-
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-36 relative z-10">
-            <div className="max-w-2xl">
-              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 text-white">
-                You'll actually look forward to this.
-              </h1>
-              <p className="font-body text-base md:text-lg leading-relaxed mb-8 text-white/70">
-                Hospitality-driven dental care for the whole family — with no judgment, ever.
-              </p>
-
-              {/* Location selector */}
-              <div className="flex items-center gap-2 mb-6">
-                <span className="text-xs font-sans font-medium text-white/50">Your location:</span>
-                <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/70"}`}>Cypress</button>
-                <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/70"}`}>Katy</button>
+                {/* Intent Quick-Paths */}
+                <div className="hidden md:flex flex-wrap gap-2 mt-5 pt-5 border-t border-border">
+                  <Link to="/patients/new-patient-hub" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Check className="w-3.5 h-3.5 text-primary" /> New Patient? Start Here
+                  </Link>
+                  <Link to={`${locationPrefix}/emergency-dentist`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-destructive/10 border border-destructive/20 text-xs font-sans font-semibold text-destructive hover:bg-destructive/20 transition-all">
+                    <AlertCircle className="w-3.5 h-3.5" /> Dental Emergency
+                  </Link>
+                  <Link to="/insurance" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Shield className="w-3.5 h-3.5 text-primary" /> Check Insurance
+                  </Link>
+                  <Link to="/free-consultation" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                    <Sparkles className="w-3.5 h-3.5 text-primary" /> Free Consultation
+                  </Link>
+                </div>
               </div>
-
-              <div className="flex flex-wrap items-center gap-3 mb-6">
-                <button
-                  onClick={() => setBookingModalOpen(true)}
-                  className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-200 font-sans hover:opacity-90"
-                  style={{ backgroundColor: "hsl(40 63% 58%)", color: "#fff" }}
-                >
-                  Book an Appointment
-                </button>
-                <a
-                  href={`tel:${heroPhone}`}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-200 font-sans border-2 border-white/40 text-white hover:bg-white/10"
-                >
-                  <Phone className="w-4 h-4" />{heroPhoneFmt}
-                </a>
-              </div>
-
-              <div className="flex items-center gap-3 text-sm font-sans text-white/60">
-                <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(40,63%,58%)] text-[hsl(40,63%,58%)]" />)}</div>
-                <span className="font-semibold text-white">4.9</span>
-                <span>from 5,000+ reviews</span>
+              {/* Hero media */}
+              <div className="aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
+                <video
+                  src={HERO_VIDEO_URL}
+                  autoPlay loop muted playsInline preload="metadata"
+                  poster={OFFICE_IMAGES.homepageHero}
+                  className="hidden lg:block w-full h-full object-cover"
+                />
+                <div className="lg:hidden w-full h-full">
+                  {mobileHeroPlaying ? (
+                    <video src={HERO_VIDEO_URL} autoPlay loop muted playsInline preload="metadata" className="w-full h-full object-cover" />
+                  ) : (
+                    <button onClick={() => setMobileHeroPlaying(true)} className="w-full h-full relative group cursor-pointer" aria-label="Play office tour video">
+                      <img src={OFFICE_IMAGES.homepageHero} alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice in Cypress and Katy, TX" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
+                      <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <Play className="w-6 h-6 text-primary-foreground ml-0.5" fill="currentColor" />
+                        </div>
+                      </div>
+                    </button>
+                  )}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 7. CREDIBILITY BAR ═══ */}
+        {/* SERVICE PILL CAROUSEL */}
+        <section className="py-10 bg-muted/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between mb-6">
+              <p className="text-lg md:text-xl font-display text-muted-foreground">We offer a full range of services for <strong className="text-foreground">all your needs</strong></p>
+              <div className="hidden md:flex gap-2">
+                <button onClick={() => scrollCarousel("left")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll left">
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button onClick={() => scrollCarousel("right")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll right">
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+            <div ref={pillCarouselRef} className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
+              {[
+                { label: "Dental Implants", slug: "dental-implants" },
+                { label: "Invisalign®", slug: "invisalign" },
+                { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+                { label: "Emergency Dentist", slug: "emergency-dentist" },
+                { label: "Teeth Whitening", slug: "teeth-whitening" },
+                { label: "Veneers", slug: "veneers" },
+                { label: "Dental Crowns", slug: "dental-crowns" },
+                { label: "Cleanings & Exams", slug: "dental-cleaning" },
+                { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+                { label: "Kids Dentistry", slug: "pediatric-dentistry" },
+                { label: "Root Canal", slug: "root-canal" },
+                { label: "Dentures", slug: "dentures" },
+              ].map((pill) => (
+                <Link
+                  key={pill.slug}
+                  to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${pill.slug}`}
+                  className="snap-start shrink-0 w-[calc(33.333%-0.75rem)] min-w-[240px] flex items-center justify-center px-6 py-6 rounded-2xl bg-secondary text-foreground font-display text-base md:text-lg font-medium hover:bg-primary/10 hover:text-primary transition-all text-center"
+                >
+                  {pill.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-8 border-y border-border bg-card">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              {trustStats.map((stat, i) => (
+                <div key={i}>
+                  <div className="font-display text-2xl md:text-3xl font-bold text-primary">{stat.value}</div>
+                  <div className="text-sm font-sans text-muted-foreground mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CREDIBILITY BAR */}
         <CredibilityBar />
 
-        {/* ═══ 3. SERVICES CAROUSEL ═══ */}
-        <ServicesCarousel locationPrefix={locationPrefix} />
+        {/* SERVICES */}
+        <ScrollReveal>
+        <section className="section-padding section-alt">
+          <div className="container mx-auto">
+            <p className="kicker text-center">WHAT WE DO</p>
+            <h2 className="section-heading text-center">Everything Your Family Needs, Under One Roof</h2>
+            <p className="section-body text-center max-w-2xl mx-auto">No referrals, no runaround. From your child's first checkup to your smile makeover, our team handles it all — with an in-house dental lab for faster, more precise results.</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+              {services.map((s, i) => (
+                <Link key={i} to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">{s.icon}</div>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-2">{s.title}</h3>
+                  <p className="text-sm font-body text-muted-foreground mb-3">{s.description}</p>
+                  <span className="text-sm font-sans font-semibold text-primary flex items-center gap-1">Learn More <ChevronRight className="w-4 h-4" /></span>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <Link to="/services" className="btn-secondary">View All Services</Link>
+            </div>
+          </div>
+        </section>
+        </ScrollReveal>
 
-        {/* ═══ 4. THE SMILE AVENUE DIFFERENCE ═══ */}
+        {/* THE SMILE AVENUE DIFFERENCE */}
         <ScrollReveal>
           <SmileAvenueDifference onBook={() => setBookingModalOpen(true)} />
         </ScrollReveal>
@@ -218,10 +328,7 @@ const Home = () => {
           </section>
         </LazySection>
 
-        {/* ═══ 8. TAGLINE BANNER ═══ */}
-        <TaglineBanner onBook={() => setBookingModalOpen(true)} />
-
-        {/* ═══ 5. TESTIMONIALS CAROUSEL ═══ */}
+        {/* TESTIMONIALS CAROUSEL */}
         <LazySection>
           <TestimonialCarousel />
         </LazySection>
@@ -256,7 +363,7 @@ const Home = () => {
           </ScrollReveal>
         </LazySection>
 
-        {/* ═══ 6. LOCATIONS WITH LIVE STATUS ═══ */}
+        {/* LOCATIONS WITH LIVE STATUS */}
         <LazySection>
           <section className="section-padding bg-background">
             <div className="container mx-auto">
