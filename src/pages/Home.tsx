@@ -164,9 +164,9 @@ const Home = () => {
                   <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
                 </div>
-                <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4">Book Online</button>
-                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2 text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4"><Phone className="w-4 h-4" />{heroPhoneFmt}</a>
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-3 mb-2 md:mb-3">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 w-full sm:w-auto">Book Online</button>
+                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center justify-center gap-2 text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 w-full sm:w-auto"><Phone className="w-4 h-4" />{heroPhoneFmt}</a>
                 </div>
                 <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-2 md:mb-3">
                   <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
