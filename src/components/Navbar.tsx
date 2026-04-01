@@ -262,7 +262,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
     </nav>
 
-    {/* Mobile fullscreen menu — Tend-inspired clean editorial layout */}
+    {/* Mobile fullscreen menu — Tend-inspired minimal layout */}
     <div
       className={`md:hidden fixed inset-0 top-[57px] z-[999] transition-all duration-300 ${
         mobileOpen
@@ -284,96 +284,78 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
         </div>
 
         {/* Scrollable nav content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain px-7 pt-2 pb-8">
-          {/* Nav accordion items */}
+        <div className="flex-1 overflow-y-auto overscroll-contain px-7 pt-4 pb-8">
           <div className="space-y-0">
             {/* Services */}
             <button
-              className="flex items-center gap-2 py-4 w-full text-left text-lg font-serif font-semibold text-foreground tracking-tight"
+              className="flex items-center gap-2 py-3.5 w-full text-left text-base font-sans font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
             >
               Services
               <ChevronDown className={`w-4 h-4 text-primary/60 transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "services" ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-4 space-y-0">
+              <div className="pl-1 pb-3 space-y-0">
                 {serviceLinks.map((s) => (
-                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-2 text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-1.5 text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {s.label}
                   </Link>
                 ))}
               </div>
             </div>
 
-            <div className="h-px bg-border/60" />
+            {/* Locations */}
+            <button
+              className="flex items-center gap-2 py-3.5 w-full text-left text-base font-sans font-semibold text-foreground"
+              onClick={() => setMobileExpanded(mobileExpanded === "locations" ? null : "locations")}
+            >
+              Locations
+              <ChevronDown className={`w-4 h-4 text-primary/60 transition-transform duration-200 ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "locations" ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className="pl-1 pb-3 space-y-0">
+                <Link to="/cypress-tx" className="block py-1.5 text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
+                <Link to="/katy-tx" className="block py-1.5 text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
+              </div>
+            </div>
+
+            {/* Emergency — flat link */}
+            <Link to={`${locationPrefix}/emergency-dentist`} className="block py-3.5 text-base font-sans font-semibold text-foreground" onClick={() => setMobileOpen(false)}>
+              Emergency
+            </Link>
 
             {/* Patients */}
             <button
-              className="flex items-center gap-2 py-4 w-full text-left text-lg font-serif font-semibold text-foreground tracking-tight"
+              className="flex items-center gap-2 py-3.5 w-full text-left text-base font-sans font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
             >
               Patients
               <ChevronDown className={`w-4 h-4 text-primary/60 transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "patients" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-4 space-y-0">
+              <div className="pl-1 pb-3 space-y-0">
                 {patientLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-2 text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={l.href} to={l.href} className="block py-1.5 text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
               </div>
             </div>
 
-            <div className="h-px bg-border/60" />
-
-            {/* Locations — flat link */}
-            <Link to="/convenient-locations" className="block py-4 text-lg font-serif font-semibold text-foreground tracking-tight" onClick={() => setMobileOpen(false)}>
-              Locations
-            </Link>
-
-            <div className="h-px bg-border/60" />
-
-            {/* Emergency — highlighted */}
-            <Link to={`${locationPrefix}/emergency-dentist`} className="block py-4 text-lg font-serif font-semibold text-destructive/80 tracking-tight" onClick={() => setMobileOpen(false)}>
-              Emergency
-            </Link>
-
-            <div className="h-px bg-border/60" />
-
-            {/* About */}
-            <button
-              className="flex items-center gap-2 py-4 w-full text-left text-lg font-serif font-semibold text-foreground tracking-tight"
-              onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
-            >
+            {/* About — flat link */}
+            <Link to="/about" className="block py-3.5 text-base font-sans font-semibold text-foreground" onClick={() => setMobileOpen(false)}>
               About
-              <ChevronDown className={`w-4 h-4 text-primary/60 transition-transform duration-200 ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "about" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-4 space-y-0">
-                {aboutLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-2 text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            </Link>
           </div>
-        </div>
 
-        {/* Fixed bottom area — CTA + extras */}
-        <div className="border-t border-border px-7 py-5 space-y-4">
-          <button
-            onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-            className="w-full btn-primary text-base !py-3.5 !rounded-full"
-          >
-            Book Now
-          </button>
-          <div className="flex items-center justify-between">
-            <LanguageToggle />
-            <a href={`tel:${phone}`} className="flex items-center gap-1.5 text-sm font-sans font-medium text-muted-foreground hover:text-primary transition-colors">
-              <Phone className="w-4 h-4" /> {phoneFormatted}
-            </a>
+          {/* Book Now — inline, not full-width bottom bar */}
+          <div className="mt-8">
+            <button
+              onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
+              className="btn-primary text-sm font-sans font-bold uppercase tracking-wider !px-8 !py-3 !rounded-full"
+            >
+              Book Now
+            </button>
           </div>
         </div>
       </div>
