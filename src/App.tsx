@@ -28,6 +28,7 @@ const ToothExtractionCypress = lazy(() => import("./pages/cypress/ToothExtractio
 const OralSurgeryCypress = lazy(() => import("./pages/cypress/OralSurgery.tsx"));
 const SedationDentistryCypress = lazy(() => import("./pages/cypress/SedationDentistry.tsx"));
 const PreventiveDentistryCypress = lazy(() => import("./pages/cypress/PreventiveDentistry.tsx"));
+const FamilyDentalCareCypress = lazy(() => import("./pages/cypress/FamilyDentalCare.tsx"));
 const BridgelandDentist = lazy(() => import("./pages/cypress/BridgelandDentist.tsx"));
 const TowneLakeDentist = lazy(() => import("./pages/cypress/TowneLakeDentist.tsx"));
 const FairfieldDentist = lazy(() => import("./pages/cypress/FairfieldDentist.tsx"));
