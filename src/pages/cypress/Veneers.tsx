@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Free Veneer Consultation",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Veneers",
+  heroValueProps: ["In-house Smile Dental Lab craftsmanship", "Emax & zirconia options", "Digital smile design preview", "Minimal-prep veneers available", "0% financing through CareCredit"],
   introKicker: "SMILE TRANSFORMATION",
   introHeading: "What Are Porcelain Veneers?",
   introParas: [

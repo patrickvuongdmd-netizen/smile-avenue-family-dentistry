@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Free Consultation",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Invisalign",
+  heroValueProps: ["Free consultation & 3D smile preview", "In-house aligner fabrication", "Experienced Invisalign providers", "Most PPO insurance accepted", "0% financing available"],
   introKicker: "CLEAR ALIGNER THERAPY",
   introHeading: "How Invisalign Works",
   introParas: [

@@ -12,6 +12,7 @@ const data: ServicePageData = {
   heroBody: "Straighten your smile without metal brackets. Invisalign at Smile Avenue Katy offers virtually invisible alignment for teens and adults.",
   heroCta1: "Book Free Invisalign Consultation",
   heroCta2: "Call (281) 800-5008",
+  heroValueProps: ["Free consultation & 3D smile preview", "In-house aligner fabrication", "Experienced Invisalign providers", "Most PPO insurance accepted", "0% financing available"],
   heroImage: "Invisalign Photo",
   introKicker: "INVISIBLE TEETH STRAIGHTENING",
   introHeading: "What Is Invisalign?",
