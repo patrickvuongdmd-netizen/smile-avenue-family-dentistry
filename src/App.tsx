@@ -74,7 +74,7 @@ const Insurance = lazy(() => import("./pages/Insurance.tsx"));
 const Contact = lazy(() => import("./pages/Contact.tsx"));
 const BookOnline = lazy(() => import("./pages/BookOnline.tsx"));
 const PatientTestimonials = lazy(() => import("./pages/PatientTestimonials.tsx"));
-const SmileGallery = lazy(() => import("./pages/SmileGallery.tsx"));
+
 const DentalLab = lazy(() => import("./pages/DentalLab.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
 const SitemapPage = lazy(() => import("./pages/Sitemap.tsx"));
