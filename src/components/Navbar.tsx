@@ -77,6 +77,20 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       >
         ES
       </Link>
+      <span className="text-border">|</span>
+      <button
+        onClick={() => {
+          // Toggle accessibility widget or open accessibility settings
+          if ((window as any).toggleAccessibility) {
+            (window as any).toggleAccessibility();
+          }
+        }}
+        className="px-1.5 py-0.5 rounded text-muted-foreground hover:text-foreground transition-colors"
+        aria-label="Accessibility options"
+        title="Accessibility"
+      >
+        <Accessibility className="w-3.5 h-3.5" />
+      </button>
     </div>
   );
 
