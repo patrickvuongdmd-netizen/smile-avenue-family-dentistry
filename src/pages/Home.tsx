@@ -292,7 +292,7 @@ const Home = () => {
                 <Link
                   key={pill.slug}
                   to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${pill.slug}`}
-                  className="snap-start shrink-0 w-[calc(33.333%-0.75rem)] min-w-[240px] flex items-center justify-center px-6 py-6 rounded-2xl bg-primary/10 text-foreground font-display text-base md:text-lg font-medium hover:bg-primary/20 transition-all text-center"
+                  className="snap-start shrink-0 w-[calc(33.333%-0.75rem)] min-w-[240px] flex items-center justify-center px-6 py-6 rounded-2xl bg-secondary text-foreground font-display text-base md:text-lg font-medium hover:bg-primary/10 hover:text-primary transition-all text-center"
                 >
                   {pill.label}
                 </Link>
