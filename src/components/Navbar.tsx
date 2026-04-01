@@ -127,8 +127,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           <div className="flex items-center gap-1">
             <Link to="/patients/new-patient-hub" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">New Patients</Link>
             <span className="text-border">·</span>
-            <Link to={`${locationPrefix}/emergency-dentist`} className="px-3 py-1 text-xs font-sans font-semibold text-destructive/80 hover:text-destructive transition-colors">Dental Emergency</Link>
-            <span className="text-border">·</span>
             <Link to="/insurance" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">Insurance & Financing</Link>
             <span className="text-border">·</span>
             <Link to="/specials" className="px-3 py-1 text-xs font-sans font-semibold text-muted-foreground hover:text-primary transition-colors">Specials</Link>
