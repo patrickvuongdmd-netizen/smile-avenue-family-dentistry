@@ -51,6 +51,7 @@ const ToothExtractionKaty = lazy(() => import("./pages/katy/ToothExtraction.tsx"
 const OralSurgeryKaty = lazy(() => import("./pages/katy/OralSurgery.tsx"));
 const SedationDentistryKaty = lazy(() => import("./pages/katy/SedationDentistry.tsx"));
 const PreventiveDentistryKaty = lazy(() => import("./pages/katy/PreventiveDentistry.tsx"));
+const FamilyDentalCareKaty = lazy(() => import("./pages/katy/FamilyDentalCare.tsx"));
 const CincoRanchDentist = lazy(() => import("./pages/katy/CincoRanchDentist.tsx"));
 const FirethorneDentist = lazy(() => import("./pages/katy/FirethorneDentist.tsx"));
 const CrossCreekRanchDentist = lazy(() => import("./pages/katy/CrossCreekRanchDentist.tsx"));
