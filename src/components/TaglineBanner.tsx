@@ -14,8 +14,7 @@ const TaglineBanner = ({ onBook }: Props) => (
         </p>
         <button
           onClick={onBook}
-          className="shrink-0 inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base tracking-wide transition-all duration-200 font-sans hover:opacity-90"
-          style={{ backgroundColor: "hsl(40 63% 58%)", color: "#fff" }}
+          className="btn-primary shrink-0 !rounded-full"
         >
           Book Now
         </button>
