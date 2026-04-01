@@ -264,6 +264,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
   const FREE_CONSULT_SLUGS = ["dental-implants", "all-on-x-implants", "cosmetic-dentistry", "veneers", "invisalign"];
   const showFreeConsult = FREE_CONSULT_SLUGS.includes(data.serviceSlug);
+  const HIGH_VALUE_SLUGS = ["dental-implants", "all-on-x-implants", "cosmetic-dentistry", "veneers", "invisalign", "sedation-dentistry", "dental-crowns"];
+  const showLiveReviews = HIGH_VALUE_SLUGS.includes(data.serviceSlug);
   const isEmergency = data.serviceSlug === "emergency-dentist";
 
   const breadcrumbJsonLd = {
