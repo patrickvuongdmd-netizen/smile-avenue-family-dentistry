@@ -15,10 +15,22 @@ const KATY_DIRECTIONS = "https://www.google.com/maps/dir//Smile+Avenue+Family+De
 const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: MobileStickyBarProps) => {
   const mapsLink = directionsUrl || (phone === "2818005008" ? KATY_DIRECTIONS : CYPRESS_DIRECTIONS);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      setVisible(y < 50 || y < lastScrollY.current);
+      lastScrollY.current = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
+      <div className={`fixed bottom-0 left-0 right-0 z-50 lg:hidden transition-transform duration-300 ${visible ? "translate-y-0" : "translate-y-full"}`}>
         <div className="mx-3 mb-3 flex items-center gap-1 rounded-full bg-foreground/90 backdrop-blur-md px-1.5 py-1.5 shadow-lg">
           <a
             href={`tel:${phone}`}
