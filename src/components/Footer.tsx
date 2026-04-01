@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, MapPin, Clock, Facebook, Instagram, Globe, ChevronDown } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/images";
+import BookingLocationModal from "@/components/BookingLocationModal";
+import TrustTicker from "@/components/TrustTicker";
 
 const Footer = () => {
   const location = useLocation();
