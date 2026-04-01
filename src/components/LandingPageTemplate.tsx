@@ -26,6 +26,7 @@ interface Testimonial {
   quote: string;
   name: string;
   service: string;
+  location?: string;
 }
 
 interface DoctorFeature {

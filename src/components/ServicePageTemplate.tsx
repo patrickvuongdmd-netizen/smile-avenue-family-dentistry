@@ -40,6 +40,7 @@ interface Testimonial {
   quote: string;
   name: string;
   source: string;
+  location?: string;
 }
 
 interface FaqItem {
