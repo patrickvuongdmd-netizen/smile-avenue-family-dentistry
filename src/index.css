@@ -236,6 +236,18 @@
   }
 }
 
+@keyframes taglineShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.tagline-gradient {
+  background: linear-gradient(135deg, hsl(192 72% 55%), hsl(195 84% 20%), hsl(40 63% 58%), hsl(192 72% 55%));
+  background-size: 300% 300%;
+  animation: taglineShift 8s ease infinite;
+}
+
 @keyframes ticker {
   0% {
     transform: translateX(0);
