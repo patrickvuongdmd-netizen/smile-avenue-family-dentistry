@@ -76,8 +76,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-        </div>
-      </section>
+      </div>
 
       <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
