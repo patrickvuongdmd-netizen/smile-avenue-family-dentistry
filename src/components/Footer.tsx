@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, MapPin, Clock, Facebook, Instagram, Globe } from "lucide-react";
+import { Phone, MapPin, Clock, Facebook, Instagram, Globe, ChevronDown } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/images";
 
 const Footer = () => {
