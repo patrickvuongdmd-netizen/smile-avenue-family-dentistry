@@ -91,12 +91,12 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Services</h4>
             <div className="space-y-2 text-sm font-sans opacity-70">
-              <Link to="/cypress-tx/preventive-dentistry" className="block hover:opacity-100 transition-opacity">Preventive Dentistry</Link>
-              <Link to="/cypress-tx/cosmetic-dentistry" className="block hover:opacity-100 transition-opacity">Cosmetic Dentistry</Link>
-              <Link to="/cypress-tx/dental-implants" className="block hover:opacity-100 transition-opacity">Dental Implants</Link>
-              <Link to="/cypress-tx/invisalign" className="block hover:opacity-100 transition-opacity">Invisalign®</Link>
-              <Link to="/cypress-tx/emergency-dentist" className="block hover:opacity-100 transition-opacity">Emergency Dentistry</Link>
-              <Link to="/cypress-tx/sedation-dentistry" className="block hover:opacity-100 transition-opacity">Sedation Dentistry</Link>
+              <Link to={`${locationPrefix}/preventive-dentistry`} className="block hover:opacity-100 transition-opacity">Preventive Dentistry</Link>
+              <Link to={`${locationPrefix}/cosmetic-dentistry`} className="block hover:opacity-100 transition-opacity">Cosmetic Dentistry</Link>
+              <Link to={`${locationPrefix}/dental-implants`} className="block hover:opacity-100 transition-opacity">Dental Implants</Link>
+              <Link to={`${locationPrefix}/invisalign`} className="block hover:opacity-100 transition-opacity">Invisalign®</Link>
+              <Link to={`${locationPrefix}/emergency-dentist`} className="block hover:opacity-100 transition-opacity">Emergency Dentistry</Link>
+              <Link to={`${locationPrefix}/sedation-dentistry`} className="block hover:opacity-100 transition-opacity">Sedation Dentistry</Link>
             </div>
           </div>
         </div>

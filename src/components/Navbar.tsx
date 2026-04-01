@@ -223,6 +223,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               {/* Emergency — top-level like Tend */}
               <Link to={`${locationPrefix}/emergency-dentist`} className="px-2 lg:px-3 py-2 hover:text-destructive transition-colors whitespace-nowrap text-destructive/80 font-semibold">Emergency</Link>
 
+              <Link to="/blog" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Blog</Link>
               <Link to="/contact" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Contact</Link>
             </div>
 
