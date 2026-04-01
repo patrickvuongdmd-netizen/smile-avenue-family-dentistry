@@ -45,6 +45,13 @@ const DentalLab = () => {
         <title>In-House Digital Dental Lab | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Smile Dental Lab — our in-house digital dental lab creates custom crowns, veneers, aligners, and more with advanced digital scanning technology." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/dental-lab/" />
+        <meta property="og:title" content="In-House Digital Dental Lab | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Our in-house digital dental lab creates custom crowns, veneers, aligners, and more." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/dental-lab/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

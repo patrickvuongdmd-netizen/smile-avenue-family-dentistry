@@ -40,6 +40,13 @@ const SmileGallery = () => {
         <title>Smile Gallery — Before & After | Smile Avenue Family Dentistry</title>
         <meta name="description" content="See real before and after results from Smile Avenue patients. Browse transformations including implants, veneers, whitening, Invisalign, and crowns." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/smile-gallery/" />
+        <meta property="og:title" content="Smile Gallery — Before & After | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="See real before and after results from Smile Avenue patients." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/smile-gallery/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 

@@ -60,6 +60,13 @@ const Services = () => {
         <title>Dental Services | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Explore our full range of dental services — from preventive cleanings and Invisalign to dental implants and emergency care. Two convenient locations in Cypress and Katy, TX." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/services/" />
+        <meta property="og:title" content="Dental Services | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Full range of dental services — preventive cleanings, Invisalign, dental implants, and emergency care." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/services/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
 

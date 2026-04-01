@@ -25,6 +25,13 @@ const Contact = () => {
         <title>Contact Us | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Contact Smile Avenue Family Dentistry in Cypress or Katy, TX. Call, visit, or fill out our contact form. We respond within 1 business hour." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/contact/" />
+        <meta property="og:title" content="Contact Us | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Contact Smile Avenue Family Dentistry in Cypress or Katy, TX. Call, visit, or fill out our contact form." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/contact/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 
