@@ -120,6 +120,8 @@ const BookingLocationModal = forwardRef<HTMLDivElement, BookingLocationModalProp
       </div>
     </div>
   );
-};
+});
+
+BookingLocationModal.displayName = "BookingLocationModal";
 
 export default BookingLocationModal;
