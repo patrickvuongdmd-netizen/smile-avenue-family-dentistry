@@ -6,6 +6,20 @@ import { SOCIAL_LINKS } from "@/lib/images";
 const Footer = () => {
   const location = useLocation();
   const locationPrefix = location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+
+  const footerServices = [
+    { label: "All Services", slug: null, href: "/services" },
+    { label: "Preventive Dentistry", slug: "preventive-dentistry" },
+    { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+    { label: "Dental Implants", slug: "dental-implants" },
+    { label: "Invisalign®", slug: "invisalign" },
+    { label: "Emergency Dentistry", slug: "emergency-dentist" },
+    { label: "Dental Crowns", slug: "dental-crowns" },
+    { label: "Teeth Whitening", slug: "teeth-whitening" },
+    { label: "Veneers", slug: "veneers" },
+    { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+  ];
 
   return (
     <footer className="bg-foreground text-background">
