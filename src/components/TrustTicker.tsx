@@ -19,13 +19,13 @@ const TrustTicker = () => {
   const isSpanish = location.pathname.startsWith("/es");
 
   return (
-    <div className="overflow-hidden flex relative" style={{ backgroundColor: "#838083", color: "#FFFFFF" }}>
-      <div className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10" style={{ backgroundColor: "#838083", color: "#FFFFFF" }}>
+    <div className="overflow-hidden flex relative text-white" style={{ background: "linear-gradient(to right, #1E4D8C, #2B5DA7, #3B82F6, #0EA5E9)" }}>
+      <div className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 text-white">
         Why Smile Avenue?
       </div>
       <div className="relative overflow-hidden flex-1">
-        <div className="absolute left-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #838083, transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #838083, transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #2B5DA7, transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #0EA5E9, transparent)" }} />
         <div className="flex animate-ticker whitespace-nowrap">
           {doubled.map((text, i) => (
             <span
@@ -40,7 +40,7 @@ const TrustTicker = () => {
       </div>
 
       {/* EN | ES | ♿ — right side, desktop only */}
-      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold" style={{ backgroundColor: "#838083" }}>
+      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold" style={{ background: "linear-gradient(to right, #0BA3E7, #0EA5E9)" }}>
         <Link
           to="/"
           className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? "text-white" : "hover:opacity-100 opacity-60"}`}
