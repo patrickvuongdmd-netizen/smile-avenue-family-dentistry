@@ -117,7 +117,6 @@ const Footer = () => {
               <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="flex-1 max-w-[200px] py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors text-center">
                 Book Katy
               </a>
-              </a>
             </div>
           </div>
         </div>
