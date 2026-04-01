@@ -4,6 +4,7 @@ import peterKimImg from "@/assets/doctors/peter-kim.png";
 import laithYahyaImg from "@/assets/doctors/laith-yahya.png";
 import sameerBilalImg from "@/assets/doctors/sameer-bilal.png";
 import sarahMarediaImg from "@/assets/doctors/sarah-maredia.png";
+import shayanAlkhiroImg from "@/assets/doctors/shayan-alkhiro.jpg";
 
 export const DOCTOR_IMAGES: Record<string, { url: string; alt: string }> = {
   "patrick-vuong": {
@@ -27,7 +28,7 @@ export const DOCTOR_IMAGES: Record<string, { url: string; alt: string }> = {
     alt: "Dr. Sarah Maredia, DDS - Dentist at Smile Avenue Family Dentistry Cypress & Katy TX",
   },
   "shayan-alkhiro": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2026/03/image-dr-shayan-alkhiro.webp",
+    url: shayanAlkhiroImg,
     alt: "Dr. Shayan Alkhiro, DDS - Dentist at Smile Avenue Family Dentistry Cypress TX",
   },
 };
