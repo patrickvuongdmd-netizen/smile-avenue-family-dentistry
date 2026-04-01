@@ -231,6 +231,13 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
                 Book Now
               </button>
+              <a
+                href={`tel:${phone}`}
+                className="w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center rounded-full border border-border text-foreground hover:text-primary hover:border-primary transition-colors"
+                aria-label={`Call ${phoneFormatted}`}
+              >
+                <Phone className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
