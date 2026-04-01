@@ -295,14 +295,8 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Mobile — Swish-inspired: Logo | Book an Appointment pill | Hamburger */}
-          <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={() => { setBookingModalOpen(true); }}
-              className="text-xs font-sans font-semibold px-4 py-2 rounded-full whitespace-nowrap transition-colors hover:opacity-90 bg-primary text-white"
-            >
-              Book an Appointment
-            </button>
+          {/* Mobile — Tend-inspired: centered logo, hamburger right */}
+          <div className="md:hidden flex items-center">
             <button
               className="w-10 h-10 flex items-center justify-center text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}
