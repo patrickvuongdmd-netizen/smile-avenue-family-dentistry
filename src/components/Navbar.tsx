@@ -161,7 +161,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                   Services <ChevronDown className="w-3.5 h-3.5" />
                 </Link>
                 {activeDropdown === "services" && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
+                  <div className="absolute top-full left-0 pt-2 z-50">
                     <div className="bg-popover border border-border rounded-xl shadow-xl p-6 w-[520px]">
                       <div className="grid grid-cols-2 gap-x-10">
                         {/* General Care */}
