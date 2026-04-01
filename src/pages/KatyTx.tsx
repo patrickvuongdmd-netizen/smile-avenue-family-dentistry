@@ -28,9 +28,9 @@ const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc
 const KATY_MAPS = "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/@29.732508,-95.775455,17z/data=!3m1!4b1!4m6!3m5!1s0x864121d672dd8005:0xc421718f6ea402f7!8m2!3d29.732508!4d-95.775455!16s";
 
 const doctors = [
-  { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Founder of Smile Avenue, known for his comprehensive approach to family and implant dentistry.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
-  { name: "Dr. Sameer Bilal", credentials: "DDS", bio: "Compassionate, detail-oriented approach to general dentistry.", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
-  { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry at both locations.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
+  { name: "Dr. Patrick Vuong", credentials: "DMD", bio: "Founder — cutting-edge implant, sedation & digital dentistry with a values-first approach.", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
+  { name: "Dr. Sameer Bilal", credentials: "DDS", bio: "Award-winning aesthetic dentistry & compassionate family care.", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
+  { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Community-centered care with a heart for education & volunteerism.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
 ];
 
 const services = [
