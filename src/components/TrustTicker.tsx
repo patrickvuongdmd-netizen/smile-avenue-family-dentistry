@@ -1,13 +1,14 @@
-import { Star, Clock, Shield, Globe, Microscope, FlaskConical } from "lucide-react";
+import { Star, CreditCard, Shield, Globe, Microscope, FlaskConical, Clock, Heart } from "lucide-react";
 
 const items = [
   { icon: <Star className="w-3.5 h-3.5" />, text: "5,000+ Five-Star Reviews" },
-  { icon: <Clock className="w-3.5 h-3.5" />, text: "Open Saturdays" },
+  { icon: <CreditCard className="w-3.5 h-3.5" />, text: "0% Financing Available" },
   { icon: <Shield className="w-3.5 h-3.5" />, text: "Most Insurance Accepted" },
   { icon: <Globe className="w-3.5 h-3.5" />, text: "Se Habla Español" },
   { icon: <FlaskConical className="w-3.5 h-3.5" />, text: "In-House Dental Lab" },
   { icon: <Microscope className="w-3.5 h-3.5" />, text: "Advanced 3D Technology" },
   { icon: <Clock className="w-3.5 h-3.5" />, text: "Same-Day Appointments" },
+  { icon: <Heart className="w-3.5 h-3.5" />, text: "Family-Friendly Practice" },
 ];
 
 // Double the items for seamless infinite scroll
