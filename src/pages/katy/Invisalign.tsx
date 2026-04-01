@@ -53,9 +53,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "My Invisalign treatment at Smile Avenue Katy was seamless. The digital preview showed me exactly what my teeth would look like, and the results matched perfectly.", name: "Emily R.", source: "Google Review" },
-    { quote: "I love that no one can tell I'm wearing aligners. The in-house fabrication option saved me money compared to traditional Invisalign pricing elsewhere.", name: "Jason T.", source: "Google Review" },
-    { quote: "My teen daughter was so happy she didn't need metal braces. The Invisalign process was easy and her smile looks beautiful now.", name: "Christina M.", source: "Google Review" },
+    { quote: "My Invisalign treatment at Smile Avenue Katy was seamless. The digital preview showed me exactly what my teeth would look like, and the results matched perfectly.", name: "Emily R.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "I love that no one can tell I'm wearing aligners. The in-house fabrication option saved me money compared to traditional Invisalign pricing elsewhere.", name: "Jason T.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "My teen daughter was so happy she didn't need metal braces. The Invisalign process was easy and her smile looks beautiful now.", name: "Christina M.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Straighten Your Smile Invisibly",
   ctaBody: "Schedule your free Invisalign consultation and see your virtual results preview.",

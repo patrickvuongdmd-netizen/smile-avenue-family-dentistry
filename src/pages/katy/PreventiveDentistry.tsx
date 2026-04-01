@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "WHAT KATY PATIENTS SAY",
   reviewsHeading: "Preventive Care Reviews",
   testimonials: [
-    { quote: "The Katy team is phenomenal. My cleanings are thorough but gentle, and they always explain everything clearly. Best dental experience I've had.", name: "Amanda T.", source: "Google Review" },
-    { quote: "We bring our whole family here from Cinco Ranch. The kids actually look forward to their cleanings! That says a lot about this practice.", name: "Robert K.", source: "Google Review" },
-    { quote: "After years of avoiding the dentist, Smile Avenue made me feel welcome and comfortable. No shame, just excellent care. Highly recommend!", name: "Lisa G.", source: "Google Review" },
+    { quote: "The Katy team is phenomenal. My cleanings are thorough but gentle, and they always explain everything clearly. Best dental experience I've had.", name: "Amanda T.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "We bring our whole family here from Cinco Ranch. The kids actually look forward to their cleanings! That says a lot about this practice.", name: "Robert K.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "After years of avoiding the dentist, Smile Avenue made me feel welcome and comfortable. No shame, just excellent care. Highly recommend!", name: "Lisa G.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Schedule Your Preventive Visit Today",
   ctaBody: "Prevention is the best investment in your smile. Book your cleaning and exam at Smile Avenue Katy.",

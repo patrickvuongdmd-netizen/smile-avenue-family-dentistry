@@ -49,9 +49,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
   ],
   testimonials: [
-    { quote: "We live in Firethorne and Smile Avenue is our go-to dentist. Friendly team, modern office, and excellent care.", name: "Chris P.", source: "Google Review" },
-    { quote: "So happy we found a quality dentist this close to Firethorne. Dr. Vuong is incredibly skilled and kind.", name: "Samantha J.", source: "Google Review" },
-    { quote: "The entire experience from booking to treatment was seamless. Best dental office near Firethorne.", name: "Marcus D.", source: "Google Review" },
+    { quote: "We live in Firethorne and Smile Avenue is our go-to dentist. Friendly team, modern office, and excellent care.", name: "Chris P.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "So happy we found a quality dentist this close to Firethorne. Dr. Vuong is incredibly skilled and kind.", name: "Samantha J.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "The entire experience from booking to treatment was seamless. Best dental office near Firethorne.", name: "Marcus D.", source: "Google Review" , location: "Firethorne, Katy" },
   ],
   faqs: [
     { question: "How far is Smile Avenue from Firethorne?", answer: "Our Katy office at 23541 Westheimer Pkwy is approximately 8–10 minutes from the Firethorne community via Firethorne Trail and Westheimer Parkway." },

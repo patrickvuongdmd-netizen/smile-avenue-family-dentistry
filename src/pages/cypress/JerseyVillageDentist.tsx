@@ -49,9 +49,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Skilled in implants and oral surgery.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
   ],
   testimonials: [
-    { quote: "I drive from Jersey Village and it's totally worth it. The care here is far better than anything closer to home.", name: "Tony R.", source: "Google Review" },
-    { quote: "Found Smile Avenue after a bad experience at another office. What a difference! Professional, kind, and thorough.", name: "Angela M.", source: "Google Review" },
-    { quote: "Dr. Yahya did my implant and the whole process was smooth and painless. Highly recommend from Jersey Village!", name: "Robert C.", source: "Google Review" },
+    { quote: "I drive from Jersey Village and it's totally worth it. The care here is far better than anything closer to home.", name: "Tony R.", source: "Google Review" , location: "Jersey Village" },
+    { quote: "Found Smile Avenue after a bad experience at another office. What a difference! Professional, kind, and thorough.", name: "Angela M.", source: "Google Review" , location: "Jersey Village" },
+    { quote: "Dr. Yahya did my implant and the whole process was smooth and painless. Highly recommend from Jersey Village!", name: "Robert C.", source: "Google Review" , location: "Jersey Village" },
   ],
   faqs: [
     { question: "How far is Smile Avenue from Jersey Village?", answer: "Our Cypress office is approximately 15 minutes west of Jersey Village via FM 529 and Fry Road. It's a straightforward drive with no highway tolls." },

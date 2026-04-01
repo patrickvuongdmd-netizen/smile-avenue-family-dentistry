@@ -52,9 +52,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "My teeth were several shades whiter after one in-office session. The results were immediate and dramatic. So much better than the strips I'd been using for years.", name: "Sarah L.", source: "Google Review" },
-    { quote: "I have sensitive teeth and was worried about whitening. They customized the treatment perfectly — no sensitivity at all and my teeth look amazing.", name: "Kevin D.", source: "Google Review" },
-    { quote: "The take-home trays are so convenient. I whiten while watching TV and the results keep getting better. Best investment in my smile.", name: "Rachel W.", source: "Google Review" },
+    { quote: "My teeth were several shades whiter after one in-office session. The results were immediate and dramatic. So much better than the strips I'd been using for years.", name: "Sarah L.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "I have sensitive teeth and was worried about whitening. They customized the treatment perfectly — no sensitivity at all and my teeth look amazing.", name: "Kevin D.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "The take-home trays are so convenient. I whiten while watching TV and the results keep getting better. Best investment in my smile.", name: "Rachel W.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Brighten Your Smile Today",
   ctaBody: "Schedule your professional whitening appointment and see the difference dentist-supervised care makes.",

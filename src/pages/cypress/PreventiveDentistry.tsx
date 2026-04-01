@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "WHAT CYPRESS PATIENTS SAY",
   reviewsHeading: "Preventive Care Reviews",
   testimonials: [
-    { quote: "The whole team is so friendly and thorough. My cleanings here are the best I've ever had — they actually take time to explain everything.", name: "Karen M.", source: "Google Review" },
-    { quote: "I hadn't been to the dentist in 3 years and they made me feel completely at ease. No judgment, just great care. Already booked my next visit!", name: "David L.", source: "Google Review" },
-    { quote: "My kids love coming here! The hygienists are so gentle and patient. Fluoride treatments and sealants give me peace of mind as a parent.", name: "Priya S.", source: "Google Review" },
+    { quote: "The whole team is so friendly and thorough. My cleanings here are the best I've ever had — they actually take time to explain everything.", name: "Karen M.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "I hadn't been to the dentist in 3 years and they made me feel completely at ease. No judgment, just great care. Already booked my next visit!", name: "David L.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "My kids love coming here! The hygienists are so gentle and patient. Fluoride treatments and sealants give me peace of mind as a parent.", name: "Priya S.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Schedule Your Preventive Visit Today",
   ctaBody: "Prevention is the best investment in your smile. Book your cleaning and exam at Smile Avenue Cypress.",

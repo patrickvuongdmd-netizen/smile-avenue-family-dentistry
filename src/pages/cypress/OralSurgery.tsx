@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "Had bone grafting done in preparation for implants. The procedure was much easier than I expected. Everything was explained clearly and the recovery was smooth.", name: "Robert H.", source: "Google Review" },
-    { quote: "All four wisdom teeth removed under IV sedation. I fell asleep and woke up with it all done. Zero pain during the procedure and minimal swelling after.", name: "Stephanie K.", source: "Google Review" },
-    { quote: "Needed a sinus lift before getting implants. The team walked me through every step and the whole process went perfectly. Very grateful for their expertise.", name: "William C.", source: "Google Review" },
+    { quote: "Had bone grafting done in preparation for implants. The procedure was much easier than I expected. Everything was explained clearly and the recovery was smooth.", name: "Robert H.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "All four wisdom teeth removed under IV sedation. I fell asleep and woke up with it all done. Zero pain during the procedure and minimal swelling after.", name: "Stephanie K.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "Needed a sinus lift before getting implants. The team walked me through every step and the whole process went perfectly. Very grateful for their expertise.", name: "William C.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Expert Oral Surgery, Right Here in Cypress",
   ctaBody: "Schedule your surgical consultation today. IV sedation, 3D planning, and experienced care.",

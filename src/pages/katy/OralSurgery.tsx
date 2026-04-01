@@ -50,9 +50,9 @@ const data: ServicePageData = {
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Oral Surgery Reviews",
   testimonials: [
-    { quote: "Had all four wisdom teeth out under IV sedation at the Katy office. I literally don't remember anything. Recovery was smooth and fast.", name: "Brandon H.", source: "Google Review" },
-    { quote: "Needed bone grafting before implants. The procedure was comfortable and the team was so reassuring. Healing went perfectly.", name: "Linda S.", source: "Google Review" },
-    { quote: "Dr. Vuong performed a sinus lift and implant placement. His expertise was evident from the planning through recovery.", name: "Charles D.", source: "Google Review" },
+    { quote: "Had all four wisdom teeth out under IV sedation at the Katy office. I literally don't remember anything. Recovery was smooth and fast.", name: "Brandon H.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "Needed bone grafting before implants. The procedure was comfortable and the team was so reassuring. Healing went perfectly.", name: "Linda S.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "Dr. Vuong performed a sinus lift and implant placement. His expertise was evident from the planning through recovery.", name: "Charles D.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Schedule Your Surgical Consultation",
   ctaBody: "Expert oral surgery with sedation options at our Katy office. Book your consultation today.",

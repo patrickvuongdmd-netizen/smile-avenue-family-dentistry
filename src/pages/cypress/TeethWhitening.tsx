@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "My teeth were yellow from years of coffee. One in-office whitening session at Smile Avenue and they're literally glowing. I wish I'd done this sooner!", name: "Lauren H.", source: "Google Review" },
-    { quote: "I have sensitive teeth and was worried about whitening. They used a gentle formula and I had zero discomfort. My smile looks amazing now.", name: "Chris B.", source: "Google Review" },
-    { quote: "Got the take-home trays before my wedding. Two weeks later my smile was camera-ready. The custom trays fit perfectly and were so easy to use.", name: "Emily R.", source: "Google Review" },
+    { quote: "My teeth were yellow from years of coffee. One in-office whitening session at Smile Avenue and they're literally glowing. I wish I'd done this sooner!", name: "Lauren H.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "I have sensitive teeth and was worried about whitening. They used a gentle formula and I had zero discomfort. My smile looks amazing now.", name: "Chris B.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "Got the take-home trays before my wedding. Two weeks later my smile was camera-ready. The custom trays fit perfectly and were so easy to use.", name: "Emily R.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Ready for a Brighter Smile?",
   ctaBody: "Professional whitening at Smile Avenue Cypress. Walk out several shades brighter in just one visit.",

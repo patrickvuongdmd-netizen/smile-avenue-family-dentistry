@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "WHAT CYPRESS PATIENTS ARE SAYING",
   reviewsHeading: "Emergency Care Reviews",
   testimonials: [
-    { quote: "I chipped my tooth on a Saturday morning and they were able to see me first thing Monday. The repair looks perfect — you can't even tell it happened. So grateful for this team!", name: "Brian C.", source: "Google Review" },
-    { quote: "Had a horrible toothache at work and called Smile Avenue. They squeezed me in that same afternoon. Dr. Vuong was so calm and reassuring. Pain was gone by the time I left.", name: "Nicole S.", source: "Google Review" },
-    { quote: "My son knocked out a tooth playing basketball. They got us in within an hour and saved the tooth. I can't say enough good things about how they handled the situation.", name: "James P.", source: "Google Review" },
+    { quote: "I chipped my tooth on a Saturday morning and they were able to see me first thing Monday. The repair looks perfect — you can't even tell it happened. So grateful for this team!", name: "Brian C.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "Had a horrible toothache at work and called Smile Avenue. They squeezed me in that same afternoon. Dr. Vuong was so calm and reassuring. Pain was gone by the time I left.", name: "Nicole S.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "My son knocked out a tooth playing basketball. They got us in within an hour and saved the tooth. I can't say enough good things about how they handled the situation.", name: "James P.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Dental Emergency? Call (832) 648-1756 Now",
   ctaBody: "Same-day emergency appointments at Smile Avenue Cypress. Don't wait in pain.",

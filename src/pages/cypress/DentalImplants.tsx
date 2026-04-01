@@ -55,9 +55,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "Dr. Vuong placed two implants for me and the results are incredible. They look completely natural and I can eat anything again. The whole process was easier than I expected.", name: "Richard M.", source: "Google Review" },
-    { quote: "I was missing my front tooth for years and was embarrassed to smile. The implant Smile Avenue gave me changed my life. I smile all the time now!", name: "Sandra L.", source: "Google Review" },
-    { quote: "Got All-on-4 implants at Smile Avenue Cypress and couldn't be happier. The team was so supportive throughout the entire journey. Worth every penny.", name: "Tom B.", source: "Google Review" },
+    { quote: "Dr. Vuong placed two implants for me and the results are incredible. They look completely natural and I can eat anything again. The whole process was easier than I expected.", name: "Richard M.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "I was missing my front tooth for years and was embarrassed to smile. The implant Smile Avenue gave me changed my life. I smile all the time now!", name: "Sandra L.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "Got All-on-4 implants at Smile Avenue Cypress and couldn't be happier. The team was so supportive throughout the entire journey. Worth every penny.", name: "Tom B.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Start Your Implant Journey Today",
   ctaBody: "Schedule a consultation and discover how dental implants can restore your smile permanently.",

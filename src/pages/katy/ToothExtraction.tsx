@@ -50,9 +50,9 @@ const data: ServicePageData = {
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Extraction Reviews",
   testimonials: [
-    { quote: "Had two wisdom teeth removed and barely felt a thing. The sedation was perfect and recovery was much easier than I expected.", name: "Tyler S.", source: "Google Review" },
-    { quote: "Needed an emergency extraction and they got me in the same day. Dr. Bilal was gentle and thorough. Minimal pain after.", name: "Natalie K.", source: "Google Review" },
-    { quote: "Was dreading getting a tooth pulled but the Katy team made it painless. They even discussed implant options before I left.", name: "Omar F.", source: "Google Review" },
+    { quote: "Had two wisdom teeth removed and barely felt a thing. The sedation was perfect and recovery was much easier than I expected.", name: "Tyler S.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "Needed an emergency extraction and they got me in the same day. Dr. Bilal was gentle and thorough. Minimal pain after.", name: "Natalie K.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "Was dreading getting a tooth pulled but the Katy team made it painless. They even discussed implant options before I left.", name: "Omar F.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Book Your Extraction Appointment",
   ctaBody: "Gentle, expert tooth extractions with sedation options at our Katy office.",

@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "I was dreading the root canal but it was completely painless. The sedation helped and Dr. Bilal was so gentle. The crown came out great too!", name: "Angela M.", source: "Google Review" },
-    { quote: "I came in with excruciating tooth pain and left feeling amazing. The root canal was nothing like I feared. The relief was immediate.", name: "Steven R.", source: "Google Review" },
-    { quote: "The whole process was smooth and I didn't feel a thing. The in-house lab made the crown turnaround really fast. Highly recommend Smile Avenue.", name: "Laura K.", source: "Google Review" },
+    { quote: "I was dreading the root canal but it was completely painless. The sedation helped and Dr. Bilal was so gentle. The crown came out great too!", name: "Angela M.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "I came in with excruciating tooth pain and left feeling amazing. The root canal was nothing like I feared. The relief was immediate.", name: "Steven R.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "The whole process was smooth and I didn't feel a thing. The in-house lab made the crown turnaround really fast. Highly recommend Smile Avenue.", name: "Laura K.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Relief Is One Call Away",
   ctaBody: "Don't suffer with tooth pain. Schedule your gentle root canal treatment at Smile Avenue Katy.",

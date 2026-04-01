@@ -50,9 +50,9 @@ const data: ServicePageData = {
   ],
   reviewsKicker: "WHAT KATY PARENTS ARE SAYING", reviewsHeading: "Pediatric Reviews",
   testimonials: [
-    { quote: "My 3-year-old was nervous for his first visit but the team was incredible. They were patient, gentle, and he actually asked when he can go back!", name: "Ashley B.", source: "Google Review" },
-    { quote: "We've tried three different dentists for our kids before finding Smile Avenue Katy. Night and day difference. They genuinely love children here.", name: "Jason & Lisa P.", source: "Google Review" },
-    { quote: "Both my kids got sealants at the Katy office. Quick, painless, and now I have extra peace of mind about cavities. Great preventive care!", name: "Maria G.", source: "Google Review" },
+    { quote: "My 3-year-old was nervous for his first visit but the team was incredible. They were patient, gentle, and he actually asked when he can go back!", name: "Ashley B.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "We've tried three different dentists for our kids before finding Smile Avenue Katy. Night and day difference. They genuinely love children here.", name: "Jason & Lisa P.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "Both my kids got sealants at the Katy office. Quick, painless, and now I have extra peace of mind about cavities. Great preventive care!", name: "Maria G.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Book Your Child's Dental Visit",
   ctaBody: "Give your child the gift of a healthy smile. Schedule their visit at our Katy office today.",

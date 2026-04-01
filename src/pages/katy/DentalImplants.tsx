@@ -53,9 +53,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "Dr. Bilal placed my implant and the whole experience was smooth. The 3D planning made me feel confident they knew exactly what they were doing.", name: "Carlos R.", source: "Google Review" },
-    { quote: "I got two implants to replace teeth I lost years ago. The in-house lab made a crown that matches my other teeth perfectly. Wish I'd done it sooner.", name: "Janet M.", source: "Google Review" },
-    { quote: "The sedation option made the implant placement completely comfortable. I was nervous but the team put me at ease from the moment I walked in.", name: "David K.", source: "Google Review" },
+    { quote: "Dr. Bilal placed my implant and the whole experience was smooth. The 3D planning made me feel confident they knew exactly what they were doing.", name: "Carlos R.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "I got two implants to replace teeth I lost years ago. The in-house lab made a crown that matches my other teeth perfectly. Wish I'd done it sooner.", name: "Janet M.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "The sedation option made the implant placement completely comfortable. I was nervous but the team put me at ease from the moment I walked in.", name: "David K.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Replace Missing Teeth Permanently",
   ctaBody: "Schedule your free implant consultation and take the first step toward a complete, confident smile.",

@@ -50,9 +50,9 @@ const data: ServicePageData = {
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Denture Reviews",
   testimonials: [
-    { quote: "Got implant-supported dentures and it's like having real teeth again. No more adhesive, no slipping. I can eat anything. Life-changing!", name: "Barbara W.", source: "Google Review" },
-    { quote: "My new partial denture from Smile Avenue Katy fits perfectly and looks so natural. Nobody can tell which teeth are real and which aren't.", name: "Henry L.", source: "Google Review" },
-    { quote: "The team took extra time to make sure my full dentures looked natural and felt comfortable. The fit is excellent and I'm smiling again!", name: "Dolores C.", source: "Google Review" },
+    { quote: "Got implant-supported dentures and it's like having real teeth again. No more adhesive, no slipping. I can eat anything. Life-changing!", name: "Barbara W.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "My new partial denture from Smile Avenue Katy fits perfectly and looks so natural. Nobody can tell which teeth are real and which aren't.", name: "Henry L.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "The team took extra time to make sure my full dentures looked natural and felt comfortable. The fit is excellent and I'm smiling again!", name: "Dolores C.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Restore Your Smile with Custom Dentures",
   ctaBody: "Book a denture consultation at our Katy office and explore your tooth replacement options.",

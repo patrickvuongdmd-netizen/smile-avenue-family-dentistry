@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "My new dentures from Smile Avenue look so natural — even my friends can't tell. The in-house lab made the whole process faster than I expected.", name: "Patricia A.", source: "Google Review" },
-    { quote: "I switched to implant-supported dentures and it was life-changing. No more adhesive, no more worrying about them slipping. Wish I'd done it years ago.", name: "George F.", source: "Google Review" },
-    { quote: "The team was so patient during the whole denture process. Multiple fittings to get everything just right. The final result was worth the wait.", name: "Dorothy N.", source: "Google Review" },
+    { quote: "My new dentures from Smile Avenue look so natural — even my friends can't tell. The in-house lab made the whole process faster than I expected.", name: "Patricia A.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "I switched to implant-supported dentures and it was life-changing. No more adhesive, no more worrying about them slipping. Wish I'd done it years ago.", name: "George F.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "The team was so patient during the whole denture process. Multiple fittings to get everything just right. The final result was worth the wait.", name: "Dorothy N.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Restore Your Smile with Custom Dentures",
   ctaBody: "Schedule your denture consultation and discover which option is right for you.",

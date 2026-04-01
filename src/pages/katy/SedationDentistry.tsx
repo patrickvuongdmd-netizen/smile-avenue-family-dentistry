@@ -50,9 +50,9 @@ const data: ServicePageData = {
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Sedation Reviews",
   testimonials: [
-    { quote: "I haven't been to the dentist in 8 years because of anxiety. The IV sedation changed everything. I got all my work done in one visit and don't remember a thing.", name: "Michelle B.", source: "Google Review" },
-    { quote: "My son is terrified of the dentist but nitrous oxide made his appointment easy and tear-free. He even said it was fun!", name: "Daniel P.", source: "Google Review" },
-    { quote: "Oral sedation for my dental implant procedure was perfect. I was relaxed the entire time. Highly recommend for anxious patients.", name: "Karen W.", source: "Google Review" },
+    { quote: "I haven't been to the dentist in 8 years because of anxiety. The IV sedation changed everything. I got all my work done in one visit and don't remember a thing.", name: "Michelle B.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "My son is terrified of the dentist but nitrous oxide made his appointment easy and tear-free. He even said it was fun!", name: "Daniel P.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "Oral sedation for my dental implant procedure was perfect. I was relaxed the entire time. Highly recommend for anxious patients.", name: "Karen W.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Experience Anxiety-Free Dentistry",
   ctaBody: "Don't let fear keep you from the care you need. Book a sedation dentistry appointment at our Katy office.",

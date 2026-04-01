@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "My bridge looks and feels just like my natural teeth. You can't see where the bridge starts and my real teeth end. Really impressed with the craftsmanship.", name: "Linda H.", source: "Google Review" },
-    { quote: "I was missing two teeth and the implant-supported bridge was the perfect solution. Rock solid, no slipping, and it looks completely natural.", name: "Michael S.", source: "Google Review" },
-    { quote: "The whole bridge process was painless and much faster than I expected. Dr. Vuong explained every step clearly. Very happy with my results.", name: "Karen W.", source: "Google Review" },
+    { quote: "My bridge looks and feels just like my natural teeth. You can't see where the bridge starts and my real teeth end. Really impressed with the craftsmanship.", name: "Linda H.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "I was missing two teeth and the implant-supported bridge was the perfect solution. Rock solid, no slipping, and it looks completely natural.", name: "Michael S.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "The whole bridge process was painless and much faster than I expected. Dr. Vuong explained every step clearly. Very happy with my results.", name: "Karen W.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Close the Gap in Your Smile",
   ctaBody: "Schedule your bridge consultation and restore your complete, confident smile.",

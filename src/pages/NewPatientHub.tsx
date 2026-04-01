@@ -56,9 +56,9 @@ const patientForms = [
 ];
 
 const testimonials = [
-  { quote: "As a new patient, I was so impressed with how smooth everything was. The online forms saved me time and the staff made me feel right at home from the moment I walked in.", name: "Jennifer L.", source: "Google Review" },
-  { quote: "I was nervous about switching dentists, but Smile Avenue made the transition seamless. Dr. Vuong explained everything clearly and the whole team was incredibly welcoming.", name: "Marcus T.", source: "Google Review" },
-  { quote: "Best first dental visit I've ever had! They were thorough, gentle, and genuinely cared about my comfort. The Netflix during my cleaning was a nice surprise!", name: "Ashley R.", source: "Google Review" },
+  { quote: "As a new patient, I was so impressed with how smooth everything was. The online forms saved me time and the staff made me feel right at home from the moment I walked in.", name: "Jennifer L.", source: "Google Review", location: "Fairfield, Cypress" },
+  { quote: "I was nervous about switching dentists, but Smile Avenue made the transition seamless. Dr. Vuong explained everything clearly and the whole team was incredibly welcoming.", name: "Marcus T.", source: "Google Review", location: "Towne Lake, Cypress" },
+  { quote: "Best first dental visit I've ever had! They were thorough, gentle, and genuinely cared about my comfort. The Netflix during my cleaning was a nice surprise!", name: "Ashley R.", source: "Google Review", location: "Bridgeland, Cypress" },
 ];
 
 const faqs = [

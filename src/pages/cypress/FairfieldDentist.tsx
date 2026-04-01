@@ -50,9 +50,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Laith Yahya", credentials: "DDS", bio: "Skilled in implants and oral surgery.", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
   ],
   testimonials: [
-    { quote: "So glad to have a great dentist this close to Fairfield. The team makes you feel like family from the moment you walk in.", name: "Carlos G.", source: "Google Review" },
-    { quote: "Had a dental emergency on a Wednesday and they got me in the same day. Amazing staff and Dr. Vuong fixed me up perfectly.", name: "Priya S.", source: "Google Review" },
-    { quote: "My kids actually look forward to their dental visits here. That says everything about this office.", name: "Jennifer W.", source: "Google Review" },
+    { quote: "So glad to have a great dentist this close to Fairfield. The team makes you feel like family from the moment you walk in.", name: "Carlos G.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "Had a dental emergency on a Wednesday and they got me in the same day. Amazing staff and Dr. Vuong fixed me up perfectly.", name: "Priya S.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "My kids actually look forward to their dental visits here. That says everything about this office.", name: "Jennifer W.", source: "Google Review" , location: "Fairfield, Cypress" },
   ],
   faqs: [
     { question: "How far is Smile Avenue from Fairfield, Cypress?", answer: "Our office at 9212 Fry Rd is approximately 7–10 minutes from the Fairfield community. It's a direct drive up Fry Road with no highway required." },

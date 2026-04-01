@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "I have severe dental anxiety and hadn't been to a dentist in 8 years. The IV sedation made it possible. I don't remember a thing and woke up with all my work done!", name: "Amanda G.", source: "Google Review" },
-    { quote: "The nitrous oxide was perfect for my cleaning. I went from white-knuckling the chair to actually relaxing. Such a game changer for anxious patients like me.", name: "Tyler B.", source: "Google Review" },
-    { quote: "My son needed several fillings and was terrified. The oral sedation worked beautifully — he was calm and cooperative, and had no memory of any discomfort.", name: "Natalie V.", source: "Google Review" },
+    { quote: "I have severe dental anxiety and hadn't been to a dentist in 8 years. The IV sedation made it possible. I don't remember a thing and woke up with all my work done!", name: "Amanda G.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "The nitrous oxide was perfect for my cleaning. I went from white-knuckling the chair to actually relaxing. Such a game changer for anxious patients like me.", name: "Tyler B.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "My son needed several fillings and was terrified. The oral sedation worked beautifully — he was calm and cooperative, and had no memory of any discomfort.", name: "Natalie V.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Dental Care Without the Anxiety",
   ctaBody: "Don't let fear keep you from the care you deserve. Schedule your anxiety-free visit today.",

@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "I was terrified of getting a root canal, but Dr. Vuong made it completely painless. I didn't feel a thing! The relief from that toothache was immediate.", name: "Lisa M.", source: "Google Review" },
-    { quote: "Had a root canal on a molar and it was honestly easier than getting a filling. The numbing was thorough and the team kept checking on me the whole time.", name: "Anthony R.", source: "Google Review" },
-    { quote: "I put off my root canal for months out of fear. Wish I hadn't waited! The procedure was nothing like what I imagined. Smooth, painless, and done in about an hour.", name: "Rachel K.", source: "Google Review" },
+    { quote: "I was terrified of getting a root canal, but Dr. Vuong made it completely painless. I didn't feel a thing! The relief from that toothache was immediate.", name: "Lisa M.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "Had a root canal on a molar and it was honestly easier than getting a filling. The numbing was thorough and the team kept checking on me the whole time.", name: "Anthony R.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "I put off my root canal for months out of fear. Wish I hadn't waited! The procedure was nothing like what I imagined. Smooth, painless, and done in about an hour.", name: "Rachel K.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Don't Wait — Save Your Tooth Today",
   ctaBody: "Gentle root canal treatment at Smile Avenue Cypress. Call now and feel better fast.",

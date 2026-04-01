@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "My crown from Smile Avenue looks just like my natural teeth. The digital scan was comfortable and the in-house lab did an incredible job with the color match.", name: "Amanda T.", source: "Google Review" },
-    { quote: "I was impressed by how fast I got my crown — much quicker than my old dentist who sent everything to an outside lab. And the fit is perfect.", name: "Steve R.", source: "Google Review" },
-    { quote: "Dr. Vuong replaced an old metal crown with a beautiful porcelain one. The color match is perfect. I'm so happy with how it turned out.", name: "Diana K.", source: "Google Review" },
+    { quote: "My crown from Smile Avenue looks just like my natural teeth. The digital scan was comfortable and the in-house lab did an incredible job with the color match.", name: "Amanda T.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "I was impressed by how fast I got my crown — much quicker than my old dentist who sent everything to an outside lab. And the fit is perfect.", name: "Steve R.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "Dr. Vuong replaced an old metal crown with a beautiful porcelain one. The color match is perfect. I'm so happy with how it turned out.", name: "Diana K.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Restore Your Smile with a Custom Crown",
   ctaBody: "Custom crowns from our in-house Smile Dental Lab — precision craftsmanship, faster turnaround.",

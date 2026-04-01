@@ -54,9 +54,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "I got 8 veneers at Smile Avenue and my smile has never looked better. Dr. Vuong has an incredible eye for detail — they look so natural!", name: "Heather J.", source: "Google Review" },
-    { quote: "The in-office whitening was amazing! I was in and out in about an hour and my teeth are noticeably whiter. The staff was great about checking my comfort level.", name: "Kevin D.", source: "Google Review" },
-    { quote: "I had bonding done on two front teeth that were chipped. You literally cannot tell they were ever damaged. So happy I chose Smile Avenue!", name: "Priya N.", source: "Google Review" },
+    { quote: "I got 8 veneers at Smile Avenue and my smile has never looked better. Dr. Vuong has an incredible eye for detail — they look so natural!", name: "Heather J.", source: "Google Review" , location: "Fairfield, Cypress" },
+    { quote: "The in-office whitening was amazing! I was in and out in about an hour and my teeth are noticeably whiter. The staff was great about checking my comfort level.", name: "Kevin D.", source: "Google Review" , location: "Towne Lake, Cypress" },
+    { quote: "I had bonding done on two front teeth that were chipped. You literally cannot tell they were ever damaged. So happy I chose Smile Avenue!", name: "Priya N.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
   ctaHeading: "Ready for Your Dream Smile?",
   ctaBody: "Book a cosmetic consultation and let us design the smile you've always wanted.",

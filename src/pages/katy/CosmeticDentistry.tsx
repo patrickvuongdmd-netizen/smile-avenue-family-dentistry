@@ -53,9 +53,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "My smile makeover at Smile Avenue Katy exceeded all expectations. The veneers look completely natural and I can't stop smiling. The team truly cares about getting it right.", name: "Priya S.", source: "Google Review" },
-    { quote: "I was self-conscious about my teeth for years. After whitening and bonding, I finally feel confident. The consultation was judgment-free and the results are amazing.", name: "Marcus T.", source: "Google Review" },
-    { quote: "The digital preview of my new smile sold me. Being able to see the results before committing made the whole process stress-free. Love my new veneers!", name: "Lauren H.", source: "Google Review" },
+    { quote: "My smile makeover at Smile Avenue Katy exceeded all expectations. The veneers look completely natural and I can't stop smiling. The team truly cares about getting it right.", name: "Priya S.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "I was self-conscious about my teeth for years. After whitening and bonding, I finally feel confident. The consultation was judgment-free and the results are amazing.", name: "Marcus T.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "The digital preview of my new smile sold me. Being able to see the results before committing made the whole process stress-free. Love my new veneers!", name: "Lauren H.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Ready for Your Dream Smile?",
   ctaBody: "Schedule your free cosmetic consultation and discover what's possible for your smile.",

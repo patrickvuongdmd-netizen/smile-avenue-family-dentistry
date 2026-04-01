@@ -50,9 +50,9 @@ const data: ServicePageData = {
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Veneer Reviews",
   testimonials: [
-    { quote: "I got 10 veneers and the transformation is unbelievable. They look completely natural — even my friends think they're my real teeth!", name: "Nicole V.", source: "Google Review" },
-    { quote: "Minimal-prep veneers were the perfect solution for my stained teeth. Barely any tooth removal and the results are gorgeous.", name: "Andrew J.", source: "Google Review" },
-    { quote: "From the consultation to the final reveal, every step was professional and exciting. My smile has never looked this good.", name: "Samantha T.", source: "Google Review" },
+    { quote: "I got 10 veneers and the transformation is unbelievable. They look completely natural — even my friends think they're my real teeth!", name: "Nicole V.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "Minimal-prep veneers were the perfect solution for my stained teeth. Barely any tooth removal and the results are gorgeous.", name: "Andrew J.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "From the consultation to the final reveal, every step was professional and exciting. My smile has never looked this good.", name: "Samantha T.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "Get the Smile You've Always Wanted",
   ctaBody: "Book a veneer consultation at our Katy office and see what's possible for your smile.",

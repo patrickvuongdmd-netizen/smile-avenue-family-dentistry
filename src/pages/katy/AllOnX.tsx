@@ -53,9 +53,9 @@ const data: ServicePageData = {
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
   testimonials: [
-    { quote: "All-on-X at Smile Avenue Katy changed my life. I went from dentures I hated to permanent teeth that feel completely natural. The best decision I ever made.", name: "Robert L.", source: "Google Review" },
-    { quote: "Dr. Vuong and the team made a scary procedure feel manageable. I walked in with failing teeth and left with a new smile the same day. Incredible.", name: "Patricia D.", source: "Google Review" },
-    { quote: "The in-house lab made the whole process smoother and faster. My final zirconia teeth look absolutely stunning. Worth every penny.", name: "Frank G.", source: "Google Review" },
+    { quote: "All-on-X at Smile Avenue Katy changed my life. I went from dentures I hated to permanent teeth that feel completely natural. The best decision I ever made.", name: "Robert L.", source: "Google Review" , location: "Cross Creek Ranch, Katy" },
+    { quote: "Dr. Vuong and the team made a scary procedure feel manageable. I walked in with failing teeth and left with a new smile the same day. Incredible.", name: "Patricia D.", source: "Google Review" , location: "Firethorne, Katy" },
+    { quote: "The in-house lab made the whole process smoother and faster. My final zirconia teeth look absolutely stunning. Worth every penny.", name: "Frank G.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
   ctaHeading: "A New Smile in One Day",
   ctaBody: "Schedule your All-on-X consultation and take the first step toward permanent, life-changing teeth.",

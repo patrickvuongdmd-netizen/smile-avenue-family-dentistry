@@ -49,9 +49,9 @@ const data: NeighborhoodPageData = {
     { name: "Dr. Sarah Maredia", credentials: "DDS", bio: "Passionate about cosmetic and family dentistry.", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
   ],
   testimonials: [
-    { quote: "I work on Westheimer Parkway and Smile Avenue is perfect for lunch-hour appointments. Quick, professional, and high quality.", name: "Jason T.", source: "Google Review" },
-    { quote: "Walked in with a dental emergency and they treated me the same day. Can't beat the convenience of this location.", name: "Linda M.", source: "Google Review" },
-    { quote: "The most convenient dental office in Katy. Right on Westheimer Parkway, easy parking, and amazing staff.", name: "Omar A.", source: "Google Review" },
+    { quote: "I work on Westheimer Parkway and Smile Avenue is perfect for lunch-hour appointments. Quick, professional, and high quality.", name: "Jason T.", source: "Google Review" , location: "Westheimer Pkwy, Katy" },
+    { quote: "Walked in with a dental emergency and they treated me the same day. Can't beat the convenience of this location.", name: "Linda M.", source: "Google Review" , location: "Westheimer Pkwy, Katy" },
+    { quote: "The most convenient dental office in Katy. Right on Westheimer Parkway, easy parking, and amazing staff.", name: "Omar A.", source: "Google Review" , location: "Westheimer Pkwy, Katy" },
   ],
   faqs: [
     { question: "Where exactly on Westheimer Parkway is Smile Avenue?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — on the south side of Westheimer Parkway between Grand Parkway (99) and Cinco Ranch Boulevard." },
