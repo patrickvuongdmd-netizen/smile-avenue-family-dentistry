@@ -140,9 +140,6 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
                   {data.bio.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
                 <div className="flex flex-wrap gap-3 mt-6">
-                  <a href={primary.booking} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    Book with {data.name.split(" ").slice(0, 2).join(" ")}
-                  </a>
                   <a href={`tel:${primary.phone}`} className="btn-secondary">Call {primary.phoneFmt}</a>
                 </div>
               </div>
