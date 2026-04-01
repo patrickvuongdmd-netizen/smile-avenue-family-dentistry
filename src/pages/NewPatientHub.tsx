@@ -298,25 +298,6 @@ const NewPatientHub = () => {
           </div>
         </section>
 
-        {/* CTA BAR */}
-        <section className="gradient-cta py-16 text-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Your First Visit Is Just a Click Away
-            </h2>
-            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Book online in 60 seconds. We'll confirm within 1 hour and have everything ready when you arrive.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
-                Book Your First Visit
-              </a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
-                Call {CYPRESS_PHONE_FORMATTED}
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

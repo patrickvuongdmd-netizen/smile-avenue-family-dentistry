@@ -205,27 +205,6 @@ const Locations = () => {
           </div>
         </section>
 
-        <section className="gradient-cta py-16 text-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Experience the Smile Avenue Difference?
-            </h2>
-            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Choose your nearest location and book a visit. New patients are always welcome at both offices.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
-                Book at Cypress
-              </a>
-              <a href={KATY_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
-                Book at Katy
-              </a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
-                Call Us
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

@@ -114,16 +114,6 @@ const Contact = () => {
           </div>
         </section>
 
-        <section className="section-padding gradient-cta text-center">
-          <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Need Immediate Help?</h2>
-            <p className="font-body text-lg text-background/80 mb-8">Call us directly for same-day appointments and emergencies.</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:8326481756" className="btn-cta-light">Cypress: (832) 648-1756</a>
-              <a href="tel:2818005008" className="btn-cta-outline">Katy: (281) 800-5008</a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />

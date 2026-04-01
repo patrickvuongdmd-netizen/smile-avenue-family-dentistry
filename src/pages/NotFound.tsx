@@ -78,18 +78,6 @@ const NotFound = () => {
           </div>
         </section>
 
-        <section className="gradient-cta py-16 text-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Need Help?</h2>
-            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Our team is happy to help you find what you're looking for. Give us a call or book online.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/book-online" className="btn-cta-light">Book Online</Link>
-              <a href="tel:8326481756" className="btn-cta-outline">Call (832) 648-1756</a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

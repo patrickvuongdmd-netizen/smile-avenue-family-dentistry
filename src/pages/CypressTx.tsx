@@ -488,25 +488,6 @@ const CypressTx = () => {
           </div>
         </section>
 
-        <section className="gradient-cta py-16 md:py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Book Your Cypress Dental Appointment Today
-            </h2>
-            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-              Join 300+ families who rate us 4.9 stars. Same-day appointments available at our Fry Road office.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">
-                Book Online — Takes 60 Seconds
-              </button>
-              <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">
-                Call {CYPRESS_PHONE_FORMATTED}
-              </a>
-            </div>
-            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Most insurance accepted · 0% financing · No obligation</p>
-          </div>
-        </section>
       </main>
 
       <Footer />

@@ -118,16 +118,6 @@ const Doctors = () => {
           </div>
         </section>
 
-      <section className="gradient-cta py-16 text-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Ready to Meet Your New Dentist?</h2>
-          <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">Book an appointment and experience the Smile Avenue difference.</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Appointment</a>
-            <a href={`tel:${PHONE}`} className="btn-cta-outline">Call {PHONE_FMT}</a>
-          </div>
-        </div>
-      </section>
     </main>
 
     <Footer />
