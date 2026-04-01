@@ -298,7 +298,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
                     target={ctaTarget}
                     rel={ctaTarget ? "noopener noreferrer" : undefined}
                     onClick={() => fireConversion(conversionLabel)}
-                    className="btn-primary rounded-full !px-8 !py-4 text-base"
+                    className="btn-cta rounded-full !px-8 !py-4 text-base"
                   >
                     {data.heroCtaLabel}
                   </a>
