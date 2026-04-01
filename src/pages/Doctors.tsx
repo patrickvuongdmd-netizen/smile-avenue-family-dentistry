@@ -8,7 +8,8 @@ import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
-import { DOCTOR_IMAGES } from "@/lib/images";
+import { DOCTOR_IMAGES, PAGE_VIDEOS } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const doctors = [
   { name: "Dr. Patrick Vuong", credentials: "DMD", title: "Founder", tagline: "Comprehensive, patient-centered implant and digital dentistry", locations: "Cypress & Katy", slug: "patrick-vuong-dmd", imgKey: "patrick-vuong" },

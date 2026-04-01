@@ -10,8 +10,9 @@ import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 
-import { DOCTOR_IMAGES, TEAM_MEMBERS } from "@/lib/images";
+import { DOCTOR_IMAGES, TEAM_MEMBERS, PAGE_VIDEOS } from "@/lib/images";
 import { TEAM_IMAGES } from "@/lib/team-images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const PHONE = "8326481756";
 const PHONE_FMT = "(832) 648-1756";

@@ -7,6 +7,8 @@ import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import FaqAccordion from "@/components/FaqAccordion";
+import LazyYouTube from "@/components/LazyYouTube";
+import { PAGE_VIDEOS } from "@/lib/images";
 
 const PHONE = "8326481756";
 const PHONE_FMT = "(832) 648-1756";

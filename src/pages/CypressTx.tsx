@@ -17,7 +17,8 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import ScrollReveal from "@/components/ScrollReveal";
-import { OFFICE_IMAGES } from "@/lib/images";
+import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";

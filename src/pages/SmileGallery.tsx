@@ -14,6 +14,8 @@ import beforeAfterWhitening from "@/assets/gallery/before-after-whitening.jpg";
 import beforeAfterInvisalign from "@/assets/gallery/before-after-invisalign.jpg";
 import beforeAfterCrown from "@/assets/gallery/before-after-crown.jpg";
 import beforeAfterAllon4 from "@/assets/gallery/before-after-allon4.jpg";
+import LazyYouTube from "@/components/LazyYouTube";
+import { PAGE_VIDEOS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";

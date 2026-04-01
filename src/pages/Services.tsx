@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
 import ServiceCard from "@/components/ServiceCard";
+import LazyYouTube from "@/components/LazyYouTube";
+import { PAGE_VIDEOS } from "@/lib/images";
 
 const PHONE = "8326481756";
 const PHONE_FORMATTED = "(832) 648-1756";
