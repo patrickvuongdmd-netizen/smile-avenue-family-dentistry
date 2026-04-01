@@ -364,7 +364,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 )}
 
                 <div className="flex flex-wrap gap-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta" aria-label={`Book ${data.serviceName} appointment`}>
                     {data.heroCta1}
                   </button>
                   <a href={`tel:${loc.phone}`} className="btn-secondary" aria-label={`Call ${loc.phoneFormatted}`}>
