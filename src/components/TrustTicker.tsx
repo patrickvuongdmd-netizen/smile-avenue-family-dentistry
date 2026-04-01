@@ -19,13 +19,13 @@ const TrustTicker = () => {
   const isSpanish = location.pathname.startsWith("/es");
 
   return (
-    <div className="overflow-hidden flex relative text-white" style={{ backgroundColor: "#2B5DA7" }}>
+    <div className="overflow-hidden flex relative text-white bg-primary">
       <div className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 text-white">
         Why Smile Avenue?
       </div>
       <div className="relative overflow-hidden flex-1">
-        <div className="absolute left-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #2B5DA7, transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #2B5DA7, transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(192, 72%, 55%), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(192, 72%, 55%), transparent)" }} />
         <div className="flex animate-ticker whitespace-nowrap">
           {doubled.map((text, i) => (
             <span
@@ -40,7 +40,7 @@ const TrustTicker = () => {
       </div>
 
       {/* EN | ES | ♿ — right side, desktop only */}
-      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold" style={{ backgroundColor: "#2B5DA7" }}>
+      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold bg-primary">
         <Link
           to="/"
           className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? "text-white" : "hover:opacity-100 opacity-60"}`}
