@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Brand — spans 2 columns on lg, split into 1/3 logo + 2/3 text */}
           <div className="grid grid-cols-3 gap-4 items-start lg:col-span-2">
             <div className="col-span-1">
