@@ -529,6 +529,20 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* LIVE GOOGLE REVIEWS — high-value services only */}
+        {showLiveReviews && (
+          <section className="section-padding bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">VERIFIED GOOGLE REVIEWS</p>
+              <h2 className="section-heading">What {loc.name} Patients Are Saying</h2>
+              <p className="section-body max-w-2xl mx-auto mb-8">
+                4.9★ average from {data.location === "cypress" ? "3,000+" : "2,000+"} verified Google reviews.
+              </p>
+              <ReviewsWidget location={data.location} title={`${data.serviceName} Google Reviews — ${loc.name}`} />
+            </div>
+          </section>
+        )}
+
         {/* RELATED SERVICES */}
         {related.length > 0 && (
           <section className="section-padding bg-background">
