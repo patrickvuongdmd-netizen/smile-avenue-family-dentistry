@@ -61,7 +61,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
   const LanguageToggle = ({ className = "" }: { className?: string }) => (
     <div className={`flex items-center gap-1.5 text-xs font-sans font-semibold ${className}`}>
-      <Globe className="w-3.5 h-3.5 text-muted-foreground" />
       <Link
         to="/"
         className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
@@ -80,7 +79,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       <span className="text-border">|</span>
       <button
         onClick={() => {
-          // Toggle accessibility widget or open accessibility settings
           if ((window as any).toggleAccessibility) {
             (window as any).toggleAccessibility();
           }
