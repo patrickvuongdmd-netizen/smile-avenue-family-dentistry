@@ -13,7 +13,7 @@ import DoctorCard from "@/components/DoctorCard";
 import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
-import FullWidthPhotoBreak from "@/components/FullWidthPhotoBreak";
+
 
 const PHONE = "8326481756";
 const PHONE_FORMATTED = "(832) 648-1756";
@@ -100,13 +100,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* OFFICE PHOTO BREAK */}
-        <FullWidthPhotoBreak
-          src={OFFICE_IMAGES.gallery2}
-          alt="Smile Avenue team in action with a patient"
-          overlayText="Care at Smile Avenue Isn't Just Gentle — It's Genuine"
-          height="h-56 md:h-80"
-        />
 
         {/* DOCTORS */}
         <section className="section-padding bg-background">

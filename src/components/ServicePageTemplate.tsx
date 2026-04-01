@@ -18,7 +18,7 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
-import FullWidthPhotoBreak from "@/components/FullWidthPhotoBreak";
+
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 
 
@@ -399,26 +399,30 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
 
 
-        {/* INTRO */}
+        {/* INTRO — side-by-side with office photo */}
         <section className="section-padding section-alt">
           <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto">
-              <p className="kicker">{data.introKicker}</p>
-              <h2 className="section-heading">{data.introHeading}</h2>
-              <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
-                {data.introParas.map((p, i) => <p key={i}>{p}</p>)}
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-5xl mx-auto">
+              <div>
+                <p className="kicker">{data.introKicker}</p>
+                <h2 className="section-heading">{data.introHeading}</h2>
+                <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
+                  {data.introParas.map((p, i) => <p key={i}>{p}</p>)}
+                </div>
+              </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src={OFFICE_IMAGES.treatmentRoom}
+                  alt="Modern treatment room at Smile Avenue Family Dentistry"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={600}
+                  height={450}
+                />
               </div>
             </div>
           </div>
         </section>
-
-        {/* PHOTO BREAK — office atmosphere */}
-        <FullWidthPhotoBreak
-          src={OFFICE_IMAGES.treatmentRoom}
-          alt="Modern treatment room at Smile Avenue Family Dentistry"
-          overlayText="Your Comfort Comes First"
-          overlaySubtext="Netflix, warm blankets, and noise-canceling headphones in every room"
-        />
 
         {/* TRUST BADGES */}
         <section className="py-8 bg-background">

@@ -4,7 +4,7 @@ import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight, ChevronLeft, ArrowRight, Play } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { useRef, useState } from "react";
-import FullWidthPhotoBreak from "@/components/FullWidthPhotoBreak";
+
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -320,13 +320,6 @@ const Home = () => {
           <SmileAvenueDifference onBook={() => setBookingModalOpen(true)} />
         </ScrollReveal>
 
-        {/* FULL-WIDTH OFFICE PHOTO BREAK */}
-        <FullWidthPhotoBreak
-          src={OFFICE_IMAGES.officeExterior}
-          alt="Smile Avenue Family Dentistry office exterior in Cypress, TX"
-          overlayText="Care That Feels Like Home"
-          overlaySubtext="Netflix in every room · Warm blankets · Digital impressions — no goopy molds"
-        />
 
         {/* TECHNOLOGY TRUST */}
         <ScrollReveal>
