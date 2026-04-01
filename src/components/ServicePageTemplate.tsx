@@ -321,55 +321,106 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </div>
       )}
 
-      <main id="main-content" className="pb-14 lg:pb-0 ">
-        {/* HERO — Full-bleed immersive banner */}
-        <section
-          className="relative min-h-[85vh] md:min-h-[500px] flex flex-col justify-end"
-          style={heroImage ? {
-            backgroundImage: `url(${heroImage.url})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center top",
-          } : undefined}
-        >
-          {/* Cinematic gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-
-          <div className="relative z-10 w-full">
+      <main id="main-content" className="pb-14 lg:pb-0">
+        {/* HERO — Light editorial layout inspired by Tend */}
+        <section className="bg-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
             {/* Breadcrumb */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <nav aria-label="Breadcrumb" className="mb-4 text-xs font-sans text-white/60">
-                <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                <span className="mx-2" aria-hidden="true">›</span>
-                <Link to={loc.path} className="hover:text-white transition-colors">{loc.name}, TX</Link>
-                <span className="mx-2" aria-hidden="true">›</span>
-                <span className="text-white/90">{data.serviceName}</span>
-              </nav>
-            </div>
+            <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">
+              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+              <span className="mx-2" aria-hidden="true">›</span>
+              <Link to={loc.path} className="hover:text-primary transition-colors">{loc.name}, TX</Link>
+              <span className="mx-2" aria-hidden="true">›</span>
+              <span className="text-foreground">{data.serviceName}</span>
+            </nav>
 
-            {/* Hero content */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:pb-16">
-              <div className="max-w-3xl">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+              {/* Text content */}
+              <div>
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3 text-primary" style={{ fontFamily: "var(--font-sans)" }}>
                   {data.heroKicker}
                 </p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-white leading-[1.1]" style={{ fontFamily: "var(--font-display)" }}>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-foreground leading-[1.1]" style={{ fontFamily: "var(--font-display)" }}>
                   {data.heroHeading}
                 </h1>
-                <p className="text-base md:text-lg leading-relaxed mb-8 text-white/80 max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-base md:text-lg leading-relaxed mb-6 text-muted-foreground max-w-xl" style={{ fontFamily: "var(--font-body)" }}>
                   {data.heroBody}
                 </p>
+
+                {/* Value prop bullets */}
+                {(data.heroValueProps && data.heroValueProps.length > 0) && (
+                  <ul className="space-y-2.5 mb-8">
+                    {data.heroValueProps.map((prop, i) => (
+                      <li key={i} className="flex items-start gap-2.5 text-sm font-sans text-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{prop}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
                 <div className="flex flex-wrap gap-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-base !py-3.5 !px-8" aria-label={`Book ${data.serviceName} appointment`}>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>
                     {data.heroCta1}
                   </button>
-                  <a href={`tel:${loc.phone}`} className="btn-cta-outline text-base !py-3.5 !px-8" aria-label={`Call ${loc.phoneFormatted}`}>
+                  <a href={`tel:${loc.phone}`} className="btn-secondary" aria-label={`Call ${loc.phoneFormatted}`}>
                     {data.heroCta2}
                   </a>
                 </div>
-                <p className="text-xs font-sans text-white/50 mt-4">
-                  ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ 0% financing available
-                </p>
+
+                <div className="flex items-center gap-4 mt-5">
+                  <span className="text-sm font-sans font-semibold text-foreground">4.9 ★★★★★</span>
+                  <span className="text-xs font-sans text-muted-foreground">from 5,000+ reviews</span>
+                </div>
               </div>
+
+              {/* Hero image — clean, rounded */}
+              {heroImage && (
+                <div className="relative">
+                  <img
+                    src={heroImage.url}
+                    alt={heroImage.alt}
+                    className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* LOCATION CARDS — Visit us */}
+        <section className="py-10 bg-muted/30 border-y border-border">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-center text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-6" style={{ fontFamily: "var(--font-sans)" }}>
+              VISIT US FOR {data.serviceName.toUpperCase()}
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              {Object.entries(LOCATIONS).map(([key, office]) => (
+                <div key={key} className="bg-card rounded-xl border border-border p-5 flex flex-col gap-3">
+                  <h3 className="text-base font-sans font-bold text-foreground">Smile Avenue — {office.name}</h3>
+                  <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <span>{office.address}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Phone className="w-4 h-4 text-primary shrink-0" />
+                    <a href={`tel:${office.phone}`} className="hover:text-primary transition-colors">{office.phoneFormatted}</a>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Clock className="w-4 h-4 text-primary shrink-0" />
+                    <span>Mon–Fri 8:30am–5pm</span>
+                  </div>
+                  <button
+                    onClick={() => setBookingModalOpen(true)}
+                    className="mt-2 btn-primary !py-2.5 !text-sm w-full"
+                  >
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Book Online
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
         </section>
