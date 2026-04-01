@@ -345,9 +345,8 @@ const KatyTx = () => {
               <BeforeAfterCard label="Dental Implants" />
               <BeforeAfterCard label="Invisalign® Treatment" />
             </div>
-            <Link to="/smile-gallery" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-              View Full Katy Gallery →
-            </Link>
+
+
           </div>
         </section>
 

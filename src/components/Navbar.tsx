@@ -48,7 +48,7 @@ const aboutLinks = [
   { label: "Our Team", href: "/our-team" },
   { label: "Dental Lab", href: "/dental-lab" },
   { label: "Patient Testimonials", href: "/patient-testimonials" },
-  { label: "Smile Gallery", href: "/smile-gallery" },
+  
 ];
 
 type DropdownKey = "services" | "patients" | "about" | "locations" | null;
