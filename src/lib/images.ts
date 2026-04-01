@@ -287,6 +287,19 @@ export const PAGE_VIDEOS = {
   dentalLab: { youtubeId: "pvWwvLOzCY0", title: "Meet the Tools Behind Every Smile" },
   cypressIntro: { youtubeId: "ovn9F8ascxc", title: "Dentist Cypress: Smile Avenue Family Dentistry" },
   insurance: { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
+  about: { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
+  contact: { youtubeId: "oNouq-eUAGw", title: "Our Favorite Thing About Our Patients" },
+  katyIntro: { youtubeId: "rFNVqRYSkKQ", title: "Care You Can Trust, Smiles You'll Love" },
+  doctors: { youtubeId: "Do_22b5MX_M", title: "From Uncomfortable to Confident Smiles" },
+  faq: { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
+  freeConsultation: { youtubeId: "NqiluaBGHpk", title: "Is It Time for a New Smile?" },
+  membership: { youtubeId: "QbPVxWUdBR0", title: "Small Changes, Big Smiles" },
+  ourTeam: { youtubeId: "oNouq-eUAGw", title: "Our Favorite Thing About Our Patients" },
+  services: { youtubeId: "wiocP_nsFPY", title: "Can One Visit Change Your Smile?" },
+  smileGallery: { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
+  specials: { youtubeId: "QRpwLPBJkS0", title: "Get a Brighter, Whiter Smile — Fast & Hassle-Free!" },
+  locations: { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
+  espanol: { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
 };
 
 export const SOCIAL_LINKS = {

@@ -10,8 +10,9 @@ import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 
-import { DOCTOR_IMAGES, TEAM_MEMBERS } from "@/lib/images";
+import { DOCTOR_IMAGES, TEAM_MEMBERS, PAGE_VIDEOS } from "@/lib/images";
 import { TEAM_IMAGES } from "@/lib/team-images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const PHONE = "8326481756";
 const PHONE_FMT = "(832) 648-1756";
@@ -213,6 +214,18 @@ const OurTeam = () => {
         )}
 
         {/* CAREERS CTA */}
+
+        {/* Video */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">What Our Team Loves Most</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.ourTeam.youtubeId} title={PAGE_VIDEOS.ourTeam.title} />
+            </div>
+          </div>
+        </section>
+
         <section className="gradient-cta py-16 text-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Want to Join Our Team?</h2>

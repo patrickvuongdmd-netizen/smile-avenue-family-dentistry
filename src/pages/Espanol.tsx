@@ -9,7 +9,8 @@ import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
-import { OFFICE_IMAGES } from "@/lib/images";
+import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -165,6 +166,18 @@ const Espanol = () => {
         </section>
 
         {/* CTA */}
+
+        {/* Video */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">MIRE & APRENDA</p>
+            <h2 className="section-heading">Conozca Nuestra Clínica</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.espanol.youtubeId} title={PAGE_VIDEOS.espanol.title} />
+            </div>
+          </div>
+        </section>
+
         <section className="section-padding gradient-cta text-center">
           <div className="container mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">¿Listo Para Amar Su Sonrisa?</h2>

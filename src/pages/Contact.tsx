@@ -7,6 +7,8 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
+import LazyYouTube from "@/components/LazyYouTube";
+import { PAGE_VIDEOS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -96,6 +98,18 @@ const Contact = () => {
             <div className="flex flex-wrap justify-center gap-6 mt-6">
               <a href="tel:8326481756" className="text-sm font-sans font-semibold text-primary hover:underline flex items-center gap-1.5"><Phone className="w-4 h-4" /> Cypress: (832) 648-1756</a>
               <a href="tel:2818005008" className="text-sm font-sans font-semibold text-primary hover:underline flex items-center gap-1.5"><Phone className="w-4 h-4" /> Katy: (281) 800-5008</a>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Video */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">Why Families Choose Smile Avenue</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.contact.youtubeId} title={PAGE_VIDEOS.contact.title} />
             </div>
           </div>
         </section>

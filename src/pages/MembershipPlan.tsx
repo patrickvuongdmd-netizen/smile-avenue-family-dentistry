@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
 import FaqAccordion from "@/components/FaqAccordion";
+import LazyYouTube from "@/components/LazyYouTube";
+import { PAGE_VIDEOS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -163,6 +165,18 @@ const MembershipPlan = () => {
         </section>
 
         {/* CTA */}
+
+        {/* Video */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">Affordable Dentistry, Real Results</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.membership.youtubeId} title={PAGE_VIDEOS.membership.title} />
+            </div>
+          </div>
+        </section>
+
         <section className="section-padding gradient-cta text-center">
           <div className="container mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Start Saving on Your Dental Care Today</h2>

@@ -14,6 +14,8 @@ import beforeAfterWhitening from "@/assets/gallery/before-after-whitening.jpg";
 import beforeAfterInvisalign from "@/assets/gallery/before-after-invisalign.jpg";
 import beforeAfterCrown from "@/assets/gallery/before-after-crown.jpg";
 import beforeAfterAllon4 from "@/assets/gallery/before-after-allon4.jpg";
+import LazyYouTube from "@/components/LazyYouTube";
+import { PAGE_VIDEOS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -95,6 +97,18 @@ const SmileGallery = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+
+        {/* Video */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">Watch Smile Transformations</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.smileGallery.youtubeId} title={PAGE_VIDEOS.smileGallery.title} />
             </div>
           </div>
         </section>

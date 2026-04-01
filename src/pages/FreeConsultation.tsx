@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
 import TestimonialCard from "@/components/TestimonialCard";
+import LazyYouTube from "@/components/LazyYouTube";
+import { PAGE_VIDEOS } from "@/lib/images";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -144,6 +146,18 @@ const FreeConsultation = () => {
         </section>
 
         {/* CTA */}
+
+        {/* Video */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">See the Transformations</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.freeConsultation.youtubeId} title={PAGE_VIDEOS.freeConsultation.title} />
+            </div>
+          </div>
+        </section>
+
         <section className="section-padding gradient-cta text-center">
           <div className="container mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Ready to See What's Possible?</h2>
