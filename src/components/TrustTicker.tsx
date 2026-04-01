@@ -13,8 +13,9 @@ const items = [
 
 const doubled = [...items, ...items];
 
-const GRAY = "#374151";
-const GRAY_LIGHT = "#6B7280";
+// Dark navy matching --foreground (210 20% 14%)
+const NAVY = "hsl(210, 20%, 14%)";
+const NAVY_LIGHT = "hsl(210, 20%, 24%)";
 
 const TrustTicker = () => {
   const location = useLocation();
