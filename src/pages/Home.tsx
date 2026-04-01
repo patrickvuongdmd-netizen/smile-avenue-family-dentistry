@@ -606,7 +606,6 @@ const Home = () => {
       </main>
 
       <MobileStickyBar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
-      <PreFooterBanner />
       <Footer />
       <BackToTop />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
