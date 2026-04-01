@@ -261,45 +261,40 @@ const Home = () => {
         </section>
 
         {/* SERVICE PILL CAROUSEL */}
-        <section className="py-8 bg-muted/30 border-y border-border">
+        <section className="py-10 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-sm font-sans font-semibold text-muted-foreground tracking-wide uppercase">Explore Our Services</h2>
+            <div className="flex items-center justify-between mb-6">
+              <p className="text-lg md:text-xl font-display text-muted-foreground">We offer a full range of services for <strong className="text-foreground">all your needs</strong></p>
               <div className="flex gap-2">
-                <button onClick={() => scrollCarousel("left")} className="w-8 h-8 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll left">
+                <button onClick={() => scrollCarousel("left")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll left">
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <button onClick={() => scrollCarousel("right")} className="w-8 h-8 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll right">
+                <button onClick={() => scrollCarousel("right")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll right">
                   <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
-            <div ref={pillCarouselRef} className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2 -mx-1 px-1">
+            <div ref={pillCarouselRef} className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
               {[
-                { label: "Dental Implants", slug: "dental-implants", emoji: "🦷", desc: "Permanent tooth replacement" },
-                { label: "Invisalign®", slug: "invisalign", emoji: "✨", desc: "Clear aligner therapy" },
-                { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry", emoji: "💎", desc: "Smile makeovers & veneers" },
-                { label: "Emergency Dentist", slug: "emergency-dentist", emoji: "🚨", desc: "Same-day urgent care" },
-                { label: "Teeth Whitening", slug: "teeth-whitening", emoji: "⚡", desc: "Professional brightening" },
-                { label: "Veneers", slug: "veneers", emoji: "😁", desc: "Custom porcelain shells" },
-                { label: "Dental Crowns", slug: "dental-crowns", emoji: "👑", desc: "Durable tooth restoration" },
-                { label: "Cleanings & Exams", slug: "dental-cleaning", emoji: "🪥", desc: "Preventive hygiene visits" },
-                { label: "Sedation Dentistry", slug: "sedation-dentistry", emoji: "😌", desc: "Anxiety-free treatment" },
-                { label: "Kids Dentistry", slug: "pediatric-dentistry", emoji: "🧒", desc: "Gentle pediatric care" },
-                { label: "Root Canal", slug: "root-canal", emoji: "🔧", desc: "Pain-free endodontics" },
-                { label: "Dentures", slug: "dentures", emoji: "😊", desc: "Full & partial options" },
+                { label: "Dental Implants", slug: "dental-implants" },
+                { label: "Invisalign®", slug: "invisalign" },
+                { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+                { label: "Emergency Dentist", slug: "emergency-dentist" },
+                { label: "Teeth Whitening", slug: "teeth-whitening" },
+                { label: "Veneers", slug: "veneers" },
+                { label: "Dental Crowns", slug: "dental-crowns" },
+                { label: "Cleanings & Exams", slug: "dental-cleaning" },
+                { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+                { label: "Kids Dentistry", slug: "pediatric-dentistry" },
+                { label: "Root Canal", slug: "root-canal" },
+                { label: "Dentures", slug: "dentures" },
               ].map((pill) => (
                 <Link
                   key={pill.slug}
                   to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${pill.slug}`}
-                  className="snap-start shrink-0 w-[calc(33.333%-0.75rem)] min-w-[220px] flex items-center gap-3 px-5 py-4 rounded-xl border border-border bg-card text-foreground hover:border-primary hover:shadow-md hover:bg-primary/5 transition-all group"
+                  className="snap-start shrink-0 w-[calc(33.333%-0.75rem)] min-w-[240px] flex items-center justify-center px-6 py-6 rounded-2xl bg-primary/10 text-foreground font-display text-base md:text-lg font-medium hover:bg-primary/20 transition-all text-center"
                 >
-                  <span className="text-2xl">{pill.emoji}</span>
-                  <div className="min-w-0">
-                    <span className="text-sm font-sans font-semibold block">{pill.label}</span>
-                    <span className="text-xs font-sans text-muted-foreground">{pill.desc}</span>
-                  </div>
-                  <ChevronRight className="w-4 h-4 text-muted-foreground ml-auto shrink-0 group-hover:text-primary transition-colors" />
+                  {pill.label}
                 </Link>
               ))}
             </div>
