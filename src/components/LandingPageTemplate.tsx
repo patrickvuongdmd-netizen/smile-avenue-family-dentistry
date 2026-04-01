@@ -70,6 +70,7 @@ export interface LandingPageData {
   faqs: FaqItem[];
   finalCtaHeadline: string;
   finalCtaBody: string;
+  darkHeader?: boolean;
 }
 
 /* ── Location data ─────────────────────────────────────────── */
