@@ -34,40 +34,43 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Cypress */}
-          <div>
-            <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Cypress Office</h4>
-            <div className="space-y-3 text-sm font-sans opacity-70">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>9212 Fry Rd #120<br />Cypress, TX 77433</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 shrink-0" />
-                <a href="tel:8326481756" className="hover:opacity-100 transition-opacity">(832) 648-1756</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 shrink-0" />
-                <span>Mon–Fri 8:30am–5pm</span>
+          {/* Offices — 2-col on mobile */}
+          <div className="grid grid-cols-2 gap-6 md:contents">
+            {/* Cypress */}
+            <div>
+              <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Cypress Office</h4>
+              <div className="space-y-3 text-sm font-sans opacity-70">
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>9212 Fry Rd #120<br />Cypress, TX 77433</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a href="tel:8326481756" className="hover:opacity-100 transition-opacity">(832) 648-1756</a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 shrink-0" />
+                  <span>Mon–Fri 8:30am–5pm</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Katy */}
-          <div>
-            <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Katy Office</h4>
-            <div className="space-y-3 text-sm font-sans opacity-70">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>23541 Westheimer Pkwy Ste #170<br />Katy, TX 77494</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 shrink-0" />
-                <a href="tel:2818005008" className="hover:opacity-100 transition-opacity">(281) 800-5008</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 shrink-0" />
-                <span>Mon–Fri 8:30am–5pm · Sat 8am–2pm</span>
+            {/* Katy */}
+            <div>
+              <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Katy Office</h4>
+              <div className="space-y-3 text-sm font-sans opacity-70">
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>23541 Westheimer Pkwy Ste #170<br />Katy, TX 77494</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <a href="tel:2818005008" className="hover:opacity-100 transition-opacity">(281) 800-5008</a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 shrink-0" />
+                  <span>Mon–Fri 8:30am–5pm · Sat 8am–2pm</span>
+                </div>
               </div>
             </div>
           </div>
