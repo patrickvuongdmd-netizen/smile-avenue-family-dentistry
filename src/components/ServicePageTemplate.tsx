@@ -97,6 +97,7 @@ const LOCATIONS = {
     name: "Cypress",
     path: "/cypress-tx",
     geo: { lat: "29.9691", lng: "-95.6972" },
+    hours: "Mon–Fri 8:30am–5pm",
   },
   katy: {
     phone: "2818005008",
@@ -106,6 +107,7 @@ const LOCATIONS = {
     name: "Katy",
     path: "/katy-tx",
     geo: { lat: "29.7357", lng: "-95.7575" },
+    hours: "Mon–Fri 8:30am–5pm, Sat 8am–2pm",
   },
 };
 
@@ -426,11 +428,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             <h2 className="section-heading">Use Your Benefits — We Handle the Paperwork</h2>
           </div>
           <div className="relative mt-6">
-            <div className="flex animate-[scroll_20s_linear_infinite] w-max gap-6">
+            <div className="flex animate-ticker whitespace-nowrap">
               {[...insuranceLogos, ...insuranceLogos].map((name, i) => (
-                <div key={`${name}-${i}`} className="shrink-0 bg-card rounded-full border border-border py-2.5 px-6 flex items-center justify-center">
-                  <span className="text-sm font-sans font-medium text-muted-foreground whitespace-nowrap">{name}</span>
-                </div>
+                <span key={`${name}-${i}`} className="inline-flex shrink-0 items-center bg-card rounded-full border border-border py-2.5 px-6 mx-3">
+                  <span className="text-sm font-sans font-medium text-muted-foreground">{name}</span>
+                </span>
               ))}
             </div>
           </div>
@@ -589,7 +591,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="w-4 h-4 text-primary shrink-0" />
-                  <span>Mon–Fri 8:30am–5pm</span>
+                  <span>{loc.hours}</span>
                 </div>
               </div>
               <button onClick={() => setBookingModalOpen(true)} className="btn-primary w-full text-center">
