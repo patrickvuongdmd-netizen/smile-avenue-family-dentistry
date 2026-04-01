@@ -65,6 +65,7 @@ export interface ServicePageData {
   heroCta1: string;
   heroCta2: string;
   heroImage: string;
+  heroValueProps?: string[];
   introKicker: string;
   introHeading: string;
   introParas: ReactNode[];
