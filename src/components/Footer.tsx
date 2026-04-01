@@ -39,37 +39,39 @@ const Footer = () => {
         />
         <div className="absolute inset-0 bg-foreground/10" />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-24">
-          <div className="bg-card rounded-[2rem] shadow-2xl overflow-hidden">
-            {/* Top half — CTA */}
-            <div className="px-10 py-14 md:px-20 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8">
-              <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-medium leading-[1.15] text-center md:text-left max-w-2xl text-muted-foreground">
-                Care at Smile Avenue isn't just painless,{" "}
-                <span className="text-foreground font-semibold">it's a pleasure</span>
-              </h2>
-              <button
-                onClick={() => setBookingOpen(true)}
-                className="btn-primary shrink-0 text-base md:text-lg px-10 py-4 rounded-full"
-              >
-                Book Now
-              </button>
-            </div>
+        {/* Top half of card */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 md:pt-24">
+          <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-14 md:px-16 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8">
+            <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-medium leading-[1.15] text-center md:text-left max-w-2xl text-muted-foreground">
+              Care at Smile Avenue isn't just painless,{" "}
+              <span className="text-foreground font-semibold">it's a pleasure</span>
+            </h2>
+            <button
+              onClick={() => setBookingOpen(true)}
+              className="btn-primary shrink-0 text-base md:text-lg px-10 py-4 rounded-full"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
 
-            {/* Ticker cuts through the card */}
-            <TrustTicker />
+        {/* Full-width ticker cuts through */}
+        <div className="relative z-20">
+          <TrustTicker />
+        </div>
 
-            {/* Bottom half — logo */}
-            <div className="px-10 py-10 md:px-20 md:py-14">
-              <Link to="/">
-                <img
-                  src="/logo-full.webp"
-                  alt="Smile Avenue Family Dentistry"
-                  className="h-10 md:h-14 w-auto object-contain"
-                  width={1217}
-                  height={645}
-                />
-              </Link>
-            </div>
+        {/* Bottom half of card */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-16 md:pb-24">
+          <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-10 md:px-16 md:py-14">
+            <Link to="/">
+              <img
+                src="/logo-full.webp"
+                alt="Smile Avenue Family Dentistry"
+                className="h-10 md:h-14 w-auto object-contain"
+                width={1217}
+                height={645}
+              />
+            </Link>
           </div>
         </div>
       </section>
