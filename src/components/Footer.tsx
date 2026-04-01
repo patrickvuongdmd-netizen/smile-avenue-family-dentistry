@@ -137,15 +137,16 @@ const Footer = () => {
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Questions?</h4>
 
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-1.5">Call</p>
+              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-1.5">Cypress</p>
               <div className="space-y-1 text-sm font-sans opacity-70 mb-5">
                 <a href="tel:8326481756" className="block hover:opacity-100 transition-opacity">(832) 648-1756</a>
-                <a href="tel:2818005008" className="block hover:opacity-100 transition-opacity">(281) 800-5008</a>
+                <a href="mailto:info@smileavenuecypress.com" className="block hover:opacity-100 transition-opacity">info@smileavenuecypress.com</a>
               </div>
 
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-1.5">Email</p>
+              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-1.5">Katy</p>
               <div className="space-y-1 text-sm font-sans opacity-70 mb-5">
-                <a href="mailto:info@smileavenuecypress.com" className="block hover:opacity-100 transition-opacity">info@smileavenuecypress.com</a>
+                <a href="tel:2818005008" className="block hover:opacity-100 transition-opacity">(281) 800-5008</a>
+                <a href="mailto:info@smileavenuekaty.com" className="block hover:opacity-100 transition-opacity">info@smileavenuekaty.com</a>
               </div>
 
               <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-2">Social</p>
