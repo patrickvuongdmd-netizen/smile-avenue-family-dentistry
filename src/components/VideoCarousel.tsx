@@ -76,7 +76,7 @@ const VideoCarousel = ({ videos }: VideoCarouselProps) => {
           <ChevronLeft className="w-4 h-4" />
         </button>
 
-        <div className="flex gap-3 overflow-hidden">
+        <div ref={stripRef} className="flex gap-3 overflow-x-auto scrollbar-hide scroll-smooth">
           {videos.map((video, i) => (
             <button
               key={video.youtubeId}
