@@ -56,7 +56,7 @@ const TrustTicker = () => {
         >
           ES
         </Link>
-        <span className="text-primary-foreground/40">|</span>
+        <span style={{ color: "#CCCCCC" }}>|</span>
         <button
           onClick={() => {
             if ((window as any).toggleAccessibility) {
