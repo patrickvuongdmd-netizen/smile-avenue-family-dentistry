@@ -42,8 +42,7 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
           </a>
           <button
             onClick={() => setBookingModalOpen(true)}
-            className="flex-1 flex items-center justify-center gap-1.5 h-10 rounded-full text-sm font-sans font-semibold tracking-wide"
-            style={{ backgroundColor: "hsl(40 63% 58%)", color: "#fff" }}
+            className="flex-1 flex items-center justify-center gap-1.5 h-10 rounded-full text-sm font-sans font-semibold tracking-wide text-white bg-primary"
           >
             <Calendar className="w-4 h-4" />
             Book Now
