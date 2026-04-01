@@ -51,7 +51,8 @@ const TrustTicker = () => {
         <span style={{ color: "#CCCCCC" }}>|</span>
         <Link
           to="/es"
-          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? "bg-primary-foreground text-primary" : "text-primary-foreground/70 hover:text-primary-foreground"}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? "text-white" : "hover:opacity-100 opacity-60"}`}
+          style={isSpanish ? { backgroundColor: "#2B5DA7" } : { color: "#666666" }}
         >
           ES
         </Link>
