@@ -44,7 +44,7 @@ const Footer = () => {
             </h2>
             <button
               onClick={() => setBookingOpen(true)}
-              className="btn-primary shrink-0 text-base md:text-lg px-10 py-4 rounded-full"
+              className="shrink-0 inline-flex items-center justify-center text-base md:text-lg px-10 py-4 rounded-full font-bold tracking-wide transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
             >
               Book Now
             </button>
