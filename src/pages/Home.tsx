@@ -437,14 +437,27 @@ const Home = () => {
           <InsuranceLogoBar />
         </LazySection>
 
-        {/* SMILE GALLERY CTA */}
+        {/* SMILE GALLERY CTA — with preview images */}
         <LazySection>
           <section className="section-padding section-alt">
-            <div className="container mx-auto text-center max-w-2xl">
-              <p className="kicker">REAL RESULTS</p>
-              <h2 className="section-heading">See Real Patient Transformations</h2>
-              <p className="section-body">Browse before-and-after photos from real Smile Avenue patients — dental implants, veneers, Invisalign, and more.</p>
-              <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
+            <div className="container mx-auto">
+              <p className="kicker text-center">REAL RESULTS</p>
+              <h2 className="section-heading text-center">See Real Patient Transformations</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8 mb-8 max-w-4xl mx-auto">
+                {[
+                  { src: SERVICE_IMAGES["dental-implants"]?.url, alt: "Dental implant transformation" },
+                  { src: SERVICE_IMAGES["veneers"]?.url, alt: "Veneer smile makeover" },
+                  { src: SERVICE_IMAGES["teeth-whitening"]?.url, alt: "Teeth whitening result" },
+                  { src: OFFICE_IMAGES.smileGallery, alt: "Before and after smile transformation" },
+                ].map((photo, i) => (
+                  <Link key={i} to="/smile-gallery" className="aspect-square rounded-xl overflow-hidden group">
+                    <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={300} height={300} />
+                  </Link>
+                ))}
+              </div>
+              <div className="text-center">
+                <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
+              </div>
             </div>
           </section>
         </LazySection>
