@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
+import TrustTicker from "@/components/TrustTicker";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
