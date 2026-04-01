@@ -21,7 +21,8 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      setVisible(y < 50 || y < lastScrollY.current);
+      // Show when scrolling DOWN (navbar hides), hide when at top or scrolling UP (navbar shows)
+      setVisible(y > 50 && y > lastScrollY.current);
       lastScrollY.current = y;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
