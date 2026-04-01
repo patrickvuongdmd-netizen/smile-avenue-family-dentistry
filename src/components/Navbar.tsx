@@ -9,25 +9,28 @@ interface NavbarProps {
   bookingUrl: string;
 }
 
-const serviceLinks = [
-  { label: "Emergency Dentist", slug: "emergency-dentist" },
-  { label: "Dental Implants", slug: "dental-implants" },
-  { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
-  { label: "Teeth Whitening", slug: "teeth-whitening" },
-  { label: "Dental Crowns", slug: "dental-crowns" },
-  { label: "All-on-X Implants", slug: "all-on-x-implants" },
-  { label: "Invisalign®", slug: "invisalign" },
-  { label: "Root Canal", slug: "root-canal" },
+const generalCare = [
   { label: "Dental Cleaning", slug: "dental-cleaning" },
   { label: "Pediatric Dentistry", slug: "pediatric-dentistry" },
-  { label: "Dentures", slug: "dentures" },
-  { label: "Veneers", slug: "veneers" },
-  { label: "Dental Bridges", slug: "dental-bridges" },
+  { label: "Root Canal", slug: "root-canal" },
   { label: "Tooth Extraction", slug: "tooth-extraction" },
-  { label: "Oral Surgery", slug: "oral-surgery" },
-  { label: "Sedation Dentistry", slug: "sedation-dentistry" },
-  { label: "Preventive Dentistry", slug: "preventive-dentistry" },
+  { label: "Dental Crowns", slug: "dental-crowns" },
+  { label: "Dental Bridges", slug: "dental-bridges" },
+  { label: "Dentures", slug: "dentures" },
 ];
+
+const specializedCare = [
+  { label: "Dental Implants", slug: "dental-implants" },
+  { label: "All-on-X Implants", slug: "all-on-x-implants" },
+  { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+  { label: "Invisalign®", slug: "invisalign" },
+  { label: "Teeth Whitening", slug: "teeth-whitening" },
+  { label: "Veneers", slug: "veneers" },
+  { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+  { label: "Oral Surgery", slug: "oral-surgery" },
+];
+
+const serviceLinks = [...generalCare, ...specializedCare];
 
 const patientLinks = [
   { label: "New Patient Hub", href: "/patients/new-patient-hub" },
