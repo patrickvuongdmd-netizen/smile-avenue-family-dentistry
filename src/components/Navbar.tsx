@@ -93,6 +93,16 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
     return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
 
@@ -119,11 +129,12 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           </div>
         </div>
       </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-14 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0">
-            <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-16 sm:h-20 md:h-[72px] w-auto object-contain transition-transform duration-300 hover:scale-105" width={200} height={155} />
+            <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-10 md:h-[72px] w-auto object-contain" width={200} height={155} />
           </Link>
 
           {/* Desktop Nav — visible at md (768px+) */}
@@ -163,7 +174,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
-              {/* Patients Dropdown — now visible on desktop */}
+              {/* Patients Dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => openDropdown("patients")}
@@ -219,9 +230,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
-              {/* Emergency — top-level like Tend */}
               <Link to={`${locationPrefix}/emergency-dentist`} className="px-2 lg:px-3 py-2 hover:text-destructive transition-colors whitespace-nowrap text-destructive/80 font-semibold">Emergency</Link>
-
               <Link to="/blog" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Blog</Link>
               <Link to="/contact" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Contact</Link>
             </div>
@@ -233,108 +242,127 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Mobile menu button — visible below md */}
-          <div className="md:hidden flex items-center gap-2">
-            <LanguageToggle />
-            <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-xs !px-3 !py-2">
-              Book Now
-            </button>
+          {/* Mobile — clean, minimal: just hamburger */}
+          <div className="md:hidden">
             <button
-              className="p-2 text-foreground"
+              className="relative w-10 h-10 flex items-center justify-center rounded-full text-foreground hover:bg-muted/50 transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <span className={`absolute transition-all duration-300 ${mobileOpen ? "opacity-0 rotate-90 scale-75" : "opacity-100 rotate-0 scale-100"}`}>
+                <Menu className="w-5 h-5" />
+              </span>
+              <span className={`absolute transition-all duration-300 ${mobileOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-75"}`}>
+                <X className="w-5 h-5" />
+              </span>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-background border-t border-border pb-4 max-h-[80vh] overflow-y-auto">
-          <div className="container mx-auto px-4 pt-4 flex flex-col gap-1 font-sans text-sm font-medium text-foreground">
-            {/* Intent quick-paths — most common reasons to visit */}
-            <div className="grid grid-cols-2 gap-2 pb-3 mb-2 border-b border-border">
-              <Link to="/patients/new-patient-hub" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-primary/5 border border-primary/20 text-primary font-semibold text-xs">
-                <Check className="w-4 h-4 shrink-0" /> New Patient? Start Here
+      {/* Mobile fullscreen menu */}
+      <div
+        className={`md:hidden fixed inset-0 top-[57px] z-40 bg-background transition-all duration-300 ${
+          mobileOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-2 pointer-events-none"
+        }`}
+      >
+        <div className="h-full overflow-y-auto overscroll-contain pb-32">
+          <div className="container mx-auto px-5 pt-6 flex flex-col gap-0.5">
+            {/* Primary intent cards */}
+            <div className="grid grid-cols-2 gap-2.5 pb-5">
+              <Link to="/patients/new-patient-hub" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5 px-4 py-3.5 rounded-xl bg-primary/5 border border-primary/15 text-primary font-semibold text-[13px] font-sans">
+                <Check className="w-4 h-4 shrink-0" /> New Patient
               </Link>
-              <Link to={`${locationPrefix}/emergency-dentist`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-destructive/5 border border-destructive/20 text-destructive font-semibold text-xs">
+              <Link to={`${locationPrefix}/emergency-dentist`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5 px-4 py-3.5 rounded-xl bg-destructive/5 border border-destructive/15 text-destructive font-semibold text-[13px] font-sans">
                 <AlertCircle className="w-4 h-4 shrink-0" /> Emergency
               </Link>
-              <Link to="/insurance" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-card border border-border text-foreground font-semibold text-xs">
+              <Link to="/insurance" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5 px-4 py-3.5 rounded-xl bg-card border border-border text-foreground font-semibold text-[13px] font-sans">
                 <Shield className="w-4 h-4 shrink-0 text-primary" /> Insurance
               </Link>
-              <Link to="/services" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 px-3 py-3 rounded-lg bg-card border border-border text-foreground font-semibold text-xs">
+              <Link to="/services" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5 px-4 py-3.5 rounded-xl bg-card border border-border text-foreground font-semibold text-[13px] font-sans">
                 <Sparkles className="w-4 h-4 shrink-0 text-primary" /> All Services
               </Link>
             </div>
 
-            {/* Services accordion */}
+            {/* Divider */}
+            <div className="h-px bg-border mb-1" />
+
+            {/* Accordion nav sections */}
             <button
-              className="flex items-center justify-between py-3 w-full text-left"
+              className="flex items-center justify-between py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
             >
-              Services <ChevronDown className={`w-4 h-4 transition-transform ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
+              Services
+              <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
             </button>
             {mobileExpanded === "services" && (
-              <div className="pl-4 pb-2 space-y-1">
+              <div className="pl-1 pb-3 space-y-0.5 animate-in slide-in-from-top-1 duration-200">
                 {serviceLinks.map((s) => (
-                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-1.5 text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-2 px-3 text-[13px] font-sans text-muted-foreground hover:text-primary rounded-lg hover:bg-muted/50 transition-colors" onClick={() => setMobileOpen(false)}>
                     {s.label}
                   </Link>
                 ))}
-                <Link to="/services" className="block py-1.5 text-primary font-semibold" onClick={() => setMobileOpen(false)}>View All Services →</Link>
               </div>
             )}
 
-            {/* Patients accordion */}
+            <div className="h-px bg-border" />
+
             <button
-              className="flex items-center justify-between py-3 w-full text-left"
+              className="flex items-center justify-between py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
             >
-              Patients <ChevronDown className={`w-4 h-4 transition-transform ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
+              Patients
+              <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
             </button>
             {mobileExpanded === "patients" && (
-              <div className="pl-4 pb-2 space-y-1">
+              <div className="pl-1 pb-3 space-y-0.5 animate-in slide-in-from-top-1 duration-200">
                 {patientLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-1.5 text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                  <Link key={l.href} to={l.href} className="block py-2 px-3 text-[13px] font-sans text-muted-foreground hover:text-primary rounded-lg hover:bg-muted/50 transition-colors" onClick={() => setMobileOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
               </div>
             )}
 
-            {/* About accordion */}
+            <div className="h-px bg-border" />
+
             <button
-              className="flex items-center justify-between py-3 w-full text-left"
+              className="flex items-center justify-between py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
             >
-              About <ChevronDown className={`w-4 h-4 transition-transform ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
+              About
+              <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
             </button>
             {mobileExpanded === "about" && (
-              <div className="pl-4 pb-2 space-y-1">
+              <div className="pl-1 pb-3 space-y-0.5 animate-in slide-in-from-top-1 duration-200">
                 {aboutLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-1.5 text-muted-foreground" onClick={() => setMobileOpen(false)}>
+                  <Link key={l.href} to={l.href} className="block py-2 px-3 text-[13px] font-sans text-muted-foreground hover:text-primary rounded-lg hover:bg-muted/50 transition-colors" onClick={() => setMobileOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
               </div>
             )}
 
-            <Link to="/convenient-locations" className="py-3" onClick={() => setMobileOpen(false)}>Locations</Link>
-            <Link to="/contact" className="py-3" onClick={() => setMobileOpen(false)}>Contact</Link>
-            <Link to="/blog" className="py-3" onClick={() => setMobileOpen(false)}>Blog</Link>
-            <div className="py-3"><LanguageToggle /></div>
-            <a href={`tel:${phone}`} className="flex items-center gap-2 py-3 text-primary font-semibold">
-              <Phone className="w-4 h-4" /> {phoneFormatted}
-            </a>
-            <button onClick={() => { setMobileOpen(false); setBookingModalOpen(true); }} className="btn-primary text-center mt-2 w-full">
-              Book Now
-            </button>
+            <div className="h-px bg-border" />
+
+            <Link to="/convenient-locations" className="py-4 text-[15px] font-sans font-semibold text-foreground" onClick={() => setMobileOpen(false)}>Locations</Link>
+            <div className="h-px bg-border" />
+            <Link to="/contact" className="py-4 text-[15px] font-sans font-semibold text-foreground" onClick={() => setMobileOpen(false)}>Contact</Link>
+            <div className="h-px bg-border" />
+            <Link to="/blog" className="py-4 text-[15px] font-sans font-semibold text-foreground" onClick={() => setMobileOpen(false)}>Blog</Link>
+
+            {/* Footer area: language + phone */}
+            <div className="mt-6 pt-5 border-t border-border flex items-center justify-between">
+              <LanguageToggle />
+              <a href={`tel:${phone}`} className="flex items-center gap-1.5 text-sm font-sans font-semibold text-primary">
+                <Phone className="w-4 h-4" /> {phoneFormatted}
+              </a>
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </nav>
     <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
     </>
