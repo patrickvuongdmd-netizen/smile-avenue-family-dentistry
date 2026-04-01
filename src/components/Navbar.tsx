@@ -47,7 +47,7 @@ const aboutLinks = [
   { label: "Smile Gallery", href: "/smile-gallery" },
 ];
 
-type DropdownKey = "services" | "patients" | "about" | null;
+type DropdownKey = "services" | "patients" | "about" | "locations" | null;
 
 const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
