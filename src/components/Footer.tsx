@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           {/* Offices — 2-col on mobile */}
-          <div className="grid grid-cols-2 gap-6 md:contents">
+          <div className="grid grid-cols-2 gap-6 lg:contents">
             {/* Cypress */}
             <div>
               <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Cypress Office</h4>
