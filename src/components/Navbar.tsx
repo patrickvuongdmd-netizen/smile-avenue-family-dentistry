@@ -262,11 +262,12 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
       {/* Mobile fullscreen menu */}
       <div
-        className={`md:hidden fixed inset-0 top-[57px] z-40 bg-background transition-all duration-300 ${
+        className={`md:hidden fixed left-0 right-0 bottom-0 top-[57px] z-[999] bg-background transition-all duration-300 ${
           mobileOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-2 pointer-events-none"
         }`}
+        style={{ backgroundColor: 'hsl(var(--background))' }}
       >
         <div className="h-full overflow-y-auto overscroll-contain pb-32">
           <div className="container mx-auto px-5 pt-6 flex flex-col gap-0.5">
