@@ -121,7 +121,7 @@ const Home = () => {
       <Navbar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <TrustStrip />
 
-      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main id="main-content" className="pb-14 lg:pb-0 ">
         {/* HERO */}
         <section className="px-4 sm:px-6 lg:px-8 py-8 md:py-20 bg-background">
           <div className="container mx-auto">

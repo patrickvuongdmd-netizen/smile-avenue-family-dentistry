@@ -244,7 +244,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </div>
       </header>
 
-      <main className="pt-12 pb-16 lg:pb-0 animate-in fade-in duration-500">
+      <main className="pt-12 pb-16 lg:pb-0 ">
         {/* ═══ EMERGENCY BANNER ═══ */}
         {data.isEmergency && (
           <div className="bg-destructive text-destructive-foreground text-center py-3 text-sm font-sans font-bold">

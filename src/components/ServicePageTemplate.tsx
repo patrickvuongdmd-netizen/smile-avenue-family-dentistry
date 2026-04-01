@@ -316,7 +316,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </div>
       )}
 
-      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main id="main-content" className="pb-14 lg:pb-0 ">
         {/* HERO — Full-width banner with background image */}
         <section
           className="relative min-h-[300px] md:min-h-[400px] flex items-end"
