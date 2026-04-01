@@ -11,13 +11,13 @@ const PreFooterBanner = () => {
         <img
           src="/images/prefooter-bg.jpg"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
           width={1920}
           height={800}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-foreground/50" />
+        <div className="absolute inset-0 bg-foreground/10" />
 
         {/* White card */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
