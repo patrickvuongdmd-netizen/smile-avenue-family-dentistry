@@ -40,7 +40,7 @@ const TrustTicker = () => {
       </div>
 
       {/* EN | ES | ♿ — right side, desktop only */}
-      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold" style={{ backgroundColor: "#2B5DA7" }}>
+      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold bg-primary">
         <Link
           to="/"
           className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? "text-white" : "hover:opacity-100 opacity-60"}`}
