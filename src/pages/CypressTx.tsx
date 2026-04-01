@@ -5,6 +5,7 @@ import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCir
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
+import CredibilityBar from "@/components/CredibilityBar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -156,6 +157,8 @@ const CypressTx = () => {
             </div>
           </div>
         </section>
+
+        <CredibilityBar />
 
         {/* SERVICE PILL CAROUSEL */}
         <section className="py-6 bg-background overflow-hidden">

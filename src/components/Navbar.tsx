@@ -9,25 +9,28 @@ interface NavbarProps {
   bookingUrl: string;
 }
 
-const serviceLinks = [
-  { label: "Emergency Dentist", slug: "emergency-dentist" },
-  { label: "Dental Implants", slug: "dental-implants" },
-  { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
-  { label: "Teeth Whitening", slug: "teeth-whitening" },
-  { label: "Dental Crowns", slug: "dental-crowns" },
-  { label: "All-on-X Implants", slug: "all-on-x-implants" },
-  { label: "Invisalign®", slug: "invisalign" },
-  { label: "Root Canal", slug: "root-canal" },
+const generalCare = [
   { label: "Dental Cleaning", slug: "dental-cleaning" },
   { label: "Pediatric Dentistry", slug: "pediatric-dentistry" },
-  { label: "Dentures", slug: "dentures" },
-  { label: "Veneers", slug: "veneers" },
-  { label: "Dental Bridges", slug: "dental-bridges" },
+  { label: "Root Canal", slug: "root-canal" },
   { label: "Tooth Extraction", slug: "tooth-extraction" },
-  { label: "Oral Surgery", slug: "oral-surgery" },
-  { label: "Sedation Dentistry", slug: "sedation-dentistry" },
-  { label: "Preventive Dentistry", slug: "preventive-dentistry" },
+  { label: "Dental Crowns", slug: "dental-crowns" },
+  { label: "Dental Bridges", slug: "dental-bridges" },
+  { label: "Dentures", slug: "dentures" },
 ];
+
+const specializedCare = [
+  { label: "Dental Implants", slug: "dental-implants" },
+  { label: "All-on-X Implants", slug: "all-on-x-implants" },
+  { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+  { label: "Invisalign®", slug: "invisalign" },
+  { label: "Teeth Whitening", slug: "teeth-whitening" },
+  { label: "Veneers", slug: "veneers" },
+  { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+  { label: "Oral Surgery", slug: "oral-surgery" },
+];
+
+const serviceLinks = [...generalCare, ...specializedCare];
 
 const patientLinks = [
   { label: "New Patient Hub", href: "/patients/new-patient-hub" },
@@ -143,20 +146,28 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 </Link>
                 {activeDropdown === "services" && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
-                    <div className="bg-popover border border-border rounded-xl shadow-xl p-5 w-[540px]">
-                      <div className="grid grid-cols-3 gap-x-6 gap-y-1.5">
-                        {serviceLinks.map((s) => (
-                          <Link
-                            key={s.slug}
-                            to={`${locationPrefix}/${s.slug}`}
-                            className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {s.label}
-                          </Link>
-                        ))}
+                    <div className="bg-popover border border-border rounded-xl shadow-xl p-6 w-[520px]">
+                      <div className="grid grid-cols-2 gap-x-10">
+                        {/* General Care */}
+                        <div>
+                          <p className="text-xs font-sans font-bold uppercase tracking-wider text-primary mb-3">General Care</p>
+                          {generalCare.map((s) => (
+                            <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setActiveDropdown(null)}>
+                              {s.label}
+                            </Link>
+                          ))}
+                        </div>
+                        {/* Specialized Care */}
+                        <div>
+                          <p className="text-xs font-sans font-bold uppercase tracking-wider text-primary mb-3">Specialized Care</p>
+                          {specializedCare.map((s) => (
+                            <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setActiveDropdown(null)}>
+                              {s.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                      <div className="border-t border-border mt-3 pt-3">
+                      <div className="border-t border-border mt-4 pt-3">
                         <Link to="/services" className="text-sm font-sans font-semibold text-primary hover:underline" onClick={() => setActiveDropdown(null)}>
                           View All Services →
                         </Link>
