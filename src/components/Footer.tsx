@@ -90,7 +90,7 @@ const Footer = () => {
                 <Link to="/membership-plan" className="block hover:opacity-100 transition-opacity">Membership Plans</Link>
                 <Link to="/patient-testimonials" className="block hover:opacity-100 transition-opacity">Testimonials</Link>
                 <Link to="/blog" className="block hover:opacity-100 transition-opacity">Blog</Link>
-                <Link to="/smile-gallery" className="block hover:opacity-100 transition-opacity">Smile Gallery</Link>
+                
               </div>
             </div>
 
