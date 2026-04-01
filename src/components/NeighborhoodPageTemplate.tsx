@@ -33,6 +33,7 @@ interface Testimonial {
   location?: string;
 }
 
+
 interface Doctor {
   name: string;
   credentials: string;
