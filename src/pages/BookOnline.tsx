@@ -39,7 +39,7 @@ const BookOnline = () => {
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
 
-      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main id="main-content" className="pb-14 lg:pb-0 ">
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">

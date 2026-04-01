@@ -143,7 +143,7 @@ const SitemapPage = () => {
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
 
-      <main className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main className="pb-14 lg:pb-0 ">
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav className="mb-6 text-xs font-sans text-muted-foreground">

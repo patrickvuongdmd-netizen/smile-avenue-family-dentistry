@@ -95,7 +95,7 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
       <Navbar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
       <TrustStrip />
 
-      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main id="main-content" className="pb-14 lg:pb-0 ">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">

@@ -184,7 +184,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <TrustStrip />
 
-      <main id="main-content" className="pb-14 lg:pb-0 animate-in fade-in duration-500">
+      <main id="main-content" className="pb-14 lg:pb-0 ">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
