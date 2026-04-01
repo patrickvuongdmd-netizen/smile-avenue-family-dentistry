@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight, ChevronLeft } from "lucide-react";
+import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight, ChevronLeft, ArrowRight } from "lucide-react";
+import { BLOG_POSTS } from "@/lib/blog-data";
 import { useRef } from "react";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -590,16 +591,46 @@ const Home = () => {
         </section>
         </LazySection>
 
-        {/* CTA */}
-        <section className="section-padding gradient-cta text-center">
+        {/* Blog */}
+        <section className="section-padding bg-background">
           <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Your New Smile Starts Today</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Join 5,000+ families who trust Smile Avenue. Same-day appointments available at both Houston-area locations.</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">Book Online Now</button>
-              <a href={`tel:${heroPhone}`} className="btn-cta-outline">Call {heroPhoneFmt}</a>
+            <div className="flex items-end justify-between mb-10">
+              <div>
+                <p className="text-sm font-sans font-semibold uppercase tracking-wider text-primary mb-2">From Our Blog</p>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Dental Tips & Insights</h2>
+              </div>
+              <Link to="/blog" className="hidden sm:inline-flex items-center gap-1.5 text-sm font-sans font-medium text-primary hover:underline">
+                View all posts
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
-            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Booking takes less than 60 seconds · No obligation · We confirm within 1 hour</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {BLOG_POSTS.slice(0, 3).map((post) => (
+                <Link
+                  key={post.slug}
+                  to={`/blog/${post.slug}`}
+                  className="group bg-card rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-shadow"
+                >
+                  <div className="bg-primary/10 px-6 py-8">
+                    <span className="text-xs font-sans font-semibold uppercase tracking-wider text-primary">{post.category}</span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm font-body text-muted-foreground line-clamp-3 mb-4">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-xs font-sans text-muted-foreground">
+                      <span>{post.author}</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <Link to="/blog" className="sm:hidden flex items-center justify-center gap-1.5 mt-6 text-sm font-sans font-medium text-primary hover:underline">
+              View all posts
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
       </main>
