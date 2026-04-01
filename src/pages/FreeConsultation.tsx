@@ -23,9 +23,9 @@ const benefits = [
 ];
 
 const testimonials = [
-  { quote: "I came in nervous about implants and left feeling completely informed and excited. No pressure at all — just honest answers.", name: "James R.", source: "Google Review" },
-  { quote: "The consultation was so thorough. They showed me exactly what my smile could look like with veneers. I booked my treatment that same day!", name: "Michelle T.", source: "Google Review" },
-  { quote: "Best dental consultation I've ever had. They took the time to explain every option and the costs upfront. Highly recommend Smile Avenue.", name: "David K.", source: "Google Review" },
+  { quote: "I came in nervous about implants and left feeling completely informed and excited. No pressure at all — just honest answers.", name: "James R.", source: "Google Review", location: "Fairfield, Cypress" },
+  { quote: "The consultation was so thorough. They showed me exactly what my smile could look like with veneers. I booked my treatment that same day!", name: "Michelle T.", source: "Google Review", location: "Towne Lake, Cypress" },
+  { quote: "Best dental consultation I've ever had. They took the time to explain every option and the costs upfront. Highly recommend Smile Avenue.", name: "David K.", source: "Google Review", location: "Bridgeland, Cypress" },
 ];
 
 const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
