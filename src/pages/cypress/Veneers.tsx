@@ -7,7 +7,7 @@ const data: ServicePageData = {
   serviceName: "Veneers",
   serviceSlug: "veneers",
   metaTitle: "Veneers Cypress, TX | Porcelain Veneers & Smile Design | Smile Avenue",
-  metaDescription: "Custom porcelain veneers in Cypress, TX. Emax and zirconia options from our in-house lab. Natural results. Call (832) 648-1756.",
+  metaDescription: "Porcelain veneers in Cypress, TX — Emax & zirconia options crafted in our in-house lab. Free smile consultation. 0% financing available. Call (832) 648-1756.",
   heroKicker: "VENEERS IN CYPRESS",
   heroHeading: "Porcelain Veneers in Cypress, TX",
   heroBody: "Veneers are the gold standard for transforming the appearance of your smile. At Smile Avenue Cypress, our in-house Smile Dental Lab crafts each veneer to precise specifications — delivering a natural, beautiful result.",

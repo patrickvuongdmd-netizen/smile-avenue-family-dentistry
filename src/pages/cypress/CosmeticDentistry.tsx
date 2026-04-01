@@ -7,7 +7,7 @@ const data: ServicePageData = {
   serviceName: "Cosmetic Dentistry",
   serviceSlug: "cosmetic-dentistry",
   metaTitle: "Cosmetic Dentist Cypress, TX | Veneers, Whitening & Smile Makeovers | Smile Avenue",
-  metaDescription: "Transform your smile with cosmetic dentistry in Cypress, TX. Veneers, whitening, bonding and smile makeovers. Call (832) 648-1756.",
+  metaDescription: "Cosmetic dentistry in Cypress, TX — veneers, whitening, bonding & full smile makeovers. In-house lab for same-day results. 4.9★ rated. Book today.",
   heroKicker: "SMILE MAKEOVERS IN CYPRESS",
   heroHeading: "Cosmetic Dentistry in Cypress, TX",
   heroBody: "Your smile is one of the first things people notice. If you have been hiding yours because of chips, stains, gaps, or uneven teeth, cosmetic dentistry at Smile Avenue in Cypress can help you feel confident again.",

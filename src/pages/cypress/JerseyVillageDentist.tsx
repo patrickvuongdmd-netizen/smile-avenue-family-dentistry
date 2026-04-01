@@ -7,7 +7,7 @@ const data: NeighborhoodPageData = {
   neighborhoodName: "Jersey Village",
   slug: "jersey-village-dentist",
   metaTitle: "Dentist Near Jersey Village, TX | Smile Avenue Family Dentistry",
-  metaDescription: "Jersey Village dentist near Jones Road & FM 529. Smile Avenue offers dental implants, cleanings, Invisalign & emergency care. Call (832) 648-1756 today.",
+  metaDescription: "Jersey Village dentist near Jones Rd & FM 529. Same-day appointments, open Saturdays. Implants, Invisalign & emergency care. 4.9★. Call (832) 648-1756.",
   heroHeading: "Jersey Village Families — Your Trusted Dentist Is Just Minutes Away",
   heroImage: OFFICE_IMAGES.coffeeStation,
   heroSubheading: "Convenient, high-quality dental care for the Jersey Village and Jones Road corridor.",

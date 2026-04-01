@@ -7,7 +7,7 @@ const data: ServicePageData = {
   serviceName: "All-on-X Implants",
   serviceSlug: "all-on-x-implants",
   metaTitle: "All-on-4 Dental Implants Cypress, TX | Full Arch Restoration | Smile Avenue",
-  metaDescription: "All-on-X full-arch dental implants in Cypress, TX. Permanent fixed smile in one day. In-house lab, 3D planning, sedation available. Call (832) 648-1756.",
+  metaDescription: "All-on-4 & All-on-X full-arch dental implants in Cypress, TX. New teeth in one day with 3D-guided surgery & in-house lab. 4.9★ rated. Call (832) 648-1756.",
   heroKicker: "FULL ARCH RESTORATION IN CYPRESS",
   heroHeading: "All-on-X Full-Arch Dental Implants in Cypress, TX",
   heroBody: "If you are living with slipping dentures, multiple missing teeth, or failing teeth, All-on-X at Smile Avenue offers a life-changing solution. A complete arch of permanent teeth supported by 4-6 strategically placed implants — walk out with a new smile the same day.",

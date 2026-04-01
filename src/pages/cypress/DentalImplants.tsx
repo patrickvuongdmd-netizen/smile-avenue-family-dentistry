@@ -7,7 +7,7 @@ const data: ServicePageData = {
   serviceName: "Dental Implants",
   serviceSlug: "dental-implants",
   metaTitle: "Dental Implants Cypress, TX | Permanent Tooth Replacement | Smile Avenue",
-  metaDescription: "Permanent dental implant solutions in Cypress, TX. Advanced 3D planning, in-house lab for precise restorations. Sedation available. Call (832) 648-1756.",
+  metaDescription: "Dental implants in Cypress, TX — single teeth, bridges & All-on-4. 3D-guided placement, in-house lab, sedation options. 0% financing. Call (832) 648-1756.",
   heroKicker: "PERMANENT TOOTH REPLACEMENT IN CYPRESS",
   heroHeading: "Dental Implants in Cypress, TX",
   heroBody: "Missing teeth affect more than your smile — they impact your confidence, your ability to eat comfortably, and your long-term oral health. At Smile Avenue Family Dentistry in Cypress, Dr. Patrick Vuong and our team provide permanent dental implant solutions using advanced digital planning and our in-house Smile Dental Lab for precise, custom restorations.",

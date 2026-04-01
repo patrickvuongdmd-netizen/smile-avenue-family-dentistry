@@ -7,7 +7,7 @@ const data: ServicePageData = {
   serviceName: "Invisalign",
   serviceSlug: "invisalign",
   metaTitle: "Invisalign Cypress, TX | Clear Aligners for Adults & Teens | Smile Avenue",
-  metaDescription: "Straighten teeth discreetly with Invisalign in Cypress, TX. Custom clear aligners, in-house fabrication, flexible payment. Call (832) 648-1756.",
+  metaDescription: "Invisalign in Cypress, TX — clear aligners with free consultation & digital scanning. 0% financing available. 4.9★ rated provider. Call (832) 648-1756.",
   heroKicker: "CLEAR ALIGNERS IN CYPRESS",
   heroHeading: "Invisalign Clear Aligners in Cypress, TX",
   heroBody: "Crooked, crowded, or gapped teeth do not require metal brackets. Invisalign at Smile Avenue Cypress offers virtually invisible teeth straightening without disrupting your daily life.",

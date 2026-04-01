@@ -7,7 +7,7 @@ const data: NeighborhoodPageData = {
   neighborhoodName: "Towne Lake",
   slug: "towne-lake-dentist",
   metaTitle: "Dentist Near Towne Lake, Cypress TX | Smile Avenue Family Dentistry",
-  metaDescription: "Towne Lake residents: your trusted dentist is just minutes away on Fry Road. Smile Avenue Family Dentistry offers same-day appointments, full-service care. Call (832) 648-1756.",
+  metaDescription: "Towne Lake dentist on Fry Road in Cypress, TX. Same-day & Saturday appointments. Implants, Invisalign, kids & emergency care. 4.9★. Call (832) 648-1756.",
   heroHeading: "Towne Lake's Trusted Family Dentist — Close to Home",
   heroImage: OFFICE_IMAGES.waitingRoom,
   heroSubheading: "Modern dental care for the Towne Lake community, just a short drive on Barker Cypress.",

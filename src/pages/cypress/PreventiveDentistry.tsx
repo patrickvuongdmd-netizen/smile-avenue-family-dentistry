@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Preventive Dentistry",
   serviceSlug: "preventive-dentistry",
   metaTitle: "Preventive Dentistry Cypress, TX | Exams & Cleanings | Smile Avenue",
-  metaDescription: "Comprehensive preventive dentistry in Cypress, TX. Dental exams, professional cleanings, digital X-rays, oral cancer screenings & fluoride treatments. Book today.",
+  metaDescription: "Preventive dentistry in Cypress, TX — exams, cleanings, digital X-rays & oral cancer screenings. Open Saturdays. Most insurance accepted. Book today.",
   heroKicker: "PREVENTIVE CARE IN CYPRESS",
   heroHeading: "Preventive Dentistry in Cypress, TX",
   heroBody: "Prevention is the foundation of a healthy smile. At Smile Avenue Cypress, our preventive dentistry program combines thorough exams, professional cleanings, and advanced digital diagnostics to catch problems early — before they become costly.",
