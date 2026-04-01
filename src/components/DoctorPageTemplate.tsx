@@ -139,9 +139,6 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
                 <div className="space-y-3 font-body text-base text-muted-foreground leading-relaxed">
                   {data.bio.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
-                <div className="flex flex-wrap gap-3 mt-6">
-                  <a href={`tel:${primary.phone}`} className="btn-secondary">Call {primary.phoneFmt}</a>
-                </div>
               </div>
             </div>
           </div>
