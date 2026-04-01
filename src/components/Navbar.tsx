@@ -141,10 +141,12 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center shrink-0">
+          {/* Logo — absolute-centered on mobile, normal flow on desktop */}
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center shrink-0">
             <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="h-12 md:h-[72px] w-auto object-contain" width={200} height={155} />
           </Link>
+          {/* Invisible spacer on mobile to keep justify-between working */}
+          <div className="w-10 md:hidden" />
 
           {/* Desktop Nav — visible at md (768px+) */}
           <div className="hidden md:flex items-center gap-1 lg:gap-4">
@@ -295,14 +297,8 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Mobile — Swish-inspired: Logo | Book an Appointment pill | Hamburger */}
-          <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={() => { setBookingModalOpen(true); }}
-              className="text-xs font-sans font-semibold px-4 py-2 rounded-full whitespace-nowrap transition-colors hover:opacity-90 bg-primary text-white"
-            >
-              Book an Appointment
-            </button>
+          {/* Mobile — Tend-inspired: centered logo, hamburger right */}
+          <div className="md:hidden flex items-center">
             <button
               className="w-10 h-10 flex items-center justify-center text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}
