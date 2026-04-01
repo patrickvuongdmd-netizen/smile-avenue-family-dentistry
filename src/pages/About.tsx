@@ -8,6 +8,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
+import CredibilityBar from "@/components/CredibilityBar";
 import DoctorCard from "@/components/DoctorCard";
 import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
