@@ -76,6 +76,9 @@ const CypressTx = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dentist in Cypress, TX | Fry Rd Family Dentist | Smile Avenue" />
         <meta name="twitter:description" content="4.9★ family dentist in Cypress, TX on Fry Road. Same-day appointments, dental implants, Invisalign. In-house lab. Call (832) 648-1756." />
+        <meta name="twitter:image" content={OFFICE_IMAGES.cypressHero} />
+        <link rel="alternate" hrefLang="en" href="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.smileavenuefamilydentistry.com/cypress-tx/" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Dentist",
@@ -86,6 +89,14 @@ const CypressTx = () => {
           geo: { "@type": "GeoCoordinates", latitude: "29.9691", longitude: "-95.6972" },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "3000", bestRating: "5", worstRating: "1" },
           openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:30", closes: "17:00" }]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
+            { "@type": "ListItem", position: 2, name: "Dentist in Cypress, TX", item: "https://www.smileavenuefamilydentistry.com/cypress-tx/" }
+          ]
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",

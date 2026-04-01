@@ -112,6 +112,32 @@ const Home = () => {
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "Dentist",
+          name: "Smile Avenue Family Dentistry",
+          url: "https://www.smileavenuefamilydentistry.com",
+          telephone: ["+18326481756", "+12818005008"],
+          address: [
+            { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+            { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+          ],
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "5000", bestRating: "5", worstRating: "1" },
+          priceRange: "$$",
+          openingHours: ["Mo-Fr 08:30-17:00", "Sa 08:00-14:00"],
+          sameAs: [
+            "https://www.facebook.com/SmileAvenueFamilyDentistry/",
+            "https://www.instagram.com/smileavenuefamilydentistry/",
+            "https://www.tiktok.com/@smileavenuetx",
+          ],
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX",
           speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
@@ -529,32 +555,6 @@ const Home = () => {
       <MobileStickyBar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <Footer />
       <BackToTop />
-
-      {/* Inline JSON-LD for guaranteed rendering */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Dentist",
-            name: "Smile Avenue Family Dentistry",
-            url: "https://www.smileavenuefamilydentistry.com",
-            telephone: ["+18326481756", "+12818005008"],
-            address: [
-              { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
-              { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
-            ],
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "5000" },
-            priceRange: "$$",
-            openingHours: ["Mo-Fr 08:30-17:00", "Sa 08:00-14:00"],
-            sameAs: [
-              "https://www.facebook.com/SmileAvenueFamilyDentistry/",
-              "https://www.instagram.com/smileavenuefamilydentistry/",
-              "https://www.tiktok.com/@smileavenuetx",
-            ],
-          }),
-        }}
-      />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
     </>
   );
