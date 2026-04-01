@@ -402,6 +402,17 @@ const Home = () => {
         </ScrollReveal>
         </LazySection>
 
+        {/* FAQ */}
+        <LazySection>
+        <section className="section-padding bg-background">
+          <div className="container mx-auto max-w-3xl">
+            <p className="kicker text-center">FAQ</p>
+            <h2 className="section-heading text-center">Frequently Asked Questions</h2>
+            <div className="mt-10"><FaqAccordion items={faqs} /></div>
+          </div>
+        </section>
+        </LazySection>
+
         {/* DOCTORS */}
         <LazySection>
         <ScrollReveal>
