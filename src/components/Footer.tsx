@@ -8,12 +8,12 @@ const Footer = () => {
 
   return (
     <footer className="bg-foreground text-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="inline-block mb-4">
-              <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-20 md:h-24 w-auto" width={240} height={96} />
+            <Link to="/" className="inline-block mb-3">
+              <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-32 md:h-36 w-auto" width={240} height={144} />
             </Link>
             <p className="text-sm font-body leading-relaxed opacity-70 mb-4">
               The dental experience your family deserves. Netflix in every room, warm blankets, and doctors who listen. Two locations in Cypress and Katy, TX.
