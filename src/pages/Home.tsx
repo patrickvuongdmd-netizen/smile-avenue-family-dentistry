@@ -285,22 +285,27 @@ const Home = () => {
         {/* CREDIBILITY BAR */}
         <CredibilityBar />
 
-        {/* SERVICES */}
+        {/* SERVICES — Photo-backed cards inspired by Tend */}
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">WHAT WE DO</p>
             <h2 className="section-heading text-center">Everything Your Family Needs, Under One Roof</h2>
-            <p className="section-body text-center max-w-2xl mx-auto">No referrals, no runaround. From your child's first checkup to your smile makeover, our team handles it all — with an in-house dental lab for faster, more precise results.</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-              {services.map((s, i) => (
-                <Link key={i} to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">{s.icon}</div>
-                  <h3 className="font-display text-lg font-bold text-foreground mb-2">{s.title}</h3>
-                  <p className="text-sm font-body text-muted-foreground mb-3">{s.description}</p>
-                  <span className="text-sm font-sans font-semibold text-primary flex items-center gap-1">Learn More <ChevronRight className="w-4 h-4" /></span>
-                </Link>
-              ))}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+              {services.map((s, i) => {
+                const img = SERVICE_IMAGES[s.imgKey];
+                return (
+                  <Link key={i} to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`} className="rounded-2xl overflow-hidden group relative aspect-[4/3]">
+                    {img && <img src={img.url} alt={img.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={600} height={450} />}
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <h3 className="font-display text-lg font-bold text-white mb-1">{s.title}</h3>
+                      <p className="text-xs font-body text-white/80 mb-2">{s.description}</p>
+                      <span className="text-xs font-sans font-semibold text-white flex items-center gap-1 opacity-80 group-hover:opacity-100 transition-opacity">Learn More <ChevronRight className="w-3.5 h-3.5" /></span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             <div className="text-center mt-8">
               <Link to="/services" className="btn-secondary">View All Services</Link>
