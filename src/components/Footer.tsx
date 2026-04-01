@@ -10,27 +10,31 @@ const Footer = () => {
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <Link to="/" className="inline-block mb-3">
-              <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-32 md:h-36 w-auto" width={240} height={144} />
-            </Link>
-            <p className="text-sm font-body leading-relaxed opacity-70 mb-4">
-              The dental experience your family deserves. Netflix in every room, warm blankets, and doctors who listen. Two locations in Cypress and Katy, TX.
-            </p>
-            <div className="flex items-center gap-3">
-              <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="Facebook">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="Instagram">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="TikTok">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.21 8.21 0 004.76 1.52V7.06a4.84 4.84 0 01-1-.37z"/></svg>
-              </a>
-              <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="Google Business Profile">
-                <Globe className="w-4 h-4" />
-              </a>
+          {/* Brand — spans 2 columns on lg, split into 1/3 logo + 2/3 text */}
+          <div className="col-span-2 grid grid-cols-3 gap-4 items-start lg:col-span-2">
+            <div className="col-span-1">
+              <Link to="/" className="inline-block">
+                <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-28 md:h-32 w-auto" width={240} height={144} />
+              </Link>
+            </div>
+            <div className="col-span-2">
+              <p className="text-sm font-body leading-relaxed opacity-70 mb-4">
+                The dental experience your family deserves. Netflix in every room, warm blankets, and doctors who listen. Two locations in Cypress and Katy, TX.
+              </p>
+              <div className="flex items-center gap-3">
+                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="Facebook">
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="Instagram">
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="TikTok">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.21 8.21 0 004.76 1.52V7.06a4.84 4.84 0 01-1-.37z"/></svg>
+                </a>
+                <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors" aria-label="Google Business Profile">
+                  <Globe className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </div>
 
