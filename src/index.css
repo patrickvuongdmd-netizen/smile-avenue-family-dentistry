@@ -257,3 +257,20 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Accessibility mode */
+.a11y-mode {
+  font-size: 118% !important;
+}
+.a11y-mode a,
+.a11y-mode button {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+.a11y-mode img {
+  outline: 2px solid hsl(var(--foreground)) !important;
+}
+.a11y-mode *:focus-visible {
+  outline: 3px solid hsl(var(--primary)) !important;
+  outline-offset: 2px !important;
+}
