@@ -146,20 +146,28 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 </Link>
                 {activeDropdown === "services" && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
-                    <div className="bg-popover border border-border rounded-xl shadow-xl p-5 w-[540px]">
-                      <div className="grid grid-cols-3 gap-x-6 gap-y-1.5">
-                        {serviceLinks.map((s) => (
-                          <Link
-                            key={s.slug}
-                            to={`${locationPrefix}/${s.slug}`}
-                            className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {s.label}
-                          </Link>
-                        ))}
+                    <div className="bg-popover border border-border rounded-xl shadow-xl p-6 w-[520px]">
+                      <div className="grid grid-cols-2 gap-x-10">
+                        {/* General Care */}
+                        <div>
+                          <p className="text-xs font-sans font-bold uppercase tracking-wider text-primary mb-3">General Care</p>
+                          {generalCare.map((s) => (
+                            <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setActiveDropdown(null)}>
+                              {s.label}
+                            </Link>
+                          ))}
+                        </div>
+                        {/* Specialized Care */}
+                        <div>
+                          <p className="text-xs font-sans font-bold uppercase tracking-wider text-primary mb-3">Specialized Care</p>
+                          {specializedCare.map((s) => (
+                            <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setActiveDropdown(null)}>
+                              {s.label}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                      <div className="border-t border-border mt-3 pt-3">
+                      <div className="border-t border-border mt-4 pt-3">
                         <Link to="/services" className="text-sm font-sans font-semibold text-primary hover:underline" onClick={() => setActiveDropdown(null)}>
                           View All Services →
                         </Link>
