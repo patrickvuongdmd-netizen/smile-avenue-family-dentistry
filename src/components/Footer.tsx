@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Brand — spans 2 columns on lg, split into 1/3 logo + 2/3 text */}
           <div className="grid grid-cols-3 gap-4 items-start lg:col-span-2">
             <div className="col-span-1">
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           {/* Offices — 2-col on mobile */}
-          <div className="grid grid-cols-2 gap-6 md:contents">
+          <div className="grid grid-cols-2 gap-6 lg:contents">
             {/* Cypress */}
             <div>
               <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Cypress Office</h4>
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
 
           {/* Patients & Services — 2-col on mobile */}
-          <div className="grid grid-cols-2 gap-6 md:contents">
+          <div className="grid grid-cols-2 gap-6 lg:contents">
             <div>
               <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Patients & Resources</h4>
               <div className="space-y-2 text-sm font-sans opacity-70">
