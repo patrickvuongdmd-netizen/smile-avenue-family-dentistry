@@ -321,67 +321,54 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       )}
 
       <main id="main-content" className="pb-14 lg:pb-0 ">
-        {/* HERO — Full-width banner with background image */}
+        {/* HERO — Full-bleed immersive banner */}
         <section
-          className="relative min-h-[300px] md:min-h-[400px] flex items-end"
+          className="relative min-h-[85vh] md:min-h-[500px] flex flex-col justify-end"
           style={heroImage ? {
             backgroundImage: `url(${heroImage.url})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center top",
           } : undefined}
         >
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+          {/* Cinematic gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
           <div className="relative z-10 w-full">
-            {/* Breadcrumb — inside the hero, tight to top */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-              <nav aria-label="Breadcrumb" className="mb-4 text-xs font-sans text-white/70">
+            {/* Breadcrumb */}
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <nav aria-label="Breadcrumb" className="mb-4 text-xs font-sans text-white/60">
                 <Link to="/" className="hover:text-white transition-colors">Home</Link>
                 <span className="mx-2" aria-hidden="true">›</span>
                 <Link to={loc.path} className="hover:text-white transition-colors">{loc.name}, TX</Link>
                 <span className="mx-2" aria-hidden="true">›</span>
-                <span className="text-white">{data.serviceName}</span>
+                <span className="text-white/90">{data.serviceName}</span>
               </nav>
             </div>
 
             {/* Hero content */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:pb-14">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:pb-16">
               <div className="max-w-3xl">
-                <p className="text-xs font-semibold tracking-[0.15em] uppercase mb-3 text-primary" style={{ fontFamily: "var(--font-sans)" }}>
+                <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3 text-primary" style={{ fontFamily: "var(--font-sans)" }}>
                   {data.heroKicker}
                 </p>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white" style={{ fontFamily: "var(--font-display)" }}>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-white leading-[1.1]" style={{ fontFamily: "var(--font-display)" }}>
                   {data.heroHeading}
                 </h1>
-                <p className="text-base md:text-lg leading-relaxed mb-6 text-white/85 max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-base md:text-lg leading-relaxed mb-8 text-white/80 max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>
                   {data.heroBody}
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-base !py-3.5 !px-8" aria-label={`Book ${data.serviceName} appointment`}>
                     {data.heroCta1}
                   </button>
-                  <a href={`tel:${loc.phone}`} className="btn-cta-outline" aria-label={`Call ${loc.phoneFormatted}`}>
+                  <a href={`tel:${loc.phone}`} className="btn-cta-outline text-base !py-3.5 !px-8" aria-label={`Call ${loc.phoneFormatted}`}>
                     {data.heroCta2}
                   </a>
                 </div>
-                <p className="text-xs font-sans text-white/60 mt-3">
+                <p className="text-xs font-sans text-white/50 mt-4">
                   ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ 0% financing available
                 </p>
               </div>
-
-              {/* Mobile-only compact hero image for visual engagement */}
-              {heroImage && (
-                <div className="mt-6 md:hidden">
-                  <img
-                    src={heroImage.url}
-                    alt={heroImage.alt}
-                    className="w-full h-40 object-cover rounded-xl border border-white/10 shadow-lg"
-                    loading="eager"
-                    fetchPriority="high"
-                  />
-                </div>
-              )}
             </div>
           </div>
         </section>
