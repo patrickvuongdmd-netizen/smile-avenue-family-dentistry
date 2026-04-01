@@ -4,6 +4,7 @@ import { MapPin, Phone, Clock } from "lucide-react";
 import { useState } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
+import ReviewsWidget from "@/components/ReviewsWidget";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
