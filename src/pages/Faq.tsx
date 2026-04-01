@@ -133,6 +133,18 @@ const Faq = () => {
       ))}
 
       {/* CTA */}
+
+        {/* Video */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">See What Your First Visit Looks Like</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.faq.youtubeId} title={PAGE_VIDEOS.faq.title} />
+            </div>
+          </div>
+        </section>
+
       <section className="gradient-cta py-16 text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Still Have Questions?</h2>

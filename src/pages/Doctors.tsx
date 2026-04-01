@@ -105,6 +105,18 @@ const Doctors = () => {
       </section>
 
       {/* CTA */}
+
+        {/* Video */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">Meet Our Team in Action</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.doctors.youtubeId} title={PAGE_VIDEOS.doctors.title} />
+            </div>
+          </div>
+        </section>
+
       <section className="gradient-cta py-16 text-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Ready to Meet Your New Dentist?</h2>

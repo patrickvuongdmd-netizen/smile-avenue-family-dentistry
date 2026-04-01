@@ -111,6 +111,18 @@ const About = () => {
         </section>
 
         {/* MISSION CTA */}
+
+        {/* Video */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">Get to Know Smile Avenue</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.about.youtubeId} title={PAGE_VIDEOS.about.title} />
+            </div>
+          </div>
+        </section>
+
         <section className="gradient-cta section-padding text-center">
           <div className="container mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
