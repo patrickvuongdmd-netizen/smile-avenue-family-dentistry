@@ -165,7 +165,7 @@ const Home = () => {
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
                 </div>
                 <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4">Book Online</button>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4">Book Online</button>
                   <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center gap-2 text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4"><Phone className="w-4 h-4" />{heroPhoneFmt}</a>
                 </div>
                 <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-2 md:mb-3">
