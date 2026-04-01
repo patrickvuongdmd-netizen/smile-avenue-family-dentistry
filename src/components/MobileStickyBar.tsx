@@ -1,5 +1,5 @@
 import { Phone, Calendar, MapPin } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import BookingLocationModal from "@/components/BookingLocationModal";
 
 interface MobileStickyBarProps {
