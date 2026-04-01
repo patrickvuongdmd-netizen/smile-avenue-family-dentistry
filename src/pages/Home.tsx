@@ -298,11 +298,11 @@ const Home = () => {
                   to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`}
                   className="flex items-start gap-5 bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
                 >
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground transition-colors">
                     {s.icon}
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-bold text-primary mb-1 group-hover:text-primary-dark transition-colors">{s.title}</h3>
+                    <h3 className="font-display text-lg font-bold text-primary mb-1">{s.title}</h3>
                     <p className="text-sm font-body text-muted-foreground leading-relaxed">{s.description}</p>
                   </div>
                 </Link>
