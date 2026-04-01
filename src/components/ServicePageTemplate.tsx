@@ -16,8 +16,11 @@ import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import { ReactNode } from "react";
-import { SERVICE_IMAGES, SERVICE_VIDEOS } from "@/lib/images";
+import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
+import FullWidthPhotoBreak from "@/components/FullWidthPhotoBreak";
+import OfficePhotoGrid from "@/components/OfficePhotoGrid";
+
 
 interface SubService {
   title: string;
@@ -409,6 +412,14 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* PHOTO BREAK — office atmosphere */}
+        <FullWidthPhotoBreak
+          src={OFFICE_IMAGES.treatmentRoom}
+          alt="Modern treatment room at Smile Avenue Family Dentistry"
+          overlayText="Your Comfort Comes First"
+          overlaySubtext="Netflix, warm blankets, and noise-canceling headphones in every room"
+        />
+
         {/* TRUST BADGES */}
         <section className="py-8 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -550,6 +561,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+
+        {/* OFFICE PHOTO GRID */}
+        <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
 
         {/* RELATED SERVICES */}
         {related.length > 0 && (

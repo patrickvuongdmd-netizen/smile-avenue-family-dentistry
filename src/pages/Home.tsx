@@ -4,6 +4,8 @@ import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight, ChevronLeft, ArrowRight, Play } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { useRef, useState } from "react";
+import FullWidthPhotoBreak from "@/components/FullWidthPhotoBreak";
+import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
 import BookingLocationModal from "@/components/BookingLocationModal";
@@ -17,7 +19,7 @@ import TechnologyTrust from "@/components/TechnologyTrust";
 import ScrollReveal from "@/components/ScrollReveal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import LazySection from "@/components/LazySection";
-import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL } from "@/lib/images";
+import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL, SERVICE_IMAGES } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
 import CredibilityBar from "@/components/CredibilityBar";
 import SmileAvenueDifference from "@/components/SmileAveneDifference";
@@ -37,12 +39,12 @@ const trustStats = [
 ];
 
 const services = [
-  { title: "Dental Implants", description: "Replace missing teeth permanently — eat, smile, and live without limits.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
-  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers designed to turn heads.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
-  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets, no lifestyle disruption.", slug: "invisalign", icon: <Zap className="w-6 h-6" /> },
-  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today — call now.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
-  { title: "Preventive Care", description: "Gentle cleanings and thorough exams to protect your family's smiles for life.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" /> },
-  { title: "Sedation Dentistry", description: "Nervous about the dentist? Relax completely with our sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
+  { title: "Dental Implants", description: "Replace missing teeth permanently.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" />, imgKey: "dental-implants" },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" />, imgKey: "cosmetic-dentistry" },
+  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets.", slug: "invisalign", icon: <Zap className="w-6 h-6" />, imgKey: "invisalign" },
+  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" />, imgKey: "emergency-dentist" },
+  { title: "Preventive Care", description: "Gentle cleanings to protect your family's smiles.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" />, imgKey: "dental-cleaning" },
+  { title: "Sedation Dentistry", description: "Nervous? Relax completely with sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" />, imgKey: "sedation-dentistry" },
 ];
 
 const doctors = [
@@ -283,22 +285,27 @@ const Home = () => {
         {/* CREDIBILITY BAR */}
         <CredibilityBar />
 
-        {/* SERVICES */}
+        {/* SERVICES — Photo-backed cards inspired by Tend */}
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <p className="kicker text-center">WHAT WE DO</p>
             <h2 className="section-heading text-center">Everything Your Family Needs, Under One Roof</h2>
-            <p className="section-body text-center max-w-2xl mx-auto">No referrals, no runaround. From your child's first checkup to your smile makeover, our team handles it all — with an in-house dental lab for faster, more precise results.</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-              {services.map((s, i) => (
-                <Link key={i} to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`} className="bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">{s.icon}</div>
-                  <h3 className="font-display text-lg font-bold text-foreground mb-2">{s.title}</h3>
-                  <p className="text-sm font-body text-muted-foreground mb-3">{s.description}</p>
-                  <span className="text-sm font-sans font-semibold text-primary flex items-center gap-1">Learn More <ChevronRight className="w-4 h-4" /></span>
-                </Link>
-              ))}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+              {services.map((s, i) => {
+                const img = SERVICE_IMAGES[s.imgKey];
+                return (
+                  <Link key={i} to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`} className="rounded-2xl overflow-hidden group relative aspect-[4/3]">
+                    {img && <img src={img.url} alt={img.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={600} height={450} />}
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <h3 className="font-display text-lg font-bold text-white mb-1">{s.title}</h3>
+                      <p className="text-xs font-body text-white/80 mb-2">{s.description}</p>
+                      <span className="text-xs font-sans font-semibold text-white flex items-center gap-1 opacity-80 group-hover:opacity-100 transition-opacity">Learn More <ChevronRight className="w-3.5 h-3.5" /></span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             <div className="text-center mt-8">
               <Link to="/services" className="btn-secondary">View All Services</Link>
@@ -311,6 +318,14 @@ const Home = () => {
         <ScrollReveal>
           <SmileAvenueDifference onBook={() => setBookingModalOpen(true)} />
         </ScrollReveal>
+
+        {/* FULL-WIDTH OFFICE PHOTO BREAK */}
+        <FullWidthPhotoBreak
+          src={OFFICE_IMAGES.officeExterior}
+          alt="Smile Avenue Family Dentistry office exterior in Cypress, TX"
+          overlayText="Care That Feels Like Home"
+          overlaySubtext="Netflix in every room · Warm blankets · Digital impressions — no goopy molds"
+        />
 
         {/* TECHNOLOGY TRUST */}
         <ScrollReveal>
@@ -363,7 +378,11 @@ const Home = () => {
           </ScrollReveal>
         </LazySection>
 
-        {/* LOCATIONS WITH LIVE STATUS */}
+        {/* OFFICE PHOTO GRID */}
+        <LazySection>
+          <OfficePhotoGrid />
+        </LazySection>
+
         <LazySection>
           <section className="section-padding bg-background">
             <div className="container mx-auto">
@@ -418,14 +437,27 @@ const Home = () => {
           <InsuranceLogoBar />
         </LazySection>
 
-        {/* SMILE GALLERY CTA */}
+        {/* SMILE GALLERY CTA — with preview images */}
         <LazySection>
           <section className="section-padding section-alt">
-            <div className="container mx-auto text-center max-w-2xl">
-              <p className="kicker">REAL RESULTS</p>
-              <h2 className="section-heading">See Real Patient Transformations</h2>
-              <p className="section-body">Browse before-and-after photos from real Smile Avenue patients — dental implants, veneers, Invisalign, and more.</p>
-              <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
+            <div className="container mx-auto">
+              <p className="kicker text-center">REAL RESULTS</p>
+              <h2 className="section-heading text-center">See Real Patient Transformations</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8 mb-8 max-w-4xl mx-auto">
+                {[
+                  { src: SERVICE_IMAGES["dental-implants"]?.url, alt: "Dental implant transformation" },
+                  { src: SERVICE_IMAGES["veneers"]?.url, alt: "Veneer smile makeover" },
+                  { src: SERVICE_IMAGES["teeth-whitening"]?.url, alt: "Teeth whitening result" },
+                  { src: OFFICE_IMAGES.smileGallery, alt: "Before and after smile transformation" },
+                ].map((photo, i) => (
+                  <Link key={i} to="/smile-gallery" className="aspect-square rounded-xl overflow-hidden group">
+                    <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={300} height={300} />
+                  </Link>
+                ))}
+              </div>
+              <div className="text-center">
+                <Link to="/smile-gallery" className="btn-primary">View Smile Gallery</Link>
+              </div>
             </div>
           </section>
         </LazySection>
