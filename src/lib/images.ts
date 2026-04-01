@@ -4,6 +4,7 @@ import peterKimImg from "@/assets/doctors/peter-kim.png";
 import laithYahyaImg from "@/assets/doctors/laith-yahya.png";
 import sameerBilalImg from "@/assets/doctors/sameer-bilal.png";
 import sarahMarediaImg from "@/assets/doctors/sarah-maredia.png";
+import shayanAlkhiroImg from "@/assets/doctors/shayan-alkhiro.jpg";
 
 export const DOCTOR_IMAGES: Record<string, { url: string; alt: string }> = {
   "patrick-vuong": {
