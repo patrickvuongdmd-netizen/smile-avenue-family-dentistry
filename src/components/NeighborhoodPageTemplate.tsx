@@ -438,7 +438,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                   <span>Mon–Fri 8:30am–5pm</span>
                 </div>
               </div>
-              <button onClick={() => setBookingModalOpen(true)} className="btn-primary w-full text-center">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta w-full text-center">
                 Book Appointment
               </button>
               <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>

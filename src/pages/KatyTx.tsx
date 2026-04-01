@@ -381,7 +381,7 @@ const KatyTx = () => {
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
                   Book at Katy
                 </button>
               </div>

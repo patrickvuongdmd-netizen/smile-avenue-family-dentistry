@@ -381,7 +381,7 @@ const CypressTx = () => {
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
                   Book at Cypress
                 </button>
               </div>

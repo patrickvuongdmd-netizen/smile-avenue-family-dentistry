@@ -213,7 +213,7 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
                     <div className="flex items-start justify-center gap-2"><MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" /><span>{loc.address}</span></div>
                     <div className="flex items-center justify-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${loc.phone}`} className="hover:text-primary">{loc.phoneFmt}</a></div>
                   </div>
-                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">Book at {loc.name}</a>
+                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-cta w-full text-center">Book at {loc.name}</a>
                 </div>
               ))}
             </div>
