@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
+import TrustTicker from "@/components/TrustTicker";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import DoctorCard from "@/components/DoctorCard";
