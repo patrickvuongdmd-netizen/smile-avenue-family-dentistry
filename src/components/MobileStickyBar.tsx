@@ -15,7 +15,7 @@ const KATY_DIRECTIONS = "https://www.google.com/maps/dir//Smile+Avenue+Family+De
 const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: MobileStickyBarProps) => {
   const mapsLink = directionsUrl || (phone === "2818005008" ? KATY_DIRECTIONS : CYPRESS_DIRECTIONS);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
