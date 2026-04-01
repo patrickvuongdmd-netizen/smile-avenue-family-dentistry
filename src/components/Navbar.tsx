@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Globe, Accessibility } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Accessibility } from "lucide-react";
 import BookingLocationModal from "@/components/BookingLocationModal";
 
 interface NavbarProps {
