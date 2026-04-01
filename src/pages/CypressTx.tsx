@@ -135,7 +135,7 @@ const CypressTx = () => {
                   Smile Avenue on Fry Road is the Cypress dentist families actually look forward to visiting. From <Link to="/cypress-tx/dental-cleaning" className="text-primary hover:underline">routine cleanings</Link> and <Link to="/cypress-tx/pediatric-dentistry" className="text-primary hover:underline">pediatric checkups</Link> to <Link to="/cypress-tx/dental-implants" className="text-primary hover:underline">dental implants</Link>, <Link to="/cypress-tx/invisalign" className="text-primary hover:underline">Invisalign</Link>, and <Link to="/cypress-tx/emergency-dentist" className="text-primary hover:underline">same-day emergency visits</Link> — we handle it all under one roof with our in-house dental lab. Proudly serving Bridgeland, Towne Lake, Fairfield, Cy-Fair, and CFISD families.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-4">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
                     Book at Cypress — Takes 60 Seconds
                   </button>
                   <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary">
@@ -381,7 +381,7 @@ const CypressTx = () => {
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
                   Book at Cypress
                 </button>
               </div>

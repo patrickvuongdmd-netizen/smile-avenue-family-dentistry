@@ -364,7 +364,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 )}
 
                 <div className="flex flex-wrap gap-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary" aria-label={`Book ${data.serviceName} appointment`}>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta" aria-label={`Book ${data.serviceName} appointment`}>
                     {data.heroCta1}
                   </button>
                   <a href={`tel:${loc.phone}`} className="btn-secondary" aria-label={`Call ${loc.phoneFormatted}`}>
@@ -507,7 +507,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </p>
               </div>
               <div className="flex gap-3 shrink-0">
-                <button onClick={() => setBookingModalOpen(true)} className="btn-primary">
+                <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
                   Book Online
                 </button>
                 <a href={`tel:${loc.phone}`} className="btn-secondary">
@@ -591,7 +591,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   <span>{loc.hours}</span>
                 </div>
               </div>
-              <button onClick={() => setBookingModalOpen(true)} className="btn-primary w-full text-center">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta w-full text-center">
                 Book Appointment Online
               </button>
               <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>

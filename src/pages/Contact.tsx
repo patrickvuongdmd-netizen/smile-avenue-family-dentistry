@@ -95,8 +95,8 @@ const Contact = () => {
             <h2 className="section-heading">Ready to Book?</h2>
             <p className="section-body">Schedule your appointment online in under 60 seconds — or call us directly.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress" target="_blank" rel="noopener noreferrer" className="btn-primary">Book Cypress Online</a>
-              <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="btn-primary">Book Katy Online</a>
+              <a href="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress" target="_blank" rel="noopener noreferrer" className="btn-cta">Book Cypress Online</a>
+              <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="btn-cta">Book Katy Online</a>
             </div>
             <div className="flex flex-wrap justify-center gap-6 mt-6">
               <a href="tel:8326481756" className="text-sm font-sans font-semibold text-primary hover:underline flex items-center gap-1.5"><Phone className="w-4 h-4" /> Cypress: (832) 648-1756</a>

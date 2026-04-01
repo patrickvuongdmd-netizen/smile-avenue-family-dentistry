@@ -90,7 +90,7 @@ const BookingLocationModal = ({ open, onClose }: BookingLocationModalProps) => {
                 <h3 className="font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                   Smile Avenue {loc.name}
                 </h3>
-                <span className="btn-primary !px-4 !py-2 text-xs shrink-0">
+                <span className="btn-cta !px-4 !py-2 text-xs shrink-0">
                   Book Now
                 </span>
               </div>

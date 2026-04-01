@@ -269,7 +269,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
-              <button onClick={() => setBookingModalOpen(true)} className="btn-primary text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta text-sm !px-4 !py-2.5 lg:!px-7 lg:!py-3.5">
                 Book Now
               </button>
               <a
@@ -395,7 +395,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           <div className="mt-10">
             <button
               onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-              className="btn-primary text-sm font-sans font-bold uppercase tracking-widest !px-8 !py-3 !rounded-full"
+              className="btn-cta text-sm font-sans font-bold uppercase tracking-widest !px-8 !py-3 !rounded-full"
             >
               Book Now
             </button>

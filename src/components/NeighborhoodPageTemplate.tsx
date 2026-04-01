@@ -206,7 +206,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                 <p className="text-lg font-display font-semibold text-foreground mb-2">{data.heroSubheading}</p>
                 <p className="section-body">{data.heroBody}</p>
                 <div className="flex flex-wrap gap-3 mb-4">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-primary">Book Your Visit</button>
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta">Book Your Visit</button>
                   <a href={`tel:${loc.phone}`} className="btn-secondary">Call {loc.phoneFormatted}</a>
                 </div>
                 <p className="text-xs font-sans text-muted-foreground mb-2">
@@ -438,7 +438,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                   <span>Mon–Fri 8:30am–5pm</span>
                 </div>
               </div>
-              <button onClick={() => setBookingModalOpen(true)} className="btn-primary w-full text-center">
+              <button onClick={() => setBookingModalOpen(true)} className="btn-cta w-full text-center">
                 Book Appointment
               </button>
               <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>
