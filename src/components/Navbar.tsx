@@ -408,14 +408,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             >
               <Accessibility className="w-3.5 h-3.5" />
             </button>
-            <span className="text-border">|</span>
-            <Link
-              to={`${locationPrefix}/emergency-dentist`}
-              className="px-1.5 py-0.5 rounded text-destructive/80 hover:text-destructive transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              Emergency
-            </Link>
           </div>
         </div>
       </div>
