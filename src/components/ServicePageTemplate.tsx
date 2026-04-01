@@ -591,7 +591,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="w-4 h-4 text-primary shrink-0" />
-                  <span>Mon–Fri 8:30am–5pm</span>
+                  <span>{loc.hours}</span>
                 </div>
               </div>
               <button onClick={() => setBookingModalOpen(true)} className="btn-primary w-full text-center">
