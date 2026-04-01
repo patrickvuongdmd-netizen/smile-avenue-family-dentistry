@@ -63,7 +63,8 @@ const TrustTicker = () => {
               (window as any).toggleAccessibility();
             }
           }}
-          className="px-1.5 py-0.5 rounded text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+          className="px-1.5 py-0.5 rounded opacity-60 hover:opacity-100 transition-colors"
+          style={{ color: "#666666" }}
           aria-label="Accessibility options"
           title="Accessibility"
         >
