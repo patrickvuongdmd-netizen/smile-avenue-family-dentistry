@@ -81,7 +81,7 @@ const BookOnline = () => {
                     <div className="flex items-center justify-center gap-2"><Phone className="w-4 h-4 text-primary" aria-hidden="true" />{loc.phone}</div>
                     <div className="flex items-center justify-center gap-2"><Clock className="w-4 h-4 text-primary" aria-hidden="true" />{loc.hours}</div>
                   </div>
-                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center" aria-label={`Book appointment at ${loc.name} office`}>Book at {loc.name}</a>
+                  <a href={loc.booking} target="_blank" rel="noopener noreferrer" className="btn-cta w-full text-center" aria-label={`Book appointment at ${loc.name} office`}>Book at {loc.name}</a>
                   <a href={`tel:${loc.phonePlain}`} className="btn-secondary w-full text-center mt-3" aria-label={`Call ${loc.name} office at ${loc.phone}`}>Call to Book</a>
                 </div>
               ))}
