@@ -1,30 +1,30 @@
-import { Star, CreditCard, Shield, Globe, Microscope, FlaskConical, Clock, Heart } from "lucide-react";
-
 const items = [
-  { icon: <Star className="w-3.5 h-3.5" />, text: "5,000+ Five-Star Reviews" },
-  { icon: <CreditCard className="w-3.5 h-3.5" />, text: "0% Financing Available" },
-  { icon: <Shield className="w-3.5 h-3.5" />, text: "Most Insurance Accepted" },
-  { icon: <Globe className="w-3.5 h-3.5" />, text: "Se Habla Español" },
-  { icon: <FlaskConical className="w-3.5 h-3.5" />, text: "In-House Dental Lab" },
-  { icon: <Microscope className="w-3.5 h-3.5" />, text: "Advanced 3D Technology" },
-  { icon: <Clock className="w-3.5 h-3.5" />, text: "Same-Day Appointments" },
-  { icon: <Heart className="w-3.5 h-3.5" />, text: "Family-Friendly Practice" },
+  "Why Smile Avenue?",
+  "Full-Service Family Dentistry",
+  "Soothing, Modern Studios",
+  "No Judgment, Ever",
+  "Outcomes, Not Quotas",
+  "Science-Based Care",
+  "In-House Dental Lab",
+  "Top-Rated Clinical Team",
+  "Se Habla Español",
 ];
 
-// Double the items for seamless infinite scroll
+// Double for seamless infinite scroll
 const doubled = [...items, ...items];
 
 const TrustTicker = () => (
   <div className="bg-primary text-primary-foreground overflow-hidden">
     <div className="flex animate-ticker whitespace-nowrap">
-      {doubled.map((item, i) => (
+      {doubled.map((text, i) => (
         <span
           key={i}
-          className="inline-flex items-center gap-1.5 px-5 py-2 text-xs font-sans font-semibold shrink-0"
+          className={`inline-flex items-center shrink-0 px-4 py-2.5 text-xs tracking-wide font-sans ${
+            i % items.length === 0 ? "font-bold" : "font-medium"
+          }`}
         >
-          <span className="opacity-80">{item.icon}</span>
-          {item.text}
-          <span className="ml-4 opacity-30">·</span>
+          {text}
+          <span className="ml-4 text-primary-foreground/40">·</span>
         </span>
       ))}
     </div>
