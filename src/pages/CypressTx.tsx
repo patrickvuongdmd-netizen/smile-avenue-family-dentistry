@@ -180,6 +180,24 @@ const CypressTx = () => {
           </div>
         </section>
 
+        {/* GOOGLE MAP */}
+        <section className="bg-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="rounded-xl overflow-hidden shadow-md border border-border">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Smile Avenue Family Dentistry Cypress office location on Google Maps"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* ABOUT OUR CYPRESS LOCATION — unique geo content */}
         <ScrollReveal>
         <section className="section-padding bg-background">
