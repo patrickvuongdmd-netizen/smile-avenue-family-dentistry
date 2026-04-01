@@ -13,6 +13,7 @@ const data: ServicePageData = {
   heroCta1: "Book Implant Consultation",
   heroCta2: "Call (281) 800-5008",
   heroImage: "Dental Implants Photo",
+  heroValueProps: ["In-house Smile Dental Lab", "3D-guided implant placement", "Sedation options available", "Most PPO insurance accepted", "0% financing through CareCredit"],
   introKicker: "PERMANENT TOOTH REPLACEMENT",
   introHeading: "What Are Dental Implants?",
   introParas: [

@@ -11,6 +11,7 @@ const data: ServicePageData = {
   heroHeading: "Porcelain Veneers in Katy, TX",
   heroBody: "Transform your smile with custom veneers from our in-house Smile Dental Lab. Each veneer crafted for perfect color match and natural beauty.",
   heroCta1: "Book Veneer Consultation", heroCta2: "Call (281) 800-5008", heroImage: "Veneers Photo",
+  heroValueProps: ["In-house Smile Dental Lab craftsmanship", "Emax & zirconia options", "Digital smile design preview", "Minimal-prep veneers available", "0% financing through CareCredit"],
   introKicker: "ABOUT VENEERS", introHeading: "What Are Porcelain Veneers?",
   introParas: [
     "Veneers are thin porcelain shells bonded to the front of your teeth. They fix chips, stains, gaps, and uneven teeth — delivering a dramatic yet natural-looking transformation.",
