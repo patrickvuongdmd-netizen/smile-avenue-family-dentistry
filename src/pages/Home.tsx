@@ -404,11 +404,11 @@ const Home = () => {
 
         {/* FAQ */}
         <LazySection>
-        <section className="section-padding bg-background">
+        <section className="section-padding gradient-cta">
           <div className="container mx-auto max-w-3xl">
-            <p className="kicker text-center">FAQ</p>
-            <h2 className="section-heading text-center">Frequently Asked Questions</h2>
-            <div className="mt-10"><FaqAccordion items={faqs} /></div>
+            <p className="kicker text-center text-white/70">FAQ</p>
+            <h2 className="section-heading text-center text-white">Frequently Asked Questions</h2>
+            <div className="mt-10"><FaqAccordion items={faqs} variant="dark" /></div>
           </div>
         </section>
         </LazySection>
