@@ -632,7 +632,8 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => fireConversion(bookLabel)}
-            className="flex items-center justify-center gap-2 text-sm font-sans font-bold min-h-[48px] bg-primary text-primary-foreground"
+            className="flex items-center justify-center gap-2 text-sm font-sans font-bold min-h-[48px]"
+            style={{ backgroundColor: "hsl(40 63% 58%)", color: "#fff" }}
           >
             Book Now
           </a>
