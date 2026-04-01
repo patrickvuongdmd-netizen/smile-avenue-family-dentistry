@@ -4,6 +4,7 @@ import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, Building, GraduationCap, ShoppingBag, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -108,6 +109,8 @@ const KatyTx = () => {
           url: "https://www.smileavenuefamilydentistry.com/katy-tx/"
         })}</script>
       </Helmet>
+      <TrustTicker />
+
       <Navbar phone={KATY_PHONE} phoneFormatted={KATY_PHONE_FORMATTED} bookingUrl={KATY_BOOKING} />
       <TrustStrip />
 

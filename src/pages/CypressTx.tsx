@@ -4,6 +4,7 @@ import useDocTitle from "@/hooks/use-doc-title";
 import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, Building, GraduationCap, TreePine, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -107,6 +108,8 @@ const CypressTx = () => {
           url: "https://www.smileavenuefamilydentistry.com/cypress-tx/"
         })}</script>
       </Helmet>
+      <TrustTicker />
+
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
 

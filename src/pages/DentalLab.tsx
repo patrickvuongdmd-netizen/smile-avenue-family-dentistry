@@ -5,6 +5,7 @@ import { Zap, ScanLine, Clock, CheckCircle, Shield, Sparkles } from "lucide-reac
 import { PAGE_VIDEOS } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
@@ -56,6 +57,8 @@ const DentalLab = () => {
         <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
+      <TrustTicker />
+
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
 

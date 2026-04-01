@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Search, MapPin, ArrowRight, SmilePlus } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
@@ -40,6 +41,8 @@ const NotFound = () => {
         <title>Page Not Found | Smile Avenue Family Dentistry</title>
         <meta name="description" content="The page you're looking for doesn't exist. Navigate back to Smile Avenue Family Dentistry." />
       </Helmet>
+      <TrustTicker />
+
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
 
