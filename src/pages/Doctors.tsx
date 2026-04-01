@@ -32,6 +32,13 @@ const Doctors = () => {
       <title>Meet Our Dentists | Smile Avenue Dental</title>
       <meta name="description" content="Meet the experienced dentists at Smile Avenue Dental in Cypress and Katy, TX. Our team of skilled professionals is dedicated to your oral health." />
       <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/doctors/" />
+        <meta property="og:title" content="Meet Our Dentists | Smile Avenue Dental" />
+        <meta property="og:description" content="Meet the experienced dentists at Smile Avenue in Cypress and Katy, TX." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/doctors/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
     <Navbar phone={PHONE} phoneFormatted={PHONE_FMT} bookingUrl={BOOKING} />
     <TrustStrip />

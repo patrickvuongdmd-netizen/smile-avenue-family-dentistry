@@ -6,6 +6,8 @@ import { Search, Clock, CalendarDays } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 import { BLOG_POSTS, BLOG_CATEGORIES } from "@/lib/blog-data";
 
 const CYPRESS_PHONE = "8326481756";
@@ -31,6 +33,7 @@ const Blog = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Dental Health Blog | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Expert dental health tips, treatment guides, and oral care advice from the doctors at Smile Avenue Family Dentistry in Cypress and Katy, TX." />
@@ -42,8 +45,9 @@ const Blog = () => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav className="mb-6 text-xs font-sans text-muted-foreground">

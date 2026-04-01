@@ -5,6 +5,8 @@ import { Shield, CreditCard, Phone, ArrowRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -21,14 +23,23 @@ const Insurance = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Insurance & Financing | Smile Avenue Family Dentistry</title>
         <meta name="description" content="We accept most major dental insurance plans. Financing available through CareCredit and Sunbit. No insurance? Ask about our membership plan." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/insurance/" />
+        <meta property="og:title" content="Insurance & Financing | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="We accept most major dental insurance plans. Financing via CareCredit and Sunbit." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/insurance/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav className="mb-6 text-xs font-sans text-muted-foreground">

@@ -5,6 +5,8 @@ import { MapPin, Phone, Clock, Star, Shield, Calendar, Users, Check } from "luci
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -58,14 +60,23 @@ const Locations = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Locations | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Two convenient Houston-area locations in Cypress and Katy, TX. Serving Bridgeland, Cinco Ranch, Fairfield & surrounding communities. Book your visit today." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/convenient-locations/" />
+        <meta property="og:title" content="Locations | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Two convenient Houston-area locations in Cypress and Katy, TX." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/convenient-locations/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">

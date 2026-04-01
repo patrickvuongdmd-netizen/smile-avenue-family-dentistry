@@ -5,6 +5,8 @@ import { Check, X, Shield, Heart, DollarSign } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 import FaqAccordion from "@/components/FaqAccordion";
 
 const CYPRESS_PHONE = "8326481756";
@@ -47,14 +49,23 @@ const MembershipPlan = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Membership Plan — No Insurance? No Problem | Smile Avenue</title>
         <meta name="description" content="Save on dental care without insurance. Smile Avenue's membership plan includes cleanings, exams, X-rays, and 15% off treatments. From $25/month." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/membership-plan/" />
+        <meta property="og:title" content="Membership Plan — No Insurance? No Problem | Smile Avenue" />
+        <meta property="og:description" content="Save on dental care without insurance. Includes cleanings, exams, X-rays, and 15% off treatments." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/membership-plan/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         {/* Hero */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center max-w-3xl">

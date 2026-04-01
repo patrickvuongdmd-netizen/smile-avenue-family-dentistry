@@ -5,6 +5,8 @@ import { Phone, MapPin, Clock, Check, Sparkles, Shield, Heart, Star } from "luci
 import Navbar from "@/components/Navbar";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
+import SkipToContent from "@/components/SkipToContent";
 import TestimonialCard from "@/components/TestimonialCard";
 
 const CYPRESS_PHONE = "8326481756";
@@ -33,14 +35,23 @@ const FreeConsultation = () => {
 
   return (
     <>
+      <SkipToContent />
       <Helmet>
         <title>Free Dental Consultation | Smile Avenue Family Dentistry</title>
         <meta name="description" content="Schedule your free dental consultation at Smile Avenue. Get expert advice on implants, cosmetic dentistry, Invisalign, and more — no obligation." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/free-consultation/" />
+        <meta property="og:title" content="Free Dental Consultation | Smile Avenue Family Dentistry" />
+        <meta property="og:description" content="Schedule your free dental consultation. Expert advice on implants, cosmetic dentistry, Invisalign." />
+        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/free-consultation/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
+        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <TrustStrip />
 
-      <main className="pb-14 lg:pb-0">
+      <main id="main-content" className="pb-14 lg:pb-0">
         {/* Hero + Form */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
