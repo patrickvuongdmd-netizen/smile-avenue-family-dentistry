@@ -70,6 +70,7 @@ export interface LandingPageData {
   faqs: FaqItem[];
   finalCtaHeadline: string;
   finalCtaBody: string;
+  darkHeader?: boolean;
 }
 
 /* ── Location data ─────────────────────────────────────────── */
@@ -224,11 +225,11 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
       </Helmet>
 
       {/* ═══ STICKY HEADER ═══ */}
-      <header className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur-sm shadow-sm border-b border-border">
+      <header className={`fixed top-0 inset-x-0 z-50 backdrop-blur-sm shadow-sm border-b ${data.darkHeader ? "bg-foreground/95 border-foreground/20 text-background" : "bg-background/95 border-border"}`}>
         <div className="flex items-center justify-between px-4 py-2.5 max-w-5xl mx-auto">
           <a href="/" aria-label="Smile Avenue Home">
-            <img src="/logo-mark.webp" alt="Smile Avenue Family Dentistry" className="h-8 w-auto sm:hidden" width={32} height={32} />
-            <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="hidden sm:block h-12 w-auto" width={160} height={48} />
+            <img src={data.darkHeader ? "/favicon-192.png" : "/logo-mark.webp"} alt="Smile Avenue Family Dentistry" className="h-8 w-auto sm:hidden" width={32} height={32} />
+            <img src={data.darkHeader ? "/logo-white.webp" : "/logo-full.webp"} alt="Smile Avenue Family Dentistry" className="hidden sm:block h-12 w-auto" width={160} height={48} />
           </a>
           <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="hidden sm:flex items-center gap-1.5 text-sm font-sans font-semibold text-primary-dark">
             <Phone className="w-4 h-4" />{loc.phoneFormatted}
