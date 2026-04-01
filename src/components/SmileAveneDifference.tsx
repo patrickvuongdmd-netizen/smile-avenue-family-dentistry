@@ -51,7 +51,7 @@ const SmileAvenueDifference = ({ onBook }: Props) => (
 
           <button
             onClick={onBook}
-            className="btn-primary"
+            className="btn-cta"
           >
             Book Your Visit
           </button>

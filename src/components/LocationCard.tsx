@@ -62,7 +62,7 @@ const LocationCard = ({ name, address, phone, phoneRaw, hours, satHours, image, 
           <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary shrink-0" /><a href={`tel:${phoneRaw}`} className="hover:text-primary">{phone}</a></div>
           <div className="flex items-start gap-2"><Clock className="w-4 h-4 mt-0.5 text-primary shrink-0" /><span>{hours}{satHours ? ` · ${satHours}` : ""}</span></div>
         </div>
-        <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block">
+        <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-cta w-full text-center block">
           Book Now
         </a>
       </div>

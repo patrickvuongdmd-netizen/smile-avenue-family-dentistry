@@ -14,7 +14,7 @@ const TaglineBanner = ({ onBook }: Props) => (
         </p>
         <button
           onClick={onBook}
-          className="btn-primary shrink-0 !rounded-full"
+          className="btn-cta shrink-0 !rounded-full"
         >
           Book Now
         </button>
