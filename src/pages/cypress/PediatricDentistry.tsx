@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Your Child's Visit",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Pediatric Dentistry",
+  heroValueProps: ["Fun, kid-friendly environment", "Netflix in every room & warm blankets", "Gentle sedation options for anxious kids", "Sealants, fluoride & early orthodontic screening", "Most insurance covers children's preventive care"],
   introKicker: "GENTLE CARE FOR LITTLE SMILES",
   introHeading: "Why Early Dental Care Matters",
   introParas: [

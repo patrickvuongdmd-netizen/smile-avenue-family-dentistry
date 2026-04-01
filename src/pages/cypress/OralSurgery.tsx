@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Surgical Consultation",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Oral Surgery",
+  heroValueProps: ["In-office surgery — no hospital visit needed", "IV sedation for complete comfort", "3D CBCT imaging for precise planning", "Wisdom teeth, bone grafting & more", "Most insurance accepted · 0% financing"],
   introKicker: "IN-OFFICE SURGICAL CARE",
   introHeading: "Oral Surgery Services",
   introParas: [

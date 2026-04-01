@@ -11,6 +11,7 @@ const data: ServicePageData = {
   heroHeading: "Oral Surgery in Katy, TX",
   heroBody: "Smile Avenue Katy provides in-office oral surgery including wisdom teeth removal, bone grafting, and surgical extractions with IV sedation for comfort.",
   heroCta1: "Book Surgical Consultation", heroCta2: "Call (281) 800-5008", heroImage: "Oral Surgery Photo",
+  heroValueProps: ["In-office surgery — no hospital visit needed", "IV sedation for complete comfort", "3D CBCT imaging for precise planning", "Wisdom teeth, bone grafting & more", "Most insurance accepted · 0% financing"],
   introKicker: "ABOUT ORAL SURGERY", introHeading: "When Is Oral Surgery Needed?",
   introParas: [
     "Oral surgery services include wisdom teeth removal, bone grafting for implant preparation, sinus lifts, surgical extractions, and soft tissue procedures. All performed in-office with IV sedation available — no hospital visits needed.",

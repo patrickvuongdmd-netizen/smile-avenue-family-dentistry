@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Denture Consultation",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Dentures",
+  heroValueProps: ["Full, partial & implant-supported options", "Custom-crafted in our in-house lab", "Natural appearance & comfortable fit", "Same-day relines & repairs available", "Most insurance accepted · 0% financing"],
   introKicker: "TOOTH REPLACEMENT OPTIONS",
   introHeading: "Modern Denture Solutions",
   introParas: [

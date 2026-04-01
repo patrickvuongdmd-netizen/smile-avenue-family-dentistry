@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Anxiety-Free Visit",
   heroCta2: "Call (832) 648-1756",
   heroImage: "Sedation Dentistry",
+  heroValueProps: ["Nitrous oxide, oral & IV sedation options", "Warm blankets, Netflix & noise-canceling headphones", "Ideal for dental anxiety & gag reflex", "Experienced, gentle team", "Most insurance accepted · 0% financing"],
   introKicker: "RELAXATION OPTIONS",
   introHeading: "Sedation Options for Every Comfort Level",
   introParas: [

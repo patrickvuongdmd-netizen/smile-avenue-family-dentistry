@@ -13,6 +13,7 @@ const data: ServicePageData = {
   heroCta1: "Book Appointment",
   heroCta2: "Call (281) 800-5008",
   heroImage: "Root Canal Photo",
+  heroValueProps: ["Gentle, virtually painless procedure", "Sedation options for complete comfort", "Save your natural tooth in one visit", "In-house lab for fast crown turnaround", "Most insurance accepted · 0% financing"],
   introKicker: "SAVE YOUR NATURAL TOOTH",
   introHeading: "Modern Root Canal Treatment",
   introParas: [

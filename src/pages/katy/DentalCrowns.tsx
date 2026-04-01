@@ -13,6 +13,7 @@ const data: ServicePageData = {
   heroCta1: "Book Crown Appointment",
   heroCta2: "Call (281) 800-5008",
   heroImage: "Dental Crowns Photo",
+  heroValueProps: ["In-house Smile Dental Lab for precise fit", "Porcelain & zirconia options", "Digital impressions — no goopy molds", "Faster turnaround than outside labs", "Most insurance accepted · 0% financing"],
   introKicker: "CUSTOM CROWN RESTORATIONS",
   introHeading: "Precision Crowns from Our In-House Lab",
   introParas: [

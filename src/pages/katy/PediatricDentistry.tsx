@@ -11,6 +11,7 @@ const data: ServicePageData = {
   heroHeading: "Pediatric Dentistry in Katy, TX",
   heroBody: "At Smile Avenue Katy, we make kids dental visits fun and educational, building positive habits from the first appointment. Families across Cinco Ranch and Firethorne trust us with their children.",
   heroCta1: "Book Your Child's Visit", heroCta2: "Call (281) 800-5008", heroImage: "Pediatric Dentistry Photo",
+  heroValueProps: ["Fun, kid-friendly environment", "Netflix in every room & warm blankets", "Gentle sedation options for anxious kids", "Sealants, fluoride & early orthodontic screening", "Most insurance covers children's preventive care"],
   introKicker: "ABOUT PEDIATRIC DENTISTRY", introHeading: "Dental Care for Growing Smiles",
   introParas: [
     "Children have unique dental needs that evolve as they grow. The AAPD recommends a first dental visit by age 1. Baby teeth are critical for speech, nutrition, and guiding permanent teeth into proper position.",

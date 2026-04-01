@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book All-on-X Consultation",
   heroCta2: "Call (832) 648-1756",
   heroImage: "All-on-X Implants",
+  heroValueProps: ["New teeth in one day — walk out smiling", "3D-guided surgery for precision", "In-house lab for custom prosthesis", "IV sedation for complete comfort", "0% financing · Most insurance accepted"],
   introKicker: "FULL MOUTH IMPLANTS",
   introHeading: "What Are All-on-X Implants?",
   introParas: [

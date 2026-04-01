@@ -11,6 +11,7 @@ const data: ServicePageData = {
   heroHeading: "Tooth Extraction in Katy, TX",
   heroBody: "When extraction is necessary, Smile Avenue Katy performs gentle procedures with sedation options. We discuss replacement options to restore your smile.",
   heroCta1: "Book Extraction Appointment", heroCta2: "Call (281) 800-5008", heroImage: "Tooth Extraction Photo",
+  heroValueProps: ["Gentle technique for minimal discomfort", "Sedation options available", "Same-day emergency extractions", "Tooth replacement options discussed at visit", "Most insurance accepted · 0% financing"],
   introKicker: "ABOUT TOOTH EXTRACTIONS", introHeading: "When Is Extraction Necessary?",
   introParas: [
     "Extractions are needed for severely decayed teeth, cracked or fractured teeth, impacted wisdom teeth, overcrowded teeth, and failed root canals. Both simple and surgical options are available.",

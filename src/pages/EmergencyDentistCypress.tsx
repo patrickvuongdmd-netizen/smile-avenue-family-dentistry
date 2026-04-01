@@ -14,6 +14,7 @@ const data: ServicePageData = {
   heroCta1: "Book Emergency Appointment",
   heroCta2: "Call (832) 648-1756 Now",
   heroImage: "Emergency Dentist",
+  heroValueProps: ["Same-day emergency appointments", "Walk-ins welcome — no referral needed", "Sedation available for pain & anxiety", "After-hours emergency line", "Most insurance accepted"],
   introKicker: "UNDERSTANDING DENTAL EMERGENCIES",
   introHeading: "What Is a Dental Emergency?",
   introParas: [

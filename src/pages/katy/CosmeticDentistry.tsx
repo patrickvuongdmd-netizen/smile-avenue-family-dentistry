@@ -13,6 +13,7 @@ const data: ServicePageData = {
   heroCta1: "Book Cosmetic Consultation",
   heroCta2: "Call (281) 800-5008",
   heroImage: "Cosmetic Dentistry Photo",
+  heroValueProps: ["Compassionate, judgment-free cosmetic care", "In-house Smile Dental Lab for custom veneers & crowns", "Flexible payment and 0% financing options", "Help navigating your insurance coverage", "Digital smile design previews before treatment begins"],
   introKicker: "TRANSFORM YOUR SMILE",
   introHeading: "Cosmetic Dentistry Options",
   introParas: [
