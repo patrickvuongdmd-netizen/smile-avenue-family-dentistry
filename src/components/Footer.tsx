@@ -61,10 +61,10 @@ const Footer = () => {
             <div>
               <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Katy Office</h4>
               <div className="space-y-3 text-sm font-sans opacity-70">
-                <div className="flex items-start gap-2">
+                <a href="https://maps.google.com/?q=Smile+Avenue+Family+Dentistry+23541+Westheimer+Pkwy+Ste+%23170+Katy+TX+77494" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:opacity-100 transition-opacity">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                   <span>23541 Westheimer Pkwy Ste #170<br />Katy, TX 77494</span>
-                </div>
+                </a>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 shrink-0" />
                   <a href="tel:2818005008" className="hover:opacity-100 transition-opacity">(281) 800-5008</a>
