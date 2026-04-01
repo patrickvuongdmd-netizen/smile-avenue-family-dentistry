@@ -6,7 +6,7 @@ const data: ServicePageData = {
   serviceName: "Root Canal",
   serviceSlug: "root-canal",
   metaTitle: "Root Canal Katy, TX | Gentle, Pain-Free Treatment | Smile Avenue",
-  metaDescription: "Root canal in Katy, TX — painless treatment with sedation options. Save your natural tooth in one visit. Insurance & 0% financing accepted. Call (281) 800-5008.",
+  metaDescription: "Root canal in Katy, TX — painless treatment with sedation options. Save your natural tooth in one visit. Insurance & 0% financing. Call (281) 800-5008.",
   heroKicker: "GENTLE ROOT CANAL IN KATY",
   heroHeading: "Root Canal Treatment in Katy, TX",
   heroBody: "Modern root canal at Smile Avenue Katy is nothing like its reputation. Gentle technique, sedation options, and our in-house lab for fast crown turnaround make it comfortable.",

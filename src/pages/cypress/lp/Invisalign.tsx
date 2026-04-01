@@ -6,7 +6,7 @@ const data: LandingPageData = {
   location: "cypress",
   pageType: "invisalign",
   metaTitle: "Invisalign Cypress TX | Free Consultation | Clear Aligners | Smile Avenue",
-  metaDescription: "Straighter teeth without metal braces. Invisalign clear aligners for teens and adults in Cypress, TX. Free consultation & flexible financing. 4.9★ rated. Book today.",
+  metaDescription: "Invisalign clear aligners for teens & adults in Cypress, TX. Free consultation & flexible financing. 4.9★ rated. Book today.",
   heroHeadline: "Straight Teeth. No Metal. No Lifestyle Disruption.",
   heroSubheadline: "Invisalign clear aligners for teens and adults in Cypress. Custom-fitted, virtually invisible, and removable. Your free consultation includes a 3D smile preview — see your results before you start.",
   heroCtaLabel: "Book Your Free Consultation",
