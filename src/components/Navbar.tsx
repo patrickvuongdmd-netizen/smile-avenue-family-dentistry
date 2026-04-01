@@ -56,6 +56,19 @@ type DropdownKey = "services" | "patients" | "about" | "locations" | null;
 const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null);
+  const [navHidden, setNavHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      // At top: always show. Scrolling down: hide. Scrolling up: show.
+      setNavHidden(y > 50 && y > lastScrollY.current);
+      lastScrollY.current = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -124,7 +137,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
   return (
     <>
-    <nav className="sticky top-0 z-[1000] bg-background/95 backdrop-blur-md border-b border-border" ref={navRef}>
+    <nav className={`sticky top-0 z-[1000] bg-background/95 backdrop-blur-md border-b border-border transition-transform duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"}`} ref={navRef}>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-20">
