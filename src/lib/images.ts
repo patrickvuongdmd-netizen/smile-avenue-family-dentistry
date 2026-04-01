@@ -83,6 +83,12 @@ export const OFFICE_IMAGES = {
   coffeeStation: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-6.webp",
   teamPhoto: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/team-img.jpg",
   smileGallery: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-bf.webp",
+  // Additional office & lifestyle photos
+  officeExterior: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour.webp",
+  operatory2: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-5.webp",
+  receptionDesk: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-contact-us.webp",
+  gallery1: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-gallery-7.jpg",
+  gallery2: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
 };
 
 export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
