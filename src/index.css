@@ -137,19 +137,20 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200;
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-200;
     font-family: var(--font-sans);
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
+    box-shadow: 0 2px 8px hsl(var(--primary) / 0.25);
   }
   .btn-primary:hover {
     background-color: hsl(var(--primary-dark));
     transform: translateY(-1px);
-    box-shadow: 0 4px 14px hsl(var(--primary) / 0.35);
+    box-shadow: 0 6px 20px hsl(var(--primary) / 0.4);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 border-2;
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-200 border-2;
     font-family: var(--font-sans);
     border-color: hsl(var(--primary));
     color: hsl(var(--primary));
@@ -160,26 +161,29 @@
   }
 
   .btn-cta-light {
-    @apply inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200;
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-200;
     font-family: var(--font-sans);
     background-color: hsl(0 0% 100%);
     color: hsl(var(--primary-dark));
   }
   .btn-cta-light:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 14px hsl(0 0% 0% / 0.2);
+    box-shadow: 0 6px 20px hsl(0 0% 0% / 0.2);
   }
 
   .btn-cta-outline {
-    @apply inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 border-2;
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-base tracking-wide transition-all duration-200 border-2;
     font-family: var(--font-sans);
-    border-color: hsl(0 0% 100% / 0.6);
+    border-color: hsl(0 0% 100% / 0.8);
     color: hsl(0 0% 100%);
-    background: transparent;
+    background: hsl(0 0% 100% / 0.08);
+    backdrop-filter: blur(4px);
   }
   .btn-cta-outline:hover {
-    background-color: hsl(0 0% 100% / 0.12);
+    background-color: hsl(0 0% 100% / 0.18);
     border-color: hsl(0 0% 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px hsl(0 0% 100% / 0.15);
   }
 
   .gradient-cta {
