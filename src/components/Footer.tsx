@@ -111,11 +111,12 @@ const Footer = () => {
             <h4 className="text-sm font-sans font-semibold mb-1">Ready to Book?</h4>
             <p className="text-xs font-sans opacity-60 mb-4">Schedule your appointment online — takes less than 60 seconds.</p>
             <div className="flex gap-3 justify-center">
-              <a href="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors shrink-0">
+              <a href="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress" target="_blank" rel="noopener noreferrer" className="flex-1 max-w-[200px] py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors text-center">
                 Book Cypress
               </a>
-              <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors shrink-0">
+              <a href="https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" target="_blank" rel="noopener noreferrer" className="flex-1 max-w-[200px] py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-sans font-semibold hover:bg-primary/90 transition-colors text-center">
                 Book Katy
+              </a>
               </a>
             </div>
           </div>
