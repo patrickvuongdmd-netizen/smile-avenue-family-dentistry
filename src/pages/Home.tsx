@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight } from "lucide-react";
+import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight, ChevronLeft } from "lucide-react";
+import { useRef } from "react";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
 import BookingLocationModal from "@/components/BookingLocationModal";
@@ -74,6 +75,14 @@ const Home = () => {
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
+  const pillCarouselRef = useRef<HTMLDivElement>(null);
+
+  const scrollCarousel = (dir: "left" | "right") => {
+    const el = pillCarouselRef.current;
+    if (!el) return;
+    const scrollAmount = el.clientWidth * 0.8;
+    el.scrollBy({ left: dir === "right" ? scrollAmount : -scrollAmount, behavior: "smooth" });
+  };
 
   const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
   const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
@@ -252,37 +261,48 @@ const Home = () => {
         </section>
 
         {/* SERVICE PILL CAROUSEL */}
-        <section className="py-6 bg-background overflow-hidden">
-          <div className="relative">
-            <div className="flex gap-3 overflow-x-auto scrollbar-hide px-4 sm:px-6 lg:px-8 snap-x snap-mandatory pb-2">
+        <section className="py-8 bg-muted/30 border-y border-border">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-sm font-sans font-semibold text-muted-foreground tracking-wide uppercase">Explore Our Services</h2>
+              <div className="flex gap-2">
+                <button onClick={() => scrollCarousel("left")} className="w-8 h-8 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll left">
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button onClick={() => scrollCarousel("right")} className="w-8 h-8 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll right">
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+            <div ref={pillCarouselRef} className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2 -mx-1 px-1">
               {[
-                { label: "Dental Implants", slug: "dental-implants", emoji: "🦷" },
-                { label: "Invisalign®", slug: "invisalign", emoji: "✨" },
-                { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry", emoji: "💎" },
-                { label: "Emergency Dentist", slug: "emergency-dentist", emoji: "🚨" },
-                { label: "Teeth Whitening", slug: "teeth-whitening", emoji: "⚡" },
-                { label: "Veneers", slug: "veneers", emoji: "😁" },
-                { label: "Dental Crowns", slug: "dental-crowns", emoji: "👑" },
-                { label: "Cleanings & Exams", slug: "dental-cleaning", emoji: "🪥" },
-                { label: "Sedation Dentistry", slug: "sedation-dentistry", emoji: "😌" },
-                { label: "Kids Dentistry", slug: "pediatric-dentistry", emoji: "🧒" },
-                { label: "Root Canal", slug: "root-canal", emoji: "🔧" },
-                { label: "Dentures", slug: "dentures", emoji: "😊" },
+                { label: "Dental Implants", slug: "dental-implants", emoji: "🦷", desc: "Permanent tooth replacement" },
+                { label: "Invisalign®", slug: "invisalign", emoji: "✨", desc: "Clear aligner therapy" },
+                { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry", emoji: "💎", desc: "Smile makeovers & veneers" },
+                { label: "Emergency Dentist", slug: "emergency-dentist", emoji: "🚨", desc: "Same-day urgent care" },
+                { label: "Teeth Whitening", slug: "teeth-whitening", emoji: "⚡", desc: "Professional brightening" },
+                { label: "Veneers", slug: "veneers", emoji: "😁", desc: "Custom porcelain shells" },
+                { label: "Dental Crowns", slug: "dental-crowns", emoji: "👑", desc: "Durable tooth restoration" },
+                { label: "Cleanings & Exams", slug: "dental-cleaning", emoji: "🪥", desc: "Preventive hygiene visits" },
+                { label: "Sedation Dentistry", slug: "sedation-dentistry", emoji: "😌", desc: "Anxiety-free treatment" },
+                { label: "Kids Dentistry", slug: "pediatric-dentistry", emoji: "🧒", desc: "Gentle pediatric care" },
+                { label: "Root Canal", slug: "root-canal", emoji: "🔧", desc: "Pain-free endodontics" },
+                { label: "Dentures", slug: "dentures", emoji: "😊", desc: "Full & partial options" },
               ].map((pill) => (
                 <Link
                   key={pill.slug}
                   to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${pill.slug}`}
-                  className="snap-start shrink-0 flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-card text-sm font-sans font-medium text-foreground hover:border-primary hover:bg-primary/5 hover:text-primary transition-all whitespace-nowrap shadow-sm"
+                  className="snap-start shrink-0 w-[calc(33.333%-0.75rem)] min-w-[220px] flex items-center gap-3 px-5 py-4 rounded-xl border border-border bg-card text-foreground hover:border-primary hover:shadow-md hover:bg-primary/5 transition-all group"
                 >
-                  <span className="text-base">{pill.emoji}</span>
-                  {pill.label}
-                  <ChevronRight className="w-3.5 h-3.5 text-muted-foreground" />
+                  <span className="text-2xl">{pill.emoji}</span>
+                  <div className="min-w-0">
+                    <span className="text-sm font-sans font-semibold block">{pill.label}</span>
+                    <span className="text-xs font-sans text-muted-foreground">{pill.desc}</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-muted-foreground ml-auto shrink-0 group-hover:text-primary transition-colors" />
                 </Link>
               ))}
             </div>
-            {/* Fade edges */}
-            <div className="absolute top-0 left-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-            <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none" />
           </div>
         </section>
 
