@@ -51,9 +51,9 @@ const doctors = [
   { name: "Dr. Patrick Vuong", credentials: "DMD", role: "Founder", href: "/doctors/patrick-vuong-dmd", imgKey: "patrick-vuong" },
   { name: "Dr. Peter Kim", credentials: "DDS", role: "General Dentist", href: "/doctors/peter-kim-dds", imgKey: "peter-kim" },
   { name: "Dr. Laith Yahya", credentials: "DDS", role: "General Dentist", href: "/doctors/laith-yahya-dds", imgKey: "laith-yahya" },
-  { name: "Dr. Sameer Bilal", credentials: "DDS", role: "General Dentist", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
-  { name: "Dr. Sarah Maredia", credentials: "DDS", role: "Dentist", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
-  { name: "Dr. Shayan Alkhiro", credentials: "DDS", role: "Dentist", href: "/doctors/shayan-alkhiro-dds", imgKey: "shayan-alkhiro" },
+  { name: "Dr. Sameer Bilal", credentials: "DDS", role: "General & Cosmetic Dentist", href: "/doctors/sameer-bilal-dds", imgKey: "sameer-bilal" },
+  { name: "Dr. Sarah Maredia", credentials: "DDS", role: "General Dentist", href: "/doctors/sarah-maredia-dds", imgKey: "sarah-maredia" },
+  { name: "Dr. Shayan Alkhiro", credentials: "DDS", role: "General Dentist", href: "/doctors/shayan-alkhiro-dds", imgKey: "shayan-alkhiro" },
 ];
 
 const faqs = [

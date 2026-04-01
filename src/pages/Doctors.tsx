@@ -13,12 +13,12 @@ import { DOCTOR_IMAGES, PAGE_VIDEOS } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
 
 const doctors = [
-  { name: "Dr. Patrick Vuong", credentials: "DMD", title: "Founder", tagline: "Comprehensive, patient-centered implant and digital dentistry", locations: "Cypress & Katy", slug: "patrick-vuong-dmd", imgKey: "patrick-vuong" },
-  { name: "Dr. Peter Kim", credentials: "DDS", title: "General Dentist", tagline: "Known for gentle approach and patient comfort", locations: "Cypress", slug: "peter-kim-dds", imgKey: "peter-kim" },
-  { name: "Dr. Laith Yahya", credentials: "DDS", title: "General Dentist", tagline: "Integrity, precision & passion for restorative care", locations: "Cypress", slug: "laith-yahya-dds", imgKey: "laith-yahya" },
-  { name: "Dr. Sameer Bilal", credentials: "DDS", title: "General Dentist", tagline: "Compassionate, detail-oriented general dentistry", locations: "Katy", slug: "sameer-bilal-dds", imgKey: "sameer-bilal" },
-  { name: "Dr. Sarah Maredia", credentials: "DDS", title: "General Dentist", tagline: "Passionate about cosmetic and family dentistry", locations: "Cypress & Katy", slug: "sarah-maredia-dds", imgKey: "sarah-maredia" },
-  { name: "Dr. Shayan Alkhiro", credentials: "DDS", title: "General Dentist", tagline: "Dedicated to gentle, high-quality dental care", locations: "Cypress", slug: "shayan-alkhiro-dds", imgKey: "shayan-alkhiro" },
+  { name: "Dr. Patrick Vuong", credentials: "DMD", title: "Founder", tagline: "Cutting-edge implant, sedation & digital dentistry with a values-first approach", locations: "Cypress & Katy", slug: "patrick-vuong-dmd", imgKey: "patrick-vuong" },
+  { name: "Dr. Peter Kim", credentials: "DDS", title: "General Dentist", tagline: "15+ years of gentle, education-focused care — NYU trained", locations: "Cypress", slug: "peter-kim-dds", imgKey: "peter-kim" },
+  { name: "Dr. Laith Yahya", credentials: "DDS", title: "General Dentist", tagline: "Precision, calm demeanor & passion for restorative care", locations: "Cypress", slug: "laith-yahya-dds", imgKey: "laith-yahya" },
+  { name: "Dr. Sameer Bilal", credentials: "DDS", title: "General & Cosmetic Dentist", tagline: "Award-winning aesthetic dentistry & compassionate family care", locations: "Katy", slug: "sameer-bilal-dds", imgKey: "sameer-bilal" },
+  { name: "Dr. Sarah Maredia", credentials: "DDS", title: "General Dentist", tagline: "Community-centered care with a heart for education & volunteerism", locations: "Cypress & Katy", slug: "sarah-maredia-dds", imgKey: "sarah-maredia" },
+  { name: "Dr. Shayan Alkhiro", credentials: "DDS", title: "General Dentist", tagline: "Multilingual, judgment-free dentistry with a global perspective", locations: "Cypress", slug: "shayan-alkhiro-dds", imgKey: "shayan-alkhiro" },
 ];
 
 const PHONE = "8326481756";
