@@ -512,6 +512,25 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </section>
         )}
 
+        {/* REVIEWS — merged curated + live */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">{data.reviewsKicker}</p>
+            <h2 className="section-heading">{data.reviewsHeading}</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              4.9★ average from {data.location === "cypress" ? "3,000+" : "2,000+"} verified Google reviews.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
+              {data.testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
+            </div>
+            {showLiveReviews && (
+              <div className="mt-10">
+                <ReviewsWidget location={data.location} title={`${data.serviceName} Google Reviews — ${loc.name}`} />
+              </div>
+            )}
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
@@ -528,31 +547,6 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             </div>
           </div>
         </section>
-
-        {/* REVIEWS */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">{data.reviewsKicker}</p>
-            <h2 className="section-heading">{data.reviewsHeading}</h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
-              {data.testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
-            </div>
-          </div>
-        </section>
-
-        {/* LIVE GOOGLE REVIEWS — high-value services only */}
-        {showLiveReviews && (
-          <section className="section-padding bg-background">
-            <div className="container mx-auto text-center">
-              <p className="kicker">VERIFIED GOOGLE REVIEWS</p>
-              <h2 className="section-heading">What {loc.name} Patients Are Saying</h2>
-              <p className="section-body max-w-2xl mx-auto mb-8">
-                4.9★ average from {data.location === "cypress" ? "3,000+" : "2,000+"} verified Google reviews.
-              </p>
-              <ReviewsWidget location={data.location} title={`${data.serviceName} Google Reviews — ${loc.name}`} />
-            </div>
-          </section>
-        )}
 
         {/* RELATED SERVICES */}
         {related.length > 0 && (
