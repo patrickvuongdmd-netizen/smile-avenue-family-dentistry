@@ -33,7 +33,7 @@ const TrustTicker = () => {
           {doubled.map((text, i) => (
             <span
               key={i}
-              className="inline-flex items-center shrink-0 px-4 py-2.5 text-xs tracking-wide font-semibold font-sans" style={{ color: NAVY }}
+              className="inline-flex items-center shrink-0 px-4 py-2.5 text-xs tracking-wide font-normal font-sans" style={{ color: NAVY }}
             >
               {text}
               <span className="ml-4" style={{ color: "hsla(210, 20%, 14%, 0.3)" }}>·</span>
