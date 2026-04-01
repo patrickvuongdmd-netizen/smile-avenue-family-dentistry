@@ -186,7 +186,7 @@ const Home = () => {
                   <Link to="/patients/new-patient-hub" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
                     <Check className="w-3.5 h-3.5 text-primary" /> New Patient? Start Here
                   </Link>
-                  <Link to={`${locationPrefix}/emergency-dentist`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-destructive/10 border border-destructive/20 text-xs font-sans font-semibold text-destructive hover:bg-destructive/20 transition-all">
+                  <Link to={`${locationPrefix}/emergency-dentist`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-foreground/5 border border-foreground/10 text-xs font-sans font-bold text-foreground hover:bg-foreground/10 transition-all">
                     <AlertCircle className="w-3.5 h-3.5" /> Dental Emergency
                   </Link>
                   <Link to="/insurance" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
