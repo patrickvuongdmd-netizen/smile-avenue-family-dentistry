@@ -158,6 +158,8 @@ const KatyTx = () => {
           </div>
         </section>
 
+        <CredibilityBar />
+
         {/* SERVICE PILL CAROUSEL */}
         <section className="py-6 bg-background overflow-hidden">
           <div className="relative">

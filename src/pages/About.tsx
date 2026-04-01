@@ -77,6 +77,8 @@ const About = () => {
           </div>
         </section>
 
+        <CredibilityBar />
+
         {/* VALUES */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
