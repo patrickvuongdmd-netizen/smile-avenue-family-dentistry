@@ -9,6 +9,7 @@ const Footer = () => {
   const location = useLocation();
   const locationPrefix = location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
   const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [bookingOpen, setBookingOpen] = useState(false);
 
   const footerServices = [
     { label: "All Services", slug: null, href: "/services" },
