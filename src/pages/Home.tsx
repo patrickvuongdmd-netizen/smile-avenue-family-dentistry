@@ -319,6 +319,14 @@ const Home = () => {
           <SmileAvenueDifference onBook={() => setBookingModalOpen(true)} />
         </ScrollReveal>
 
+        {/* FULL-WIDTH OFFICE PHOTO BREAK */}
+        <FullWidthPhotoBreak
+          src={OFFICE_IMAGES.officeExterior}
+          alt="Smile Avenue Family Dentistry office exterior in Cypress, TX"
+          overlayText="Care That Feels Like Home"
+          overlaySubtext="Netflix in every room · Warm blankets · Digital impressions — no goopy molds"
+        />
+
         {/* TECHNOLOGY TRUST */}
         <ScrollReveal>
           <TechnologyTrust />
