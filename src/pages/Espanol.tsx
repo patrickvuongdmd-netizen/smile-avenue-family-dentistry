@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Phone, MapPin, Clock, SmilePlus, Sparkles, AlertCircle, Zap, Shield, Baby } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -60,6 +61,8 @@ const Espanol = () => {
         <link rel="alternate" hrefLang="x-default" href="https://www.smileavenuefamilydentistry.com/" />
         <html lang="es" />
       </Helmet>
+      <TrustTicker />
+
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
 

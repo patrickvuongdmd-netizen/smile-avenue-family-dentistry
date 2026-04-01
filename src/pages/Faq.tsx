@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
@@ -102,6 +103,8 @@ const Faq = () => {
       <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
       <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
+    <TrustTicker />
+
     <Navbar phone={PHONE} phoneFormatted={PHONE_FMT} bookingUrl={BOOKING} />
       <TrustStrip />
 

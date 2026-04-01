@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Clock, User, ChevronRight, CalendarDays } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import TrustTicker from "@/components/TrustTicker";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -141,6 +142,8 @@ const BlogPostPage = () => {
   if (!post) {
     return (
       <>
+        <TrustTicker />
+
         <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
         <main className="section-padding text-center">
           <h1 className="section-heading">Post Not Found</h1>
@@ -209,6 +212,8 @@ const BlogPostPage = () => {
         {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
+      <TrustTicker />
+
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
 
       <main className="pb-14 lg:pb-0">
