@@ -225,8 +225,13 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         ))}
       </Helmet>
 
+      {/* ═══ TRUST TICKER ═══ */}
+      <div className="fixed top-0 inset-x-0 z-[51]">
+        <TrustTicker />
+      </div>
+
       {/* ═══ STICKY HEADER ═══ */}
-      <header className={`fixed top-0 inset-x-0 z-50 backdrop-blur-sm shadow-sm border-b ${data.darkHeader ? "bg-foreground/95 border-foreground/20 text-background" : "bg-background/95 border-border"}`}>
+      <header className={`fixed top-10 inset-x-0 z-50 backdrop-blur-sm shadow-sm border-b ${data.darkHeader ? "bg-foreground/95 border-foreground/20 text-background" : "bg-background/95 border-border"}`}>
         <div className="flex items-center justify-between px-4 py-2.5 max-w-5xl mx-auto">
           <a href="/" aria-label="Smile Avenue Home">
             <img src={data.darkHeader ? "/favicon-192.png" : "/logo-mark.webp"} alt="Smile Avenue Family Dentistry" className="h-8 w-auto sm:hidden" width={32} height={32} />

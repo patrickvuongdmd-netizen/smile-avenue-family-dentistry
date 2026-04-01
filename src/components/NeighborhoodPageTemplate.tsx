@@ -184,6 +184,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
+      <TrustTicker />
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <TrustStrip />
 

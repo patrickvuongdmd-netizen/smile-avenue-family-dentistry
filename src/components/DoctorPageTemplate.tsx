@@ -93,6 +93,7 @@ const DoctorPageTemplate = ({ data }: { data: DoctorPageData }) => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
+      <TrustTicker />
       <Navbar phone={primary.phone} phoneFormatted={primary.phoneFmt} bookingUrl={primary.booking} />
       <TrustStrip />
 
