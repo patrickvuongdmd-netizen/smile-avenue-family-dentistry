@@ -28,7 +28,7 @@ const Footer = () => {
           {/* Brand — spans 2 columns on lg, split into 1/3 logo + 2/3 text */}
           <div className="flex gap-5 items-start lg:col-span-2">
             <Link to="/" className="shrink-0">
-              <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="w-28 h-auto object-contain" width={1920} height={1483} />
+              <img src="/logo-white.webp" alt="Smile Avenue Family Dentistry" className="w-28 h-auto object-contain" width={1217} height={645} />
             </Link>
             <div className="min-w-0">
               <p className="text-sm font-body leading-relaxed opacity-70 mb-4">
