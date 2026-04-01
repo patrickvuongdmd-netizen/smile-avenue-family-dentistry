@@ -296,20 +296,20 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
         </div>
 
         {/* Scrollable nav content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain px-7 pt-4 pb-8">
-          <div className="space-y-0">
+        <div className="flex-1 overflow-y-auto overscroll-contain px-8 pt-2 pb-10">
+          <div>
             {/* Services */}
             <button
-              className="flex items-center gap-2 py-3.5 w-full text-left text-base font-sans font-semibold text-foreground"
+              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
               onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
             >
               Services
-              <ChevronDown className={`w-4 h-4 text-primary/60 transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "services" ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-1 pb-3 space-y-0">
+              <div className="pl-0.5 pb-2">
                 {serviceLinks.map((s) => (
-                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-1.5 text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {s.label}
                   </Link>
                 ))}
@@ -318,72 +318,72 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
             {/* Locations */}
             <button
-              className="flex items-center gap-2 py-3.5 w-full text-left text-base font-sans font-semibold text-foreground"
+              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
               onClick={() => setMobileExpanded(mobileExpanded === "locations" ? null : "locations")}
             >
               Locations
-              <ChevronDown className={`w-4 h-4 text-primary/60 transition-transform duration-200 ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "locations" ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-1 pb-3 space-y-0">
-                <Link to="/cypress-tx" className="block py-1.5 text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
-                <Link to="/katy-tx" className="block py-1.5 text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
+              <div className="pl-0.5 pb-2">
+                <Link to="/cypress-tx" className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
+                <Link to="/katy-tx" className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
               </div>
             </div>
 
-            {/* Emergency — flat link */}
-            <Link to={`${locationPrefix}/emergency-dentist`} className="block py-3.5 text-base font-sans font-semibold text-foreground" onClick={() => setMobileOpen(false)}>
+            {/* Emergency */}
+            <Link to={`${locationPrefix}/emergency-dentist`} className="block py-4 text-[15px] font-sans font-semibold text-foreground tracking-wide" onClick={() => setMobileOpen(false)}>
               Emergency
             </Link>
 
             {/* Patients */}
             <button
-              className="flex items-center gap-2 py-3.5 w-full text-left text-base font-sans font-semibold text-foreground"
+              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
               onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
             >
               Patients
-              <ChevronDown className={`w-4 h-4 text-primary/60 transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "patients" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-1 pb-3 space-y-0">
+              <div className="pl-0.5 pb-2">
                 {patientLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-1.5 text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={l.href} to={l.href} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* About — flat link */}
-            <Link to="/about" className="block py-3.5 text-base font-sans font-semibold text-foreground" onClick={() => setMobileOpen(false)}>
+            {/* About */}
+            <Link to="/about" className="block py-4 text-[15px] font-sans font-semibold text-foreground tracking-wide" onClick={() => setMobileOpen(false)}>
               About
             </Link>
           </div>
 
-          {/* Book Now — inline */}
-          <div className="mt-8">
+          {/* Book Now */}
+          <div className="mt-10">
             <button
               onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-              className="btn-primary text-sm font-sans font-bold uppercase tracking-wider !px-8 !py-3 !rounded-full"
+              className="btn-primary text-sm font-sans font-bold uppercase tracking-widest !px-8 !py-3 !rounded-full"
             >
               Book Now
             </button>
           </div>
 
           {/* Social links */}
-          <div className="flex items-center gap-5 mt-8">
+          <div className="flex items-center gap-5 mt-10">
             <a href="https://www.facebook.com/SmileAvenueFamilyDentistry/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.044 1.613.115v3.146c-.427-.044-.72-.065-.964-.065-1.37 0-1.899.519-1.899 1.87v2.492h3.727l-.64 3.667h-3.087v8.126C18.996 22.92 23 18.918 23 14c0-5.523-4.477-10-10-10S3 8.477 3 14c0 4.237 2.636 7.855 6.101 9.691z"/></svg>
+              <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.044 1.613.115v3.146c-.427-.044-.72-.065-.964-.065-1.37 0-1.899.519-1.899 1.87v2.492h3.727l-.64 3.667h-3.087v8.126C18.996 22.92 23 18.918 23 14c0-5.523-4.477-10-10-10S3 8.477 3 14c0 4.237 2.636 7.855 6.101 9.691z"/></svg>
             </a>
             <a href="https://www.instagram.com/smileavenuefamilydentistry/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
             <a href="https://www.tiktok.com/@smileavenuetx" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-2.65-.78V6.69h2.65z"/></svg>
+              <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-2.65-.78V6.69h2.65z"/></svg>
             </a>
           </div>
 
-          {/* Language & Accessibility toggle */}
+          {/* Language & Accessibility */}
           <div className="mt-6">
             <LanguageToggle />
           </div>
