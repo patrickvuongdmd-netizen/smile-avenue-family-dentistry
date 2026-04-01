@@ -72,31 +72,32 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Patients & Resources */}
-          <div>
-            <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Patients & Resources</h4>
-            <div className="space-y-2 text-sm font-sans opacity-70">
-              <Link to="/patients/new-patient-hub" className="block hover:opacity-100 transition-opacity">New Patient Hub</Link>
-              <Link to="/insurance" className="block hover:opacity-100 transition-opacity">Insurance</Link>
-              <Link to="/membership-plan" className="block hover:opacity-100 transition-opacity">Membership Plan</Link>
-              <Link to="/specials" className="block hover:opacity-100 transition-opacity">Specials</Link>
-              <Link to="/our-team" className="block hover:opacity-100 transition-opacity">Our Team</Link>
-              <Link to="/patient-testimonials" className="block hover:opacity-100 transition-opacity">Testimonials</Link>
-              <Link to="/blog" className="block hover:opacity-100 transition-opacity">Blog</Link>
-              <Link to="/faq" className="block hover:opacity-100 transition-opacity">FAQ</Link>
+          {/* Patients & Services — 2-col on mobile */}
+          <div className="grid grid-cols-2 gap-6 md:contents">
+            <div>
+              <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Patients & Resources</h4>
+              <div className="space-y-2 text-sm font-sans opacity-70">
+                <Link to="/patients/new-patient-hub" className="block hover:opacity-100 transition-opacity">New Patient Hub</Link>
+                <Link to="/insurance" className="block hover:opacity-100 transition-opacity">Insurance</Link>
+                <Link to="/membership-plan" className="block hover:opacity-100 transition-opacity">Membership Plan</Link>
+                <Link to="/specials" className="block hover:opacity-100 transition-opacity">Specials</Link>
+                <Link to="/our-team" className="block hover:opacity-100 transition-opacity">Our Team</Link>
+                <Link to="/patient-testimonials" className="block hover:opacity-100 transition-opacity">Testimonials</Link>
+                <Link to="/blog" className="block hover:opacity-100 transition-opacity">Blog</Link>
+                <Link to="/faq" className="block hover:opacity-100 transition-opacity">FAQ</Link>
+              </div>
             </div>
-          </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Services</h4>
-            <div className="space-y-2 text-sm font-sans opacity-70">
-              <Link to={`${locationPrefix}/preventive-dentistry`} className="block hover:opacity-100 transition-opacity">Preventive Dentistry</Link>
-              <Link to={`${locationPrefix}/cosmetic-dentistry`} className="block hover:opacity-100 transition-opacity">Cosmetic Dentistry</Link>
-              <Link to={`${locationPrefix}/dental-implants`} className="block hover:opacity-100 transition-opacity">Dental Implants</Link>
-              <Link to={`${locationPrefix}/invisalign`} className="block hover:opacity-100 transition-opacity">Invisalign®</Link>
-              <Link to={`${locationPrefix}/emergency-dentist`} className="block hover:opacity-100 transition-opacity">Emergency Dentistry</Link>
-              <Link to={`${locationPrefix}/sedation-dentistry`} className="block hover:opacity-100 transition-opacity">Sedation Dentistry</Link>
+            <div>
+              <h4 className="text-sm font-sans font-semibold uppercase tracking-wider mb-4 opacity-80">Services</h4>
+              <div className="space-y-2 text-sm font-sans opacity-70">
+                <Link to={`${locationPrefix}/preventive-dentistry`} className="block hover:opacity-100 transition-opacity">Preventive Dentistry</Link>
+                <Link to={`${locationPrefix}/cosmetic-dentistry`} className="block hover:opacity-100 transition-opacity">Cosmetic Dentistry</Link>
+                <Link to={`${locationPrefix}/dental-implants`} className="block hover:opacity-100 transition-opacity">Dental Implants</Link>
+                <Link to={`${locationPrefix}/invisalign`} className="block hover:opacity-100 transition-opacity">Invisalign®</Link>
+                <Link to={`${locationPrefix}/emergency-dentist`} className="block hover:opacity-100 transition-opacity">Emergency Dentistry</Link>
+                <Link to={`${locationPrefix}/sedation-dentistry`} className="block hover:opacity-100 transition-opacity">Sedation Dentistry</Link>
+              </div>
             </div>
           </div>
         </div>
