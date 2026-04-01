@@ -483,28 +483,6 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           </ScrollReveal>
         )}
 
-        {/* ═══ CTA #3 — After proof ═══ */}
-        <section className="py-12 px-4 text-center relative overflow-hidden gradient-cta">
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-5 bg-white -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full opacity-5 bg-white translate-y-1/2 -translate-x-1/2" />
-          <div className="relative z-10 max-w-xl mx-auto">
-            <h2 className="text-xl md:text-2xl font-bold text-white mb-2 font-display">
-              Thousands of Families Trust Us. You Can Too.
-            </h2>
-            <p className="text-white/70 text-sm mb-5 font-body">
-              Book in 60 seconds. We confirm within 1 hour. No surprises, ever.
-            </p>
-            <a
-              href={ctaHref}
-              target={ctaTarget}
-              rel={ctaTarget ? "noopener noreferrer" : undefined}
-              onClick={() => fireConversion(conversionLabel)}
-              className="btn-cta-light rounded-full !px-8 !py-3.5"
-            >
-              {data.heroCtaLabel}
-            </a>
-          </div>
-        </section>
 
         {/* 4c. Video Testimonials */}
         {data.videos && data.videos.length > 0 && (
@@ -614,39 +592,6 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
           </div>
         </section>
 
-        {/* ╔═══════════════════════════════════════════════════╗
-           ║  SECTION 7: FINAL CTA — Close the deal           ║
-           ╚═══════════════════════════════════════════════════╝ */}
-        <section className="py-20 px-4 text-white text-center relative overflow-hidden gradient-cta">
-          <div className="absolute top-0 left-1/2 w-96 h-96 rounded-full opacity-5 bg-white -translate-y-1/2 -translate-x-1/2" />
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-display">
-              {data.finalCtaHeadline}
-            </h2>
-            <p className="opacity-85 mb-8 leading-relaxed text-lg font-body">
-              {data.finalCtaBody}
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href={ctaHref}
-                target={ctaTarget}
-                rel={ctaTarget ? "noopener noreferrer" : undefined}
-                onClick={() => fireConversion(conversionLabel)}
-                className="btn-cta-light rounded-full !px-10 !py-4 text-lg"
-              >
-                {data.heroCtaLabel}
-              </a>
-              <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="inline-flex items-center gap-2 text-white font-sans font-semibold text-lg underline hover:no-underline">
-                <Phone className="w-5 h-5" />{loc.phoneFormatted}
-              </a>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mt-5 text-xs text-white/50 font-sans">
-              {(data.heroReassurance || "Booking takes less than 60 seconds · We confirm within 1 hour").split(" · ").map((item, i) => (
-                <span key={i} className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3" />{item}</span>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* ═══ FOOTER ═══ */}

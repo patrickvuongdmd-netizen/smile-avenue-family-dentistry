@@ -177,13 +177,6 @@ const MembershipPlan = () => {
           </div>
         </section>
 
-        <section className="section-padding gradient-cta text-center">
-          <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Start Saving on Your Dental Care Today</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Join hundreds of families who save with our membership plan. No insurance needed.</p>
-            <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Enroll Now</a>
-          </div>
-        </section>
       </main>
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />

@@ -226,13 +226,6 @@ const OurTeam = () => {
           </div>
         </section>
 
-        <section className="gradient-cta py-16 text-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Want to Join Our Team?</h2>
-            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">We're always looking for passionate dental professionals who share our commitment to exceptional patient care.</p>
-            <a href="/contact" className="btn-cta-light">View Career Opportunities</a>
-          </div>
-        </section>
       </main>
 
       <Footer />

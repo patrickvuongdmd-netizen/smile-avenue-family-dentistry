@@ -133,13 +133,6 @@ const Insurance = () => {
           </div>
         </section>
 
-        <section className="section-padding gradient-cta text-center">
-          <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Not Sure What's Covered? We'll Find Out for You.</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Call us and we'll verify your insurance benefits before your visit — completely free.</p>
-            <a href="tel:8326481756" className="btn-cta-light">Call (832) 648-1756</a>
-          </div>
-        </section>
       </main>
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />

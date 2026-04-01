@@ -283,6 +283,23 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
           </div>
         </section>
 
+        {/* FAQ */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
+              <div>
+                <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 className="section-heading">{data.neighborhoodName} Dental FAQ</h2>
+                <p className="section-body">
+                  Have more questions? Call us at{" "}
+                  <a href={`tel:${loc.phone}`} className="text-primary hover:underline">{loc.phoneFormatted}</a>.
+                </p>
+              </div>
+              <FaqAccordion items={data.faqs} />
+            </div>
+          </div>
+        </section>
+
         {/* SERVICES GRID */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
@@ -399,22 +416,6 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
-              <div>
-                <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading">{data.neighborhoodName} Dental FAQ</h2>
-                <p className="section-body">
-                  Have more questions? Call us at{" "}
-                  <a href={`tel:${loc.phone}`} className="text-primary hover:underline">{loc.phoneFormatted}</a>.
-                </p>
-              </div>
-              <FaqAccordion items={data.faqs} />
-            </div>
-          </div>
-        </section>
 
         {/* LOCATION INFO */}
         <section className="section-padding section-alt">
@@ -443,22 +444,6 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
           </div>
         </section>
 
-        {/* CTA BAR */}
-        <section className="gradient-cta py-16 text-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Smile? Book Your {data.neighborhoodName} Dental Visit
-            </h2>
-            <p className="font-body text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Conveniently located just minutes from {data.neighborhoodName}. New patients welcome — call or book online today.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button onClick={() => setBookingModalOpen(true)} className="btn-cta-light">Book Online — Takes 60 Seconds</button>
-              <a href={`tel:${loc.phone}`} className="btn-cta-outline">Call {loc.phoneFormatted}</a>
-            </div>
-            <p className="text-xs font-sans text-primary-foreground/60 mt-4">Most insurance accepted · 0% financing · Same-day appointments available</p>
-          </div>
-        </section>
       </main>
 
       <Footer />

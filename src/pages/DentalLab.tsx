@@ -144,13 +144,6 @@ const DentalLab = () => {
           </div>
         </section>
 
-        <section className="section-padding gradient-cta text-center">
-          <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">Experience In-House Lab Precision</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Custom restorations with faster turnaround and better quality — all from our in-house Smile Dental Lab.</p>
-            <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Book Now</a>
-          </div>
-        </section>
       </main>
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />

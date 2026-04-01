@@ -117,24 +117,6 @@ const Services = () => {
           </div>
         </section>
 
-        <section className="gradient-cta section-padding text-center">
-          <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
-              Not Sure Where to Start?
-            </h2>
-            <p className="font-body text-lg text-white/80 mb-8 max-w-xl mx-auto">
-              Schedule a consultation and our team will create a personalized treatment plan just for you.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
-                Book a Consultation
-              </a>
-              <a href={`tel:${PHONE}`} className="btn-cta-outline">
-                Call {PHONE_FORMATTED}
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <MobileStickyBar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />

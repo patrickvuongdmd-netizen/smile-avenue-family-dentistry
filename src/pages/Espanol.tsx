@@ -178,16 +178,6 @@ const Espanol = () => {
           </div>
         </section>
 
-        <section className="section-padding gradient-cta text-center">
-          <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-background mb-4">¿Listo Para Amar Su Sonrisa?</h2>
-            <p className="font-body text-lg text-background/80 mb-8 max-w-2xl mx-auto">Reserve su cita en Smile Avenue hoy. Dos ubicaciones, la misma atención excepcional.</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">Reserve en Línea</a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="btn-cta-outline">Llame al {CYPRESS_PHONE_FORMATTED}</a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />

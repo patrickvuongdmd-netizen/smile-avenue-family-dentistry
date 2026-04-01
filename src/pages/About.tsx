@@ -124,24 +124,6 @@ const About = () => {
           </div>
         </section>
 
-        <section className="gradient-cta section-padding text-center">
-          <div className="container mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
-              Experience the Smile Avenue Difference
-            </h2>
-            <p className="font-body text-lg text-white/80 mb-8 max-w-xl mx-auto">
-              Schedule your visit today and discover why thousands of families trust Smile Avenue with their smiles.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta-light">
-                Book Your Visit
-              </a>
-              <Link to="/convenient-locations" className="btn-cta-outline">
-                Find a Location
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
 
       <MobileStickyBar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
