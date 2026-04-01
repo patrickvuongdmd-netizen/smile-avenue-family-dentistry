@@ -8,6 +8,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import BackToTop from "@/components/BackToTop";
 import ScrollReveal from "@/components/ScrollReveal";
+import TrustTicker from "@/components/TrustTicker";
 
 /* ── Types ─────────────────────────────────────────────────── */
 
