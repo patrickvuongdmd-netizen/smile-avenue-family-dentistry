@@ -145,6 +145,7 @@ const Home = () => {
           url: "https://www.smileavenuefamilydentistry.com/"
         })}</script>
       </Helmet>
+      <TrustTicker />
       <Navbar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
       <TrustStrip />
 
