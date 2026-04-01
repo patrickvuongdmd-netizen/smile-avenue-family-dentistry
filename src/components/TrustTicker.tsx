@@ -33,7 +33,7 @@ const TrustTicker = () => {
               className="inline-flex items-center shrink-0 px-4 py-2.5 text-xs tracking-wide font-medium font-sans"
             >
               {text}
-              <span className="ml-4 text-primary-foreground/40">·</span>
+              <span className="ml-4" style={{ color: "#CCCCCC" }}>·</span>
             </span>
           ))}
         </div>
