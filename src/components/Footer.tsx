@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Phone, MapPin, Clock, Facebook, Instagram, Globe } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/images";
 
 const Footer = () => {
+  const location = useLocation();
+  const locationPrefix = location.pathname.startsWith("/katy-tx") ? "/katy-tx" : "/cypress-tx";
 
   return (
     <footer className="bg-foreground text-background">
