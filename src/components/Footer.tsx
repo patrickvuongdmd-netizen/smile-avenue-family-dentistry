@@ -43,7 +43,7 @@ const Footer = () => {
         {/* Top half of card */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 md:pt-24">
           <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-14 md:px-16 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8">
-            <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-medium leading-[1.15] text-center md:text-left max-w-2xl text-muted-foreground">
+            <h2 className="font-display text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-medium leading-[1.15] text-center md:text-left max-w-lg text-muted-foreground">
               Care at Smile Avenue isn't just painless,{" "}
               <span className="text-foreground font-semibold">it's a pleasure</span>
             </h2>
