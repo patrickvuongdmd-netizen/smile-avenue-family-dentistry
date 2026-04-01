@@ -127,6 +127,9 @@ const About = () => {
           </div>
         </section>
 
+        {/* OFFICE PHOTO GRID */}
+        <OfficePhotoGrid kicker="INSIDE OUR OFFICES" heading="Where Your Comfort Meets Modern Dentistry" />
+
         {/* MISSION CTA */}
 
         {/* Video */}
