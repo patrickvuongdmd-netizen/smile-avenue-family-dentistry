@@ -66,10 +66,10 @@ export const TEAM_MEMBERS = {
 };
 
 export const OFFICE_IMAGES = {
-  homepageHero: heroHomepageLifestyle,
-  homepageHeroMobile: heroHomepageLifestyle,
-  cypressHero: heroCypressLifestyle,
-  katyHero: heroKatyLifestyle,
+  homepageHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-bg-new.webp",
+  homepageHeroMobile: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-bg-mobile.webp",
+  cypressHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour.webp",
+  katyHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Office-Tour.jpg",
   aboutHero: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/10/img-about-us.webp",
   aboutTeamAction: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
   aboutKatyTeam: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-about-us.webp",
