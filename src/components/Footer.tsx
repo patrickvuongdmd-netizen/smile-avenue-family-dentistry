@@ -27,6 +27,7 @@ const Footer = () => {
   return (
     <>
       {/* Pre-footer CTA block — white card with ticker cutting through */}
+      {/* Top half — marble background */}
       <section className="relative overflow-hidden">
         <img
           src="/images/prefooter-bg.jpg"
@@ -54,14 +55,16 @@ const Footer = () => {
             </button>
           </div>
         </div>
+      </section>
 
-        {/* Full-width ticker cuts through */}
-        <div className="relative z-20">
-          <TrustTicker />
-        </div>
+      {/* Full-width ticker */}
+      <div className="relative z-20">
+        <TrustTicker />
+      </div>
 
-        {/* Bottom half of card */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-16 md:pb-24">
+      {/* Bottom half of card — on dark background matching footer */}
+      <div className="bg-foreground">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-16 md:pb-24">
           <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-10 md:px-16 md:py-14">
             <Link to="/">
               <img
