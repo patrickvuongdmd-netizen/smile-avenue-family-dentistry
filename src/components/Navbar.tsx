@@ -13,6 +13,7 @@ const generalCare = [
   { label: "Family Dental Care", slug: "family-dental-care" },
   { label: "Dental Cleaning", slug: "dental-cleaning" },
   { label: "Pediatric Dentistry", slug: "pediatric-dentistry" },
+  { label: "Emergency Dentistry", slug: "emergency-dentist" },
   { label: "Root Canal", slug: "root-canal" },
   { label: "Tooth Extraction", slug: "tooth-extraction" },
   { label: "Dental Crowns", slug: "dental-crowns" },
@@ -48,7 +49,8 @@ const aboutLinks = [
   { label: "Our Team", href: "/our-team" },
   { label: "Dental Lab", href: "/dental-lab" },
   { label: "Patient Testimonials", href: "/patient-testimonials" },
-  
+  { label: "Blog", href: "/blog" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 type DropdownKey = "services" | "patients" | "about" | "locations" | null;
@@ -278,9 +280,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
-              <Link to={`${locationPrefix}/emergency-dentist`} className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap text-foreground font-bold">Emergency</Link>
-              <Link to="/blog" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Blog</Link>
-              <Link to="/contact" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Contact</Link>
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
