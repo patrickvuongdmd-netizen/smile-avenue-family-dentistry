@@ -24,7 +24,7 @@ const DoctorCard = ({ name, credentials, bio, href, imgKey }: DoctorCardProps) =
       </div>
       <h3 className="font-display text-lg font-semibold text-foreground">{name}</h3>
       <p className="text-xs font-sans text-muted-foreground mb-2">{credentials}</p>
-      <p className="text-sm font-body text-muted-foreground leading-relaxed mb-3 max-w-xs">{bio}</p>
+      
       <a href={href} className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">
         Learn More →
       </a>

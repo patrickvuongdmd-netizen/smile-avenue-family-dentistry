@@ -364,7 +364,7 @@ const KatyTx = () => {
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
             <p className="kicker">YOUR KATY DENTAL TEAM</p>
-            <h2 className="section-heading">3 Experienced Dentists at Our Katy Office</h2>
+            <h2 className="section-heading">Meet Your Katy Dentists</h2>
             <p className="section-body max-w-2xl mx-auto">
               Our Katy team combines expertise in family, cosmetic, and implant dentistry with genuine compassion. Every doctor takes time to listen before recommending treatment.
             </p>
