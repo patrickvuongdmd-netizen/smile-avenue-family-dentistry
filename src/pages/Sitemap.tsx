@@ -65,6 +65,7 @@ const brandServices = [
   { label: "Oral Surgery", href: "/services/oral-surgery" },
   { label: "Sedation Dentistry", href: "/services/sedation-dentistry" },
   { label: "Preventive Dentistry", href: "/services/preventive-dentistry" },
+];
 
 const cypressNeighborhoods = {
   title: "Neighborhoods",
