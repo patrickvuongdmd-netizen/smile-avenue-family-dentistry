@@ -11,7 +11,7 @@ const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 
-const sections = [
+const generalSections = [
   {
     title: "Main Pages",
     links: [
@@ -33,70 +33,6 @@ const sections = [
     ],
   },
   {
-    title: "Neighborhoods — Cypress",
-    links: [
-      { label: "Bridgeland Dentist", href: "/cypress-tx/bridgeland-dentist" },
-      { label: "Towne Lake Dentist", href: "/cypress-tx/towne-lake-dentist" },
-      { label: "Fairfield Dentist", href: "/cypress-tx/fairfield-dentist" },
-      { label: "Cy-Fair Dentist", href: "/cypress-tx/cyfair-dentist" },
-      { label: "Jersey Village Dentist", href: "/cypress-tx/jersey-village-dentist" },
-    ],
-  },
-  {
-    title: "Neighborhoods — Katy",
-    links: [
-      { label: "Cinco Ranch Dentist", href: "/katy-tx/cinco-ranch-dentist" },
-      { label: "Firethorne Dentist", href: "/katy-tx/firethorne-dentist" },
-      { label: "Cross Creek Ranch Dentist", href: "/katy-tx/cross-creek-ranch-dentist" },
-      { label: "Westheimer Parkway Dentist", href: "/katy-tx/westheimer-parkway-dentist" },
-      { label: "Fulshear Dentist", href: "/katy-tx/fulshear-dentist" },
-    ],
-  },
-  {
-    title: "Services — Cypress",
-    links: [
-      { label: "Emergency Dentist", href: "/cypress-tx/emergency-dentist" },
-      { label: "Dental Implants", href: "/cypress-tx/dental-implants" },
-      { label: "Cosmetic Dentistry", href: "/cypress-tx/cosmetic-dentistry" },
-      { label: "Teeth Whitening", href: "/cypress-tx/teeth-whitening" },
-      { label: "Dental Crowns", href: "/cypress-tx/dental-crowns" },
-      { label: "All-on-X Implants", href: "/cypress-tx/all-on-x-implants" },
-      { label: "Invisalign", href: "/cypress-tx/invisalign" },
-      { label: "Root Canal", href: "/cypress-tx/root-canal" },
-      { label: "Dental Cleaning", href: "/cypress-tx/dental-cleaning" },
-      { label: "Pediatric Dentistry", href: "/cypress-tx/pediatric-dentistry" },
-      { label: "Dentures", href: "/cypress-tx/dentures" },
-      { label: "Veneers", href: "/cypress-tx/veneers" },
-      { label: "Dental Bridges", href: "/cypress-tx/dental-bridges" },
-      { label: "Tooth Extraction", href: "/cypress-tx/tooth-extraction" },
-      { label: "Oral Surgery", href: "/cypress-tx/oral-surgery" },
-      { label: "Sedation Dentistry", href: "/cypress-tx/sedation-dentistry" },
-      { label: "Preventive Dentistry", href: "/cypress-tx/preventive-dentistry" },
-    ],
-  },
-  {
-    title: "Services — Katy",
-    links: [
-      { label: "Emergency Dentist", href: "/katy-tx/emergency-dentist" },
-      { label: "Dental Implants", href: "/katy-tx/dental-implants" },
-      { label: "Cosmetic Dentistry", href: "/katy-tx/cosmetic-dentistry" },
-      { label: "Teeth Whitening", href: "/katy-tx/teeth-whitening" },
-      { label: "Dental Crowns", href: "/katy-tx/dental-crowns" },
-      { label: "All-on-X Implants", href: "/katy-tx/all-on-x-implants" },
-      { label: "Invisalign", href: "/katy-tx/invisalign" },
-      { label: "Root Canal", href: "/katy-tx/root-canal" },
-      { label: "Dental Cleaning", href: "/katy-tx/dental-cleaning" },
-      { label: "Pediatric Dentistry", href: "/katy-tx/pediatric-dentistry" },
-      { label: "Dentures", href: "/katy-tx/dentures" },
-      { label: "Veneers", href: "/katy-tx/veneers" },
-      { label: "Dental Bridges", href: "/katy-tx/dental-bridges" },
-      { label: "Tooth Extraction", href: "/katy-tx/tooth-extraction" },
-      { label: "Oral Surgery", href: "/katy-tx/oral-surgery" },
-      { label: "Sedation Dentistry", href: "/katy-tx/sedation-dentistry" },
-      { label: "Preventive Dentistry", href: "/katy-tx/preventive-dentistry" },
-    ],
-  },
-  {
     title: "Team & Doctors",
     links: [
       { label: "Meet Our Team", href: "/our-team" },
@@ -109,22 +45,125 @@ const sections = [
       { label: "Dr. Shayan Alkhiro, DDS", href: "/doctors/shayan-alkhiro-dds" },
     ],
   },
-  {
-    title: "Patient Resources",
-    links: [
-      { label: "New Patient Hub", href: "/patients/new-patient-hub" },
-      { label: "Free Consultation", href: "/free-consultation" },
-      { label: "Insurance & Financing", href: "/insurance" },
-      { label: "Membership Plan", href: "/membership-plan" },
-      { label: "Specials & Offers", href: "/specials" },
-      { label: "Patient Testimonials", href: "/patient-testimonials" },
-      
-      { label: "Dental Lab", href: "/dental-lab" },
-      { label: "Privacy Policy", href: "/privacy-policy" },
-      { label: "Español", href: "/es" },
-    ],
-  },
 ];
+
+const cypressNeighborhoods = {
+  title: "Neighborhoods",
+  links: [
+    { label: "Bridgeland Dentist", href: "/cypress-tx/bridgeland-dentist" },
+    { label: "Towne Lake Dentist", href: "/cypress-tx/towne-lake-dentist" },
+    { label: "Fairfield Dentist", href: "/cypress-tx/fairfield-dentist" },
+    { label: "Cy-Fair Dentist", href: "/cypress-tx/cyfair-dentist" },
+    { label: "Jersey Village Dentist", href: "/cypress-tx/jersey-village-dentist" },
+  ],
+};
+
+const cypressServices = [
+  { label: "Emergency Dentist", href: "/cypress-tx/emergency-dentist" },
+  { label: "Dental Implants", href: "/cypress-tx/dental-implants" },
+  { label: "Cosmetic Dentistry", href: "/cypress-tx/cosmetic-dentistry" },
+  { label: "Teeth Whitening", href: "/cypress-tx/teeth-whitening" },
+  { label: "Dental Crowns", href: "/cypress-tx/dental-crowns" },
+  { label: "All-on-X Implants", href: "/cypress-tx/all-on-x-implants" },
+  { label: "Invisalign", href: "/cypress-tx/invisalign" },
+  { label: "Root Canal", href: "/cypress-tx/root-canal" },
+  { label: "Dental Cleaning", href: "/cypress-tx/dental-cleaning" },
+  { label: "Pediatric Dentistry", href: "/cypress-tx/pediatric-dentistry" },
+  { label: "Dentures", href: "/cypress-tx/dentures" },
+  { label: "Veneers", href: "/cypress-tx/veneers" },
+  { label: "Dental Bridges", href: "/cypress-tx/dental-bridges" },
+  { label: "Tooth Extraction", href: "/cypress-tx/tooth-extraction" },
+  { label: "Oral Surgery", href: "/cypress-tx/oral-surgery" },
+  { label: "Sedation Dentistry", href: "/cypress-tx/sedation-dentistry" },
+  { label: "Preventive Dentistry", href: "/cypress-tx/preventive-dentistry" },
+];
+
+const katyNeighborhoods = {
+  title: "Neighborhoods",
+  links: [
+    { label: "Cinco Ranch Dentist", href: "/katy-tx/cinco-ranch-dentist" },
+    { label: "Firethorne Dentist", href: "/katy-tx/firethorne-dentist" },
+    { label: "Cross Creek Ranch Dentist", href: "/katy-tx/cross-creek-ranch-dentist" },
+    { label: "Westheimer Parkway Dentist", href: "/katy-tx/westheimer-parkway-dentist" },
+    { label: "Fulshear Dentist", href: "/katy-tx/fulshear-dentist" },
+  ],
+};
+
+const katyServices = [
+  { label: "Emergency Dentist", href: "/katy-tx/emergency-dentist" },
+  { label: "Dental Implants", href: "/katy-tx/dental-implants" },
+  { label: "Cosmetic Dentistry", href: "/katy-tx/cosmetic-dentistry" },
+  { label: "Teeth Whitening", href: "/katy-tx/teeth-whitening" },
+  { label: "Dental Crowns", href: "/katy-tx/dental-crowns" },
+  { label: "All-on-X Implants", href: "/katy-tx/all-on-x-implants" },
+  { label: "Invisalign", href: "/katy-tx/invisalign" },
+  { label: "Root Canal", href: "/katy-tx/root-canal" },
+  { label: "Dental Cleaning", href: "/katy-tx/dental-cleaning" },
+  { label: "Pediatric Dentistry", href: "/katy-tx/pediatric-dentistry" },
+  { label: "Dentures", href: "/katy-tx/dentures" },
+  { label: "Veneers", href: "/katy-tx/veneers" },
+  { label: "Dental Bridges", href: "/katy-tx/dental-bridges" },
+  { label: "Tooth Extraction", href: "/katy-tx/tooth-extraction" },
+  { label: "Oral Surgery", href: "/katy-tx/oral-surgery" },
+  { label: "Sedation Dentistry", href: "/katy-tx/sedation-dentistry" },
+  { label: "Preventive Dentistry", href: "/katy-tx/preventive-dentistry" },
+];
+
+const patientResources = [
+  { label: "New Patient Hub", href: "/patients/new-patient-hub" },
+  { label: "Free Consultation", href: "/free-consultation" },
+  { label: "Insurance & Financing", href: "/insurance" },
+  { label: "Membership Plan", href: "/membership-plan" },
+  { label: "Specials & Offers", href: "/specials" },
+  { label: "Patient Testimonials", href: "/patient-testimonials" },
+  { label: "Dental Lab", href: "/dental-lab" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Español", href: "/es" },
+];
+
+const SectionBlock = ({ title, links }: { title: string; links: { label: string; href: string }[] }) => (
+  <div>
+    <h2 className="font-display text-lg font-bold text-foreground mb-4">{title}</h2>
+    <ul className="space-y-2">
+      {links.map((link, j) => (
+        <li key={j}>
+          <Link to={link.href} className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors">{link.label}</Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+const ServicesSplitBlock = ({ title, links }: { title: string; links: { label: string; href: string }[] }) => {
+  const mid = Math.ceil(links.length / 2);
+  const col1 = links.slice(0, mid);
+  const col2 = links.slice(mid);
+  return (
+    <div className="lg:col-span-2">
+      <h2 className="font-display text-lg font-bold text-foreground mb-4">{title}</h2>
+      <div className="grid sm:grid-cols-2 gap-x-8">
+        <ul className="space-y-2">
+          {col1.map((link, j) => (
+            <li key={j}>
+              <Link to={link.href} className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors">{link.label}</Link>
+            </li>
+          ))}
+        </ul>
+        <ul className="space-y-2 mt-2 sm:mt-0">
+          {col2.map((link, j) => (
+            <li key={j}>
+              <Link to={link.href} className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors">{link.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const RowLabel = ({ children }: { children: React.ReactNode }) => (
+  <p className="text-[11px] font-sans uppercase tracking-widest text-muted-foreground/60 mb-6">{children}</p>
+);
 
 const SitemapPage = () => {
   useDocTitle("Sitemap | Smile Avenue Family Dentistry");
@@ -146,7 +185,7 @@ const SitemapPage = () => {
       <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <TrustStrip />
 
-      <main className="pb-14 lg:pb-0 ">
+      <main className="pb-14 lg:pb-0">
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav className="mb-6 text-xs font-sans text-muted-foreground">
@@ -156,19 +195,42 @@ const SitemapPage = () => {
             </nav>
             <h1 className="section-heading text-3xl md:text-4xl mb-12">Sitemap</h1>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-              {sections.map((section, i) => (
-                <div key={i}>
-                  <h2 className="font-display text-lg font-bold text-foreground mb-4">{section.title}</h2>
-                  <ul className="space-y-2">
-                    {section.links.map((link, j) => (
-                      <li key={j}>
-                        <Link to={link.href} className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors">{link.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            {/* Row 1 — General */}
+            <div className="mb-10">
+              <RowLabel>General</RowLabel>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                {generalSections.map((section, i) => (
+                  <SectionBlock key={i} title={section.title} links={section.links} />
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2 — Cypress */}
+            <div className="border-t border-border pt-10 mb-10">
+              <RowLabel>Cypress</RowLabel>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <SectionBlock title={cypressNeighborhoods.title} links={cypressNeighborhoods.links} />
+                <ServicesSplitBlock title="Services" links={cypressServices} />
+              </div>
+            </div>
+
+            {/* Row 3 — Katy */}
+            <div className="border-t border-border pt-10 mb-10">
+              <RowLabel>Katy</RowLabel>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <SectionBlock title={katyNeighborhoods.title} links={katyNeighborhoods.links} />
+                <ServicesSplitBlock title="Services" links={katyServices} />
+              </div>
+            </div>
+
+            {/* Row 4 — Resources */}
+            <div className="border-t border-border pt-10">
+              <RowLabel>Resources</RowLabel>
+              <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-2">
+                {patientResources.map((link, j) => (
+                  <Link key={j} to={link.href} className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1">{link.label}</Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>
