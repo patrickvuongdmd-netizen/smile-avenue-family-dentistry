@@ -59,8 +59,8 @@ const Footer = () => {
 
       {/* Bottom half of card on dark bg */}
       <div className="bg-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-16 md:pb-24">
-          <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-10 md:px-16 md:py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-10 md:pb-14">
+          <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-8 md:px-16 md:py-10">
             <Link to="/">
               <img
                 src="/logo-full.webp"
