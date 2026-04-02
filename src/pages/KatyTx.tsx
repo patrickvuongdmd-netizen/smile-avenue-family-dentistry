@@ -317,15 +317,8 @@ const KatyTx = () => {
             </div>
           </div>
         </section>
-                <h3 className="font-display text-lg font-bold text-primary mb-3">How to Get Here</h3>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-                  From I-10, exit Grand Parkway (99) south and take Westheimer Parkway west — we're about 2 minutes ahead on the right. From Cinco Ranch or LaCenterra, head east on Cinco Ranch Blvd to Westheimer Pkwy. From Fulshear, take FM 1093 east to Westheimer Parkway.
-                </p>
-                <p className="text-xs font-sans text-muted-foreground mt-3">
-                  <span className="font-medium text-foreground">Landmark:</span> Look for the shopping center on the south side of Westheimer Pkwy between Grand Parkway (99) and Cinco Ranch Blvd — Suite #170 with free parking at our door.
-                </p>
-                <a
-                  href="https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/@29.732508,-95.775455,17z"
+
+
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-sans text-primary font-medium hover:underline mt-3 inline-block"
