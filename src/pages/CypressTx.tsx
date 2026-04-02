@@ -220,20 +220,72 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* GOOGLE MAP */}
-        <section className="bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="rounded-xl overflow-hidden shadow-md border border-border">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
-                width="100%"
-                height="350"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Smile Avenue Family Dentistry Cypress office location on Google Maps"
-              />
+        {/* FIND US — Map + Hours + Amenities */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto">
+            <p className="kicker">VISIT OUR CYPRESS OFFICE</p>
+            <h2 className="section-heading">Find Us on Fry Road</h2>
+
+            <div className="grid lg:grid-cols-[1fr_1fr] gap-8 mt-10">
+              {/* Map */}
+              <div className="rounded-xl overflow-hidden shadow-md border border-border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: 300 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Smile Avenue Family Dentistry Cypress office location on Google Maps"
+                />
+              </div>
+
+              {/* Hours + Amenities */}
+              <div className="space-y-6">
+                {/* Hours */}
+                <div className="bg-card rounded-xl border border-border p-6">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-primary" /> Office Hours
+                  </h3>
+                  <div className="space-y-2 text-sm font-sans">
+                    {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day) => (
+                      <div key={day} className="flex justify-between text-foreground">
+                        <span>{day}</span>
+                        <span className="font-medium">8:30 AM – 5:00 PM</span>
+                      </div>
+                    ))}
+                    <div className="flex justify-between text-muted-foreground">
+                      <span>Saturday – Sunday</span>
+                      <span>Closed</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Amenities */}
+                <div className="bg-card rounded-xl border border-border p-6">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                    <Check className="w-5 h-5 text-primary" /> What to Expect
+                  </h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {[
+                      "Netflix in every room",
+                      "Warm blankets & pillows",
+                      "Noise-canceling headphones",
+                      "Digital scans — no goopy molds",
+                      "In-house dental lab",
+                      "Same-day emergencies",
+                      "0% financing available",
+                      "Most PPO insurance accepted",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm font-sans text-foreground">
+                        <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
