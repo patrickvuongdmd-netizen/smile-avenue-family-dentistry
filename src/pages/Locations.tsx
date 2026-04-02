@@ -106,7 +106,7 @@ function getOpenStatus(loc: (typeof locations)[0]): {
   return { isOpen: false, label: "Closed", hoursToday: "Opens Mon 8:30 AM" };
 }
 
-/* ─── Location Card ─── */
+/* ─── Location Card (Tend-style) ─── */
 const LocationCard = ({
   loc,
   active,
@@ -121,94 +121,77 @@ const LocationCard = ({
   return (
     <article
       onClick={onSelect}
-      className={`group relative rounded-2xl border bg-card px-5 py-5 md:px-6 md:py-6 cursor-pointer transition-all duration-200 ${
+      className={`group relative border-b border-border bg-background px-5 py-6 md:px-6 md:py-7 cursor-pointer transition-all duration-200 ${
         active
-          ? "border-primary/40 shadow-md ring-1 ring-primary/20"
-          : "border-border hover:border-primary/20 hover:shadow-sm"
+          ? "bg-muted/40"
+          : "hover:bg-muted/20"
       }`}
     >
-      {/* Row 1: Status · Hours · Rating */}
-      <div className="flex items-center gap-3 mb-3 text-xs font-sans">
+      {/* Row 1: Status + Hours · Stars + Book Now */}
+      <div className="flex items-center justify-between gap-3 mb-3">
         <span
-          className={`inline-flex items-center gap-1.5 font-semibold ${
+          className={`inline-flex items-center gap-1.5 text-xs font-sans font-medium ${
             status.isOpen ? "text-emerald-600" : "text-red-500"
           }`}
         >
           <span
             className={`w-1.5 h-1.5 rounded-full ${
-              status.isOpen ? "bg-emerald-500 animate-pulse" : "bg-red-400"
+              status.isOpen ? "bg-emerald-500" : "bg-red-400"
             }`}
           />
           {status.label} | {status.hoursToday}
         </span>
-        <span className="ml-auto flex items-center gap-1 text-muted-foreground">
-          <Star className="w-3.5 h-3.5 fill-primary text-primary" />
-          <span className="font-semibold text-foreground">{loc.rating}</span>
-          <span>({loc.reviewCount})</span>
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="flex items-center gap-1 text-xs text-muted-foreground">
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            <span className="ml-0.5">({loc.reviewCount})</span>
+          </span>
+          <a
+            href={loc.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center justify-center px-5 py-2 rounded-full border-2 border-primary text-primary font-sans font-bold text-xs uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Book Now
+          </a>
+        </div>
       </div>
 
-      {/* Row 2: Name */}
-      <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+      {/* Row 2: Location Name */}
+      <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
         {loc.name}
       </h2>
 
-      {/* Row 3: Address + Phone */}
-      <div className="space-y-1 mb-4">
-        <p className="text-sm font-sans text-muted-foreground flex items-start gap-2">
-          <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 text-primary/60" />
-          {loc.address}, {loc.city}
-        </p>
-        <p className="text-sm font-sans text-muted-foreground flex items-center gap-2">
-          <Phone className="w-3.5 h-3.5 shrink-0 text-primary/60" />
-          <a
-            href={`tel:${loc.phone}`}
-            className="hover:text-primary transition-colors"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {loc.phoneFormatted}
-          </a>
-        </p>
-      </div>
+      {/* Row 3: Address */}
+      <p className="text-sm font-sans text-muted-foreground mb-1">
+        {loc.address}, {loc.city}
+      </p>
 
-      {/* Row 4: Saturday hours if applicable */}
-      {loc.hours.length > 1 && (
-        <p className="text-xs font-sans text-muted-foreground mb-4 flex items-center gap-2">
-          <Clock className="w-3.5 h-3.5 shrink-0 text-primary/60" />
-          Also open <span className="font-medium text-foreground">Saturday 8:00 AM – 2:00 PM</span>
-        </p>
-      )}
+      {/* Row 4: Phone */}
+      <a
+        href={`tel:${loc.phone}`}
+        className="text-sm font-sans text-muted-foreground hover:text-primary transition-colors"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {loc.phoneFormatted}
+      </a>
 
-      {/* Row 5: CTAs */}
-      <div className="flex items-center gap-3">
+      {/* Mobile Book Now */}
+      <div className="flex items-center gap-3 mt-4 sm:hidden">
         <a
           href={loc.bookingUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-cta text-center text-sm px-6"
+          className="inline-flex items-center justify-center px-5 py-2 rounded-full border-2 border-primary text-primary font-sans font-bold text-xs uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-colors"
           onClick={(e) => e.stopPropagation()}
         >
           Book Now
         </a>
-        <Link
-          to={loc.pageUrl}
-          className="text-sm font-sans font-semibold text-primary hover:underline inline-flex items-center gap-1"
-          onClick={(e) => e.stopPropagation()}
-        >
-          Explore Office <ChevronRight className="w-3.5 h-3.5" />
-        </Link>
-      </div>
-
-      {/* Community tags — subtle */}
-      <div className="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-border/60">
-        {loc.communities.map((c) => (
-          <span
-            key={c}
-            className="text-[11px] font-sans text-muted-foreground bg-muted/50 px-2 py-0.5 rounded-full"
-          >
-            {c}
-          </span>
-        ))}
       </div>
     </article>
   );
