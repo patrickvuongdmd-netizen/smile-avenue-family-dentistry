@@ -36,13 +36,11 @@ const TestimonialsHero = ({ bookingUrl }: Props) => (
         </div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-foreground leading-[1.08] tracking-tight mb-8">
-          We changed how they
-          feel about <span className="text-primary">the&nbsp;dentist</span>
+          They came in nervous.<br />They left <span className="text-primary">smiling.</span>
         </h1>
 
         <p className="text-lg md:text-xl font-body text-muted-foreground leading-relaxed max-w-2xl mb-12">
-          These aren't just reviews — they're stories of people who went from dreading the dentist
-          to genuinely looking forward to their next visit.
+          From first-visit nerves to "can I come back tomorrow?" — in their own words.
         </p>
 
         {/* Platform pills */}
