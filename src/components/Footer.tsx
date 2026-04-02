@@ -138,27 +138,27 @@ const Footer = () => {
 
             {/* Col 3 — Services (Accordion) */}
             <div>
-              <h4 className="font-display text-lg font-semibold mb-4">Services</h4>
-              <Link to="/services" className="block text-sm font-sans opacity-80 hover:opacity-100 transition-opacity mb-3">
+              <h4 className="font-display text-lg font-semibold mb-5">Services</h4>
+              <Link to="/services" className="block text-sm font-sans font-medium opacity-90 hover:opacity-100 transition-opacity mb-4">
                 All Services →
               </Link>
-              <Accordion type="multiple" className="w-full">
+              <Accordion type="multiple" className="w-full space-y-0.5">
                 {footerServiceCategories.map((cat) => (
                   <AccordionItem key={cat.heading} value={cat.heading} className="border-background/10">
-                    <AccordionTrigger className="py-2 text-sm font-sans opacity-80 hover:opacity-100 hover:no-underline [&>svg]:text-background/60 [&>svg]:w-3 [&>svg]:h-3">
+                    <AccordionTrigger className="py-2.5 text-[15px] font-display font-semibold opacity-90 hover:opacity-100 hover:no-underline [&>svg]:text-[#b8e986] [&>svg]:w-4 [&>svg]:h-4 [&>svg]:opacity-100">
                       {cat.heading}
                     </AccordionTrigger>
-                    <AccordionContent className="pb-2">
-                      <div className="space-y-1.5 pl-1">
+                    <AccordionContent className="pb-3">
+                      <div className="space-y-3 pl-0.5">
                         {cat.services.map((svc) => (
                           <div key={svc.slug}>
                             <Link
-                              to={svc.slug === "family-dental-care" ? `/cypress-tx/${svc.slug}` : `/services/${svc.slug}`}
-                              className="block text-xs font-sans opacity-70 hover:opacity-100 transition-opacity py-0.5"
+                              to={`/services/${svc.slug}`}
+                              className="block text-sm font-sans font-medium opacity-75 hover:opacity-100 transition-opacity"
                             >
                               {svc.label}
                             </Link>
-                            <div className="flex gap-3 pl-3 text-[11px] font-sans opacity-50">
+                            <div className="flex gap-4 mt-0.5 text-xs font-sans opacity-45">
                               <Link to={`/cypress-tx/${svc.slug}`} className="hover:opacity-100 transition-opacity">Cypress</Link>
                               <Link to={`/katy-tx/${svc.slug}`} className="hover:opacity-100 transition-opacity">Katy</Link>
                             </div>
