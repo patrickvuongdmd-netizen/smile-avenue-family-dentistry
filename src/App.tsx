@@ -164,6 +164,7 @@ const App = () => (
               <Route path="/katy-tx/westheimer-parkway-dentist" element={<WestheimerParkwayDentist />} />
               <Route path="/katy-tx/fulshear-dentist" element={<FulshearDentist />} />
               <Route path="/convenient-locations" element={<Locations />} />
+              <Route path="/convenient-locations/" element={<Navigate to="/convenient-locations" replace />} />
               <Route path="/locations" element={<Navigate to="/convenient-locations" replace />} />
               <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
               <Route path="/doctors" element={<Doctors />} />
