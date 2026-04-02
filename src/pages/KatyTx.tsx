@@ -408,21 +408,6 @@ const KatyTx = () => {
           </div>
         </section>
 
-        {/* SMILE GALLERY */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">KATY SMILE TRANSFORMATIONS</p>
-            <h2 className="section-heading">Real Results from Our Katy Patients</h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-10">
-              <BeforeAfterCard label="Porcelain Veneers" />
-              <BeforeAfterCard label="Dental Implants" />
-              <BeforeAfterCard label="Invisalign® Treatment" />
-            </div>
-
-
-          </div>
-        </section>
-
 
         {/* INSURANCE LOGOS */}
         <InsuranceLogoBar />
