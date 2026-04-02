@@ -4,23 +4,56 @@ import { ChevronDown, Facebook, Instagram, Globe } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/images";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import TrustTicker from "@/components/TrustTicker";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const footerServiceCategories = [
+  {
+    heading: "Preventive & General",
+    services: [
+      { label: "Preventive Dentistry", slug: "preventive-dentistry" },
+      { label: "Dental Cleaning", slug: "dental-cleaning" },
+      { label: "Children's Dentistry", slug: "pediatric-dentistry" },
+      { label: "Family Dental Care", slug: "family-dental-care" },
+      { label: "Emergency Dentistry", slug: "emergency-dentist" },
+    ],
+  },
+  {
+    heading: "Cosmetic & Aesthetic",
+    services: [
+      { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+      { label: "Teeth Whitening", slug: "teeth-whitening" },
+      { label: "Veneers", slug: "veneers" },
+      { label: "Invisalign®", slug: "invisalign" },
+    ],
+  },
+  {
+    heading: "Restorative & Advanced",
+    services: [
+      { label: "Dental Crowns", slug: "dental-crowns" },
+      { label: "Dental Bridges", slug: "dental-bridges" },
+      { label: "Dentures", slug: "dentures" },
+      { label: "Root Canal", slug: "root-canal" },
+      { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+    ],
+  },
+  {
+    heading: "Surgical & Periodontal",
+    services: [
+      { label: "Dental Implants", slug: "dental-implants" },
+      { label: "All-on-X Implants", slug: "all-on-x-implants" },
+      { label: "Oral Surgery", slug: "oral-surgery" },
+      { label: "Tooth Extraction", slug: "tooth-extraction" },
+    ],
+  },
+];
 
 const Footer = () => {
-  const [expandedService, setExpandedService] = useState<string | null>(null);
   const [bookingOpen, setBookingOpen] = useState(false);
-
-  const footerServices = [
-    { label: "All Services", slug: null, href: "/services" },
-    { label: "Preventive Dentistry", slug: "preventive-dentistry" },
-    { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
-    { label: "Dental Implants", slug: "dental-implants" },
-    { label: "Invisalign®", slug: "invisalign" },
-    { label: "Emergency Dentistry", slug: "emergency-dentist" },
-    { label: "Dental Crowns", slug: "dental-crowns" },
-    { label: "Teeth Whitening", slug: "teeth-whitening" },
-    { label: "Veneers", slug: "veneers" },
-    { label: "Sedation Dentistry", slug: "sedation-dentistry" },
-  ];
 
   return (
     <>
@@ -103,34 +136,39 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Col 3 — Services */}
+            {/* Col 3 — Services (Accordion) */}
             <div>
-              <h4 className="font-display text-lg font-semibold mb-5">Services</h4>
-              <div className="space-y-0.5 text-sm font-sans opacity-80">
-                {footerServices.map((s) => (
-                  <div key={s.label}>
-                    {s.slug ? (
-                      <>
-                        <button
-                          className="flex items-center gap-1.5 w-full text-left py-1.5 hover:opacity-100 transition-opacity"
-                          onClick={() => setExpandedService(expandedService === s.slug ? null : s.slug!)}
-                        >
-                          {s.label}
-                          <ChevronDown className={`w-3 h-3 shrink-0 transition-transform duration-200 ${expandedService === s.slug ? "rotate-180" : ""}`} />
-                        </button>
-                        <div className={`overflow-hidden transition-all duration-200 ${expandedService === s.slug ? "max-h-20 opacity-100" : "max-h-0 opacity-0"}`}>
-                          <div className="pl-3 pb-1 space-y-1 text-xs">
-                            <Link to={`/cypress-tx/${s.slug}`} className="block py-0.5 hover:opacity-100 transition-opacity">in Cypress</Link>
-                            <Link to={`/katy-tx/${s.slug}`} className="block py-0.5 hover:opacity-100 transition-opacity">in Katy</Link>
+              <h4 className="font-display text-lg font-semibold mb-4">Services</h4>
+              <Link to="/services" className="block text-sm font-sans opacity-80 hover:opacity-100 transition-opacity mb-3">
+                All Services →
+              </Link>
+              <Accordion type="multiple" className="w-full">
+                {footerServiceCategories.map((cat) => (
+                  <AccordionItem key={cat.heading} value={cat.heading} className="border-background/10">
+                    <AccordionTrigger className="py-2 text-sm font-sans opacity-80 hover:opacity-100 hover:no-underline [&>svg]:text-background/60 [&>svg]:w-3 [&>svg]:h-3">
+                      {cat.heading}
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-2">
+                      <div className="space-y-1.5 pl-1">
+                        {cat.services.map((svc) => (
+                          <div key={svc.slug}>
+                            <Link
+                              to={svc.slug === "family-dental-care" ? `/cypress-tx/${svc.slug}` : `/services/${svc.slug}`}
+                              className="block text-xs font-sans opacity-70 hover:opacity-100 transition-opacity py-0.5"
+                            >
+                              {svc.label}
+                            </Link>
+                            <div className="flex gap-3 pl-3 text-[11px] font-sans opacity-50">
+                              <Link to={`/cypress-tx/${svc.slug}`} className="hover:opacity-100 transition-opacity">Cypress</Link>
+                              <Link to={`/katy-tx/${svc.slug}`} className="hover:opacity-100 transition-opacity">Katy</Link>
+                            </div>
                           </div>
-                        </div>
-                      </>
-                    ) : (
-                      <Link to={s.href!} className="block py-1.5 hover:opacity-100 transition-opacity">{s.label}</Link>
-                    )}
-                  </div>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
+              </Accordion>
             </div>
 
             {/* Col 4 — Contact */}
