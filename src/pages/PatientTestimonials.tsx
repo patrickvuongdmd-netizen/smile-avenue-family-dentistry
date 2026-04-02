@@ -351,8 +351,31 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
+        {/* ─── CLOSING CTA ─── */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto max-w-3xl text-center">
+            <ScrollReveal>
+              <p className="kicker">YOUR TURN</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
+                Ready to write your own<br className="hidden sm:block" /> five-star story?
+              </h2>
+              <p className="font-body text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+                Whether it's been 6 months or 6 years, we make it easy — with zero judgment, ever.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta w-full sm:w-auto text-center inline-flex items-center justify-center gap-2">
+                  Book Your Visit <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary w-full sm:w-auto text-center inline-flex items-center justify-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  {CYPRESS_PHONE_FORMATTED}
+                </a>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
 
-      </main>
+
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <Footer />
