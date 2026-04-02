@@ -401,44 +401,6 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* WHY CHOOSE CYPRESS */}
-        <ScrollReveal>
-        <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-16 items-center">
-              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.waitingRoom} alt="Smile Avenue Cypress waiting room with Netflix and comfortable seating" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
-              </div>
-              <div>
-                <p className="kicker">THE CYPRESS DENTAL EXPERIENCE</p>
-                <h2 className="section-heading">Not Your Typical Dentist in Cypress, TX</h2>
-                <p className="section-body">
-                  Most Cypress dental offices rush you in and out. At Smile Avenue, we slow down. Our doctors listen first, explain your options clearly, and never push unnecessary treatment. That's why Bridgeland, Towne Lake, and Fairfield families keep coming back — and referring their neighbors.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "5 experienced dentists — shorter wait times, more availability",
-                    "In-house dental lab — faster crowns, veneers & aligners",
-                    "Same-day emergency appointments — call and come in today",
-                    "Netflix, blankets & noise-canceling headphones in every room",
-                    "Digital impressions — no goopy molds, ever",
-                    "0% financing through CareCredit & Sunbit",
-                    "Most PPO insurance plans accepted — we verify for you",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm font-sans text-foreground">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
-                  Book at Cypress
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        </ScrollReveal>
 
         {/* INSURANCE LOGOS */}
         <InsuranceLogoBar />

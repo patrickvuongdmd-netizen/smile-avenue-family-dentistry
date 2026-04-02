@@ -405,44 +405,6 @@ const KatyTx = () => {
           </div>
         </section>
 
-        {/* WHY CHOOSE KATY */}
-        <ScrollReveal>
-        <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-16 items-center">
-              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.treatmentRoom} alt="Smile Avenue Katy treatment room with Netflix and patient amenities" className="w-full h-full object-cover" loading="lazy" width={800} height={600} />
-              </div>
-              <div>
-                <p className="kicker">THE KATY DENTAL EXPERIENCE</p>
-                <h2 className="section-heading">Not Your Typical Dentist in Katy, TX</h2>
-                <p className="section-body">
-                  Cinco Ranch, Firethorne, and Cross Creek Ranch families choose Smile Avenue because we don't rush. Our doctors listen, explain clearly, and never push unnecessary treatment. It's why 200+ Katy patients rate us 4.9 stars.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "3 experienced dentists — personalized, unhurried care",
-                    "In-house dental lab — faster crowns, veneers & aligners",
-                    "Same-day emergency appointments — call and come in today",
-                    "Netflix, blankets & noise-canceling headphones in every room",
-                    "Digital impressions — no goopy molds, ever",
-                    "0% financing through CareCredit & Sunbit",
-                    "Most PPO insurance plans accepted — we verify for you",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm font-sans text-foreground">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
-                  Book at Katy
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        </ScrollReveal>
 
         {/* INSURANCE LOGOS */}
         <InsuranceLogoBar />
