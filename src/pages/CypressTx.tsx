@@ -133,11 +133,12 @@ const CypressTx = () => {
                 <p className="section-body">
                   Smile Avenue on Fry Road is the Cypress dentist families actually look forward to visiting. From <Link to="/cypress-tx/dental-cleaning" className="text-primary hover:underline">routine cleanings</Link> and <Link to="/cypress-tx/pediatric-dentistry" className="text-primary hover:underline">pediatric checkups</Link> to <Link to="/cypress-tx/dental-implants" className="text-primary hover:underline">dental implants</Link>, <Link to="/cypress-tx/invisalign" className="text-primary hover:underline">Invisalign</Link>, and <Link to="/cypress-tx/emergency-dentist" className="text-primary hover:underline">same-day emergency visits</Link> — we handle it all under one roof with our in-house dental lab. Proudly serving Bridgeland, Towne Lake, Fairfield, Cy-Fair, and CFISD families.
                 </p>
-                <div className="flex flex-row items-center gap-3 mb-4">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-4">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta w-full sm:w-auto text-center">
                     Book Now
                   </button>
-                  <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary">
+                  <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary w-full sm:w-auto text-center flex items-center justify-center gap-2">
+                    <Phone className="w-4 h-4" />
                     {CYPRESS_PHONE_FORMATTED}
                   </a>
                 </div>
@@ -200,10 +201,25 @@ const CypressTx = () => {
             <div className="inline-flex items-center gap-2 mb-10 text-sm font-sans font-semibold text-foreground bg-muted px-4 py-2 rounded-full">
               ⭐ 4.9 RATING · 300+ GOOGLE REVIEWS
             </div>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
+            {/* Desktop: grid — Mobile: horizontal scroll carousel */}
+            <div className="hidden md:grid md:grid-cols-3 gap-6 text-left">
               {testimonials.map((t) => (
                 <TestimonialCard key={t.name} {...t} />
               ))}
+            </div>
+            <div className="md:hidden relative">
+              <div className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1">
+                {testimonials.map((t) => (
+                  <div key={t.name} className="snap-center shrink-0 w-[85vw] max-w-[340px]">
+                    <TestimonialCard {...t} />
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center gap-2 mt-3">
+                {testimonials.map((_, i) => (
+                  <div key={i} className="w-2 h-2 rounded-full bg-border" />
+                ))}
+              </div>
             </div>
             <Link to="/patient-testimonials" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               Read More Cypress Reviews →
@@ -234,9 +250,17 @@ const CypressTx = () => {
             <p className="section-body max-w-2xl mx-auto">
               Our Cypress team brings decades of combined experience in family, cosmetic, and implant dentistry. Every doctor takes time to listen and build a treatment plan around your goals — never a billing code.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+            {/* Desktop: 5-col grid — Mobile: horizontal scroll */}
+            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
               {doctors.map((doc) => (
                 <DoctorCard key={doc.name} {...doc} />
+              ))}
+            </div>
+            <div className="md:hidden flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1 mt-10">
+              {doctors.map((doc) => (
+                <div key={doc.name} className="snap-center shrink-0 w-[140px]">
+                  <DoctorCard {...doc} />
+                </div>
               ))}
             </div>
           </div>
@@ -250,9 +274,17 @@ const CypressTx = () => {
             <p className="section-body max-w-2xl mx-auto">
               From your child's first cleaning to your smile makeover, Smile Avenue Cypress offers every dental service your family needs — no referrals, no runaround. Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> means faster, more precise results.
             </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
+            {/* Desktop: grid — Mobile: horizontal scroll carousel */}
+            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
               {services.map((svc) => (
                 <ServiceCard key={svc.title} {...svc} />
+              ))}
+            </div>
+            <div className="sm:hidden flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1 mt-10 text-left">
+              {services.map((svc) => (
+                <div key={svc.title} className="snap-center shrink-0 w-[80vw] max-w-[300px]">
+                  <ServiceCard {...svc} />
+                </div>
               ))}
             </div>
             <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
