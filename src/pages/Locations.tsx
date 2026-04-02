@@ -202,7 +202,13 @@ const Locations = () => {
   useDocTitle(
     "Dental Office Locations in Cypress & Katy, TX | Smile Avenue"
   );
-  const [activeIdx, setActiveIdx] = useState(0);
+  const [activeIdx, setActiveIdx] = useState<number | null>(null);
+
+  const BOTH_LOCATIONS_EMBED =
+    "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d250000!2d-95.75!3d29.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSmile+Avenue+Family+Dentistry!5e0!3m2!1sen!2sus!4v1";
+
+  const currentMapSrc = activeIdx !== null ? locations[activeIdx].mapEmbed : BOTH_LOCATIONS_EMBED;
+  const currentLocation = activeIdx !== null ? locations[activeIdx] : null;
 
   return (
     <>
@@ -414,12 +420,12 @@ const Locations = () => {
             <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-8 items-start">
               {/* Left: Cards */}
               <div className="space-y-4 order-2 lg:order-1">
-                {locations.map((loc, idx) => (
+               {locations.map((loc, idx) => (
                   <LocationCard
                     key={loc.name}
                     loc={loc}
                     active={activeIdx === idx}
-                    onSelect={() => setActiveIdx(idx)}
+                    onSelect={() => setActiveIdx(activeIdx === idx ? null : idx)}
                   />
                 ))}
               </div>
@@ -428,27 +434,35 @@ const Locations = () => {
               <div className="order-1 lg:order-2 lg:sticky lg:top-28">
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-border bg-card">
                   <iframe
-                    src={locations[activeIdx].mapEmbed}
+                    src={currentMapSrc}
                     className="w-full aspect-square lg:aspect-[3/4] border-0"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title={`Google Map — Smile Avenue ${locations[activeIdx].name}`}
+                    title={currentLocation ? `Google Map — Smile Avenue ${currentLocation.name}` : "Google Map — All Smile Avenue Locations"}
                   />
-                  <div className="p-4 border-t border-border flex items-center justify-between gap-4">
-                    <p className="text-sm font-sans text-muted-foreground leading-relaxed flex-1">
-                      {locations[activeIdx].directions}
-                    </p>
-                    <a
-                      href={locations[activeIdx].directionsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="shrink-0 inline-flex items-center gap-1.5 text-sm font-sans font-semibold text-primary hover:underline"
-                    >
-                      Directions
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
+                  {currentLocation ? (
+                    <div className="p-4 border-t border-border flex items-center justify-between gap-4">
+                      <p className="text-sm font-sans text-muted-foreground leading-relaxed flex-1">
+                        {currentLocation.directions}
+                      </p>
+                      <a
+                        href={currentLocation.directionsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1.5 text-sm font-sans font-semibold text-primary hover:underline"
+                      >
+                        Directions
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  ) : (
+                    <div className="p-4 border-t border-border text-center">
+                      <p className="text-sm font-sans text-muted-foreground">
+                        Select a location to see directions
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
