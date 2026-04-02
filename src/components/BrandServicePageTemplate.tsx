@@ -47,8 +47,8 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
   useDocTitle(data.metaTitle);
 
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
+  const serviceVideos = SERVICE_VIDEOS[data.serviceSlug];
 
-  // DentalService schema
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService",
@@ -62,7 +62,6 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
     },
   };
 
-  // MedicalProcedure schema (when procedure info is available)
   const medicalProcedureJsonLd = data.procedureType ? {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
@@ -75,7 +74,6 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
     status: "https://schema.org/EventScheduled",
   } : null;
 
-  // HowTo schema from process steps
   const howToJsonLd = data.processSteps.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -89,8 +87,6 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
     })),
   } : null;
 
-  // VideoObject schema for embedded videos
-  const serviceVideos = SERVICE_VIDEOS[data.serviceSlug];
   const videoObjectsJsonLd = serviceVideos && serviceVideos.length > 0
     ? serviceVideos.map((v) => ({
         "@context": "https://schema.org",
@@ -151,9 +147,9 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO */}
-        <section className="bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-            <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">
+        <section className="section-warm">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
               <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
@@ -161,18 +157,16 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
               <span className="text-foreground">{data.serviceName}</span>
             </nav>
 
-            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div>
-                <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3 text-primary font-sans">
-                  {data.heroKicker}
-                </p>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-foreground leading-[1.1] font-display">
+                <p className="kicker">{data.heroKicker}</p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-[1.08] font-display">
                   {data.heroHeading}
                 </h1>
-                <p className="text-base md:text-lg leading-relaxed mb-6 text-muted-foreground max-w-xl font-body">
+                <p className="text-lg md:text-xl leading-relaxed mb-8 text-muted-foreground max-w-xl font-body">
                   {data.heroBody}
                 </p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-4">
                   <button onClick={() => setBookingOpen(true)} className="btn-cta">
                     Book Appointment
                   </button>
@@ -187,7 +181,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
                   <img
                     src={heroImage.url}
                     alt={heroImage.alt}
-                    className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg"
+                    className="w-full aspect-[4/3] object-cover rounded-3xl shadow-lg"
                     loading="eager"
                     fetchPriority="high"
                   />
@@ -197,20 +191,19 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
           </div>
         </section>
 
-        {/* INTRO */}
-        <section className="section-padding section-alt">
+        {/* INTRO — editorial single-column */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">{data.introKicker}</p>
               <h2 className="section-heading">{data.introHeading}</h2>
-              <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
+              <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
                 {data.introParas.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
               </div>
-              {/* Contextual Cross-Links */}
               {data.crossLinks && data.crossLinks.length > 0 && (
-                <p className="mt-6 font-body text-base text-muted-foreground leading-relaxed">
+                <p className="mt-8 font-body text-lg text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-foreground">Related services:</span>{" "}
                   {data.crossLinks.map((link, i) => (
                     <span key={link.slug}>
@@ -227,15 +220,15 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
           </div>
         </section>
 
-        {/* WHY CHOOSE US */}
-        <section className="section-padding bg-background">
+        {/* WHY CHOOSE US — soft cards */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto text-center">
             <p className="kicker">WHY SMILE AVENUE</p>
             <h2 className="section-heading">{data.whyHeading}</h2>
-            <div className="grid sm:grid-cols-2 gap-6 mt-10 text-left max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-2 gap-8 mt-12 text-left max-w-4xl mx-auto">
               {data.whyPoints.map((point) => (
-                <div key={point.title} className="bg-card rounded-xl p-6 border border-border">
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{point.title}</h3>
+                <div key={point.title} className="card-soft">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">{point.title}</h3>
                   <p className="text-sm font-body text-muted-foreground leading-relaxed">{point.description}</p>
                 </div>
               ))}
@@ -243,16 +236,16 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
           </div>
         </section>
 
-        {/* PROCESS STEPS */}
-        <section className="section-padding section-alt">
+        {/* PROCESS STEPS — serif numbers */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">HOW IT WORKS</p>
             <h2 className="section-heading">{data.processHeading}</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
               {data.processSteps.map((step) => (
-                <div key={step.number} className="bg-card rounded-2xl p-6 border border-border text-left">
-                  <span className="text-xs font-sans font-bold text-primary tracking-wider">STEP {step.number}</span>
-                  <h3 className="font-display text-lg font-bold text-foreground mt-1 mb-2">{step.title}</h3>
+                <div key={step.number} className="text-left">
+                  <span className="step-number">{step.number}</span>
+                  <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
                   <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               ))}
@@ -262,14 +255,14 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
 
         {/* VIDEO CAROUSEL */}
         {serviceVideos && serviceVideos.length > 0 && (
-          <section className="section-padding bg-background">
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
             <div className="container mx-auto text-center">
               <p className="kicker">SEE IT IN ACTION</p>
               <h2 className="section-heading">Watch Real Procedures & Results</h2>
               <p className="section-body max-w-2xl mx-auto">
                 See how our team delivers exceptional {data.serviceName.toLowerCase()} care — from consultation to final results.
               </p>
-              <div className="mt-8">
+              <div className="mt-10">
                 <VideoCarousel videos={serviceVideos} />
               </div>
             </div>
@@ -277,13 +270,13 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         )}
 
         {/* FAQ */}
-        <section className="section-padding gradient-cta">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
+            <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
-                <p className="kicker text-white/70">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading text-white">{data.faqHeading}</h2>
-                <p className="section-body text-white/70">
+                <p className="kicker text-primary-foreground/60">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 className="section-heading text-primary-foreground">{data.faqHeading}</h2>
+                <p className="section-body text-primary-foreground/60">
                   Have more questions? Call us or book a consultation.
                 </p>
               </div>
@@ -292,35 +285,35 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
           </div>
         </section>
 
-        {/* FIND THIS SERVICE NEAR YOU */}
-        <section className="section-padding bg-background">
+        {/* TWO LOCATIONS — warm cards */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">FIND THIS SERVICE NEAR YOU</p>
             <h2 className="section-heading">Two Convenient Locations</h2>
             <p className="section-body max-w-2xl mx-auto">
               {data.serviceName} is available at both our Cypress and Katy offices. Choose the location most convenient for you.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
               {(["cypress", "katy"] as const).map((locKey) => {
                 const loc = LOCATIONS[locKey];
                 return (
-                  <div key={locKey} className="bg-card rounded-xl p-8 border border-border text-left">
-                    <h3 className="font-display text-xl font-bold text-foreground mb-4">{loc.name} Office</h3>
-                    <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
-                      <div className="flex items-start gap-2">
+                  <div key={locKey} className="card-warm text-left">
+                    <h3 className="font-display text-xl font-bold text-foreground mb-5">{loc.name} Office</h3>
+                    <div className="space-y-3.5 text-sm font-sans text-muted-foreground mb-8">
+                      <div className="flex items-start gap-2.5">
                         <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                         <span>{loc.address}</span>
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2.5">
                         <Phone className="w-4 h-4 text-primary shrink-0" />
                         <a href={`tel:${loc.phone}`} className="hover:text-primary transition-colors">{loc.phoneFormatted}</a>
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2.5">
                         <Clock className="w-4 h-4 text-primary shrink-0" />
                         <span>{loc.hours}</span>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-3">
                       <a
                         href={loc.booking}
                         target="_blank"
@@ -345,16 +338,16 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
 
         {/* RELATED SERVICES */}
         {data.relatedSlugs.length > 0 && (
-          <section className="section-padding section-alt">
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
             <div className="container mx-auto text-center">
               <p className="kicker">EXPLORE MORE SERVICES</p>
               <h2 className="section-heading">Related Treatments</h2>
-              <div className="flex flex-wrap justify-center gap-3 mt-8">
+              <div className="flex flex-wrap justify-center gap-3 mt-10">
                 {data.relatedSlugs.map((slug) => (
                   <Link
                     key={slug}
                     to={`/services/${slug}`}
-                    className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all"
+                    className="px-6 py-3.5 rounded-2xl bg-card border border-border/60 text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary hover:shadow-md transition-all"
                   >
                     {SERVICE_NAMES[slug] || slug}
                   </Link>
