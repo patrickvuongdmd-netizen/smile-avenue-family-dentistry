@@ -193,7 +193,7 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
-        {/* ─── STORY SECTION 1 ─── */}
+        {/* ─── STORY SECTION 1: Lead grid with accent image ─── */}
         <PatientStorySection
           theme="Finally, no more dread"
           heading="They didn't think they'd ever say this about a dentist"
@@ -202,6 +202,7 @@ const PatientTestimonials = () => {
           stories={fearToComfort}
           bgClass="bg-card"
           accentImage={OFFICE_IMAGES.treatmentRoom}
+          layout="lead-grid"
         />
 
         {/* ─── CINEMATIC QUOTE BREAK ─── */}
@@ -211,7 +212,7 @@ const PatientTestimonials = () => {
           location="Tomball, TX"
         />
 
-        {/* ─── STORY SECTION 2 ─── */}
+        {/* ─── STORY SECTION 2: Horizontal with photo ─── */}
         <PatientStorySection
           theme="More spa than clinic"
           heading="Netflix, blankets, and zero anxiety"
@@ -220,6 +221,7 @@ const PatientTestimonials = () => {
           stories={theExperience}
           bgClass="bg-background"
           accentImage={OFFICE_IMAGES.coffeeStation}
+          layout="horizontal-cards"
         />
 
         {/* ─── QUOTE TICKER ─── */}
@@ -234,7 +236,7 @@ const PatientTestimonials = () => {
           </div>
         </div>
 
-        {/* ─── STORY SECTION 3 ─── */}
+        {/* ─── STORY SECTION 3: Spotlight centered ─── */}
         <PatientStorySection
           theme="Why they stayed"
           heading="They stayed because they trusted us"
@@ -242,6 +244,7 @@ const PatientTestimonials = () => {
           icon={<Shield className="w-5 h-5" />}
           stories={trustAndCare}
           bgClass="bg-card"
+          layout="spotlight"
         />
 
         {/* ─── CINEMATIC QUOTE BREAK ─── */}
@@ -251,7 +254,7 @@ const PatientTestimonials = () => {
           location="Bridgeland, Cypress"
         />
 
-        {/* ─── STORY SECTION 4 ─── */}
+        {/* ─── STORY SECTION 4: Masonry with accent ─── */}
         <PatientStorySection
           theme="The whole crew comes here"
           heading="The whole family — even the stubborn ones"
@@ -260,6 +263,7 @@ const PatientTestimonials = () => {
           stories={familyFocused}
           bgClass="bg-background"
           accentImage={OFFICE_IMAGES.hallway}
+          layout="masonry"
         />
 
         {/* ─── INLINE CTA ─── */}
