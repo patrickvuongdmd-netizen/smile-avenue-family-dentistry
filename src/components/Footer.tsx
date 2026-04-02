@@ -149,7 +149,7 @@ const Footer = () => {
                 <a href="mailto:info@smileavenuekaty.com" className="block hover:opacity-100 transition-opacity">info@smileavenuekaty.com</a>
               </div>
 
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-2">Social</p>
+              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-2">Social</p>
               <div className="flex items-center gap-3">
                 <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Facebook">
                   <Facebook className="w-4 h-4" />
