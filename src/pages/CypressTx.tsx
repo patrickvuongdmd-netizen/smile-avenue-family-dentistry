@@ -300,17 +300,10 @@ const CypressTx = () => {
             {/* Insurance Logo Banner */}
             <div className="mt-10 pt-8 border-t border-border">
               <p className="text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-6">WE ACCEPT THESE & MORE</p>
-              <div className="flex md:grid md:grid-cols-6 gap-4 md:gap-6 overflow-x-auto md:overflow-visible pb-2 md:pb-0 max-w-3xl mx-auto items-center justify-center">
-                {[
-                  { name: "Aetna", src: "https://logo.clearbit.com/aetna.com" },
-                  { name: "Blue Cross Blue Shield", src: "https://logo.clearbit.com/bcbs.com" },
-                  { name: "Cigna", src: "https://logo.clearbit.com/cigna.com" },
-                  { name: "Humana", src: "https://logo.clearbit.com/humana.com" },
-                  { name: "MetLife", src: "https://logo.clearbit.com/metlife.com" },
-                  { name: "United Healthcare", src: "https://logo.clearbit.com/uhc.com" },
-                ].map((ins) => (
-                  <div key={ins.name} className="flex-shrink-0 flex items-center justify-center h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-                    <img src={ins.src} alt={ins.name} className="h-7 w-auto object-contain" loading="lazy" />
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 max-w-3xl mx-auto">
+                {["Aetna", "BCBS", "Cigna", "Humana", "MetLife", "United HC"].map((name) => (
+                  <div key={name} className="bg-card rounded-lg border border-border py-3 px-3 flex items-center justify-center">
+                    <span className="text-xs font-sans font-semibold text-muted-foreground tracking-wide">{name}</span>
                   </div>
                 ))}
               </div>
