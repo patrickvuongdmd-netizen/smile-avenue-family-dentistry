@@ -104,6 +104,7 @@ const BrandToothExtraction = lazy(() => import("./pages/services/ToothExtraction
 const BrandOralSurgery = lazy(() => import("./pages/services/OralSurgery.tsx"));
 const BrandSedationDentistry = lazy(() => import("./pages/services/SedationDentistry.tsx"));
 const BrandPreventiveDentistry = lazy(() => import("./pages/services/PreventiveDentistry.tsx"));
+const BrandFamilyDentalCare = lazy(() => import("./pages/services/FamilyDentalCare.tsx"));
 
 // Google Ads Landing Pages
 const CypressNewPatientLP = lazy(() => import("./pages/cypress/lp/NewPatient.tsx"));
@@ -225,6 +226,7 @@ const App = () => (
               <Route path="/services/oral-surgery" element={<BrandOralSurgery />} />
               <Route path="/services/sedation-dentistry" element={<BrandSedationDentistry />} />
               <Route path="/services/preventive-dentistry" element={<BrandPreventiveDentistry />} />
+              <Route path="/services/family-dental-care" element={<BrandFamilyDentalCare />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/es" element={<Espanol />} />
               {/* Google Ads Landing Pages */}

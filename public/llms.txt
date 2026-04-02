@@ -68,6 +68,7 @@
 - Oral Surgery: https://www.smileavenuefamilydentistry.com/services/oral-surgery/
 - Sedation Dentistry: https://www.smileavenuefamilydentistry.com/services/sedation-dentistry/
 - Preventive Dentistry: https://www.smileavenuefamilydentistry.com/services/preventive-dentistry/
+- Family Dental Care: https://www.smileavenuefamilydentistry.com/services/family-dental-care/
 
 ### Geo-Targeted Service Pages (Cypress)
 - Dental Implants: https://www.smileavenuefamilydentistry.com/cypress-tx/dental-implants/
