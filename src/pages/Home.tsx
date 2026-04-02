@@ -53,12 +53,8 @@ const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
 
-const trustStats = [
-  { value: "5,000+", label: "Five-Star Google Reviews" },
-  { value: "Most", label: "Insurance Plans Accepted" },
-  { value: "Same-Day", label: "Appointments Available" },
-  { value: "2", label: "Convenient Locations" },
-];
+
+
 
 const services = [
   { title: "Dental Implants", description: "Replace missing teeth permanently.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" />, imgKey: "dental-implants" },
