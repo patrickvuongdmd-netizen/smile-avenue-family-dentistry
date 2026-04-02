@@ -51,24 +51,27 @@ const AuthorBlock = ({ story, size = "sm" }: { story: Story; size?: "sm" | "lg" 
 
 /* ─── LAYOUT: Lead grid (original but tighter) ─── */
 const LeadGridLayout = ({ stories, accentImage }: { stories: Story[]; accentImage?: string }) => (
-  <div className={`grid ${accentImage ? "lg:grid-cols-[1fr_1fr_280px]" : "md:grid-cols-3"} gap-5`}>
-    {/* All 3 cards same size — no oversized lead */}
-    {stories.map((s, i) => (
-      <ScrollReveal key={i}>
-        <div className={`h-full rounded-2xl border ${i === 0 ? "border-primary/15 bg-gradient-to-br from-primary/[0.06] to-primary/[0.02]" : "border-border bg-card"} p-6 md:p-7 flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 hover:border-primary/20`}>
-          <div>
-            <Stars size={i === 0 ? "w-4 h-4" : "w-3.5 h-3.5"} />
-            <p className={`font-body ${i === 0 ? "text-base md:text-lg" : "text-sm md:text-base"} text-foreground leading-relaxed mt-4 mb-5`}>
-              "{s.quote}"
-            </p>
+  <div className="flex flex-col gap-5">
+    {/* Cards row */}
+    <div className="grid md:grid-cols-3 gap-5">
+      {stories.map((s, i) => (
+        <ScrollReveal key={i}>
+          <div className={`h-full rounded-2xl border ${i === 0 ? "border-primary/15 bg-gradient-to-br from-primary/[0.06] to-primary/[0.02]" : "border-border bg-card"} p-6 md:p-7 flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 hover:border-primary/20`}>
+            <div>
+              <Stars size={i === 0 ? "w-4 h-4" : "w-3.5 h-3.5"} />
+              <p className={`font-body ${i === 0 ? "text-base md:text-lg" : "text-sm md:text-base"} text-foreground leading-relaxed mt-4 mb-5`}>
+                "{s.quote}"
+              </p>
+            </div>
+            <AuthorBlock story={s} size={i === 0 ? "lg" : "sm"} />
           </div>
-          <AuthorBlock story={s} size={i === 0 ? "lg" : "sm"} />
-        </div>
-      </ScrollReveal>
-    ))}
+        </ScrollReveal>
+      ))}
+    </div>
+    {/* Accent image as a wide banner below */}
     {accentImage && (
-      <ScrollReveal className="hidden lg:block row-span-1">
-        <div className="h-full min-h-[280px] rounded-2xl overflow-hidden shadow-lg">
+      <ScrollReveal>
+        <div className="h-48 md:h-56 rounded-2xl overflow-hidden shadow-lg">
           <img src={accentImage} alt="Smile Avenue office" className="w-full h-full object-cover" loading="lazy" />
         </div>
       </ScrollReveal>
