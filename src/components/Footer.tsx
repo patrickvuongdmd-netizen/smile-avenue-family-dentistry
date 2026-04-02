@@ -82,7 +82,7 @@ const Footer = () => {
             {/* Col 1 — About */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">All About Us</h4>
-              <div className="space-y-2.5 text-sm font-sans opacity-70">
+              <div className="space-y-2.5 text-sm font-sans opacity-80">
                 <Link to="/about" className="block hover:opacity-100 transition-opacity">About</Link>
                 <Link to="/our-team" className="block hover:opacity-100 transition-opacity">Dentists</Link>
                 <Link to="/faq" className="block hover:opacity-100 transition-opacity">FAQs</Link>
