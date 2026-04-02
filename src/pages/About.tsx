@@ -168,8 +168,11 @@ const About = () => {
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {values.map((v) => (
-                <div key={v.title} className="p-6 md:p-8 rounded-2xl border border-border bg-card">
+              {values.map((v, i) => (
+                <div
+                  key={v.title}
+                  className={`p-6 md:p-8 rounded-2xl border border-border bg-card ${i === values.length - 1 ? "sm:col-start-1 lg:col-start-2" : ""}`}
+                >
                   <h3 className="font-display text-lg font-semibold text-foreground mb-3">{v.title}</h3>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed">{v.description}</p>
                 </div>
