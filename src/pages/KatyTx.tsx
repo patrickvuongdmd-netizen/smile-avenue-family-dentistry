@@ -45,13 +45,7 @@ const data: LocationHubData = {
   heroPhotos: KATY_HERO_PHOTOS,
   heroReviewStat: "from 200+ verified Katy reviews",
 
-  socialPlatforms: [
-    { name: "Google", stat: "4.9 Stars · 5,000+ Reviews", icon: <GoogleIcon /> },
-    { name: "Yelp", stat: "192 Reviews", icon: <YelpIcon /> },
-    { name: "Facebook", stat: "1,300+ Community", icon: <FacebookIcon /> },
-    { name: "Instagram", stat: "12K Followers", icon: <InstagramIcon /> },
-    { name: "YouTube", stat: "25.6K Subscribers", icon: <YouTubeIcon /> },
-  ],
+  socialPlatforms: DEFAULT_SOCIAL_PLATFORMS,
   testimonials: [
     { quote: "Dr. Bilal and the team are fantastic! They took the time to explain every step and made sure I was comfortable throughout my treatment. Highly recommend to anyone in Katy.", name: "David W.", source: "Google Review", location: "Cross Creek Ranch, Katy" },
     { quote: "We moved to Cinco Ranch last year and finding Smile Avenue was the best thing. The entire family goes here now, even our 4-year-old loves it. The kids area is so cute!", name: "Maria G.", source: "Google Review", location: "Firethorne, Katy" },

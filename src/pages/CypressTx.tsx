@@ -43,13 +43,7 @@ const data: LocationHubData = {
   heroPhotos: CYPRESS_HERO_PHOTOS,
   heroReviewStat: "from 300+ verified Cypress reviews",
 
-  socialPlatforms: [
-    { name: "Google", stat: "4.9 Stars · 5,000+ Reviews", icon: <GoogleIcon /> },
-    { name: "Yelp", stat: "192 Reviews", icon: <YelpIcon /> },
-    { name: "Facebook", stat: "1,300+ Community", icon: <FacebookIcon /> },
-    { name: "Instagram", stat: "12K Followers", icon: <InstagramIcon /> },
-    { name: "YouTube", stat: "25.6K Subscribers", icon: <YouTubeIcon /> },
-  ],
+  socialPlatforms: DEFAULT_SOCIAL_PLATFORMS,
   testimonials: [
     { quote: "I always love to come to Smile Dentistry. I trust the care that they give me. The team makes me feel so special every time. Everyone in here is just very nice and friendly.", name: "Thao H.", source: "Google Review", location: "Fairfield, Cypress" },
     { quote: "From the moment I walked in I was greeted so kindly. Everyone made me feel so welcome and at home. I was offered a cozy blanket and my choice of Netflix! AMAZING!", name: "Kashayn P.", source: "Google Review", location: "Towne Lake, Cypress" },
