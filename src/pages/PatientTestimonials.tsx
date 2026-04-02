@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, ExternalLink, MapPin, ArrowRight, Heart, Shield, Sparkles, Users } from "lucide-react";
+import { Star, ExternalLink, MapPin, ArrowRight, Heart, Shield, Sparkles, Users, Phone } from "lucide-react";
 import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
