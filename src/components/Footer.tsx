@@ -76,7 +76,7 @@ const Footer = () => {
 
       {/* Footer — 4 clean columns */}
       <footer className="bg-foreground text-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
 
             {/* Col 1 — About */}
