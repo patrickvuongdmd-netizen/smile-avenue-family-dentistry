@@ -86,6 +86,25 @@ const Faq = lazy(() => import("./pages/Faq.tsx"));
 const Espanol = lazy(() => import("./pages/Espanol.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
+// Brand-Global Service Pages
+const BrandEmergencyDentist = lazy(() => import("./pages/services/EmergencyDentist.tsx"));
+const BrandDentalImplants = lazy(() => import("./pages/services/DentalImplants.tsx"));
+const BrandCosmeticDentistry = lazy(() => import("./pages/services/CosmeticDentistry.tsx"));
+const BrandTeethWhitening = lazy(() => import("./pages/services/TeethWhitening.tsx"));
+const BrandDentalCrowns = lazy(() => import("./pages/services/DentalCrowns.tsx"));
+const BrandAllOnX = lazy(() => import("./pages/services/AllOnX.tsx"));
+const BrandInvisalign = lazy(() => import("./pages/services/Invisalign.tsx"));
+const BrandRootCanal = lazy(() => import("./pages/services/RootCanal.tsx"));
+const BrandDentalCleaning = lazy(() => import("./pages/services/DentalCleaning.tsx"));
+const BrandPediatricDentistry = lazy(() => import("./pages/services/PediatricDentistry.tsx"));
+const BrandDentures = lazy(() => import("./pages/services/Dentures.tsx"));
+const BrandVeneers = lazy(() => import("./pages/services/Veneers.tsx"));
+const BrandDentalBridges = lazy(() => import("./pages/services/DentalBridges.tsx"));
+const BrandToothExtraction = lazy(() => import("./pages/services/ToothExtraction.tsx"));
+const BrandOralSurgery = lazy(() => import("./pages/services/OralSurgery.tsx"));
+const BrandSedationDentistry = lazy(() => import("./pages/services/SedationDentistry.tsx"));
+const BrandPreventiveDentistry = lazy(() => import("./pages/services/PreventiveDentistry.tsx"));
+
 // Google Ads Landing Pages
 const CypressNewPatientLP = lazy(() => import("./pages/cypress/lp/NewPatient.tsx"));
 const CypressEmergencyLP = lazy(() => import("./pages/cypress/lp/EmergencyDentist.tsx"));
@@ -189,6 +208,23 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/emergency-dentist" element={<BrandEmergencyDentist />} />
+              <Route path="/services/dental-implants" element={<BrandDentalImplants />} />
+              <Route path="/services/cosmetic-dentistry" element={<BrandCosmeticDentistry />} />
+              <Route path="/services/teeth-whitening" element={<BrandTeethWhitening />} />
+              <Route path="/services/dental-crowns" element={<BrandDentalCrowns />} />
+              <Route path="/services/all-on-x-implants" element={<BrandAllOnX />} />
+              <Route path="/services/invisalign" element={<BrandInvisalign />} />
+              <Route path="/services/root-canal" element={<BrandRootCanal />} />
+              <Route path="/services/dental-cleaning" element={<BrandDentalCleaning />} />
+              <Route path="/services/pediatric-dentistry" element={<BrandPediatricDentistry />} />
+              <Route path="/services/dentures" element={<BrandDentures />} />
+              <Route path="/services/veneers" element={<BrandVeneers />} />
+              <Route path="/services/dental-bridges" element={<BrandDentalBridges />} />
+              <Route path="/services/tooth-extraction" element={<BrandToothExtraction />} />
+              <Route path="/services/oral-surgery" element={<BrandOralSurgery />} />
+              <Route path="/services/sedation-dentistry" element={<BrandSedationDentistry />} />
+              <Route path="/services/preventive-dentistry" element={<BrandPreventiveDentistry />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/es" element={<Espanol />} />
               {/* Google Ads Landing Pages */}
