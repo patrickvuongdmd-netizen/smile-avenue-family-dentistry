@@ -389,12 +389,13 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* 8 — NEIGHBORHOODS WE SERVE */}
+        {/* 8 — COMMUNITIES & OTHER LOCATIONS (combined) */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
-            <p className="kicker">NEARBY COMMUNITIES</p>
-            <h2 className="section-heading">Neighborhoods We Serve in Cypress</h2>
-            <p className="section-body max-w-2xl mx-auto">Smile Avenue Cypress proudly serves families across these communities. Click to learn more about dental care near you.</p>
+            <p className="kicker">COMMUNITIES WE SERVE</p>
+            <h2 className="section-heading">Cypress Neighborhoods & Locations</h2>
+            <p className="section-body max-w-2xl mx-auto">Smile Avenue proudly serves families across Cypress and beyond. Find dental care near your community.</p>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 max-w-3xl mx-auto">
               {[
                 { label: "Bridgeland Dentist", href: "/cypress-tx/bridgeland-dentist" },
@@ -408,26 +409,25 @@ const CypressTx = () => {
                 </Link>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* 9 — OTHER LOCATIONS */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <h3 className="font-display text-2xl font-bold text-foreground mb-3">Also Serving Katy, TX</h3>
-            <p className="text-sm font-body text-muted-foreground mb-6">Smile Avenue also has a location in Katy for your convenience.</p>
-            <div className="inline-block bg-card rounded-xl p-6 border border-border text-left max-w-md">
-              <div className="flex items-start gap-3 mb-2">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm font-sans text-foreground">23541 Westheimer Pkwy Ste #170, Katy, TX 77494</span>
+            {/* Katy cross-link */}
+            <div className="mt-10 pt-8 border-t border-border">
+              <p className="text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-4">ALSO SERVING KATY, TX</p>
+              <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 bg-card rounded-xl px-6 py-4 border border-border text-left">
+                <div>
+                  <div className="flex items-center gap-2 text-sm font-sans text-foreground mb-1">
+                    <MapPin className="w-4 h-4 text-primary shrink-0" />
+                    23541 Westheimer Pkwy Ste #170, Katy, TX 77494
+                  </div>
+                  <div className="flex items-center gap-2 text-sm font-sans text-muted-foreground">
+                    <Phone className="w-4 h-4 text-primary shrink-0" />
+                    <a href="tel:2818005008" className="hover:text-primary transition-colors">(281) 800-5008</a>
+                  </div>
+                </div>
+                <Link to="/katy-tx" className="shrink-0 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors whitespace-nowrap">
+                  Visit Katy →
+                </Link>
               </div>
-              <div className="flex items-center gap-3 mb-4">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:2818005008" className="text-sm font-sans text-foreground hover:text-primary transition-colors">(281) 800-5008</a>
-              </div>
-              <Link to="/katy-tx" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-                Visit Katy Page →
-              </Link>
             </div>
           </div>
         </section>
