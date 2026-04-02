@@ -49,6 +49,10 @@ const values = [
     title: "Exceptional Experiences",
     description: "We believe it is our duty to deliver an exceptional dental experience and to continuously seek opportunities to innovate and improve it.",
   },
+  {
+    title: "Balanced Lifestyle",
+    description: "We believe the pinnacle of success is measured by a balanced lifestyle of career, recreation, family, and faith.",
+  },
 ];
 
 const heroPhotos = [
