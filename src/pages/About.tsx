@@ -93,6 +93,7 @@ const About = () => {
                 <h1 className="font-display text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-foreground leading-[1.1] tracking-tight">
                   So good we can't<br />be ignored.
                 </h1>
+                <p className="font-sans text-sm font-semibold tracking-[0.2em] text-primary/70 mt-3">EMPOWERING. EDUCATING. ELEVATING.</p>
                 <p className="font-body text-lg text-muted-foreground leading-relaxed mt-6">
                   Smile Avenue was founded on a simple idea: dental care should feel less like a clinical appointment and more like visiting family.
                 </p>
