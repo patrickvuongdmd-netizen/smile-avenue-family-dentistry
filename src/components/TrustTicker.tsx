@@ -46,18 +46,18 @@ const TrustTicker = () => {
       <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold bg-neon-blue">
         <Link
           to="/"
-          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-white/20 text-white' : 'text-white/70'}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-foreground/15 text-foreground' : 'text-foreground/70'}`}
         >
           EN
         </Link>
-        <span className="text-white/70">|</span>
+        <span className="text-foreground/70">|</span>
         <Link
           to="/es"
-          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-white/20 text-white' : 'text-white/70'}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-foreground/15 text-foreground' : 'text-foreground/70'}`}
         >
           ES
         </Link>
-        <span className="text-white/70">|</span>
+        <span className="text-foreground/70">|</span>
         <button
           onClick={() => {
             if ((window as any).toggleAccessibility) {
