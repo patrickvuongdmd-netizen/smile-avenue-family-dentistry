@@ -3,6 +3,23 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight, ChevronLeft, ArrowRight, Play } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import categoryImplants from "@/assets/blog/category-implants.jpg";
+import categoryCosmetic from "@/assets/blog/category-cosmetic.jpg";
+import categoryEmergency from "@/assets/blog/category-emergency.jpg";
+import categoryInvisalign from "@/assets/blog/category-invisalign.jpg";
+import categoryPediatric from "@/assets/blog/category-pediatric.jpg";
+import categorySedation from "@/assets/blog/category-sedation.jpg";
+import categoryPreventive from "@/assets/blog/category-preventive.jpg";
+
+const BLOG_CATEGORY_IMAGES: Record<string, string> = {
+  Implants: categoryImplants,
+  Cosmetic: categoryCosmetic,
+  Emergency: categoryEmergency,
+  Invisalign: categoryInvisalign,
+  Pediatric: categoryPediatric,
+  Sedation: categorySedation,
+  Preventive: categoryPreventive,
+};
 import { useRef, useState } from "react";
 
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
@@ -471,18 +488,26 @@ const Home = () => {
                   to={`/blog/${post.slug}`}
                   className="group flex flex-col rounded-2xl overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  {/* Large colored header block */}
-                  <div className="bg-primary/10 px-6 py-10 md:py-14 flex flex-col justify-end relative overflow-hidden">
-                    <div className="absolute top-4 left-6">
-                      <span className="text-[11px] font-sans font-bold uppercase tracking-widest text-primary/70">{post.category}</span>
+                  {/* Featured image */}
+                  <div className="aspect-[16/10] relative overflow-hidden">
+                    <img
+                      src={BLOG_CATEGORY_IMAGES[post.category] || categoryImplants}
+                      alt={post.title}
+                      loading="lazy"
+                      width={800}
+                      height={512}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="text-[11px] font-sans font-bold uppercase tracking-widest bg-background/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full">{post.category}</span>
                     </div>
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h3>
                   </div>
                   {/* Body */}
                   <div className="flex-1 bg-card border border-t-0 border-border/50 rounded-b-2xl p-6 flex flex-col">
-                    <p className="text-sm font-body text-muted-foreground line-clamp-3 mb-5 flex-1">{post.excerpt}</p>
+                    <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm font-body text-muted-foreground line-clamp-2 mb-5 flex-1">{post.excerpt}</p>
                     <div className="flex items-center justify-between text-xs font-sans text-muted-foreground pt-4 border-t border-border/50">
                       <span className="font-semibold text-foreground">{post.author}</span>
                       <span>{post.readTime}</span>
