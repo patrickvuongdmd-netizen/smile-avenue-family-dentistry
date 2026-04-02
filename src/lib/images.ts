@@ -79,7 +79,7 @@ export const OFFICE_IMAGES = {
   newPatientFirstVisit: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-new-patients-cypress.webp",
   patientCare: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-new-patients-cypress.webp",
   waitingRoom: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-9.jpg",
-  treatmentRoom: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-5.webp",
+  treatmentRoom: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-7.jpg",
   hallway: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-1.webp",
   coffeeStation: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-6.webp",
   teamPhoto: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/team-img.jpg",
