@@ -125,7 +125,10 @@ const About = () => {
         {/* OFFICE PHOTO GRID */}
         <OfficePhotoGrid kicker="INSIDE OUR OFFICES" heading="Where Your Comfort Meets Modern Dentistry" />
 
-        {/* MISSION CTA */}
+        {/* TESTIMONIALS */}
+        <LazySection>
+          <TestimonialCarousel />
+        </LazySection>
 
         {/* Video */}
         <section className="section-padding section-alt">
