@@ -16,6 +16,7 @@ interface Props {
   icon: ReactNode;
   stories: Story[];
   bgClass?: string;
+  accentImage?: string;
 }
 
 const Stars = ({ size = "w-3.5 h-3.5" }: { size?: string }) => (
@@ -26,9 +27,12 @@ const Stars = ({ size = "w-3.5 h-3.5" }: { size?: string }) => (
   </div>
 );
 
-const PatientStorySection = ({ theme, heading, description, icon, stories, bgClass = "bg-background" }: Props) => (
-  <section className={`py-16 md:py-24 ${bgClass}`}>
-    <div className="container mx-auto px-4 max-w-6xl">
+const PatientStorySection = ({ theme, heading, description, icon, stories, bgClass = "bg-background", accentImage }: Props) => (
+  <section className={`py-16 md:py-24 ${bgClass} relative overflow-hidden`}>
+    {/* Subtle background accent */}
+    <div className="absolute top-0 right-0 w-72 h-72 bg-primary/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+    
+    <div className="container mx-auto px-4 max-w-6xl relative">
       {/* Section header */}
       <ScrollReveal>
         <div className="max-w-2xl mb-14">
@@ -45,11 +49,11 @@ const PatientStorySection = ({ theme, heading, description, icon, stories, bgCla
         </div>
       </ScrollReveal>
 
-      {/* Story cards — first card is hero-sized, rest are smaller */}
-      <div className="grid md:grid-cols-2 gap-6">
+      {/* Story cards with optional side image */}
+      <div className={`grid ${accentImage ? "lg:grid-cols-3" : "md:grid-cols-2"} gap-6`}>
         {/* Lead story — large */}
-        <ScrollReveal className="md:row-span-2">
-          <div className="h-full rounded-2xl border border-primary/15 bg-primary/[0.03] p-8 md:p-10 flex flex-col justify-between">
+        <ScrollReveal className={accentImage ? "lg:row-span-2" : "md:row-span-2"}>
+          <div className="h-full rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/[0.06] to-primary/[0.02] p-8 md:p-10 flex flex-col justify-between shadow-sm">
             <div>
               <Stars size="w-5 h-5" />
               <p className="font-body text-xl md:text-2xl text-foreground leading-relaxed mt-6 mb-8">
@@ -58,7 +62,7 @@ const PatientStorySection = ({ theme, heading, description, icon, stories, bgCla
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center">
                   <span className="text-sm font-sans font-bold text-primary">{stories[0].name.charAt(0)}</span>
                 </div>
                 <div>
@@ -78,7 +82,7 @@ const PatientStorySection = ({ theme, heading, description, icon, stories, bgCla
         {/* Supporting stories */}
         {stories.slice(1).map((s, i) => (
           <ScrollReveal key={i}>
-            <div className="h-full rounded-2xl border border-border bg-background p-6 md:p-8 flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+            <div className="h-full rounded-2xl border border-border bg-card p-6 md:p-8 flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 hover:border-primary/20">
               <div>
                 <Stars />
                 <p className="font-body text-sm md:text-base text-foreground leading-relaxed mt-4 mb-6">
@@ -104,6 +108,15 @@ const PatientStorySection = ({ theme, heading, description, icon, stories, bgCla
             </div>
           </ScrollReveal>
         ))}
+
+        {/* Accent image */}
+        {accentImage && (
+          <ScrollReveal className="hidden lg:block lg:row-span-2">
+            <div className="h-full rounded-2xl overflow-hidden shadow-lg">
+              <img src={accentImage} alt="Smile Avenue office" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </ScrollReveal>
+        )}
       </div>
     </div>
   </section>
