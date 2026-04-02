@@ -168,7 +168,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom bar */}
-          <div className="border-t border-background/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans opacity-50">
+          <div className="border-t border-background/10 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans opacity-50">
             <div className="flex flex-wrap gap-4">
               <Link to="/privacy-policy" className="hover:opacity-100 transition-opacity">Privacy Policy</Link>
               <Link to="/sitemap" className="hover:opacity-100 transition-opacity">Sitemap</Link>
