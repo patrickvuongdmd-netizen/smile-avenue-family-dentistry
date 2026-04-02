@@ -192,77 +192,10 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
-        {/* ─── STORY SECTION 1: Lead grid with accent image ─── */}
-        <PatientStorySection
-          theme="Finally, no more dread"
-          heading="They didn't think they'd ever say this about a dentist"
-          description="For many of our patients, the hardest part was walking through the door. Here's what happened next."
-          icon={<Heart className="w-5 h-5" />}
-          stories={fearToComfort}
-          bgClass="bg-card"
-          accentImage={OFFICE_IMAGES.treatmentRoom}
-          layout="lead-grid"
-        />
-
-        {/* ─── CINEMATIC QUOTE BREAK ─── */}
-        <FullWidthQuote
-          quote="I drove 30 minutes past three other dentists to get here. Worth every mile."
-          name="Sarah K."
-          location="Tomball, TX"
-        />
-
-        {/* ─── STORY SECTION 2: Horizontal with photo ─── */}
-        <PatientStorySection
-          theme="More spa than clinic"
-          heading="Netflix, blankets, and zero anxiety"
-          description="Netflix on the ceiling. Warm blankets. Noise-canceling headphones. This is dentistry, redesigned around you."
-          icon={<Sparkles className="w-5 h-5" />}
-          stories={theExperience}
-          bgClass="bg-background"
-          accentImage={OFFICE_IMAGES.coffeeStation}
-          layout="horizontal-cards"
-        />
-
-        {/* ─── QUOTE TICKER ─── */}
-        <div className="overflow-hidden bg-[hsl(var(--hero-dark))] py-6">
-          <div className="flex animate-ticker whitespace-nowrap">
-            {[...tickerQuotes, ...tickerQuotes].map((text, i) => (
-              <span key={i} className="inline-flex items-center shrink-0 px-8 text-sm font-body italic text-white/40">
-                {text}
-                <span className="ml-8 text-primary/40">✦</span>
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* ─── STORY SECTION 3: Spotlight centered ─── */}
-        <PatientStorySection
-          theme="Why they stayed"
-          heading="They stayed because they trusted us"
-          description="Our patients stay because they trust us — and that trust is earned at every single visit."
-          icon={<Shield className="w-5 h-5" />}
-          stories={trustAndCare}
-          bgClass="bg-card"
-          layout="spotlight"
-        />
-
-        {/* ─── CINEMATIC QUOTE BREAK ─── */}
-        <FullWidthQuote
-          quote="My daughter was scared of dentists until we came here. Now she asks when her next appointment is."
-          name="Linda T."
-          location="Bridgeland, Cypress"
-        />
-
-        {/* ─── STORY SECTION 4: Masonry with accent ─── */}
-        <PatientStorySection
-          theme="The whole crew comes here"
-          heading="The whole family — even the stubborn ones"
-          description="From toddlers to grandparents — every member of your family deserves gentle, thoughtful care."
-          icon={<Users className="w-5 h-5" />}
-          stories={familyFocused}
-          bgClass="bg-background"
-          accentImage={OFFICE_IMAGES.hallway}
-          layout="masonry"
+        {/* ─── TEND-STYLE TESTIMONIAL CAROUSEL ─── */}
+        <TendStyleCarousel
+          testimonials={allReviews}
+          heading="Why people love Smile Avenue"
         />
 
         {/* ─── INLINE CTA ─── */}
