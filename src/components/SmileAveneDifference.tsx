@@ -1,4 +1,4 @@
-import { Tv, Factory, Calendar, Zap, Languages, ScanLine, Heart, Baby } from "lucide-react";
+import { Tv, Factory, Calendar, Zap, Languages, ScanLine, Heart, Baby, Sparkles, Crown, Scan, CreditCard, CalendarCheck } from "lucide-react";
 import { OFFICE_IMAGES } from "@/lib/images";
 
 const perks = [
@@ -10,6 +10,14 @@ const perks = [
   { icon: <ScanLine className="w-5 h-5" />, text: "Digital scanning — no goopy impressions" },
   { icon: <Heart className="w-5 h-5" />, text: "Honest treatment plans — we never upsell" },
   { icon: <Baby className="w-5 h-5" />, text: "Your kids will actually want to come back" },
+];
+
+const techs = [
+  { icon: <Sparkles className="w-5 h-5" />, label: "Invisalign® Provider" },
+  { icon: <Crown className="w-5 h-5" />, label: "In-House Dental Lab" },
+  { icon: <Scan className="w-5 h-5" />, label: "Digital Impressions" },
+  { icon: <CreditCard className="w-5 h-5" />, label: "0% Financing" },
+  { icon: <CalendarCheck className="w-5 h-5" />, label: "Online Booking" },
 ];
 
 interface Props {
@@ -55,6 +63,20 @@ const SmileAvenueDifference = ({ onBook }: Props) => (
           >
             Book Your Visit
           </button>
+        </div>
+      </div>
+
+      {/* Technology trust strip — merged from TechnologyTrust */}
+      <div className="mt-14 pt-10 border-t border-border">
+        <div className="grid grid-cols-5 gap-4 sm:gap-6">
+          {techs.map((t) => (
+            <div key={t.label} className="flex flex-col items-center text-center gap-2">
+              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                {t.icon}
+              </div>
+              <span className="text-[10px] sm:text-xs font-sans font-semibold text-foreground leading-tight">{t.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

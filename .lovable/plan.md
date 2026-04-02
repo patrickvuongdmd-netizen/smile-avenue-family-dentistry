@@ -1,30 +1,23 @@
+## Streamline Homepage
 
+### Remove these sections:
+1. **Service Pill Carousel** — redundant with the Services Card Grid below it. Keep the card grid (it's more visual and informative).
+2. **Technology Trust** — merge key points into the Smile Avenue Difference section instead.
+3. **Office Photo Grid** — move to the About page (it's better suited there).
+4. **Video Testimonials** — remove from homepage (the redesigned testimonial carousel is sufficient). Keep the video content accessible from the Patient Testimonials page.
 
-## Sitemap Layout Reorganization
+### Final homepage order (~8 sections):
+1. Hero (unchanged)
+2. Credibility Bar (unchanged)
+3. Services Card Grid (unchanged)
+4. Smile Avenue Difference (absorb Technology Trust highlights)
+5. FAQ (unchanged)
+6. Testimonial Carousel (unchanged)
+7. Doctors (unchanged)
+8. Free Consultation CTA (unchanged)
+9. Blog (unchanged)
 
-The current sitemap dumps all 8 sections into a flat 3-column grid, making it hard to scan. The two large "Services" sections (17 links each) dominate and create uneven columns.
-
-### Layout Strategy
-
-Group sections into logical rows with visual separators, and use a structured layout that pairs related content side-by-side:
-
-**Row 1 — General (3 columns):** Main Pages | Locations | Team & Doctors
-
-**Row 2 — Cypress (3 columns):** Neighborhoods — Cypress | Services — Cypress (split into 2 columns using a nested 2-col grid since it has 17 items)
-
-**Row 3 — Katy (3 columns):** Neighborhoods — Katy | Services — Katy (split into 2 columns, same treatment)
-
-**Row 4 — Resources (full width):** Patient Resources (displayed as a horizontal multi-column list)
-
-Each row gets a subtle top border separator and a light section label ("General", "Cypress", "Katy", "Resources") for quick scanning.
-
-### Technical Details
-
-- **File:** `src/pages/Sitemap.tsx`
-- Restructure data from flat `sections` array into grouped rows
-- Replace the single `grid` with multiple row containers separated by `border-t` dividers
-- Services sections use a nested 2-column sub-grid so the 17 links split ~9/8 across two columns
-- Patient Resources row uses `sm:grid-cols-3 lg:grid-cols-4` to spread links horizontally
-- Add row labels as small uppercase tracking-wide text above each group
-- Keep all existing links, hrefs, and styling patterns intact
-
+### Files changed:
+- `src/pages/Home.tsx` — remove 4 sections, reorder remaining
+- `src/components/SmileAveneDifference.tsx` — add technology/trust points if not already there
+- `src/pages/About.tsx` — add Office Photo Grid here

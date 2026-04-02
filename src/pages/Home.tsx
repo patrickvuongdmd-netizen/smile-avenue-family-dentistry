@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight, ChevronLeft, ArrowRight, Play } from "lucide-react";
+import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight, Play } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import categoryImplants from "@/assets/blog/category-implants.jpg";
 import categoryCosmetic from "@/assets/blog/category-cosmetic.jpg";
@@ -30,9 +30,8 @@ const BLOG_CATEGORY_COLORS: Record<string, { bg: string; badge: string; text: st
   Sedation: { bg: "bg-[hsl(260,30%,93%)]", badge: "bg-[hsl(260,50%,60%)]/15 text-[hsl(260,50%,40%)]", text: "text-[hsl(260,50%,40%)]" },
   Preventive: { bg: "bg-[hsl(140,30%,92%)]", badge: "bg-[hsl(140,45%,45%)]/15 text-[hsl(140,45%,30%)]", text: "text-[hsl(140,45%,30%)]" },
 };
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
 import BookingLocationModal from "@/components/BookingLocationModal";
@@ -42,28 +41,20 @@ import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
-import TechnologyTrust from "@/components/TechnologyTrust";
 import ScrollReveal from "@/components/ScrollReveal";
-import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import LazySection from "@/components/LazySection";
-import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL, SERVICE_IMAGES } from "@/lib/images";
-import LazyYouTube from "@/components/LazyYouTube";
+import { DOCTOR_IMAGES, OFFICE_IMAGES, HERO_VIDEO_URL } from "@/lib/images";
 import CredibilityBar from "@/components/CredibilityBar";
 import SmileAvenueDifference from "@/components/SmileAveneDifference";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import LocationCard from "@/components/LocationCard";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
 const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
 
-const trustStats = [
-  { value: "5,000+", label: "Five-Star Google Reviews" },
-  { value: "Most", label: "Insurance Plans Accepted" },
-  { value: "Same-Day", label: "Appointments Available" },
-  { value: "2", label: "Convenient Locations" },
-];
+
+
 
 const services = [
   { title: "Dental Implants", description: "Replace missing teeth permanently.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" />, imgKey: "dental-implants" },
@@ -95,14 +86,6 @@ const Home = () => {
   const [heroLoc, setHeroLoc] = useState<"cypress" | "katy">("cypress");
   const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  const pillCarouselRef = useRef<HTMLDivElement>(null);
-
-  const scrollCarousel = (dir: "left" | "right") => {
-    const el = pillCarouselRef.current;
-    if (!el) return;
-    const scrollAmount = el.clientWidth * 0.8;
-    el.scrollBy({ left: dir === "right" ? scrollAmount : -scrollAmount, behavior: "smooth" });
-  };
 
   const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
   const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
@@ -255,59 +238,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* SERVICE PILL CAROUSEL */}
-        <section className="py-10 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between mb-6">
-              <p className="text-lg md:text-xl font-display text-muted-foreground">We offer a full range of services for <strong className="text-foreground">all your needs</strong></p>
-              <div className="hidden md:flex gap-2">
-                <button onClick={() => scrollCarousel("left")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll left">
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button onClick={() => scrollCarousel("right")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll right">
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-            <div ref={pillCarouselRef} className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
-              {[
-                { label: "Dental Implants", slug: "dental-implants" },
-                { label: "Invisalign®", slug: "invisalign" },
-                { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
-                { label: "Emergency Dentist", slug: "emergency-dentist" },
-                { label: "Teeth Whitening", slug: "teeth-whitening" },
-                { label: "Veneers", slug: "veneers" },
-                { label: "Dental Crowns", slug: "dental-crowns" },
-                { label: "Cleanings & Exams", slug: "dental-cleaning" },
-                { label: "Sedation Dentistry", slug: "sedation-dentistry" },
-                { label: "Kids Dentistry", slug: "pediatric-dentistry" },
-                { label: "Root Canal", slug: "root-canal" },
-                { label: "Dentures", slug: "dentures" },
-              ].map((pill) => (
-                <Link
-                  key={pill.slug}
-                  to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${pill.slug}`}
-                  className="snap-start shrink-0 w-[calc(33.333%-0.75rem)] min-w-[240px] flex items-center justify-center px-6 py-6 rounded-2xl bg-secondary text-foreground font-display text-base md:text-lg font-medium hover:bg-primary/10 hover:text-primary transition-all text-center"
-                >
-                  {pill.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-8 border-y border-border bg-card">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              {trustStats.map((stat, i) => (
-                <div key={i}>
-                  <div className="font-display text-2xl md:text-3xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm font-sans text-muted-foreground mt-1">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CREDIBILITY BAR */}
         <CredibilityBar />
@@ -348,10 +278,7 @@ const Home = () => {
         </ScrollReveal>
 
 
-        {/* TECHNOLOGY TRUST */}
-        <ScrollReveal>
-          <TechnologyTrust />
-        </ScrollReveal>
+
 
         {/* FAQ */}
         <LazySection>
@@ -399,64 +326,8 @@ const Home = () => {
           </ScrollReveal>
         </LazySection>
 
-        {/* OFFICE PHOTO GRID */}
-        <LazySection>
-          <OfficePhotoGrid />
-        </LazySection>
 
-        <LazySection>
-          <section className="section-padding bg-background">
-            <div className="container mx-auto">
-              <p className="kicker text-center">TWO CONVENIENT LOCATIONS</p>
-              <h2 className="section-heading text-center">Find Your Nearest Office</h2>
-              <div className="grid md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
-                <LocationCard
-                  name="Smile Avenue Cypress"
-                  address="9212 Fry Rd #120, Cypress, TX 77433"
-                  phone="(832) 648-1756"
-                  phoneRaw="8326481756"
-                  hours="Mon–Fri 8:30am–5pm"
-                  image={OFFICE_IMAGES.cypressHero}
-                  bookingUrl={CYPRESS_BOOKING}
-                  reviewCount="3,000+"
-                />
-                <LocationCard
-                  name="Smile Avenue Katy"
-                  address="23541 Westheimer Pkwy Ste #170, Katy, TX 77494"
-                  phone="(281) 800-5008"
-                  phoneRaw="2818005008"
-                  hours="Mon–Fri 8:30am–5pm"
-                  satHours="Sat 8am–2pm"
-                  image={OFFICE_IMAGES.katyHero}
-                  bookingUrl={KATY_BOOKING}
-                  reviewCount="2,000+"
-                />
-              </div>
-            </div>
-          </section>
-        </LazySection>
 
-        {/* VIDEO TESTIMONIALS */}
-        <LazySection>
-          <section className="section-padding section-alt">
-            <div className="container mx-auto">
-              <p className="kicker text-center">REAL PATIENTS, REAL STORIES</p>
-              <h2 className="section-heading text-center">Hear It Directly from Our Patients</h2>
-              <div className="grid sm:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
-                {VIDEO_TESTIMONIALS.slice(0, 4).map((vid, i) => (
-                  <LazyYouTube key={i} videoId={vid.youtubeId} title={vid.title} />
-                ))}
-              </div>
-              <div className="text-center mt-8">
-                <Link to="/patient-testimonials" className="btn-secondary">See All Patient Stories</Link>
-              </div>
-            </div>
-          </section>
-        </LazySection>
-
-        <LazySection>
-          <InsuranceLogoBar />
-        </LazySection>
 
 
         {/* FREE CONSULTATION CTA */}
