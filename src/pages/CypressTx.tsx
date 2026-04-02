@@ -201,10 +201,25 @@ const CypressTx = () => {
             <div className="inline-flex items-center gap-2 mb-10 text-sm font-sans font-semibold text-foreground bg-muted px-4 py-2 rounded-full">
               ⭐ 4.9 RATING · 300+ GOOGLE REVIEWS
             </div>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
+            {/* Desktop: grid — Mobile: horizontal scroll carousel */}
+            <div className="hidden md:grid md:grid-cols-3 gap-6 text-left">
               {testimonials.map((t) => (
                 <TestimonialCard key={t.name} {...t} />
               ))}
+            </div>
+            <div className="md:hidden relative">
+              <div className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1">
+                {testimonials.map((t) => (
+                  <div key={t.name} className="snap-center shrink-0 w-[85vw] max-w-[340px]">
+                    <TestimonialCard {...t} />
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center gap-2 mt-3">
+                {testimonials.map((_, i) => (
+                  <div key={i} className="w-2 h-2 rounded-full bg-border" />
+                ))}
+              </div>
             </div>
             <Link to="/patient-testimonials" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               Read More Cypress Reviews →
