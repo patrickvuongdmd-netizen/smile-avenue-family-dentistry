@@ -255,59 +255,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* SERVICE PILL CAROUSEL */}
-        <section className="py-10 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between mb-6">
-              <p className="text-lg md:text-xl font-display text-muted-foreground">We offer a full range of services for <strong className="text-foreground">all your needs</strong></p>
-              <div className="hidden md:flex gap-2">
-                <button onClick={() => scrollCarousel("left")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll left">
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button onClick={() => scrollCarousel("right")} className="w-9 h-9 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Scroll right">
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-            <div ref={pillCarouselRef} className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
-              {[
-                { label: "Dental Implants", slug: "dental-implants" },
-                { label: "Invisalign®", slug: "invisalign" },
-                { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
-                { label: "Emergency Dentist", slug: "emergency-dentist" },
-                { label: "Teeth Whitening", slug: "teeth-whitening" },
-                { label: "Veneers", slug: "veneers" },
-                { label: "Dental Crowns", slug: "dental-crowns" },
-                { label: "Cleanings & Exams", slug: "dental-cleaning" },
-                { label: "Sedation Dentistry", slug: "sedation-dentistry" },
-                { label: "Kids Dentistry", slug: "pediatric-dentistry" },
-                { label: "Root Canal", slug: "root-canal" },
-                { label: "Dentures", slug: "dentures" },
-              ].map((pill) => (
-                <Link
-                  key={pill.slug}
-                  to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${pill.slug}`}
-                  className="snap-start shrink-0 w-[calc(33.333%-0.75rem)] min-w-[240px] flex items-center justify-center px-6 py-6 rounded-2xl bg-secondary text-foreground font-display text-base md:text-lg font-medium hover:bg-primary/10 hover:text-primary transition-all text-center"
-                >
-                  {pill.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-8 border-y border-border bg-card">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              {trustStats.map((stat, i) => (
-                <div key={i}>
-                  <div className="font-display text-2xl md:text-3xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm font-sans text-muted-foreground mt-1">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CREDIBILITY BAR */}
         <CredibilityBar />
