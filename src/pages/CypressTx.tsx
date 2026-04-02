@@ -240,9 +240,9 @@ const CypressTx = () => {
             <h2 className="section-heading">Welcome to Smile Avenue Cypress</h2>
             <div className="max-w-3xl mx-auto mt-8">
               <VideoCarousel videos={[
-                { youtubeId: "ovn9F8ascxc", title: "Dentist Cypress: Smile Avenue Family Dentistry" },
-                { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
-                { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
+                { youtubeId: "G2RT4usdGLo", title: "Office Tour – Smile Avenue Family Dentistry" },
+                { youtubeId: "w7T8CmOhTNY", title: "Sydney's Testimonial – Smile Avenue Is A Complete Class By Itself!" },
+                { youtubeId: "H288Gamedc0", title: "From Consult to Perfect Smile: Your Invisalign Adventure" },
               ]} />
             </div>
           </div>
