@@ -526,7 +526,8 @@ const Home = () => {
                     </div>
                   </div>
                 </Link>
-              ))}
+                );
+              })}
             </div>
             <Link to="/blog" className="sm:hidden flex items-center justify-center gap-1.5 mt-6 text-sm font-sans font-medium text-primary hover:underline">
               View all posts
