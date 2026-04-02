@@ -48,24 +48,24 @@ const TendStyleCarousel = ({ testimonials, heading = "Why people love Smile Aven
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-16 md:py-24 bg-background overflow-hidden">
+    <section className="py-20 md:py-28 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header row */}
-        <div className="flex items-center justify-between mb-8 max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+        <div className="flex items-center justify-between mb-12 max-w-6xl mx-auto">
+          <h2 className="font-display text-3xl md:text-[2.75rem] font-bold text-foreground leading-[1.1]">
             {heading}
           </h2>
           <div className="hidden sm:flex items-center gap-2">
             <button
               onClick={scrollPrev}
-              className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-colors"
+              className="w-10 h-10 rounded-full border border-border/60 flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-4 h-4 text-foreground" />
             </button>
             <button
               onClick={scrollNext}
-              className="group inline-flex items-center gap-2 px-5 h-10 rounded-full border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors"
+              className="group inline-flex items-center gap-2 px-5 h-10 rounded-full border border-border/60 hover:border-primary/40 hover:bg-primary/5 transition-colors"
               aria-label="Next testimonial"
             >
               <span className="text-sm font-sans font-medium text-foreground">NEXT</span>
@@ -76,7 +76,7 @@ const TendStyleCarousel = ({ testimonials, heading = "Why people love Smile Aven
 
         {/* Carousel */}
         <div ref={emblaRef} className="overflow-hidden -mx-4 px-4">
-          <div className="flex gap-5">
+          <div className="flex gap-6">
             {testimonials.map((t, i) => {
               const isActive = i === selectedIndex;
               return (
@@ -87,8 +87,8 @@ const TendStyleCarousel = ({ testimonials, heading = "Why people love Smile Aven
                   <div
                     className={`rounded-3xl p-8 md:p-10 lg:p-12 h-full flex flex-col justify-between transition-all duration-500 ${
                       isActive
-                        ? "bg-[hsl(var(--hero-dark))] text-white scale-100 shadow-xl"
-                        : "bg-[hsl(var(--hero-dark))]/60 text-white/60 scale-[0.97]"
+                        ? "bg-primary-dark text-primary-dark-foreground scale-100 shadow-xl"
+                        : "bg-primary-dark/60 text-primary-dark-foreground/60 scale-[0.97]"
                     }`}
                   >
                     <p
@@ -99,12 +99,12 @@ const TendStyleCarousel = ({ testimonials, heading = "Why people love Smile Aven
                       {t.quote}
                     </p>
 
-                    <div className="flex items-center justify-between mt-8 pt-6 border-t border-white/10">
+                    <div className="flex items-center justify-between mt-10 pt-6 border-t border-primary-foreground/10">
                       <div className="flex gap-0.5">
                         {[...Array(5)].map((_, j) => (
                           <Star
                             key={j}
-                            className={`w-4 h-4 fill-primary text-primary transition-opacity duration-500 ${
+                            className={`w-4 h-4 fill-gold text-gold transition-opacity duration-500 ${
                               isActive ? "opacity-100" : "opacity-40"
                             }`}
                           />
@@ -113,14 +113,14 @@ const TendStyleCarousel = ({ testimonials, heading = "Why people love Smile Aven
                       <div className="text-right">
                         <p
                           className={`text-sm font-sans font-semibold transition-opacity duration-500 ${
-                            isActive ? "text-white" : "text-white/50"
+                            isActive ? "text-primary-foreground" : "text-primary-foreground/50"
                           }`}
                         >
                           {t.name}
                         </p>
                         <p
                           className={`text-xs font-sans transition-opacity duration-500 ${
-                            isActive ? "text-white/70" : "text-white/30"
+                            isActive ? "text-primary-foreground/70" : "text-primary-foreground/30"
                           }`}
                         >
                           {t.location}
@@ -135,10 +135,10 @@ const TendStyleCarousel = ({ testimonials, heading = "Why people love Smile Aven
         </div>
 
         {/* Mobile nav */}
-        <div className="flex sm:hidden items-center justify-center gap-3 mt-6">
+        <div className="flex sm:hidden items-center justify-center gap-3 mt-8">
           <button
             onClick={scrollPrev}
-            className="w-10 h-10 rounded-full border border-border flex items-center justify-center"
+            className="w-10 h-10 rounded-full border border-border/60 flex items-center justify-center"
             aria-label="Previous"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -148,7 +148,7 @@ const TendStyleCarousel = ({ testimonials, heading = "Why people love Smile Aven
           </span>
           <button
             onClick={scrollNext}
-            className="w-10 h-10 rounded-full border border-border flex items-center justify-center"
+            className="w-10 h-10 rounded-full border border-border/60 flex items-center justify-center"
             aria-label="Next"
           >
             <ChevronRight className="w-4 h-4" />

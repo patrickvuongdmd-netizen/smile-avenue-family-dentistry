@@ -27,28 +27,29 @@ const TestimonialCarousel = () => {
   const nextIdx = (current + 1) % reviews.length;
 
   return (
-    <section className="section-padding bg-card overflow-hidden">
+    <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm overflow-hidden">
       <div className="container mx-auto">
-        <div className="flex items-end justify-between mb-10">
+        <div className="flex items-end justify-between mb-12">
           <div>
             <p className="kicker">5,000+ FIVE-STAR REVIEWS</p>
             <h2 className="section-heading">Why People Love Smile Avenue</h2>
           </div>
           <div className="hidden sm:flex items-center gap-2">
-            <button onClick={prev} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Previous review">
-              <ChevronLeft className="w-5 h-5" />
+            <button onClick={prev} className="w-10 h-10 rounded-full border border-border/60 flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-colors" aria-label="Previous review">
+              <ChevronLeft className="w-4 h-4 text-foreground" />
             </button>
-            <button onClick={next} className="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Next review">
-              NEXT <ChevronRight className="w-4 h-4 ml-1" />
+            <button onClick={next} className="group inline-flex items-center gap-2 px-5 h-10 rounded-full border border-border/60 hover:border-primary/40 hover:bg-primary/5 transition-colors" aria-label="Next review">
+              <span className="text-sm font-sans font-medium text-foreground">NEXT</span>
+              <ChevronRight className="w-4 h-4 text-foreground" />
             </button>
           </div>
         </div>
 
         {/* Card carousel */}
-        <div className="relative flex items-stretch gap-5 justify-center">
+        <div className="relative flex items-stretch gap-6 justify-center">
           {/* Previous card — peek */}
           <div className="hidden lg:flex w-[120px] shrink-0 items-stretch">
-            <div className="w-full bg-primary/15 rounded-2xl p-6 flex flex-col justify-between opacity-50 overflow-hidden">
+            <div className="w-full rounded-3xl p-6 flex flex-col justify-between opacity-40 overflow-hidden" style={{ backgroundColor: "hsl(var(--primary) / 0.08)" }}>
               <p className="font-body text-sm leading-relaxed text-foreground line-clamp-[8]">
                 "{reviews[prevIdx].quote}"
               </p>
@@ -59,25 +60,25 @@ const TestimonialCarousel = () => {
           </div>
 
           {/* Active card */}
-          <div className="w-full max-w-3xl bg-primary-dark rounded-2xl p-8 md:p-12 flex flex-col justify-between min-h-[320px] md:min-h-[360px] transition-all duration-500">
+          <div className="w-full max-w-3xl bg-primary-dark rounded-3xl p-10 md:p-14 flex flex-col justify-between min-h-[320px] md:min-h-[380px] transition-all duration-500 shadow-xl">
             <div>
-              <div className="flex gap-1 mb-6">
+              <div className="flex gap-1 mb-8">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary-foreground text-primary-foreground" />
+                  <Star key={i} className="w-5 h-5 fill-gold text-gold" />
                 ))}
               </div>
               <blockquote className="font-body text-lg md:text-xl lg:text-2xl leading-relaxed text-primary-foreground">
                 "{reviews[current].quote}"
               </blockquote>
             </div>
-            <p className="font-sans text-sm font-semibold text-primary-foreground mt-8">
-              {reviews[current].name} <span className="text-primary-foreground/70 font-normal">— {reviews[current].location}</span>
+            <p className="font-sans text-sm font-semibold text-primary-foreground mt-10 pt-6 border-t border-primary-foreground/10">
+              {reviews[current].name} <span className="text-primary-foreground/60 font-normal">— {reviews[current].location}</span>
             </p>
           </div>
 
           {/* Next card — peek */}
           <div className="hidden lg:flex w-[120px] shrink-0 items-stretch">
-            <div className="w-full bg-primary/15 rounded-2xl p-6 flex flex-col justify-between opacity-50 overflow-hidden">
+            <div className="w-full rounded-3xl p-6 flex flex-col justify-between opacity-40 overflow-hidden" style={{ backgroundColor: "hsl(var(--primary) / 0.08)" }}>
               <p className="font-body text-sm leading-relaxed text-foreground line-clamp-[8]">
                 "{reviews[nextIdx].quote}"
               </p>
@@ -89,8 +90,8 @@ const TestimonialCarousel = () => {
         </div>
 
         {/* Mobile nav + dots */}
-        <div className="flex items-center justify-center gap-4 mt-8">
-          <button onClick={prev} className="sm:hidden w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Previous review">
+        <div className="flex items-center justify-center gap-4 mt-10">
+          <button onClick={prev} className="sm:hidden w-10 h-10 rounded-full border border-border/60 flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-colors" aria-label="Previous review">
             <ChevronLeft className="w-5 h-5" />
           </button>
           <div className="flex gap-2">
@@ -103,12 +104,12 @@ const TestimonialCarousel = () => {
               />
             ))}
           </div>
-          <button onClick={next} className="sm:hidden w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Next review">
+          <button onClick={next} className="sm:hidden w-10 h-10 rounded-full border border-border/60 flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-colors" aria-label="Next review">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="text-center mt-6">
+        <div className="text-center mt-8">
           <a href="https://www.google.com/search?q=smile+avenue+family+dentistry+reviews" target="_blank" rel="noopener noreferrer" className="text-sm font-sans font-semibold text-primary hover:underline">
             Read 5,000+ Reviews on Google →
           </a>
