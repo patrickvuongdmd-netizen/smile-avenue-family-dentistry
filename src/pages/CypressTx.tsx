@@ -220,90 +220,89 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* FIND US — Map + Hours + Amenities */}
+        {/* FIND US — Map + Info Grid */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker">VISIT OUR CYPRESS OFFICE</p>
             <h2 className="section-heading">Find Us on Fry Road</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              We're on Fry Road in Cypress — directly across from HEB, near Bridgeland High School and the Berry Center. Free parking right at our door.
+            </p>
 
-            <div className="grid lg:grid-cols-[1fr_1fr] gap-8 mt-10">
-              {/* Map */}
-              <div className="rounded-xl overflow-hidden shadow-md border border-border">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, minHeight: 300 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Smile Avenue Family Dentistry Cypress office location on Google Maps"
-                />
+            {/* Map — full width */}
+            <div className="rounded-xl overflow-hidden shadow-md border border-border mt-10">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
+                className="w-full aspect-video border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Smile Avenue Family Dentistry Cypress office location on Google Maps"
+              />
+            </div>
+
+            {/* 3-Column Info Grid */}
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              {/* Address + Directions */}
+              <div>
+                <h3 className="font-display text-lg font-bold text-primary mb-3">Address</h3>
+                <p className="text-sm font-sans text-foreground mb-1">9212 Fry Rd #120</p>
+                <p className="text-sm font-sans text-foreground mb-4">Cypress, TX 77433</p>
+
+                <h3 className="font-display text-lg font-bold text-primary mb-3">How to Get Here</h3>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed">
+                  From US-290, exit Fry Road and head south — we're about 1 mile down on the right, directly across from HEB. From Bridgeland or Towne Lake, take Fry Rd south past Bridgeland High School. From Fairfield or Cy-Fair, head north on Fry Rd from Clay Road.
+                </p>
+                <p className="text-xs font-sans text-muted-foreground mt-3">
+                  <span className="font-medium text-foreground">Landmark:</span> Look for the HEB on Fry Road — we're across the street in the same shopping center as Salata. Free parking at our door.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/DgZBrfjyNed7qKxs8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-sans text-primary font-medium hover:underline mt-3 inline-block"
+                >
+                  Open in Google Maps →
+                </a>
               </div>
 
-              {/* How to Get Here */}
-              <div className="bg-card rounded-xl border border-border p-6 lg:col-span-2">
-                <h3 className="font-display text-lg font-bold text-foreground mb-3 flex items-center gap-2">
-                  <Navigation className="w-5 h-5 text-primary" /> How to Get Here
-                </h3>
-                <div className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed">
-                  <p>
-                    <span className="font-semibold text-foreground">From US-290 / Northwest Freeway:</span> Exit Fry Road and head south. Pass the Jones Road intersection — we're about 1 mile down on the right, in the shopping center directly across from HEB.
-                  </p>
-                  <p>
-                    <span className="font-semibold text-foreground">From Bridgeland / Towne Lake:</span> Take Fry Road south past Tuckerton Road. You'll pass Bridgeland High School and the Berry Center on your left. Continue south — our office is on the right just before the HEB intersection.
-                  </p>
-                  <p>
-                    <span className="font-semibold text-foreground">From Fairfield / Cy-Fair:</span> Head north on Fry Road from Clay Road. Pass Cypress Creek High School and continue north. We're on the left side, across from HEB, about 2 minutes past Longenbaugh Drive.
-                  </p>
-                  <p className="text-xs text-muted-foreground pt-1">
-                    <span className="font-medium text-foreground">Landmark:</span> Look for the HEB grocery store on Fry Road — we're directly across the street in the same shopping center as Salata and European Wax Center. Free parking right in front of our suite.
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-6">
-                {/* Hours */}
-                <div className="bg-card rounded-xl border border-border p-6">
-                  <h3 className="font-display text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-primary" /> Office Hours
-                  </h3>
-                  <div className="space-y-2 text-sm font-sans">
-                    {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day) => (
-                      <div key={day} className="flex justify-between text-foreground">
-                        <span>{day}</span>
-                        <span className="font-medium">8:30 AM – 5:00 PM</span>
-                      </div>
-                    ))}
-                    <div className="flex justify-between text-muted-foreground">
-                      <span>Saturday – Sunday</span>
-                      <span>Closed</span>
+              {/* Hours */}
+              <div>
+                <h3 className="font-display text-lg font-bold text-primary mb-3">Hours</h3>
+                <div className="space-y-2 text-sm font-sans">
+                  {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day) => (
+                    <div key={day} className="flex justify-between text-foreground">
+                      <span>{day}</span>
+                      <span className="font-medium">8:30 AM – 5:00 PM</span>
                     </div>
+                  ))}
+                  <div className="flex justify-between text-muted-foreground">
+                    <span>Saturday – Sunday</span>
+                    <span>Closed</span>
                   </div>
                 </div>
+              </div>
 
-                {/* Amenities */}
-                <div className="bg-card rounded-xl border border-border p-6">
-                  <h3 className="font-display text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                    <Check className="w-5 h-5 text-primary" /> What to Expect
-                  </h3>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {[
-                      "Netflix in every room",
-                      "Warm blankets & pillows",
-                      "Noise-canceling headphones",
-                      "Digital scans — no goopy molds",
-                      "In-house dental lab",
-                      "Same-day emergencies",
-                      "0% financing available",
-                      "Most PPO insurance accepted",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm font-sans text-foreground">
-                        <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              {/* Amenities */}
+              <div className="bg-muted/30 rounded-xl p-6">
+                <h3 className="font-display text-lg font-bold text-foreground mb-4">What to Expect</h3>
+                <ul className="space-y-2.5">
+                  {[
+                    "Netflix in every room",
+                    "Warm blankets & pillows",
+                    "Noise-canceling headphones",
+                    "Digital scans — no goopy molds",
+                    "In-house dental lab",
+                    "Same-day emergencies",
+                    "0% financing available",
+                    "Most PPO insurance accepted",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm font-sans text-foreground">
+                      <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
