@@ -193,32 +193,6 @@ const KatyTx = () => {
           </div>
         </section>
 
-        {/* OFFICE INFO BAR */}
-        <section className="section-alt py-8">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-6 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <div className="text-sm font-sans">
-                  <span className="text-foreground">23541 Westheimer Pkwy Ste #170, Katy, TX 77494</span>
-                  <a href={KATY_MAPS} target="_blank" rel="noopener noreferrer" className="block text-primary text-xs font-medium mt-0.5 hover:underline">
-                    Get Directions
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href={`tel:${KATY_PHONE}`} className="text-sm font-sans font-medium text-foreground hover:text-primary transition-colors">
-                  {KATY_PHONE_FORMATTED}
-                </a>
-              </div>
-              <div className="flex items-center justify-center md:justify-end gap-3">
-                <Clock className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-sm font-sans text-foreground">Mon–Fri 8:30am–5pm · Sat 8am–2pm</span>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* FIND US — Tend-style: info grid first, map below */}
         <section className="section-padding bg-background">
