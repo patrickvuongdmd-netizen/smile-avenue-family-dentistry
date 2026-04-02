@@ -11,8 +11,9 @@ import TrustTicker from "@/components/TrustTicker";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import BookingLocationModal from "@/components/BookingLocationModal";
-import { SERVICE_IMAGES } from "@/lib/images";
+import { SERVICE_IMAGES, SERVICE_VIDEOS } from "@/lib/images";
 import { BrandServiceData, SERVICE_NAMES } from "@/lib/brand-service-data";
+import VideoCarousel from "@/components/VideoCarousel";
 import { useState } from "react";
 
 const PHONE = "8326481756";
