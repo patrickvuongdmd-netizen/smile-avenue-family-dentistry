@@ -934,6 +934,533 @@ At Smile Avenue, we've removed the barriers that keep people from visiting the d
 
 Book your next [dental cleaning](/cypress-tx/dental-cleaning/) today — your future self will thank you.`,
   },
+  },
+
+  // ═══════════════════════════════════════
+  // ADDITIONAL: PEDIATRIC #2
+  // ═══════════════════════════════════════
+  {
+    slug: "how-to-prevent-cavities-in-kids",
+    title: "How to Prevent Cavities in Kids: A Parent's Complete Guide",
+    metaDescription: "Cavities are the most common childhood disease. Learn proven strategies to protect your child's teeth — from diet tips to sealants and fluoride.",
+    excerpt: "Tooth decay is the #1 chronic childhood disease — but it's also one of the most preventable. Here's everything parents need to know about keeping kids cavity-free.",
+    category: "Pediatric",
+    author: "Dr. Sarah Maredia",
+    authorCredentials: "DDS",
+    authorSlug: "sarah-maredia-dds",
+    publishDate: "2026-02-20",
+    readTime: "6 min read",
+    pillar: "pediatric-dentistry",
+    relatedServices: [
+      { label: "Pediatric Dentistry", href: "/cypress-tx/pediatric-dentistry/" },
+      { label: "Preventive Dentistry", href: "/cypress-tx/preventive-dentistry/" },
+      { label: "Dental Cleaning", href: "/cypress-tx/dental-cleaning/" },
+    ],
+    relatedPostSlugs: ["childs-first-dental-visit", "how-often-should-you-go-to-dentist"],
+    tldr: "Cavities in children are largely preventable through good brushing habits, limiting sugary snacks and drinks, regular dental check-ups, dental sealants on molars, and adequate fluoride exposure. Parents should brush for children until age 6–7 and supervise until age 10. Dental sealants reduce cavity risk on molars by up to 80%.",
+    faqs: [
+      { question: "At what age do kids start getting cavities?", answer: "Children can develop cavities as soon as their first teeth appear. Baby bottle tooth decay can affect infants who fall asleep with milk or juice. Early dental visits and good oral hygiene habits help prevent early childhood cavities." },
+      { question: "Are dental sealants worth it for kids?", answer: "Absolutely. Dental sealants are thin protective coatings applied to the chewing surfaces of back teeth. They reduce cavity risk by up to 80% and are quick, painless, and typically covered by dental insurance for children." },
+    ],
+    content: `## The Cavity Crisis in Kids
+
+Tooth decay is the **single most common chronic childhood disease** — five times more common than asthma. According to the CDC, about 20% of children ages 5–11 have at least one untreated cavity.
+
+The good news? Cavities are almost entirely preventable with the right habits and preventive care.
+
+## The 5 Pillars of Cavity Prevention
+
+### 1. Brushing and Flossing
+
+The foundation of cavity prevention starts at home:
+
+- **Ages 0–3**: Parents should brush with a rice-grain-sized amount of fluoride toothpaste twice daily
+- **Ages 3–6**: Use a pea-sized amount of fluoride toothpaste; parents should do the brushing
+- **Ages 6–7**: Children can begin brushing independently, but parents should supervise and "check" their work
+- **Ages 7–10**: Supervision continues; flossing should begin when teeth touch
+- **Ages 10+**: Independent brushing and flossing with periodic check-ins
+
+### 2. Smart Snacking
+
+Diet plays a huge role in cavity risk:
+
+- **Limit juice and sugary drinks** — water and milk are best
+- **Avoid sticky snacks** like gummies, fruit snacks, and dried fruit
+- **Choose cheese, vegetables, and nuts** as snacks instead
+- **Don't let children sip on juice boxes all day** — frequency of sugar exposure matters more than quantity
+- **Never put a baby to bed with a bottle** of milk, juice, or formula
+
+### 3. Regular Dental Visits
+
+[Routine dental check-ups](/cypress-tx/pediatric-dentistry/) every 6 months allow us to:
+- Catch tiny cavities before they grow
+- Apply professional fluoride treatments
+- Monitor development and eruption patterns
+- Reinforce good habits with your child
+
+### 4. Dental Sealants
+
+Dental sealants are one of the most effective cavity prevention tools available:
+
+- Thin, protective coatings applied to the grooves of back teeth (molars)
+- Reduce cavity risk by **up to 80%** on treated teeth
+- Quick, painless application — no drilling or numbing needed
+- Typically last 5–10 years
+- Most insurance plans cover sealants for children
+
+At Smile Avenue, we recommend sealants as soon as your child's permanent molars come in — usually around ages 6 and 12.
+
+### 5. Fluoride
+
+Fluoride strengthens tooth enamel and makes teeth more resistant to acid attacks from bacteria:
+
+- Use fluoride toothpaste from the first tooth
+- Drink fluoridated tap water when possible
+- Professional fluoride varnish at dental visits provides extra protection
+
+## When Cavities Happen
+
+Despite best efforts, some children are more prone to cavities due to genetics, enamel quality, or diet. If your child does get a cavity, **don't panic**. Modern pediatric fillings are tooth-colored, quick, and virtually painless with proper numbing.
+
+The key is catching them early — which is why those [6-month check-ups](/cypress-tx/dental-cleaning/) matter so much.`,
+  },
+
+  // ═══════════════════════════════════════
+  // ADDITIONAL: PEDIATRIC #3
+  // ═══════════════════════════════════════
+  {
+    slug: "when-do-kids-lose-baby-teeth",
+    title: "When Do Kids Lose Baby Teeth? A Timeline for Parents",
+    metaDescription: "Learn when children typically lose their baby teeth, the order they fall out, and when to see a dentist about early or late tooth loss.",
+    excerpt: "Your child's first loose tooth is a milestone! Here's a complete timeline of when baby teeth fall out, what order to expect, and when to call the dentist.",
+    category: "Pediatric",
+    author: "Dr. Sarah Maredia",
+    authorCredentials: "DDS",
+    authorSlug: "sarah-maredia-dds",
+    publishDate: "2026-03-01",
+    readTime: "4 min read",
+    pillar: "pediatric-dentistry",
+    relatedServices: [
+      { label: "Pediatric Dentistry", href: "/cypress-tx/pediatric-dentistry/" },
+      { label: "Dental Cleaning", href: "/cypress-tx/dental-cleaning/" },
+    ],
+    relatedPostSlugs: ["childs-first-dental-visit", "how-to-prevent-cavities-in-kids"],
+    tldr: "Children typically begin losing baby teeth around age 6, starting with the lower front teeth. The process continues until age 12–13 when all permanent teeth have erupted. Baby teeth usually fall out in the same order they came in. See a dentist if a baby tooth is lost before age 4, if a permanent tooth hasn't appeared 6 months after the baby tooth fell out, or if there's pain or infection.",
+    faqs: [
+      { question: "What age do kids lose their first tooth?", answer: "Most children lose their first baby tooth around age 6, though it can happen as early as 4 or as late as 7. The lower front teeth (central incisors) typically fall out first." },
+      { question: "Should I pull my child's loose tooth?", answer: "Generally, let baby teeth fall out naturally. Encourage your child to wiggle it gently with their tongue. If it's hanging by a thread and bothering them, a gentle twist with clean fingers or a tissue is fine. Never force a tooth that isn't ready." },
+    ],
+    content: `## The Baby Tooth Timeline
+
+Children have 20 baby teeth (also called primary teeth) that begin erupting around 6 months of age. These teeth serve as placeholders for the 32 permanent teeth that will eventually replace them.
+
+Here's the typical timeline for losing baby teeth:
+
+| Age | Teeth Lost |
+|-----|-----------|
+| 6–7 years | Lower central incisors (bottom front) |
+| 7–8 years | Upper central incisors (top front) |
+| 7–8 years | Lower lateral incisors |
+| 8–9 years | Upper lateral incisors |
+| 9–11 years | Lower canines |
+| 9–12 years | First molars (top and bottom) |
+| 10–12 years | Upper canines |
+| 10–12 years | Second molars (top and bottom) |
+
+**Key pattern**: Baby teeth generally fall out in the same order they came in — front teeth first, back teeth last.
+
+## What to Expect
+
+### The Loose Tooth Phase
+
+- A tooth may be loose for **several weeks** before it falls out
+- Some children feel anxious about loose teeth — reassure them it's normal
+- **Let it fall out naturally** when possible
+- Mild bleeding when a tooth falls out is normal — have your child bite on a damp gauze pad
+
+### The Gap Phase
+
+- After a baby tooth falls out, the permanent tooth may take **1–6 months** to appear
+- The new tooth may look larger and more yellow than baby teeth — this is normal
+- Permanent teeth have more dentin (the yellow layer under enamel), making them naturally less white than baby teeth
+
+## When to See the Dentist
+
+Contact your [pediatric dentist](/cypress-tx/pediatric-dentistry/) if:
+
+- **A baby tooth falls out before age 4** — this could indicate decay or injury
+- **A permanent tooth hasn't appeared** 6 months after the baby tooth was lost
+- **A permanent tooth is coming in behind** the baby tooth (creating a "shark tooth" — this is common and usually resolves on its own)
+- **There's pain, swelling, or signs of infection** around a loose tooth
+- **A tooth is knocked out due to injury** — this requires immediate attention
+
+## Caring for New Permanent Teeth
+
+Once permanent teeth come in, they're the only teeth your child will ever have. Help protect them by:
+
+- Continuing twice-daily brushing with fluoride toothpaste
+- Starting regular flossing between teeth that touch
+- Getting **dental sealants** on new molars (around ages 6 and 12)
+- Wearing a mouthguard during sports
+- Scheduling regular [dental cleanings](/cypress-tx/dental-cleaning/) every 6 months`,
+  },
+
+  // ═══════════════════════════════════════
+  // ADDITIONAL: SEDATION #2
+  // ═══════════════════════════════════════
+  {
+    slug: "what-to-expect-sedation-dentistry",
+    title: "What to Expect at a Sedation Dentistry Appointment",
+    metaDescription: "First time trying sedation dentistry? Learn exactly what happens before, during, and after your appointment — from preparation to recovery.",
+    excerpt: "Curious about sedation dentistry but nervous about the process? Here's a step-by-step walkthrough of what your sedation appointment will look like.",
+    category: "Sedation",
+    author: "Dr. Patrick Vuong",
+    authorCredentials: "DMD",
+    authorSlug: "patrick-vuong-dmd",
+    publishDate: "2026-02-15",
+    readTime: "5 min read",
+    pillar: "sedation-dentistry",
+    relatedServices: [
+      { label: "Sedation Dentistry", href: "/cypress-tx/sedation-dentistry/" },
+      { label: "Dental Implants", href: "/cypress-tx/dental-implants/" },
+      { label: "Oral Surgery", href: "/cypress-tx/oral-surgery/" },
+    ],
+    relatedPostSlugs: ["overcoming-dental-anxiety", "is-it-a-dental-emergency"],
+    tldr: "Before a sedation appointment, you'll receive specific instructions about fasting, medications, and arranging a ride home. At the appointment, vital signs are monitored throughout, and the sedation level is carefully adjusted for your comfort. Most patients report little to no memory of the procedure. Recovery takes 2–8 hours depending on the type of sedation used. You'll be fully back to normal by the next day.",
+    faqs: [
+      { question: "Can I eat before sedation dentistry?", answer: "For oral sedation and IV sedation, you'll typically need to fast for 6–8 hours before your appointment. For nitrous oxide (laughing gas), a light meal beforehand is usually fine. Your dentist will give you specific instructions." },
+      { question: "How long does it take to recover from dental sedation?", answer: "Nitrous oxide wears off in about 5 minutes. Oral sedation effects last 4–6 hours. IV sedation effects last 6–8 hours. Plan to rest for the remainder of the day after oral or IV sedation." },
+    ],
+    content: `## Before Your Appointment
+
+Preparation depends on which type of sedation you'll be receiving:
+
+### For Nitrous Oxide (Laughing Gas)
+- Eat a light meal 2 hours before
+- No special preparation needed
+- You can drive yourself to and from the appointment
+
+### For Oral Sedation
+- **Fast for 6–8 hours** before your appointment (water is usually okay)
+- Take the prescribed sedative pill as directed (usually 30–60 minutes before)
+- **Arrange a ride** — you cannot drive after oral sedation
+- Wear comfortable, loose-fitting clothing
+- Leave jewelry and valuables at home
+
+### For IV Sedation
+- **Fast for 6–8 hours** before your appointment
+- Wear a short-sleeved shirt (for IV access)
+- **Arrange a ride** — you cannot drive for 24 hours after IV sedation
+- Have someone stay with you for the first few hours after your appointment
+- Review all current medications with your doctor beforehand
+
+## During Your Appointment
+
+### Check-In and Monitoring Setup
+
+When you arrive at Smile Avenue, our team will:
+1. Review your medical history and current medications
+2. Take your vital signs (blood pressure, heart rate, oxygen saturation)
+3. Attach monitoring equipment that stays on throughout the procedure
+4. Answer any last-minute questions
+
+### The Sedation Process
+
+- **Nitrous oxide**: A small mask is placed over your nose; you'll feel relaxed within 2–3 minutes
+- **Oral sedation**: The medication you took before arrival will already be taking effect; you'll feel drowsy and calm
+- **IV sedation**: A small IV line is placed (you may receive a topical numbing cream first); sedation begins almost immediately
+
+### What You'll Feel
+
+With all types of sedation, you'll feel deeply relaxed and comfortable. Most patients describe it as a **dream-like state** — aware enough to respond to instructions but disconnected from anxiety and discomfort. Time seems to pass quickly; a 90-minute procedure may feel like 15 minutes.
+
+## After Your Appointment
+
+### Immediate Recovery
+- Our team monitors you until you're alert enough to leave safely
+- A responsible adult must drive you home (oral and IV sedation)
+- You may feel groggy, slightly disoriented, or emotional — this is completely normal
+
+### At Home
+- **Rest for the remainder of the day** — no driving, operating machinery, or making important decisions
+- **Eat soft foods** and drink plenty of water
+- **Take prescribed pain medication** as directed if needed
+- **Sleep it off** — many patients nap for a few hours and wake up feeling normal
+
+### The Next Day
+- Most patients feel **completely normal** the next morning
+- You can usually return to work and normal activities
+- Follow any specific post-procedure instructions from your doctor
+
+## Common Concerns
+
+**"Will I say something embarrassing?"** Unlike general anesthesia, dental sedation doesn't typically cause the uninhibited behavior you see in viral videos. You'll be relaxed but in control.
+
+**"What if the sedation doesn't work?"** Our doctors carefully calibrate dosages based on your weight, anxiety level, and medical history. With IV sedation, the level can be adjusted in real-time.
+
+**"Is it safe?"** [Sedation dentistry](/cypress-tx/sedation-dentistry/) has an excellent safety record when administered by trained professionals with proper monitoring equipment — which is standard at Smile Avenue.`,
+  },
+
+  // ═══════════════════════════════════════
+  // ADDITIONAL: SEDATION #3
+  // ═══════════════════════════════════════
+  {
+    slug: "dental-phobia-vs-dental-anxiety",
+    title: "Dental Phobia vs. Dental Anxiety: What's the Difference?",
+    metaDescription: "Dental anxiety and dental phobia are different conditions that require different approaches. Learn the signs, causes, and how to manage each one.",
+    excerpt: "Feeling nervous about the dentist? You're not alone. But there's a difference between dental anxiety and dental phobia — and knowing which you have helps determine the best solution.",
+    category: "Sedation",
+    author: "Dr. Laith Yahya",
+    authorCredentials: "DDS",
+    authorSlug: "laith-yahya-dds",
+    publishDate: "2026-03-10",
+    readTime: "5 min read",
+    pillar: "sedation-dentistry",
+    relatedServices: [
+      { label: "Sedation Dentistry", href: "/cypress-tx/sedation-dentistry/" },
+      { label: "Dental Cleaning", href: "/cypress-tx/dental-cleaning/" },
+    ],
+    relatedPostSlugs: ["overcoming-dental-anxiety", "what-to-expect-sedation-dentistry"],
+    tldr: "Dental anxiety is a common, manageable nervousness about dental visits. Dental phobia is an intense, irrational fear that causes people to avoid care entirely — often for years. Anxiety can usually be managed with comfort amenities and communication, while phobia often benefits from sedation dentistry. Both are valid, both are treatable, and neither should prevent you from getting the care you need.",
+    faqs: [
+      { question: "How do I know if I have dental phobia?", answer: "Signs of dental phobia include avoiding dental care for years despite pain, feeling physically ill or panicked at the thought of a dental visit, difficulty sleeping the night before an appointment, and intense fear that feels out of proportion to the actual procedure." },
+      { question: "Can dental phobia be cured?", answer: "While dental phobia may not be 'cured' in a single visit, it can absolutely be managed and reduced over time. Many patients find that after a few positive, comfortable experiences with sedation dentistry, their fear decreases significantly." },
+    ],
+    content: `## Understanding the Spectrum
+
+Most people feel some level of unease about dental visits — that's perfectly normal. But dental fear exists on a spectrum, and understanding where you fall can help you get the right support.
+
+## Dental Anxiety
+
+**Dental anxiety** is a feeling of unease, nervousness, or apprehension about dental visits. It's very common and very manageable.
+
+### Signs of Dental Anxiety:
+- Feeling nervous in the days leading up to an appointment
+- Sweaty palms or butterflies in the waiting room
+- Tensing up when you hear dental equipment
+- Asking lots of questions during procedures (seeking reassurance)
+- Needing a moment to relax before opening wide
+
+### What Helps:
+- **Communication**: Knowing what's coming reduces uncertainty — our team narrates each step
+- **Comfort amenities**: Netflix, music, blankets, and a calming environment
+- **Nitrous oxide**: Mild laughing gas to take the edge off
+- **A patient team**: We never rush anxious patients
+
+## Dental Phobia
+
+**Dental phobia** (odontophobia) is a more intense, often irrational fear that can be debilitating. It goes beyond nervousness — it's a clinical-level fear response.
+
+### Signs of Dental Phobia:
+- Avoiding the dentist **for years** despite pain or visible problems
+- Feeling panicked, nauseous, or physically ill at the thought of a dental visit
+- Crying or inability to sleep before an appointment
+- A past traumatic dental experience that you can't move past
+- Choosing to live with tooth pain rather than see a dentist
+- Feeling shame or embarrassment about the state of your teeth
+
+### What Helps:
+- **Sedation dentistry**: [Oral sedation or IV sedation](/cypress-tx/sedation-dentistry/) allows you to receive care while in a deeply relaxed, near-sleep state
+- **A judgment-free environment**: At Smile Avenue, our philosophy starts with "No Judgment, Ever" — we mean it
+- **Gradual exposure**: Some phobic patients start with a simple meet-and-greet, then a cleaning, then build up to treatment
+- **Choosing the right practice**: A practice that specializes in anxious patients makes all the difference
+
+## The Real-World Impact
+
+Dental phobia has consequences beyond oral health:
+
+- **Untreated decay** leads to infection, pain, and tooth loss
+- **Gum disease** progresses silently, causing bone loss
+- **Self-consciousness** about teeth affects confidence, social interactions, and even career opportunities
+- **Emergency visits** become the only way patients seek care — often more stressful and expensive than preventive visits would have been
+
+## Breaking the Cycle
+
+The most powerful thing we hear from formerly phobic patients is: **"I wish I'd come sooner."**
+
+Here's how many patients at Smile Avenue have broken their cycle of avoidance:
+
+1. **Acknowledged the fear** — no shame, no judgment
+2. **Called during a calm moment** — our team is trained to support anxious callers
+3. **Started with a consultation** — just talking, no treatment
+4. **Chose sedation** for their first procedure — woke up with no memory of the visit
+5. **Built positive experiences** — each visit got easier
+6. **Became regular patients** — some now come every 6 months without sedation
+
+Your fear is valid. Your oral health still matters. And we're here to help you find a path forward.`,
+  },
+
+  // ═══════════════════════════════════════
+  // ADDITIONAL: PREVENTIVE #2
+  // ═══════════════════════════════════════
+  {
+    slug: "importance-of-dental-xrays",
+    title: "Why Dental X-Rays Are Important: Safety, Types, and What They Reveal",
+    metaDescription: "Are dental X-rays safe? How often do you need them? Learn why X-rays are essential for catching hidden problems and what to expect at your next visit.",
+    excerpt: "Dental X-rays reveal problems invisible to the naked eye — from cavities between teeth to bone loss and infections. Here's why they're a critical part of your dental care.",
+    category: "Preventive",
+    author: "Dr. Peter Kim",
+    authorCredentials: "DDS",
+    authorSlug: "peter-kim-dds",
+    publishDate: "2026-02-25",
+    readTime: "5 min read",
+    pillar: "preventive-dentistry",
+    relatedServices: [
+      { label: "Preventive Dentistry", href: "/cypress-tx/preventive-dentistry/" },
+      { label: "Dental Cleaning", href: "/cypress-tx/dental-cleaning/" },
+      { label: "Root Canal", href: "/cypress-tx/root-canal/" },
+    ],
+    relatedPostSlugs: ["how-often-should-you-go-to-dentist", "is-it-a-dental-emergency"],
+    tldr: "Dental X-rays are safe, low-radiation diagnostic tools that reveal cavities between teeth, bone loss from gum disease, infections at tooth roots, impacted teeth, and other issues invisible during a visual exam. Modern digital X-rays use up to 80% less radiation than traditional film. Most adults need a full set every 3–5 years and bitewing X-rays annually.",
+    faqs: [
+      { question: "Are dental X-rays safe?", answer: "Yes. Modern digital dental X-rays use extremely low radiation — a full set exposes you to less radiation than you'd receive from a day of natural background exposure. They're safe for adults, children, and even pregnant women when necessary (with proper shielding)." },
+      { question: "How often do you need dental X-rays?", answer: "Most adults need bitewing X-rays (which show the crowns of upper and lower teeth) once a year, and a full panoramic X-ray every 3–5 years. Your dentist may recommend them more frequently if you have active decay or gum disease." },
+    ],
+    content: `## What X-Rays Reveal
+
+A visual dental exam — even by an experienced dentist — can only see the surfaces of your teeth and gums. Dental X-rays show what's happening **beneath the surface**:
+
+### Between Teeth
+- **Interproximal cavities**: Decay between teeth is one of the most common types — and it's invisible without X-rays until it's advanced
+- **Tartar buildup**: Calcified plaque below the gumline
+
+### Below the Gumline
+- **Bone loss**: Gum disease causes gradual bone loss that X-rays detect early
+- **Root infections**: Abscesses at the tip of a tooth root
+- **Impacted teeth**: Wisdom teeth or other teeth that haven't erupted properly
+
+### Inside the Tooth
+- **Decay under existing fillings**: Old fillings can develop decay underneath
+- **Root fractures**: Cracked roots that don't show any visible symptoms
+- **Developmental issues in children**: Missing, extra, or malpositioned teeth
+
+## Types of Dental X-Rays
+
+| Type | What It Shows | How Often |
+|------|-------------|-----------|
+| Bitewing | Crowns of upper and lower back teeth; detects cavities between teeth | Every 12 months |
+| Periapical | Entire tooth from crown to root tip; shows infections and bone loss | As needed |
+| Panoramic | Full jaw, all teeth, sinuses, and jaw joints in one image | Every 3–5 years |
+| CBCT (3D) | Three-dimensional view; used for implant planning and complex cases | As needed for specific procedures |
+
+At Smile Avenue, we use **digital X-rays** exclusively, which offer several advantages over traditional film:
+- **Up to 80% less radiation** than film X-rays
+- **Instant results** — images appear on screen in seconds
+- **Enhanced detail** — digital images can be zoomed, adjusted, and compared side-by-side
+- **Environmentally friendly** — no chemical processing required
+
+## Radiation: Putting It in Perspective
+
+Many patients worry about X-ray radiation. Here's how dental X-rays compare to everyday radiation exposure:
+
+- **4 bitewing X-rays**: 0.005 mSv (about the same as 1 hour of airplane flight)
+- **Panoramic X-ray**: 0.01 mSv (about the same as a day of natural background radiation)
+- **Chest X-ray**: 0.1 mSv (10x more than a panoramic dental X-ray)
+- **CT scan of the head**: 2.0 mSv (200x more than a panoramic dental X-ray)
+
+The diagnostic benefit of dental X-rays far outweighs the minimal radiation exposure.
+
+## When to Ask About X-Rays
+
+At your next [preventive dental visit](/cypress-tx/preventive-dentistry/), ask your dentist:
+- When were my last X-rays taken?
+- Is it time for new ones?
+- What are my current X-rays showing?
+
+Your dentist will recommend X-rays based on your individual risk factors, dental history, and clinical findings — never more than necessary.`,
+  },
+
+  // ═══════════════════════════════════════
+  // ADDITIONAL: PREVENTIVE #3
+  // ═══════════════════════════════════════
+  {
+    slug: "brushing-mistakes-you-might-be-making",
+    title: "7 Brushing Mistakes You're Probably Making (And How to Fix Them)",
+    metaDescription: "Think you're brushing correctly? Most people make at least one of these 7 common mistakes. Learn proper brushing technique from a dentist.",
+    excerpt: "You've been brushing your teeth your whole life — but are you doing it right? Most adults make at least one of these common mistakes that can damage teeth and gums.",
+    category: "Preventive",
+    author: "Dr. Sameer Bilal",
+    authorCredentials: "DDS",
+    authorSlug: "sameer-bilal-dds",
+    publishDate: "2026-03-20",
+    readTime: "5 min read",
+    pillar: "preventive-dentistry",
+    relatedServices: [
+      { label: "Dental Cleaning", href: "/cypress-tx/dental-cleaning/" },
+      { label: "Preventive Dentistry", href: "/cypress-tx/preventive-dentistry/" },
+    ],
+    relatedPostSlugs: ["how-often-should-you-go-to-dentist", "importance-of-dental-xrays"],
+    tldr: "The 7 most common brushing mistakes are: brushing too hard, using a hard-bristled toothbrush, brushing for less than 2 minutes, neglecting the gumline, brushing immediately after eating acidic foods, not replacing your toothbrush every 3 months, and skipping your tongue. Use a soft-bristled brush, gentle circular motions, and brush for a full 2 minutes twice daily.",
+    faqs: [
+      { question: "How hard should I brush my teeth?", answer: "You should use gentle pressure — about the same force you'd use to hold a pencil. Brushing too hard can wear down enamel and cause gum recession. If your toothbrush bristles are splayed after a month, you're pressing too hard." },
+      { question: "How often should I replace my toothbrush?", answer: "Replace your toothbrush or brush head every 3 months, or sooner if the bristles are frayed. A worn toothbrush removes significantly less plaque. Also replace it after any illness." },
+    ],
+    content: `## Are You Brushing Wrong?
+
+Brushing your teeth seems simple — and it is, once you know the right technique. But most adults learned to brush as children and never updated their method. Here are the 7 mistakes we see most often at Smile Avenue.
+
+## Mistake #1: Brushing Too Hard
+
+**The problem**: Many people think harder brushing = cleaner teeth. In reality, aggressive brushing wears down enamel (the protective outer layer) and causes **gum recession**, exposing sensitive root surfaces.
+
+**The fix**: Use gentle pressure — imagine holding a pencil, not gripping a hammer. Let the bristles do the work. If you're using an electric toothbrush, just guide it along the surfaces without pressing.
+
+**Pro tip**: If your toothbrush bristles are flattened and splayed within a month, you're brushing too hard.
+
+## Mistake #2: Using a Hard-Bristled Brush
+
+**The problem**: Hard and even medium bristles can damage enamel and gums over time, especially combined with aggressive brushing.
+
+**The fix**: **Always choose soft bristles.** Soft bristles are flexible enough to clean effectively while being gentle on teeth and gums. Our doctors at Smile Avenue recommend soft-bristled brushes for every patient, without exception.
+
+## Mistake #3: Not Brushing Long Enough
+
+**The problem**: The average American brushes for about 45 seconds. That's less than half the recommended time.
+
+**The fix**: Brush for **a full 2 minutes**, twice daily. Divide your mouth into four quadrants (upper right, upper left, lower right, lower left) and spend 30 seconds on each.
+
+**Pro tip**: Use a timer, play a 2-minute song, or use an electric toothbrush with a built-in timer.
+
+## Mistake #4: Neglecting the Gumline
+
+**The problem**: Plaque accumulates most at the junction where teeth meet gums. Many people brush the visible tooth surfaces but miss this critical area.
+
+**The fix**: Angle your brush at a **45-degree angle** toward the gumline. Use gentle, short circular or vibrating motions along the gum margin. This removes plaque from the gum pocket — the most cavity- and disease-prone area.
+
+## Mistake #5: Brushing Right After Eating
+
+**The problem**: After eating acidic foods (citrus, tomatoes, coffee, wine), your enamel is temporarily softened. Brushing immediately can actually scrub away weakened enamel.
+
+**The fix**: Wait **30 minutes** after eating acidic foods before brushing. In the meantime, rinse with water or chew sugar-free gum to neutralize acids.
+
+## Mistake #6: Not Replacing Your Toothbrush
+
+**The problem**: Worn, frayed bristles clean significantly less effectively. Old toothbrushes also harbor bacteria.
+
+**The fix**: Replace your toothbrush or electric brush head **every 3 months**. Replace it sooner if the bristles are visibly worn or after any illness.
+
+## Mistake #7: Skipping Your Tongue
+
+**The problem**: Bacteria accumulate on the tongue's rough surface, contributing to bad breath and reintroducing bacteria to your teeth.
+
+**The fix**: After brushing your teeth, gently brush your tongue from back to front, or use a tongue scraper. This takes just 10 seconds and makes a noticeable difference in freshness.
+
+## The Perfect Brushing Technique
+
+Here's the method our dentists at Smile Avenue recommend:
+
+1. **Wet your soft-bristled brush** and apply a pea-sized amount of fluoride toothpaste
+2. **Start in one quadrant** and work systematically
+3. **Angle the brush 45 degrees** toward the gumline
+4. **Use gentle circular motions** — not back-and-forth sawing
+5. **Brush all surfaces**: outer (cheek-side), inner (tongue-side), and chewing surfaces
+6. **Don't forget**: behind your back molars and along the gumline
+7. **Brush your tongue** gently
+8. **Spit, don't rinse** — leaving some fluoride on your teeth provides extra protection
+9. **Total time**: 2 full minutes
+
+Regular [professional cleanings](/cypress-tx/dental-cleaning/) complement your home care by removing tartar that brushing alone can't reach.`,
+  },
 ];
 
 // Helper to get a post by slug
