@@ -20,6 +20,7 @@ import { OFFICE_IMAGES, PAGE_VIDEOS, CYPRESS_HERO_PHOTOS } from "@/lib/images";
 import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
 import LazyYouTube from "@/components/LazyYouTube";
 import VideoCarousel from "@/components/VideoCarousel";
+import { BLOG_POSTS } from "@/lib/blog-data";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
