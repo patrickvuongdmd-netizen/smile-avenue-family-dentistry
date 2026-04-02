@@ -101,6 +101,13 @@ export const BRAND_SERVICES: Record<string, BrandServiceData> = {
       { question: "Do you accept walk-ins for emergencies?", answer: "Call ahead for the fastest service, but we never turn away genuine emergencies." },
     ],
     relatedSlugs: ["root-canal", "tooth-extraction", "dental-crowns", "sedation-dentistry"],
+    crossLinks: [
+      { text: "Root Canal Therapy", slug: "root-canal" },
+      { text: "Tooth Extraction", slug: "tooth-extraction" },
+      { text: "Sedation Dentistry", slug: "sedation-dentistry" },
+    ],
+    procedureType: "https://schema.org/NoninvasiveProcedure",
+    bodyLocation: "Mouth",
   },
 
   "dental-implants": {
