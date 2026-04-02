@@ -1,4 +1,5 @@
 import { Star, MapPin } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 interface Props {
   quote: string;
@@ -13,20 +14,22 @@ const FullWidthQuote = ({ quote, name, location }: Props) => (
       "
     </div>
     <div className="container mx-auto px-4 text-center max-w-4xl relative">
-      <blockquote className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-foreground leading-snug md:leading-tight mb-8">
-        {quote}
-      </blockquote>
-      <div className="flex items-center justify-center gap-3">
-        <div className="flex gap-0.5">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-          ))}
+      <ScrollReveal>
+        <blockquote className="font-display text-2xl sm:text-3xl md:text-5xl font-bold text-foreground leading-snug md:leading-tight mb-8">
+          {quote}
+        </blockquote>
+        <div className="flex items-center justify-center gap-3">
+          <div className="flex gap-0.5">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+            ))}
+          </div>
+          <span className="text-sm font-sans font-semibold text-foreground">{name}</span>
+          <span className="text-sm font-sans text-muted-foreground flex items-center gap-1">
+            <MapPin className="w-3 h-3" /> {location}
+          </span>
         </div>
-        <span className="text-sm font-sans font-semibold text-foreground">{name}</span>
-        <span className="text-sm font-sans text-muted-foreground flex items-center gap-1">
-          <MapPin className="w-3 h-3" /> {location}
-        </span>
-      </div>
+      </ScrollReveal>
     </div>
   </section>
 );
