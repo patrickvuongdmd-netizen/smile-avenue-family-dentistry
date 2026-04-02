@@ -188,28 +188,6 @@ const PatientTestimonials = () => {
           heading="Why people love Smile Avenue"
         />
 
-        {/* ─── INLINE CTA ─── */}
-        <section className="py-16 md:py-20 bg-gradient-to-r from-[hsl(var(--gradient-cta-start))] to-[hsl(var(--gradient-cta-end))] relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvc3ZnPg==')] opacity-50" />
-          <div className="container mx-auto px-4 text-center relative">
-            <ScrollReveal>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-                Ready to feel this way<br className="hidden sm:block" /> about the dentist?
-              </h2>
-              <p className="font-body text-primary-foreground/80 mb-10 max-w-xl mx-auto text-lg">
-                Join 5,000+ families who actually look forward to their next appointment.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-background text-foreground font-sans font-semibold text-sm rounded-full hover:bg-background/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                  Book Your Visit <ArrowRight className="w-4 h-4" />
-                </a>
-                <a href={`tel:${CYPRESS_PHONE}`} className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary-foreground/30 text-primary-foreground font-sans font-semibold text-sm rounded-full hover:bg-primary-foreground/10 transition-colors">
-                  Call {CYPRESS_PHONE_FORMATTED}
-                </a>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
 
         {/* ─── MORE VIDEO STORIES ─── */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-[hsl(var(--surface-subtle))]">
