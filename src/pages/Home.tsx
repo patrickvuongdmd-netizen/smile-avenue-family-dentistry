@@ -30,9 +30,8 @@ const BLOG_CATEGORY_COLORS: Record<string, { bg: string; badge: string; text: st
   Sedation: { bg: "bg-[hsl(260,30%,93%)]", badge: "bg-[hsl(260,50%,60%)]/15 text-[hsl(260,50%,40%)]", text: "text-[hsl(260,50%,40%)]" },
   Preventive: { bg: "bg-[hsl(140,30%,92%)]", badge: "bg-[hsl(140,45%,45%)]/15 text-[hsl(140,45%,30%)]", text: "text-[hsl(140,45%,30%)]" },
 };
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
 import BookingLocationModal from "@/components/BookingLocationModal";
@@ -42,16 +41,12 @@ import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
-import TechnologyTrust from "@/components/TechnologyTrust";
 import ScrollReveal from "@/components/ScrollReveal";
-import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import LazySection from "@/components/LazySection";
-import { DOCTOR_IMAGES, OFFICE_IMAGES, VIDEO_TESTIMONIALS, HERO_VIDEO_URL, SERVICE_IMAGES } from "@/lib/images";
-import LazyYouTube from "@/components/LazyYouTube";
+import { DOCTOR_IMAGES, OFFICE_IMAGES, HERO_VIDEO_URL } from "@/lib/images";
 import CredibilityBar from "@/components/CredibilityBar";
 import SmileAvenueDifference from "@/components/SmileAveneDifference";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import LocationCard from "@/components/LocationCard";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
