@@ -181,8 +181,8 @@ const PatientTestimonials = () => {
 
         {/* ─── STORY SECTION 1: From Fear to Comfort ─── */}
         <PatientStorySection
-          theme="From fear to comfort"
-          heading="We changed how they feel about the dentist"
+          theme="Finally, no more dread"
+          heading="They didn't think they'd ever say this about a dentist"
           description="For many of our patients, the hardest part was walking through the door. Here's what happened next."
           icon={<Heart className="w-5 h-5" />}
           stories={fearToComfort}
@@ -198,8 +198,8 @@ const PatientTestimonials = () => {
 
         {/* ─── STORY SECTION 2: The Experience ─── */}
         <PatientStorySection
-          theme="The experience"
-          heading="It feels like a spa, not a dentist"
+          theme="More spa than clinic"
+          heading="Netflix, blankets, and zero anxiety"
           description="Netflix on the ceiling. Warm blankets. Noise-canceling headphones. This is dentistry, redesigned around you."
           icon={<Sparkles className="w-5 h-5" />}
           stories={theExperience}
@@ -237,8 +237,8 @@ const PatientTestimonials = () => {
 
         {/* ─── STORY SECTION 3: Trust & Transparency ─── */}
         <PatientStorySection
-          theme="Trust & transparency"
-          heading="No surprises. No hidden costs. Just care."
+          theme="Why they stayed"
+          heading="They stayed because they trusted us"
           description="Our patients stay because they trust us — and that trust is earned at every single visit."
           icon={<Shield className="w-5 h-5" />}
           stories={trustAndCare}
@@ -254,8 +254,8 @@ const PatientTestimonials = () => {
 
         {/* ─── STORY SECTION 4: The Family Experience ─── */}
         <PatientStorySection
-          theme="The family experience"
-          heading="Where families actually want to go"
+          theme="The whole crew comes here"
+          heading="The whole family — even the stubborn ones"
           description="From toddlers to grandparents — every member of your family deserves gentle, thoughtful care."
           icon={<Users className="w-5 h-5" />}
           stories={familyFocused}
