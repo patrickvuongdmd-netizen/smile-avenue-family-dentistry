@@ -36,8 +36,8 @@ const Footer = () => {
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-foreground/10" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 md:pt-24">
-          <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-14 md:px-16 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-16">
+          <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-10 md:px-16 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8">
             <h2 className="font-display text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-medium leading-[1.15] text-center md:text-left max-w-lg text-muted-foreground">
               Care at Smile Avenue isn't just gentle,{" "}
               <span className="text-foreground font-semibold">it's genuine.</span>
@@ -59,8 +59,8 @@ const Footer = () => {
 
       {/* Bottom half of card on dark bg */}
       <div className="bg-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-16 md:pb-24">
-          <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-10 md:px-16 md:py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-10 md:pb-14">
+          <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-8 md:px-16 md:py-10">
             <Link to="/">
               <img
                 src="/logo-full.webp"
@@ -76,7 +76,7 @@ const Footer = () => {
 
       {/* Footer — 4 clean columns */}
       <footer className="bg-foreground text-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
 
             {/* Col 1 — About */}
@@ -168,7 +168,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom bar */}
-          <div className="border-t border-background/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans opacity-50">
+          <div className="border-t border-background/10 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans opacity-50">
             <div className="flex flex-wrap gap-4">
               <Link to="/privacy-policy" className="hover:opacity-100 transition-opacity">Privacy Policy</Link>
               <Link to="/sitemap" className="hover:opacity-100 transition-opacity">Sitemap</Link>
