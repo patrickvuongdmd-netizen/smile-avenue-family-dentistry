@@ -282,7 +282,7 @@ const KatyTx = () => {
               </div>
 
               {/* Amenities — spans full height on right */}
-              <div className="bg-muted/30 rounded-xl p-6 md:row-span-2">
+              <div className="bg-sky-50 border border-sky-100 rounded-xl p-6 md:row-span-2">
                 <h3 className="font-display text-lg font-bold text-foreground mb-4">What to Expect</h3>
                 <ul className="space-y-2.5">
                   {[
