@@ -343,64 +343,8 @@ const Home = () => {
           </ScrollReveal>
         </LazySection>
 
-        {/* OFFICE PHOTO GRID */}
-        <LazySection>
-          <OfficePhotoGrid />
-        </LazySection>
 
-        <LazySection>
-          <section className="section-padding bg-background">
-            <div className="container mx-auto">
-              <p className="kicker text-center">TWO CONVENIENT LOCATIONS</p>
-              <h2 className="section-heading text-center">Find Your Nearest Office</h2>
-              <div className="grid md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
-                <LocationCard
-                  name="Smile Avenue Cypress"
-                  address="9212 Fry Rd #120, Cypress, TX 77433"
-                  phone="(832) 648-1756"
-                  phoneRaw="8326481756"
-                  hours="Mon–Fri 8:30am–5pm"
-                  image={OFFICE_IMAGES.cypressHero}
-                  bookingUrl={CYPRESS_BOOKING}
-                  reviewCount="3,000+"
-                />
-                <LocationCard
-                  name="Smile Avenue Katy"
-                  address="23541 Westheimer Pkwy Ste #170, Katy, TX 77494"
-                  phone="(281) 800-5008"
-                  phoneRaw="2818005008"
-                  hours="Mon–Fri 8:30am–5pm"
-                  satHours="Sat 8am–2pm"
-                  image={OFFICE_IMAGES.katyHero}
-                  bookingUrl={KATY_BOOKING}
-                  reviewCount="2,000+"
-                />
-              </div>
-            </div>
-          </section>
-        </LazySection>
 
-        {/* VIDEO TESTIMONIALS */}
-        <LazySection>
-          <section className="section-padding section-alt">
-            <div className="container mx-auto">
-              <p className="kicker text-center">REAL PATIENTS, REAL STORIES</p>
-              <h2 className="section-heading text-center">Hear It Directly from Our Patients</h2>
-              <div className="grid sm:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
-                {VIDEO_TESTIMONIALS.slice(0, 4).map((vid, i) => (
-                  <LazyYouTube key={i} videoId={vid.youtubeId} title={vid.title} />
-                ))}
-              </div>
-              <div className="text-center mt-8">
-                <Link to="/patient-testimonials" className="btn-secondary">See All Patient Stories</Link>
-              </div>
-            </div>
-          </section>
-        </LazySection>
-
-        <LazySection>
-          <InsuranceLogoBar />
-        </LazySection>
 
 
         {/* FREE CONSULTATION CTA */}
