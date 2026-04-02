@@ -23,7 +23,7 @@ const TrustTicker = () => {
 
   return (
     <div className="overflow-hidden flex relative bg-neon-blue" style={{ boxShadow: "0 2px 8px hsl(200 100% 50% / 0.4)" }}>
-      <Link to="/about" className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 hover:underline text-white" style={{}}>
+      <Link to="/about" className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 hover:underline text-foreground" style={{}}>
         Why Smile Avenue?
       </Link>
       <div className="relative overflow-hidden flex-1">
@@ -33,10 +33,10 @@ const TrustTicker = () => {
           {doubled.map((text, i) => (
             <span
               key={i}
-              className="inline-flex items-center shrink-0 px-4 py-2.5 text-xs tracking-wide font-normal font-sans text-white"
+              className="inline-flex items-center shrink-0 px-4 py-2.5 text-xs tracking-wide font-normal font-sans text-foreground"
             >
               {text}
-              <span className="ml-4 text-white/30">·</span>
+              <span className="ml-4 text-foreground/30">·</span>
             </span>
           ))}
         </div>
@@ -46,25 +46,25 @@ const TrustTicker = () => {
       <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold bg-neon-blue">
         <Link
           to="/"
-          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-white/20 text-white' : 'text-white/70'}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-foreground/15 text-foreground' : 'text-foreground/70'}`}
         >
           EN
         </Link>
-        <span className="text-white/70">|</span>
+        <span className="text-foreground/70">|</span>
         <Link
           to="/es"
-          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-white/20 text-white' : 'text-white/70'}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-foreground/15 text-foreground' : 'text-foreground/70'}`}
         >
           ES
         </Link>
-        <span className="text-white/70">|</span>
+        <span className="text-foreground/70">|</span>
         <button
           onClick={() => {
             if ((window as any).toggleAccessibility) {
               (window as any).toggleAccessibility();
             }
           }}
-          className="px-1.5 py-0.5 rounded transition-colors text-white/70"
+          className="px-1.5 py-0.5 rounded transition-colors text-foreground/70"
           aria-label="Accessibility options"
           title="Accessibility"
         >
