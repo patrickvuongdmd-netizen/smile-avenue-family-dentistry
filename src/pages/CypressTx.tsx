@@ -274,9 +274,17 @@ const CypressTx = () => {
             <p className="section-body max-w-2xl mx-auto">
               From your child's first cleaning to your smile makeover, Smile Avenue Cypress offers every dental service your family needs — no referrals, no runaround. Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> means faster, more precise results.
             </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
+            {/* Desktop: grid — Mobile: horizontal scroll carousel */}
+            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
               {services.map((svc) => (
                 <ServiceCard key={svc.title} {...svc} />
+              ))}
+            </div>
+            <div className="sm:hidden flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1 mt-10 text-left">
+              {services.map((svc) => (
+                <div key={svc.title} className="snap-center shrink-0 w-[80vw] max-w-[300px]">
+                  <ServiceCard {...svc} />
+                </div>
               ))}
             </div>
             <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
