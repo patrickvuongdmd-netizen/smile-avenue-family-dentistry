@@ -134,7 +134,7 @@ export interface LocationHubData {
 
   // Payments
   paymentsKicker: string;
-  paymentsHeading: string;
+  
   insuranceBrands: string[];
 
   // Find us
