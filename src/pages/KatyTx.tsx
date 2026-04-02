@@ -315,8 +315,8 @@ const KatyTx = () => {
                 </ul>
               </div>
             </div>
-                <p className="text-sm font-sans text-foreground mb-5">Katy, TX 77494</p>
-
+          </div>
+        </section>
                 <h3 className="font-display text-lg font-bold text-primary mb-3">How to Get Here</h3>
                 <p className="text-sm font-sans text-muted-foreground leading-relaxed">
                   From I-10, exit Grand Parkway (99) south and take Westheimer Parkway west — we're about 2 minutes ahead on the right. From Cinco Ranch or LaCenterra, head east on Cinco Ranch Blvd to Westheimer Pkwy. From Fulshear, take FM 1093 east to Westheimer Parkway.
