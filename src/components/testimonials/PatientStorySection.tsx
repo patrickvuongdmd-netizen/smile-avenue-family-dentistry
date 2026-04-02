@@ -1,5 +1,6 @@
 import { Star, MapPin } from "lucide-react";
 import { ReactNode } from "react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 interface Story {
   quote: string;
