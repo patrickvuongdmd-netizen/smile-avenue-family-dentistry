@@ -32,7 +32,7 @@ const SmileAvenueDifference = ({ onBook }: Props) => (
         <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
           <img
             src={OFFICE_IMAGES.treatmentRoom}
-            alt="Smile Avenue treatment room with Netflix and comfort amenities"
+            alt="Dr. Vuong explaining dental x-rays to a patient at Smile Avenue"
             className="w-full h-full object-cover"
             loading="lazy"
             width={800}
