@@ -13,6 +13,7 @@ const generalCare = [
   { label: "Family Dental Care", slug: "family-dental-care" },
   { label: "Dental Cleaning", slug: "dental-cleaning" },
   { label: "Pediatric Dentistry", slug: "pediatric-dentistry" },
+  { label: "Emergency Dentistry", slug: "emergency-dentist" },
   { label: "Root Canal", slug: "root-canal" },
   { label: "Tooth Extraction", slug: "tooth-extraction" },
   { label: "Dental Crowns", slug: "dental-crowns" },
@@ -48,7 +49,8 @@ const aboutLinks = [
   { label: "Our Team", href: "/our-team" },
   { label: "Dental Lab", href: "/dental-lab" },
   { label: "Patient Testimonials", href: "/patient-testimonials" },
-  
+  { label: "Blog", href: "/blog" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 type DropdownKey = "services" | "patients" | "about" | "locations" | null;
@@ -278,9 +280,6 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                 )}
               </div>
 
-              <Link to={`${locationPrefix}/emergency-dentist`} className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap text-foreground font-bold">Emergency</Link>
-              <Link to="/blog" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Blog</Link>
-              <Link to="/contact" className="px-2 lg:px-3 py-2 hover:text-primary transition-colors whitespace-nowrap">Contact</Link>
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3 ml-1 lg:ml-2">
@@ -394,9 +393,22 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
 
             {/* About */}
-            <Link to="/about" className="block py-4 text-[15px] font-sans font-semibold text-foreground tracking-wide" onClick={() => setMobileOpen(false)}>
+            <button
+              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
+            >
               About
-            </Link>
+              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "about" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
+              <div className="pl-0.5 pb-2">
+                {aboutLinks.map((l) => (
+                  <Link key={l.href} to={l.href} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Book Now */}
