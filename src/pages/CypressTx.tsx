@@ -296,6 +296,28 @@ const CypressTx = () => {
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
+
+            {/* Insurance Logo Banner */}
+            <div className="mt-10 pt-8 border-t border-border">
+              <p className="text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-6">WE ACCEPT THESE & MORE</p>
+              <div className="flex md:grid md:grid-cols-6 gap-4 md:gap-6 overflow-x-auto md:overflow-visible pb-2 md:pb-0 max-w-3xl mx-auto items-center justify-center">
+                {[
+                  { name: "Aetna", src: "https://logo.clearbit.com/aetna.com" },
+                  { name: "Blue Cross Blue Shield", src: "https://logo.clearbit.com/bcbs.com" },
+                  { name: "Cigna", src: "https://logo.clearbit.com/cigna.com" },
+                  { name: "Humana", src: "https://logo.clearbit.com/humana.com" },
+                  { name: "MetLife", src: "https://logo.clearbit.com/metlife.com" },
+                  { name: "United Healthcare", src: "https://logo.clearbit.com/uhc.com" },
+                ].map((ins) => (
+                  <div key={ins.name} className="flex-shrink-0 flex items-center justify-center h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src={ins.src} alt={ins.name} className="h-7 w-auto object-contain" loading="lazy" />
+                  </div>
+                ))}
+              </div>
+              <Link to="/insurance" className="inline-block mt-4 text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">
+                View all accepted plans →
+              </Link>
+            </div>
           </div>
         </section>
 
