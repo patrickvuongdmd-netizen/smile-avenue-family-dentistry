@@ -375,7 +375,7 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
-
+      </main>
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
       <Footer />
