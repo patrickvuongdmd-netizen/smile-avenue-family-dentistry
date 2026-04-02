@@ -20,6 +20,16 @@ const BLOG_CATEGORY_IMAGES: Record<string, string> = {
   Sedation: categorySedation,
   Preventive: categoryPreventive,
 };
+
+const BLOG_CATEGORY_COLORS: Record<string, { bg: string; badge: string; text: string }> = {
+  Implants: { bg: "bg-[hsl(192,40%,92%)]", badge: "bg-[hsl(192,72%,55%)]/15 text-[hsl(192,78%,33%)]", text: "text-[hsl(192,78%,33%)]" },
+  Cosmetic: { bg: "bg-[hsl(340,30%,93%)]", badge: "bg-[hsl(340,60%,60%)]/15 text-[hsl(340,60%,40%)]", text: "text-[hsl(340,60%,40%)]" },
+  Emergency: { bg: "bg-[hsl(20,40%,92%)]", badge: "bg-[hsl(20,80%,55%)]/15 text-[hsl(20,70%,38%)]", text: "text-[hsl(20,70%,38%)]" },
+  Invisalign: { bg: "bg-[hsl(160,30%,92%)]", badge: "bg-[hsl(160,50%,45%)]/15 text-[hsl(160,50%,32%)]", text: "text-[hsl(160,50%,32%)]" },
+  Pediatric: { bg: "bg-[hsl(45,50%,92%)]", badge: "bg-[hsl(45,70%,50%)]/15 text-[hsl(45,70%,32%)]", text: "text-[hsl(45,70%,32%)]" },
+  Sedation: { bg: "bg-[hsl(260,30%,93%)]", badge: "bg-[hsl(260,50%,60%)]/15 text-[hsl(260,50%,40%)]", text: "text-[hsl(260,50%,40%)]" },
+  Preventive: { bg: "bg-[hsl(140,30%,92%)]", badge: "bg-[hsl(140,45%,45%)]/15 text-[hsl(140,45%,30%)]", text: "text-[hsl(140,45%,30%)]" },
+};
 import { useRef, useState } from "react";
 
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
@@ -482,24 +492,26 @@ const Home = () => {
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {BLOG_POSTS.slice(0, 3).map((post) => (
+              {BLOG_POSTS.slice(0, 3).map((post) => {
+                const colors = BLOG_CATEGORY_COLORS[post.category] || BLOG_CATEGORY_COLORS.Implants;
+                return (
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
                   className="group flex flex-col rounded-2xl overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  {/* Featured image */}
-                  <div className="aspect-[16/10] relative overflow-hidden">
+                  {/* Featured image with tinted overlay */}
+                  <div className={`aspect-[16/10] relative overflow-hidden ${colors.bg}`}>
                     <img
                       src={BLOG_CATEGORY_IMAGES[post.category] || categoryImplants}
                       alt={post.title}
                       loading="lazy"
                       width={800}
                       height={512}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="text-[11px] font-sans font-bold uppercase tracking-widest bg-background/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full">{post.category}</span>
+                      <span className={`text-[11px] font-sans font-bold uppercase tracking-widest backdrop-blur-sm px-3 py-1 rounded-full ${colors.badge}`}>{post.category}</span>
                     </div>
                   </div>
                   {/* Body */}
@@ -514,7 +526,8 @@ const Home = () => {
                     </div>
                   </div>
                 </Link>
-              ))}
+                );
+              })}
             </div>
             <Link to="/blog" className="sm:hidden flex items-center justify-center gap-1.5 mt-6 text-sm font-sans font-medium text-primary hover:underline">
               View all posts
