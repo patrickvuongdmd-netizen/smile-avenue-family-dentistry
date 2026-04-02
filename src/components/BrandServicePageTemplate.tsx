@@ -11,8 +11,9 @@ import TrustTicker from "@/components/TrustTicker";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import BookingLocationModal from "@/components/BookingLocationModal";
-import { SERVICE_IMAGES } from "@/lib/images";
+import { SERVICE_IMAGES, SERVICE_VIDEOS } from "@/lib/images";
 import { BrandServiceData, SERVICE_NAMES } from "@/lib/brand-service-data";
+import VideoCarousel from "@/components/VideoCarousel";
 import { useState } from "react";
 
 const PHONE = "8326481756";
@@ -197,6 +198,22 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
             </div>
           </div>
         </section>
+
+        {/* VIDEO CAROUSEL */}
+        {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
+          <section className="section-padding bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">SEE IT IN ACTION</p>
+              <h2 className="section-heading">Watch Real Procedures & Results</h2>
+              <p className="section-body max-w-2xl mx-auto">
+                See how our team delivers exceptional {data.serviceName.toLowerCase()} care — from consultation to final results.
+              </p>
+              <div className="mt-8">
+                <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* FAQ */}
         <section className="section-padding gradient-cta">
