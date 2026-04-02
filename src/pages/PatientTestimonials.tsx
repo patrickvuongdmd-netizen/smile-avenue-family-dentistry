@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, ExternalLink, MapPin, ArrowRight, Heart, Shield, Sparkles, Users } from "lucide-react";
+import { Star, ExternalLink, MapPin, ArrowRight, Heart, Shield, Sparkles, Users, Phone } from "lucide-react";
 import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -193,7 +193,7 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
-        {/* ─── STORY SECTION 1 ─── */}
+        {/* ─── STORY SECTION 1: Lead grid with accent image ─── */}
         <PatientStorySection
           theme="Finally, no more dread"
           heading="They didn't think they'd ever say this about a dentist"
@@ -202,6 +202,7 @@ const PatientTestimonials = () => {
           stories={fearToComfort}
           bgClass="bg-card"
           accentImage={OFFICE_IMAGES.treatmentRoom}
+          layout="lead-grid"
         />
 
         {/* ─── CINEMATIC QUOTE BREAK ─── */}
@@ -211,7 +212,7 @@ const PatientTestimonials = () => {
           location="Tomball, TX"
         />
 
-        {/* ─── STORY SECTION 2 ─── */}
+        {/* ─── STORY SECTION 2: Horizontal with photo ─── */}
         <PatientStorySection
           theme="More spa than clinic"
           heading="Netflix, blankets, and zero anxiety"
@@ -220,6 +221,7 @@ const PatientTestimonials = () => {
           stories={theExperience}
           bgClass="bg-background"
           accentImage={OFFICE_IMAGES.coffeeStation}
+          layout="horizontal-cards"
         />
 
         {/* ─── QUOTE TICKER ─── */}
@@ -234,7 +236,7 @@ const PatientTestimonials = () => {
           </div>
         </div>
 
-        {/* ─── STORY SECTION 3 ─── */}
+        {/* ─── STORY SECTION 3: Spotlight centered ─── */}
         <PatientStorySection
           theme="Why they stayed"
           heading="They stayed because they trusted us"
@@ -242,6 +244,7 @@ const PatientTestimonials = () => {
           icon={<Shield className="w-5 h-5" />}
           stories={trustAndCare}
           bgClass="bg-card"
+          layout="spotlight"
         />
 
         {/* ─── CINEMATIC QUOTE BREAK ─── */}
@@ -251,7 +254,7 @@ const PatientTestimonials = () => {
           location="Bridgeland, Cypress"
         />
 
-        {/* ─── STORY SECTION 4 ─── */}
+        {/* ─── STORY SECTION 4: Masonry with accent ─── */}
         <PatientStorySection
           theme="The whole crew comes here"
           heading="The whole family — even the stubborn ones"
@@ -260,6 +263,7 @@ const PatientTestimonials = () => {
           stories={familyFocused}
           bgClass="bg-background"
           accentImage={OFFICE_IMAGES.hallway}
+          layout="masonry"
         />
 
         {/* ─── INLINE CTA ─── */}
@@ -347,6 +351,29 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
+        {/* ─── CLOSING CTA ─── */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto max-w-3xl text-center">
+            <ScrollReveal>
+              <p className="kicker">YOUR TURN</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
+                Ready to write your own<br className="hidden sm:block" /> five-star story?
+              </h2>
+              <p className="font-body text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+                Whether it's been 6 months or 6 years, we make it easy — with zero judgment, ever.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="btn-cta w-full sm:w-auto text-center inline-flex items-center justify-center gap-2">
+                  Book Your Visit <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href={`tel:${CYPRESS_PHONE}`} className="btn-secondary w-full sm:w-auto text-center inline-flex items-center justify-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  {CYPRESS_PHONE_FORMATTED}
+                </a>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
 
       </main>
 
