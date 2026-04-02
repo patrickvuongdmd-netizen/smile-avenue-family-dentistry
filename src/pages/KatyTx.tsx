@@ -282,7 +282,7 @@ const KatyTx = () => {
               </div>
 
               {/* Amenities — spans full height on right */}
-              <div className="bg-muted/30 rounded-xl p-6 md:row-span-2">
+              <div className="bg-sky-50 border border-sky-100 rounded-xl p-6 md:row-span-2">
                 <h3 className="font-display text-lg font-bold text-foreground mb-4">What to Expect</h3>
                 <ul className="space-y-2.5">
                   {[
@@ -303,11 +303,11 @@ const KatyTx = () => {
                 </ul>
               </div>
 
-              {/* Map — spans 2 columns under Address + Hours */}
-              <div className="md:col-span-2 rounded-xl overflow-hidden shadow-md border border-border">
+              {/* Map — under Hours column only */}
+              <div className="md:col-start-2 rounded-xl overflow-hidden shadow-md border border-border">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
-                  className="w-full h-[250px] border-0"
+                  className="w-full h-[200px] border-0"
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
