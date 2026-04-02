@@ -18,9 +18,7 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
-
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
-
 
 interface SubService {
   title: string;
@@ -215,6 +213,11 @@ const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
     { title: "Pediatric Dentistry", slug: "pediatric-dentistry" },
     { title: "Teeth Whitening", slug: "teeth-whitening" },
   ],
+  "family-dental-care": [
+    { title: "Dental Cleaning", slug: "dental-cleaning" },
+    { title: "Pediatric Dentistry", slug: "pediatric-dentistry" },
+    { title: "Preventive Dentistry", slug: "preventive-dentistry" },
+  ],
 };
 
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
@@ -317,7 +320,6 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <TrustStrip />
 
-      {/* Emergency Banner */}
       {isEmergency && (
         <div className="bg-destructive text-destructive-foreground py-3 text-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,11 +332,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       )}
 
       <main id="main-content" className="pb-14 lg:pb-0">
-        {/* HERO — Light editorial layout inspired by Tend */}
-        <section className="bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-            {/* Breadcrumb */}
-            <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">
+        {/* HERO */}
+        <section className="section-warm">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
               <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
@@ -344,24 +345,20 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               <span className="text-foreground">in {loc.name}, TX</span>
             </nav>
 
-            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-              {/* Text content */}
+            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div>
-                <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3 text-primary" style={{ fontFamily: "var(--font-sans)" }}>
-                  {data.heroKicker}
-                </p>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-foreground leading-[1.1]" style={{ fontFamily: "var(--font-display)" }}>
+                <p className="kicker">{data.heroKicker}</p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-[1.08] font-display">
                   {data.heroHeading}
                 </h1>
-                <p className="text-base md:text-lg leading-relaxed mb-6 text-muted-foreground max-w-xl" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-lg md:text-xl leading-relaxed mb-8 text-muted-foreground max-w-xl font-body">
                   {data.heroBody}
                 </p>
 
-                {/* Value prop bullets */}
                 {(data.heroValueProps && data.heroValueProps.length > 0) && (
-                  <ul className="space-y-2.5 mb-8">
+                  <ul className="space-y-3 mb-10">
                     {data.heroValueProps.map((prop, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm font-sans text-foreground">
+                      <li key={i} className="flex items-start gap-3 text-sm font-sans text-foreground">
                         <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                         <span>{prop}</span>
                       </li>
@@ -369,7 +366,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   </ul>
                 )}
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-4">
                   <button onClick={() => setBookingModalOpen(true)} className="btn-cta" aria-label={`Book ${data.serviceName} appointment`}>
                     {data.heroCta1}
                   </button>
@@ -378,19 +375,18 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   </a>
                 </div>
 
-                <div className="flex items-center gap-4 mt-5">
+                <div className="flex items-center gap-4 mt-6">
                   <span className="text-sm font-sans font-semibold text-foreground">4.9 ★★★★★</span>
                   <span className="text-xs font-sans text-muted-foreground">from 5,000+ reviews</span>
                 </div>
               </div>
 
-              {/* Hero image — clean, rounded */}
               {heroImage && (
                 <div className="relative">
                   <img
                     src={heroImage.url}
                     alt={heroImage.alt}
-                    className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg"
+                    className="w-full aspect-[4/3] object-cover rounded-3xl shadow-lg"
                     loading="eager"
                     fetchPriority="high"
                   />
@@ -400,40 +396,26 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-
-
-        {/* INTRO — side-by-side with office photo */}
-        <section className="section-padding section-alt">
+        {/* INTRO — editorial single-column flow */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
           <div className="container mx-auto">
-            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-5xl mx-auto">
-              <div>
-                <p className="kicker">{data.introKicker}</p>
-                <h2 className="section-heading">{data.introHeading}</h2>
-                <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
-                  {data.introParas.map((p, i) => <p key={i}>{p}</p>)}
-                </div>
-              </div>
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src={OFFICE_IMAGES.treatmentRoom}
-                  alt="Modern treatment room at Smile Avenue Family Dentistry"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={600}
-                  height={450}
-                />
+            <div className="max-w-3xl mx-auto">
+              <p className="kicker">{data.introKicker}</p>
+              <h2 className="section-heading">{data.introHeading}</h2>
+              <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
+                {data.introParas.map((p, i) => <p key={i}>{p}</p>)}
               </div>
             </div>
           </div>
         </section>
 
-        {/* TRUST BADGES */}
-        <section className="py-8 bg-background">
+        {/* TRUST BADGES — inline pill style */}
+        <section className="py-10 bg-background border-t border-border/40">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-center gap-6 sm:gap-10 max-w-2xl mx-auto">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 max-w-3xl mx-auto">
               {data.trustBadges.map((badge) => (
-                <div key={badge.label} className="flex flex-col items-center text-center gap-1.5">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">{badge.icon}</div>
+                <div key={badge.label} className="flex items-center gap-2.5 bg-card rounded-full border border-border/60 px-5 py-2.5">
+                  <span className="text-primary">{badge.icon}</span>
                   <span className="text-xs font-sans font-semibold text-foreground">{badge.label}</span>
                 </div>
               ))}
@@ -442,15 +424,15 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* INSURANCE TICKER */}
-        <section className="py-8 section-alt overflow-hidden">
+        <section className="py-10 section-warm overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="kicker">WE ACCEPT YOUR INSURANCE</p>
             <h2 className="section-heading">Use Your Benefits — We Handle the Paperwork</h2>
           </div>
-          <div className="relative mt-6">
+          <div className="relative mt-8">
             <div className="flex animate-ticker whitespace-nowrap">
               {[...insuranceLogos, ...insuranceLogos].map((name, i) => (
-                <span key={`${name}-${i}`} className="inline-flex shrink-0 items-center bg-card rounded-full border border-border py-2.5 px-6 mx-3">
+                <span key={`${name}-${i}`} className="inline-flex shrink-0 items-center bg-card rounded-full border border-border/60 py-2.5 px-6 mx-3">
                   <span className="text-sm font-sans font-medium text-muted-foreground">{name}</span>
                 </span>
               ))}
@@ -458,17 +440,17 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* SUB-SERVICES GRID */}
-        <section className="section-padding bg-background">
+        {/* SUB-SERVICES — soft cards with left accent */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">{data.subServicesKicker}</p>
             <h2 className="section-heading">{data.subServicesHeading}</h2>
             <p className="section-body max-w-2xl mx-auto">{data.subServicesBody}</p>
-            <div className="grid sm:grid-cols-2 gap-6 mt-10 text-left max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-2 gap-8 mt-12 text-left max-w-4xl mx-auto">
               {data.subServices.map((svc) => (
-                <div key={svc.title} className="bg-card rounded-xl p-6 border border-border">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">{svc.icon}</div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{svc.title}</h3>
+                <div key={svc.title} className="card-soft border-l-4 border-l-primary/20">
+                  <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center text-primary mb-5">{svc.icon}</div>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">{svc.title}</h3>
                   <p className="text-sm font-body text-muted-foreground leading-relaxed">{svc.description}</p>
                 </div>
               ))}
@@ -476,18 +458,17 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* PROCESS STEPS */}
-        <section className="section-padding section-alt">
+        {/* PROCESS STEPS — large serif numbers */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto text-center">
             <p className="kicker">{data.processKicker}</p>
             <h2 className="section-heading">{data.processHeading}</h2>
             <p className="section-body max-w-2xl mx-auto">{data.processBody}</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
               {data.processSteps.map((step) => (
-                <div key={step.number} className="bg-card rounded-2xl p-6 border border-border text-left">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">{step.icon}</div>
-                  <span className="text-xs font-sans font-bold text-primary tracking-wider">STEP {step.number}</span>
-                  <h3 className="font-display text-lg font-bold text-foreground mt-1 mb-2">{step.title}</h3>
+                <div key={step.number} className="text-left">
+                  <span className="step-number">{step.number}</span>
+                  <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
                   <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
               ))}
@@ -496,15 +477,15 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* FAQ */}
-        <section className="section-padding gradient-cta">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
+            <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
-                <p className="kicker text-white/70">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading text-white">{data.faqHeading}</h2>
-                <p className="section-body text-white/70">
+                <p className="kicker text-primary-foreground/60">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 className="section-heading text-primary-foreground">{data.faqHeading}</h2>
+                <p className="section-body text-primary-foreground/60">
                   Have more questions? Call us at{" "}
-                  <a href={`tel:${loc.phone}`} className="text-white underline hover:no-underline">{loc.phoneFormatted}</a>.
+                  <a href={`tel:${loc.phone}`} className="text-primary-foreground underline hover:no-underline">{loc.phoneFormatted}</a>.
                 </p>
               </div>
               <FaqAccordion items={data.faqs} variant="dark" />
@@ -512,10 +493,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* MID-CONTENT BOOKING CTA — recapture after education */}
-        <section className="py-10 bg-primary/5 border-y border-primary/10">
+        {/* MID-CONTENT BOOKING CTA */}
+        <section className="py-12 section-warm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
               <div>
                 <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">
                   Ready to Get Started?
@@ -524,7 +505,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   Book online in 60 seconds or call us — same-day appointments often available.
                 </p>
               </div>
-              <div className="flex gap-3 shrink-0">
+              <div className="flex gap-4 shrink-0">
                 <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
                   Book Online
                 </button>
@@ -538,52 +519,51 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
         {/* VIDEO CAROUSEL */}
         {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
-          <section className="section-padding bg-background">
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
             <div className="container mx-auto text-center">
               <p className="kicker">SEE IT IN ACTION</p>
               <h2 className="section-heading">Watch Real Procedures & Results</h2>
-              <div className="mt-8">
+              <div className="mt-10">
                 <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
               </div>
             </div>
           </section>
         )}
 
-        {/* REVIEWS — merged curated + live */}
-        <section className="section-padding section-alt">
+        {/* REVIEWS */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto text-center">
             <p className="kicker">{data.reviewsKicker}</p>
             <h2 className="section-heading">{data.reviewsHeading}</h2>
             <p className="section-body max-w-2xl mx-auto">
               4.9★ average from {data.location === "cypress" ? "3,000+" : "2,000+"} verified Google reviews.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
+            <div className="grid md:grid-cols-3 gap-8 mt-12 text-left">
               {data.testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
             </div>
             {showLiveReviews && (
-              <div className="mt-10">
+              <div className="mt-12">
                 <ReviewsWidget location={data.location} title={`${data.serviceName} Google Reviews — ${loc.name}`} />
               </div>
             )}
           </div>
         </section>
 
-
         {/* OFFICE PHOTO GRID */}
         <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
 
         {/* RELATED SERVICES */}
         {related.length > 0 && (
-          <section className="section-padding bg-background">
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
             <div className="container mx-auto text-center">
               <p className="kicker">YOU MIGHT ALSO NEED</p>
               <h2 className="section-heading">Related Treatments</h2>
-              <div className="flex flex-wrap justify-center gap-3 mt-8">
+              <div className="flex flex-wrap justify-center gap-3 mt-10">
                 {related.map((r) => (
                   <Link
                     key={r.href}
                     to={r.href}
-                    className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all"
+                    className="px-6 py-3.5 rounded-2xl bg-card border border-border/60 text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary hover:shadow-md transition-all"
                   >
                     {r.title}
                   </Link>
@@ -593,12 +573,12 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </section>
         )}
 
-        {/* LOCATION INFO */}
-        <section className="section-padding section-alt">
+        {/* LOCATION INFO — warm card */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto">
-            <div className="max-w-lg mx-auto bg-card rounded-xl p-8 border border-border text-center">
-              <h3 className="font-display text-xl font-bold text-foreground mb-4">{loc.name} Office</h3>
-              <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
+            <div className="max-w-lg mx-auto card-warm text-center">
+              <h3 className="font-display text-xl font-bold text-foreground mb-5">{loc.name} Office</h3>
+              <div className="space-y-3 text-sm font-sans text-muted-foreground mb-8">
                 <div className="flex items-start justify-center gap-2">
                   <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <span>{loc.address}</span>
@@ -615,21 +595,18 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               <button onClick={() => setBookingModalOpen(true)} className="btn-cta w-full text-center">
                 Book Appointment Online
               </button>
-              <p className="text-xs font-sans text-muted-foreground mt-2">Takes less than 60 seconds · No obligation</p>
+              <p className="text-xs font-sans text-muted-foreground mt-3">Takes less than 60 seconds · No obligation</p>
             </div>
           </div>
         </section>
 
-        {/* FREE CONSULTATION BANNER */}
         {showFreeConsult && <FreeConsultationBanner />}
-
       </main>
 
       <Footer />
       <MobileStickyBar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <BackToTop />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
-
     </>
   );
 };
