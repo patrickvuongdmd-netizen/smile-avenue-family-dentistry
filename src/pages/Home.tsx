@@ -295,10 +295,7 @@ const Home = () => {
         </ScrollReveal>
 
 
-        {/* TECHNOLOGY TRUST */}
-        <ScrollReveal>
-          <TechnologyTrust />
-        </ScrollReveal>
+
 
         {/* FAQ */}
         <LazySection>
