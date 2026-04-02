@@ -10,7 +10,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
-import BeforeAfterCard from "@/components/BeforeAfterCard";
+
 import DoctorCard from "@/components/DoctorCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
@@ -405,21 +405,6 @@ const KatyTx = () => {
             <Link to="/patient-testimonials" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
               Read More Katy Reviews →
             </Link>
-          </div>
-        </section>
-
-        {/* SMILE GALLERY */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">KATY SMILE TRANSFORMATIONS</p>
-            <h2 className="section-heading">Real Results from Our Katy Patients</h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-10">
-              <BeforeAfterCard label="Porcelain Veneers" />
-              <BeforeAfterCard label="Dental Implants" />
-              <BeforeAfterCard label="Invisalign® Treatment" />
-            </div>
-
-
           </div>
         </section>
 
