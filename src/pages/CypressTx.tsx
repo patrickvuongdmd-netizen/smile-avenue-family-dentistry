@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { MapPin, Phone, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, ChevronRight, CircleDot, AlignLeft, Gem, Siren, Sun, Smile, Crown, Brush, Moon, Baby, Wrench, Heart } from "lucide-react";
+import { MapPin, Phone, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -157,40 +157,6 @@ const CypressTx = () => {
         </section>
 
         <CredibilityBar />
-
-        {/* SERVICE PILL CAROUSEL */}
-        <section className="py-6 bg-background overflow-hidden">
-          <div className="relative">
-            <div className="flex gap-3 overflow-x-auto scrollbar-hide px-4 sm:px-6 lg:px-8 snap-x snap-mandatory pb-2">
-              {[
-                { label: "Dental Implants", slug: "dental-implants", icon: CircleDot },
-                { label: "Invisalign®", slug: "invisalign", icon: AlignLeft },
-                { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry", icon: Gem },
-                { label: "Emergency Dentist", slug: "emergency-dentist", icon: Siren },
-                { label: "Teeth Whitening", slug: "teeth-whitening", icon: Sun },
-                { label: "Veneers", slug: "veneers", icon: Smile },
-                { label: "Dental Crowns", slug: "dental-crowns", icon: Crown },
-                { label: "Cleanings & Exams", slug: "dental-cleaning", icon: Brush },
-                { label: "Sedation Dentistry", slug: "sedation-dentistry", icon: Moon },
-                { label: "Kids Dentistry", slug: "pediatric-dentistry", icon: Baby },
-                { label: "Root Canal", slug: "root-canal", icon: Wrench },
-                { label: "Dentures", slug: "dentures", icon: Heart },
-              ].map((pill) => (
-                <Link
-                  key={pill.slug}
-                  to={`/cypress-tx/${pill.slug}`}
-                  className="snap-start shrink-0 flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-card text-sm font-sans font-medium text-foreground hover:border-primary hover:bg-primary/5 hover:text-primary transition-all whitespace-nowrap shadow-sm"
-                >
-                  <pill.icon className="w-4 h-4 text-primary" />
-                  {pill.label}
-                  <ChevronRight className="w-3.5 h-3.5 text-muted-foreground" />
-                </Link>
-              ))}
-            </div>
-            <div className="absolute top-0 left-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-            <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none" />
-          </div>
-        </section>
 
 
         {/* REVIEWS — moved up for early social proof */}
