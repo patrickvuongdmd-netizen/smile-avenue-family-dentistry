@@ -299,11 +299,11 @@ const CypressTx = () => {
                 </ul>
               </div>
 
-              {/* Map — spans 2 columns under Address + Hours */}
-              <div className="md:col-span-2 rounded-xl overflow-hidden shadow-md border border-border">
+              {/* Map — under Hours column only */}
+              <div className="md:col-start-2 rounded-xl overflow-hidden shadow-md border border-border">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
-                  className="w-full h-[250px] border-0"
+                  className="w-full h-[200px] border-0"
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
