@@ -11,7 +11,8 @@ import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import ReviewsWidget from "@/components/ReviewsWidget";
-import { VIDEO_TESTIMONIALS } from "@/lib/images";
+import ScrollReveal from "@/components/ScrollReveal";
+import { VIDEO_TESTIMONIALS, OFFICE_IMAGES } from "@/lib/images";
 import PatientStorySection from "@/components/testimonials/PatientStorySection";
 import FullWidthQuote from "@/components/testimonials/FullWidthQuote";
 import TestimonialsHero from "@/components/testimonials/TestimonialsHero";
@@ -109,6 +110,17 @@ const familyFocused = [
 
 const allReviews = [...fearToComfort, ...theExperience, ...trustAndCare, ...familyFocused];
 
+const tickerQuotes = [
+  '"Best dental experience ever"',
+  '"My kids actually look forward to coming here"',
+  '"It feels like a spa, not a dentist"',
+  '"Zero judgment, all care"',
+  '"The Netflix on the ceiling is a game changer"',
+  '"My daughter now asks when her next appointment is"',
+  '"No surprises, no hidden costs"',
+  '"I drove 30 minutes past 3 other dentists"',
+];
+
 const PatientTestimonials = () => {
   useDocTitle("Patient Testimonials | Smile Avenue Family Dentistry");
 
@@ -160,26 +172,28 @@ const PatientTestimonials = () => {
         <TestimonialsHero bookingUrl={CYPRESS_BOOKING} />
 
         {/* ─── FEATURED VIDEO ─── */}
-        <section className="py-20 md:py-28 bg-background">
+        <section className="py-20 md:py-28 bg-gradient-to-b from-[hsl(var(--surface-subtle))] to-background">
           <div className="container mx-auto px-4 max-w-5xl">
-            <div className="grid md:grid-cols-5 gap-8 md:gap-14 items-center">
-              <div className="md:col-span-2">
-                <p className="kicker">HEAR THEIR STORIES</p>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
-                  Real patients.<br />In their own words.
-                </h2>
-                <p className="font-body text-muted-foreground leading-relaxed">
-                  Nothing speaks louder than someone who's been exactly where you are. Press play.
-                </p>
+            <ScrollReveal>
+              <div className="grid md:grid-cols-5 gap-8 md:gap-14 items-center">
+                <div className="md:col-span-2">
+                  <p className="kicker">HEAR THEIR STORIES</p>
+                  <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
+                    Real patients.<br />In their own words.
+                  </h2>
+                  <p className="font-body text-muted-foreground leading-relaxed">
+                    Nothing speaks louder than someone who's been exactly where you are. Press play.
+                  </p>
+                </div>
+                <div className="md:col-span-3">
+                  <LazyYouTube videoId={featuredVideo.youtubeId} title={featuredVideo.title} />
+                </div>
               </div>
-              <div className="md:col-span-3">
-                <LazyYouTube videoId={featuredVideo.youtubeId} title={featuredVideo.title} />
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 
-        {/* ─── STORY SECTION 1: From Fear to Comfort ─── */}
+        {/* ─── STORY SECTION 1 ─── */}
         <PatientStorySection
           theme="Finally, no more dread"
           heading="They didn't think they'd ever say this about a dentist"
@@ -187,6 +201,7 @@ const PatientTestimonials = () => {
           icon={<Heart className="w-5 h-5" />}
           stories={fearToComfort}
           bgClass="bg-card"
+          accentImage={OFFICE_IMAGES.treatmentRoom}
         />
 
         {/* ─── CINEMATIC QUOTE BREAK ─── */}
@@ -196,7 +211,7 @@ const PatientTestimonials = () => {
           location="Tomball, TX"
         />
 
-        {/* ─── STORY SECTION 2: The Experience ─── */}
+        {/* ─── STORY SECTION 2 ─── */}
         <PatientStorySection
           theme="More spa than clinic"
           heading="Netflix, blankets, and zero anxiety"
@@ -204,38 +219,22 @@ const PatientTestimonials = () => {
           icon={<Sparkles className="w-5 h-5" />}
           stories={theExperience}
           bgClass="bg-background"
+          accentImage={OFFICE_IMAGES.coffeeStation}
         />
 
         {/* ─── QUOTE TICKER ─── */}
-        <div className="overflow-hidden border-y border-border bg-primary/[0.03] py-5">
+        <div className="overflow-hidden bg-[hsl(var(--hero-dark))] py-6">
           <div className="flex animate-ticker whitespace-nowrap">
-            {[
-              '"Best dental experience ever"',
-              '"My kids actually look forward to coming here"',
-              '"It feels like a spa, not a dentist"',
-              '"Zero judgment, all care"',
-              '"The Netflix on the ceiling is a game changer"',
-              '"My daughter now asks when her next appointment is"',
-              '"No surprises, no hidden costs"',
-              '"I drove 30 minutes past 3 other dentists"',
-              '"Best dental experience ever"',
-              '"My kids actually look forward to coming here"',
-              '"It feels like a spa, not a dentist"',
-              '"Zero judgment, all care"',
-              '"The Netflix on the ceiling is a game changer"',
-              '"My daughter now asks when her next appointment is"',
-              '"No surprises, no hidden costs"',
-              '"I drove 30 minutes past 3 other dentists"',
-            ].map((text, i) => (
-              <span key={i} className="inline-flex items-center shrink-0 px-8 text-sm font-body italic text-foreground/50">
+            {[...tickerQuotes, ...tickerQuotes].map((text, i) => (
+              <span key={i} className="inline-flex items-center shrink-0 px-8 text-sm font-body italic text-white/40">
                 {text}
-                <span className="ml-8 text-primary/20">✦</span>
+                <span className="ml-8 text-primary/40">✦</span>
               </span>
             ))}
           </div>
         </div>
 
-        {/* ─── STORY SECTION 3: Trust & Transparency ─── */}
+        {/* ─── STORY SECTION 3 ─── */}
         <PatientStorySection
           theme="Why they stayed"
           heading="They stayed because they trusted us"
@@ -252,7 +251,7 @@ const PatientTestimonials = () => {
           location="Bridgeland, Cypress"
         />
 
-        {/* ─── STORY SECTION 4: The Family Experience ─── */}
+        {/* ─── STORY SECTION 4 ─── */}
         <PatientStorySection
           theme="The whole crew comes here"
           heading="The whole family — even the stubborn ones"
@@ -260,40 +259,48 @@ const PatientTestimonials = () => {
           icon={<Users className="w-5 h-5" />}
           stories={familyFocused}
           bgClass="bg-background"
+          accentImage={OFFICE_IMAGES.hallway}
         />
 
         {/* ─── INLINE CTA ─── */}
-        <section className="py-16 md:py-20 bg-gradient-to-r from-[hsl(var(--gradient-cta-start))] to-[hsl(var(--gradient-cta-end))]">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to feel this way<br className="hidden sm:block" /> about the dentist?
-            </h2>
-            <p className="font-body text-primary-foreground/80 mb-10 max-w-xl mx-auto text-lg">
-              Join 5,000+ families who actually look forward to their next appointment.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-background text-foreground font-sans font-semibold text-sm rounded-full hover:bg-background/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                Book Your Visit <ArrowRight className="w-4 h-4" />
-              </a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary-foreground/30 text-primary-foreground font-sans font-semibold text-sm rounded-full hover:bg-primary-foreground/10 transition-colors">
-                Call {CYPRESS_PHONE_FORMATTED}
-              </a>
-            </div>
+        <section className="py-16 md:py-20 bg-gradient-to-r from-[hsl(var(--gradient-cta-start))] to-[hsl(var(--gradient-cta-end))] relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvc3ZnPg==')] opacity-50" />
+          <div className="container mx-auto px-4 text-center relative">
+            <ScrollReveal>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+                Ready to feel this way<br className="hidden sm:block" /> about the dentist?
+              </h2>
+              <p className="font-body text-primary-foreground/80 mb-10 max-w-xl mx-auto text-lg">
+                Join 5,000+ families who actually look forward to their next appointment.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-background text-foreground font-sans font-semibold text-sm rounded-full hover:bg-background/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                  Book Your Visit <ArrowRight className="w-4 h-4" />
+                </a>
+                <a href={`tel:${CYPRESS_PHONE}`} className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary-foreground/30 text-primary-foreground font-sans font-semibold text-sm rounded-full hover:bg-primary-foreground/10 transition-colors">
+                  Call {CYPRESS_PHONE_FORMATTED}
+                </a>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
         {/* ─── MORE VIDEO STORIES ─── */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-[hsl(var(--surface-subtle))]">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <p className="kicker">MORE STORIES</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                Watch more patient experiences
-              </h2>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <p className="kicker">MORE STORIES</p>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+                  Watch more patient experiences
+                </h2>
+              </div>
+            </ScrollReveal>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {remainingVideos.map((vid, i) => (
-                <LazyYouTube key={i} videoId={vid.youtubeId} title={vid.title} />
+                <ScrollReveal key={i}>
+                  <LazyYouTube videoId={vid.youtubeId} title={vid.title} />
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -302,15 +309,17 @@ const PatientTestimonials = () => {
         {/* ─── GOOGLE REVIEWS LIVE WIDGETS ─── */}
         <section className="py-16 md:py-24 bg-card border-y border-border">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <p className="kicker">LIVE FROM GOOGLE</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-                See what people are saying right now
-              </h2>
-              <p className="text-sm font-sans text-muted-foreground">
-                Updated in real-time from our Google Business profiles
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <p className="kicker">LIVE FROM GOOGLE</p>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+                  See what people are saying right now
+                </h2>
+                <p className="text-sm font-sans text-muted-foreground">
+                  Updated in real-time from our Google Business profiles
+                </p>
+              </div>
+            </ScrollReveal>
 
             <div className="space-y-12 max-w-5xl mx-auto">
               <div>
@@ -339,17 +348,22 @@ const PatientTestimonials = () => {
         </section>
 
         {/* ─── FINAL CTA ─── */}
-        <section className="py-20 md:py-28 bg-background">
-          <div className="container mx-auto px-4 text-center max-w-2xl">
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-5 leading-tight">
-              Your story starts<br />with a single visit
-            </h2>
-            <p className="font-body text-muted-foreground mb-10 text-lg leading-relaxed">
-              Whether it's been 6 months or 6 years, we make it easy — with zero judgment, ever.
-            </p>
-            <Link to="/book-online" className="btn-primary inline-flex items-center gap-2 text-base px-10 py-4 rounded-full">
-              Book Your First Visit <ArrowRight className="w-4 h-4" />
-            </Link>
+        <section className="py-20 md:py-28 bg-[hsl(var(--hero-dark))] relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img src={OFFICE_IMAGES.waitingRoom} alt="" className="w-full h-full object-cover opacity-10" />
+          </div>
+          <div className="container mx-auto px-4 text-center max-w-2xl relative">
+            <ScrollReveal>
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-5 leading-tight">
+                Your story starts<br />with a single visit
+              </h2>
+              <p className="font-body text-white/70 mb-10 text-lg leading-relaxed">
+                Whether it's been 6 months or 6 years, we make it easy — with zero judgment, ever.
+              </p>
+              <Link to="/book-online" className="btn-primary inline-flex items-center gap-2 text-base px-10 py-4 rounded-full">
+                Book Your First Visit <ArrowRight className="w-4 h-4" />
+              </Link>
+            </ScrollReveal>
           </div>
         </section>
 
