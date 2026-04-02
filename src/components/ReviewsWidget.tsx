@@ -42,12 +42,13 @@ const ReviewsWidget = ({ location, title = "Reviews Widget" }: ReviewsWidgetProp
   }, [location]);
 
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className="rounded-2xl overflow-hidden">
       {src && (
         <iframe
           src={src}
           style={{ width: "100%", border: "none", minHeight: 300 }}
           title={title}
+          className="rounded-2xl"
         />
       )}
     </div>
