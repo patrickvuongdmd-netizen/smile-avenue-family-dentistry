@@ -115,10 +115,9 @@ const CypressTx = () => {
       <TrustStrip />
 
       <main className="pb-14 lg:pb-0">
-        {/* HERO */}
+        {/* 1 — HERO / LOCATION INTRO WITH PHOTOS */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
-            {/* Breadcrumb */}
             <nav className="mb-6 text-xs font-sans text-muted-foreground" aria-label="Breadcrumb">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
@@ -159,8 +158,7 @@ const CypressTx = () => {
 
         <CredibilityBar />
 
-
-        {/* REVIEWS — moved up for early social proof */}
+        {/* 2 — REVIEWS */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">WHAT CYPRESS FAMILIES ARE SAYING</p>
@@ -168,7 +166,6 @@ const CypressTx = () => {
             <div className="inline-flex items-center gap-2 mb-10 text-sm font-sans font-semibold text-foreground bg-muted px-4 py-2 rounded-full">
               ⭐ 4.9 RATING · 300+ GOOGLE REVIEWS
             </div>
-            {/* Desktop: grid — Mobile: horizontal scroll carousel */}
             <div className="hidden md:grid md:grid-cols-3 gap-6 text-left">
               {testimonials.map((t) => (
                 <TestimonialCard key={t.name} {...t} />
@@ -194,46 +191,7 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* VIDEO — brand moment after social proof */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">WATCH & LEARN</p>
-            <h2 className="section-heading">Welcome to Smile Avenue Cypress</h2>
-            <div className="max-w-3xl mx-auto mt-8">
-              <VideoCarousel videos={[
-                { youtubeId: "ovn9F8ascxc", title: "Dentist Cypress: Smile Avenue Family Dentistry" },
-                { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
-                { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
-              ]} />
-            </div>
-          </div>
-        </section>
-
-        {/* MEET OUR DOCTORS */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto text-center">
-            <p className="kicker">YOUR CYPRESS DENTAL TEAM</p>
-            <h2 className="section-heading">Meet Your Cypress Dentists</h2>
-            <p className="section-body max-w-2xl mx-auto">
-              Our Cypress team brings decades of combined experience in family, cosmetic, and implant dentistry. Every doctor takes time to listen and build a treatment plan around your goals — never a billing code.
-            </p>
-            {/* Desktop: 5-col grid — Mobile: horizontal scroll */}
-            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
-              {doctors.map((doc) => (
-                <DoctorCard key={doc.name} {...doc} />
-              ))}
-            </div>
-            <div className="md:hidden flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1 mt-10">
-              {doctors.map((doc) => (
-                <div key={doc.name} className="snap-center shrink-0 w-[140px]">
-                  <DoctorCard {...doc} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICES */}
+        {/* 3 — SERVICES */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
             <p className="kicker">DENTAL SERVICES IN CYPRESS, TX</p>
@@ -241,7 +199,6 @@ const CypressTx = () => {
             <p className="section-body max-w-2xl mx-auto">
               From your child's first cleaning to your smile makeover, Smile Avenue Cypress offers every dental service your family needs — no referrals, no runaround. Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> means faster, more precise results.
             </p>
-            {/* Desktop: grid — Mobile: horizontal scroll carousel */}
             <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
               {services.map((svc) => (
                 <ServiceCard key={svc.title} {...svc} />
@@ -260,7 +217,45 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* PAYMENT MADE EASY — consolidated insurance, membership, financing */}
+        {/* 4 — LOCATION VIDEOS */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">Welcome to Smile Avenue Cypress</h2>
+            <div className="max-w-3xl mx-auto mt-8">
+              <VideoCarousel videos={[
+                { youtubeId: "ovn9F8ascxc", title: "Dentist Cypress: Smile Avenue Family Dentistry" },
+                { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
+                { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
+              ]} />
+            </div>
+          </div>
+        </section>
+
+        {/* 5 — MEET YOUR DENTISTS */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">YOUR CYPRESS DENTAL TEAM</p>
+            <h2 className="section-heading">Meet Your Cypress Dentists</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              Our Cypress team brings decades of combined experience in family, cosmetic, and implant dentistry. Every doctor takes time to listen and build a treatment plan around your goals — never a billing code.
+            </p>
+            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+              {doctors.map((doc) => (
+                <DoctorCard key={doc.name} {...doc} />
+              ))}
+            </div>
+            <div className="md:hidden flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1 mt-10">
+              {doctors.map((doc) => (
+                <div key={doc.name} className="snap-center shrink-0 w-[140px]">
+                  <DoctorCard {...doc} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 6 — PAYMENTS */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">AFFORDABLE DENTAL CARE IN CYPRESS</p>
@@ -288,22 +283,8 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* FAQ */}
+        {/* 7 — FIND US */}
         <section className="section-padding section-alt">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
-              <div>
-                <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading">Cypress Dental FAQs</h2>
-                <p className="section-body">Have more questions about our Cypress office? Call <a href={`tel:${CYPRESS_PHONE}`} className="text-primary hover:underline">{CYPRESS_PHONE_FORMATTED}</a>.</p>
-              </div>
-              <FaqAccordion items={faqs} />
-            </div>
-          </div>
-        </section>
-
-        {/* FIND US — moved lower in flow */}
-        <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker">VISIT OUR CYPRESS OFFICE</p>
             <h2 className="section-heading">Find Us on Fry Road</h2>
@@ -312,7 +293,6 @@ const CypressTx = () => {
             </p>
 
             <div className="grid md:grid-cols-[1fr_1fr_auto] gap-x-8 gap-y-6 mt-10 items-start">
-              {/* Address + Directions */}
               <div>
                 <h3 className="font-display text-lg font-bold text-primary mb-3">Address</h3>
                 <p className="text-sm font-sans text-foreground mb-1">9212 Fry Rd #120</p>
@@ -335,7 +315,6 @@ const CypressTx = () => {
                 </a>
               </div>
 
-              {/* Hours + Map stacked */}
               <div className="space-y-5">
                 <div>
                   <h3 className="font-display text-lg font-bold text-primary mb-3">Hours</h3>
@@ -370,8 +349,7 @@ const CypressTx = () => {
                 </div>
               </div>
 
-              {/* Amenities */}
-              <div className="bg-sky-50 border border-sky-100 rounded-xl p-6">
+              <div className="bg-accent/30 border border-accent/50 rounded-xl p-6">
                 <h3 className="font-display text-lg font-bold text-foreground mb-4">What to Expect</h3>
                 <ul className="space-y-2.5">
                   {[
@@ -395,8 +373,8 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* NEIGHBORHOODS WE SERVE */}
-        <section className="section-padding section-alt">
+        {/* 8 — NEIGHBORHOODS WE SERVE */}
+        <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">NEARBY COMMUNITIES</p>
             <h2 className="section-heading">Neighborhoods We Serve in Cypress</h2>
@@ -417,8 +395,8 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* CROSS-LINK KATY */}
-        <section className="section-padding bg-background">
+        {/* 9 — OTHER LOCATIONS */}
+        <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
             <h3 className="font-display text-2xl font-bold text-foreground mb-3">Also Serving Katy, TX</h3>
             <p className="text-sm font-body text-muted-foreground mb-6">Smile Avenue also has a location in Katy for your convenience.</p>
@@ -435,6 +413,55 @@ const CypressTx = () => {
                 Visit Katy Page →
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* 10 — FAQ */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
+              <div>
+                <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 className="section-heading">Cypress Dental FAQs</h2>
+                <p className="section-body">Have more questions about our Cypress office? Call <a href={`tel:${CYPRESS_PHONE}`} className="text-primary hover:underline">{CYPRESS_PHONE_FORMATTED}</a>.</p>
+              </div>
+              <FaqAccordion items={faqs} />
+            </div>
+          </div>
+        </section>
+
+        {/* 11 — BLOG */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto">
+            <div className="flex items-end justify-between mb-10">
+              <div>
+                <p className="kicker">FROM THE BLOG</p>
+                <h2 className="section-heading">Dental Tips & Insights</h2>
+              </div>
+              <Link to="/blog" className="hidden sm:inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+                View All Posts <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {BLOG_POSTS.slice(0, 3).map((post) => (
+                <Link key={post.slug} to={`/blog/${post.slug}`} className="group bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all overflow-hidden">
+                  <div className="p-6">
+                    <span className="text-xs font-sans font-medium text-primary uppercase tracking-wider">{post.category}</span>
+                    <h3 className="font-display text-lg font-semibold text-foreground mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">{post.title}</h3>
+                    <p className="text-sm font-body text-muted-foreground leading-relaxed line-clamp-3">{post.excerpt}</p>
+                    <div className="flex items-center justify-between mt-4">
+                      <span className="text-xs font-sans text-muted-foreground">{post.readTime}</span>
+                      <span className="text-sm font-sans font-medium text-primary group-hover:gap-2 transition-all inline-flex items-center gap-1">
+                        Read <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <Link to="/blog" className="sm:hidden inline-flex items-center gap-2 mt-8 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+              View All Posts <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
 
