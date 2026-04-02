@@ -347,25 +347,6 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
-        {/* ─── FINAL CTA ─── */}
-        <section className="py-20 md:py-28 bg-[hsl(var(--hero-dark))] relative overflow-hidden">
-          <div className="absolute inset-0">
-            <img src={OFFICE_IMAGES.waitingRoom} alt="" className="w-full h-full object-cover opacity-10" />
-          </div>
-          <div className="container mx-auto px-4 text-center max-w-2xl relative">
-            <ScrollReveal>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-5 leading-tight">
-                Your story starts<br />with a single visit
-              </h2>
-              <p className="font-body text-white/70 mb-10 text-lg leading-relaxed">
-                Whether it's been 6 months or 6 years, we make it easy — with zero judgment, ever.
-              </p>
-              <Link to="/book-online" className="btn-primary inline-flex items-center gap-2 text-base px-10 py-4 rounded-full">
-                Book Your First Visit <ArrowRight className="w-4 h-4" />
-              </Link>
-            </ScrollReveal>
-          </div>
-        </section>
 
       </main>
 
