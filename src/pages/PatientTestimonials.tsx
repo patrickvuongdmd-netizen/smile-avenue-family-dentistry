@@ -153,8 +153,37 @@ const PatientTestimonials = () => {
           </div>
         </section>
 
+        {/* ─── QUOTE TICKER ─── */}
+        <div className="overflow-hidden border-y border-border bg-primary/5 py-4">
+          <div className="flex animate-ticker whitespace-nowrap">
+            {[
+              '"Best dental experience ever" — Jennifer L.',
+              '"My kids actually look forward to coming here" — Amanda K.',
+              '"I drove 30 minutes past 3 other dentists" — Sarah K.',
+              '"It feels like a spa, not a dentist" — Rosa M.',
+              '"Zero judgment, all care" — David M.',
+              '"The Netflix on the ceiling is a game changer" — Sarah K.',
+              '"My daughter now asks when her next appointment is" — Linda T.',
+              '"No surprises, no hidden costs" — James W.',
+              '"Best dental experience ever" — Jennifer L.',
+              '"My kids actually look forward to coming here" — Amanda K.',
+              '"I drove 30 minutes past 3 other dentists" — Sarah K.',
+              '"It feels like a spa, not a dentist" — Rosa M.',
+              '"Zero judgment, all care" — David M.',
+              '"The Netflix on the ceiling is a game changer" — Sarah K.',
+              '"My daughter now asks when her next appointment is" — Linda T.',
+              '"No surprises, no hidden costs" — James W.',
+            ].map((text, i) => (
+              <span key={i} className="inline-flex items-center shrink-0 px-6 text-sm font-body italic text-foreground/70">
+                {text}
+                <span className="ml-6 text-primary/30">✦</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* ─── REVIEW WALL ─── */}
-        <section className="py-16 md:py-20 bg-card border-y border-border">
+        <section className="py-16 md:py-20 bg-card border-b border-border">
           <div className="container mx-auto px-4">
             <p className="kicker text-center">WHY PEOPLE LOVE US</p>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
