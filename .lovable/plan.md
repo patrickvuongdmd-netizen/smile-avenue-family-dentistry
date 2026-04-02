@@ -1,134 +1,40 @@
 
+## Service Template Design Overhaul — Tend-Inspired Consistency
 
-## Plan: Brand-Global Service Pages + Footer Accordion Redesign
+### Design Principles (applied to all 4 templates)
+1. **More generous spacing** — increase section padding, card padding, element gaps
+2. **Softer section transitions** — replace harsh `section-alt` backgrounds with subtle warm tints; use whitespace instead of borders where possible
+3. **Larger editorial typography** — bigger intro text, more line height, serif display headings with more breathing room
+4. **Organic visual elements** — softer rounded corners (3xl), subtle shadows, warm accent backgrounds
+5. **Flowing content** — less boxy grid layouts for text-heavy sections; more single-column editorial flow
+6. **Consistent CTA styling** — unified button treatment across all templates
 
-### What we're building
+### Template 1: ServicePageTemplate (geo-targeted, 34 pages)
+- **Hero**: Keep split layout but increase spacing, make kicker more editorial (lighter weight), add subtle warm background tint behind image
+- **Intro section**: Wider max-width, larger body text (text-lg), remove side photo on mobile — use editorial single-column flow
+- **Trust badges**: Soften — remove circular bg, use inline pill style
+- **Sub-services grid**: Softer cards — larger padding, remove icon bg circles, use subtle left-border accent instead
+- **Process steps**: Number treatment → large serif numbers instead of "STEP 1" labels
+- **FAQ**: Keep gradient background but soften the transition into/out of it
+- **Location info card**: More generous padding, softer border
 
-**Two deliverables:**
+### Template 2: BrandServicePageTemplate (authority pages, 17 pages)
+- **Hero**: Match ServicePage hero styling for consistency
+- **"Why Choose Us" cards**: Softer treatment — less boxy, more whitespace
+- **Process steps**: Match the serif-number treatment from ServicePage
+- **Location cards**: Warm subtle background tint instead of plain `bg-card`
 
-1. **17 brand-global service pages** at `/services/{slug}` (e.g., `/services/dental-implants`, `/services/emergency-dentist`) — educational authority pages that sit above the geo-targeted pages in the content hierarchy
-2. **Footer accordion redesign** — replace the flat service list with categorized expandable groups cross-linking every service to both Cypress and Katy pages
+### Template 3: CategoryPageTemplate (category hubs, 4 pages)
+- **Hero**: Add a warm background tint, increase heading size
+- **Service cards grid**: Larger cards with more padding, softer hover effect (scale + shadow instead of border change)
+- **CTA section**: Replace bare button links with proper location cards matching BrandServicePage style
 
-### Part 1 — Brand-Global Service Template
+### Template 4: ComparisonPageTemplate (vs guides, 6 pages)
+- **Comparison table**: Softer alternating row colors, rounder corners, warmer header tint
+- **Mobile cards**: Match the soft card styling from other templates
+- **Verdict section**: Make it more editorial — larger quote-like heading, wider max-width
 
-**New file: `src/components/BrandServicePageTemplate.tsx`**
-
-A new template distinct from `ServicePageTemplate` (which is location-specific). This template is designed for non-geo content authority:
-
-- **No single office phone/address/booking** — instead shows a "Two Locations" section with both Cypress and Katy cards (phone, address, booking link for each)
-- **Breadcrumb**: Home > Services > {Service Name}
-- **Canonical URL**: `/services/{slug}/`
-- **Content sections**: Hero (educational tone, no location qualifier), What Is It explainer, Why Choose Smile Avenue, Process Steps, FAQ, Location Cards (Cypress + Katy with CTAs), Related Services
-- **SEO**: DentalService schema without location specifics, FAQPage schema, BreadcrumbList schema
-- **Internal linking engine**: Each page links down to both `/cypress-tx/{slug}` and `/katy-tx/{slug}` pages, creating the topical cluster hub
-- **Reuses existing data**: Pulls FAQ content, process steps, sub-services from a shared data structure to avoid duplicating the geo-page content verbatim (content will be rewritten for brand-global tone)
-
-**Interface**: Similar to `ServicePageData` but with `location` removed and `locationCards` added:
-```text
-BrandServicePageData {
-  serviceSlug, serviceName, metaTitle, metaDescription,
-  heroKicker, heroHeading, heroBody, heroImage,
-  introKicker, introHeading, introParas,
-  subServicesHeading, subServices[],
-  processHeading, processSteps[],
-  faqHeading, faqs[],
-  relatedServices[]
-}
-```
-
-### Part 2 — 17 Brand-Global Service Pages
-
-**New files** (one per service) in `src/pages/services/`:
-
-| File | Route |
-|------|-------|
-| `EmergencyDentist.tsx` | `/services/emergency-dentist` |
-| `DentalImplants.tsx` | `/services/dental-implants` |
-| `CosmeticDentistry.tsx` | `/services/cosmetic-dentistry` |
-| `TeethWhitening.tsx` | `/services/teeth-whitening` |
-| `DentalCrowns.tsx` | `/services/dental-crowns` |
-| `AllOnX.tsx` | `/services/all-on-x-implants` |
-| `Invisalign.tsx` | `/services/invisalign` |
-| `RootCanal.tsx` | `/services/root-canal` |
-| `DentalCleaning.tsx` | `/services/dental-cleaning` |
-| `PediatricDentistry.tsx` | `/services/pediatric-dentistry` |
-| `Dentures.tsx` | `/services/dentures` |
-| `Veneers.tsx` | `/services/veneers` |
-| `DentalBridges.tsx` | `/services/dental-bridges` |
-| `ToothExtraction.tsx` | `/services/tooth-extraction` |
-| `OralSurgery.tsx` | `/services/oral-surgery` |
-| `SedationDentistry.tsx` | `/services/sedation-dentistry` |
-| `PreventiveDentistry.tsx` | `/services/preventive-dentistry` |
-
-Each page is a data file that feeds `BrandServicePageTemplate`, with:
-- Brand-global educational copy (no "in Cypress" or "in Katy" in H1/title)
-- Unique FAQs or lightly adapted versions from the geo pages
-- Links to both geo pages as "Find This Service Near You" cards at the bottom
-
-### Part 3 — Update `/services` Hub Page
-
-**Edit: `src/pages/Services.tsx`**
-
-- Change all service card `href` values from `/cypress-tx/{slug}` to `/services/{slug}` so the hub links to brand-global pages (which then link down to geo pages)
-- This creates the proper hierarchy: `/services` → `/services/{slug}` → `/cypress-tx/{slug}` + `/katy-tx/{slug}`
-
-### Part 4 — Footer Accordion Redesign
-
-**Edit: `src/components/Footer.tsx`**
-
-Replace the Services column with categorized Radix Accordion:
-
-```text
-┌─────────────────────────────┐
-│ Services                    │
-│ All Services →              │
-│ ▸ Preventive & General      │
-│   ├ Preventive Dentistry    │
-│   │  Cypress · Katy         │
-│   ├ Dental Cleaning         │
-│   │  Cypress · Katy         │
-│   ├ Children's Dentistry    │
-│   │  Cypress · Katy         │
-│   └ Emergency Dentistry     │
-│      Cypress · Katy         │
-│ ▸ Cosmetic & Aesthetic      │
-│ ▸ Restorative & Advanced    │
-│ ▸ Surgical & Periodontal    │
-└─────────────────────────────┘
-```
-
-- 4 accordion categories, multi-expand enabled
-- Each service shows its name (linking to `/services/{slug}`) with two indented sub-links: "Cypress" → `/cypress-tx/{slug}`, "Katy" → `/katy-tx/{slug}`
-- "All Services" link at top pointing to `/services`
-- Uses Radix Accordion (already installed) with dark-themed styling matching the footer
-
-### Part 5 — Routing, Sitemap, SEO Updates
-
-**Edit: `src/App.tsx`**
-- Add 17 lazy imports for `src/pages/services/*.tsx`
-- Add 17 routes at `/services/{slug}`
-
-**Edit: `src/pages/Sitemap.tsx`**
-- Add a "Brand Services" section listing all 17 `/services/{slug}` pages
-
-**Edit: `public/sitemap.xml`**
-- Add 17 new URLs
-
-**Edit: `public/llms.txt`**
-- Add brand service pages section
-
-### Part 6 — Cross-Linking from Geo Pages
-
-**Edit: `src/components/ServicePageTemplate.tsx`**
-- Add a breadcrumb level: Home > Services > {Service Name} > in {Location}, TX
-- This passes authority from the brand-global page down to geo pages
-
-### Summary of changes
-
-- **1 new template**: `BrandServicePageTemplate.tsx`
-- **17 new pages**: `src/pages/services/*.tsx`
-- **5 edited files**: `Footer.tsx`, `Services.tsx`, `App.tsx`, `Sitemap.tsx`, `ServicePageTemplate.tsx`
-- **2 edited assets**: `sitemap.xml`, `llms.txt`
-
-This creates a three-tier content architecture that surpasses Tend's two-tier approach by adding the geo-qualified layer they lack.
-
+### Shared Changes
+- Add a `section-warm` CSS class for warm tint backgrounds (slightly warmer than `section-alt`)
+- Unify kicker styling across all templates (same size, weight, tracking)
+- Add `.step-number` class for large serif step numbers

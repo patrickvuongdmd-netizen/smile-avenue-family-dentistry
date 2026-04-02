@@ -117,29 +117,59 @@
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-20;
+    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-24;
   }
 
   .section-alt {
     background-color: hsl(var(--surface-subtle));
   }
 
+  .section-warm {
+    background-color: hsl(38 40% 97%);
+  }
+
   .kicker {
-    @apply text-xs font-semibold tracking-[0.15em] uppercase mb-3;
+    @apply text-[11px] font-medium tracking-[0.2em] uppercase mb-4;
     font-family: var(--font-sans);
     color: hsl(var(--primary));
+    letter-spacing: 0.2em;
   }
 
   .section-heading {
     font-family: var(--font-display);
-    @apply text-3xl md:text-4xl font-bold mb-4;
+    @apply text-3xl md:text-[2.75rem] font-bold mb-5 leading-[1.1];
     color: hsl(var(--foreground));
   }
 
   .section-body {
     font-family: var(--font-body);
-    @apply text-lg leading-relaxed mb-8;
+    @apply text-lg md:text-xl leading-relaxed mb-8;
     color: hsl(var(--muted-foreground));
+  }
+
+  /* Large serif step numbers for process sections */
+  .step-number {
+    font-family: var(--font-display);
+    @apply text-5xl md:text-6xl font-bold leading-none;
+    color: hsl(var(--primary) / 0.15);
+  }
+
+  /* Soft card — less boxy, more editorial */
+  .card-soft {
+    @apply rounded-2xl p-8 md:p-10 border border-border/60;
+    background-color: hsl(var(--card));
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .card-soft:hover {
+    box-shadow: 0 8px 30px hsl(var(--foreground) / 0.06);
+    transform: translateY(-2px);
+  }
+
+  /* Warm accent card */
+  .card-warm {
+    @apply rounded-2xl p-8 md:p-10;
+    background-color: hsl(38 40% 97%);
+    border: 1px solid hsl(38 30% 90%);
   }
 
   .btn-primary {
