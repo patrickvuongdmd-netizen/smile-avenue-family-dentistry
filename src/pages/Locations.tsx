@@ -181,7 +181,7 @@ const LocationCard = ({
         {loc.phoneFormatted}
       </a>
 
-      {/* Mobile Book Now */}
+      {/* Mobile: Book Now + Explore Office */}
       <div className="flex items-center gap-3 mt-4 sm:hidden">
         <a
           href={loc.bookingUrl}
@@ -192,6 +192,24 @@ const LocationCard = ({
         >
           Book Now
         </a>
+        <Link
+          to={loc.pageUrl}
+          className="text-sm font-sans font-semibold text-primary hover:underline inline-flex items-center gap-1"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Explore Office <ChevronRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+      {/* Desktop: Explore Office (Book Now already in header row) */}
+      <div className="hidden sm:flex items-center gap-3 mt-4">
+        <Link
+          to={loc.pageUrl}
+          className="text-sm font-sans font-semibold text-primary hover:underline inline-flex items-center gap-1"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Explore Office <ChevronRight className="w-3.5 h-3.5" />
+        </Link>
       </div>
     </article>
   );
