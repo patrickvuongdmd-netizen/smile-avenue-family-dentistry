@@ -13,6 +13,8 @@ import DoctorCard from "@/components/DoctorCard";
 import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import LazySection from "@/components/LazySection";
 
 
 const PHONE = "8326481756";
