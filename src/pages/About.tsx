@@ -87,7 +87,7 @@ const About = () => {
               <div className="max-w-xl">
                 <p className="kicker">ABOUT US</p>
                 <h1 className="font-display text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-foreground leading-[1.1] tracking-tight">
-                  Dentistry built on<br />hospitality.
+                  So good we can't<br />be ignored.
                 </h1>
                 <p className="font-body text-lg text-muted-foreground leading-relaxed mt-6">
                   Smile Avenue was founded on a simple idea: dental care should feel less like a clinical appointment and more like visiting family.
