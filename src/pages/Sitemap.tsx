@@ -65,29 +65,6 @@ const brandServices = [
   { label: "Oral Surgery", href: "/services/oral-surgery" },
   { label: "Sedation Dentistry", href: "/services/sedation-dentistry" },
   { label: "Preventive Dentistry", href: "/services/preventive-dentistry" },
-];
-  {
-    title: "Locations",
-    links: [
-      { label: "Cypress, TX", href: "/cypress-tx" },
-      { label: "Katy, TX", href: "/katy-tx" },
-      { label: "All Locations", href: "/convenient-locations" },
-    ],
-  },
-  {
-    title: "Team & Doctors",
-    links: [
-      { label: "Meet Our Team", href: "/our-team" },
-      { label: "Meet Our Doctors", href: "/doctors" },
-      { label: "Dr. Patrick Vuong, DMD", href: "/doctors/patrick-vuong-dmd" },
-      { label: "Dr. Peter Kim, DDS", href: "/doctors/peter-kim-dds" },
-      { label: "Dr. Laith Yahya, DDS", href: "/doctors/laith-yahya-dds" },
-      { label: "Dr. Sameer Bilal, DDS", href: "/doctors/sameer-bilal-dds" },
-      { label: "Dr. Sarah Maredia, DDS", href: "/doctors/sarah-maredia-dds" },
-      { label: "Dr. Shayan Alkhiro, DDS", href: "/doctors/shayan-alkhiro-dds" },
-    ],
-  },
-];
 
 const cypressNeighborhoods = {
   title: "Neighborhoods",
