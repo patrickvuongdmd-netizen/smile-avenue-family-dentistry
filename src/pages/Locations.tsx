@@ -202,7 +202,13 @@ const Locations = () => {
   useDocTitle(
     "Dental Office Locations in Cypress & Katy, TX | Smile Avenue"
   );
-  const [activeIdx, setActiveIdx] = useState(0);
+  const [activeIdx, setActiveIdx] = useState<number | null>(null);
+
+  const BOTH_LOCATIONS_EMBED =
+    "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d250000!2d-95.75!3d29.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSmile+Avenue+Family+Dentistry!5e0!3m2!1sen!2sus!4v1";
+
+  const currentMapSrc = activeIdx !== null ? locations[activeIdx].mapEmbed : BOTH_LOCATIONS_EMBED;
+  const currentLocation = activeIdx !== null ? locations[activeIdx] : null;
 
   return (
     <>
