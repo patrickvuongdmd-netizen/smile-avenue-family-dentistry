@@ -457,11 +457,10 @@ const Home = () => {
           <div className="container mx-auto">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="text-sm font-sans font-semibold uppercase tracking-wider text-primary mb-2">From Our Blog</p>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Dental Tips & Insights</h2>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Blog</h2>
               </div>
-              <Link to="/blog" className="hidden sm:inline-flex items-center gap-1.5 text-sm font-sans font-medium text-primary hover:underline">
-                View all posts
+              <Link to="/blog" className="hidden sm:inline-flex items-center gap-2 btn-cta !text-sm !px-6 !py-3">
+                View All Posts
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -470,18 +469,22 @@ const Home = () => {
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
-                  className="group bg-card rounded-2xl overflow-hidden border border-border/50 hover:shadow-lg transition-shadow"
+                  className="group flex flex-col rounded-2xl overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  <div className="bg-primary/10 px-6 py-8">
-                    <span className="text-xs font-sans font-semibold uppercase tracking-wider text-primary">{post.category}</span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
+                  {/* Large colored header block */}
+                  <div className="bg-primary/10 px-6 py-10 md:py-14 flex flex-col justify-end relative overflow-hidden">
+                    <div className="absolute top-4 left-6">
+                      <span className="text-[11px] font-sans font-bold uppercase tracking-widest text-primary/70">{post.category}</span>
+                    </div>
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors">
                       {post.title}
                     </h3>
-                    <p className="text-sm font-body text-muted-foreground line-clamp-3 mb-4">{post.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs font-sans text-muted-foreground">
-                      <span>{post.author}</span>
+                  </div>
+                  {/* Body */}
+                  <div className="flex-1 bg-card border border-t-0 border-border/50 rounded-b-2xl p-6 flex flex-col">
+                    <p className="text-sm font-body text-muted-foreground line-clamp-3 mb-5 flex-1">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-xs font-sans text-muted-foreground pt-4 border-t border-border/50">
+                      <span className="font-semibold text-foreground">{post.author}</span>
                       <span>{post.readTime}</span>
                     </div>
                   </div>
