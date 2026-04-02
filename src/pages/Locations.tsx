@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { MapPin, Phone, Clock, Check, Star, ChevronRight, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Clock, Star, ChevronRight, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
-import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
-import { CYPRESS_HERO_PHOTOS, KATY_HERO_PHOTOS } from "@/lib/images";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -19,17 +17,6 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 const KATY_PHONE = "2818005008";
 const KATY_PHONE_FORMATTED = "(281) 800-5008";
 const KATY_BOOKING = "https://book.modento.io/c/7e879f019b1846dda0dde08e10b56c25/SmileAvenueKaty";
-
-const amenities = [
-  "Netflix in Every Room",
-  "Warm Blankets & Pillows",
-  "Noise-Canceling Headphones",
-  "Same-Day Emergency Visits",
-  "In-House Dental Lab",
-  "Bilingual Team (EN/ES)",
-  "Most PPO Insurance Accepted",
-  "0% Financing Available",
-];
 
 type HourSpec = { days: string; time: string; dayNumbers: number[] };
 
@@ -52,10 +39,11 @@ const locations = [
     communities: ["Bridgeland", "Towne Lake", "Fairfield", "Cy-Fair"],
     rating: "4.9",
     reviewCount: "3,000+",
-    photos: CYPRESS_HERO_PHOTOS,
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
+    mapEmbed:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
     directionsUrl: "https://maps.app.goo.gl/DgZBrfjyNed7qKxs8",
-    directions: "From US-290, exit Fry Road and head south — we're about 1 mile down, directly across from HEB.",
+    directions:
+      "From US-290, exit Fry Road and head south — we're about 1 mile down, directly across from HEB.",
   },
   {
     name: "Katy",
@@ -78,152 +66,197 @@ const locations = [
     communities: ["Cinco Ranch", "Cross Creek Ranch", "Firethorne", "Fulshear"],
     rating: "4.9",
     reviewCount: "2,000+",
-    photos: KATY_HERO_PHOTOS,
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
-    directionsUrl: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/@29.732508,-95.775455,17z",
-    directions: "From I-10, exit Grand Parkway (99) south, then take Westheimer Parkway west — 2 minutes ahead on the right.",
+    mapEmbed:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
+    directionsUrl:
+      "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/@29.732508,-95.775455,17z",
+    directions:
+      "From I-10, exit Grand Parkway (99) south, then take Westheimer Parkway west — 2 minutes ahead on the right.",
   },
 ];
 
-function getOpenStatus(loc: typeof locations[0]): { isOpen: boolean; label: string } {
+function getOpenStatus(loc: (typeof locations)[0]): {
+  isOpen: boolean;
+  label: string;
+  hoursToday: string;
+} {
   const now = new Date();
-  // Convert to CST
-  const cst = new Date(now.toLocaleString("en-US", { timeZone: "America/Chicago" }));
+  const cst = new Date(
+    now.toLocaleString("en-US", { timeZone: "America/Chicago" })
+  );
   const day = cst.getDay();
   const hour = cst.getHours() + cst.getMinutes() / 60;
 
   if (day === 6 && loc.satOpenHour !== undefined) {
     const open = hour >= loc.satOpenHour && hour < loc.satCloseHour!;
-    return { isOpen: open, label: open ? "Open Now" : "Closed" };
+    return {
+      isOpen: open,
+      label: open ? "Open" : "Closed",
+      hoursToday: "8:00 AM – 2:00 PM",
+    };
   }
   if (loc.openDays.includes(day)) {
     const open = hour >= loc.openHour && hour < loc.closeHour;
-    return { isOpen: open, label: open ? "Open Now" : "Closed" };
+    return {
+      isOpen: open,
+      label: open ? "Open" : "Closed",
+      hoursToday: "8:30 AM – 5:00 PM",
+    };
   }
-  return { isOpen: false, label: "Closed" };
+  return { isOpen: false, label: "Closed", hoursToday: "Opens Mon 8:30 AM" };
 }
 
-const LocationCard = ({ loc, active, onSelect }: { loc: typeof locations[0]; active: boolean; onSelect: () => void }) => {
+/* ─── Location Card ─── */
+const LocationCard = ({
+  loc,
+  active,
+  onSelect,
+}: {
+  loc: (typeof locations)[0];
+  active: boolean;
+  onSelect: () => void;
+}) => {
   const status = getOpenStatus(loc);
 
   return (
     <article
       onClick={onSelect}
-      className={`bg-card rounded-2xl border-2 overflow-hidden shadow-sm cursor-pointer transition-all duration-300 ${
-        active ? "border-primary shadow-lg" : "border-border hover:border-primary/30"
+      className={`group relative rounded-2xl border bg-card px-5 py-5 md:px-6 md:py-6 cursor-pointer transition-all duration-200 ${
+        active
+          ? "border-primary/40 shadow-md ring-1 ring-primary/20"
+          : "border-border hover:border-primary/20 hover:shadow-sm"
       }`}
     >
-      {/* Photo Carousel */}
-      <div className="p-3 pb-0">
-        <HeroPhotoCarousel photos={loc.photos} />
+      {/* Row 1: Status · Hours · Rating */}
+      <div className="flex items-center gap-3 mb-3 text-xs font-sans">
+        <span
+          className={`inline-flex items-center gap-1.5 font-semibold ${
+            status.isOpen ? "text-emerald-600" : "text-red-500"
+          }`}
+        >
+          <span
+            className={`w-1.5 h-1.5 rounded-full ${
+              status.isOpen ? "bg-emerald-500 animate-pulse" : "bg-red-400"
+            }`}
+          />
+          {status.label} | {status.hoursToday}
+        </span>
+        <span className="ml-auto flex items-center gap-1 text-muted-foreground">
+          <Star className="w-3.5 h-3.5 fill-primary text-primary" />
+          <span className="font-semibold text-foreground">{loc.rating}</span>
+          <span>({loc.reviewCount})</span>
+        </span>
       </div>
 
-      <div className="p-5 md:p-6">
-        {/* Status + Rating row */}
-        <div className="flex items-center justify-between mb-3">
-          <div className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-sans font-semibold ${
-            status.isOpen
-              ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400"
-              : "bg-red-50 text-red-600 dark:bg-red-950 dark:text-red-400"
-          }`}>
-            <span className={`w-1.5 h-1.5 rounded-full ${status.isOpen ? "bg-emerald-500" : "bg-red-500"}`} />
-            {status.label}
-          </div>
-          <div className="flex items-center gap-1">
-            <Star className="w-4 h-4 fill-primary text-primary" />
-            <span className="text-sm font-sans font-bold text-foreground">{loc.rating}</span>
-            <span className="text-xs font-sans text-muted-foreground">({loc.reviewCount})</span>
-          </div>
-        </div>
+      {/* Row 2: Name */}
+      <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+        {loc.name}
+      </h2>
 
-        {/* Name + tagline */}
-        <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-0.5">
-          {loc.name}
-        </h2>
-        <p className="text-xs font-sans text-muted-foreground mb-4">{loc.tagline}</p>
-
-        {/* Info */}
-        <div className="space-y-2.5 mb-5">
-          <div className="flex items-start gap-2.5">
-            <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-            <span className="text-sm font-sans text-foreground">{loc.address}, {loc.city}</span>
-          </div>
-          <div className="flex items-center gap-2.5">
-            <Phone className="w-4 h-4 text-primary shrink-0" />
-            <a href={`tel:${loc.phone}`} className="text-sm font-sans font-medium text-foreground hover:text-primary transition-colors">
-              {loc.phoneFormatted}
-            </a>
-          </div>
-          <div className="flex items-start gap-2.5">
-            <Clock className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-            <div className="text-sm font-sans text-foreground">
-              {loc.hours.map((h) => (
-                <span key={h.days} className="block">
-                  <span className="font-medium">{h.days}</span> {h.time}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Communities */}
-        <div className="flex flex-wrap gap-1.5 mb-5">
-          {loc.communities.map((c) => (
-            <span key={c} className="inline-flex items-center px-2 py-0.5 rounded-full bg-primary/5 text-[11px] font-sans font-medium text-primary border border-primary/10">
-              {c}
-            </span>
-          ))}
-        </div>
-
-        {/* CTAs */}
-        <div className="flex flex-col gap-2.5">
+      {/* Row 3: Address + Phone */}
+      <div className="space-y-1 mb-4">
+        <p className="text-sm font-sans text-muted-foreground flex items-start gap-2">
+          <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 text-primary/60" />
+          {loc.address}, {loc.city}
+        </p>
+        <p className="text-sm font-sans text-muted-foreground flex items-center gap-2">
+          <Phone className="w-3.5 h-3.5 shrink-0 text-primary/60" />
           <a
-            href={loc.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-cta text-center text-sm"
+            href={`tel:${loc.phone}`}
+            className="hover:text-primary transition-colors"
+            onClick={(e) => e.stopPropagation()}
           >
-            Book at {loc.name}
+            {loc.phoneFormatted}
           </a>
-          <div className="flex gap-2.5">
-            <Link to={loc.pageUrl} className="btn-secondary text-center text-xs flex-1 flex items-center justify-center gap-1">
-              Explore Office <ChevronRight className="w-3 h-3" />
-            </Link>
-            <a
-              href={loc.directionsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary text-center text-xs flex-1 flex items-center justify-center gap-1"
-            >
-              Directions <ExternalLink className="w-3 h-3" />
-            </a>
-          </div>
-        </div>
+        </p>
+      </div>
+
+      {/* Row 4: Saturday hours if applicable */}
+      {loc.hours.length > 1 && (
+        <p className="text-xs font-sans text-muted-foreground mb-4 flex items-center gap-2">
+          <Clock className="w-3.5 h-3.5 shrink-0 text-primary/60" />
+          Also open <span className="font-medium text-foreground">Saturday 8:00 AM – 2:00 PM</span>
+        </p>
+      )}
+
+      {/* Row 5: CTAs */}
+      <div className="flex items-center gap-3">
+        <a
+          href={loc.bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-cta text-center text-sm px-6"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Book Now
+        </a>
+        <Link
+          to={loc.pageUrl}
+          className="text-sm font-sans font-semibold text-primary hover:underline inline-flex items-center gap-1"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Explore Office <ChevronRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+
+      {/* Community tags — subtle */}
+      <div className="flex flex-wrap gap-1.5 mt-4 pt-4 border-t border-border/60">
+        {loc.communities.map((c) => (
+          <span
+            key={c}
+            className="text-[11px] font-sans text-muted-foreground bg-muted/50 px-2 py-0.5 rounded-full"
+          >
+            {c}
+          </span>
+        ))}
       </div>
     </article>
   );
 };
 
+/* ─── Page ─── */
 const Locations = () => {
-  useDocTitle("Dental Office Locations in Cypress & Katy, TX | Smile Avenue");
+  useDocTitle(
+    "Dental Office Locations in Cypress & Katy, TX | Smile Avenue"
+  );
   const [activeIdx, setActiveIdx] = useState(0);
 
   return (
     <>
       <SkipToContent />
       <Helmet>
-        <title>Dental Office Locations in Cypress & Katy, TX | Smile Avenue</title>
+        <title>
+          Dental Office Locations in Cypress & Katy, TX | Smile Avenue
+        </title>
         <meta
           name="description"
           content="Two convenient Smile Avenue Family Dentistry locations in Cypress (Fry Rd) and Katy (Westheimer Pkwy), TX. 4.9★ rated. Same-day appointments, in-house lab, most insurance accepted. Book today."
         />
-        <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/convenient-locations/" />
-        <meta property="og:title" content="Dental Office Locations in Cypress & Katy, TX | Smile Avenue" />
-        <meta property="og:description" content="Two convenient Houston-area dental offices — Cypress on Fry Rd and Katy on Westheimer Pkwy. 4.9★ rated, same-day appointments, in-house lab." />
-        <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/convenient-locations/" />
+        <link
+          rel="canonical"
+          href="https://www.smileavenuefamilydentistry.com/convenient-locations/"
+        />
+        <meta
+          property="og:title"
+          content="Dental Office Locations in Cypress & Katy, TX | Smile Avenue"
+        />
+        <meta
+          property="og:description"
+          content="Two convenient Houston-area dental offices — Cypress on Fry Rd and Katy on Westheimer Pkwy. 4.9★ rated, same-day appointments, in-house lab."
+        />
+        <meta
+          property="og:url"
+          content="https://www.smileavenuefamilydentistry.com/convenient-locations/"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
-        <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
+        <meta
+          property="og:site_name"
+          content="Smile Avenue Family Dentistry"
+        />
+        <meta
+          property="og:image"
+          content="https://www.smileavenuefamilydentistry.com/logo-full.webp"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -246,10 +279,30 @@ const Locations = () => {
                   postalCode: "77433",
                   addressCountry: "US",
                 },
-                geo: { "@type": "GeoCoordinates", latitude: "29.9691", longitude: "-95.6972" },
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "3000", bestRating: "5" },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: "29.9691",
+                  longitude: "-95.6972",
+                },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "4.9",
+                  reviewCount: "3000",
+                  bestRating: "5",
+                },
                 openingHoursSpecification: [
-                  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                    ],
+                    opens: "08:30",
+                    closes: "17:00",
+                  },
                 ],
               },
               {
@@ -265,11 +318,36 @@ const Locations = () => {
                   postalCode: "77494",
                   addressCountry: "US",
                 },
-                geo: { "@type": "GeoCoordinates", latitude: "29.7357", longitude: "-95.7575" },
-                aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "2000", bestRating: "5" },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: "29.7357",
+                  longitude: "-95.7575",
+                },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "4.9",
+                  reviewCount: "2000",
+                  bestRating: "5",
+                },
                 openingHoursSpecification: [
-                  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
-                  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "08:00", closes: "14:00" },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                    ],
+                    opens: "08:30",
+                    closes: "17:00",
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: ["Saturday"],
+                    opens: "08:00",
+                    closes: "14:00",
+                  },
                 ],
               },
             ],
@@ -280,8 +358,18 @@ const Locations = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
-              { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.smileavenuefamilydentistry.com/convenient-locations/" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.smileavenuefamilydentistry.com/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Locations",
+                item: "https://www.smileavenuefamilydentistry.com/convenient-locations/",
+              },
             ],
           })}
         </script>
@@ -290,42 +378,59 @@ const Locations = () => {
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "Dental Office Locations | Smile Avenue Family Dentistry",
-            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", ".kicker", ".section-body"],
+            },
             url: "https://www.smileavenuefamilydentistry.com/convenient-locations/",
           })}
         </script>
       </Helmet>
+
       <TrustTicker />
-      <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <Navbar
+        phone={CYPRESS_PHONE}
+        phoneFormatted={CYPRESS_PHONE_FORMATTED}
+        bookingUrl={CYPRESS_BOOKING}
+      />
       <TrustStrip />
 
       <main id="main-content" className="pb-14 lg:pb-0">
-        {/* HERO */}
-        <section className="pt-8 pb-4 md:pt-12 md:pb-6 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="mb-6 text-xs font-sans text-muted-foreground" aria-label="Breadcrumb">
-              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <span className="mx-2" aria-hidden="true">›</span>
+        {/* HERO — clean & minimal */}
+        <section className="pt-10 pb-6 md:pt-16 md:pb-10 bg-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <nav
+              className="mb-8 text-xs font-sans text-muted-foreground"
+              aria-label="Breadcrumb"
+            >
+              <Link
+                to="/"
+                className="hover:text-primary transition-colors"
+              >
+                Home
+              </Link>
+              <span className="mx-2" aria-hidden="true">
+                ›
+              </span>
               <span className="text-foreground">Locations</span>
             </nav>
-            <div className="text-center max-w-3xl mx-auto">
-              <p className="kicker">TWO HOUSTON-AREA OFFICES</p>
-              <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight mb-3">
-                Find Your Smile Avenue
-              </h1>
-              <p className="section-body">
-                Choose your nearest office. Both locations offer the same hospitality-driven experience, in-house dental lab, and 4.9-star care.
-              </p>
-            </div>
+
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] mb-4">
+              Find Your Smile Avenue
+            </h1>
+            <p className="section-body max-w-lg mx-auto">
+              Two Houston-area studios. Same 4.9-star, hospitality-driven
+              dental care.
+            </p>
           </div>
         </section>
 
-        {/* LOCATION FINDER — Tend-inspired layout */}
-        <section className="section-padding section-alt">
+        {/* FINDER — Split pane */}
+        <section className="pb-16 md:pb-24 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-[1fr_1fr] gap-6 lg:gap-8 items-start">
-              {/* Left: Location Cards */}
-              <div className="space-y-6 order-2 lg:order-1">
+            <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-8 items-start">
+              {/* Left: Cards */}
+              <div className="space-y-4 order-2 lg:order-1">
                 {locations.map((loc, idx) => (
                   <LocationCard
                     key={loc.name}
@@ -341,23 +446,24 @@ const Locations = () => {
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-border bg-card">
                   <iframe
                     src={locations[activeIdx].mapEmbed}
-                    className="w-full aspect-[4/3] lg:aspect-[3/4] border-0"
+                    className="w-full aspect-square lg:aspect-[3/4] border-0"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title={`Google Map — Smile Avenue ${locations[activeIdx].name}`}
                   />
-                  <div className="p-4 border-t border-border">
-                    <p className="text-sm font-sans text-muted-foreground leading-relaxed">
+                  <div className="p-4 border-t border-border flex items-center justify-between gap-4">
+                    <p className="text-sm font-sans text-muted-foreground leading-relaxed flex-1">
                       {locations[activeIdx].directions}
                     </p>
                     <a
                       href={locations[activeIdx].directionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-sans text-primary font-semibold hover:underline mt-2 inline-flex items-center gap-1"
+                      className="shrink-0 inline-flex items-center gap-1.5 text-sm font-sans font-semibold text-primary hover:underline"
                     >
-                      Open in Google Maps <ExternalLink className="w-3 h-3" />
+                      Directions
+                      <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>
@@ -366,37 +472,22 @@ const Locations = () => {
           </div>
         </section>
 
-        {/* AMENITIES */}
-        <section className="section-padding bg-background">
+        {/* CTA Banner */}
+        <section className="py-20 bg-primary text-primary-foreground">
           <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <p className="kicker">WHAT TO EXPECT</p>
-            <h2 className="section-heading">The Same 5-Star Experience at Both Offices</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-3xl mx-auto">
-              {amenities.map((item) => (
-                <div key={item} className="flex items-center gap-2 text-left">
-                  <Check className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-sm font-sans text-foreground">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FINAL CTA */}
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Ready to Book Your Visit?
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+              Care at Smile Avenue isn't just gentle,{" "}
+              <span className="italic">it's genuine.</span>
             </h2>
-            <p className="text-primary-foreground/80 font-sans max-w-xl mx-auto mb-8">
-              New patients welcome at both locations. Online booking takes 60 seconds — we'll confirm within 1 hour.
+            <p className="text-primary-foreground/70 font-sans max-w-xl mx-auto mb-10 text-lg">
+              New patients welcome. Online booking takes 60 seconds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={CYPRESS_BOOKING}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-background text-foreground font-sans font-semibold text-sm hover:bg-background/90 transition-colors shadow-md"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-background text-foreground font-sans font-semibold text-sm hover:bg-background/90 transition-colors shadow-md"
               >
                 Book at Cypress
               </a>
@@ -404,7 +495,7 @@ const Locations = () => {
                 href={KATY_BOOKING}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-background text-foreground font-sans font-semibold text-sm hover:bg-background/90 transition-colors shadow-md"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-background text-foreground font-sans font-semibold text-sm hover:bg-background/90 transition-colors shadow-md"
               >
                 Book at Katy
               </a>
@@ -414,7 +505,11 @@ const Locations = () => {
       </main>
 
       <Footer />
-      <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl={CYPRESS_BOOKING} />
+      <MobileStickyBar
+        phone={CYPRESS_PHONE}
+        phoneFormatted={CYPRESS_PHONE_FORMATTED}
+        bookingUrl={CYPRESS_BOOKING}
+      />
     </>
   );
 };
