@@ -46,6 +46,27 @@ const PatientTestimonials = () => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Dentist",
+          "name": "Smile Avenue Family Dentistry",
+          "url": "https://www.smileavenuefamilydentistry.com",
+          "image": "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "ratingCount": "5000",
+            "reviewCount": "5000"
+          },
+          "review": reviews.map(r => ({
+            "@type": "Review",
+            "author": { "@type": "Person", "name": r.name },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": r.quote,
+            "publisher": { "@type": "Organization", "name": r.source }
+          }))
+        })}</script>
       </Helmet>
       <TrustTicker />
 
