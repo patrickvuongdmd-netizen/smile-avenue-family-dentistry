@@ -22,13 +22,13 @@ const TrustTicker = () => {
   const isSpanish = location.pathname.startsWith("/es");
 
   return (
-    <div className="overflow-hidden flex relative bg-primary" style={{ boxShadow: "0 2px 6px hsl(192 72% 35% / 0.35)" }}>
-      <Link to="/about" className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 hover:underline" style={{ color: NAVY }}>
+    <div className="overflow-hidden flex relative bg-neon-blue" style={{ boxShadow: "0 2px 8px hsl(200 100% 50% / 0.4)" }}>
+      <Link to="/about" className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 hover:underline text-white" style={{}}>
         Why Smile Avenue?
       </Link>
       <div className="relative overflow-hidden flex-1">
-        <div className="absolute left-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(192, 72%, 55%), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(192, 72%, 55%), transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(200, 100%, 50%), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-12 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(200, 100%, 50%), transparent)" }} />
         <div className="flex animate-ticker whitespace-nowrap">
           {doubled.map((text, i) => (
             <span
