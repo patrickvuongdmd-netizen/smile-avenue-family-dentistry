@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { MapPin, Phone, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, ChevronRight } from "lucide-react";
+import { MapPin, Phone, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, ChevronRight, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
