@@ -68,6 +68,22 @@ const brandServices = [
   { label: "Family Dental Care", href: "/services/family-dental-care" },
 ];
 
+const categoryPages = [
+  { label: "Preventive & General", href: "/services/preventive" },
+  { label: "Cosmetic & Aesthetic", href: "/services/cosmetic" },
+  { label: "Restorative & Advanced", href: "/services/restorative" },
+  { label: "Surgical & Periodontal", href: "/services/surgical" },
+];
+
+const comparisonPages = [
+  { label: "Implants vs Dentures", href: "/services/dental-implants-vs-dentures" },
+  { label: "Invisalign vs Braces", href: "/services/invisalign-vs-braces" },
+  { label: "Veneers vs Crowns", href: "/services/veneers-vs-crowns" },
+  { label: "Crowns vs Bridges", href: "/services/crowns-vs-bridges" },
+  { label: "Implants vs Bridges", href: "/services/dental-implants-vs-bridges" },
+  { label: "Whitening vs Veneers", href: "/services/whitening-vs-veneers" },
+];
+
 const cypressNeighborhoods = {
   title: "Neighborhoods",
   links: [
@@ -231,6 +247,15 @@ const SitemapPage = () => {
               <RowLabel>Services</RowLabel>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 <ServicesSplitBlock title="All Services" links={brandServices} />
+                <SectionBlock title="Categories" links={categoryPages} />
+              </div>
+            </div>
+
+            {/* Row 1.75 — Comparison Guides */}
+            <div className="border-t border-border pt-10 mb-10">
+              <RowLabel>Comparison Guides</RowLabel>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <SectionBlock title="Treatment Comparisons" links={comparisonPages} />
               </div>
             </div>
 
