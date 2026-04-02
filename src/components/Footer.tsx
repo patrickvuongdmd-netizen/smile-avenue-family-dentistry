@@ -137,8 +137,8 @@ const Footer = () => {
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Questions?</h4>
 
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-1.5">Cypress</p>
-              <div className="space-y-1 text-sm font-sans opacity-70 mb-5">
+              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-1.5">Cypress</p>
+              <div className="space-y-1 text-sm font-sans opacity-80 mb-5">
                 <a href="tel:8326481756" className="block hover:opacity-100 transition-opacity">(832) 648-1756</a>
                 <a href="mailto:info@smileavenuecypress.com" className="block hover:opacity-100 transition-opacity">info@smileavenuecypress.com</a>
               </div>
