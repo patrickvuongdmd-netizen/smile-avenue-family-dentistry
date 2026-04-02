@@ -1,5 +1,5 @@
 import { Tv, Factory, Calendar, Zap, Languages, ScanLine, Heart, Baby, Sparkles, Crown, Scan, CreditCard, CalendarCheck } from "lucide-react";
-import { OFFICE_IMAGES } from "@/lib/images";
+import waitingRoomImg from "@/assets/office/waiting-room-lobby.png";
 
 const perks = [
   { icon: <Tv className="w-5 h-5" />, text: "Netflix and comfort amenities in every chair" },
@@ -31,8 +31,8 @@ const SmileAvenueDifference = ({ onBook }: Props) => (
         {/* Photo */}
         <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
           <img
-            src={OFFICE_IMAGES.treatmentRoom}
-            alt="Dr. Vuong explaining dental x-rays to a patient at Smile Avenue"
+            src={waitingRoomImg}
+            alt="Smile Avenue waiting room with leather sofas, 3D accent wall, and complimentary refreshments"
             className="w-full h-full object-cover"
             loading="lazy"
             width={800}
