@@ -193,21 +193,7 @@ const Home = () => {
                   <span>from 5,000+ reviews</span>
                 </div>
 
-                {/* Intent Quick-Paths */}
-                <div className="hidden md:flex flex-wrap gap-2 mt-5 pt-5 border-t border-border">
-                  <Link to="/patients/new-patient-hub" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
-                    <Check className="w-3.5 h-3.5 text-primary" /> New Patient? Start Here
-                  </Link>
-                  <Link to={`${locationPrefix}/emergency-dentist`} className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-foreground/5 border border-foreground/10 text-xs font-sans font-bold text-foreground hover:bg-foreground/10 transition-all">
-                    <AlertCircle className="w-3.5 h-3.5" /> Dental Emergency
-                  </Link>
-                  <Link to="/insurance" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
-                    <Shield className="w-3.5 h-3.5 text-primary" /> Check Insurance
-                  </Link>
-                  <Link to="/free-consultation" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-card border border-border text-xs font-sans font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all">
-                    <Sparkles className="w-3.5 h-3.5 text-primary" /> Free Consultation
-                  </Link>
-                </div>
+
               </div>
               {/* Hero media */}
               <div className="aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
