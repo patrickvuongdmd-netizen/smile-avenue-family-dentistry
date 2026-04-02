@@ -106,7 +106,7 @@ const Footer = () => {
             {/* Col 3 — Services */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Services</h4>
-              <div className="space-y-0.5 text-sm font-sans opacity-70">
+              <div className="space-y-0.5 text-sm font-sans opacity-80">
                 {footerServices.map((s) => (
                   <div key={s.label}>
                     {s.slug ? (
