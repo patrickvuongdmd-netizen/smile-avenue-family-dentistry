@@ -135,12 +135,12 @@ const KatyTx = () => {
                 <p className="section-body">
                   Smile Avenue on Westheimer Parkway is the Katy dentist that makes dental care feel effortless. From <Link to="/katy-tx/dental-cleaning" className="text-primary hover:underline">routine cleanings</Link> and <Link to="/katy-tx/pediatric-dentistry" className="text-primary hover:underline">kids' checkups</Link> to <Link to="/katy-tx/dental-implants" className="text-primary hover:underline">dental implants</Link>, <Link to="/katy-tx/invisalign" className="text-primary hover:underline">Invisalign</Link>, and <Link to="/katy-tx/emergency-dentist" className="text-primary hover:underline">same-day emergencies</Link> — we do it all with our in-house dental lab. Proudly serving Cinco Ranch, Cross Creek Ranch, Firethorne, Fulshear, and Katy ISD families.
                 </p>
-                <div className="flex flex-row gap-3 mb-4">
+                <div className="flex flex-row items-center gap-3 mb-4">
                   <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
-                    Book at Katy — Takes 60 Seconds
+                    Book Now
                   </button>
                   <a href={`tel:${KATY_PHONE}`} className="btn-secondary">
-                    Call {KATY_PHONE_FORMATTED}
+                    {KATY_PHONE_FORMATTED}
                   </a>
                 </div>
                 <p className="text-xs font-sans text-muted-foreground mb-2">
