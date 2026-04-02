@@ -434,27 +434,35 @@ const Locations = () => {
               <div className="order-1 lg:order-2 lg:sticky lg:top-28">
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-border bg-card">
                   <iframe
-                    src={locations[activeIdx].mapEmbed}
+                    src={currentMapSrc}
                     className="w-full aspect-square lg:aspect-[3/4] border-0"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title={`Google Map — Smile Avenue ${locations[activeIdx].name}`}
+                    title={currentLocation ? `Google Map — Smile Avenue ${currentLocation.name}` : "Google Map — All Smile Avenue Locations"}
                   />
-                  <div className="p-4 border-t border-border flex items-center justify-between gap-4">
-                    <p className="text-sm font-sans text-muted-foreground leading-relaxed flex-1">
-                      {locations[activeIdx].directions}
-                    </p>
-                    <a
-                      href={locations[activeIdx].directionsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="shrink-0 inline-flex items-center gap-1.5 text-sm font-sans font-semibold text-primary hover:underline"
-                    >
-                      Directions
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
+                  {currentLocation ? (
+                    <div className="p-4 border-t border-border flex items-center justify-between gap-4">
+                      <p className="text-sm font-sans text-muted-foreground leading-relaxed flex-1">
+                        {currentLocation.directions}
+                      </p>
+                      <a
+                        href={currentLocation.directionsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1.5 text-sm font-sans font-semibold text-primary hover:underline"
+                      >
+                        Directions
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  ) : (
+                    <div className="p-4 border-t border-border text-center">
+                      <p className="text-sm font-sans text-muted-foreground">
+                        Select a location to see directions
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
