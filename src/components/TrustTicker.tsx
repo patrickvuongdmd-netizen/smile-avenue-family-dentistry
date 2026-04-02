@@ -43,31 +43,28 @@ const TrustTicker = () => {
       </div>
 
       {/* EN | ES | ♿ — right side, desktop only */}
-      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold bg-primary">
+      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold bg-neon-blue">
         <Link
           to="/"
-          className={`px-1.5 py-0.5 rounded transition-colors`}
-          style={!isSpanish ? { backgroundColor: "hsla(210, 20%, 14%, 0.15)", color: NAVY } : { color: NAVY_LIGHT }}
+          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-white/20 text-white' : 'text-white/70'}`}
         >
           EN
         </Link>
-        <span style={{ color: NAVY_LIGHT }}>|</span>
+        <span className="text-white/70">|</span>
         <Link
           to="/es"
-          className={`px-1.5 py-0.5 rounded transition-colors`}
-          style={isSpanish ? { backgroundColor: "hsla(210, 20%, 14%, 0.15)", color: NAVY } : { color: NAVY_LIGHT }}
+          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-white/20 text-white' : 'text-white/70'}`}
         >
           ES
         </Link>
-        <span style={{ color: NAVY_LIGHT }}>|</span>
+        <span className="text-white/70">|</span>
         <button
           onClick={() => {
             if ((window as any).toggleAccessibility) {
               (window as any).toggleAccessibility();
             }
           }}
-          className="px-1.5 py-0.5 rounded transition-colors"
-          style={{ color: NAVY_LIGHT }}
+          className="px-1.5 py-0.5 rounded transition-colors text-white/70"
           aria-label="Accessibility options"
           title="Accessibility"
         >
