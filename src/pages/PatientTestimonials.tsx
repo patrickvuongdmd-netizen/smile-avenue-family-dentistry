@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, ExternalLink, Quote, MapPin, Play, ArrowRight } from "lucide-react";
+import { Star, ExternalLink, Quote, MapPin, ArrowRight } from "lucide-react";
 import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -33,9 +33,9 @@ const reviews = [
 ];
 
 const platformStats = [
-  { platform: "Google", rating: "4.9", count: "5,000+", color: "text-primary" },
-  { platform: "Yelp", rating: "4.8", count: "200+", color: "text-red-500" },
-  { platform: "Facebook", rating: "4.9", count: "500+", color: "text-blue-600" },
+  { platform: "Google", rating: "4.9", count: "5,000+", icon: "G" },
+  { platform: "Yelp", rating: "4.8", count: "200+", icon: "Y" },
+  { platform: "Facebook", rating: "4.9", count: "500+", icon: "f" },
 ];
 
 const Stars = ({ size = "w-4 h-4" }: { size?: string }) => (
@@ -45,6 +45,17 @@ const Stars = ({ size = "w-4 h-4" }: { size?: string }) => (
     ))}
   </div>
 );
+
+const tickerQuotes = [
+  '"Best dental experience ever" — Jennifer L.',
+  '"My kids actually look forward to coming here" — Amanda K.',
+  '"I drove 30 minutes past 3 other dentists" — Sarah K.',
+  '"It feels like a spa, not a dentist" — Rosa M.',
+  '"Zero judgment, all care" — David M.',
+  '"The Netflix on the ceiling is a game changer" — Sarah K.',
+  '"My daughter now asks when her next appointment is" — Linda T.',
+  '"No surprises, no hidden costs" — James W.',
+];
 
 const PatientTestimonials = () => {
   useDocTitle("Patient Testimonials | Smile Avenue Family Dentistry");
@@ -95,129 +106,148 @@ const PatientTestimonials = () => {
       <main id="main-content" className="pb-14 lg:pb-0">
 
         {/* ─── HERO ─── */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto text-center max-w-3xl px-4">
-            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-left">
+        <section className="relative overflow-hidden">
+          {/* Subtle warm gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] via-background to-primary/[0.02]" />
+          <div className="relative container mx-auto px-4 pt-12 pb-16 md:pt-20 md:pb-24">
+            <nav aria-label="Breadcrumb" className="mb-10 text-xs font-sans text-muted-foreground">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
               <span className="text-foreground">Patient Testimonials</span>
             </nav>
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-sans font-medium mb-6">
-              <Star className="w-4 h-4 fill-primary" />
-              5,000+ verified reviews
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-[1.1] mb-8 tracking-tight">
+                Thousands of families.
+                <br />
+                <span className="text-primary">One word: wow.</span>
+              </h1>
+
+              <p className="text-lg md:text-xl font-body text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
+                Don't just take our word for it — hear from the thousands of families across Cypress and Katy who trust us with their smiles.
+              </p>
+
+              {/* Stat pills row */}
+              <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+                {platformStats.map(s => (
+                  <div
+                    key={s.platform}
+                    className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-card border border-border shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-xs font-sans font-bold text-primary">{s.icon}</span>
+                    </div>
+                    <div className="text-left">
+                      <div className="flex items-center gap-1.5">
+                        <span className="font-display text-lg font-bold text-foreground">{s.rating}</span>
+                        <Stars size="w-3 h-3" />
+                      </div>
+                      <p className="text-[11px] font-sans text-muted-foreground leading-none">{s.count} on {s.platform}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6">
-              People love coming<br className="hidden md:block" /> to <span className="text-primary">Smile Avenue</span>
-            </h1>
-
-            <p className="text-lg md:text-xl font-body text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
-              Don't just take our word for it — hear from the thousands of families across Cypress and Katy who trust us with their smiles.
-            </p>
-
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <Stars size="w-7 h-7" />
-              <span className="font-display text-3xl font-bold text-foreground">4.9</span>
-            </div>
-            <p className="text-sm font-sans text-muted-foreground">average across all platforms</p>
           </div>
         </section>
 
-        {/* ─── PLATFORM STATS BAR ─── */}
+        {/* ─── FEATURED QUOTE HIGHLIGHT ─── */}
         <section className="border-y border-border bg-card">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-3 divide-x divide-border">
-              {platformStats.map(s => (
-                <div key={s.platform} className="py-8 md:py-10 text-center">
-                  <p className="text-xs font-sans font-semibold text-muted-foreground uppercase tracking-wider mb-1">{s.platform}</p>
-                  <p className="font-display text-3xl md:text-4xl font-bold text-foreground">{s.rating}</p>
-                  <div className="flex justify-center my-1.5">
-                    <Stars size="w-3.5 h-3.5" />
-                  </div>
-                  <p className="text-xs font-sans text-muted-foreground">{s.count} reviews</p>
-                </div>
-              ))}
+          <div className="container mx-auto px-4 py-14 md:py-20">
+            <div className="max-w-3xl mx-auto text-center">
+              <Quote className="w-10 h-10 text-primary/30 mx-auto mb-6" />
+              <blockquote className="font-display text-2xl md:text-4xl font-semibold text-foreground leading-snug mb-6">
+                "From the moment I walked in I was greeted so kindly. Everyone made me feel so welcome and at home."
+              </blockquote>
+              <div className="flex items-center justify-center gap-2 text-sm font-sans">
+                <Stars size="w-4 h-4" />
+                <span className="font-semibold text-foreground">Kashayn P.</span>
+                <span className="text-muted-foreground">· Cinco Ranch, Katy</span>
+              </div>
             </div>
           </div>
         </section>
 
         {/* ─── FEATURED VIDEO ─── */}
-        <section className="py-16 md:py-20 bg-background">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <p className="kicker text-center">HEAR IT FIRSTHAND</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-              Real patients. Real stories.
-            </h2>
-            <LazyYouTube videoId={featuredVideo.youtubeId} title={featuredVideo.title} />
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+                <div className="md:col-span-2">
+                  <p className="kicker">HEAR IT FIRSTHAND</p>
+                  <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
+                    Real patients.<br />Real stories.
+                  </h2>
+                  <p className="font-body text-muted-foreground leading-relaxed mb-6">
+                    Nothing speaks louder than a patient who's been in your shoes. Watch their experiences in their own words.
+                  </p>
+                  <div className="flex items-center gap-2 text-sm font-sans text-muted-foreground">
+                    <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                    {VIDEO_TESTIMONIALS.length}+ video testimonials
+                  </div>
+                </div>
+                <div className="md:col-span-3">
+                  <LazyYouTube videoId={featuredVideo.youtubeId} title={featuredVideo.title} />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* ─── QUOTE TICKER ─── */}
-        <div className="overflow-hidden border-y border-border bg-primary/5 py-4">
+        <div className="overflow-hidden border-y border-border bg-primary/[0.03] py-5">
           <div className="flex animate-ticker whitespace-nowrap">
-            {[
-              '"Best dental experience ever" — Jennifer L.',
-              '"My kids actually look forward to coming here" — Amanda K.',
-              '"I drove 30 minutes past 3 other dentists" — Sarah K.',
-              '"It feels like a spa, not a dentist" — Rosa M.',
-              '"Zero judgment, all care" — David M.',
-              '"The Netflix on the ceiling is a game changer" — Sarah K.',
-              '"My daughter now asks when her next appointment is" — Linda T.',
-              '"No surprises, no hidden costs" — James W.',
-              '"Best dental experience ever" — Jennifer L.',
-              '"My kids actually look forward to coming here" — Amanda K.',
-              '"I drove 30 minutes past 3 other dentists" — Sarah K.',
-              '"It feels like a spa, not a dentist" — Rosa M.',
-              '"Zero judgment, all care" — David M.',
-              '"The Netflix on the ceiling is a game changer" — Sarah K.',
-              '"My daughter now asks when her next appointment is" — Linda T.',
-              '"No surprises, no hidden costs" — James W.',
-            ].map((text, i) => (
-              <span key={i} className="inline-flex items-center shrink-0 px-6 text-sm font-body italic text-foreground/70">
+            {[...tickerQuotes, ...tickerQuotes].map((text, i) => (
+              <span key={i} className="inline-flex items-center shrink-0 px-8 text-sm font-body italic text-foreground/60">
                 {text}
-                <span className="ml-6 text-primary/30">✦</span>
+                <span className="ml-8 text-primary/20">✦</span>
               </span>
             ))}
           </div>
         </div>
 
         {/* ─── REVIEW WALL ─── */}
-        <section className="py-16 md:py-20 bg-card border-b border-border">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
-            <p className="kicker text-center">WHY PEOPLE LOVE US</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
-              Straight from our patients
-            </h2>
+            <div className="text-center mb-14">
+              <p className="kicker">WHAT PEOPLE SAY</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+                Straight from our patients
+              </h2>
+              <p className="font-body text-muted-foreground max-w-lg mx-auto">
+                Every review is from a verified patient. No filters, no edits.
+              </p>
+            </div>
 
-            {/* Masonry-inspired staggered layout */}
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 max-w-6xl mx-auto space-y-5">
+            {/* Masonry layout */}
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 max-w-6xl mx-auto [column-fill:_balance]">
               {reviews.map((r, i) => (
                 <div
                   key={i}
-                  className={`break-inside-avoid rounded-2xl p-6 md:p-8 border transition-shadow hover:shadow-lg ${
+                  className={`break-inside-avoid mb-5 rounded-2xl border transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group ${
                     r.featured
-                      ? "bg-primary/5 border-primary/20"
-                      : "bg-background border-border"
+                      ? "bg-primary/[0.04] border-primary/20 p-8 md:p-10"
+                      : "bg-card border-border p-6 md:p-8"
                   }`}
                 >
-                  <Quote className={`w-8 h-8 mb-4 ${r.featured ? "text-primary/40" : "text-muted-foreground/20"}`} />
+                  <div className={`flex items-center gap-1 mb-4 ${r.featured ? "" : "opacity-70 group-hover:opacity-100 transition-opacity"}`}>
+                    <Stars size={r.featured ? "w-5 h-5" : "w-3.5 h-3.5"} />
+                  </div>
                   <p className={`font-body leading-relaxed mb-6 ${
-                    r.featured ? "text-lg md:text-xl text-foreground" : "text-sm text-foreground"
+                    r.featured ? "text-lg md:text-xl text-foreground font-medium" : "text-sm text-foreground/90"
                   }`}>
                     "{r.quote}"
                   </p>
-                  <div className="flex items-center gap-1.5">
-                    <Stars size="w-3.5 h-3.5" />
-                  </div>
-                  <div className="mt-3 text-xs font-sans">
-                    <span className="font-semibold text-foreground">{r.name}</span>
-                    {r.location && (
-                      <span className="text-muted-foreground inline-flex items-center gap-0.5 ml-1.5">
-                        <MapPin className="w-3 h-3" /> {r.location}
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-xs font-sans font-bold text-primary">{r.name.charAt(0)}</span>
+                    </div>
+                    <div className="text-xs font-sans">
+                      <span className="font-semibold text-foreground block">{r.name}</span>
+                      <span className="text-muted-foreground inline-flex items-center gap-1">
+                        {r.location && <><MapPin className="w-3 h-3" /> {r.location} ·</>} {r.source}
                       </span>
-                    )}
-                    <span className="text-muted-foreground ml-1.5">· {r.source}</span>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -226,19 +256,19 @@ const PatientTestimonials = () => {
         </section>
 
         {/* ─── INLINE CTA ─── */}
-        <section className="py-14 md:py-16 bg-gradient-to-r from-[hsl(var(--gradient-cta-start))] to-[hsl(var(--gradient-cta-end))]">
+        <section className="py-16 md:py-20 bg-gradient-to-r from-[hsl(var(--gradient-cta-start))] to-[hsl(var(--gradient-cta-end))]">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
-              Ready to become our next happy patient?
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              Ready to become our next<br className="hidden sm:block" /> happy patient?
             </h2>
-            <p className="font-body text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-              Join 5,000+ families who look forward to going to the dentist.
+            <p className="font-body text-primary-foreground/80 mb-10 max-w-xl mx-auto text-lg">
+              Join 5,000+ families who actually look forward to going to the dentist.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3.5 bg-background text-foreground font-sans font-semibold text-sm rounded-full hover:bg-background/90 transition-colors shadow-lg">
+              <a href={CYPRESS_BOOKING} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-background text-foreground font-sans font-semibold text-sm rounded-full hover:bg-background/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                 Book Your Visit <ArrowRight className="w-4 h-4" />
               </a>
-              <a href={`tel:${CYPRESS_PHONE}`} className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-primary-foreground/30 text-primary-foreground font-sans font-semibold text-sm rounded-full hover:bg-primary-foreground/10 transition-colors">
+              <a href={`tel:${CYPRESS_PHONE}`} className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary-foreground/30 text-primary-foreground font-sans font-semibold text-sm rounded-full hover:bg-primary-foreground/10 transition-colors">
                 Call {CYPRESS_PHONE_FORMATTED}
               </a>
             </div>
@@ -246,12 +276,14 @@ const PatientTestimonials = () => {
         </section>
 
         {/* ─── MORE VIDEO STORIES ─── */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="py-16 md:py-24 bg-card border-b border-border">
           <div className="container mx-auto px-4">
-            <p className="kicker text-center">MORE STORIES</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-              Watch more patient experiences
-            </h2>
+            <div className="text-center mb-12">
+              <p className="kicker">MORE STORIES</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+                Watch more patient experiences
+              </h2>
+            </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {remainingVideos.map((vid, i) => (
                 <LazyYouTube key={i} videoId={vid.youtubeId} title={vid.title} />
@@ -261,32 +293,38 @@ const PatientTestimonials = () => {
         </section>
 
         {/* ─── GOOGLE REVIEWS LIVE WIDGETS ─── */}
-        <section className="py-16 md:py-20 bg-card border-y border-border">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
-            <p className="kicker text-center">LIVE FROM GOOGLE</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-3">
-              See our latest reviews
-            </h2>
-            <p className="text-center text-sm font-sans text-muted-foreground mb-10">
-              Updated in real-time from our Google Business profiles
-            </p>
+            <div className="text-center mb-12">
+              <p className="kicker">LIVE FROM GOOGLE</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+                See our latest reviews
+              </h2>
+              <p className="text-sm font-sans text-muted-foreground">
+                Updated in real-time from our Google Business profiles
+              </p>
+            </div>
 
-            <div className="space-y-10 max-w-5xl mx-auto">
+            <div className="space-y-12 max-w-5xl mx-auto">
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center">Cypress Office</h3>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center flex items-center justify-center gap-2">
+                  <MapPin className="w-4 h-4 text-primary" /> Cypress Office
+                </h3>
                 <ReviewsWidget location="cypress" title="Cypress Google Reviews" />
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center">Katy Office</h3>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center flex items-center justify-center gap-2">
+                  <MapPin className="w-4 h-4 text-primary" /> Katy Office
+                </h3>
                 <ReviewsWidget location="katy" title="Katy Google Reviews" />
               </div>
             </div>
 
-            <div className="text-center mt-10 flex flex-wrap justify-center gap-3">
-              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-cypress" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-background text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:shadow-md transition-all">
+            <div className="text-center mt-12 flex flex-wrap justify-center gap-3">
+              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-cypress" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:shadow-md transition-all">
                 Review Cypress <ExternalLink className="w-3.5 h-3.5" />
               </a>
-              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-katy" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-background text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:shadow-md transition-all">
+              <a href="https://www.giveratings.com/smile-avenue-family-dentistry-katy" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border bg-card text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:shadow-md transition-all">
                 Review Katy <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -294,18 +332,18 @@ const PatientTestimonials = () => {
         </section>
 
         {/* ─── FINAL CTA ─── */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="py-20 md:py-28 bg-card border-t border-border">
           <div className="container mx-auto px-4 text-center max-w-2xl">
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-8">
               <Stars size="w-8 h-8" />
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-5">
               Your smile story starts here
             </h2>
-            <p className="font-body text-muted-foreground mb-8">
+            <p className="font-body text-muted-foreground mb-10 text-lg leading-relaxed">
               Whether it's been 6 months or 6 years, we make it easy to get back to the dentist — with zero judgment, ever.
             </p>
-            <Link to="/book-online" className="btn-primary inline-flex items-center gap-2 text-base px-8 py-4 rounded-full">
+            <Link to="/book-online" className="btn-primary inline-flex items-center gap-2 text-base px-10 py-4 rounded-full">
               Book Your First Visit <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
