@@ -313,9 +313,8 @@ const CypressTx = () => {
             </div>
           </div>
         </section>
-                <h3 className="font-display text-lg font-bold text-primary mb-3">How to Get Here</h3>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-                  From US-290, exit Fry Road and head south — we're about 1 mile down on the right, directly across from HEB. From Bridgeland or Towne Lake, take Fry Rd south past Bridgeland High School. From Fairfield or Cy-Fair, head north on Fry Rd from Clay Road.
+
+
                 </p>
                 <p className="text-xs font-sans text-muted-foreground mt-3">
                   <span className="font-medium text-foreground">Landmark:</span> Look for the HEB on Fry Road — we're across the street in the same shopping center as Salata. Free parking at our door.
