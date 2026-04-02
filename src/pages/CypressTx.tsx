@@ -19,7 +19,8 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import ScrollReveal from "@/components/ScrollReveal";
-import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
+import { OFFICE_IMAGES, PAGE_VIDEOS, CYPRESS_HERO_PHOTOS } from "@/lib/images";
+import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
 import LazyYouTube from "@/components/LazyYouTube";
 
 const CYPRESS_PHONE = "8326481756";

@@ -19,7 +19,8 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import ScrollReveal from "@/components/ScrollReveal";
-import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
+import { OFFICE_IMAGES, PAGE_VIDEOS, KATY_HERO_PHOTOS } from "@/lib/images";
+import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
 import LazyYouTube from "@/components/LazyYouTube";
 
 const KATY_PHONE = "2818005008";
