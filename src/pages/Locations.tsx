@@ -420,12 +420,12 @@ const Locations = () => {
             <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 lg:gap-8 items-start">
               {/* Left: Cards */}
               <div className="space-y-4 order-2 lg:order-1">
-                {locations.map((loc, idx) => (
+               {locations.map((loc, idx) => (
                   <LocationCard
                     key={loc.name}
                     loc={loc}
                     active={activeIdx === idx}
-                    onSelect={() => setActiveIdx(idx)}
+                    onSelect={() => setActiveIdx(activeIdx === idx ? null : idx)}
                   />
                 ))}
               </div>
