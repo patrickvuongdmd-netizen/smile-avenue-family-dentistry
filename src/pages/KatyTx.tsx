@@ -229,12 +229,92 @@ const KatyTx = () => {
               We're on Westheimer Parkway in Katy — minutes from LaCenterra at Cinco Ranch, near the Grand Parkway (99). Free parking right at our door.
             </p>
 
-            {/* Tend-style grid: Address+Hours+Map left/center, Amenities right */}
-            <div className="grid md:grid-cols-[1fr_1fr_auto] gap-x-8 gap-y-6 mt-10">
+            {/* Tend-style grid: Address | Hours+Map | Amenities */}
+            <div className="grid md:grid-cols-[1fr_1fr_auto] gap-x-8 gap-y-6 mt-10 items-start">
               {/* Address + Directions */}
               <div>
                 <h3 className="font-display text-lg font-bold text-primary mb-3">Address</h3>
                 <p className="text-sm font-sans text-foreground mb-1">23541 Westheimer Pkwy Ste #170</p>
+                <p className="text-sm font-sans text-foreground mb-5">Katy, TX 77494</p>
+
+                <h3 className="font-display text-lg font-bold text-primary mb-3">How to Get Here</h3>
+                <p className="text-sm font-sans text-muted-foreground leading-relaxed">
+                  From I-10, exit Grand Parkway (99) south and take Westheimer Parkway west — we're about 2 minutes ahead on the right. From Cinco Ranch or LaCenterra, head east on Cinco Ranch Blvd to Westheimer Pkwy. From Fulshear, take FM 1093 east to Westheimer Parkway.
+                </p>
+                <p className="text-xs font-sans text-muted-foreground mt-3">
+                  <span className="font-medium text-foreground">Landmark:</span> Look for the shopping center on the south side of Westheimer Pkwy between Grand Parkway (99) and Cinco Ranch Blvd — Suite #170 with free parking at our door.
+                </p>
+                <a
+                  href="https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/@29.732508,-95.775455,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-sans text-primary font-medium hover:underline mt-3 inline-block"
+                >
+                  Open in Google Maps →
+                </a>
+              </div>
+
+              {/* Hours + Map stacked */}
+              <div className="space-y-5">
+                <div>
+                  <h3 className="font-display text-lg font-bold text-primary mb-3">Hours</h3>
+                  <div className="space-y-2.5 text-sm font-sans">
+                    {[
+                      { day: "Monday:", time: "8:30 AM – 5:00 PM" },
+                      { day: "Tuesday:", time: "8:30 AM – 5:00 PM" },
+                      { day: "Wednesday:", time: "8:30 AM – 5:00 PM" },
+                      { day: "Thursday:", time: "8:30 AM – 5:00 PM" },
+                      { day: "Friday:", time: "8:30 AM – 5:00 PM" },
+                    ].map((h) => (
+                      <div key={h.day} className="flex justify-between text-foreground">
+                        <span className="font-medium">{h.day}</span>
+                        <span>{h.time}</span>
+                      </div>
+                    ))}
+                    <div className="flex justify-between text-foreground">
+                      <span className="font-medium">Saturday:</span>
+                      <span>8:00 AM – 2:00 PM</span>
+                    </div>
+                    <div className="flex justify-between text-muted-foreground">
+                      <span>Sunday</span>
+                      <span>Closed</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="rounded-xl overflow-hidden shadow-md border border-border">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
+                    className="w-full h-[180px] border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Smile Avenue Family Dentistry Katy office location on Google Maps"
+                  />
+                </div>
+              </div>
+
+              {/* Amenities */}
+              <div className="bg-sky-50 border border-sky-100 rounded-xl p-6">
+                <h3 className="font-display text-lg font-bold text-foreground mb-4">What to Expect</h3>
+                <ul className="space-y-2.5">
+                  {[
+                    "Netflix in every room",
+                    "Warm blankets & pillows",
+                    "Noise-canceling headphones",
+                    "Digital scans — no goopy molds",
+                    "In-house dental lab",
+                    "Same-day emergencies",
+                    "0% financing available",
+                    "Most PPO insurance accepted",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm font-sans text-foreground">
+                      <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
                 <p className="text-sm font-sans text-foreground mb-5">Katy, TX 77494</p>
 
                 <h3 className="font-display text-lg font-bold text-primary mb-3">How to Get Here</h3>
