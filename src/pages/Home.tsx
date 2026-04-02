@@ -343,7 +343,7 @@ const Home = () => {
               <div>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Blog</h2>
               </div>
-              <Link to="/blog" className="hidden sm:inline-flex items-center gap-2 btn-cta !text-sm !px-6 !py-3">
+              <Link to="/blog" className="hidden sm:inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary hover:underline">
                 View All Posts
                 <ArrowRight className="w-4 h-4" />
               </Link>
