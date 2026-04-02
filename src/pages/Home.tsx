@@ -90,14 +90,6 @@ const Home = () => {
   const [heroLoc, setHeroLoc] = useState<"cypress" | "katy">("cypress");
   const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  const pillCarouselRef = useRef<HTMLDivElement>(null);
-
-  const scrollCarousel = (dir: "left" | "right") => {
-    const el = pillCarouselRef.current;
-    if (!el) return;
-    const scrollAmount = el.clientWidth * 0.8;
-    el.scrollBy({ left: dir === "right" ? scrollAmount : -scrollAmount, behavior: "smooth" });
-  };
 
   const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
   const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
