@@ -20,6 +20,16 @@ const BLOG_CATEGORY_IMAGES: Record<string, string> = {
   Sedation: categorySedation,
   Preventive: categoryPreventive,
 };
+
+const BLOG_CATEGORY_COLORS: Record<string, { bg: string; badge: string; text: string }> = {
+  Implants: { bg: "bg-[hsl(192,40%,92%)]", badge: "bg-[hsl(192,72%,55%)]/15 text-[hsl(192,78%,33%)]", text: "text-[hsl(192,78%,33%)]" },
+  Cosmetic: { bg: "bg-[hsl(340,30%,93%)]", badge: "bg-[hsl(340,60%,60%)]/15 text-[hsl(340,60%,40%)]", text: "text-[hsl(340,60%,40%)]" },
+  Emergency: { bg: "bg-[hsl(20,40%,92%)]", badge: "bg-[hsl(20,80%,55%)]/15 text-[hsl(20,70%,38%)]", text: "text-[hsl(20,70%,38%)]" },
+  Invisalign: { bg: "bg-[hsl(160,30%,92%)]", badge: "bg-[hsl(160,50%,45%)]/15 text-[hsl(160,50%,32%)]", text: "text-[hsl(160,50%,32%)]" },
+  Pediatric: { bg: "bg-[hsl(45,50%,92%)]", badge: "bg-[hsl(45,70%,50%)]/15 text-[hsl(45,70%,32%)]", text: "text-[hsl(45,70%,32%)]" },
+  Sedation: { bg: "bg-[hsl(260,30%,93%)]", badge: "bg-[hsl(260,50%,60%)]/15 text-[hsl(260,50%,40%)]", text: "text-[hsl(260,50%,40%)]" },
+  Preventive: { bg: "bg-[hsl(140,30%,92%)]", badge: "bg-[hsl(140,45%,45%)]/15 text-[hsl(140,45%,30%)]", text: "text-[hsl(140,45%,30%)]" },
+};
 import { useRef, useState } from "react";
 
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
