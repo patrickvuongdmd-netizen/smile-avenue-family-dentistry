@@ -109,16 +109,6 @@ const familyFocused = [
 
 const allReviews = [...fearToComfort, ...theExperience, ...trustAndCare, ...familyFocused];
 
-const tickerQuotes = [
-  '"Best dental experience ever"',
-  '"My kids actually look forward to coming here"',
-  '"It feels like a spa, not a dentist"',
-  '"Zero judgment, all care"',
-  '"The Netflix on the ceiling is a game changer"',
-  '"My daughter now asks when her next appointment is"',
-  '"No surprises, no hidden costs"',
-  '"I drove 30 minutes past 3 other dentists"',
-];
 
 const PatientTestimonials = () => {
   useDocTitle("Patient Testimonials | Smile Avenue Family Dentistry");
