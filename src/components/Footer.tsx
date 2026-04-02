@@ -82,7 +82,7 @@ const Footer = () => {
             {/* Col 1 — About */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">All About Us</h4>
-              <div className="space-y-2.5 text-sm font-sans opacity-70">
+              <div className="space-y-2.5 text-sm font-sans opacity-80">
                 <Link to="/about" className="block hover:opacity-100 transition-opacity">About</Link>
                 <Link to="/our-team" className="block hover:opacity-100 transition-opacity">Dentists</Link>
                 <Link to="/faq" className="block hover:opacity-100 transition-opacity">FAQs</Link>
@@ -97,7 +97,7 @@ const Footer = () => {
             {/* Col 2 — Locations */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Locations</h4>
-              <div className="space-y-2.5 text-sm font-sans opacity-70">
+              <div className="space-y-2.5 text-sm font-sans opacity-80">
                 <Link to="/cypress-tx" className="block hover:opacity-100 transition-opacity">Cypress</Link>
                 <Link to="/katy-tx" className="block hover:opacity-100 transition-opacity">Katy</Link>
               </div>
@@ -106,7 +106,7 @@ const Footer = () => {
             {/* Col 3 — Services */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Services</h4>
-              <div className="space-y-0.5 text-sm font-sans opacity-70">
+              <div className="space-y-0.5 text-sm font-sans opacity-80">
                 {footerServices.map((s) => (
                   <div key={s.label}>
                     {s.slug ? (
@@ -137,30 +137,30 @@ const Footer = () => {
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Questions?</h4>
 
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-1.5">Cypress</p>
-              <div className="space-y-1 text-sm font-sans opacity-70 mb-5">
+              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-1.5">Cypress</p>
+              <div className="space-y-1 text-sm font-sans opacity-80 mb-5">
                 <a href="tel:8326481756" className="block hover:opacity-100 transition-opacity">(832) 648-1756</a>
                 <a href="mailto:info@smileavenuecypress.com" className="block hover:opacity-100 transition-opacity">info@smileavenuecypress.com</a>
               </div>
 
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-1.5">Katy</p>
-              <div className="space-y-1 text-sm font-sans opacity-70 mb-5">
+              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-1.5">Katy</p>
+              <div className="space-y-1 text-sm font-sans opacity-80 mb-5">
                 <a href="tel:2818005008" className="block hover:opacity-100 transition-opacity">(281) 800-5008</a>
                 <a href="mailto:info@smileavenuekaty.com" className="block hover:opacity-100 transition-opacity">info@smileavenuekaty.com</a>
               </div>
 
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-50 mb-2">Social</p>
+              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-2">Social</p>
               <div className="flex items-center gap-3">
-                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Facebook">
+                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Facebook">
                   <Facebook className="w-4 h-4" />
                 </a>
-                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Instagram">
+                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram">
                   <Instagram className="w-4 h-4" />
                 </a>
-                <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="TikTok">
+                <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="TikTok">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.21 8.21 0 004.76 1.52V7.06a4.84 4.84 0 01-1-.37z"/></svg>
                 </a>
-                <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Google Business Profile">
+                <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Google Business Profile">
                   <Globe className="w-4 h-4" />
                 </a>
               </div>
@@ -168,7 +168,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom bar */}
-          <div className="border-t border-background/10 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans opacity-50">
+          <div className="border-t border-background/10 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans opacity-60">
             <div className="flex flex-wrap gap-4">
               <Link to="/privacy-policy" className="hover:opacity-100 transition-opacity">Privacy Policy</Link>
               <Link to="/sitemap" className="hover:opacity-100 transition-opacity">Sitemap</Link>
