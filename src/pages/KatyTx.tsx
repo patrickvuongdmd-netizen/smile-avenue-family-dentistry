@@ -10,7 +10,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
-import BeforeAfterCard from "@/components/BeforeAfterCard";
+
 import DoctorCard from "@/components/DoctorCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import TrustStrip from "@/components/TrustStrip";
