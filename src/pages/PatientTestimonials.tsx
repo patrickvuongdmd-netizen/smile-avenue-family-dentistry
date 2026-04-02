@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, ExternalLink, MapPin, ArrowRight, Heart, Shield, Sparkles, Users, Phone } from "lucide-react";
+import { Star, ExternalLink, MapPin, ArrowRight, Phone } from "lucide-react";
 import LazyYouTube from "@/components/LazyYouTube";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -13,9 +13,8 @@ import SkipToContent from "@/components/SkipToContent";
 import ReviewsWidget from "@/components/ReviewsWidget";
 import ScrollReveal from "@/components/ScrollReveal";
 import { VIDEO_TESTIMONIALS, OFFICE_IMAGES } from "@/lib/images";
-import PatientStorySection from "@/components/testimonials/PatientStorySection";
-import FullWidthQuote from "@/components/testimonials/FullWidthQuote";
 import TestimonialsHero from "@/components/testimonials/TestimonialsHero";
+import TendStyleCarousel from "@/components/testimonials/TendStyleCarousel";
 
 
 const CYPRESS_PHONE = "8326481756";
