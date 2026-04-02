@@ -147,6 +147,14 @@ export const BRAND_SERVICES: Record<string, BrandServiceData> = {
       { question: "Can I get a dental implant the same day a tooth is extracted?", answer: "In some cases, yes. Immediate implant placement can be done when conditions are favorable, reducing treatment time." },
     ],
     relatedSlugs: ["all-on-x-implants", "dental-crowns", "dental-bridges", "oral-surgery"],
+    crossLinks: [
+      { text: "All-on-X Full Arch Implants", slug: "all-on-x-implants" },
+      { text: "Dental Bridges", slug: "dental-bridges" },
+      { text: "Dentures", slug: "dentures" },
+    ],
+    procedureType: "https://schema.org/SurgicalProcedure",
+    howPerformed: "A titanium post is surgically placed into the jawbone, allowed to integrate over 3-6 months, then topped with a custom crown.",
+    bodyLocation: "Jawbone",
   },
 
   "cosmetic-dentistry": {
