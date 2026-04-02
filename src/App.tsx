@@ -241,6 +241,16 @@ const App = () => (
               <Route path="/services/sedation-dentistry" element={<BrandSedationDentistry />} />
               <Route path="/services/preventive-dentistry" element={<BrandPreventiveDentistry />} />
               <Route path="/services/family-dental-care" element={<BrandFamilyDentalCare />} />
+              <Route path="/services/dental-implants-vs-dentures" element={<ImplantsVsDentures />} />
+              <Route path="/services/invisalign-vs-braces" element={<InvisalignVsBraces />} />
+              <Route path="/services/veneers-vs-crowns" element={<VeneersVsCrowns />} />
+              <Route path="/services/crowns-vs-bridges" element={<CrownsVsBridges />} />
+              <Route path="/services/dental-implants-vs-bridges" element={<ImplantsVsBridges />} />
+              <Route path="/services/whitening-vs-veneers" element={<WhiteningVsVeneers />} />
+              <Route path="/services/preventive" element={<CategoryPreventive />} />
+              <Route path="/services/cosmetic" element={<CategoryCosmetic />} />
+              <Route path="/services/restorative" element={<CategoryRestorative />} />
+              <Route path="/services/surgical" element={<CategorySurgical />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/es" element={<Espanol />} />
               {/* Google Ads Landing Pages */}
