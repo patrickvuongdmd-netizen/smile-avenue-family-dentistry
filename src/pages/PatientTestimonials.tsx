@@ -15,7 +15,7 @@ import { VIDEO_TESTIMONIALS } from "@/lib/images";
 import PatientStorySection from "@/components/testimonials/PatientStorySection";
 import FullWidthQuote from "@/components/testimonials/FullWidthQuote";
 import TestimonialsHero from "@/components/testimonials/TestimonialsHero";
-import ThemeStoryGrid from "@/components/testimonials/ThemeStoryGrid";
+
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
