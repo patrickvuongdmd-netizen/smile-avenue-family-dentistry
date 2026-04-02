@@ -486,37 +486,6 @@ const Locations = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA Banner */}
-        <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Care at Smile Avenue isn't just gentle,{" "}
-              <span className="italic">it's genuine.</span>
-            </h2>
-            <p className="text-primary-foreground/70 font-sans max-w-xl mx-auto mb-10 text-lg">
-              New patients welcome. Online booking takes 60 seconds.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={CYPRESS_BOOKING}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-background text-foreground font-sans font-semibold text-sm hover:bg-background/90 transition-colors shadow-md"
-              >
-                Book at Cypress
-              </a>
-              <a
-                href={KATY_BOOKING}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-background text-foreground font-sans font-semibold text-sm hover:bg-background/90 transition-colors shadow-md"
-              >
-                Book at Katy
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
