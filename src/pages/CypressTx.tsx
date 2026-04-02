@@ -407,7 +407,8 @@ const CypressTx = () => {
             </Link>
           </div>
         </section>
-
+          </div>
+        </section>
 
         {/* INSURANCE LOGOS */}
         <InsuranceLogoBar />
