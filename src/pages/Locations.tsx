@@ -127,8 +127,8 @@ const LocationCard = ({
           : "hover:bg-muted/20"
       }`}
     >
-      {/* Row 1: Status + Hours · Stars + Book Now */}
-      <div className="flex items-center justify-between gap-3 mb-3">
+      {/* Row 1: Status + Hours */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 mb-3">
         <span
           className={`inline-flex items-center gap-1.5 text-xs font-sans font-medium ${
             status.isOpen ? "text-emerald-600" : "text-red-500"
