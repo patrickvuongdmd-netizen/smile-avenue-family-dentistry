@@ -194,7 +194,114 @@ const CypressTx = () => {
         </section>
 
 
-        {/* FIND US — Tend-style: info grid first, map below */}
+        {/* REVIEWS — moved up for early social proof */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WHAT CYPRESS FAMILIES ARE SAYING</p>
+            <h2 className="section-heading">Real Reviews from Cypress Patients</h2>
+            <div className="inline-flex items-center gap-2 mb-10 text-sm font-sans font-semibold text-foreground bg-muted px-4 py-2 rounded-full">
+              ⭐ 4.9 RATING · 300+ GOOGLE REVIEWS
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 text-left">
+              {testimonials.map((t) => (
+                <TestimonialCard key={t.name} {...t} />
+              ))}
+            </div>
+            <Link to="/patient-testimonials" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+              Read More Cypress Reviews →
+            </Link>
+          </div>
+        </section>
+
+        {/* VIDEO — brand moment after social proof */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WATCH & LEARN</p>
+            <h2 className="section-heading">Welcome to Smile Avenue Cypress</h2>
+            <div className="max-w-2xl mx-auto mt-8">
+              <LazyYouTube videoId={PAGE_VIDEOS.cypressIntro.youtubeId} title={PAGE_VIDEOS.cypressIntro.title} />
+            </div>
+          </div>
+        </section>
+
+        {/* MEET OUR DOCTORS */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">YOUR CYPRESS DENTAL TEAM</p>
+            <h2 className="section-heading">Meet Your Cypress Dentists</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              Our Cypress team brings decades of combined experience in family, cosmetic, and implant dentistry. Every doctor takes time to listen and build a treatment plan around your goals — never a billing code.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+              {doctors.map((doc) => (
+                <DoctorCard key={doc.name} {...doc} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">DENTAL SERVICES IN CYPRESS, TX</p>
+            <h2 className="section-heading">Complete Family & Cosmetic Dentistry on Fry Road</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              From your child's first cleaning to your smile makeover, Smile Avenue Cypress offers every dental service your family needs — no referrals, no runaround. Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> means faster, more precise results.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
+              {services.map((svc) => (
+                <ServiceCard key={svc.title} {...svc} />
+              ))}
+            </div>
+            <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+              View All 17 Cypress Services →
+            </Link>
+          </div>
+        </section>
+
+        {/* PAYMENT MADE EASY — consolidated insurance, membership, financing */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">AFFORDABLE DENTAL CARE IN CYPRESS</p>
+            <h2 className="section-heading">Payment Made Easy</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              Don't let cost keep you from the dentist. Between insurance, our membership plan, and 0% financing — we'll find a way to make it work.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
+              <div className="bg-card rounded-xl p-6 border border-border">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Insurance Accepted</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept Aetna, BCBS, Cigna, Delta Dental, MetLife, United Healthcare, Guardian, Humana, and more. We verify your benefits before your visit — no surprise bills.</p>
+                <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
+              </div>
+              <div className="bg-card rounded-xl p-6 border border-border">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">No Insurance? Join Our Membership</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Our in-house membership plan covers cleanings, exams, X-rays, and gives you 20% off all treatment. No deductibles, no waiting periods.</p>
+                <Link to="/membership-plan" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
+              </div>
+              <div className="bg-card rounded-xl p-6 border border-border">
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">0% Dental Financing</h3>
+                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Spread the cost with CareCredit or Sunbit — apply in minutes, get approved instantly, and pay monthly with 0% interest options.</p>
+                <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
+              <div>
+                <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 className="section-heading">Cypress Dental FAQs</h2>
+                <p className="section-body">Have more questions about our Cypress office? Call <a href={`tel:${CYPRESS_PHONE}`} className="text-primary hover:underline">{CYPRESS_PHONE_FORMATTED}</a>.</p>
+              </div>
+              <FaqAccordion items={faqs} />
+            </div>
+          </div>
+        </section>
+
+        {/* FIND US — moved lower in flow */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker">VISIT OUR CYPRESS OFFICE</p>
@@ -203,7 +310,6 @@ const CypressTx = () => {
               We're on Fry Road in Cypress — directly across from HEB, near Bridgeland High School and the Berry Center. Free parking right at our door.
             </p>
 
-            {/* Tend-style grid: Address | Hours+Map | Amenities */}
             <div className="grid md:grid-cols-[1fr_1fr_auto] gap-x-8 gap-y-6 mt-10 items-start">
               {/* Address + Directions */}
               <div>
@@ -288,152 +394,8 @@ const CypressTx = () => {
           </div>
         </section>
 
-
-        <ScrollReveal>
-        <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto">
-              <p className="kicker">ABOUT OUR CYPRESS DENTAL OFFICE</p>
-              <h2 className="section-heading">Why Cypress, TX Families Choose Smile Avenue on Fry Road</h2>
-              <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
-                <p>
-                  Cypress, Texas has grown into one of the most sought-after family communities in the greater Houston area — and Smile Avenue has grown with it. Located at 9212 Fry Rd #120, directly across from the HEB on Fry Road and just south of the Jones Road intersection, our Cypress office is central to the neighborhoods that define Northwest Harris County.
-                </p>
-                <p>
-                  We serve families throughout the Fry Road corridor including <Link to="/cypress-tx/bridgeland-dentist" className="text-primary hover:underline">Bridgeland</Link>, <Link to="/cypress-tx/towne-lake-dentist" className="text-primary hover:underline">Towne Lake</Link>, <Link to="/cypress-tx/fairfield-dentist" className="text-primary hover:underline">Fairfield</Link>, <Link to="/cypress-tx/cyfair-dentist" className="text-primary hover:underline">Cy-Fair</Link>, <Link to="/cypress-tx/jersey-village-dentist" className="text-primary hover:underline">Jersey Village</Link>, and the Spring Cypress communities. Whether your kids attend CFISD schools or you commute along US-290, our central Fry Road location puts quality dental care within a 10-minute drive of most Cypress neighborhoods.
-                </p>
-                <p>
-                  What sets us apart from other dentists in Cypress? Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> means we fabricate <Link to="/cypress-tx/dental-crowns" className="text-primary hover:underline">crowns</Link>, <Link to="/cypress-tx/veneers" className="text-primary hover:underline">veneers</Link>, and clear aligners on-site — delivering faster turnaround and more precise results than practices that outsource. Combine that with Netflix in every treatment room, warm blankets, noise-canceling headphones, and a team of five experienced dentists, and you get a dental experience that 300+ five-star Google reviewers describe as "the best dentist I've ever been to."
-                </p>
-              </div>
-              {/* Local landmark badges */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
-                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-xs font-sans font-semibold text-foreground">Across from HEB on Fry Rd</span>
-                </div>
-                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
-                  <Building className="w-5 h-5 text-primary" />
-                  <span className="text-xs font-sans font-semibold text-foreground">Near Berry Center & Cypress Creek</span>
-                </div>
-                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                  <span className="text-xs font-sans font-semibold text-foreground">Serving CFISD Families</span>
-                </div>
-                <div className="flex flex-col items-center text-center gap-2 p-4 bg-card rounded-xl border border-border">
-                  <TreePine className="w-5 h-5 text-primary" />
-                  <span className="text-xs font-sans font-semibold text-foreground">10 Min from Towne Lake & Bridgeland</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        </ScrollReveal>
-
-        {/* MEET OUR DOCTORS */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">YOUR CYPRESS DENTAL TEAM</p>
-            <h2 className="section-heading">Meet Your Cypress Dentists</h2>
-            <p className="section-body max-w-2xl mx-auto">
-              Our Cypress team brings decades of combined experience in family, cosmetic, and implant dentistry. Every doctor takes time to listen and build a treatment plan around your goals — never a billing code.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
-              {doctors.map((doc) => (
-                <DoctorCard key={doc.name} {...doc} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICES */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto text-center">
-            <p className="kicker">DENTAL SERVICES IN CYPRESS, TX</p>
-            <h2 className="section-heading">Complete Family & Cosmetic Dentistry on Fry Road</h2>
-            <p className="section-body max-w-2xl mx-auto">
-              From your child's first cleaning to your smile makeover, Smile Avenue Cypress offers every dental service your family needs — no referrals, no runaround. Our <Link to="/dental-lab" className="text-primary hover:underline">in-house dental lab</Link> means faster, more precise results.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 text-left">
-              {services.map((svc) => (
-                <ServiceCard key={svc.title} {...svc} />
-              ))}
-            </div>
-            <Link to="/services" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-              View All 17 Cypress Services →
-            </Link>
-          </div>
-        </section>
-
-        {/* REVIEWS */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto text-center">
-            <p className="kicker">WHAT CYPRESS FAMILIES ARE SAYING</p>
-            <h2 className="section-heading">Real Reviews from Cypress Patients</h2>
-            <div className="inline-flex items-center gap-2 mb-10 text-sm font-sans font-semibold text-foreground bg-muted px-4 py-2 rounded-full">
-              ⭐ 4.9 RATING · 300+ GOOGLE REVIEWS
-            </div>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
-              {testimonials.map((t) => (
-                <TestimonialCard key={t.name} {...t} />
-              ))}
-            </div>
-            <Link to="/patient-testimonials" className="inline-flex items-center gap-2 mt-10 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-              Read More Cypress Reviews →
-            </Link>
-          </div>
-        </section>
-
-        {/* INSURANCE LOGOS */}
-        <InsuranceLogoBar />
-
-        {/* FREE CONSULTATION */}
-        <FreeConsultationBanner />
-
-        {/* FINANCING OPTIONS */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">AFFORDABLE DENTAL CARE IN CYPRESS</p>
-            <h2 className="section-heading">Flexible Payment Options for Cypress Families</h2>
-            <p className="section-body max-w-2xl mx-auto">
-              Don't let cost keep you from the dentist. Between insurance, our membership plan, and 0% financing — we'll find a way to make it work.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
-              <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Insurance Accepted</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">We accept Aetna, BCBS, Cigna, Delta Dental, MetLife, United Healthcare, Guardian, Humana, and more. We verify your benefits before your visit — no surprise bills.</p>
-                <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Verify Your Coverage →</Link>
-              </div>
-              <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">No Insurance? Join Our Membership</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Our in-house membership plan covers cleanings, exams, X-rays, and gives you 20% off all treatment. No deductibles, no waiting periods.</p>
-                <Link to="/membership-plan" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Join the Membership →</Link>
-              </div>
-              <div className="bg-card rounded-xl p-6 border border-border">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">0% Dental Financing</h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">Spread the cost with CareCredit or Sunbit — apply in minutes, get approved instantly, and pay monthly with 0% interest options.</p>
-                <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
-              <div>
-                <p className="kicker">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading">Cypress Dental FAQs</h2>
-                <p className="section-body">Have more questions about our Cypress office? Call <a href={`tel:${CYPRESS_PHONE}`} className="text-primary hover:underline">{CYPRESS_PHONE_FORMATTED}</a>.</p>
-              </div>
-              <FaqAccordion items={faqs} />
-            </div>
-          </div>
-        </section>
-
         {/* NEIGHBORHOODS WE SERVE */}
-        <section className="section-padding bg-background">
+        <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
             <p className="kicker">NEARBY COMMUNITIES</p>
             <h2 className="section-heading">Neighborhoods We Serve in Cypress</h2>
@@ -455,7 +417,7 @@ const CypressTx = () => {
         </section>
 
         {/* CROSS-LINK KATY */}
-        <section className="section-padding section-alt">
+        <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
             <h3 className="font-display text-2xl font-bold text-foreground mb-3">Also Serving Katy, TX</h3>
             <p className="text-sm font-body text-muted-foreground mb-6">Smile Avenue also has a location in Katy for your convenience.</p>
@@ -471,19 +433,6 @@ const CypressTx = () => {
               <Link to="/katy-tx" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
                 Visit Katy Page →
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* FINAL CTA */}
-
-        {/* Video */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">WATCH & LEARN</p>
-            <h2 className="section-heading">Welcome to Smile Avenue Cypress</h2>
-            <div className="max-w-2xl mx-auto mt-8">
-              <LazyYouTube videoId={PAGE_VIDEOS.cypressIntro.youtubeId} title={PAGE_VIDEOS.cypressIntro.title} />
             </div>
           </div>
         </section>
