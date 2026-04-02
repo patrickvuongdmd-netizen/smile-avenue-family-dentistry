@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -164,6 +164,7 @@ const App = () => (
               <Route path="/katy-tx/westheimer-parkway-dentist" element={<WestheimerParkwayDentist />} />
               <Route path="/katy-tx/fulshear-dentist" element={<FulshearDentist />} />
               <Route path="/convenient-locations" element={<Locations />} />
+              <Route path="/locations" element={<Navigate to="/convenient-locations" replace />} />
               <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
               <Route path="/doctors" element={<Doctors />} />
               <Route path="/doctors/patrick-vuong-dmd" element={<DrPatrickVuong />} />
