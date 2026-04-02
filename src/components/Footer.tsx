@@ -36,8 +36,8 @@ const Footer = () => {
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-foreground/10" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 md:pt-24">
-          <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-14 md:px-16 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-16">
+          <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-10 md:px-16 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8">
             <h2 className="font-display text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-medium leading-[1.15] text-center md:text-left max-w-lg text-muted-foreground">
               Care at Smile Avenue isn't just gentle,{" "}
               <span className="text-foreground font-semibold">it's genuine.</span>
