@@ -50,6 +50,12 @@
 
 ## Important Pages
 
+### Service Category Hubs
+- Preventive & General: https://www.smileavenuefamilydentistry.com/services/preventive/
+- Cosmetic & Aesthetic: https://www.smileavenuefamilydentistry.com/services/cosmetic/
+- Restorative & Advanced: https://www.smileavenuefamilydentistry.com/services/restorative/
+- Surgical & Periodontal: https://www.smileavenuefamilydentistry.com/services/surgical/
+
 ### Brand-Global Service Pages (Educational Authority)
 - Emergency Dentistry: https://www.smileavenuefamilydentistry.com/services/emergency-dentist/
 - Dental Implants: https://www.smileavenuefamilydentistry.com/services/dental-implants/
@@ -69,6 +75,14 @@
 - Sedation Dentistry: https://www.smileavenuefamilydentistry.com/services/sedation-dentistry/
 - Preventive Dentistry: https://www.smileavenuefamilydentistry.com/services/preventive-dentistry/
 - Family Dental Care: https://www.smileavenuefamilydentistry.com/services/family-dental-care/
+
+### Treatment Comparison Guides
+- Dental Implants vs Dentures: https://www.smileavenuefamilydentistry.com/services/dental-implants-vs-dentures/
+- Invisalign vs Braces: https://www.smileavenuefamilydentistry.com/services/invisalign-vs-braces/
+- Veneers vs Crowns: https://www.smileavenuefamilydentistry.com/services/veneers-vs-crowns/
+- Crowns vs Bridges: https://www.smileavenuefamilydentistry.com/services/crowns-vs-bridges/
+- Dental Implants vs Bridges: https://www.smileavenuefamilydentistry.com/services/dental-implants-vs-bridges/
+- Whitening vs Veneers: https://www.smileavenuefamilydentistry.com/services/whitening-vs-veneers/
 
 ### Geo-Targeted Service Pages (Cypress)
 - Dental Implants: https://www.smileavenuefamilydentistry.com/cypress-tx/dental-implants/

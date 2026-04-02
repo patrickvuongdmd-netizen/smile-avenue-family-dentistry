@@ -48,6 +48,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
 
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
 
+  // DentalService schema
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService",
@@ -60,6 +61,48 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
       url: "https://www.smileavenuefamilydentistry.com",
     },
   };
+
+  // MedicalProcedure schema (when procedure info is available)
+  const medicalProcedureJsonLd = data.procedureType ? {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name: data.serviceName,
+    description: data.metaDescription,
+    url: canonicalUrl,
+    procedureType: data.procedureType,
+    ...(data.howPerformed && { howPerformed: data.howPerformed }),
+    ...(data.bodyLocation && { bodyLocation: data.bodyLocation }),
+    status: "https://schema.org/EventScheduled",
+  } : null;
+
+  // HowTo schema from process steps
+  const howToJsonLd = data.processSteps.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: data.processHeading,
+    description: `Step-by-step guide to the ${data.serviceName.toLowerCase()} process at Smile Avenue Family Dentistry.`,
+    step: data.processSteps.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.title,
+      text: step.description,
+    })),
+  } : null;
+
+  // VideoObject schema for embedded videos
+  const serviceVideos = SERVICE_VIDEOS[data.serviceSlug];
+  const videoObjectsJsonLd = serviceVideos && serviceVideos.length > 0
+    ? serviceVideos.map((v) => ({
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: v.title,
+        description: `${v.title} — ${data.serviceName} at Smile Avenue Family Dentistry`,
+        thumbnailUrl: `https://img.youtube.com/vi/${v.youtubeId}/maxresdefault.jpg`,
+        uploadDate: "2024-01-01",
+        contentUrl: `https://www.youtube.com/watch?v=${v.youtubeId}`,
+        embedUrl: `https://www.youtube.com/embed/${v.youtubeId}`,
+      }))
+    : null;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -96,6 +139,9 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         {heroImage && <meta property="og:image" content={heroImage.url} />}
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        {medicalProcedureJsonLd && <script type="application/ld+json">{JSON.stringify(medicalProcedureJsonLd)}</script>}
+        {howToJsonLd && <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>}
+        {videoObjectsJsonLd && <script type="application/ld+json">{JSON.stringify(videoObjectsJsonLd)}</script>}
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
@@ -162,6 +208,21 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
                   <p key={i}>{p}</p>
                 ))}
               </div>
+              {/* Contextual Cross-Links */}
+              {data.crossLinks && data.crossLinks.length > 0 && (
+                <p className="mt-6 font-body text-base text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Related services:</span>{" "}
+                  {data.crossLinks.map((link, i) => (
+                    <span key={link.slug}>
+                      <Link to={`/services/${link.slug}`} className="text-primary hover:underline font-semibold">
+                        {link.text}
+                      </Link>
+                      {i < data.crossLinks!.length - 1 && (i === data.crossLinks!.length - 2 ? ", and " : ", ")}
+                    </span>
+                  ))}
+                  .
+                </p>
+              )}
             </div>
           </div>
         </section>
@@ -200,7 +261,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         </section>
 
         {/* VIDEO CAROUSEL */}
-        {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
+        {serviceVideos && serviceVideos.length > 0 && (
           <section className="section-padding bg-background">
             <div className="container mx-auto text-center">
               <p className="kicker">SEE IT IN ACTION</p>
@@ -209,7 +270,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
                 See how our team delivers exceptional {data.serviceName.toLowerCase()} care — from consultation to final results.
               </p>
               <div className="mt-8">
-                <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
+                <VideoCarousel videos={serviceVideos} />
               </div>
             </div>
           </section>
@@ -231,7 +292,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
           </div>
         </section>
 
-        {/* FIND THIS SERVICE NEAR YOU — Two Location Cards */}
+        {/* FIND THIS SERVICE NEAR YOU */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">FIND THIS SERVICE NEAR YOU</p>

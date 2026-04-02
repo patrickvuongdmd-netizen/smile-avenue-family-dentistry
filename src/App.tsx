@@ -106,6 +106,20 @@ const BrandSedationDentistry = lazy(() => import("./pages/services/SedationDenti
 const BrandPreventiveDentistry = lazy(() => import("./pages/services/PreventiveDentistry.tsx"));
 const BrandFamilyDentalCare = lazy(() => import("./pages/services/FamilyDentalCare.tsx"));
 
+// Comparison Pages
+const ImplantsVsDentures = lazy(() => import("./pages/services/ImplantsVsDentures.tsx"));
+const InvisalignVsBraces = lazy(() => import("./pages/services/InvisalignVsBraces.tsx"));
+const VeneersVsCrowns = lazy(() => import("./pages/services/VeneersVsCrowns.tsx"));
+const CrownsVsBridges = lazy(() => import("./pages/services/CrownsVsBridges.tsx"));
+const ImplantsVsBridges = lazy(() => import("./pages/services/ImplantsVsBridges.tsx"));
+const WhiteningVsVeneers = lazy(() => import("./pages/services/WhiteningVsVeneers.tsx"));
+
+// Category Landing Pages
+const CategoryPreventive = lazy(() => import("./pages/services/Preventive.tsx"));
+const CategoryCosmetic = lazy(() => import("./pages/services/Cosmetic.tsx"));
+const CategoryRestorative = lazy(() => import("./pages/services/Restorative.tsx"));
+const CategorySurgical = lazy(() => import("./pages/services/Surgical.tsx"));
+
 // Google Ads Landing Pages
 const CypressNewPatientLP = lazy(() => import("./pages/cypress/lp/NewPatient.tsx"));
 const CypressEmergencyLP = lazy(() => import("./pages/cypress/lp/EmergencyDentist.tsx"));
@@ -227,6 +241,16 @@ const App = () => (
               <Route path="/services/sedation-dentistry" element={<BrandSedationDentistry />} />
               <Route path="/services/preventive-dentistry" element={<BrandPreventiveDentistry />} />
               <Route path="/services/family-dental-care" element={<BrandFamilyDentalCare />} />
+              <Route path="/services/dental-implants-vs-dentures" element={<ImplantsVsDentures />} />
+              <Route path="/services/invisalign-vs-braces" element={<InvisalignVsBraces />} />
+              <Route path="/services/veneers-vs-crowns" element={<VeneersVsCrowns />} />
+              <Route path="/services/crowns-vs-bridges" element={<CrownsVsBridges />} />
+              <Route path="/services/dental-implants-vs-bridges" element={<ImplantsVsBridges />} />
+              <Route path="/services/whitening-vs-veneers" element={<WhiteningVsVeneers />} />
+              <Route path="/services/preventive" element={<CategoryPreventive />} />
+              <Route path="/services/cosmetic" element={<CategoryCosmetic />} />
+              <Route path="/services/restorative" element={<CategoryRestorative />} />
+              <Route path="/services/surgical" element={<CategorySurgical />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/es" element={<Espanol />} />
               {/* Google Ads Landing Pages */}

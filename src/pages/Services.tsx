@@ -90,6 +90,51 @@ const Services = () => {
             <p className="section-body max-w-2xl mx-auto">
               From your child's first checkup to a complete smile makeover, Smile Avenue offers the full spectrum of modern dental care — all under one roof.
             </p>
+            <div className="flex flex-wrap justify-center gap-3 mt-6">
+              <Link to="/services/preventive" className="px-4 py-2 rounded-full bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Preventive & General
+              </Link>
+              <Link to="/services/cosmetic" className="px-4 py-2 rounded-full bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Cosmetic & Aesthetic
+              </Link>
+              <Link to="/services/restorative" className="px-4 py-2 rounded-full bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Restorative & Advanced
+              </Link>
+              <Link to="/services/surgical" className="px-4 py-2 rounded-full bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Surgical & Periodontal
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* COMPARISON GUIDES */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center">
+            <p className="kicker">COMPARISON GUIDES</p>
+            <h2 className="section-heading text-2xl md:text-3xl mb-4">Not Sure Which Treatment Is Right?</h2>
+            <p className="section-body max-w-2xl mx-auto mb-8">
+              Our side-by-side comparison guides help you understand the differences between similar treatments.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link to="/services/dental-implants-vs-dentures" className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Implants vs Dentures
+              </Link>
+              <Link to="/services/invisalign-vs-braces" className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Invisalign vs Braces
+              </Link>
+              <Link to="/services/veneers-vs-crowns" className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Veneers vs Crowns
+              </Link>
+              <Link to="/services/crowns-vs-bridges" className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Crowns vs Bridges
+              </Link>
+              <Link to="/services/dental-implants-vs-bridges" className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Implants vs Bridges
+              </Link>
+              <Link to="/services/whitening-vs-veneers" className="px-5 py-3 rounded-xl bg-card border border-border text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary transition-all">
+                Whitening vs Veneers
+              </Link>
+            </div>
           </div>
         </section>
 

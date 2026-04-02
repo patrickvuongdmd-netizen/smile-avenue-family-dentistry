@@ -12,6 +12,11 @@ export interface BrandServiceProcess {
   description: string;
 }
 
+export interface BrandServiceCrossLink {
+  text: string;
+  slug: string;
+}
+
 export interface BrandServiceData {
   serviceSlug: string;
   serviceName: string;
@@ -23,6 +28,7 @@ export interface BrandServiceData {
   introKicker: string;
   introHeading: string;
   introParas: string[];
+  crossLinks?: BrandServiceCrossLink[];
   whyHeading: string;
   whyPoints: { title: string; description: string }[];
   processHeading: string;
@@ -30,6 +36,9 @@ export interface BrandServiceData {
   faqHeading: string;
   faqs: BrandServiceFaq[];
   relatedSlugs: string[];
+  procedureType?: string;
+  howPerformed?: string;
+  bodyLocation?: string;
 }
 
 // Map slug → display name for related services
@@ -92,6 +101,13 @@ export const BRAND_SERVICES: Record<string, BrandServiceData> = {
       { question: "Do you accept walk-ins for emergencies?", answer: "Call ahead for the fastest service, but we never turn away genuine emergencies." },
     ],
     relatedSlugs: ["root-canal", "tooth-extraction", "dental-crowns", "sedation-dentistry"],
+    crossLinks: [
+      { text: "Root Canal Therapy", slug: "root-canal" },
+      { text: "Tooth Extraction", slug: "tooth-extraction" },
+      { text: "Sedation Dentistry", slug: "sedation-dentistry" },
+    ],
+    procedureType: "https://schema.org/NoninvasiveProcedure",
+    bodyLocation: "Mouth",
   },
 
   "dental-implants": {
@@ -131,6 +147,14 @@ export const BRAND_SERVICES: Record<string, BrandServiceData> = {
       { question: "Can I get a dental implant the same day a tooth is extracted?", answer: "In some cases, yes. Immediate implant placement can be done when conditions are favorable, reducing treatment time." },
     ],
     relatedSlugs: ["all-on-x-implants", "dental-crowns", "dental-bridges", "oral-surgery"],
+    crossLinks: [
+      { text: "All-on-X Full Arch Implants", slug: "all-on-x-implants" },
+      { text: "Dental Bridges", slug: "dental-bridges" },
+      { text: "Dentures", slug: "dentures" },
+    ],
+    procedureType: "https://schema.org/SurgicalProcedure",
+    howPerformed: "A titanium post is surgically placed into the jawbone, allowed to integrate over 3-6 months, then topped with a custom crown.",
+    bodyLocation: "Jawbone",
   },
 
   "cosmetic-dentistry": {
