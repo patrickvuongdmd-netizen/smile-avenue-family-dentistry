@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, Building, GraduationCap, ShoppingBag, ChevronRight } from "lucide-react";
+import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, Building, GraduationCap, ShoppingBag, ChevronRight, Navigation } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -241,7 +241,26 @@ const KatyTx = () => {
                 />
               </div>
 
-              {/* Hours + Amenities */}
+              {/* How to Get Here */}
+              <div className="bg-card rounded-xl border border-border p-6 lg:col-span-2">
+                <h3 className="font-display text-lg font-bold text-foreground mb-3 flex items-center gap-2">
+                  <Navigation className="w-5 h-5 text-primary" /> How to Get Here
+                </h3>
+                <div className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed">
+                  <p>
+                    <span className="font-semibold text-foreground">From I-10 / Katy Freeway:</span> Exit the Grand Parkway (99) south, then take the Westheimer Parkway exit heading west. We're about 2 minutes ahead on the right side, past the Peek Road intersection.
+                  </p>
+                  <p>
+                    <span className="font-semibold text-foreground">From Cinco Ranch / LaCenterra:</span> Head east on Cinco Ranch Blvd toward Westheimer Parkway. Turn right on Westheimer Pkwy — our office is in the shopping center on the right, just past the Grand Parkway (99) overpass.
+                  </p>
+                  <p>
+                    <span className="font-semibold text-foreground">From Fulshear / Cross Creek Ranch:</span> Take FM 1093 (Westheimer) east toward Katy. Turn right onto Westheimer Parkway. Continue past Cinco Ranch Blvd — we're on the right side near Peek Road.
+                  </p>
+                  <p className="text-xs text-muted-foreground pt-1">
+                    <span className="font-medium text-foreground">Landmark:</span> Look for the shopping center on the south side of Westheimer Parkway between Grand Parkway (99) and Cinco Ranch Blvd. We're at Suite #170 with free ground-level parking right at our door.
+                  </p>
+                </div>
+              </div>
               <div className="space-y-6">
                 {/* Hours */}
                 <div className="bg-card rounded-xl border border-border p-6">

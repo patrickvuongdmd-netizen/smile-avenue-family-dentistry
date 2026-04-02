@@ -49,6 +49,7 @@ const locations = [
     photos: CYPRESS_HERO_PHOTOS,
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.1743654401334!2d-95.7273261!3d29.916881999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640d626dcbf8be7%3A0xc78b697f2e5a6c9c!2sSmile%20Avenue%20Family%20Dentistry%20-%20Cypress!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
     directionsUrl: "https://maps.app.goo.gl/DgZBrfjyNed7qKxs8",
+    directions: "From US-290, exit Fry Road and head south — we're about 1 mile down, directly across from HEB. From Bridgeland or Towne Lake, take Fry Rd south past Bridgeland High School and the Berry Center. From Fairfield or Cy-Fair, head north on Fry Rd from Clay Road. Look for HEB — we're right across the street with free parking at our door.",
   },
   {
     name: "Katy",
@@ -69,6 +70,7 @@ const locations = [
     photos: KATY_HERO_PHOTOS,
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus",
     directionsUrl: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/@29.732508,-95.775455,17z",
+    directions: "From I-10, exit the Grand Parkway (99) south, then take Westheimer Parkway west — we're 2 minutes ahead on the right. From Cinco Ranch or LaCenterra, head east on Cinco Ranch Blvd to Westheimer Pkwy and turn right. From Fulshear, take FM 1093 east to Westheimer Parkway. Look for the shopping center on the south side between Grand Parkway (99) and Cinco Ranch Blvd — Suite #170 with free parking at our door.",
   },
 ];
 
@@ -313,8 +315,8 @@ const Locations = () => {
         {/* SIDE-BY-SIDE MAPS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto">
-            <p className="kicker text-center">COMPARE LOCATIONS</p>
-            <h2 className="section-heading text-center">Pick the Office Closest to You</h2>
+            <p className="kicker text-center">HOW TO GET HERE</p>
+            <h2 className="section-heading text-center">Find the Office Closest to You</h2>
             <div className="grid md:grid-cols-2 gap-8 mt-10">
               {locations.map((loc) => (
                 <div key={loc.name} className="space-y-4">
@@ -328,16 +330,17 @@ const Locations = () => {
                       title={`Google Map — Smile Avenue ${loc.name}`}
                     />
                   </div>
-                  <div className="text-center">
+                  <div>
                     <h3 className="font-display text-lg font-bold text-foreground">{loc.name}</h3>
-                    <p className="text-sm font-sans text-muted-foreground">{loc.address}, {loc.city}</p>
+                    <p className="text-sm font-sans text-muted-foreground mb-2">{loc.address}, {loc.city}</p>
+                    <p className="text-sm font-sans text-muted-foreground leading-relaxed">{loc.directions}</p>
                     <a
                       href={loc.directionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-sans text-primary font-medium hover:underline mt-1 inline-block"
+                      className="text-sm font-sans text-primary font-medium hover:underline mt-2 inline-block"
                     >
-                      Get Directions →
+                      Open in Google Maps →
                     </a>
                   </div>
                 </div>
