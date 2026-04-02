@@ -220,7 +220,7 @@ const KatyTx = () => {
           </div>
         </section>
 
-        {/* FIND US — Map + Info Grid */}
+        {/* FIND US — Tend-style: info grid first, map below */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <p className="kicker">VISIT OUR KATY OFFICE</p>
@@ -229,25 +229,13 @@ const KatyTx = () => {
               We're on Westheimer Parkway in Katy — minutes from LaCenterra at Cinco Ranch, near the Grand Parkway (99). Free parking right at our door.
             </p>
 
-            {/* Map — full width */}
-            <div className="rounded-xl overflow-hidden shadow-md border border-border mt-10">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
-                className="w-full aspect-video border-0"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Smile Avenue Family Dentistry Katy office location on Google Maps"
-              />
-            </div>
-
             {/* 3-Column Info Grid */}
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div className="grid md:grid-cols-3 gap-8 mt-10">
               {/* Address + Directions */}
               <div>
                 <h3 className="font-display text-lg font-bold text-primary mb-3">Address</h3>
                 <p className="text-sm font-sans text-foreground mb-1">23541 Westheimer Pkwy Ste #170</p>
-                <p className="text-sm font-sans text-foreground mb-4">Katy, TX 77494</p>
+                <p className="text-sm font-sans text-foreground mb-5">Katy, TX 77494</p>
 
                 <h3 className="font-display text-lg font-bold text-primary mb-3">How to Get Here</h3>
                 <p className="text-sm font-sans text-muted-foreground leading-relaxed">
@@ -269,16 +257,22 @@ const KatyTx = () => {
               {/* Hours */}
               <div>
                 <h3 className="font-display text-lg font-bold text-primary mb-3">Hours</h3>
-                <div className="space-y-2 text-sm font-sans">
-                  {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day) => (
-                    <div key={day} className="flex justify-between text-foreground">
-                      <span>{day}</span>
-                      <span className="font-medium">8:30 AM – 5:00 PM</span>
+                <div className="space-y-2.5 text-sm font-sans">
+                  {[
+                    { day: "Monday:", time: "8:30 AM – 5:00 PM" },
+                    { day: "Tuesday:", time: "8:30 AM – 5:00 PM" },
+                    { day: "Wednesday:", time: "8:30 AM – 5:00 PM" },
+                    { day: "Thursday:", time: "8:30 AM – 5:00 PM" },
+                    { day: "Friday:", time: "8:30 AM – 5:00 PM" },
+                  ].map((h) => (
+                    <div key={h.day} className="flex justify-between text-foreground">
+                      <span className="font-medium">{h.day}</span>
+                      <span>{h.time}</span>
                     </div>
                   ))}
                   <div className="flex justify-between text-foreground">
-                    <span>Saturday</span>
-                    <span className="font-medium">8:00 AM – 2:00 PM</span>
+                    <span className="font-medium">Saturday:</span>
+                    <span>8:00 AM – 2:00 PM</span>
                   </div>
                   <div className="flex justify-between text-muted-foreground">
                     <span>Sunday</span>
@@ -307,6 +301,20 @@ const KatyTx = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+
+            {/* Map — compact, below info */}
+            <div className="mt-8 max-w-2xl">
+              <div className="rounded-xl overflow-hidden shadow-md border border-border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5597906542334!2d-95.7754549!3d29.732508199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864121d672dd8005%3A0xc421718f6ea402f7!2sSmile%20Avenue%20Family%20Dentistry%20-%20Katy!5e0!3m2!1sen!2sus!4v1!5m2!1sen!2sus"
+                  className="w-full h-[280px] border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Smile Avenue Family Dentistry Katy office location on Google Maps"
+                />
               </div>
             </div>
           </div>
