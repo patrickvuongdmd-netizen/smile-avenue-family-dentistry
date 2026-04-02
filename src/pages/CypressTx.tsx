@@ -216,8 +216,12 @@ const CypressTx = () => {
           <div className="container mx-auto text-center">
             <p className="kicker">WATCH & LEARN</p>
             <h2 className="section-heading">Welcome to Smile Avenue Cypress</h2>
-            <div className="max-w-2xl mx-auto mt-8">
-              <LazyYouTube videoId={PAGE_VIDEOS.cypressIntro.youtubeId} title={PAGE_VIDEOS.cypressIntro.title} />
+            <div className="max-w-3xl mx-auto mt-8">
+              <VideoCarousel videos={[
+                { youtubeId: "ovn9F8ascxc", title: "Dentist Cypress: Smile Avenue Family Dentistry" },
+                { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
+                { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
+              ]} />
             </div>
           </div>
         </section>
