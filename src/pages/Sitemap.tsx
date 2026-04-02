@@ -47,6 +47,48 @@ const generalSections = [
   },
 ];
 
+const brandServices = [
+  { label: "Emergency Dentistry", href: "/services/emergency-dentist" },
+  { label: "Dental Implants", href: "/services/dental-implants" },
+  { label: "Cosmetic Dentistry", href: "/services/cosmetic-dentistry" },
+  { label: "Teeth Whitening", href: "/services/teeth-whitening" },
+  { label: "Dental Crowns", href: "/services/dental-crowns" },
+  { label: "All-on-X Implants", href: "/services/all-on-x-implants" },
+  { label: "Invisalign", href: "/services/invisalign" },
+  { label: "Root Canal", href: "/services/root-canal" },
+  { label: "Dental Cleaning", href: "/services/dental-cleaning" },
+  { label: "Children's Dentistry", href: "/services/pediatric-dentistry" },
+  { label: "Dentures", href: "/services/dentures" },
+  { label: "Veneers", href: "/services/veneers" },
+  { label: "Dental Bridges", href: "/services/dental-bridges" },
+  { label: "Tooth Extraction", href: "/services/tooth-extraction" },
+  { label: "Oral Surgery", href: "/services/oral-surgery" },
+  { label: "Sedation Dentistry", href: "/services/sedation-dentistry" },
+  { label: "Preventive Dentistry", href: "/services/preventive-dentistry" },
+];
+  {
+    title: "Locations",
+    links: [
+      { label: "Cypress, TX", href: "/cypress-tx" },
+      { label: "Katy, TX", href: "/katy-tx" },
+      { label: "All Locations", href: "/convenient-locations" },
+    ],
+  },
+  {
+    title: "Team & Doctors",
+    links: [
+      { label: "Meet Our Team", href: "/our-team" },
+      { label: "Meet Our Doctors", href: "/doctors" },
+      { label: "Dr. Patrick Vuong, DMD", href: "/doctors/patrick-vuong-dmd" },
+      { label: "Dr. Peter Kim, DDS", href: "/doctors/peter-kim-dds" },
+      { label: "Dr. Laith Yahya, DDS", href: "/doctors/laith-yahya-dds" },
+      { label: "Dr. Sameer Bilal, DDS", href: "/doctors/sameer-bilal-dds" },
+      { label: "Dr. Sarah Maredia, DDS", href: "/doctors/sarah-maredia-dds" },
+      { label: "Dr. Shayan Alkhiro, DDS", href: "/doctors/shayan-alkhiro-dds" },
+    ],
+  },
+];
+
 const cypressNeighborhoods = {
   title: "Neighborhoods",
   links: [
@@ -202,6 +244,14 @@ const SitemapPage = () => {
                 {generalSections.map((section, i) => (
                   <SectionBlock key={i} title={section.title} links={section.links} />
                 ))}
+              </div>
+            </div>
+
+            {/* Row 1.5 — Brand Services */}
+            <div className="border-t border-border pt-10 mb-10">
+              <RowLabel>Services</RowLabel>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <ServicesSplitBlock title="All Services" links={brandServices} />
               </div>
             </div>
 
