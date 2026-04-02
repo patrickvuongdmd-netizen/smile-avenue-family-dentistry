@@ -92,6 +92,22 @@ export const OFFICE_IMAGES = {
   gallery2: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
 };
 
+export const CYPRESS_HERO_PHOTOS = [
+  { src: OFFICE_IMAGES.cypressHero, alt: "Smile Avenue Cypress dental office exterior on Fry Road" },
+  { src: OFFICE_IMAGES.waitingRoom, alt: "Stylish waiting room with leather sofas and 3D accent wall at Smile Avenue Cypress" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-7.jpg", alt: "Dr. Vuong showing dental x-rays to a patient at Smile Avenue Cypress" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-10.jpg", alt: "Amenity station with headphones and snacks at Smile Avenue Cypress" },
+  { src: OFFICE_IMAGES.hallway, alt: "Modern hallway inside Smile Avenue Cypress office" },
+];
+
+export const KATY_HERO_PHOTOS = [
+  { src: OFFICE_IMAGES.katyHero, alt: "Smile Avenue Katy dental office on Westheimer Parkway" },
+  { src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-8.jpg", alt: "Modern treatment room at Smile Avenue Katy" },
+  { src: OFFICE_IMAGES.coffeeStation, alt: "Complimentary coffee and refreshment station at Smile Avenue Katy" },
+  { src: OFFICE_IMAGES.operatory2, alt: "State-of-the-art dental operatory at Smile Avenue Katy" },
+  { src: OFFICE_IMAGES.aboutTeamAction, alt: "Smile Avenue Katy team in action" },
+];
+
 export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
   "dental-implants": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-single-tooth-implant-1.webp",
