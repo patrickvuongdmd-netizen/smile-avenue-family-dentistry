@@ -49,14 +49,14 @@ const TrustTicker = () => {
       {/* EN | ES | ♿ — right side, desktop only */}
       <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2.5 z-10 text-xs font-sans font-semibold bg-neon-blue">
         <Link
-          to="/"
+          to={enPath}
           className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-foreground/15 text-foreground' : 'text-foreground/70'}`}
         >
           EN
         </Link>
         <span className="text-foreground/70">|</span>
         <Link
-          to="/es"
+          to={esPath}
           className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-foreground/15 text-foreground' : 'text-foreground/70'}`}
         >
           ES
