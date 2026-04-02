@@ -26,20 +26,28 @@ const doctors = [
 
 const values = [
   {
-    title: "Hospitality-Driven Care",
-    description: "We treat every patient like family — with warmth, empathy, and genuine attention to your comfort. From cozy blankets to Netflix in every chair, your experience matters as much as your treatment.",
+    title: "Ethics & Integrity",
+    description: "We are committed to the highest standards of ethics and integrity in everything we do.",
   },
   {
-    title: "Clinical Excellence",
-    description: "Our doctors pursue continuing education and use the latest techniques and technology to deliver outstanding, lasting results you can trust.",
+    title: "Quality & Education",
+    description: "We believe in providing the highest quality of care — continually educating ourselves, our patients, and advancing our technology.",
   },
   {
-    title: "Community First",
-    description: "We're proud to serve the families of Cypress, Katy, and surrounding communities with integrity, transparency, and a commitment to accessible care.",
+    title: "Open Communication",
+    description: "We value honest communication with our patients and with one another, built on mutual trust, respect, and understanding.",
   },
   {
-    title: "A Five-Star Experience",
-    description: "From digital impressions to same-day emergencies, we've reimagined what a dental visit can be — and 5,000+ five-star reviews prove it.",
+    title: "Teamwork & Positivity",
+    description: "We focus on developing our strengths and bringing out the best in one another — meeting challenges with positivity and encouragement.",
+  },
+  {
+    title: "Service as a Privilege",
+    description: "We believe we are blessed to have the opportunity to serve others. This privilege enriches our lives and our spirit.",
+  },
+  {
+    title: "Exceptional Experiences",
+    description: "We believe it is our duty to deliver an exceptional dental experience and to continuously seek opportunities to innovate and improve it.",
   },
 ];
 
@@ -113,7 +121,7 @@ const About = () => {
 
         <CredibilityBar />
 
-        {/* STORY — narrative split-pane */}
+        {/* VISION & PURPOSE — narrative split-pane */}
         <section className="section-padding section-alt">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -128,34 +136,37 @@ const About = () => {
                 />
               </div>
               <div className="max-w-lg">
-                <p className="kicker">OUR STORY</p>
+                <p className="kicker">OUR VISION</p>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight">
-                  From one chair to<br />two thriving practices.
+                  So good we can't<br />be ignored.
                 </h2>
                 <p className="font-body text-base text-muted-foreground leading-relaxed mt-6">
-                  What started as a single operatory in Cypress has grown into a multi-doctor, multi-location practice — all because we never stopped putting patients first.
+                  Our vision is to change the public perception of dentistry — and what "going to the dentist" feels like — through intentionality and mastery of our process.
                 </p>
-                <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
-                  Every detail — from the in-house dental lab that delivers restorations in days, to the Netflix in every chair — was designed around a single question: <em className="text-foreground font-medium">how can we make this better for you?</em>
-                </p>
+                <div className="mt-8 p-6 rounded-2xl border border-border bg-card">
+                  <p className="kicker mb-2">OUR PURPOSE</p>
+                  <p className="font-body text-base text-foreground leading-relaxed font-medium">
+                    To promote optimum oral healthcare and improve the quality of life of our patients.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* VALUES — clean card grid, no icons (Tend-style) */}
+        {/* CORE VALUES — clean card grid */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <p className="kicker">WHAT DRIVES US</p>
+              <p className="kicker">OUR CORE VALUES</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight">
-                Our values
+                What we stand for.
               </h2>
             </div>
-            <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {values.map((v) => (
                 <div key={v.title} className="p-6 md:p-8 rounded-2xl border border-border bg-card">
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-3">{v.title}</h3>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">{v.title}</h3>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed">{v.description}</p>
                 </div>
               ))}
