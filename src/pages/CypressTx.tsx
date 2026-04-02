@@ -296,30 +296,6 @@ const CypressTx = () => {
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
-
-            {/* Insurance logo banner */}
-            <div className="mt-10 pt-8 border-t border-border">
-              <p className="text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-6 text-center">WE ACCEPT THESE & MORE</p>
-              <div className="overflow-x-auto scrollbar-hide md:overflow-visible">
-                <div className="flex md:grid md:grid-cols-6 gap-4 md:gap-6 md:max-w-4xl md:mx-auto min-w-max md:min-w-0 px-1 md:px-0">
-                  {[
-                    { name: "Aetna", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/aetna-original-480-138.png" },
-                    { name: "Blue Cross Blue Shield", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/bcbs-original-480-138.png" },
-                    { name: "Cigna", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/cigna-original-480-138.png" },
-                    { name: "Humana", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/humana-original-480-138.png" },
-                    { name: "MetLife", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/davis-original-480-138.png" },
-                    { name: "United Healthcare", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/united-health-original-480-138.png" },
-                  ].map((ins) => (
-                    <div key={ins.name} className="flex-shrink-0 w-32 md:w-auto px-3 py-3 bg-card rounded-lg border border-border flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                      <img src={ins.src} alt={`${ins.name} dental insurance logo`} className="h-7 w-auto object-contain" loading="lazy" width={120} height={35} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <Link to="/insurance" className="inline-block mt-4 text-sm font-sans font-semibold text-primary hover:underline">
-                View all accepted plans →
-              </Link>
-            </div>
           </div>
         </section>
 
@@ -413,14 +389,13 @@ const CypressTx = () => {
           </div>
         </section>
 
-        {/* 8 — NEIGHBORHOODS & OTHER LOCATIONS (combined) */}
+        {/* 8 — COMMUNITIES & OTHER LOCATIONS (combined) */}
         <section className="section-padding bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">COMMUNITIES WE SERVE</p>
             <h2 className="section-heading">Cypress Neighborhoods & Locations</h2>
             <p className="section-body max-w-2xl mx-auto">Smile Avenue proudly serves families across Cypress and beyond. Find dental care near your community.</p>
 
-            {/* Neighborhood links */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 max-w-3xl mx-auto">
               {[
                 { label: "Bridgeland Dentist", href: "/cypress-tx/bridgeland-dentist" },
@@ -438,7 +413,7 @@ const CypressTx = () => {
             {/* Katy cross-link */}
             <div className="mt-10 pt-8 border-t border-border">
               <p className="text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-4">ALSO SERVING KATY, TX</p>
-              <div className="inline-flex items-center gap-6 bg-card rounded-xl px-6 py-4 border border-border text-left">
+              <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 bg-card rounded-xl px-6 py-4 border border-border text-left">
                 <div>
                   <div className="flex items-center gap-2 text-sm font-sans text-foreground mb-1">
                     <MapPin className="w-4 h-4 text-primary shrink-0" />
