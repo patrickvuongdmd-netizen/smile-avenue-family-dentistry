@@ -504,7 +504,10 @@ const Home = () => {
                   </div>
                   {/* Body */}
                   <div className="flex-1 bg-card border border-t-0 border-border/50 rounded-b-2xl p-6 flex flex-col">
-                    <p className="text-sm font-body text-muted-foreground line-clamp-3 mb-5 flex-1">{post.excerpt}</p>
+                    <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm font-body text-muted-foreground line-clamp-2 mb-5 flex-1">{post.excerpt}</p>
                     <div className="flex items-center justify-between text-xs font-sans text-muted-foreground pt-4 border-t border-border/50">
                       <span className="font-semibold text-foreground">{post.author}</span>
                       <span>{post.readTime}</span>
