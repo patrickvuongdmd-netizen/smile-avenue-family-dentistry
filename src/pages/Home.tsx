@@ -492,24 +492,26 @@ const Home = () => {
               </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {BLOG_POSTS.slice(0, 3).map((post) => (
+              {BLOG_POSTS.slice(0, 3).map((post) => {
+                const colors = BLOG_CATEGORY_COLORS[post.category] || BLOG_CATEGORY_COLORS.Implants;
+                return (
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
                   className="group flex flex-col rounded-2xl overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  {/* Featured image */}
-                  <div className="aspect-[16/10] relative overflow-hidden">
+                  {/* Featured image with tinted overlay */}
+                  <div className={`aspect-[16/10] relative overflow-hidden ${colors.bg}`}>
                     <img
                       src={BLOG_CATEGORY_IMAGES[post.category] || categoryImplants}
                       alt={post.title}
                       loading="lazy"
                       width={800}
                       height={512}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="text-[11px] font-sans font-bold uppercase tracking-widest bg-background/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full">{post.category}</span>
+                      <span className={`text-[11px] font-sans font-bold uppercase tracking-widest backdrop-blur-sm px-3 py-1 rounded-full ${colors.badge}`}>{post.category}</span>
                     </div>
                   </div>
                   {/* Body */}
