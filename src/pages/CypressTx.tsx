@@ -250,9 +250,17 @@ const CypressTx = () => {
             <p className="section-body max-w-2xl mx-auto">
               Our Cypress team brings decades of combined experience in family, cosmetic, and implant dentistry. Every doctor takes time to listen and build a treatment plan around your goals — never a billing code.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
+            {/* Desktop: 5-col grid — Mobile: horizontal scroll */}
+            <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 mt-12">
               {doctors.map((doc) => (
                 <DoctorCard key={doc.name} {...doc} />
+              ))}
+            </div>
+            <div className="md:hidden flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4 px-1 mt-10">
+              {doctors.map((doc) => (
+                <div key={doc.name} className="snap-center shrink-0 w-[140px]">
+                  <DoctorCard {...doc} />
+                </div>
               ))}
             </div>
           </div>
