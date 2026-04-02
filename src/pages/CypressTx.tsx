@@ -241,7 +241,26 @@ const CypressTx = () => {
                 />
               </div>
 
-              {/* Hours + Amenities */}
+              {/* How to Get Here */}
+              <div className="bg-card rounded-xl border border-border p-6 lg:col-span-2">
+                <h3 className="font-display text-lg font-bold text-foreground mb-3 flex items-center gap-2">
+                  <Navigation className="w-5 h-5 text-primary" /> How to Get Here
+                </h3>
+                <div className="space-y-3 text-sm font-sans text-muted-foreground leading-relaxed">
+                  <p>
+                    <span className="font-semibold text-foreground">From US-290 / Northwest Freeway:</span> Exit Fry Road and head south. Pass the Jones Road intersection — we're about 1 mile down on the right, in the shopping center directly across from HEB.
+                  </p>
+                  <p>
+                    <span className="font-semibold text-foreground">From Bridgeland / Towne Lake:</span> Take Fry Road south past Tuckerton Road. You'll pass Bridgeland High School and the Berry Center on your left. Continue south — our office is on the right just before the HEB intersection.
+                  </p>
+                  <p>
+                    <span className="font-semibold text-foreground">From Fairfield / Cy-Fair:</span> Head north on Fry Road from Clay Road. Pass Cypress Creek High School and continue north. We're on the left side, across from HEB, about 2 minutes past Longenbaugh Drive.
+                  </p>
+                  <p className="text-xs text-muted-foreground pt-1">
+                    <span className="font-medium text-foreground">Landmark:</span> Look for the HEB grocery store on Fry Road — we're directly across the street in the same shopping center as Salata and European Wax Center. Free parking right in front of our suite.
+                  </p>
+                </div>
+              </div>
               <div className="space-y-6">
                 {/* Hours */}
                 <div className="bg-card rounded-xl border border-border p-6">
