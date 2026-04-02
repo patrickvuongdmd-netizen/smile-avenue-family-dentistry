@@ -359,7 +359,7 @@ const CypressTx = () => {
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
             <p className="kicker">YOUR CYPRESS DENTAL TEAM</p>
-            <h2 className="section-heading">5 Experienced Dentists at Our Cypress Office</h2>
+            <h2 className="section-heading">Meet Your Cypress Dentists</h2>
             <p className="section-body max-w-2xl mx-auto">
               Our Cypress team brings decades of combined experience in family, cosmetic, and implant dentistry. Every doctor takes time to listen and build a treatment plan around your goals — never a billing code.
             </p>
