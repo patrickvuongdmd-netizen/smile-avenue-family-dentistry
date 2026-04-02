@@ -12,6 +12,11 @@ export interface BrandServiceProcess {
   description: string;
 }
 
+export interface BrandServiceCrossLink {
+  text: string;
+  slug: string;
+}
+
 export interface BrandServiceData {
   serviceSlug: string;
   serviceName: string;
@@ -23,6 +28,7 @@ export interface BrandServiceData {
   introKicker: string;
   introHeading: string;
   introParas: string[];
+  crossLinks?: BrandServiceCrossLink[];
   whyHeading: string;
   whyPoints: { title: string; description: string }[];
   processHeading: string;
@@ -30,6 +36,9 @@ export interface BrandServiceData {
   faqHeading: string;
   faqs: BrandServiceFaq[];
   relatedSlugs: string[];
+  procedureType?: string;
+  howPerformed?: string;
+  bodyLocation?: string;
 }
 
 // Map slug → display name for related services
