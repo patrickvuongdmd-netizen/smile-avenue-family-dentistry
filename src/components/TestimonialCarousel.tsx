@@ -23,55 +23,95 @@ const TestimonialCarousel = () => {
     return () => clearInterval(timer);
   }, [next]);
 
-  const review = reviews[current];
+  const prevIdx = (current - 1 + reviews.length) % reviews.length;
+  const nextIdx = (current + 1) % reviews.length;
 
   return (
-    <section className="section-padding bg-card">
+    <section className="section-padding bg-card overflow-hidden">
       <div className="container mx-auto">
-        <p className="kicker text-center">5,000+ FIVE-STAR REVIEWS</p>
-        <h2 className="section-heading text-center">Trusted by Houston Families</h2>
-
-        <div className="max-w-4xl mx-auto mt-10 relative">
-          {/* Quote */}
-          <div className="text-center px-4 md:px-12 min-h-[200px] flex flex-col items-center justify-center">
-            <div className="flex justify-center gap-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-              ))}
-            </div>
-            <blockquote className="font-body text-lg md:text-xl lg:text-2xl leading-relaxed text-foreground mb-6 italic">
-              "{review.quote}"
-            </blockquote>
-            <p className="font-sans text-sm font-semibold text-foreground">
-              {review.name} <span className="text-muted-foreground font-normal">— {review.location}</span>
-            </p>
+        <div className="flex items-end justify-between mb-10">
+          <div>
+            <p className="kicker">5,000+ FIVE-STAR REVIEWS</p>
+            <h2 className="section-heading">Why People Love Smile Avenue</h2>
           </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="hidden sm:flex items-center gap-2">
             <button onClick={prev} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Previous review">
               <ChevronLeft className="w-5 h-5" />
             </button>
-            <div className="flex gap-2">
-              {reviews.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-primary" : "bg-border"}`}
-                  aria-label={`Go to review ${i + 1}`}
-                />
-              ))}
-            </div>
-            <button onClick={next} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Next review">
-              <ChevronRight className="w-5 h-5" />
+            <button onClick={next} className="w-10 h-10 rounded-full border border-border bg-card flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Next review">
+              NEXT <ChevronRight className="w-4 h-4 ml-1" />
             </button>
           </div>
+        </div>
 
-          <div className="text-center mt-6">
-            <a href="https://www.google.com/search?q=smile+avenue+family+dentistry+reviews" target="_blank" rel="noopener noreferrer" className="text-sm font-sans font-semibold text-primary hover:underline">
-              Read 5,000+ Reviews on Google →
-            </a>
+        {/* Card carousel */}
+        <div className="relative flex items-stretch gap-5 justify-center">
+          {/* Previous card — peek */}
+          <div className="hidden lg:flex w-[120px] shrink-0 items-stretch">
+            <div className="w-full bg-primary/15 rounded-2xl p-6 flex flex-col justify-between opacity-50 overflow-hidden">
+              <p className="font-body text-sm leading-relaxed text-foreground line-clamp-[8]">
+                "{reviews[prevIdx].quote}"
+              </p>
+              <p className="font-sans text-xs font-semibold text-foreground mt-4">
+                {reviews[prevIdx].name} <span className="text-muted-foreground font-normal">{reviews[prevIdx].location}</span>
+              </p>
+            </div>
           </div>
+
+          {/* Active card */}
+          <div className="w-full max-w-3xl bg-primary-dark rounded-2xl p-8 md:p-12 flex flex-col justify-between min-h-[320px] md:min-h-[360px] transition-all duration-500">
+            <div>
+              <div className="flex gap-1 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary-foreground text-primary-foreground" />
+                ))}
+              </div>
+              <blockquote className="font-body text-lg md:text-xl lg:text-2xl leading-relaxed text-primary-foreground">
+                "{reviews[current].quote}"
+              </blockquote>
+            </div>
+            <p className="font-sans text-sm font-semibold text-primary-foreground mt-8">
+              {reviews[current].name} <span className="text-primary-foreground/70 font-normal">— {reviews[current].location}</span>
+            </p>
+          </div>
+
+          {/* Next card — peek */}
+          <div className="hidden lg:flex w-[120px] shrink-0 items-stretch">
+            <div className="w-full bg-primary/15 rounded-2xl p-6 flex flex-col justify-between opacity-50 overflow-hidden">
+              <p className="font-body text-sm leading-relaxed text-foreground line-clamp-[8]">
+                "{reviews[nextIdx].quote}"
+              </p>
+              <p className="font-sans text-xs font-semibold text-foreground mt-4">
+                {reviews[nextIdx].name} <span className="text-muted-foreground font-normal">{reviews[nextIdx].location}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile nav + dots */}
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <button onClick={prev} className="sm:hidden w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Previous review">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <div className="flex gap-2">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-primary" : "bg-border"}`}
+                aria-label={`Go to review ${i + 1}`}
+              />
+            ))}
+          </div>
+          <button onClick={next} className="sm:hidden w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" aria-label="Next review">
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="text-center mt-6">
+          <a href="https://www.google.com/search?q=smile+avenue+family+dentistry+reviews" target="_blank" rel="noopener noreferrer" className="text-sm font-sans font-semibold text-primary hover:underline">
+            Read 5,000+ Reviews on Google →
+          </a>
         </div>
       </div>
     </section>
