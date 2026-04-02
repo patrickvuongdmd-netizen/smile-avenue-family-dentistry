@@ -285,7 +285,7 @@ const Locations = () => {
 
         {/* LOCATION CARDS */}
         <section className="section-padding section-alt">
-          <div className="container mx-auto">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8">
               {locations.map((loc) => (
                 <LocationCard key={loc.name} loc={loc} />
