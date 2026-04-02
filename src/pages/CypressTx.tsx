@@ -296,6 +296,21 @@ const CypressTx = () => {
                 <Link to="/insurance" className="text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">Explore Financing →</Link>
               </div>
             </div>
+
+            {/* Insurance Logo Banner */}
+            <div className="mt-10 pt-8 border-t border-border">
+              <p className="text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-6">WE ACCEPT THESE & MORE</p>
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 max-w-3xl mx-auto">
+                {["Aetna", "BCBS", "Cigna", "Humana", "MetLife", "United HC"].map((name) => (
+                  <div key={name} className="bg-card rounded-lg border border-border py-3 px-3 flex items-center justify-center">
+                    <span className="text-xs font-sans font-semibold text-muted-foreground tracking-wide">{name}</span>
+                  </div>
+                ))}
+              </div>
+              <Link to="/insurance" className="inline-block mt-4 text-sm font-sans font-medium text-primary hover:text-primary-dark transition-colors">
+                View all accepted plans →
+              </Link>
+            </div>
           </div>
         </section>
 
