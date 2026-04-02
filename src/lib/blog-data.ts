@@ -934,7 +934,6 @@ At Smile Avenue, we've removed the barriers that keep people from visiting the d
 
 Book your next [dental cleaning](/cypress-tx/dental-cleaning/) today — your future self will thank you.`,
   },
-  },
 
   // ═══════════════════════════════════════
   // ADDITIONAL: PEDIATRIC #2
