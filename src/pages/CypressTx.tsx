@@ -311,8 +311,9 @@ const CypressTx = () => {
                 />
               </div>
             </div>
+          </div>
+        </section>
 
-        {/* ABOUT OUR CYPRESS LOCATION — unique geo content */}
         <ScrollReveal>
         <section className="section-padding bg-background">
           <div className="container mx-auto">
