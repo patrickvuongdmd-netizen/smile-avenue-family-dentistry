@@ -106,6 +106,20 @@ const BrandSedationDentistry = lazy(() => import("./pages/services/SedationDenti
 const BrandPreventiveDentistry = lazy(() => import("./pages/services/PreventiveDentistry.tsx"));
 const BrandFamilyDentalCare = lazy(() => import("./pages/services/FamilyDentalCare.tsx"));
 
+// Comparison Pages
+const ImplantsVsDentures = lazy(() => import("./pages/services/ImplantsVsDentures.tsx"));
+const InvisalignVsBraces = lazy(() => import("./pages/services/InvisalignVsBraces.tsx"));
+const VeneersVsCrowns = lazy(() => import("./pages/services/VeneersVsCrowns.tsx"));
+const CrownsVsBridges = lazy(() => import("./pages/services/CrownsVsBridges.tsx"));
+const ImplantsVsBridges = lazy(() => import("./pages/services/ImplantsVsBridges.tsx"));
+const WhiteningVsVeneers = lazy(() => import("./pages/services/WhiteningVsVeneers.tsx"));
+
+// Category Landing Pages
+const CategoryPreventive = lazy(() => import("./pages/services/Preventive.tsx"));
+const CategoryCosmetic = lazy(() => import("./pages/services/Cosmetic.tsx"));
+const CategoryRestorative = lazy(() => import("./pages/services/Restorative.tsx"));
+const CategorySurgical = lazy(() => import("./pages/services/Surgical.tsx"));
+
 // Google Ads Landing Pages
 const CypressNewPatientLP = lazy(() => import("./pages/cypress/lp/NewPatient.tsx"));
 const CypressEmergencyLP = lazy(() => import("./pages/cypress/lp/EmergencyDentist.tsx"));
