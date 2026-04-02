@@ -3,6 +3,23 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, MapPin, Phone, Clock, Check, ChevronRight, ChevronLeft, ArrowRight, Play } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import categoryImplants from "@/assets/blog/category-implants.jpg";
+import categoryCosmetic from "@/assets/blog/category-cosmetic.jpg";
+import categoryEmergency from "@/assets/blog/category-emergency.jpg";
+import categoryInvisalign from "@/assets/blog/category-invisalign.jpg";
+import categoryPediatric from "@/assets/blog/category-pediatric.jpg";
+import categorySedation from "@/assets/blog/category-sedation.jpg";
+import categoryPreventive from "@/assets/blog/category-preventive.jpg";
+
+const BLOG_CATEGORY_IMAGES: Record<string, string> = {
+  Implants: categoryImplants,
+  Cosmetic: categoryCosmetic,
+  Emergency: categoryEmergency,
+  Invisalign: categoryInvisalign,
+  Pediatric: categoryPediatric,
+  Sedation: categorySedation,
+  Preventive: categoryPreventive,
+};
 import { useRef, useState } from "react";
 
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
