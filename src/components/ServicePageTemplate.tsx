@@ -281,8 +281,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.smileavenuefamilydentistry.com/" },
-      { "@type": "ListItem", position: 2, name: `${loc.name}, TX`, item: `https://www.smileavenuefamilydentistry.com${loc.path}/` },
-      { "@type": "ListItem", position: 3, name: data.serviceName, item: canonicalUrl },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.smileavenuefamilydentistry.com/services/" },
+      { "@type": "ListItem", position: 3, name: data.serviceName, item: `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/` },
+      { "@type": "ListItem", position: 4, name: `in ${loc.name}, TX`, item: canonicalUrl },
     ],
   };
 
@@ -336,9 +337,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
-              <Link to={loc.path} className="hover:text-primary transition-colors">{loc.name}, TX</Link>
+              <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
               <span className="mx-2" aria-hidden="true">›</span>
-              <span className="text-foreground">{data.serviceName}</span>
+              <Link to={`/services/${data.serviceSlug}`} className="hover:text-primary transition-colors">{data.serviceName}</Link>
+              <span className="mx-2" aria-hidden="true">›</span>
+              <span className="text-foreground">in {loc.name}, TX</span>
             </nav>
 
             <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">

@@ -50,7 +50,26 @@
 
 ## Important Pages
 
-### Service Pages
+### Brand-Global Service Pages (Educational Authority)
+- Emergency Dentistry: https://www.smileavenuefamilydentistry.com/services/emergency-dentist/
+- Dental Implants: https://www.smileavenuefamilydentistry.com/services/dental-implants/
+- Cosmetic Dentistry: https://www.smileavenuefamilydentistry.com/services/cosmetic-dentistry/
+- Teeth Whitening: https://www.smileavenuefamilydentistry.com/services/teeth-whitening/
+- Dental Crowns: https://www.smileavenuefamilydentistry.com/services/dental-crowns/
+- All-on-X Implants: https://www.smileavenuefamilydentistry.com/services/all-on-x-implants/
+- Invisalign: https://www.smileavenuefamilydentistry.com/services/invisalign/
+- Root Canal: https://www.smileavenuefamilydentistry.com/services/root-canal/
+- Dental Cleaning: https://www.smileavenuefamilydentistry.com/services/dental-cleaning/
+- Children's Dentistry: https://www.smileavenuefamilydentistry.com/services/pediatric-dentistry/
+- Dentures: https://www.smileavenuefamilydentistry.com/services/dentures/
+- Veneers: https://www.smileavenuefamilydentistry.com/services/veneers/
+- Dental Bridges: https://www.smileavenuefamilydentistry.com/services/dental-bridges/
+- Tooth Extraction: https://www.smileavenuefamilydentistry.com/services/tooth-extraction/
+- Oral Surgery: https://www.smileavenuefamilydentistry.com/services/oral-surgery/
+- Sedation Dentistry: https://www.smileavenuefamilydentistry.com/services/sedation-dentistry/
+- Preventive Dentistry: https://www.smileavenuefamilydentistry.com/services/preventive-dentistry/
+
+### Geo-Targeted Service Pages (Cypress)
 - Dental Implants: https://www.smileavenuefamilydentistry.com/cypress-tx/dental-implants/
 - Invisalign: https://www.smileavenuefamilydentistry.com/cypress-tx/invisalign/
 - Emergency Dentist: https://www.smileavenuefamilydentistry.com/cypress-tx/emergency-dentist/
