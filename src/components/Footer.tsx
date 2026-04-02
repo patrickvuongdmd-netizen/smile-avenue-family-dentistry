@@ -97,7 +97,7 @@ const Footer = () => {
             {/* Col 2 — Locations */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Locations</h4>
-              <div className="space-y-2.5 text-sm font-sans opacity-70">
+              <div className="space-y-2.5 text-sm font-sans opacity-80">
                 <Link to="/cypress-tx" className="block hover:opacity-100 transition-opacity">Cypress</Link>
                 <Link to="/katy-tx" className="block hover:opacity-100 transition-opacity">Katy</Link>
               </div>
