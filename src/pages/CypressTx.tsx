@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { MapPin, Phone, Clock, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, Building, GraduationCap, TreePine, ChevronRight, CircleDot, AlignLeft, Gem, Siren, Sun, Smile, Crown, Brush, Moon, Baby, Wrench, Heart } from "lucide-react";
+import { MapPin, Phone, Check, Shield, Sparkles, Zap, SmilePlus, AlertCircle, Pill, Star, ChevronRight, CircleDot, AlignLeft, Gem, Siren, Sun, Smile, Crown, Brush, Moon, Baby, Wrench, Heart } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
