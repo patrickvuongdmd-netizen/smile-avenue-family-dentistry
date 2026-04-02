@@ -14,6 +14,7 @@ export interface BlogPost {
   updatedDate?: string;
   readTime: string;
   pillar: string;            // Topic cluster pillar
+  featuredImage?: string;    // Category-based image key for blog cards
   relatedServices: { label: string; href: string }[];
   relatedPostSlugs: string[];
   faqs: { question: string; answer: string }[];
