@@ -106,7 +106,7 @@ export interface LocationHubData {
   heroKicker: string;
   heroHeading: string;
   heroBody: ReactNode;
-  heroPhotos: Array<{ url: string; alt: string }>;
+  heroPhotos: Array<{ src: string; alt: string }>;
   heroReviewStat: string; // "from 300+ verified Cypress reviews"
 
   // Social proof
