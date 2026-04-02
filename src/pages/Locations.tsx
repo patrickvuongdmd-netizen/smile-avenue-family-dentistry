@@ -17,7 +17,7 @@ const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d4
 
 const KATY_PHONE = "2818005008";
 const KATY_PHONE_FORMATTED = "(281) 800-5008";
-const KATY_BOOKING = "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue";
+const KATY_BOOKING = "https://book.modento.io/c/7e879f019b1846dda0dde08e10b56c25/SmileAvenueKaty";
 
 const locations = [
   {

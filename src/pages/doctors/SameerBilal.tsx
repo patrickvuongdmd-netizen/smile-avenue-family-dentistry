@@ -1,5 +1,5 @@
 import DoctorPageTemplate, { DoctorPageData } from "@/components/DoctorPageTemplate";
-const KT = { name: "Katy", address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494", phone: "2818005008", phoneFmt: "(281) 800-5008", booking: "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue" };
+const KT = { name: "Katy", address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494", phone: "2818005008", phoneFmt: "(281) 800-5008", booking: "https://book.modento.io/c/7e879f019b1846dda0dde08e10b56c25/SmileAvenueKaty" };
 const data: DoctorPageData = {
   name: "Dr. Sameer Bilal",
   credentials: "DDS",

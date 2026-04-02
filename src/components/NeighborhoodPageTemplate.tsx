@@ -86,7 +86,7 @@ const LOCATIONS = {
   katy: {
     phone: "2818005008",
     phoneFormatted: "(281) 800-5008",
-    booking: "https://book.modento.io/c/8f2db4d7f5d14a26a0758de49dcf8cbc/smileavenue",
+    booking: "https://book.modento.io/c/7e879f019b1846dda0dde08e10b56c25/SmileAvenueKaty",
     address: "23541 Westheimer Pkwy Ste #170, Katy, TX 77494",
     name: "Katy",
     path: "/katy-tx",
