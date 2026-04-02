@@ -65,7 +65,7 @@ const Footer = () => {
               <img
                 src="/logo-full.webp"
                 alt="Smile Avenue Family Dentistry"
-                className="h-16 md:h-24 w-auto object-contain"
+                className="h-12 md:h-16 w-auto object-contain"
                 width={1217}
                 height={645}
               />
