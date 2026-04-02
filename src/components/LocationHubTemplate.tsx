@@ -253,7 +253,7 @@ const LocationHubTemplate = ({ data }: { data: LocationHubData }) => {
         {/* 2 — SOCIAL PROOF & REVIEWS */}
         <section className="section-padding bg-muted/50">
           <div className="container mx-auto text-center">
-            <p className="kicker">WHERE HOUSTON TRUSTS US</p>
+            <p className="kicker">WHERE {data.schemaAddress.city.toUpperCase()} TRUSTS US</p>
             <h2 className="section-heading">Real Reviews from {data.schemaAddress.city} Patients</h2>
             <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10">
               {data.socialPlatforms.map((p) => (
