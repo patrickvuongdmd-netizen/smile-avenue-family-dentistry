@@ -36,8 +36,8 @@ const Footer = () => {
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-foreground/10" />
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-16">
-          <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-10 md:px-16 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10 md:pt-12">
+          <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-8 md:px-16 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <h2 className="font-display text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-medium leading-[1.15] text-center md:text-left max-w-lg text-muted-foreground">
               Care at Smile Avenue isn't just gentle,{" "}
               <span className="text-foreground font-semibold">it's genuine.</span>
@@ -60,12 +60,12 @@ const Footer = () => {
       {/* Bottom half of card on dark bg */}
       <div className="bg-foreground">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-0">
-          <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-6 md:px-16 md:py-8">
+          <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-4 md:px-16 md:py-5">
             <Link to="/">
               <img
                 src="/logo-full.webp"
                 alt="Smile Avenue Family Dentistry"
-                className="h-12 md:h-16 w-auto object-contain"
+                className="h-10 md:h-12 w-auto object-contain"
                 width={1217}
                 height={645}
               />
@@ -76,8 +76,8 @@ const Footer = () => {
 
       {/* Footer — 4 clean columns */}
       <footer className="bg-foreground text-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8 lg:pt-10 lg:pb-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-6 lg:pt-6 lg:pb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
 
             {/* Col 1 — About */}
             <div>
