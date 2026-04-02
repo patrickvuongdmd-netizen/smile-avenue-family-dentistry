@@ -21,9 +21,9 @@ const TrustTicker = () => {
   const location = useLocation();
   const isSpanish = location.pathname.startsWith("/es");
 
-  // Build toggle paths that preserve the current page
+  // Only /es exists as a Spanish page — always fall back there
   const enPath = isSpanish ? location.pathname.replace(/^\/es\/?/, "/") || "/" : location.pathname;
-  const esPath = isSpanish ? location.pathname : `/es${location.pathname === "/" ? "" : location.pathname}`;
+  const esPath = "/es";
 
   return (
     <div className="overflow-hidden flex relative bg-neon-blue" style={{ boxShadow: "0 2px 8px hsl(200 100% 50% / 0.4)" }}>
