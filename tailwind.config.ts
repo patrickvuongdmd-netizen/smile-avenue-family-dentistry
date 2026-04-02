@@ -56,6 +56,7 @@ export default {
         surface: {
           subtle: "hsl(var(--surface-subtle))",
         },
+        "neon-blue": "hsl(var(--neon-blue))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
