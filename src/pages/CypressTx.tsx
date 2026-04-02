@@ -19,7 +19,8 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import ScrollReveal from "@/components/ScrollReveal";
-import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
+import { OFFICE_IMAGES, PAGE_VIDEOS, CYPRESS_HERO_PHOTOS } from "@/lib/images";
+import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
 import LazyYouTube from "@/components/LazyYouTube";
 
 const CYPRESS_PHONE = "8326481756";
@@ -151,9 +152,7 @@ const CypressTx = () => {
                   <span>from 300+ verified Cypress reviews</span>
                 </div>
               </div>
-              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.cypressHero} alt="Smile Avenue Cypress dental office exterior on Fry Road, Cypress TX 77433" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
-              </div>
+              <HeroPhotoCarousel photos={CYPRESS_HERO_PHOTOS} />
             </div>
           </div>
         </section>

@@ -19,7 +19,8 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import ScrollReveal from "@/components/ScrollReveal";
-import { OFFICE_IMAGES, PAGE_VIDEOS } from "@/lib/images";
+import { OFFICE_IMAGES, PAGE_VIDEOS, KATY_HERO_PHOTOS } from "@/lib/images";
+import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
 import LazyYouTube from "@/components/LazyYouTube";
 
 const KATY_PHONE = "2818005008";
@@ -151,9 +152,7 @@ const KatyTx = () => {
                   <span>from 200+ verified Katy reviews</span>
                 </div>
               </div>
-              <div className="rounded-2xl aspect-[4/3] overflow-hidden shadow-md">
-                <img src={OFFICE_IMAGES.katyHero} alt="Smile Avenue Katy dental office on Westheimer Parkway, Katy TX 77494" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
-              </div>
+              <HeroPhotoCarousel photos={KATY_HERO_PHOTOS} />
             </div>
           </div>
         </section>
