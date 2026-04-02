@@ -315,8 +315,8 @@ const Locations = () => {
         {/* SIDE-BY-SIDE MAPS */}
         <section className="section-padding section-alt">
           <div className="container mx-auto">
-            <p className="kicker text-center">COMPARE LOCATIONS</p>
-            <h2 className="section-heading text-center">Pick the Office Closest to You</h2>
+            <p className="kicker text-center">HOW TO GET HERE</p>
+            <h2 className="section-heading text-center">Find the Office Closest to You</h2>
             <div className="grid md:grid-cols-2 gap-8 mt-10">
               {locations.map((loc) => (
                 <div key={loc.name} className="space-y-4">
@@ -330,16 +330,17 @@ const Locations = () => {
                       title={`Google Map — Smile Avenue ${loc.name}`}
                     />
                   </div>
-                  <div className="text-center">
+                  <div>
                     <h3 className="font-display text-lg font-bold text-foreground">{loc.name}</h3>
-                    <p className="text-sm font-sans text-muted-foreground">{loc.address}, {loc.city}</p>
+                    <p className="text-sm font-sans text-muted-foreground mb-2">{loc.address}, {loc.city}</p>
+                    <p className="text-sm font-sans text-muted-foreground leading-relaxed">{loc.directions}</p>
                     <a
                       href={loc.directionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-sans text-primary font-medium hover:underline mt-1 inline-block"
+                      className="text-sm font-sans text-primary font-medium hover:underline mt-2 inline-block"
                     >
-                      Get Directions →
+                      Open in Google Maps →
                     </a>
                   </div>
                 </div>
