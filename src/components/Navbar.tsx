@@ -141,7 +141,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
   return (
     <>
-    <nav className={`sticky top-0 z-[1000] bg-background/95 backdrop-blur-md border-b border-border/60 shadow-[0_1px_3px_0_rgba(0,0,0,0.04)] transition-transform duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"}`} ref={navRef}>
+    <nav className={`sticky top-0 z-[1000] bg-background/95 backdrop-blur-md shadow-[0_1px_3px_0_rgba(0,0,0,0.04)] transition-transform duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"}`} ref={navRef}>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-20">
