@@ -342,14 +342,14 @@ const Home = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 md:overflow-visible">
               {BLOG_POSTS.slice(0, 3).map((post) => {
                 const colors = BLOG_CATEGORY_COLORS[post.category] || BLOG_CATEGORY_COLORS.Implants;
                 return (
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
-                  className="group flex flex-col rounded-2xl overflow-hidden hover:shadow-xl transition-shadow"
+                  className="group flex flex-col rounded-2xl overflow-hidden hover:shadow-xl transition-shadow snap-start shrink-0 w-[85vw] md:w-auto"
                 >
                   <div className={`aspect-[16/10] relative overflow-hidden ${colors.bg}`}>
                     <img
