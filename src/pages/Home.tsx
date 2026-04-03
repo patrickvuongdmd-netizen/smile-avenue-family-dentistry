@@ -30,7 +30,7 @@ const BLOG_CATEGORY_COLORS: Record<string, { bg: string; badge: string; text: st
   Sedation: { bg: "bg-[hsl(260,30%,93%)]", badge: "bg-[hsl(260,50%,60%)]/15 text-[hsl(260,50%,40%)]", text: "text-[hsl(260,50%,40%)]" },
   Preventive: { bg: "bg-[hsl(140,30%,92%)]", badge: "bg-[hsl(140,45%,45%)]/15 text-[hsl(140,45%,30%)]", text: "text-[hsl(140,45%,30%)]" },
 };
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -47,22 +47,18 @@ import { DOCTOR_IMAGES, OFFICE_IMAGES, HERO_VIDEO_URL } from "@/lib/images";
 import CredibilityBar from "@/components/CredibilityBar";
 import SmileAvenueDifference from "@/components/SmileAveneDifference";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import TaglineBanner from "@/components/TaglineBanner";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
-const CYPRESS_BOOKING = "https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress";
-const KATY_BOOKING = "https://book.modento.io/c/7e879f019b1846dda0dde08e10b56c25/SmileAvenueKaty";
-
-
-
 
 const services = [
-  { title: "Dental Implants", description: "Replace missing teeth permanently.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" />, imgKey: "dental-implants" },
-  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" />, imgKey: "cosmetic-dentistry" },
-  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets.", slug: "invisalign", icon: <Zap className="w-6 h-6" />, imgKey: "invisalign" },
-  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" />, imgKey: "emergency-dentist" },
-  { title: "Preventive Care", description: "Gentle cleanings to protect your family's smiles.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" />, imgKey: "dental-cleaning" },
-  { title: "Sedation Dentistry", description: "Nervous? Relax completely with sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" />, imgKey: "sedation-dentistry" },
+  { title: "Dental Implants", description: "Replace missing teeth permanently.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
+  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets.", slug: "invisalign", icon: <Zap className="w-6 h-6" /> },
+  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
+  { title: "Preventive Care", description: "Gentle cleanings to protect your family's smiles.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" /> },
+  { title: "Sedation Dentistry", description: "Nervous? Relax completely with sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
 ];
 
 const doctors = [
@@ -83,15 +79,9 @@ const faqs = [
 ];
 
 const Home = () => {
-  const [heroLoc, setHeroLoc] = useState<"cypress" | "katy">("cypress");
   const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [heroCopyExpanded, setHeroCopyExpanded] = useState(false);
-
-  const heroPhone = heroLoc === "cypress" ? CYPRESS_PHONE : "2818005008";
-  const heroPhoneFmt = heroLoc === "cypress" ? CYPRESS_PHONE_FORMATTED : "(281) 800-5008";
-  const heroBooking = heroLoc === "cypress" ? CYPRESS_BOOKING : KATY_BOOKING;
-  const locationPrefix = heroLoc === "katy" ? "/katy-tx" : "/cypress-tx";
 
   useDocTitle("Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX");
 
@@ -159,19 +149,18 @@ const Home = () => {
         })}</script>
       </Helmet>
       <TrustTicker />
-      <Navbar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
+      <Navbar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl="" />
       <TrustStrip />
 
       <main id="main-content" className="pb-14 lg:pb-0">
-        {/* HERO — Tend-inspired refinements on mobile */}
+        {/* HERO — Brand-emotional, conversion-focused */}
         <section className="px-4 sm:px-6 lg:px-8 pt-8 pb-8 md:py-20 bg-background">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="text-center lg:text-left">
-                <p className="kicker mb-3 md:mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
+                <p className="kicker mb-3 md:mb-2">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
                 <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-4 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
                 
-                {/* Body copy — centered on mobile, key phrase bolded */}
                 <div className="mb-5 md:mb-8">
                   <p className={`font-body text-[15px] md:text-lg leading-relaxed text-muted-foreground ${!heroCopyExpanded ? "line-clamp-2 md:line-clamp-none" : ""}`}>
                     Whether it's been 6 months or 6 years, we make it easy to get back to the dentist with <strong className="text-foreground font-semibold">no judgment, ever.</strong> Netflix in every room, warm blankets, and doctors who listen first.
@@ -186,10 +175,10 @@ const Home = () => {
                   )}
                 </div>
 
-                {/* CTAs — balanced equal-width on mobile */}
+                {/* CTAs */}
                 <div className="flex gap-3 md:gap-3 mb-4 md:mb-3 max-w-xs md:max-w-sm mx-auto lg:mx-0">
                   <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-sm md:text-base py-3 md:!px-8 md:!py-4 rounded-full transition-all duration-200 bg-primary md:bg-[hsl(var(--gold))] text-primary-foreground md:text-[hsl(var(--gold-foreground))] md:shadow-[0_2px_8px_hsl(var(--gold)/0.25)] md:hover:bg-[hsl(40,55%,48%)]">Book Now</button>
-                  <a href={`tel:${heroPhone}`} className="flex-1 btn-secondary flex items-center justify-center gap-2 text-sm md:text-base py-3 md:!px-8 md:!py-4 rounded-full"><Phone className="w-4 h-4" /><span className="hidden sm:inline">{heroPhoneFmt}</span><span className="sm:hidden">Call Us</span></a>
+                  <a href={`tel:${CYPRESS_PHONE}`} className="flex-1 btn-secondary flex items-center justify-center gap-2 text-sm md:text-base py-3 md:!px-8 md:!py-4 rounded-full"><Phone className="w-4 h-4" /><span className="hidden sm:inline">{CYPRESS_PHONE_FORMATTED}</span><span className="sm:hidden">Call Us</span></a>
                 </div>
 
                 <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-3">
@@ -200,18 +189,11 @@ const Home = () => {
                   <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />0% financing
                 </p>
 
-                {/* Location selector + rating in a compact row */}
-                <div className="flex items-center justify-center lg:justify-start gap-3 mb-1">
-                  <div className="flex items-center gap-1.5">
-                    <button onClick={() => setHeroLoc("cypress")} className={`px-2.5 py-0.5 rounded-full text-[11px] font-sans font-semibold transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
-                    <button onClick={() => setHeroLoc("katy")} className={`px-2.5 py-0.5 rounded-full text-[11px] font-sans font-semibold transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
-                  </div>
-                  <span className="w-px h-3.5 bg-border" />
-                  <div className="flex items-center gap-1 text-[11px] md:text-sm font-sans text-muted-foreground">
-                    <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 fill-primary text-primary" />)}</div>
-                    <span className="font-semibold text-foreground">4.9</span>
-                    <span className="hidden sm:inline">from</span> <span>5,000+ reviews</span>
-                  </div>
+                {/* Star rating — no location pills */}
+                <div className="flex items-center justify-center lg:justify-start gap-1.5 text-[11px] md:text-sm font-sans text-muted-foreground">
+                  <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 fill-primary text-primary" />)}</div>
+                  <span className="font-semibold text-foreground">4.9</span>
+                  <span>from 5,000+ verified reviews</span>
                 </div>
               </div>
               {/* Hero media */}
@@ -227,7 +209,7 @@ const Home = () => {
                     <video src={HERO_VIDEO_URL} autoPlay loop muted playsInline preload="metadata" className="w-full h-full object-cover" />
                   ) : (
                     <button onClick={() => setMobileHeroPlaying(true)} className="w-full h-full relative group cursor-pointer" aria-label="Play office tour video">
-                      <img src={OFFICE_IMAGES.homepageHero} alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice in Cypress and Katy, TX" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
+                      <img src={OFFICE_IMAGES.homepageHero} alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
                       <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -243,11 +225,10 @@ const Home = () => {
           </div>
         </section>
 
-
         {/* CREDIBILITY BAR */}
         <CredibilityBar />
 
-        {/* SERVICES — Clean card grid inspired by Tend */}
+        {/* SERVICES — Brand-global links */}
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
@@ -257,7 +238,7 @@ const Home = () => {
               {services.map((s, i) => (
                 <Link
                   key={i}
-                  to={`/${heroLoc === "katy" ? "katy" : "cypress"}-tx/${s.slug}`}
+                  to={`/services/${s.slug}`}
                   className="flex items-start gap-5 bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
                 >
                   <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground transition-colors">
@@ -277,26 +258,15 @@ const Home = () => {
         </section>
         </ScrollReveal>
 
+        {/* TAGLINE BANNER — Emotional brand moment */}
+        <TaglineBanner onBook={() => setBookingModalOpen(true)} />
+
         {/* THE SMILE AVENUE DIFFERENCE */}
         <ScrollReveal>
           <SmileAvenueDifference onBook={() => setBookingModalOpen(true)} />
         </ScrollReveal>
 
-
-
-
-        {/* FAQ */}
-        <LazySection>
-          <section className="section-padding gradient-cta">
-            <div className="container mx-auto max-w-3xl">
-              <p className="kicker text-center text-white/70">FAQ</p>
-              <h2 className="section-heading text-center text-white">Frequently Asked Questions</h2>
-              <div className="mt-10"><FaqAccordion items={faqs} variant="dark" /></div>
-            </div>
-          </section>
-        </LazySection>
-
-        {/* TESTIMONIALS CAROUSEL */}
+        {/* TESTIMONIALS CAROUSEL — Social proof before FAQ */}
         <LazySection>
           <TestimonialCarousel />
         </LazySection>
@@ -331,10 +301,6 @@ const Home = () => {
           </ScrollReveal>
         </LazySection>
 
-
-
-
-
         {/* FREE CONSULTATION CTA */}
         <section className="py-12 bg-primary/5 border-y border-primary/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -354,6 +320,17 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* FAQ — Objection handling at the end */}
+        <LazySection>
+          <section className="section-padding gradient-cta">
+            <div className="container mx-auto max-w-3xl">
+              <p className="kicker text-center text-white/70">FAQ</p>
+              <h2 className="section-heading text-center text-white">Frequently Asked Questions</h2>
+              <div className="mt-10"><FaqAccordion items={faqs} variant="dark" /></div>
+            </div>
+          </section>
+        </LazySection>
 
         {/* Blog */}
         <section className="section-padding bg-background">
@@ -376,7 +353,6 @@ const Home = () => {
                   to={`/blog/${post.slug}`}
                   className="group flex flex-col rounded-2xl overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  {/* Featured image with tinted overlay */}
                   <div className={`aspect-[16/10] relative overflow-hidden ${colors.bg}`}>
                     <img
                       src={BLOG_CATEGORY_IMAGES[post.category] || categoryImplants}
@@ -390,7 +366,6 @@ const Home = () => {
                       <span className={`text-[11px] font-sans font-bold uppercase tracking-widest backdrop-blur-sm px-3 py-1 rounded-full ${colors.badge}`}>{post.category}</span>
                     </div>
                   </div>
-                  {/* Body */}
                   <div className="flex-1 bg-card border border-t-0 border-border/50 rounded-b-2xl p-6 flex flex-col">
                     <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors mb-3 line-clamp-2">
                       {post.title}
@@ -413,7 +388,7 @@ const Home = () => {
         </section>
       </main>
 
-      <MobileStickyBar phone={heroPhone} phoneFormatted={heroPhoneFmt} bookingUrl={heroBooking} />
+      <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl="" />
       <Footer />
       <BackToTop />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
