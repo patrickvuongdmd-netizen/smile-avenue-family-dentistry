@@ -442,6 +442,45 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
           </div>
         </section>
 
+        {/* FROM THE BLOG */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto">
+            <div className="flex items-end justify-between mb-12">
+              <div>
+                <p className="kicker">FROM THE BLOG</p>
+                <h2 className="section-heading">Dental Tips & Insights</h2>
+              </div>
+              <Link to="/blog" className="hidden sm:inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+                View All Posts <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div>
+              <BlogCardCarousel
+                posts={BLOG_POSTS.slice(0, 3)}
+                categoryColors={BLOG_CATEGORY_COLORS}
+                categoryImages={BLOG_CATEGORY_IMAGES}
+                fallbackImage={categoryImplants}
+              />
+              <div className="hidden md:grid md:grid-cols-3 gap-6">
+                {BLOG_POSTS.slice(0, 3).map((post) => (
+                  <Link key={post.slug} to={`/blog/${post.slug}`} className="group card-soft !p-0 overflow-hidden">
+                    <div className="p-7">
+                      <span className="text-xs font-sans font-medium text-primary uppercase tracking-wider">{post.category}</span>
+                      <h3 className="font-display text-lg font-semibold text-foreground mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">{post.title}</h3>
+                      <p className="text-sm font-body text-muted-foreground leading-relaxed line-clamp-3">{post.excerpt}</p>
+                      <div className="flex items-center justify-between mt-5">
+                        <span className="text-xs font-sans text-muted-foreground">{post.readTime}</span>
+                        <span className="text-sm font-sans font-medium text-primary group-hover:gap-2 transition-all inline-flex items-center gap-1">
+                          Read <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* LOCATION INFO */}
         <section className="section-padding section-alt">
