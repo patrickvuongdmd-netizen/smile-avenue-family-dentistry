@@ -70,17 +70,11 @@ const Footer = () => {
         />
         <div className="absolute inset-0 bg-foreground/10" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10 md:pt-12">
-          <div className="bg-card rounded-t-[2rem] shadow-2xl px-10 py-8 md:px-16 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-            <h2 className="font-display text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-medium leading-[1.15] text-center md:text-left max-w-lg text-muted-foreground">
+          <div className="bg-card rounded-t-[2rem] shadow-2xl px-8 py-8 md:px-16 md:py-10">
+            <h2 className="font-display text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-medium leading-[1.15] text-center max-w-2xl mx-auto text-muted-foreground">
               Care at Smile Avenue isn't just gentle,{" "}
               <span className="text-foreground font-semibold">it's genuine.</span>
             </h2>
-            <button
-              onClick={() => setBookingOpen(true)}
-              className="shrink-0 inline-flex items-center justify-center text-base md:text-lg px-10 py-4 rounded-full font-bold tracking-wide transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
-            >
-              Book Now
-            </button>
           </div>
         </div>
       </section>
@@ -90,10 +84,10 @@ const Footer = () => {
         <TrustTicker />
       </div>
 
-      {/* Bottom half of card on dark bg */}
+      {/* Bottom half of card on dark bg — logo + Book Now */}
       <div className="bg-foreground">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-0">
-          <div className="bg-card rounded-b-[2rem] shadow-2xl px-10 py-4 md:px-16 md:py-5">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-card rounded-b-[2rem] shadow-2xl px-8 py-6 md:px-16 md:py-7 flex flex-col sm:flex-row items-center justify-between gap-4">
             <Link to="/">
               <img
                 src="/logo-full.webp"
@@ -103,6 +97,12 @@ const Footer = () => {
                 height={645}
               />
             </Link>
+            <button
+              onClick={() => setBookingOpen(true)}
+              className="shrink-0 inline-flex items-center justify-center text-base px-8 py-3 rounded-full font-bold tracking-wide transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
+            >
+              Book Now
+            </button>
           </div>
         </div>
       </div>
