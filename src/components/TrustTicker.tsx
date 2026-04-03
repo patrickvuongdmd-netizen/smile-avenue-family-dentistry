@@ -26,7 +26,7 @@ const TrustTicker = () => {
   const esPath = "/es";
 
   return (
-    <div className="overflow-hidden flex relative bg-neon-blue" style={{ boxShadow: "0 2px 8px hsl(200 100% 50% / 0.4)" }}>
+    <div className="overflow-hidden flex relative bg-neon-blue transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0" style={{ boxShadow: "0 2px 8px hsl(200 100% 50% / 0.4)" }}>
       <Link to="/about" className="shrink-0 flex items-center px-4 py-2.5 font-bold text-xs tracking-wide font-sans z-10 hover:underline text-foreground" style={{}}>
         Why Smile Avenue?
       </Link>

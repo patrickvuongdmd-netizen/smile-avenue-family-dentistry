@@ -402,11 +402,11 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Book Now */}
+          {/* Book Now — compact left-aligned pill */}
           <div className="mt-8">
             <button
               onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-              className="w-full inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest px-8 py-3.5 rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
+              className="inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest px-7 py-3 rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
             >
               Book Now
             </button>
