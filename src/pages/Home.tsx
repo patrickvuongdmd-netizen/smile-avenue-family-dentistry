@@ -258,8 +258,6 @@ const Home = () => {
         </section>
         </ScrollReveal>
 
-        {/* TAGLINE BANNER — Emotional brand moment */}
-        <TaglineBanner onBook={() => setBookingModalOpen(true)} />
 
         {/* THE SMILE AVENUE DIFFERENCE */}
         <ScrollReveal>
