@@ -195,8 +195,8 @@ const Home = () => {
 
                 {/* CTAs — side by side on mobile like Tend */}
                 <div className="flex gap-2.5 md:gap-3 mb-4 md:mb-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 flex-1 sm:flex-initial">Book Online</button>
-                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center justify-center gap-2 text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 flex-1 sm:flex-initial"><Phone className="w-4 h-4" />{heroPhoneFmt}</a>
+                  <button onClick={() => setBookingModalOpen(true)} className="flex-1 sm:flex-initial inline-flex items-center justify-center font-sans font-bold tracking-wide text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 rounded-xl transition-all duration-200 bg-primary md:bg-[hsl(var(--gold))] text-primary-foreground md:text-[hsl(var(--gold-foreground))] md:shadow-[0_2px_8px_hsl(var(--gold)/0.25)] md:hover:bg-[hsl(40,55%,48%)]">Book Online</button>
+                  <a href={`tel:${heroPhone}`} className="flex-1 sm:flex-initial btn-secondary flex items-center justify-center gap-2 text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4"><Phone className="w-4 h-4" /><span className="hidden sm:inline">{heroPhoneFmt}</span><span className="sm:hidden">Call Us</span></a>
                 </div>
 
                 <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-3">
