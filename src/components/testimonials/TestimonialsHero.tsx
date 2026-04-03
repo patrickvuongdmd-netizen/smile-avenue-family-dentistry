@@ -21,7 +21,7 @@ interface Props {
 }
 
 const TestimonialsHero = ({ bookingUrl }: Props) => (
-  <section className="section-padding bg-background">
+  <section className="section-padding bg-background overflow-hidden">
     <div className="container mx-auto px-4">
       <nav className="mb-6 text-xs font-sans text-muted-foreground text-center lg:text-left" aria-label="Breadcrumb">
         <Link to="/" className="hover:text-primary transition-colors">Home</Link>
