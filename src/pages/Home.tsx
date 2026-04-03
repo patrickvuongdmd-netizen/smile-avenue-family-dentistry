@@ -164,12 +164,12 @@ const Home = () => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO — Tend-inspired refinements on mobile */}
-        <section className="px-4 sm:px-6 lg:px-8 pt-10 pb-8 md:py-20 bg-background">
+        <section className="px-4 sm:px-6 lg:px-8 pt-12 pb-8 md:py-20 bg-background">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
               <div>
-                <p className="kicker mb-3 md:mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
-                <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-4 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
+                <p className="kicker mb-4 md:mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
+                <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-5 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
                 
                 {/* Body copy — truncated on mobile with Read More */}
                 <div className="mb-5 md:mb-8">
