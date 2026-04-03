@@ -128,10 +128,12 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
+      document.body.setAttribute("data-menu-open", "true");
     } else {
       document.body.style.overflow = "";
+      document.body.removeAttribute("data-menu-open");
     }
-    return () => { document.body.style.overflow = ""; };
+    return () => { document.body.style.overflow = ""; document.body.removeAttribute("data-menu-open"); };
   }, [mobileOpen]);
 
   const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
@@ -332,7 +334,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           <div>
             {/* Services */}
             <button
-              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
+              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
             >
               Services
@@ -350,7 +352,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
             {/* Locations */}
             <button
-              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
+              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "locations" ? null : "locations")}
             >
               Locations
@@ -365,7 +367,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
             {/* Patients */}
             <button
-              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
+              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
             >
               Patients
@@ -383,7 +385,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
             {/* About */}
             <button
-              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
+              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
             >
               About
@@ -400,11 +402,11 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Book Now */}
+          {/* Book Now — compact left-aligned pill */}
           <div className="mt-8">
             <button
               onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-              className="w-full inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest px-8 py-3.5 rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
+              className="inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest px-7 py-3 rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
             >
               Book Now
             </button>
