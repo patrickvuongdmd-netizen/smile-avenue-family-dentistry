@@ -140,7 +140,17 @@ const BlogCardCarousel = ({ posts, categoryColors, categoryImages, fallbackImage
         </div>
       </div>
 
-      {/* Dots + arrows */}
+      {/* Swipe hint overlay */}
+      {showHint && (
+        <div className="absolute inset-0 pointer-events-none flex items-center justify-center z-10">
+          <div className="flex items-center gap-2 bg-foreground/80 text-background px-4 py-2.5 rounded-full backdrop-blur-sm animate-swipe-hint">
+            <ChevronLeft className="w-4 h-4 opacity-60" />
+            <span className="text-xs font-sans font-medium tracking-wide">Swipe</span>
+            <ChevronRight className="w-4 h-4" />
+          </div>
+        </div>
+      )}
+
       <div className="flex items-center justify-center gap-3 mt-5">
         <button
           onClick={scrollPrev}
