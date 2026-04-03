@@ -23,7 +23,7 @@ interface Props {
 const TestimonialsHero = ({ bookingUrl }: Props) => (
   <section className="section-padding bg-background">
     <div className="container mx-auto">
-      <nav className="mb-6 text-xs font-sans text-muted-foreground" aria-label="Breadcrumb">
+      <nav className="mb-6 text-xs font-sans text-muted-foreground text-center lg:text-left" aria-label="Breadcrumb">
         <Link to="/" className="hover:text-primary transition-colors">Home</Link>
         <span className="mx-2" aria-hidden="true">›</span>
         <span className="text-foreground">Patient Testimonials</span>
