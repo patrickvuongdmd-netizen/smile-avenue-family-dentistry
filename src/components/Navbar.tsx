@@ -322,137 +322,149 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
     </nav>
 
-    {/* Mobile fullscreen menu */}
+    {/* Mobile fullscreen menu — slide-in overlay */}
     <div
-      className={`md:hidden fixed inset-0 top-14 z-[999] transition-all duration-300 ${
+      className={`md:hidden fixed inset-0 top-14 z-[999] transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
         mobileOpen
-          ? "opacity-100 pointer-events-auto"
-          : "opacity-0 pointer-events-none"
+          ? "translate-x-0 opacity-100 pointer-events-auto"
+          : "translate-x-full opacity-0 pointer-events-none"
       }`}
       style={{ backgroundColor: 'hsl(var(--background))' }}
     >
       <div className="h-full flex flex-col">
         {/* Scrollable nav content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain px-7 pt-6 pb-10">
-          <div>
+        <div className="flex-1 overflow-y-auto overscroll-contain px-8 pt-8 pb-12">
+          <div className="space-y-1">
             {/* Services */}
-            <button
-              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
-              onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
-            >
-              Services
-              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "services" ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-1 py-3 space-y-0">
-                {serviceLinks.map((s) => (
-                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
-                    {s.label}
-                  </Link>
-                ))}
+            <div className={`transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "80ms" : "0ms" }}>
+              <button
+                className="flex items-center justify-between w-full py-4 text-left"
+                onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
+              >
+                <span className="text-xl font-display font-semibold tracking-tight text-foreground">Services</span>
+                <ChevronDown className={`w-4.5 h-4.5 text-primary/70 transition-transform duration-300 ease-out ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${mobileExpanded === "services" ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className="pl-0.5 pb-4 space-y-0.5">
+                  {serviceLinks.map((s) => (
+                    <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-[9px] text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors duration-200" onClick={() => setMobileOpen(false)}>
+                      {s.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
+              <div className="h-px bg-border/40" />
             </div>
 
             {/* Locations */}
-            <button
-              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
-              onClick={() => setMobileExpanded(mobileExpanded === "locations" ? null : "locations")}
-            >
-              Locations
-              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "locations" ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-1 py-3 space-y-0">
-                <Link to="/cypress-tx" className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
-                <Link to="/katy-tx" className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
+            <div className={`transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "140ms" : "0ms" }}>
+              <button
+                className="flex items-center justify-between w-full py-4 text-left"
+                onClick={() => setMobileExpanded(mobileExpanded === "locations" ? null : "locations")}
+              >
+                <span className="text-xl font-display font-semibold tracking-tight text-foreground">Locations</span>
+                <ChevronDown className={`w-4.5 h-4.5 text-primary/70 transition-transform duration-300 ease-out ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${mobileExpanded === "locations" ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className="pl-0.5 pb-4 space-y-0.5">
+                  <Link to="/cypress-tx" className="block py-[9px] text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors duration-200" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
+                  <Link to="/katy-tx" className="block py-[9px] text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors duration-200" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
+                </div>
               </div>
+              <div className="h-px bg-border/40" />
             </div>
 
             {/* Patients */}
-            <button
-              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
-              onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
-            >
-              Patients
-              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "patients" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-1 py-3 space-y-0">
-                {patientLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
-                    {l.label}
-                  </Link>
-                ))}
+            <div className={`transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "200ms" : "0ms" }}>
+              <button
+                className="flex items-center justify-between w-full py-4 text-left"
+                onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
+              >
+                <span className="text-xl font-display font-semibold tracking-tight text-foreground">Patients</span>
+                <ChevronDown className={`w-4.5 h-4.5 text-primary/70 transition-transform duration-300 ease-out ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${mobileExpanded === "patients" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className="pl-0.5 pb-4 space-y-0.5">
+                  {patientLinks.map((l) => (
+                    <Link key={l.href} to={l.href} className="block py-[9px] text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors duration-200" onClick={() => setMobileOpen(false)}>
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
+              <div className="h-px bg-border/40" />
             </div>
 
             {/* About */}
-            <button
-              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
-              onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
-            >
-              About
-              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "about" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-1 py-3 space-y-0">
-                {aboutLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
-                    {l.label}
-                  </Link>
-                ))}
+            <div className={`transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "260ms" : "0ms" }}>
+              <button
+                className="flex items-center justify-between w-full py-4 text-left"
+                onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
+              >
+                <span className="text-xl font-display font-semibold tracking-tight text-foreground">About</span>
+                <ChevronDown className={`w-4.5 h-4.5 text-primary/70 transition-transform duration-300 ease-out ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${mobileExpanded === "about" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className="pl-0.5 pb-4 space-y-0.5">
+                  {aboutLinks.map((l) => (
+                    <Link key={l.href} to={l.href} className="block py-[9px] text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors duration-200" onClick={() => setMobileOpen(false)}>
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Book Now — compact left-aligned pill */}
-          <div className="mt-8">
+          {/* Book Now — staggered entrance */}
+          <div className={`mt-10 transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "340ms" : "0ms" }}>
             <button
               onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-              className="inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest px-7 py-3 rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
+              className="inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-[0.15em] px-8 py-3.5 rounded-full transition-all duration-200 text-primary-foreground bg-primary hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
             >
               Book Now
             </button>
           </div>
 
-          {/* Social links */}
-          <div className="flex items-center gap-5 mt-6">
-            <a href="https://www.facebook.com/SmileAvenueFamilyDentistry/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.044 1.613.115v3.146c-.427-.044-.72-.065-.964-.065-1.37 0-1.899.519-1.899 1.87v2.492h3.727l-.64 3.667h-3.087v8.126C18.996 22.92 23 18.918 23 14c0-5.523-4.477-10-10-10S3 8.477 3 14c0 4.237 2.636 7.855 6.101 9.691z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/smileavenuefamilydentistry/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-            <a href="https://www.tiktok.com/@smileavenuetx" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-2.65-.78V6.69h2.65z"/></svg>
-            </a>
-          </div>
+          {/* Social + utilities — staggered */}
+          <div className={`mt-8 transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "400ms" : "0ms" }}>
+            <div className="flex items-center gap-6">
+              <a href="https://www.facebook.com/SmileAvenueFamilyDentistry/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground/60 hover:text-foreground transition-colors duration-200">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.044 1.613.115v3.146c-.427-.044-.72-.065-.964-.065-1.37 0-1.899.519-1.899 1.87v2.492h3.727l-.64 3.667h-3.087v8.126C18.996 22.92 23 18.918 23 14c0-5.523-4.477-10-10-10S3 8.477 3 14c0 4.237 2.636 7.855 6.101 9.691z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/smileavenuefamilydentistry/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground/60 hover:text-foreground transition-colors duration-200">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@smileavenuetx" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-muted-foreground/60 hover:text-foreground transition-colors duration-200">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.48V13a8.28 8.28 0 005.58 2.16v-3.44a4.85 4.85 0 01-2.65-.78V6.69h2.65z"/></svg>
+              </a>
+            </div>
 
-          {/* Language, Accessibility & Emergency */}
-          <div className="mt-6 flex items-center gap-1.5 text-xs font-sans font-semibold">
-            <Link
-              to="/"
-              className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
-              onClick={() => setMobileOpen(false)}
-            >
-              EN
-            </Link>
-            <span className="text-border">|</span>
-            <Link
-              to="/es"
-              className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
-              onClick={() => setMobileOpen(false)}
-            >
-              ES
-            </Link>
-            <span className="text-border">|</span>
-            <button
-              onClick={() => { if ((window as any).toggleAccessibility) (window as any).toggleAccessibility(); }}
-              className="px-1.5 py-0.5 rounded text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Accessibility options"
-            >
-              <Accessibility className="w-3.5 h-3.5" />
-            </button>
+            {/* Language & Accessibility */}
+            <div className="mt-5 flex items-center gap-2 text-xs font-sans font-medium">
+              <Link
+                to="/"
+                className={`px-2 py-1 rounded-md transition-colors duration-200 ${!isSpanish ? "bg-primary/10 text-primary font-semibold" : "text-muted-foreground hover:text-foreground"}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                EN
+              </Link>
+              <Link
+                to="/es"
+                className={`px-2 py-1 rounded-md transition-colors duration-200 ${isSpanish ? "bg-primary/10 text-primary font-semibold" : "text-muted-foreground hover:text-foreground"}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                ES
+              </Link>
+              <span className="w-px h-3.5 bg-border/50 mx-1" />
+              <button
+                onClick={() => { if ((window as any).toggleAccessibility) (window as any).toggleAccessibility(); }}
+                className="px-2 py-1 rounded-md text-muted-foreground hover:text-foreground transition-colors duration-200"
+                aria-label="Accessibility options"
+              >
+                <Accessibility className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
