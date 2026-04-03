@@ -22,11 +22,27 @@ interface Props {
 const BlogCardCarousel = ({ posts, categoryColors, categoryImages, fallbackImage }: Props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
-    loop: false,
+    loop: true,
     skipSnaps: false,
-    containScroll: "trimSnaps",
+    containScroll: false,
     slidesToScroll: 1,
   });
+
+  const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const startAutoplay = useCallback(() => {
+    if (autoplayRef.current) clearInterval(autoplayRef.current);
+    autoplayRef.current = setInterval(() => {
+      emblaApi?.scrollNext();
+    }, 5000);
+  }, [emblaApi]);
+
+  const stopAutoplay = useCallback(() => {
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current);
+      autoplayRef.current = null;
+    }
+  }, []);
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
