@@ -39,11 +39,11 @@ const TestimonialsHero = ({ bookingUrl }: Props) => (
             From first-visit nerves to "can I come back tomorrow?" — these are real stories from real families who finally found a dentist that <strong className="text-foreground font-semibold">feels different.</strong>
           </p>
 
-          <div className="flex gap-3 mb-5 max-w-sm mx-auto lg:mx-0">
-            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-cta flex-1 text-center">
+          <div className="flex gap-3 mb-5 max-w-md mx-auto lg:mx-0">
+            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-cta flex-1 text-center whitespace-nowrap">
               Book Your Visit
             </a>
-            <a href="tel:8326481756" className="btn-secondary flex-1 text-center flex items-center justify-center gap-2">
+            <a href="tel:8326481756" className="btn-secondary flex-1 text-center flex items-center justify-center gap-2 whitespace-nowrap">
               <Phone className="w-4 h-4" />
               Call Us
             </a>
