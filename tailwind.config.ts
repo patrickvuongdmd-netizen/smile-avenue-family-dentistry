@@ -91,6 +91,13 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        "swipe-hint": {
+          "0%": { opacity: "0", transform: "translateX(10px)" },
+          "15%": { opacity: "1", transform: "translateX(10px)" },
+          "50%": { opacity: "1", transform: "translateX(-10px)" },
+          "85%": { opacity: "1", transform: "translateX(-10px)" },
+          "100%": { opacity: "0", transform: "translateX(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
