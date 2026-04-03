@@ -63,11 +63,17 @@ const BlogCardCarousel = ({ posts, categoryColors, categoryImages, fallbackImage
     onSelect();
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
+    emblaApi.on("pointerDown", stopAutoplay);
+    emblaApi.on("pointerUp", startAutoplay);
+    startAutoplay();
     return () => {
+      stopAutoplay();
       emblaApi.off("select", onSelect);
       emblaApi.off("reInit", onSelect);
+      emblaApi.off("pointerDown", stopAutoplay);
+      emblaApi.off("pointerUp", startAutoplay);
     };
-  }, [emblaApi, onSelect]);
+  }, [emblaApi, onSelect, startAutoplay, stopAutoplay]);
 
   return (
     <div className="md:hidden">
