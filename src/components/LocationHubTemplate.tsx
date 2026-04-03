@@ -476,7 +476,7 @@ const LocationHubTemplate = ({ data }: { data: LocationHubData }) => {
                 posts={BLOG_POSTS.slice(0, 3)}
                 categoryColors={BLOG_CATEGORY_COLORS}
                 categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={categoryImplants}
+                fallbackImage={BLOG_FALLBACK_IMAGE}
               />
               {/* Desktop grid */}
               <div className="hidden md:grid md:grid-cols-3 gap-6">
