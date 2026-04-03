@@ -139,13 +139,13 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
   return (
     <>
-    <nav className={`sticky top-0 z-[1000] bg-background/95 backdrop-blur-md md:border-b md:border-border transition-transform duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"}`} ref={navRef}>
+    <nav className={`sticky top-0 z-[1000] bg-background/95 backdrop-blur-md border-b border-border/60 shadow-[0_1px_3px_0_rgba(0,0,0,0.04)] transition-transform duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"}`} ref={navRef}>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-20">
+        <div className="flex items-center justify-between h-14 md:h-20">
           {/* Logo — absolute-centered on mobile, normal flow on desktop */}
           <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center shrink-0">
-            <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="h-20 md:h-[72px] w-auto object-contain" width={200} height={155} />
+            <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="h-10 md:h-[72px] w-auto object-contain" width={200} height={155} />
           </Link>
           {/* Invisible spacer on mobile to keep justify-between working */}
           <div className="w-10 md:hidden" />
@@ -318,7 +318,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
     {/* Mobile fullscreen menu */}
     <div
-      className={`md:hidden fixed inset-0 top-[57px] z-[999] transition-all duration-300 ${
+      className={`md:hidden fixed inset-0 top-14 z-[999] transition-all duration-300 ${
         mobileOpen
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
@@ -326,32 +326,21 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       style={{ backgroundColor: 'hsl(var(--background))' }}
     >
       <div className="h-full flex flex-col">
-        {/* Close button — top right */}
-        <div className="flex justify-end px-5 pt-3">
-          <button
-            onClick={() => setMobileOpen(false)}
-            className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-muted/50 transition-colors text-muted-foreground"
-            aria-label="Close menu"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
         {/* Scrollable nav content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain px-8 pt-2 pb-10">
+        <div className="flex-1 overflow-y-auto overscroll-contain px-7 pt-6 pb-10">
           <div>
             {/* Services */}
             <button
-              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
               onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
             >
               Services
-              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "services" ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-2">
+              <div className="pl-1 py-3 space-y-0">
                 {serviceLinks.map((s) => (
-                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {s.label}
                   </Link>
                 ))}
@@ -360,32 +349,31 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
             {/* Locations */}
             <button
-              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
               onClick={() => setMobileExpanded(mobileExpanded === "locations" ? null : "locations")}
             >
               Locations
-              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "locations" ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-2">
-                <Link to="/cypress-tx" className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
-                <Link to="/katy-tx" className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
+              <div className="pl-1 py-3 space-y-0">
+                <Link to="/cypress-tx" className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
+                <Link to="/katy-tx" className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
               </div>
             </div>
 
-
             {/* Patients */}
             <button
-              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
               onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
             >
               Patients
-              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "patients" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-2">
+              <div className="pl-1 py-3 space-y-0">
                 {patientLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={l.href} to={l.href} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
@@ -394,16 +382,16 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
             {/* About */}
             <button
-              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
               onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
             >
               About
-              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "about" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-2">
+              <div className="pl-1 py-3 space-y-0">
                 {aboutLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={l.href} to={l.href} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
@@ -412,17 +400,17 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           </div>
 
           {/* Book Now */}
-          <div className="mt-10">
+          <div className="mt-8">
             <button
               onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-              className="inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest !px-8 !py-3 !rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
+              className="w-full inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest px-8 py-3.5 rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
             >
               Book Now
             </button>
           </div>
 
           {/* Social links */}
-          <div className="flex items-center gap-5 mt-10">
+          <div className="flex items-center gap-5 mt-6">
             <a href="https://www.facebook.com/SmileAvenueFamilyDentistry/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-foreground transition-colors">
               <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.044 1.613.115v3.146c-.427-.044-.72-.065-.964-.065-1.37 0-1.899.519-1.899 1.87v2.492h3.727l-.64 3.667h-3.087v8.126C18.996 22.92 23 18.918 23 14c0-5.523-4.477-10-10-10S3 8.477 3 14c0 4.237 2.636 7.855 6.101 9.691z"/></svg>
             </a>
