@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import BlogCardCarousel from "@/components/BlogCardCarousel";
+import BlogDesktopGrid from "@/components/BlogDesktopGrid";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight, Play } from "lucide-react";
@@ -324,43 +325,13 @@ const Home = () => {
                 categoryImages={BLOG_CATEGORY_IMAGES}
                 fallbackImage={BLOG_FALLBACK_IMAGE}
               />
-              {/* Desktop grid */}
-              <div className="hidden md:grid md:grid-cols-3 gap-6">
-              {BLOG_POSTS.slice(0, 3).map((post) => {
-                const colors = BLOG_CATEGORY_COLORS[post.category] || BLOG_CATEGORY_COLORS.Implants;
-                return (
-                  <Link
-                    key={post.slug}
-                    to={`/blog/${post.slug}`}
-                    className="hidden md:flex group flex-col rounded-2xl overflow-hidden hover:shadow-xl transition-shadow"
-                  >
-                    <div className={`aspect-[16/10] relative overflow-hidden ${colors.bg}`}>
-                      <img
-                        src={BLOG_CATEGORY_IMAGES[post.category] || BLOG_FALLBACK_IMAGE}
-                        alt={post.title}
-                        loading="lazy"
-                        width={800}
-                        height={512}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply"
-                      />
-                      <div className="absolute top-4 left-4">
-                        <span className={`text-[11px] font-sans font-bold uppercase tracking-widest backdrop-blur-sm px-3 py-1 rounded-full ${colors.badge}`}>{post.category}</span>
-                      </div>
-                    </div>
-                    <div className="flex-1 bg-card border border-t-0 border-border/50 rounded-b-2xl p-6 flex flex-col">
-                      <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors mb-3 line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-sm font-body text-muted-foreground line-clamp-2 mb-5 flex-1">{post.excerpt}</p>
-                      <div className="flex items-center justify-between text-xs font-sans text-muted-foreground pt-4 border-t border-border/50">
-                        <span className="font-semibold text-foreground">{post.author}</span>
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-              </div>
+              <BlogDesktopGrid
+                posts={BLOG_POSTS.slice(0, 3)}
+                variant="image"
+                categoryColors={BLOG_CATEGORY_COLORS}
+                categoryImages={BLOG_CATEGORY_IMAGES}
+                fallbackImage={BLOG_FALLBACK_IMAGE}
+              />
             </div>
             <Link to="/blog" className="sm:hidden flex items-center justify-center gap-1.5 mt-6 text-sm font-sans font-medium text-primary hover:underline">
               View all posts
