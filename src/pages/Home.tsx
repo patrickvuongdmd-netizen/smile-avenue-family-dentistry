@@ -163,25 +163,43 @@ const Home = () => {
       <TrustStrip />
 
       <main id="main-content" className="pb-14 lg:pb-0">
-        {/* HERO — Original two-column layout */}
-        <section className="px-4 sm:px-6 lg:px-8 py-8 md:py-20 bg-background">
+        {/* HERO — Tend-inspired refinements on mobile */}
+        <section className="px-4 sm:px-6 lg:px-8 pt-10 pb-8 md:py-20 bg-background">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
-                <p className="kicker mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
-                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
-                <p className="font-body text-base md:text-lg leading-relaxed mb-4 md:mb-8 text-muted-foreground">Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second.</p>
+                <p className="kicker mb-3 md:mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
+                <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-4 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
+                
+                {/* Body copy — truncated on mobile with Read More */}
+                <div className="mb-5 md:mb-8">
+                  <p className={`font-body text-base md:text-lg leading-relaxed text-muted-foreground ${!heroCopyExpanded ? "line-clamp-2 md:line-clamp-none" : ""}`}>
+                    Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second.
+                  </p>
+                  {!heroCopyExpanded && (
+                    <button 
+                      onClick={() => setHeroCopyExpanded(true)} 
+                      className="md:hidden text-sm font-sans font-semibold text-primary mt-1 tracking-wide"
+                    >
+                      ...READ MORE ▾
+                    </button>
+                  )}
+                </div>
+
                 {/* Location selector */}
-                <div className="flex items-center gap-2 mb-3 md:mb-4">
+                <div className="flex items-center gap-2 mb-4">
                   <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
                   <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-2 md:gap-3 mb-2 md:mb-3">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 w-full sm:w-auto">Book Online</button>
-                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center justify-center gap-2 text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 w-full sm:w-auto"><Phone className="w-4 h-4" />{heroPhoneFmt}</a>
+
+                {/* CTAs — side by side on mobile like Tend */}
+                <div className="flex gap-2.5 md:gap-3 mb-4 md:mb-3">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 flex-1 sm:flex-initial">Book Online</button>
+                  <a href={`tel:${heroPhone}`} className="btn-secondary flex items-center justify-center gap-2 text-sm md:text-base !px-5 !py-3 md:!px-8 md:!py-4 flex-1 sm:flex-initial"><Phone className="w-4 h-4" />{heroPhoneFmt}</a>
                 </div>
-                <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-2 md:mb-3">
+
+                <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-3">
                   <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
                   <span className="mx-1.5 md:mx-2 text-border">·</span>
                   <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Insurance accepted
@@ -193,8 +211,6 @@ const Home = () => {
                   <span className="font-semibold text-foreground">4.9</span>
                   <span>from 5,000+ reviews</span>
                 </div>
-
-
               </div>
               {/* Hero media */}
               <div className="aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
