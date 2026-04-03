@@ -318,7 +318,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
     {/* Mobile fullscreen menu */}
     <div
-      className={`md:hidden fixed inset-0 top-[57px] z-[999] transition-all duration-300 ${
+      className={`md:hidden fixed inset-0 top-14 z-[999] transition-all duration-300 ${
         mobileOpen
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
@@ -326,19 +326,8 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
       style={{ backgroundColor: 'hsl(var(--background))' }}
     >
       <div className="h-full flex flex-col">
-        {/* Close button — top right */}
-        <div className="flex justify-end px-5 pt-3">
-          <button
-            onClick={() => setMobileOpen(false)}
-            className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-muted/50 transition-colors text-muted-foreground"
-            aria-label="Close menu"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
         {/* Scrollable nav content */}
-        <div className="flex-1 overflow-y-auto overscroll-contain px-8 pt-2 pb-10">
+        <div className="flex-1 overflow-y-auto overscroll-contain px-7 pt-6 pb-10">
           <div>
             {/* Services */}
             <button
