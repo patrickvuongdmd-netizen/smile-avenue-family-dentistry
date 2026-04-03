@@ -84,22 +84,22 @@ const Footer = () => {
         <TrustTicker />
       </div>
 
-      {/* Bottom half of card on dark bg — logo + Book Now */}
+      {/* Bottom half of card on dark bg — logo left, Book Now right */}
       <div className="bg-foreground">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-card rounded-b-[2rem] shadow-2xl px-8 py-6 md:px-16 md:py-7 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-card rounded-b-[2rem] shadow-2xl px-6 py-4 md:px-16 md:py-5 flex items-center justify-between gap-4">
             <Link to="/">
               <img
                 src="/logo-full.webp"
                 alt="Smile Avenue Family Dentistry"
-                className="h-10 md:h-12 w-auto object-contain"
+                className="h-9 md:h-11 w-auto object-contain"
                 width={1217}
                 height={645}
               />
             </Link>
             <button
               onClick={() => setBookingOpen(true)}
-              className="shrink-0 inline-flex items-center justify-center text-base px-8 py-3 rounded-full font-bold tracking-wide transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
+              className="shrink-0 inline-flex items-center justify-center text-sm md:text-base px-6 py-2.5 md:px-8 md:py-3 rounded-full font-bold tracking-wide transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
             >
               Book Now
             </button>
