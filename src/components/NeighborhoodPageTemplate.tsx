@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { MapPin, Phone, Clock, Star, Shield, Users, Stethoscope, Sparkles, Heart, Baby, Smile } from "lucide-react";
+import { MapPin, Phone, Clock, Star, Shield, Users, Stethoscope, Sparkles, Heart, Baby, Smile, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
@@ -15,6 +15,30 @@ import SkipToContent from "@/components/SkipToContent";
 import DoctorCard from "@/components/DoctorCard";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import { DOCTOR_IMAGES, OFFICE_IMAGES } from "@/lib/images";
+import BlogCardCarousel from "@/components/BlogCardCarousel";
+import { BLOG_POSTS } from "@/lib/blog-data";
+import categoryImplants from "@/assets/blog/category-implants.jpg";
+import categoryCosmetic from "@/assets/blog/category-cosmetic.jpg";
+import categoryEmergency from "@/assets/blog/category-emergency.jpg";
+import categoryInvisalign from "@/assets/blog/category-invisalign.jpg";
+import categoryPediatric from "@/assets/blog/category-pediatric.jpg";
+import categorySedation from "@/assets/blog/category-sedation.jpg";
+import categoryPreventive from "@/assets/blog/category-preventive.jpg";
+
+const BLOG_CATEGORY_IMAGES: Record<string, string> = {
+  Implants: categoryImplants, Cosmetic: categoryCosmetic, Emergency: categoryEmergency,
+  Invisalign: categoryInvisalign, Pediatric: categoryPediatric, Sedation: categorySedation, Preventive: categoryPreventive,
+};
+
+const BLOG_CATEGORY_COLORS: Record<string, { bg: string; badge: string; text: string }> = {
+  Implants: { bg: "bg-[hsl(192,40%,92%)]", badge: "bg-[hsl(192,72%,55%)]/15 text-[hsl(192,78%,33%)]", text: "text-[hsl(192,78%,33%)]" },
+  Cosmetic: { bg: "bg-[hsl(340,30%,93%)]", badge: "bg-[hsl(340,60%,60%)]/15 text-[hsl(340,60%,40%)]", text: "text-[hsl(340,60%,40%)]" },
+  Emergency: { bg: "bg-[hsl(15,40%,93%)]", badge: "bg-[hsl(15,70%,55%)]/15 text-[hsl(15,70%,35%)]", text: "text-[hsl(15,70%,35%)]" },
+  Invisalign: { bg: "bg-[hsl(160,30%,92%)]", badge: "bg-[hsl(160,50%,45%)]/15 text-[hsl(160,55%,30%)]", text: "text-[hsl(160,55%,30%)]" },
+  Pediatric: { bg: "bg-[hsl(270,30%,93%)]", badge: "bg-[hsl(270,50%,60%)]/15 text-[hsl(270,50%,40%)]", text: "text-[hsl(270,50%,40%)]" },
+  Sedation: { bg: "bg-[hsl(220,30%,93%)]", badge: "bg-[hsl(220,55%,55%)]/15 text-[hsl(220,55%,35%)]", text: "text-[hsl(220,55%,35%)]" },
+  Preventive: { bg: "bg-[hsl(80,30%,92%)]", badge: "bg-[hsl(80,50%,40%)]/15 text-[hsl(80,50%,28%)]", text: "text-[hsl(80,50%,28%)]" },
+};
 
 interface WhyChooseItem {
   icon: React.ReactNode;
@@ -418,6 +442,45 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
           </div>
         </section>
 
+        {/* FROM THE BLOG */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto">
+            <div className="flex items-end justify-between mb-12">
+              <div>
+                <p className="kicker">FROM THE BLOG</p>
+                <h2 className="section-heading">Dental Tips & Insights</h2>
+              </div>
+              <Link to="/blog" className="hidden sm:inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+                View All Posts <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div>
+              <BlogCardCarousel
+                posts={BLOG_POSTS.slice(0, 3)}
+                categoryColors={BLOG_CATEGORY_COLORS}
+                categoryImages={BLOG_CATEGORY_IMAGES}
+                fallbackImage={categoryImplants}
+              />
+              <div className="hidden md:grid md:grid-cols-3 gap-6">
+                {BLOG_POSTS.slice(0, 3).map((post) => (
+                  <Link key={post.slug} to={`/blog/${post.slug}`} className="group card-soft !p-0 overflow-hidden">
+                    <div className="p-7">
+                      <span className="text-xs font-sans font-medium text-primary uppercase tracking-wider">{post.category}</span>
+                      <h3 className="font-display text-lg font-semibold text-foreground mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">{post.title}</h3>
+                      <p className="text-sm font-body text-muted-foreground leading-relaxed line-clamp-3">{post.excerpt}</p>
+                      <div className="flex items-center justify-between mt-5">
+                        <span className="text-xs font-sans text-muted-foreground">{post.readTime}</span>
+                        <span className="text-sm font-sans font-medium text-primary group-hover:gap-2 transition-all inline-flex items-center gap-1">
+                          Read <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* LOCATION INFO */}
         <section className="section-padding section-alt">
