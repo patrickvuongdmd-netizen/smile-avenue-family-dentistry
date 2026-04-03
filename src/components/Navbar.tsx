@@ -334,7 +334,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           <div>
             {/* Services */}
             <button
-              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
+              className="flex items-center gap-1.5 py-3.5 w-full text-left text-lg font-display font-semibold text-foreground"
               onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
             >
               Services
