@@ -30,7 +30,7 @@ const BLOG_CATEGORY_COLORS: Record<string, { bg: string; badge: string; text: st
   Sedation: { bg: "bg-[hsl(260,30%,93%)]", badge: "bg-[hsl(260,50%,60%)]/15 text-[hsl(260,50%,40%)]", text: "text-[hsl(260,50%,40%)]" },
   Preventive: { bg: "bg-[hsl(140,30%,92%)]", badge: "bg-[hsl(140,45%,45%)]/15 text-[hsl(140,45%,30%)]", text: "text-[hsl(140,45%,30%)]" },
 };
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
