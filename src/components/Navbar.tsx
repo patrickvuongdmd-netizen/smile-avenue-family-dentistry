@@ -338,9 +338,9 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "services" ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-2">
+              <div className="pl-1 py-3 space-y-0">
                 {serviceLinks.map((s) => (
-                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {s.label}
                   </Link>
                 ))}
@@ -349,32 +349,31 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
             {/* Locations */}
             <button
-              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
               onClick={() => setMobileExpanded(mobileExpanded === "locations" ? null : "locations")}
             >
               Locations
-              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "locations" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "locations" ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-2">
-                <Link to="/cypress-tx" className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
-                <Link to="/katy-tx" className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
+              <div className="pl-1 py-3 space-y-0">
+                <Link to="/cypress-tx" className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Cypress, TX</Link>
+                <Link to="/katy-tx" className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>Katy, TX</Link>
               </div>
             </div>
 
-
             {/* Patients */}
             <button
-              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
               onClick={() => setMobileExpanded(mobileExpanded === "patients" ? null : "patients")}
             >
               Patients
-              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "patients" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "patients" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-2">
+              <div className="pl-1 py-3 space-y-0">
                 {patientLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={l.href} to={l.href} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
@@ -383,16 +382,16 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
             {/* About */}
             <button
-              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
               onClick={() => setMobileExpanded(mobileExpanded === "about" ? null : "about")}
             >
               About
-              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "about" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "about" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
-              <div className="pl-0.5 pb-2">
+              <div className="pl-1 py-3 space-y-0">
                 {aboutLinks.map((l) => (
-                  <Link key={l.href} to={l.href} className="block py-[7px] text-[13px] font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
+                  <Link key={l.href} to={l.href} className="block py-[7px] text-sm font-sans text-muted-foreground hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
                     {l.label}
                   </Link>
                 ))}
@@ -401,10 +400,10 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           </div>
 
           {/* Book Now */}
-          <div className="mt-10">
+          <div className="mt-8">
             <button
               onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-              className="inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest !px-8 !py-3 !rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
+              className="w-full inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-widest px-8 py-3.5 rounded-full transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
             >
               Book Now
             </button>
