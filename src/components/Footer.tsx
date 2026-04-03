@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Globe } from "lucide-react";
+import { ChevronDown, Facebook, Instagram, Globe } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/images";
 import BookingLocationModal from "@/components/BookingLocationModal";
+import TrustTicker from "@/components/TrustTicker";
 import {
   Accordion,
   AccordionContent,
@@ -56,6 +57,59 @@ const Footer = () => {
 
   return (
     <>
+      {/* Pre-footer CTA — white card with ticker cutting through */}
+      <section className="relative overflow-hidden">
+        <img
+          src="/images/prefooter-bg.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          width={1920}
+          height={800}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-foreground/10" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10 md:pt-12">
+          <div className="bg-card rounded-t-[2rem] shadow-2xl px-8 py-8 md:px-16 md:py-10">
+            <h2 className="font-display text-3xl md:text-[2.75rem] lg:text-[3.25rem] font-medium leading-[1.15] text-center max-w-2xl mx-auto text-muted-foreground">
+              Care at Smile Avenue isn't just gentle,{" "}
+              <span className="text-foreground font-semibold">it's genuine.</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-width ticker */}
+      <div className="relative z-20">
+        <TrustTicker />
+      </div>
+
+      {/* Bottom half of card on dark bg — logo + Book Now centered */}
+      <div className="bg-foreground">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-card rounded-b-[2rem] shadow-2xl px-6 py-4 md:px-12 md:py-5">
+            <div className="flex items-center justify-center gap-6 md:gap-10">
+              <Link to="/" className="shrink-0">
+                <img
+                  src="/logo-full.webp"
+                  alt="Smile Avenue Family Dentistry"
+                  className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+                  width={1217}
+                  height={645}
+                />
+              </Link>
+              <div className="w-px h-8 bg-border/60 hidden sm:block" />
+              <button
+                onClick={() => setBookingOpen(true)}
+                className="shrink-0 inline-flex items-center justify-center text-sm md:text-base px-6 py-2.5 md:px-8 md:py-3 rounded-full font-bold tracking-wide transition-all duration-200 text-white bg-primary hover:bg-primary-dark hover:shadow-lg"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Footer — 4 clean columns */}
       <footer className="bg-foreground text-background [&_a]:text-background [&_button]:text-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-6 lg:pt-6 lg:pb-8">
@@ -72,6 +126,7 @@ const Footer = () => {
                 <Link to="/membership-plan" className="block hover:opacity-100 transition-opacity">Membership Plans</Link>
                 <Link to="/patient-testimonials" className="block hover:opacity-100 transition-opacity">Testimonials</Link>
                 <Link to="/blog" className="block hover:opacity-100 transition-opacity">Blog</Link>
+                
               </div>
             </div>
 
