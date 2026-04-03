@@ -149,7 +149,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         {/* HERO */}
         <section className="section-warm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
-            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground">
+            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
               <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
@@ -158,20 +158,21 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
             </nav>
 
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-              <div>
+              <div className="text-center md:text-left">
                 <p className="kicker">{data.heroKicker}</p>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-[1.08] font-display">
                   {data.heroHeading}
                 </h1>
-                <p className="text-lg md:text-xl leading-relaxed mb-8 text-muted-foreground max-w-xl font-body">
+                <p className="text-[15px] md:text-xl leading-relaxed mb-8 text-muted-foreground max-w-xl mx-auto md:mx-0 font-body">
                   {data.heroBody}
                 </p>
-                <div className="flex flex-wrap gap-4">
-                  <button onClick={() => setBookingOpen(true)} className="btn-cta">
+                <div className="flex gap-3 mb-5 max-w-sm mx-auto md:mx-0">
+                  <button onClick={() => setBookingOpen(true)} className="btn-cta flex-1 whitespace-nowrap">
                     Book Appointment
                   </button>
-                  <a href={`tel:${PHONE}`} className="btn-secondary">
-                    Call {PHONE_FORMATTED}
+                  <a href={`tel:${PHONE}`} className="btn-secondary flex-1 whitespace-nowrap flex items-center justify-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    Call Us
                   </a>
                 </div>
               </div>

@@ -335,7 +335,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {/* HERO */}
         <section className="section-warm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
-            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground">
+            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
               <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
@@ -346,17 +346,17 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             </nav>
 
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-              <div>
+              <div className="text-center md:text-left">
                 <p className="kicker">{data.heroKicker}</p>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-[1.08] font-display">
                   {data.heroHeading}
                 </h1>
-                <p className="text-lg md:text-xl leading-relaxed mb-8 text-muted-foreground max-w-xl font-body">
+                <p className="text-[15px] md:text-xl leading-relaxed mb-8 text-muted-foreground max-w-xl mx-auto md:mx-0 font-body">
                   {data.heroBody}
                 </p>
 
                 {(data.heroValueProps && data.heroValueProps.length > 0) && (
-                  <ul className="space-y-3 mb-10">
+                  <ul className="space-y-3 mb-10 text-left max-w-sm mx-auto md:mx-0">
                     {data.heroValueProps.map((prop, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm font-sans text-foreground">
                         <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -366,16 +366,17 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   </ul>
                 )}
 
-                <div className="flex flex-wrap gap-4">
-                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta" aria-label={`Book ${data.serviceName} appointment`}>
+                <div className="flex gap-3 mb-5 max-w-sm mx-auto md:mx-0">
+                  <button onClick={() => setBookingModalOpen(true)} className="btn-cta flex-1 whitespace-nowrap" aria-label={`Book ${data.serviceName} appointment`}>
                     {data.heroCta1}
                   </button>
-                  <a href={`tel:${loc.phone}`} className="btn-secondary" aria-label={`Call ${loc.phoneFormatted}`}>
-                    {data.heroCta2}
+                  <a href={`tel:${loc.phone}`} className="btn-secondary flex-1 whitespace-nowrap flex items-center justify-center gap-2" aria-label={`Call ${loc.phoneFormatted}`}>
+                    <Phone className="w-4 h-4" />
+                    Call Us
                   </a>
                 </div>
 
-                <div className="flex items-center gap-4 mt-6">
+                <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
                   <span className="text-sm font-sans font-semibold text-foreground">4.9 ★★★★★</span>
                   <span className="text-xs font-sans text-muted-foreground">from 5,000+ reviews</span>
                 </div>
