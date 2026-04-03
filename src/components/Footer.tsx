@@ -145,7 +145,7 @@ const Footer = () => {
               <Accordion type="multiple" className="w-full space-y-0.5">
                 {footerServiceCategories.map((cat) => (
                   <AccordionItem key={cat.heading} value={cat.heading} className="border-background/10">
-                    <AccordionTrigger className="py-2.5 text-[15px] font-display font-semibold opacity-90 hover:opacity-100 hover:no-underline [&>svg]:text-[#b8e986] [&>svg]:w-4 [&>svg]:h-4 [&>svg]:opacity-100">
+                    <AccordionTrigger className="py-2.5 text-[15px] font-display font-semibold opacity-90 hover:opacity-100 hover:no-underline [&>svg]:text-primary [&>svg]:w-4 [&>svg]:h-4 [&>svg]:opacity-100">
                       {cat.heading}
                     </AccordionTrigger>
                     <AccordionContent className="pb-3">
