@@ -145,10 +145,13 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-20">
-          {/* Logo — scaled full logo on mobile, full logo on desktop */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center shrink-0">
+          {/* Logo — mark + wordmark on mobile, full badge on desktop */}
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center shrink-0 gap-2">
+            {/* Desktop: full badge logo */}
             <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="hidden md:block h-[72px] w-auto object-contain" width={200} height={155} />
-            <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="md:hidden h-11 w-auto object-contain" width={200} height={155} />
+            {/* Mobile: circle mark + elegant wordmark */}
+            <img src="/logo-mark.webp" alt="" className="md:hidden h-9 w-9 object-contain rounded-full" width={36} height={36} />
+            <span className="md:hidden font-display text-lg font-bold tracking-tight text-foreground">Smile Avenue</span>
           </Link>
           {/* Invisible spacer on mobile to keep justify-between working */}
           <div className="w-10 md:hidden" />
