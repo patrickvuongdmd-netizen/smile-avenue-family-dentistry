@@ -164,52 +164,54 @@ const Home = () => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO — Tend-inspired refinements on mobile */}
-        <section className="px-4 sm:px-6 lg:px-8 pt-14 pb-10 md:py-20 bg-background">
+        <section className="px-4 sm:px-6 lg:px-8 pt-8 pb-8 md:py-20 bg-background">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="text-center lg:text-left">
-                <p className="kicker mb-5 md:mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
-                <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-6 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
+                <p className="kicker mb-3 md:mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
+                <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-4 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
                 
                 {/* Body copy — centered on mobile, key phrase bolded */}
-                <div className="mb-8 md:mb-8">
+                <div className="mb-5 md:mb-8">
                   <p className={`font-body text-[15px] md:text-lg leading-relaxed text-muted-foreground ${!heroCopyExpanded ? "line-clamp-2 md:line-clamp-none" : ""}`}>
                     Whether it's been 6 months or 6 years, we make it easy to get back to the dentist with <strong className="text-foreground font-semibold">no judgment, ever.</strong> Netflix in every room, warm blankets, and doctors who listen first.
                   </p>
                   {!heroCopyExpanded && (
                     <button 
                       onClick={() => setHeroCopyExpanded(true)} 
-                      className="md:hidden text-sm font-sans font-semibold text-primary mt-1.5 tracking-wide"
+                      className="md:hidden text-sm font-sans font-semibold text-primary mt-1 tracking-wide"
                     >
                       ...READ MORE ▾
                     </button>
                   )}
                 </div>
 
-                {/* Location selector */}
-                <div className="flex items-center justify-center lg:justify-start gap-2 mb-6 md:mb-4">
-                  <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
-                  <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
-                  <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
-                </div>
-
                 {/* CTAs — balanced equal-width on mobile */}
-                <div className="flex gap-3 md:gap-3 mb-5 md:mb-3 max-w-sm mx-auto lg:mx-0">
-                  <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-sm md:text-base py-3.5 md:!px-8 md:!py-4 rounded-xl transition-all duration-200 bg-primary md:bg-[hsl(var(--gold))] text-primary-foreground md:text-[hsl(var(--gold-foreground))] md:shadow-[0_2px_8px_hsl(var(--gold)/0.25)] md:hover:bg-[hsl(40,55%,48%)]">Book Now</button>
-                  <a href={`tel:${heroPhone}`} className="flex-1 btn-secondary flex items-center justify-center gap-2 text-sm md:text-base py-3.5 md:!px-8 md:!py-4"><Phone className="w-4 h-4" /><span className="hidden sm:inline">{heroPhoneFmt}</span><span className="sm:hidden">Call Us</span></a>
+                <div className="flex gap-3 md:gap-3 mb-4 md:mb-3 max-w-xs md:max-w-sm mx-auto lg:mx-0">
+                  <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-sm md:text-base py-3 md:!px-8 md:!py-4 rounded-full transition-all duration-200 bg-primary md:bg-[hsl(var(--gold))] text-primary-foreground md:text-[hsl(var(--gold-foreground))] md:shadow-[0_2px_8px_hsl(var(--gold)/0.25)] md:hover:bg-[hsl(40,55%,48%)]">Book Now</button>
+                  <a href={`tel:${heroPhone}`} className="flex-1 btn-secondary flex items-center justify-center gap-2 text-sm md:text-base py-3 md:!px-8 md:!py-4 rounded-full"><Phone className="w-4 h-4" /><span className="hidden sm:inline">{heroPhoneFmt}</span><span className="sm:hidden">Call Us</span></a>
                 </div>
 
-                <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-4">
+                <p className="text-[11px] md:text-xs font-sans text-muted-foreground mb-3">
                   <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
                   <span className="mx-1.5 md:mx-2 text-border">·</span>
                   <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Insurance accepted
                   <span className="mx-1.5 md:mx-2 text-border">·</span>
                   <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />0% financing
                 </p>
-                <div className="flex items-center justify-center lg:justify-start gap-2 md:gap-3 text-xs md:text-sm font-sans text-muted-foreground">
-                  <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 md:w-3.5 md:h-3.5 fill-primary text-primary" />)}</div>
-                  <span className="font-semibold text-foreground">4.9</span>
-                  <span>from 5,000+ reviews</span>
+
+                {/* Location selector + rating in a compact row */}
+                <div className="flex items-center justify-center lg:justify-start gap-3 mb-1">
+                  <div className="flex items-center gap-1.5">
+                    <button onClick={() => setHeroLoc("cypress")} className={`px-2.5 py-0.5 rounded-full text-[11px] font-sans font-semibold transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
+                    <button onClick={() => setHeroLoc("katy")} className={`px-2.5 py-0.5 rounded-full text-[11px] font-sans font-semibold transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
+                  </div>
+                  <span className="w-px h-3.5 bg-border" />
+                  <div className="flex items-center gap-1 text-[11px] md:text-sm font-sans text-muted-foreground">
+                    <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 fill-primary text-primary" />)}</div>
+                    <span className="font-semibold text-foreground">4.9</span>
+                    <span className="hidden sm:inline">from</span> <span>5,000+ reviews</span>
+                  </div>
                 </div>
               </div>
               {/* Hero media */}
