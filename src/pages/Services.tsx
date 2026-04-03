@@ -141,12 +141,32 @@ const Services = () => {
 
         {/* SERVICE CATEGORIES */}
         {serviceCategories.map((cat, idx) => (
-          <section key={cat.heading} className={`section-padding ${idx % 2 === 0 ? "section-alt" : "bg-background"}`}>
+          <section key={cat.heading} className={`section-padding ${idx % 2 === 0 ? "section-warm" : "bg-background"}`}>
             <div className="container mx-auto">
               <h2 className="section-heading text-2xl md:text-3xl mb-8">{cat.heading}</h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {cat.services.map((svc) => (
-                  <ServiceCard key={svc.title} {...svc} />
+                  <div key={svc.title} className="card-soft !p-0 overflow-hidden flex flex-col">
+                    <Link to={svc.href} className="group p-6 pb-4 flex-1">
+                      <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center mb-4 text-muted-foreground">
+                        {svc.icon}
+                      </div>
+                      <h3 className="font-display text-lg font-semibold text-primary mb-2">{svc.title}</h3>
+                      <p className="text-sm font-body text-muted-foreground leading-relaxed">{svc.description}</p>
+                      <span className="inline-flex items-center gap-1 mt-4 text-sm font-sans font-medium text-primary group-hover:gap-2 transition-all">
+                        Learn More <span aria-hidden>→</span>
+                      </span>
+                    </Link>
+                    <div className="px-6 pb-5 pt-2 border-t border-border/40 flex items-center gap-3 text-xs font-sans">
+                      <Link to={svc.cypressHref} className="text-muted-foreground hover:text-primary transition-colors font-medium">
+                        Cypress
+                      </Link>
+                      <span className="text-border">·</span>
+                      <Link to={svc.katyHref} className="text-muted-foreground hover:text-primary transition-colors font-medium">
+                        Katy
+                      </Link>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
