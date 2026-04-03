@@ -61,6 +61,43 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const [navHidden, setNavHidden] = useState(false);
   const lastScrollY = useRef(0);
 
+  // Swipe-to-close tracking
+  const touchStartX = useRef(0);
+  const touchCurrentX = useRef(0);
+  const isSwiping = useRef(false);
+  const menuPanelRef = useRef<HTMLDivElement>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchCurrentX.current = e.touches[0].clientX;
+    isSwiping.current = false;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchCurrentX.current = e.touches[0].clientX;
+    const deltaX = touchCurrentX.current - touchStartX.current;
+    // Only track rightward swipes (positive delta)
+    if (deltaX > 10) {
+      isSwiping.current = true;
+      if (menuPanelRef.current) {
+        menuPanelRef.current.style.transform = `translateX(${Math.max(0, deltaX)}px)`;
+        menuPanelRef.current.style.transition = 'none';
+      }
+    }
+  };
+
+  const handleTouchEnd = () => {
+    const deltaX = touchCurrentX.current - touchStartX.current;
+    if (menuPanelRef.current) {
+      menuPanelRef.current.style.transition = '';
+      menuPanelRef.current.style.transform = '';
+    }
+    if (isSwiping.current && deltaX > 80) {
+      setMobileOpen(false);
+    }
+    isSwiping.current = false;
+  };
+
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
@@ -332,10 +369,14 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
     />
     {/* Mobile fullscreen menu — slide-in overlay */}
     <div
+      ref={menuPanelRef}
       className={`md:hidden fixed inset-y-0 right-0 top-14 z-[999] w-[85%] max-w-sm transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-2xl ${
         mobileOpen ? "translate-x-0" : "translate-x-full"
       }`}
       style={{ backgroundColor: 'hsl(var(--background))' }}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <div className="h-full flex flex-col">
         {/* Scrollable nav content */}
