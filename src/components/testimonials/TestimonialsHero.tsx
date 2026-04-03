@@ -31,7 +31,7 @@ const TestimonialsHero = ({ bookingUrl }: Props) => (
 
       <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
         <div className="text-center lg:text-left">
-          <p className="kicker">5,000+ FIVE-STAR REVIEWS</p>
+          <p className="kicker">5,000+ FIVE-STAR REVIEWS<br className="sm:hidden" />CYPRESS & KATY</p>
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
             They came in nervous. They left smiling.
           </h1>
