@@ -148,7 +148,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           {/* Logo — scaled full logo on mobile, full logo on desktop */}
           <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center shrink-0">
             <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="hidden md:block h-[72px] w-auto object-contain" width={200} height={155} />
-            <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="md:hidden h-10 w-auto object-contain" width={200} height={155} />
+            <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="md:hidden h-11 w-auto object-contain" width={200} height={155} />
           </Link>
           {/* Invisible spacer on mobile to keep justify-between working */}
           <div className="w-10 md:hidden" />
