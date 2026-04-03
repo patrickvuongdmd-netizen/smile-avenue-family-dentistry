@@ -84,25 +84,28 @@ const Footer = () => {
         <TrustTicker />
       </div>
 
-      {/* Bottom half of card on dark bg — logo left, Book Now right */}
+      {/* Bottom half of card on dark bg — logo + Book Now centered */}
       <div className="bg-foreground">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-card rounded-b-[2rem] shadow-2xl px-6 py-4 md:px-16 md:py-5 flex items-center justify-between gap-4">
-            <Link to="/">
-              <img
-                src="/logo-full.webp"
-                alt="Smile Avenue Family Dentistry"
-                className="h-9 md:h-11 w-auto object-contain"
-                width={1217}
-                height={645}
-              />
-            </Link>
-            <button
-              onClick={() => setBookingOpen(true)}
-              className="shrink-0 inline-flex items-center justify-center text-sm md:text-base px-6 py-2.5 md:px-8 md:py-3 rounded-full font-bold tracking-wide transition-all duration-200 text-white bg-primary hover:bg-primary-dark"
-            >
-              Book Now
-            </button>
+          <div className="bg-card rounded-b-[2rem] shadow-2xl px-6 py-4 md:px-12 md:py-5">
+            <div className="flex items-center justify-center gap-6 md:gap-10">
+              <Link to="/" className="shrink-0">
+                <img
+                  src="/logo-full.webp"
+                  alt="Smile Avenue Family Dentistry"
+                  className="h-8 sm:h-10 md:h-11 w-auto object-contain"
+                  width={1217}
+                  height={645}
+                />
+              </Link>
+              <div className="w-px h-8 bg-border/60 hidden sm:block" />
+              <button
+                onClick={() => setBookingOpen(true)}
+                className="shrink-0 inline-flex items-center justify-center text-sm md:text-base px-6 py-2.5 md:px-8 md:py-3 rounded-full font-bold tracking-wide transition-all duration-200 text-white bg-primary hover:bg-primary-dark hover:shadow-lg"
+              >
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
