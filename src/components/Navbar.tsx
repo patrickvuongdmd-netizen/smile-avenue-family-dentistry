@@ -410,7 +410,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           </div>
 
           {/* Social links */}
-          <div className="flex items-center gap-5 mt-10">
+          <div className="flex items-center gap-5 mt-6">
             <a href="https://www.facebook.com/SmileAvenueFamilyDentistry/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-foreground transition-colors">
               <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.044 1.613.115v3.146c-.427-.044-.72-.065-.964-.065-1.37 0-1.899.519-1.899 1.87v2.492h3.727l-.64 3.667h-3.087v8.126C18.996 22.92 23 18.918 23 14c0-5.523-4.477-10-10-10S3 8.477 3 14c0 4.237 2.636 7.855 6.101 9.691z"/></svg>
             </a>
