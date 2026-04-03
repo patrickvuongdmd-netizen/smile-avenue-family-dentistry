@@ -342,46 +342,15 @@ const Home = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div className="md:grid md:grid-cols-3 md:gap-6">
-              {/* Mobile carousel */}
-              <div className="flex md:hidden gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4 px-4 pb-2">
-                {BLOG_POSTS.slice(0, 3).map((post) => {
-                  const colors = BLOG_CATEGORY_COLORS[post.category] || BLOG_CATEGORY_COLORS.Implants;
-                  return (
-                    <Link
-                      key={post.slug}
-                      to={`/blog/${post.slug}`}
-                      className="group flex flex-col rounded-2xl overflow-hidden shadow-md snap-start"
-                      style={{ minWidth: '80vw', maxWidth: '80vw' }}
-                    >
-                      <div className={`aspect-[16/10] relative overflow-hidden ${colors.bg}`}>
-                        <img
-                          src={BLOG_CATEGORY_IMAGES[post.category] || categoryImplants}
-                          alt={post.title}
-                          loading="lazy"
-                          width={800}
-                          height={512}
-                          className="w-full h-full object-cover mix-blend-multiply"
-                        />
-                        <div className="absolute top-3 left-3">
-                          <span className={`text-[11px] font-sans font-bold uppercase tracking-widest backdrop-blur-sm px-3 py-1 rounded-full ${colors.badge}`}>{post.category}</span>
-                        </div>
-                      </div>
-                      <div className="flex-1 bg-card border border-t-0 border-border/50 rounded-b-2xl p-5 flex flex-col">
-                        <h3 className="font-display text-lg font-bold text-foreground leading-snug mb-2 line-clamp-2">
-                          {post.title}
-                        </h3>
-                        <p className="text-sm font-body text-muted-foreground line-clamp-2 mb-4 flex-1">{post.excerpt}</p>
-                        <div className="flex items-center justify-between text-xs font-sans text-muted-foreground pt-3 border-t border-border/50">
-                          <span className="font-semibold text-foreground">{post.author}</span>
-                          <span>{post.readTime}</span>
-                        </div>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
+            <div>
+              <BlogCardCarousel
+                posts={BLOG_POSTS.slice(0, 3)}
+                categoryColors={BLOG_CATEGORY_COLORS}
+                categoryImages={BLOG_CATEGORY_IMAGES}
+                fallbackImage={categoryImplants}
+              />
               {/* Desktop grid */}
+              <div className="hidden md:grid md:grid-cols-3 gap-6">
               {BLOG_POSTS.slice(0, 3).map((post) => {
                 const colors = BLOG_CATEGORY_COLORS[post.category] || BLOG_CATEGORY_COLORS.Implants;
                 return (
