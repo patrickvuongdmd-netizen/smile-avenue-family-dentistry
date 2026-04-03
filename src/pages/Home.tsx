@@ -336,7 +336,7 @@ const Home = () => {
                   >
                     <div className={`aspect-[16/10] relative overflow-hidden ${colors.bg}`}>
                       <img
-                        src={BLOG_CATEGORY_IMAGES[post.category] || categoryImplants}
+                        src={BLOG_CATEGORY_IMAGES[post.category] || BLOG_FALLBACK_IMAGE}
                         alt={post.title}
                         loading="lazy"
                         width={800}
