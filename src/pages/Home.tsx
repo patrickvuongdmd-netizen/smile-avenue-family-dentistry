@@ -164,15 +164,15 @@ const Home = () => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO — Tend-inspired refinements on mobile */}
-        <section className="px-4 sm:px-6 lg:px-8 pt-10 pb-8 md:py-20 bg-background">
+        <section className="px-4 sm:px-6 lg:px-8 pt-12 pb-8 md:py-20 bg-background">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
               <div>
-                <p className="kicker mb-3 md:mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
-                <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-4 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
+                <p className="kicker mb-4 md:mb-2">FAMILY DENTIST IN CYPRESS & KATY, TX</p>
+                <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-5 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
                 
                 {/* Body copy — truncated on mobile with Read More */}
-                <div className="mb-5 md:mb-8">
+                <div className="mb-6 md:mb-8">
                   <p className={`font-body text-base md:text-lg leading-relaxed text-muted-foreground ${!heroCopyExpanded ? "line-clamp-2 md:line-clamp-none" : ""}`}>
                     Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second.
                   </p>
@@ -187,7 +187,7 @@ const Home = () => {
                 </div>
 
                 {/* Location selector */}
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-2 mb-5 md:mb-4">
                   <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
                   <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
