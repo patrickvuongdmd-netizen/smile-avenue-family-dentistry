@@ -47,6 +47,7 @@ const BlogCardCarousel = ({ posts, categoryColors, categoryImages, fallbackImage
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+  const [showHint, setShowHint] = useState(false);
 
   const scrollPrev = useCallback(() => { emblaApi?.scrollPrev(); startAutoplay(); }, [emblaApi, startAutoplay]);
   const scrollNext = useCallback(() => { emblaApi?.scrollNext(); startAutoplay(); }, [emblaApi, startAutoplay]);
@@ -56,6 +57,8 @@ const BlogCardCarousel = ({ posts, categoryColors, categoryImages, fallbackImage
     setSelectedIndex(emblaApi.selectedScrollSnap());
     setCanScrollPrev(emblaApi.canScrollPrev());
     setCanScrollNext(emblaApi.canScrollNext());
+    // Dismiss hint on first interaction
+    setShowHint(false);
   }, [emblaApi]);
 
   useEffect(() => {
@@ -75,8 +78,20 @@ const BlogCardCarousel = ({ posts, categoryColors, categoryImages, fallbackImage
     };
   }, [emblaApi, onSelect, startAutoplay, stopAutoplay]);
 
+  // Show swipe hint once per session
+  useEffect(() => {
+    const key = "blog-carousel-hint-seen";
+    if (sessionStorage.getItem(key)) return;
+    const timer = setTimeout(() => setShowHint(true), 1200);
+    const hideTimer = setTimeout(() => {
+      setShowHint(false);
+      sessionStorage.setItem(key, "1");
+    }, 4200);
+    return () => { clearTimeout(timer); clearTimeout(hideTimer); };
+  }, []);
+
   return (
-    <div className="md:hidden">
+    <div className="md:hidden relative">
       {/* Carousel viewport */}
       <div ref={emblaRef} className="overflow-hidden -mx-4">
         <div className="flex">
@@ -125,7 +140,17 @@ const BlogCardCarousel = ({ posts, categoryColors, categoryImages, fallbackImage
         </div>
       </div>
 
-      {/* Dots + arrows */}
+      {/* Swipe hint overlay */}
+      {showHint && (
+        <div className="absolute inset-0 pointer-events-none flex items-center justify-center z-10">
+          <div className="flex items-center gap-2 bg-foreground/80 text-background px-4 py-2.5 rounded-full backdrop-blur-sm animate-swipe-hint">
+            <ChevronLeft className="w-4 h-4 opacity-60" />
+            <span className="text-xs font-sans font-medium tracking-wide">Swipe</span>
+            <ChevronRight className="w-4 h-4" />
+          </div>
+        </div>
+      )}
+
       <div className="flex items-center justify-center gap-3 mt-5">
         <button
           onClick={scrollPrev}
