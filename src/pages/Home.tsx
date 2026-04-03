@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BlogCardCarousel from "@/components/BlogCardCarousel";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight, Play } from "lucide-react";
