@@ -187,7 +187,7 @@ const Home = () => {
                 </div>
 
                 {/* Location selector */}
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center gap-2 mb-5 md:mb-4">
                   <span className="text-xs font-sans font-medium text-muted-foreground">Your location:</span>
                   <button onClick={() => setHeroLoc("cypress")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "cypress" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Cypress</button>
                   <button onClick={() => setHeroLoc("katy")} className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-colors ${heroLoc === "katy" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>Katy</button>
