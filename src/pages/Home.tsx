@@ -172,7 +172,7 @@ const Home = () => {
                 <h1 className="font-display text-[2rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.08] mb-5 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
                 
                 {/* Body copy — truncated on mobile with Read More */}
-                <div className="mb-5 md:mb-8">
+                <div className="mb-6 md:mb-8">
                   <p className={`font-body text-base md:text-lg leading-relaxed text-muted-foreground ${!heroCopyExpanded ? "line-clamp-2 md:line-clamp-none" : ""}`}>
                     Whether it's been 6 months or 6 years, we make it easy — with no judgment, ever. Netflix in every room, warm blankets, and doctors who listen first and treat second.
                   </p>
