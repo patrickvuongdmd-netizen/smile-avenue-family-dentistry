@@ -331,11 +331,11 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
           <div>
             {/* Services */}
             <button
-              className="flex items-center gap-2.5 py-4 w-full text-left text-[15px] font-sans font-semibold text-foreground tracking-wide"
+              className="flex items-center justify-between py-3.5 w-full text-left text-lg font-display font-semibold text-foreground border-b border-border/30"
               onClick={() => setMobileExpanded(mobileExpanded === "services" ? null : "services")}
             >
               Services
-              <ChevronDown className={`w-3.5 h-3.5 text-primary/50 transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 text-primary transition-transform duration-200 ${mobileExpanded === "services" ? "rotate-180" : ""}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${mobileExpanded === "services" ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
               <div className="pl-0.5 pb-2">
