@@ -30,29 +30,29 @@ const TestimonialsHero = ({ bookingUrl }: Props) => (
       </nav>
 
       <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
-        <div>
+        <div className="text-center lg:text-left">
           <p className="kicker">5,000+ FIVE-STAR REVIEWS · CYPRESS & KATY</p>
           <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">
             They came in nervous. They left smiling.
           </h1>
-          <p className="section-body">
-            From first-visit nerves to "can I come back tomorrow?" — these are real stories from real families who finally found a dentist that feels different.
+          <p className="section-body mb-8">
+            From first-visit nerves to "can I come back tomorrow?" — these are real stories from real families who finally found a dentist that <strong className="text-foreground font-semibold">feels different.</strong>
           </p>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-4">
-            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-cta w-full sm:w-auto text-center">
+          <div className="flex gap-3 mb-5 max-w-sm mx-auto lg:mx-0">
+            <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-cta flex-1 text-center">
               Book Your Visit
             </a>
-            <a href="tel:8326481756" className="btn-secondary w-full sm:w-auto text-center flex items-center justify-center gap-2">
+            <a href="tel:8326481756" className="btn-secondary flex-1 text-center flex items-center justify-center gap-2">
               <Phone className="w-4 h-4" />
-              (832) 648-1756
+              Call Us
             </a>
           </div>
 
           <p className="text-xs font-sans text-muted-foreground mb-4">✓ We confirm within 1 hour · ✓ Same-day appointments · ✓ 0% financing available</p>
 
           {/* Rating + platform pills */}
-          <div className="flex items-center gap-3 text-sm font-sans text-muted-foreground mb-6">
+          <div className="flex items-center justify-center lg:justify-start gap-3 text-sm font-sans text-muted-foreground mb-6">
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />
@@ -62,7 +62,7 @@ const TestimonialsHero = ({ bookingUrl }: Props) => (
             <span>from 5,000+ verified reviews</span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
             {platformStats.map(s => (
               <div
                 key={s.platform}
