@@ -4,33 +4,7 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight, Play } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blog-data";
-import categoryImplants from "@/assets/blog/category-implants.jpg";
-import categoryCosmetic from "@/assets/blog/category-cosmetic.jpg";
-import categoryEmergency from "@/assets/blog/category-emergency.jpg";
-import categoryInvisalign from "@/assets/blog/category-invisalign.jpg";
-import categoryPediatric from "@/assets/blog/category-pediatric.jpg";
-import categorySedation from "@/assets/blog/category-sedation.jpg";
-import categoryPreventive from "@/assets/blog/category-preventive.jpg";
-
-const BLOG_CATEGORY_IMAGES: Record<string, string> = {
-  Implants: categoryImplants,
-  Cosmetic: categoryCosmetic,
-  Emergency: categoryEmergency,
-  Invisalign: categoryInvisalign,
-  Pediatric: categoryPediatric,
-  Sedation: categorySedation,
-  Preventive: categoryPreventive,
-};
-
-const BLOG_CATEGORY_COLORS: Record<string, { bg: string; badge: string; text: string }> = {
-  Implants: { bg: "bg-[hsl(192,40%,92%)]", badge: "bg-[hsl(192,72%,55%)]/15 text-[hsl(192,78%,33%)]", text: "text-[hsl(192,78%,33%)]" },
-  Cosmetic: { bg: "bg-[hsl(340,30%,93%)]", badge: "bg-[hsl(340,60%,60%)]/15 text-[hsl(340,60%,40%)]", text: "text-[hsl(340,60%,40%)]" },
-  Emergency: { bg: "bg-[hsl(20,40%,92%)]", badge: "bg-[hsl(20,80%,55%)]/15 text-[hsl(20,70%,38%)]", text: "text-[hsl(20,70%,38%)]" },
-  Invisalign: { bg: "bg-[hsl(160,30%,92%)]", badge: "bg-[hsl(160,50%,45%)]/15 text-[hsl(160,50%,32%)]", text: "text-[hsl(160,50%,32%)]" },
-  Pediatric: { bg: "bg-[hsl(45,50%,92%)]", badge: "bg-[hsl(45,70%,50%)]/15 text-[hsl(45,70%,32%)]", text: "text-[hsl(45,70%,32%)]" },
-  Sedation: { bg: "bg-[hsl(260,30%,93%)]", badge: "bg-[hsl(260,50%,60%)]/15 text-[hsl(260,50%,40%)]", text: "text-[hsl(260,50%,40%)]" },
-  Preventive: { bg: "bg-[hsl(140,30%,92%)]", badge: "bg-[hsl(140,45%,45%)]/15 text-[hsl(140,45%,30%)]", text: "text-[hsl(140,45%,30%)]" },
-};
+import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
 import { useState } from "react";
 
 import Navbar from "@/components/Navbar";
@@ -348,7 +322,7 @@ const Home = () => {
                 posts={BLOG_POSTS.slice(0, 3)}
                 categoryColors={BLOG_CATEGORY_COLORS}
                 categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={categoryImplants}
+                fallbackImage={BLOG_FALLBACK_IMAGE}
               />
               {/* Desktop grid */}
               <div className="hidden md:grid md:grid-cols-3 gap-6">
@@ -362,7 +336,7 @@ const Home = () => {
                   >
                     <div className={`aspect-[16/10] relative overflow-hidden ${colors.bg}`}>
                       <img
-                        src={BLOG_CATEGORY_IMAGES[post.category] || categoryImplants}
+                        src={BLOG_CATEGORY_IMAGES[post.category] || BLOG_FALLBACK_IMAGE}
                         alt={post.title}
                         loading="lazy"
                         width={800}
