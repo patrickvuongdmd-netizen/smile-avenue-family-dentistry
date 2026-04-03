@@ -1,14 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 
 const items = [
-  "Dental done differently",
-  "No judgment ever",
-  "Outcomes, not quotas",
-  "Decades of experience",
-  "Science-based care",
-  "Top-rated clinicians",
-  "Full-service dentistry",
-  "Designed for comfort",
+  "Hospitality-driven care",
+  "Zero judgment, all heart",
+  "Your comfort comes first",
+  "Genuine, not just gentle",
+  "5-star experience, every visit",
+  "Modern tools, proven results",
+  "Family dentistry reimagined",
+  "Houston's trusted team",
 ];
 
 const doubled = [...items, ...items];
