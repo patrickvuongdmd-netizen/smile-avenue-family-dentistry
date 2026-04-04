@@ -3,7 +3,7 @@ import BlogCardCarousel from "@/components/BlogCardCarousel";
 import BlogDesktopGrid from "@/components/BlogDesktopGrid";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight, Play } from "lucide-react";
+import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
 import { useState } from "react";
