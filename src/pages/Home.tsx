@@ -65,18 +65,18 @@ const Home = () => {
     <>
       <SkipToContent />
       <Helmet>
-        <title>Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX</title>
-        <meta name="description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments. Book online today." />
+        <title>Smile Avenue Family Dentistry | A Dentist That Feels Like Home</title>
+        <meta name="description" content="A dentist that feels like home — warm blankets, Netflix in every room, and no judgment, ever. 5,000+ five-star reviews. Cypress & Katy, TX." />
         <link rel="canonical" href="https://www.smileavenuefamilydentistry.com/" />
-        <meta property="og:title" content="Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX" />
-        <meta property="og:description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments." />
+        <meta property="og:title" content="Smile Avenue Family Dentistry | A Dentist That Feels Like Home" />
+        <meta property="og:description" content="A dentist that feels like home — warm blankets, Netflix in every room, and no judgment, ever. 5,000+ five-star reviews." />
         <meta property="og:image" content={OFFICE_IMAGES.homepageHero} />
         <meta property="og:url" content="https://www.smileavenuefamilydentistry.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX" />
-        <meta name="twitter:description" content="Smile Avenue Family Dentistry — your trusted family dentist in Cypress and Katy, TX. 5,000+ five-star reviews." />
+        <meta name="twitter:title" content="Smile Avenue Family Dentistry | A Dentist That Feels Like Home" />
+        <meta name="twitter:description" content="A dentist that feels like home — warm blankets, Netflix in every room, and no judgment, ever. 5,000+ five-star reviews." />
         <meta name="twitter:image" content={OFFICE_IMAGES.homepageHero} />
         <link rel="alternate" hrefLang="es" href="https://www.smileavenuefamilydentistry.com/es/" />
         <link rel="alternate" hrefLang="en" href="https://www.smileavenuefamilydentistry.com/" />
