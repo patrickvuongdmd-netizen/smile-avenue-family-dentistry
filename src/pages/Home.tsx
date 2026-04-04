@@ -135,10 +135,10 @@ const Home = () => {
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               <div className="text-center lg:text-left">
                 <p className="kicker mb-2 md:mb-2 text-[10px] md:text-xs">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
-                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
+                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">A Dentist That <em className="not-italic text-primary">Feels Like Home</em></h1>
                 
                 <p className="font-body text-[13px] md:text-lg leading-relaxed text-muted-foreground mb-4 md:mb-8">
-                  Whether it's been 6 months or 6 years, we make it easy to get back to the dentist with <strong className="text-foreground font-semibold">no judgment, ever.</strong> Netflix in every room, warm blankets, and doctors who listen first.
+                  Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
                 </p>
 
                 {/* CTAs */}
