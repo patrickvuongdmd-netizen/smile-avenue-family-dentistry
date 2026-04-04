@@ -210,19 +210,19 @@ const Home = () => {
           <div className="container mx-auto">
             <p className="kicker text-center">WHAT WE DO</p>
             <h2 className="section-heading text-center">Everything Your Family Needs, Under One Roof</h2>
-            <div className="grid sm:grid-cols-2 gap-5 mt-10 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-5 mt-8 sm:mt-10 max-w-4xl mx-auto">
               {services.map((s, i) => (
                 <Link
                   key={i}
                   to={`/services/${s.slug}`}
-                  className="flex items-start gap-5 bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
+                  className="flex flex-col items-center text-center gap-2 sm:flex-row sm:items-start sm:text-left sm:gap-5 bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
                 >
-                  <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground transition-colors">
+                  <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground transition-colors [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
                     {s.icon}
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-bold text-primary mb-1">{s.title}</h3>
-                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{s.description}</p>
+                    <h3 className="font-display text-[15px] sm:text-lg font-bold text-primary mb-0.5 sm:mb-1">{s.title}</h3>
+                    <p className="text-xs sm:text-sm font-body text-muted-foreground leading-relaxed">{s.description}</p>
                   </div>
                 </Link>
               ))}
