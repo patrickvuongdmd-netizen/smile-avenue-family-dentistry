@@ -55,7 +55,7 @@ const faqs = [
 ];
 
 const Home = () => {
-  const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
+  
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   
 
