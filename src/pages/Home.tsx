@@ -130,7 +130,7 @@ const Home = () => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO — Tend-inspired editorial on mobile, two-col on desktop */}
-        <section className="bg-background">
+        <section className="section-warm lg:bg-background">
           {/* ── MOBILE HERO ── */}
           <div className="lg:hidden px-5 pt-8 pb-10 text-center">
             {/* Logo mark as brand anchor */}
