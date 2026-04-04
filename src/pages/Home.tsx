@@ -59,7 +59,7 @@ const Home = () => {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   
 
-  useDocTitle("Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX");
+  useDocTitle("Smile Avenue Family Dentistry | A Dentist That Feels Like Home");
 
   return (
     <>
