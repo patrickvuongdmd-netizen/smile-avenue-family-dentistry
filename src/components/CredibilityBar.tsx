@@ -19,14 +19,14 @@ const platforms = [
 ];
 
 const CredibilityBar = () => (
-  <section className="py-10 md:py-14 bg-muted/50">
+  <section className="py-6 md:py-14 bg-muted/50">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p className="text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-8">Where Houston Trusts Us</p>
-      <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-        {platforms.map((p) => (
-          <div key={p.name} className="flex flex-col items-center gap-2 min-w-[120px]">
+      <p className="text-[10px] md:text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-4 md:mb-8">Where Houston Trusts Us</p>
+      <div className="grid grid-cols-2 gap-4 max-w-xs mx-auto md:max-w-none md:flex md:flex-wrap md:justify-center md:gap-12">
+        {platforms.map((p, i) => (
+          <div key={p.name} className={`flex flex-col items-center gap-1 md:gap-2 md:min-w-[120px] ${i === platforms.length - 1 ? 'col-span-2' : ''}`}>
             <div className="text-muted-foreground/50 grayscale">{p.icon}</div>
-            <span className="text-xs font-sans font-medium text-muted-foreground">{p.stat}</span>
+            <span className="text-[11px] md:text-xs font-sans font-medium text-muted-foreground">{p.stat}</span>
           </div>
         ))}
       </div>
