@@ -129,63 +129,87 @@ const Home = () => {
       <TrustStrip />
 
       <main id="main-content" className="pb-14 lg:pb-0">
-        {/* HERO — Brand-emotional, conversion-focused */}
-        <section className="px-4 sm:px-6 lg:px-8 pt-5 pb-6 md:py-20 bg-background">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-              <div className="text-center lg:text-left">
-                <p className="kicker mb-2 md:mb-2 text-[10px] md:text-xs">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
-                <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">A Dentist That <em className="not-italic text-primary">Feels Like Home</em></h1>
-                
-                <p className="font-body text-[13px] md:text-lg leading-relaxed text-muted-foreground mb-4 md:mb-8">
-                  Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
-                </p>
+        {/* HERO — Tend-inspired editorial on mobile, two-col on desktop */}
+        <section className="bg-background">
+          {/* ── MOBILE HERO ── */}
+          <div className="lg:hidden px-5 pt-8 pb-10 text-center">
+            {/* Logo mark as brand anchor */}
+            <img src="/logo-mark.png" alt="" className="w-16 h-16 mx-auto mb-5 rounded-full shadow-sm" width={64} height={64} />
 
-                {/* CTAs */}
-                <div className="flex gap-2.5 md:gap-3 mb-3 md:mb-3 max-w-[280px] md:max-w-sm mx-auto lg:mx-0">
-                  <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-sm md:text-base py-2.5 md:!px-8 md:!py-4 rounded-full transition-all duration-200 bg-primary md:bg-[hsl(var(--gold))] text-primary-foreground md:text-[hsl(var(--gold-foreground))] md:shadow-[0_2px_8px_hsl(var(--gold)/0.25)] md:hover:bg-[hsl(40,55%,48%)]">Book Now</button>
-                  <a href={`tel:${CYPRESS_PHONE}`} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-sm md:text-base py-2.5 md:!px-8 md:!py-4 rounded-full"><Phone className="w-3.5 h-3.5" /><span className="hidden sm:inline">{CYPRESS_PHONE_FORMATTED}</span><span className="sm:hidden">Call Us</span></a>
-                </div>
+            <h1 className="font-display text-[2rem] leading-[1.12] font-bold text-foreground mb-5">
+              A Dentist That{" "}
+              <em className="not-italic text-primary">Feels Like Home</em>
+            </h1>
 
-                <p className="text-[10px] md:text-xs font-sans text-muted-foreground mb-2">
-                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
-                  <span className="mx-1 md:mx-2 text-border">·</span>
-                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />Insurance accepted
-                  <span className="mx-1 md:mx-2 text-border">·</span>
-                  <Check className="w-3 h-3 md:w-3.5 md:h-3.5 inline text-primary mr-0.5" />0% financing
-                </p>
+            <p className="font-body text-[15px] leading-[1.7] text-muted-foreground mb-4 max-w-[340px] mx-auto">
+              Caring for yourself starts with your smile. At Smile Avenue, we deliver exceptional dental care that treats your oral health as an essential part of your overall well-being.
+            </p>
+            <p className="font-body text-[15px] leading-[1.7] text-muted-foreground mb-8 max-w-[340px] mx-auto">
+              Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
+            </p>
 
-                {/* Star rating */}
-                <div className="flex items-center justify-center lg:justify-start gap-1 text-[10px] md:text-sm font-sans text-muted-foreground">
-                  <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 fill-primary text-primary" />)}</div>
-                  <span className="font-semibold text-foreground">4.9</span>
-                  <span>from 5,000+ verified reviews</span>
+            {/* CTAs */}
+            <div className="flex gap-2.5 max-w-[300px] mx-auto mb-5">
+              <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-[15px] py-3 rounded-full bg-primary text-primary-foreground transition-all">Book Now</button>
+              <a href={`tel:${CYPRESS_PHONE}`} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-[15px] py-3 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
+            </div>
+
+            {/* Circular doctor photos — peeking strip */}
+            <div className="flex justify-center -space-x-2 mb-5">
+              {doctors.slice(0, 4).map((doc) => {
+                const img = DOCTOR_IMAGES[doc.imgKey];
+                return (
+                  <img key={doc.imgKey} src={img.url} alt={img.alt} className="w-11 h-11 rounded-full border-2 border-background object-cover" loading="eager" width={44} height={44} />
+                );
+              })}
+              <div className="w-11 h-11 rounded-full border-2 border-background bg-primary/10 flex items-center justify-center text-[11px] font-sans font-semibold text-primary">+2</div>
+            </div>
+
+            {/* Social proof */}
+            <div className="flex items-center justify-center gap-1 text-xs font-sans text-muted-foreground">
+              <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}</div>
+              <span className="font-semibold text-foreground">4.9</span>
+              <span>from 5,000+ verified reviews</span>
+            </div>
+          </div>
+
+          {/* ── DESKTOP HERO ── */}
+          <div className="hidden lg:block px-8 py-20">
+            <div className="container mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="text-left">
+                  <p className="kicker mb-2 text-xs">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
+                  <h1 className="font-display text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-4 text-foreground">A Dentist That <em className="not-italic text-primary">Feels Like Home</em></h1>
+                  <p className="font-body text-lg leading-relaxed text-muted-foreground mb-8">
+                    Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
+                  </p>
+                  <div className="flex gap-3 mb-3 max-w-sm">
+                    <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 px-8 rounded-full transition-all duration-200 bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)]">Book Now</button>
+                    <a href={`tel:${CYPRESS_PHONE}`} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-base py-4 px-8 rounded-full"><Phone className="w-4 h-4" />{CYPRESS_PHONE_FORMATTED}</a>
+                  </div>
+                  <p className="text-xs font-sans text-muted-foreground mb-2">
+                    <Check className="w-3.5 h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
+                    <span className="mx-2 text-border">·</span>
+                    <Check className="w-3.5 h-3.5 inline text-primary mr-0.5" />Insurance accepted
+                    <span className="mx-2 text-border">·</span>
+                    <Check className="w-3.5 h-3.5 inline text-primary mr-0.5" />0% financing
+                  </p>
+                  <div className="flex items-center gap-1 text-sm font-sans text-muted-foreground">
+                    <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
+                    <span className="font-semibold text-foreground">4.9</span>
+                    <span>from 5,000+ verified reviews</span>
+                  </div>
                 </div>
-              </div>
-              {/* Hero media */}
-              <div className="aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
-                <video
-                  src={HERO_VIDEO_URL}
-                  autoPlay loop muted playsInline preload="metadata"
-                  poster={OFFICE_IMAGES.homepageHero}
-                  className="hidden lg:block w-full h-full object-cover"
-                />
-                <div className="lg:hidden w-full h-full">
-                  {mobileHeroPlaying ? (
-                    <video src={HERO_VIDEO_URL} autoPlay loop muted playsInline preload="metadata" className="w-full h-full object-cover" />
-                  ) : (
-                    <button onClick={() => setMobileHeroPlaying(true)} className="w-full h-full relative group cursor-pointer" aria-label="Play office tour video">
-                      <img src={OFFICE_IMAGES.homepageHero} alt="Smile Avenue Family Dentistry office — modern, welcoming dental practice" className="w-full h-full object-cover" fetchPriority="high" width={800} height={600} />
-                      <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/20 transition-colors" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                          <Play className="w-6 h-6 text-primary-foreground ml-0.5" fill="currentColor" />
-                        </div>
-                      </div>
-                    </button>
-                  )}
+                {/* Desktop hero video */}
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
+                  <video
+                    src={HERO_VIDEO_URL}
+                    autoPlay loop muted playsInline preload="metadata"
+                    poster={OFFICE_IMAGES.homepageHero}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
