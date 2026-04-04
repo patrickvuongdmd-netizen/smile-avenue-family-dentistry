@@ -57,7 +57,7 @@ const faqs = [
 const Home = () => {
   const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  const [heroCopyExpanded, setHeroCopyExpanded] = useState(false);
+  
 
   useDocTitle("Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX");
 
@@ -137,19 +137,9 @@ const Home = () => {
                 <p className="kicker mb-2 md:mb-2 text-[10px] md:text-xs">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
                 <h1 className="font-display text-[1.75rem] md:text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-3 md:mb-4 text-foreground">Your Family Deserves a Dentist Who <em className="not-italic text-primary">Actually Cares</em></h1>
                 
-                <div className="mb-4 md:mb-8">
-                  <p className={`font-body text-[14px] md:text-lg leading-relaxed text-muted-foreground ${!heroCopyExpanded ? "line-clamp-2 md:line-clamp-none" : ""}`}>
-                    Whether it's been 6 months or 6 years, we make it easy to get back to the dentist with <strong className="text-foreground font-semibold">no judgment, ever.</strong> Netflix in every room, warm blankets, and doctors who listen first.
-                  </p>
-                  {!heroCopyExpanded && (
-                    <button 
-                      onClick={() => setHeroCopyExpanded(true)} 
-                      className="md:hidden text-xs font-sans font-semibold text-primary mt-1 tracking-wide"
-                    >
-                      ...READ MORE ▾
-                    </button>
-                  )}
-                </div>
+                <p className="font-body text-[13px] md:text-lg leading-relaxed text-muted-foreground mb-4 md:mb-8">
+                  Whether it's been 6 months or 6 years, we make it easy to get back to the dentist with <strong className="text-foreground font-semibold">no judgment, ever.</strong> Netflix in every room, warm blankets, and doctors who listen first.
+                </p>
 
                 {/* CTAs */}
                 <div className="flex gap-2.5 md:gap-3 mb-3 md:mb-3 max-w-[280px] md:max-w-sm mx-auto lg:mx-0">
