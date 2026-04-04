@@ -57,7 +57,7 @@ const faqs = [
 const Home = () => {
   const [mobileHeroPlaying, setMobileHeroPlaying] = useState(false);
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  const [heroCopyExpanded, setHeroCopyExpanded] = useState(false);
+  
 
   useDocTitle("Smile Avenue Family Dentistry | Dentist in Cypress & Katy, TX");
 
