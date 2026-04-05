@@ -4,6 +4,7 @@ import BlogDesktopGrid from "@/components/BlogDesktopGrid";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight } from "lucide-react";
+import { trackPhoneClick } from "@/lib/track-phone";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
 import { useState } from "react";
@@ -183,7 +184,7 @@ const Home = () => {
             {/* CTAs — stacked full-width on mobile */}
             <div className="flex flex-col gap-2.5 mx-auto mb-5">
               <button onClick={() => setBookingModalOpen(true)} className="w-full inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-3.5 rounded-full bg-primary text-primary-foreground transition-all">Book Now</button>
-              <a href={`tel:${CYPRESS_PHONE}`} className="w-full btn-secondary flex items-center justify-center gap-1.5 text-base py-3.5 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
+              <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="w-full btn-secondary flex items-center justify-center gap-1.5 text-base py-3.5 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
             </div>
 
             {/* Circular doctor photos — peeking strip */}
@@ -217,7 +218,7 @@ const Home = () => {
                   </p>
                   <div className="flex gap-3 mb-3 max-w-sm">
                     <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 px-8 rounded-full transition-all duration-200 bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)]">Book Now</button>
-                    <a href={`tel:${CYPRESS_PHONE}`} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-base py-4 px-8 rounded-full"><Phone className="w-4 h-4" />{CYPRESS_PHONE_FORMATTED}</a>
+                    <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-base py-4 px-8 rounded-full"><Phone className="w-4 h-4" />{CYPRESS_PHONE_FORMATTED}</a>
                   </div>
                   <p className="text-xs font-sans text-muted-foreground mb-2">
                     <Check className="w-3.5 h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour

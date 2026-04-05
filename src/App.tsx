@@ -57,6 +57,11 @@ const FirethorneDentist = lazy(() => import("./pages/katy/FirethorneDentist.tsx"
 const CrossCreekRanchDentist = lazy(() => import("./pages/katy/CrossCreekRanchDentist.tsx"));
 const WestheimerParkwayDentist = lazy(() => import("./pages/katy/WestheimerParkwayDentist.tsx"));
 const FulshearDentist = lazy(() => import("./pages/katy/FulshearDentist.tsx"));
+const SpringDentist = lazy(() => import("./pages/cypress/SpringDentist.tsx"));
+const TomballDentist = lazy(() => import("./pages/cypress/TomballDentist.tsx"));
+const HockleyDentist = lazy(() => import("./pages/cypress/HockleyDentist.tsx"));
+const BrookshireDentist = lazy(() => import("./pages/katy/BrookshireDentist.tsx"));
+const RichmondDentist = lazy(() => import("./pages/katy/RichmondDentist.tsx"));
 const Locations = lazy(() => import("./pages/Locations.tsx"));
 const NewPatientHub = lazy(() => import("./pages/NewPatientHub.tsx"));
 const Doctors = lazy(() => import("./pages/Doctors.tsx"));
@@ -173,6 +178,9 @@ const App = () => (
               <Route path="/cypress-tx/fairfield-dentist" element={<FairfieldDentist />} />
               <Route path="/cypress-tx/cyfair-dentist" element={<CyFairDentist />} />
               <Route path="/cypress-tx/jersey-village-dentist" element={<JerseyVillageDentist />} />
+              <Route path="/cypress-tx/spring-dentist" element={<SpringDentist />} />
+              <Route path="/cypress-tx/tomball-dentist" element={<TomballDentist />} />
+              <Route path="/cypress-tx/hockley-dentist" element={<HockleyDentist />} />
               <Route path="/katy-tx" element={<KatyTx />} />
               <Route path="/katy-tx/emergency-dentist" element={<EmergencyDentistKaty />} />
               <Route path="/katy-tx/dental-implants" element={<DentalImplantsKaty />} />
@@ -197,6 +205,8 @@ const App = () => (
               <Route path="/katy-tx/cross-creek-ranch-dentist" element={<CrossCreekRanchDentist />} />
               <Route path="/katy-tx/westheimer-parkway-dentist" element={<WestheimerParkwayDentist />} />
               <Route path="/katy-tx/fulshear-dentist" element={<FulshearDentist />} />
+              <Route path="/katy-tx/brookshire-dentist" element={<BrookshireDentist />} />
+              <Route path="/katy-tx/richmond-dentist" element={<RichmondDentist />} />
               <Route path="/convenient-locations" element={<Locations />} />
               <Route path="/locations" element={<Navigate to="/convenient-locations" replace />} />
               <Route path="/patients/new-patient-hub" element={<NewPatientHub />} />
