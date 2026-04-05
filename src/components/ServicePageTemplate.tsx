@@ -92,6 +92,7 @@ export interface ServicePageData {
   ctaHeading: string;
   ctaBody: string;
   relatedServices?: RelatedService[];
+  blogCategory?: string;
 }
 
 const LOCATIONS = {
@@ -222,6 +223,27 @@ const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
     { title: "Pediatric Dentistry", slug: "pediatric-dentistry" },
     { title: "Preventive Dentistry", slug: "preventive-dentistry" },
   ],
+};
+
+const SERVICE_SLUG_TO_BLOG_CATEGORY: Record<string, string> = {
+  "dental-implants": "Implants",
+  "all-on-x-implants": "Implants",
+  "cosmetic-dentistry": "Cosmetic",
+  "teeth-whitening": "Cosmetic",
+  "veneers": "Cosmetic",
+  "emergency-dentist": "Emergency",
+  "invisalign": "Invisalign",
+  "pediatric-dentistry": "Pediatric",
+  "sedation-dentistry": "Sedation",
+  "dental-cleaning": "Preventive",
+  "preventive-dentistry": "Preventive",
+  "family-dental-care": "Preventive",
+  "root-canal": "Emergency",
+  "tooth-extraction": "Emergency",
+  "oral-surgery": "Implants",
+  "dental-crowns": "Cosmetic",
+  "dental-bridges": "Implants",
+  "dentures": "Implants",
 };
 
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
@@ -591,13 +613,24 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               </Link>
             </div>
             <div>
-              <BlogCardCarousel
-                posts={BLOG_POSTS.slice(0, 3)}
-                categoryColors={BLOG_CATEGORY_COLORS}
-                categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={BLOG_FALLBACK_IMAGE}
-              />
-              <BlogDesktopGrid posts={BLOG_POSTS.slice(0, 3)} />
+              {(() => {
+                const cat = data.blogCategory || SERVICE_SLUG_TO_BLOG_CATEGORY[data.serviceSlug];
+                const categoryPosts = cat
+                  ? BLOG_POSTS.filter(p => p.category === cat).slice(0, 3)
+                  : [];
+                const blogPosts = categoryPosts.length >= 2 ? categoryPosts : BLOG_POSTS.slice(0, 3);
+                return (
+                  <>
+                    <BlogCardCarousel
+                      posts={blogPosts}
+                      categoryColors={BLOG_CATEGORY_COLORS}
+                      categoryImages={BLOG_CATEGORY_IMAGES}
+                      fallbackImage={BLOG_FALLBACK_IMAGE}
+                    />
+                    <BlogDesktopGrid posts={blogPosts} />
+                  </>
+                );
+              })()}
             </div>
           </div>
         </section>
