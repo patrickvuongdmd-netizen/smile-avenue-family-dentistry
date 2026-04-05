@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Facebook, Instagram, Globe } from "lucide-react";
+import { ChevronDown, Facebook, Instagram, Globe, Phone } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/images";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import TrustTicker from "@/components/TrustTicker";
@@ -199,10 +199,10 @@ const Footer = () => {
             {/* Prominent phone buttons on mobile */}
             <div className="flex flex-col gap-2 mb-5">
               <a href="tel:8326481756" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-background/10 text-sm font-sans font-semibold hover:bg-background/20 transition-colors">
-                📞 Cypress: (832) 648-1756
+                <Phone className="w-4 h-4" /> Cypress: (832) 648-1756
               </a>
               <a href="tel:2818005008" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-background/10 text-sm font-sans font-semibold hover:bg-background/20 transition-colors">
-                📞 Katy: (281) 800-5008
+                <Phone className="w-4 h-4" /> Katy: (281) 800-5008
               </a>
             </div>
             <Accordion type="multiple" className="w-full">
