@@ -362,7 +362,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
     {/* Mobile backdrop overlay */}
     <div
-      className={`md:hidden fixed inset-0 top-14 z-[998] bg-black/40 backdrop-blur-sm transition-opacity duration-400 ease-out ${
+      className={`md:hidden fixed inset-0 top-16 z-[998] bg-black/40 backdrop-blur-sm transition-opacity duration-400 ease-out ${
         mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       }`}
       onClick={() => setMobileOpen(false)}
@@ -371,7 +371,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
     {/* Mobile fullscreen menu — slide-in overlay */}
     <div
       ref={menuPanelRef}
-      className={`md:hidden fixed inset-y-0 right-0 top-14 z-[999] w-[85%] max-w-sm transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-2xl ${
+      className={`md:hidden fixed inset-y-0 right-0 top-16 z-[999] w-[85%] max-w-sm transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] shadow-2xl ${
         mobileOpen ? "translate-x-0" : "translate-x-full"
       }`}
       style={{ backgroundColor: 'hsl(var(--background))' }}
