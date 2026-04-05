@@ -225,6 +225,27 @@ const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
   ],
 };
 
+const SERVICE_SLUG_TO_BLOG_CATEGORY: Record<string, string> = {
+  "dental-implants": "Implants",
+  "all-on-x-implants": "Implants",
+  "cosmetic-dentistry": "Cosmetic",
+  "teeth-whitening": "Cosmetic",
+  "veneers": "Cosmetic",
+  "emergency-dentist": "Emergency",
+  "invisalign": "Invisalign",
+  "pediatric-dentistry": "Pediatric",
+  "sedation-dentistry": "Sedation",
+  "dental-cleaning": "Preventive",
+  "preventive-dentistry": "Preventive",
+  "family-dental-care": "Preventive",
+  "root-canal": "Emergency",
+  "tooth-extraction": "Emergency",
+  "oral-surgery": "Implants",
+  "dental-crowns": "Cosmetic",
+  "dental-bridges": "Implants",
+  "dentures": "Implants",
+};
+
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const loc = LOCATIONS[data.location];
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.serviceSlug}/`;
