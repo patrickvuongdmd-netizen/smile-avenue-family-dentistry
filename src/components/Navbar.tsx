@@ -469,18 +469,31 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Book Now — staggered entrance */}
-          <div className={`mt-10 transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "340ms" : "0ms" }}>
+          {/* Book Online — gold CTA at top-like prominence */}
+          <div className={`mt-6 transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "320ms" : "0ms" }}>
             <button
               onClick={() => { setBookingModalOpen(true); setMobileOpen(false); }}
-              className="inline-flex items-center justify-center text-sm font-sans font-bold uppercase tracking-[0.15em] px-8 py-3.5 rounded-full transition-all duration-200 text-primary-foreground bg-primary hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full py-4 rounded-full font-sans font-bold text-base tracking-wide bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)] transition-all"
             >
-              Book Now
+              Book Online
             </button>
+            <p className="text-[11px] font-sans text-muted-foreground text-center mt-1.5">Booking takes less than 60 seconds</p>
           </div>
 
-          {/* Social + utilities — staggered */}
-          <div className={`mt-8 transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "400ms" : "0ms" }}>
+          {/* Call buttons */}
+          <div className={`mt-8 space-y-2.5 transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "380ms" : "0ms" }}>
+            <a href="tel:8326481756" onClick={() => trackPhoneClick("8326481756")} className="flex items-center gap-3 w-full py-3.5 px-5 rounded-xl border border-border/60 bg-card text-sm font-sans font-semibold text-foreground hover:border-primary/30 transition-all">
+              <Phone className="w-4 h-4 text-primary shrink-0" />
+              Call Cypress: (832) 648-1756
+            </a>
+            <a href="tel:2818005008" onClick={() => trackPhoneClick("2818005008")} className="flex items-center gap-3 w-full py-3.5 px-5 rounded-xl border border-border/60 bg-card text-sm font-sans font-semibold text-foreground hover:border-primary/30 transition-all">
+              <Phone className="w-4 h-4 text-primary shrink-0" />
+              Call Katy: (281) 800-5008
+            </a>
+          </div>
+
+          {/* Social + utilities */}
+          <div className={`mt-8 transition-all duration-500 ease-out ${mobileOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: mobileOpen ? "440ms" : "0ms" }}>
             <div className="flex items-center gap-6">
               <a href="https://www.facebook.com/SmileAvenueFamilyDentistry/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground/60 hover:text-foreground transition-colors duration-200">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.044 1.613.115v3.146c-.427-.044-.72-.065-.964-.065-1.37 0-1.899.519-1.899 1.87v2.492h3.727l-.64 3.667h-3.087v8.126C18.996 22.92 23 18.918 23 14c0-5.523-4.477-10-10-10S3 8.477 3 14c0 4.237 2.636 7.855 6.101 9.691z"/></svg>
