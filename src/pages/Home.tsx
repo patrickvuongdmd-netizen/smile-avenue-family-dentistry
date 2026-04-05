@@ -135,8 +135,6 @@ const Home = () => {
         <section className="section-warm lg:bg-background">
           {/* ── MOBILE HERO ── */}
           <div className="lg:hidden px-5 pt-8 pb-10 text-center">
-            {/* Logo mark as brand anchor */}
-            <img src="/logo-mark.png" alt="" className="w-16 h-16 mx-auto mb-5 rounded-full shadow-sm" width={64} height={64} />
 
             <h1 className="font-display text-[2rem] leading-[1.12] font-bold text-foreground mb-5">
               A Dentist That{" "}
