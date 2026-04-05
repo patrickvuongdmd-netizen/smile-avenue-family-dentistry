@@ -136,7 +136,7 @@ const Home = () => {
           {/* ── MOBILE HERO ── */}
           <div className="lg:hidden px-5 pt-8 pb-10 text-center">
 
-            <h1 className="font-display text-[2rem] leading-[1.12] font-bold text-foreground mb-5">
+            <h1 className="font-display text-2xl leading-[1.15] font-bold text-foreground mb-5">
               A Dentist That{" "}
               <em className="not-italic text-primary">Feels Like Home</em>
             </h1>
@@ -148,10 +148,10 @@ const Home = () => {
               Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
             </p>
 
-            {/* CTAs */}
-            <div className="flex gap-2.5 max-w-[300px] mx-auto mb-5">
-              <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-[15px] py-3 rounded-full bg-primary text-primary-foreground transition-all">Book Now</button>
-              <a href={`tel:${CYPRESS_PHONE}`} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-[15px] py-3 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
+            {/* CTAs — stacked full-width on mobile */}
+            <div className="flex flex-col gap-2.5 mx-auto mb-5">
+              <button onClick={() => setBookingModalOpen(true)} className="w-full inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-3.5 rounded-full bg-primary text-primary-foreground transition-all">Book Now</button>
+              <a href={`tel:${CYPRESS_PHONE}`} className="w-full btn-secondary flex items-center justify-center gap-1.5 text-base py-3.5 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
             </div>
 
             {/* Circular doctor photos — peeking strip */}
@@ -224,12 +224,12 @@ const Home = () => {
           <div className="container mx-auto">
             <p className="kicker text-center">WHAT WE DO</p>
             <h2 className="section-heading text-center">Everything Your Family Needs, Under One Roof</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-5 mt-8 sm:mt-10 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 mt-8 sm:mt-10 max-w-4xl mx-auto">
               {services.map((s, i) => (
                 <Link
                   key={i}
                   to={`/services/${s.slug}`}
-                  className="flex flex-col items-center text-center gap-2 sm:flex-row sm:items-start sm:text-left sm:gap-5 bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
+                  className="flex flex-row items-center text-left gap-4 sm:items-start sm:gap-5 bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
                 >
                   <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground transition-colors [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
                     {s.icon}
@@ -242,7 +242,7 @@ const Home = () => {
               ))}
             </div>
             <div className="text-center mt-8">
-              <Link to="/services" className="btn-secondary">View All Services</Link>
+              <Link to="/services" className="btn-secondary w-full sm:w-auto">View All Services</Link>
             </div>
           </div>
         </section>
@@ -282,7 +282,7 @@ const Home = () => {
                   })}
                 </div>
                 <div className="text-center mt-8">
-                  <Link to="/doctors" className="btn-secondary">Meet All Doctors</Link>
+                  <Link to="/doctors" className="btn-secondary w-full sm:w-auto">Meet All Doctors</Link>
                 </div>
               </div>
             </section>
@@ -318,7 +318,7 @@ const Home = () => {
                   Implants, veneers, Invisalign, or cosmetic dentistry — get a personalized treatment plan at no cost.
                 </p>
               </div>
-              <Link to="/free-consultation" className="btn-primary shrink-0">
+              <Link to="/free-consultation" className="btn-primary shrink-0 w-full sm:w-auto">
                 Claim Your Free Visit
               </Link>
             </div>

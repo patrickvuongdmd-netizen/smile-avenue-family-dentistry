@@ -10,7 +10,7 @@ const values = [
 ];
 
 const TrustStrip = () => (
-  <div className="hidden md:block py-2.5 md:py-3 bg-card border-b border-border overflow-hidden">
+  <div className="hidden sm:block py-2.5 md:py-3 bg-card border-b border-border overflow-hidden">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-0.5 text-xs font-sans font-semibold text-muted-foreground">
         {values.map((v, i) => (
