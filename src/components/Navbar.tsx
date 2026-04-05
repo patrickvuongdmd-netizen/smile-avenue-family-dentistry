@@ -187,7 +187,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             {/* Desktop: full badge logo */}
             <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="hidden md:block h-[72px] w-auto object-contain" width={200} height={155} />
             {/* Mobile: circle mark + elegant wordmark */}
-            <img src="/logo-mark.png" alt="" className="md:hidden h-10 w-10 object-contain rounded-full" width={40} height={40} />
+            <img src="/logo-mark.png" alt="Smile Avenue Family Dentistry logo mark" className="md:hidden h-10 w-10 object-contain rounded-full" width={40} height={40} />
             <span className="md:hidden font-display text-lg font-bold tracking-tight text-foreground">Smile Avenue</span>
           </Link>
           {/* Invisible spacer on mobile to keep justify-between working */}
