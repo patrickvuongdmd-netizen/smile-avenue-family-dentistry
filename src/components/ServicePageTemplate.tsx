@@ -388,10 +388,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       )}
 
       <main id="main-content" className="pb-14 lg:pb-0">
-        {/* HERO */}
+        {/* HERO — simplified on mobile */}
         <section className="section-warm">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
-            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-20">
+            {/* Breadcrumb — hidden on mobile */}
+            <nav aria-label="Breadcrumb" className="hidden sm:block mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
               <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
@@ -401,7 +402,33 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               <span className="text-foreground">in {loc.name}, TX</span>
             </nav>
 
-            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+            {/* Mobile hero — streamlined */}
+            <div className="sm:hidden text-center">
+              <h1 className="text-2xl font-bold text-foreground leading-[1.12] font-display mb-4">
+                {data.heroHeading}
+              </h1>
+              <p className="text-[15px] leading-relaxed text-muted-foreground mb-6 max-w-[340px] mx-auto font-body">
+                {data.heroBody}
+              </p>
+              <button onClick={() => setBookingModalOpen(true)} className="w-full py-4 rounded-full font-sans font-bold text-base tracking-wide bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)] transition-all" aria-label={`Book ${data.serviceName} appointment`}>
+                Book Now
+              </button>
+              <p className="text-[11px] font-sans text-muted-foreground mt-2">Booking takes less than 60 seconds</p>
+              {heroImage && (
+                <img
+                  src={heroImage.url}
+                  alt={heroImage.alt}
+                  className="w-full aspect-[16/7] object-cover rounded-2xl shadow-md mt-6"
+                  loading="eager"
+                  fetchPriority="high"
+                  width={640}
+                  height={280}
+                />
+              )}
+            </div>
+
+            {/* Desktop hero */}
+            <div className="hidden sm:grid md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div className="text-center md:text-left">
                 <p className="kicker">{data.heroKicker}</p>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-[1.08] font-display">
@@ -431,6 +458,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                     Call Us
                   </a>
                 </div>
+                <p className="text-[11px] font-sans text-muted-foreground">Booking takes less than 60 seconds</p>
 
                 <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
                   <span className="text-sm font-sans font-semibold text-foreground">4.9 ★★★★★</span>
@@ -517,18 +545,34 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* PROCESS STEPS — large serif numbers */}
+        {/* PROCESS STEPS — timeline on mobile, grid on desktop */}
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto text-center">
             <p className="kicker">{data.processKicker}</p>
             <h2 className="section-heading">{data.processHeading}</h2>
             <p className="section-body max-w-2xl mx-auto">{data.processBody}</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+            {/* Desktop grid */}
+            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
               {data.processSteps.map((step) => (
                 <div key={step.number} className="text-left">
                   <span className="step-number">{step.number}</span>
                   <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
                   <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
+                </div>
+              ))}
+            </div>
+            {/* Mobile timeline */}
+            <div className="sm:hidden mt-10 text-left max-w-sm mx-auto">
+              {data.processSteps.map((step, i) => (
+                <div key={step.number} className="flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-primary font-display w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0">{step.number}</span>
+                    {i < data.processSteps.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
+                  </div>
+                  <div className={`pb-8 ${i === data.processSteps.length - 1 ? 'pb-0' : ''}`}>
+                    <h3 className="font-display text-base font-bold text-foreground mb-1">{step.title}</h3>
+                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -539,12 +583,12 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-background">
           <div className="container mx-auto">
             <div className="max-w-2xl mx-auto">
-              <div className="card-soft flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+              <div className="card-soft flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-6">
                 {DOCTOR_IMAGES["patrick-vuong"] && (
                   <img
                     src={DOCTOR_IMAGES["patrick-vuong"].url}
                     alt={DOCTOR_IMAGES["patrick-vuong"].alt}
-                    className="w-24 h-24 rounded-full object-cover shrink-0 ring-2 ring-primary/20"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover shrink-0 ring-2 ring-primary/20"
                     loading="lazy"
                     decoding="async"
                     width={96}
@@ -559,7 +603,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                     Over 1,000 implants placed. Advanced training in digital dentistry. Dr. Vuong leads every complex case with precision and compassion.
                   </p>
                   <Link to="/doctors/patrick-vuong-dmd" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-                    Read Full Bio →
+                    Meet Dr. Vuong →
                   </Link>
                 </div>
               </div>

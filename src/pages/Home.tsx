@@ -182,6 +182,7 @@ const Home = () => {
             {/* CTAs — stacked full-width on mobile */}
             <div className="flex flex-col gap-2.5 mx-auto mb-5">
               <button onClick={() => setBookingModalOpen(true)} className="w-full inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 rounded-full bg-primary text-primary-foreground transition-all pulse-glow">Book Now</button>
+              <p className="text-[11px] font-sans text-muted-foreground -mt-1">Booking takes less than 60 seconds</p>
               <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="w-full btn-secondary flex items-center justify-center gap-1.5 text-base py-3.5 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
             </div>
 
@@ -224,6 +225,7 @@ const Home = () => {
                     <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 px-8 rounded-full transition-all duration-200 bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)]">Book Now</button>
                     <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-base py-4 px-8 rounded-full"><Phone className="w-4 h-4" />{CYPRESS_PHONE_FORMATTED}</a>
                   </div>
+                  <p className="text-[11px] font-sans text-muted-foreground mb-1">Booking takes less than 60 seconds</p>
                   <p className="text-xs font-sans text-muted-foreground mb-2">
                     <Check className="w-3.5 h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
                     <span className="mx-2 text-border">·</span>
@@ -252,10 +254,10 @@ const Home = () => {
           </div>
         </section>
 
-        {/* CREDIBILITY BAR */}
+        {/* CREDIBILITY BAR — no lazy loading */}
         <CredibilityBar />
 
-        {/* SERVICES — Brand-global links */}
+        {/* SERVICES — no lazy loading */}
         <ScrollReveal>
         <section className="section-padding section-alt">
           <div className="container mx-auto">
