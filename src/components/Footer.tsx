@@ -116,8 +116,8 @@ const Footer = () => {
       {/* Footer — 4 clean columns */}
       <footer className="bg-foreground text-background [&_a]:text-background [&_button]:text-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-6 lg:pt-6 lg:pb-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-
+          {/* Desktop: 4-col grid */}
+          <div className="hidden lg:grid lg:grid-cols-4 gap-10">
             {/* Col 1 — About */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">All About Us</h4>
@@ -129,10 +129,8 @@ const Footer = () => {
                 <Link to="/membership-plan" className="block hover:opacity-100 transition-opacity">Membership Plans</Link>
                 <Link to="/patient-testimonials" className="block hover:opacity-100 transition-opacity">Testimonials</Link>
                 <Link to="/blog" className="block hover:opacity-100 transition-opacity">Blog</Link>
-                
               </div>
             </div>
-
             {/* Col 2 — Locations */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Locations</h4>
@@ -141,13 +139,10 @@ const Footer = () => {
                 <Link to="/katy-tx" className="block hover:opacity-100 transition-opacity">Katy</Link>
               </div>
             </div>
-
-            {/* Col 3 — Services (Accordion) */}
+            {/* Col 3 — Services */}
             <div>
               <h4 className="font-display text-lg font-semibold mb-5">Services</h4>
-              <Link to="/services" className="block text-sm font-sans font-medium opacity-90 hover:opacity-100 transition-opacity mb-4">
-                All Services →
-              </Link>
+              <Link to="/services" className="block text-sm font-sans font-medium opacity-90 hover:opacity-100 transition-opacity mb-4">All Services →</Link>
               <Accordion type="multiple" className="w-full space-y-0.5">
                 {footerServiceCategories.map((cat) => (
                   <AccordionItem key={cat.heading} value={cat.heading} className="border-background/10">
@@ -158,12 +153,7 @@ const Footer = () => {
                       <div className="space-y-3 pl-0.5">
                         {cat.services.map((svc) => (
                           <div key={svc.slug}>
-                            <Link
-                              to={`/services/${svc.slug}`}
-                              className="block text-sm font-sans font-medium opacity-75 hover:opacity-100 transition-opacity"
-                            >
-                              {svc.label}
-                            </Link>
+                            <Link to={`/services/${svc.slug}`} className="block text-sm font-sans font-medium opacity-75 hover:opacity-100 transition-opacity">{svc.label}</Link>
                             <div className="flex gap-4 mt-0.5 text-xs font-sans opacity-45">
                               <Link to={`/cypress-tx/${svc.slug}`} className="hover:opacity-100 transition-opacity">Cypress</Link>
                               <Link to={`/katy-tx/${svc.slug}`} className="hover:opacity-100 transition-opacity">Katy</Link>
@@ -176,39 +166,54 @@ const Footer = () => {
                 ))}
               </Accordion>
             </div>
-
             {/* Col 4 — Contact */}
-            <div>
-              <h4 className="font-display text-lg font-semibold mb-5">Questions?</h4>
+            <FooterContact />
+          </div>
 
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-1.5">Cypress</p>
-              <div className="space-y-1 text-sm font-sans opacity-80 mb-5">
-                <a href="tel:8326481756" className="block hover:opacity-100 transition-opacity">(832) 648-1756</a>
-                <a href="mailto:info@smileavenuecypress.com" className="block hover:opacity-100 transition-opacity break-all">info@smileavenuecypress.com</a>
-              </div>
-
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-1.5">Katy</p>
-              <div className="space-y-1 text-sm font-sans opacity-80 mb-5">
-                <a href="tel:2818005008" className="block hover:opacity-100 transition-opacity">(281) 800-5008</a>
-                <a href="mailto:info@smileavenuekaty.com" className="block hover:opacity-100 transition-opacity break-all">info@smileavenuekaty.com</a>
-              </div>
-
-              <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-2">Social</p>
-              <div className="flex items-center gap-3">
-                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Facebook">
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="TikTok">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.21 8.21 0 004.76 1.52V7.06a4.84 4.84 0 01-1-.37z"/></svg>
-                </a>
-                <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Google Business Profile">
-                  <Globe className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
+          {/* Mobile: Accordion layout */}
+          <div className="lg:hidden">
+            <Accordion type="multiple" className="w-full">
+              <AccordionItem value="about" className="border-background/10">
+                <AccordionTrigger className="py-3 font-display text-lg font-semibold hover:no-underline [&>svg]:text-primary [&>svg]:opacity-100">All About Us</AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <div className="space-y-2.5 text-sm font-sans opacity-80">
+                    <Link to="/about" className="block hover:opacity-100 transition-opacity">About</Link>
+                    <Link to="/our-team" className="block hover:opacity-100 transition-opacity">Dentists</Link>
+                    <Link to="/faq" className="block hover:opacity-100 transition-opacity">FAQs</Link>
+                    <Link to="/insurance" className="block hover:opacity-100 transition-opacity">Insurance</Link>
+                    <Link to="/membership-plan" className="block hover:opacity-100 transition-opacity">Membership Plans</Link>
+                    <Link to="/patient-testimonials" className="block hover:opacity-100 transition-opacity">Testimonials</Link>
+                    <Link to="/blog" className="block hover:opacity-100 transition-opacity">Blog</Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="locations" className="border-background/10">
+                <AccordionTrigger className="py-3 font-display text-lg font-semibold hover:no-underline [&>svg]:text-primary [&>svg]:opacity-100">Locations</AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <div className="space-y-2.5 text-sm font-sans opacity-80">
+                    <Link to="/cypress-tx" className="block hover:opacity-100 transition-opacity">Cypress</Link>
+                    <Link to="/katy-tx" className="block hover:opacity-100 transition-opacity">Katy</Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="services" className="border-background/10">
+                <AccordionTrigger className="py-3 font-display text-lg font-semibold hover:no-underline [&>svg]:text-primary [&>svg]:opacity-100">Services</AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <Link to="/services" className="block text-sm font-sans font-medium opacity-90 hover:opacity-100 transition-opacity mb-3">All Services →</Link>
+                  <div className="space-y-2 text-sm font-sans opacity-80">
+                    {footerServiceCategories.flatMap((cat) => cat.services).map((svc) => (
+                      <Link key={svc.slug} to={`/services/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label}</Link>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="contact" className="border-background/10">
+                <AccordionTrigger className="py-3 font-display text-lg font-semibold hover:no-underline [&>svg]:text-primary [&>svg]:opacity-100">Questions?</AccordionTrigger>
+                <AccordionContent className="pb-4">
+                  <FooterContact />
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
 
           {/* Bottom bar */}
