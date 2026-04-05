@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Building2, GraduationCap, Heart, Users, Landmark, Cpu } from "lucide-react";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
 import TrustTicker from "@/components/TrustTicker";
@@ -13,6 +14,7 @@ import { OFFICE_IMAGES, DOCTOR_IMAGES, PAGE_VIDEOS } from "@/lib/images";
 import LazyYouTube from "@/components/LazyYouTube";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import LazySection from "@/components/LazySection";
+import ScrollBookingPrompt from "@/components/ScrollBookingPrompt";
 
 const PHONE = "8326481756";
 const PHONE_FORMATTED = "(832) 648-1756";
@@ -53,6 +55,15 @@ const values = [
     title: "Balanced Lifestyle",
     description: "We believe the pinnacle of success is measured by a balanced lifestyle of career, recreation, family, and faith.",
   },
+];
+
+const milestones = [
+  { year: "2017", title: "Founded in Cypress", desc: "Dr. Patrick Vuong opens the first Smile Avenue office on Fry Road with a vision for hospitality-driven dentistry." },
+  { year: "2019", title: "In-House Dental Lab Launched", desc: "The Smile Dental Lab opens on-site, giving the team complete control over crowns, veneers, and implant restorations." },
+  { year: "2020", title: "3,000+ Five-Star Reviews", desc: "Smile Avenue becomes one of the highest-rated dental practices in the greater Houston area." },
+  { year: "2022", title: "Katy Location Opens", desc: "A second office at Westheimer Parkway brings the same hospitality-driven care to Katy, Cinco Ranch, and Fulshear families." },
+  { year: "2023", title: "5,000+ Reviews Milestone", desc: "The practice surpasses 5,000 verified five-star reviews across both locations." },
+  { year: "2024", title: "Advanced Digital Dentistry", desc: "Investment in 3D CBCT imaging, Medit digital scanners, and in-house 3D-printed aligners for cutting-edge care." },
 ];
 
 const heroPhotos = [
