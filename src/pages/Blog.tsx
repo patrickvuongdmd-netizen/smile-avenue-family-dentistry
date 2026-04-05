@@ -118,7 +118,7 @@ const Blog = () => {
         {active === "All" && (
           <section className="py-10 md:py-14 bg-background">
             <div className="container mx-auto px-4">
-              <ScrollReveal>
+              <div>
                 <Link
                   to={`/blog/${featured.slug}`}
                   className="block max-w-5xl mx-auto group"
@@ -164,7 +164,7 @@ const Blog = () => {
                     </div>
                   </div>
                 </Link>
-              </ScrollReveal>
+              </div>
             </div>
           </section>
         )}
@@ -174,7 +174,7 @@ const Blog = () => {
           <div className="container mx-auto px-4">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {(active === "All" ? filtered.slice(1) : filtered).map((post) => (
-                <ScrollReveal key={post.slug}>
+                <div key={post.slug}>
                   <Link
                     to={`/blog/${post.slug}`}
                     className="block bg-card rounded-2xl border border-border overflow-hidden group hover:border-primary/30 hover:shadow-lg transition-all h-full"
@@ -214,7 +214,7 @@ const Blog = () => {
                       </div>
                     </div>
                   </Link>
-                </ScrollReveal>
+                </div>
               ))}
             </div>
 
