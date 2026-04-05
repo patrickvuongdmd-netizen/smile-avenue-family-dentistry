@@ -18,6 +18,8 @@ import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import ScrollReveal from "@/components/ScrollReveal";
+import InsuranceChecker from "@/components/InsuranceChecker";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 import LazySection from "@/components/LazySection";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, HERO_VIDEO_URL } from "@/lib/images";
 import CredibilityBar from "@/components/CredibilityBar";
@@ -289,6 +291,22 @@ const Home = () => {
           </ScrollReveal>
         </LazySection>
 
+        {/* INSURANCE ELIGIBILITY CHECKER */}
+        <LazySection>
+          <section className="section-padding section-warm">
+            <div className="container mx-auto max-w-2xl">
+              <p className="kicker text-center">INSURANCE MADE EASY</p>
+              <h2 className="section-heading text-center">Check Your Insurance Benefits — Free</h2>
+              <p className="text-center text-sm font-body text-muted-foreground mb-8 max-w-lg mx-auto">
+                Not sure what your plan covers? Submit your info and we'll verify your dental benefits and call you within 1 hour.
+              </p>
+              <div className="card-warm p-6 md:p-8">
+                <InsuranceChecker />
+              </div>
+            </div>
+          </section>
+        </LazySection>
+
         {/* FREE CONSULTATION CTA */}
         <section className="py-12 bg-primary/5 border-y border-primary/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -359,6 +377,7 @@ const Home = () => {
       <Footer />
       <BackToTop />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
+      <ExitIntentPopup />
     </>
   );
 };
