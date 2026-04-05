@@ -60,6 +60,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null);
   const [navHidden, setNavHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const lastScrollY = useRef(0);
 
   // Swipe-to-close tracking
@@ -102,8 +103,8 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      // At top: always show. Scrolling down: hide. Scrolling up: show.
       setNavHidden(y > 50 && y > lastScrollY.current);
+      setScrolled(y > 100);
       lastScrollY.current = y;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -179,10 +180,10 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
   return (
     <>
-    <nav className={`sticky top-0 z-[1000] backdrop-blur-md transition-transform duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"}`} ref={navRef} style={{ backgroundColor: 'hsl(40 25% 97% / 0.95)' }}>
+    <nav className={`sticky top-0 z-[1000] backdrop-blur-md transition-all duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"} ${scrolled ? "shadow-md" : ""}`} ref={navRef} style={{ backgroundColor: 'hsl(40 25% 97% / 0.95)' }}>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[60px] md:h-20">
+        <div className={`flex items-center justify-between h-[60px] transition-all duration-300 ${scrolled ? "md:h-16" : "md:h-20"}`}>
           {/* Logo — left-aligned on mobile, larger */}
           <Link to="/" className="flex items-center shrink-0">
             {/* Desktop: full badge logo */}

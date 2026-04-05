@@ -26,8 +26,8 @@ const platforms = [
 ];
 
 const CredibilityBar = () => (
-  <section className="py-6 md:py-14 bg-muted/50">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <section className="py-6 md:py-14 lg:py-20 bg-muted/50">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl text-center">
       {/* Google Reviews Badge — prominent on mobile */}
       <a
         href={GOOGLE_REVIEWS_URL}
@@ -50,12 +50,12 @@ const CredibilityBar = () => (
         </div>
       </a>
 
-      <p className="text-[10px] md:text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-4 md:mb-8">Where Houston Trusts Us</p>
-      <div className="flex flex-wrap justify-center gap-8 sm:gap-12 max-w-xs sm:max-w-none mx-auto">
-        {platforms.map((p) => (
-          <div key={p.name} className={`flex flex-col items-center gap-1 md:gap-2 md:min-w-[120px] ${!p.mobileOnly ? 'hidden sm:flex' : 'flex'}`}>
-            <div className="text-muted-foreground/50 grayscale">{p.icon}</div>
-            <span className="text-[11px] md:text-xs font-sans font-medium text-muted-foreground">{p.stat}</span>
+      <p className="text-[10px] md:text-xs font-sans font-semibold tracking-[0.15em] uppercase text-muted-foreground mb-4 md:mb-8 lg:mb-10">Where Houston Trusts Us</p>
+      <div className="flex flex-wrap justify-center gap-8 sm:gap-12 lg:gap-0 max-w-xs sm:max-w-none mx-auto">
+        {platforms.map((p, idx) => (
+          <div key={p.name} className={`flex flex-col items-center gap-1 md:gap-2 lg:gap-3 md:min-w-[120px] lg:flex-1 ${!p.mobileOnly ? 'hidden sm:flex' : 'flex'} lg:!flex ${idx > 0 ? 'lg:border-l lg:border-border/40' : ''}`}>
+            <div className="text-muted-foreground/50 grayscale lg:grayscale-0">{p.icon}</div>
+            <span className="text-[11px] md:text-xs lg:text-base font-sans font-medium lg:font-bold text-muted-foreground lg:text-foreground">{p.stat}</span>
           </div>
         ))}
       </div>
