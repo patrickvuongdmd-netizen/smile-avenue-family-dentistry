@@ -15,6 +15,7 @@ import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import BookingLocationModal from "@/components/BookingLocationModal";
+import LazyYouTube from "@/components/LazyYouTube";
 import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
