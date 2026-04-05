@@ -211,7 +211,7 @@ const Home = () => {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="text-left">
                   <p className="kicker mb-2 text-xs">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
-                  <h1 className="font-display text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-4 text-foreground">A Dentist That <em className="not-italic text-primary">Feels Like Home</em></h1>
+                  <p className="font-display text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-4 text-foreground" role="presentation" aria-hidden="true">A Dentist That <em className="not-italic text-primary">Feels Like Home</em></p>
                   <p className="font-body text-lg leading-relaxed text-muted-foreground mb-8">
                     Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
                   </p>
