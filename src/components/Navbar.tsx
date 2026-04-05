@@ -179,19 +179,17 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
   return (
     <>
-    <nav className={`sticky top-0 z-[1000] bg-background/95 backdrop-blur-md shadow-sm transition-transform duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"}`} ref={navRef}>
+    <nav className={`sticky top-0 z-[1000] backdrop-blur-md transition-transform duration-300 ${navHidden && !mobileOpen ? "lg:translate-y-0 -translate-y-full" : "translate-y-0"}`} ref={navRef} style={{ backgroundColor: 'hsl(40 25% 97% / 0.95)' }}>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo — full badge on both mobile and desktop, sized appropriately */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center shrink-0">
+        <div className="flex items-center justify-between h-[60px] md:h-20">
+          {/* Logo — left-aligned on mobile, larger */}
+          <Link to="/" className="flex items-center shrink-0">
             {/* Desktop: full badge logo */}
             <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="hidden md:block h-[72px] w-auto object-contain" width={200} height={155} />
-            {/* Mobile: full badge logo, properly sized */}
-            <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="md:hidden h-10 w-auto object-contain" width={120} height={40} />
+            {/* Mobile: larger wordmark logo, left-aligned */}
+            <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="md:hidden h-12 w-auto object-contain" width={144} height={48} />
           </Link>
-          {/* Invisible spacer on mobile to keep justify-between working */}
-          <div className="w-10 md:hidden" />
 
           {/* Desktop Nav — visible at md (768px+) */}
           <div className="hidden md:flex items-center gap-1 lg:gap-4">
