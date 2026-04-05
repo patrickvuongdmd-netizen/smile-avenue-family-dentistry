@@ -19,6 +19,9 @@ const FullWidthPhotoBreak = ({
       alt={alt}
       className="w-full h-full object-cover"
       loading="lazy"
+      decoding="async"
+      width={1200}
+      height={400}
     />
     {(overlayText || overlaySubtext) && (
       <div className="absolute inset-0 bg-foreground/40 flex flex-col items-center justify-center text-center px-4">

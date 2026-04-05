@@ -185,6 +185,8 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
                     className="w-full aspect-[4/3] object-cover rounded-3xl shadow-lg"
                     loading="eager"
                     fetchPriority="high"
+                    width={640}
+                    height={480}
                   />
                 </div>
               )}
