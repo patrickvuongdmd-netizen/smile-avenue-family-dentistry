@@ -614,10 +614,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             </div>
             <div>
               {(() => {
-                const categoryPosts = data.blogCategory
-                  ? BLOG_POSTS.filter(p => p.category === data.blogCategory).slice(0, 3)
+                const cat = data.blogCategory || SERVICE_SLUG_TO_BLOG_CATEGORY[data.serviceSlug];
+                const categoryPosts = cat
+                  ? BLOG_POSTS.filter(p => p.category === cat).slice(0, 3)
                   : [];
-                const blogPosts = categoryPosts.length >= 2 ? categoryPosts : BLOG_POSTS.slice(0, 3);
                 return (
                   <>
                     <BlogCardCarousel
