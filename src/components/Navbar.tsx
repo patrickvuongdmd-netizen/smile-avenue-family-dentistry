@@ -338,8 +338,14 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Mobile — Tend-inspired: centered logo, hamburger right */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile — [Logo left] ... [Book Now pill] [Hamburger right] */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={() => { setBookingModalOpen(true); }}
+              className="px-3 py-1.5 text-xs font-sans font-semibold rounded-full bg-primary text-primary-foreground"
+            >
+              Book Now
+            </button>
             <button
               className="w-10 h-10 flex items-center justify-center text-foreground"
               onClick={() => setMobileOpen(!mobileOpen)}
