@@ -111,6 +111,7 @@ const ServicesCarousel = ({ locationPrefix }: Props) => {
                 alt={img?.alt || s.label}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
                 width={240}
                 height={320}
               />

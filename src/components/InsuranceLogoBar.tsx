@@ -27,6 +27,7 @@ const InsuranceLogoBar = () => {
                   alt={`${ins.name} dental insurance logo`}
                   className="h-8 w-auto object-contain"
                   loading="lazy"
+                  decoding="async"
                   width={120}
                   height={35}
                 />

@@ -25,6 +25,7 @@ const OfficePhotoGrid = ({ heading = "Step Inside Our Office", kicker = "YOUR CO
               alt={photo.alt}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
+              decoding="async"
               width={400}
               height={400}
             />

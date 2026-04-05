@@ -50,6 +50,7 @@ const LazyYouTube = ({ videoId, title }: LazyYouTubeProps) => {
             alt={title}
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
             width={1280}
             height={720}
             onError={handleThumbError}

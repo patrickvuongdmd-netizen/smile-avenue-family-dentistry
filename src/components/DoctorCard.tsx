@@ -15,7 +15,7 @@ const DoctorCard = ({ name, credentials, bio, href, imgKey }: DoctorCardProps) =
     <div className="flex flex-col items-center text-center">
       <div className="w-28 h-28 md:w-44 md:h-44 rounded-full mb-4 md:mb-5 overflow-hidden ring-2 ring-transparent hover:ring-primary/40 transition-all duration-300">
         {img ? (
-          <img src={img.url} alt={img.alt} className="w-full h-full object-cover" loading="lazy" width={176} height={176} />
+          <img src={img.url} alt={img.alt} className="w-full h-full object-cover" loading="lazy" decoding="async" width={176} height={176} />
         ) : (
           <div className="w-full h-full bg-muted flex items-center justify-center">
             <span className="text-xs font-sans text-muted-foreground">Photo</span>

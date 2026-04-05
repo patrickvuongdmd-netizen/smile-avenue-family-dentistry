@@ -42,7 +42,7 @@ const LocationCard = ({ name, address, phone, phoneRaw, hours, satHours, image, 
   return (
     <div className="bg-card rounded-2xl border border-border overflow-hidden">
       <div className="aspect-video relative overflow-hidden">
-        <img src={image} alt={`${name} office`} className="w-full h-full object-cover" loading="lazy" width={600} height={400} />
+        <img src={image} alt={`${name} office`} className="w-full h-full object-cover" loading="lazy" decoding="async" width={600} height={400} />
         <div className={`absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-sans font-bold ${status.isOpen ? "bg-green-500 text-white" : "bg-red-500 text-white"}`}>
           <span className={`w-2 h-2 rounded-full ${status.isOpen ? "bg-white animate-pulse" : "bg-white/60"}`} />
           {status.label}

@@ -274,7 +274,7 @@ const Home = () => {
                     return (
                       <Link key={i} to={doc.href} className="text-center group">
                         <div className="w-24 h-24 rounded-full mx-auto mb-3 group-hover:ring-4 ring-primary/20 transition-all overflow-hidden">
-                          <img src={img.url} alt={img.alt} className="w-full h-full object-cover" loading="lazy" width={96} height={96} />
+                          <img src={img.url} alt={img.alt} className="w-full h-full object-cover" loading="lazy" decoding="async" width={96} height={96} />
                         </div>
                         <h3 className="font-sans text-sm font-semibold text-foreground">{doc.name}</h3>
                         <p className="text-xs font-sans text-muted-foreground">{doc.credentials}</p>

@@ -35,6 +35,7 @@ const SmileAvenueDifference = ({ onBook }: Props) => (
             alt="Smile Avenue waiting room with leather sofas, 3D accent wall, and complimentary refreshments"
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
             width={800}
             height={600}
           />

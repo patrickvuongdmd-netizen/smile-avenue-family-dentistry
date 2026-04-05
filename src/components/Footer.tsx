@@ -64,6 +64,7 @@ const Footer = () => {
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
+          decoding="async"
           width={1920}
           height={800}
           aria-hidden="true"
@@ -94,6 +95,8 @@ const Footer = () => {
                   src="/logo-full.webp"
                   alt="Smile Avenue Family Dentistry"
                   className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
                   width={1217}
                   height={645}
                 />
