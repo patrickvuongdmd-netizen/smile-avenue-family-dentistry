@@ -229,7 +229,7 @@ const Home = () => {
                 <Link
                   key={i}
                   to={`/services/${s.slug}`}
-                  className="flex flex-row items-center text-left gap-4 sm:flex-col sm:items-center sm:text-center sm:gap-2 sm:flex-row sm:items-start sm:text-left sm:gap-5 bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
+                  className="flex flex-row items-center text-left gap-4 sm:items-start sm:gap-5 bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
                 >
                   <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground transition-colors [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
                     {s.icon}
