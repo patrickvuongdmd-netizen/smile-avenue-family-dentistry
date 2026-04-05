@@ -592,13 +592,23 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               </Link>
             </div>
             <div>
-              <BlogCardCarousel
-                posts={BLOG_POSTS.slice(0, 3)}
-                categoryColors={BLOG_CATEGORY_COLORS}
-                categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={BLOG_FALLBACK_IMAGE}
-              />
-              <BlogDesktopGrid posts={BLOG_POSTS.slice(0, 3)} />
+              {(() => {
+                const categoryPosts = data.blogCategory
+                  ? BLOG_POSTS.filter(p => p.category === data.blogCategory).slice(0, 3)
+                  : [];
+                const blogPosts = categoryPosts.length >= 2 ? categoryPosts : BLOG_POSTS.slice(0, 3);
+                return (
+                  <>
+                    <BlogCardCarousel
+                      posts={blogPosts}
+                      categoryColors={BLOG_CATEGORY_COLORS}
+                      categoryImages={BLOG_CATEGORY_IMAGES}
+                      fallbackImage={BLOG_FALLBACK_IMAGE}
+                    />
+                    <BlogDesktopGrid posts={blogPosts} />
+                  </>
+                );
+              })()}
             </div>
           </div>
         </section>
