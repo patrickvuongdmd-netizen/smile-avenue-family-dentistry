@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Dental Implants",
   serviceSlug: "dental-implants",
+  videoId: "UAwWDYzJdvw",
   metaTitle: "Dental Implants Cypress, TX | Permanent Tooth Replacement | Smile Avenue",
   metaDescription: "Dental implants in Cypress, TX — single teeth, bridges & All-on-4. 3D-guided placement, in-house lab, sedation options. 0% financing. Call (832) 648-1756.",
   heroKicker: "PERMANENT TOOTH REPLACEMENT IN CYPRESS",

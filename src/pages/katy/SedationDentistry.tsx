@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Sedation Dentistry",
   serviceSlug: "sedation-dentistry",
+  videoId: "lVFe5d6pAlY",
   metaTitle: "Sedation Dentistry Katy, TX | Anxiety-Free Dental Care | Smile Avenue",
   metaDescription: "Sedation dentistry in Katy, TX — nitrous oxide, oral & IV sedation for anxiety-free care. Gentle team, 4.9★ rated. Book a consultation. Call (281) 800-5008.",
   heroKicker: "ANXIETY-FREE DENTISTRY IN KATY",

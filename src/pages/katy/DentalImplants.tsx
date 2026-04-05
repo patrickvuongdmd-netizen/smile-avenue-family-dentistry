@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Dental Implants",
   serviceSlug: "dental-implants",
+  videoId: "UAwWDYzJdvw",
   metaTitle: "Dental Implants Katy, TX | Permanent Tooth Replacement | Smile Avenue",
   metaDescription: "Dental implants in Katy, TX — single teeth, bridges & All-on-4. 3D-guided placement, in-house lab, sedation. 0% financing. Call (281) 800-5008.",
   heroKicker: "PERMANENT TOOTH REPLACEMENT IN KATY",

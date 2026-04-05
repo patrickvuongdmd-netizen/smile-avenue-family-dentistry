@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Cosmetic Dentistry",
   serviceSlug: "cosmetic-dentistry",
+  videoId: "JLVp9i_Vru4",
   metaTitle: "Cosmetic Dentist Cypress, TX | Veneers, Whitening & Smile Makeovers | Smile Avenue",
   metaDescription: "Cosmetic dentistry in Cypress, TX — veneers, whitening, bonding & full smile makeovers. In-house lab for same-day results. 4.9★ rated. Book today.",
   heroKicker: "SMILE MAKEOVERS IN CYPRESS",

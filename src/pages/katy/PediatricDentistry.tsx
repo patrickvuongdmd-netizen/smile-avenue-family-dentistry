@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Pediatric Dentistry",
   serviceSlug: "pediatric-dentistry",
+  videoId: "5NHuCuktCPI",
   metaTitle: "Pediatric Dentist Katy, TX | Kids & Family Dentistry | Smile Avenue",
   metaDescription: "Kids dentist in Katy, TX — gentle first visits, cleanings, sealants & cavity prevention. Netflix in every room. Open Saturdays. Call (281) 800-5008.",
   heroKicker: "KIDS DENTISTRY IN KATY",

@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Dental Cleaning",
   serviceSlug: "dental-cleaning",
+  videoId: "O91Y4M9liYs",
   metaTitle: "Dental Cleaning Katy, TX | Exams & Preventive Care | Smile Avenue",
   metaDescription: "Dental cleaning in Katy, TX near Cinco Ranch — gentle exams, deep cleanings & fluoride treatments. Open Saturdays. Insurance accepted. Call (281) 800-5008.",
   heroKicker: "PREVENTIVE CARE IN KATY",

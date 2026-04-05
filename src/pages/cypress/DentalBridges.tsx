@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Dental Bridges",
   serviceSlug: "dental-bridges",
+  videoId: "JLVp9i_Vru4",
   metaTitle: "Dental Bridges Cypress, TX | Fixed Bridge Restorations | Smile Avenue",
   metaDescription: "Dental bridges in Cypress, TX — traditional, Maryland & implant-supported options. Crafted in our in-house lab. Insurance accepted. Call (832) 648-1756.",
   heroKicker: "DENTAL BRIDGES IN CYPRESS",
