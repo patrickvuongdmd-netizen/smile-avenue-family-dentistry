@@ -367,7 +367,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
 
     {/* Mobile backdrop overlay */}
     <div
-      className={`md:hidden fixed inset-0 top-16 z-[998] bg-black/40 backdrop-blur-sm transition-opacity duration-400 ease-out ${
+      className={`md:hidden fixed inset-0 top-[60px] z-[998] bg-black/40 backdrop-blur-sm transition-opacity duration-400 ease-out ${
         mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       }`}
       onClick={() => setMobileOpen(false)}
