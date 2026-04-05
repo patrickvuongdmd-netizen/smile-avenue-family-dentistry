@@ -21,21 +21,21 @@ const TrustTicker = () => {
   const esPath = "/es";
 
   return (
-    <div className="hidden sm:flex overflow-hidden relative bg-muted/60 border-b border-border/40 transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0">
-      <Link to="/about" className="shrink-0 flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline text-foreground/80">
+    <div className="flex overflow-hidden relative border-b border-border/40 transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0 bg-primary/5 sm:bg-muted/60">
+      <Link to="/about" className="shrink-0 hidden sm:flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline text-foreground/80">
         Why Smile Avenue?
       </Link>
       <div className="relative overflow-hidden flex-1">
-        <div className="absolute left-0 top-0 bottom-0 w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--muted) / 0.6), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--muted) / 0.6), transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--primary) / 0.05), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--primary) / 0.05), transparent)" }} />
         <div className="flex animate-ticker whitespace-nowrap">
           {doubled.map((text, i) => (
             <span
               key={i}
-              className="inline-flex items-center shrink-0 px-5 py-2 text-xs tracking-wide font-normal font-sans text-muted-foreground"
+              className="inline-flex items-center shrink-0 px-3 sm:px-5 py-1 sm:py-2 text-[10px] sm:text-xs tracking-wide font-medium sm:font-normal font-sans text-primary/70 sm:text-muted-foreground"
             >
               {text}
-              <span className="ml-5 text-muted-foreground/30">·</span>
+              <span className="ml-3 sm:ml-5 text-primary/20 sm:text-muted-foreground/30">·</span>
             </span>
           ))}
         </div>
