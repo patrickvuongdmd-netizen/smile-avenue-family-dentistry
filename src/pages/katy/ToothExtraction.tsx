@@ -49,6 +49,7 @@ const data: ServicePageData = {
     { question: "How long is recovery?", answer: "Most patients recover within 3-7 days. Simple extractions heal faster than surgical ones." },
     { question: "How do I replace an extracted tooth?", answer: "We discuss implants, bridges, and dentures at your visit so you can plan ahead for restoring your smile." },
     { question: "Do you remove wisdom teeth?", answer: "Yes. We perform both simple and surgical wisdom tooth extractions with sedation available." },
+    { question: "What are my options after a tooth extraction?", answer: "After extraction, you can replace the tooth with a dental implant (most recommended for long-term health), a dental bridge, or a partial denture. We discuss all options during your consultation so you can make an informed decision." },
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Extraction Reviews",
   testimonials: [

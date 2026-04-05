@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What services are available near Cross Creek Ranch?", answer: "We offer full-service dental care: cleanings, exams, implants, Invisalign, cosmetic procedures, emergency visits, pediatric care, and more." },
     { question: "Do you serve families with young children?", answer: "Absolutely! We provide pediatric dental care for children of all ages in a fun, welcoming environment." },
     { question: "Can I book an appointment online?", answer: "Yes! Visit our website to book online, or call (281) 800-5008 for immediate assistance." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

@@ -51,6 +51,7 @@ const data: ServicePageData = {
     { question: "Does insurance cover cosmetic dentistry?", answer: "Some functionally necessary procedures (crowns, bonding for broken teeth) may be covered. Purely cosmetic treatments are typically not covered, but financing is available." },
     { question: "Will results look natural?", answer: "Yes — our in-house Smile Dental Lab ensures precise color matching and natural translucency. We design every restoration to complement your facial features." },
     { question: "How long do cosmetic treatments last?", answer: "Porcelain veneers last 15-20 years. Professional whitening lasts 6 months to 2 years with maintenance. Bonding lasts 5-10 years. Results depend on care and maintenance." },
+    { question: "What is the most popular cosmetic dental treatment?", answer: "Teeth whitening is the most commonly requested cosmetic treatment, followed by veneers and dental bonding. Many patients combine multiple treatments as part of a comprehensive smile makeover for the most dramatic results." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

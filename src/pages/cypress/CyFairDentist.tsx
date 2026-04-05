@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What services are available at your Cy-Fair area office?", answer: "We offer cleanings, implants, Invisalign, crowns, veneers, emergency dental care, pediatric dentistry, sedation options, and more." },
     { question: "Do you offer sedation dentistry for anxious Cy-Fair patients?", answer: "Yes! We offer sedation dentistry options to help nervous patients feel relaxed and comfortable during their treatment." },
     { question: "How do I schedule my first appointment?", answer: "You can book online through our website or call (832) 648-1756. We make the new patient process simple and stress-free." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

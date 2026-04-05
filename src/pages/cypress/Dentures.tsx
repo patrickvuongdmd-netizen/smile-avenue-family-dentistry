@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Can I eat normally with dentures?", answer: "Yes, with practice. Start with soft foods and gradually work up to harder items. Implant-supported dentures offer even better chewing ability and stability." },
     { question: "How long do dentures last?", answer: "Traditional dentures typically last 5-10 years before needing replacement as your jaw shape changes over time. Regular checkups help us monitor fit and recommend relines or replacement when needed." },
     { question: "Implant-supported vs traditional dentures?", answer: "Implant-supported dentures snap onto dental implants for superior stability — no adhesives, no slipping. They're more comfortable, allow you to eat more foods, and help preserve jawbone. They're a bigger investment but offer dramatically better quality of life." },
+    { question: "Can I convert my dentures to implant-supported dentures?", answer: "Yes! Many patients upgrade from traditional removable dentures to implant-supported dentures or All-on-4 for a permanent, non-removable solution. This eliminates slipping, adhesives, and dietary restrictions." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

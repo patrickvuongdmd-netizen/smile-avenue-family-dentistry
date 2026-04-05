@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What services do you offer for Spring families?", answer: "We offer complete dental care: cleanings, implants, Invisalign, cosmetic dentistry, emergency care, pediatric dentistry, oral surgery, sedation dentistry, and more." },
     { question: "Do you have same-day appointments?", answer: "Yes! We offer same-day appointments for emergencies and often have same-day availability for routine visits." },
     { question: "Do you offer sedation for anxious patients?", answer: "Absolutely. We offer nitrous oxide, oral sedation, and IV sedation to ensure your complete comfort during any procedure." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

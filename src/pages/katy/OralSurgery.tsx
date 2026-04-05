@@ -49,6 +49,7 @@ const data: ServicePageData = {
     { question: "How long is recovery after oral surgery?", answer: "Recovery varies by procedure — typically 3-10 days. We provide detailed recovery timelines for each procedure." },
     { question: "What is bone grafting?", answer: "Bone grafting restores jawbone volume to create a stable foundation for dental implant placement." },
     { question: "What age for wisdom teeth removal?", answer: "Typically late teens to early 20s, but wisdom teeth can be removed at any age if they're causing problems." },
+    { question: "How long is recovery after oral surgery?", answer: "Recovery time varies by procedure. Simple extractions typically heal in 3-5 days. More complex procedures like bone grafting or impacted wisdom teeth may take 1-2 weeks. We provide detailed post-operative instructions for optimal healing." },
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Oral Surgery Reviews",
   testimonials: [

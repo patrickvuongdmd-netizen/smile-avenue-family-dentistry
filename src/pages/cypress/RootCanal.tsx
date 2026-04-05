@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "How long does a root canal take?", answer: "Most root canals are completed in 60-90 minutes. A follow-up visit is typically needed for crown placement, which our in-house lab fabricates with faster turnaround than outside labs." },
     { question: "What happens if I skip a root canal?", answer: "An untreated infected tooth will worsen. The infection can spread to surrounding teeth and bone, cause an abscess, and ultimately result in tooth loss. The tooth will eventually need to be extracted." },
     { question: "Do I need a crown after a root canal?", answer: "Usually yes — a crown protects the treated tooth from fracture and restores full strength. Our in-house Smile Dental Lab fabricates crowns with faster turnaround than practices that outsource." },
+    { question: "How do I know if I need a root canal?", answer: "Common signs include persistent tooth pain, prolonged sensitivity to hot or cold, darkening of the tooth, swelling or tenderness in nearby gums, and a recurring pimple on the gums. Only a dental exam with X-rays can confirm if a root canal is needed." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "How long do dental crowns last?", answer: "10–15+ years with proper care. Regular checkups, good hygiene, and avoiding habits like teeth grinding help extend their lifespan." },
     { question: "What crown materials do you offer?", answer: "We offer both Emax porcelain and zirconia crowns. Our in-house Smile Dental Lab fabricates each crown with precise shade matching for a natural, seamless result." },
     { question: "Does getting a crown hurt?", answer: "No. Local anesthesia ensures complete comfort during the procedure. Sedation is also available for anxious patients." },
+    { question: "Can a dental crown be done in one visit?", answer: "In many cases, yes. With our in-house Smile Dental Lab and digital scanning technology, we can fabricate and place same-day crowns for qualifying cases. Complex cases may require two visits." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

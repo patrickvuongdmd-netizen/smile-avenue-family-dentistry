@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "Do you accept patients from Brookshire?", answer: "Absolutely! We welcome all Brookshire families. Book online or call (281) 800-5008." },
     { question: "What dental services are available?", answer: "We offer comprehensive care: cleanings, implants, Invisalign, cosmetic dentistry, emergency care, pediatric dentistry, and more." },
     { question: "Is financing available?", answer: "Yes — 0% financing through CareCredit and Sunbit, plus our in-house membership plan for uninsured patients." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

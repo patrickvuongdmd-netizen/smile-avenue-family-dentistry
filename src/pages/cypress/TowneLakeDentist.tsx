@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What services do you offer near Towne Lake?", answer: "We offer a full range of dental services including cleanings, implants, Invisalign, veneers, emergency care, pediatric dentistry, and more." },
     { question: "Do you have evening or weekend hours for Towne Lake families?", answer: "We offer Saturday appointments by request and have early morning availability throughout the week to accommodate busy schedules." },
     { question: "Is parking available at your office?", answer: "Yes, we have plenty of free parking in our shopping center on Fry Road." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

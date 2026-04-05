@@ -49,6 +49,7 @@ const data: ServicePageData = {
     { question: "Do veneers look natural?", answer: "Yes. Our in-house lab ensures each veneer has perfect translucency, shade, and shape to match your natural teeth seamlessly." },
     { question: "Can veneers stain?", answer: "Porcelain resists staining better than natural teeth. Your veneers will maintain their color with normal oral hygiene." },
     { question: "How many veneers do I need?", answer: "It depends on your goals — typically 4-8 veneers for a complete smile zone transformation. We'll discuss during your consultation." },
+    { question: "Can veneers fix crooked teeth?", answer: "Veneers can correct the appearance of mildly crooked, gapped, or uneven teeth. For moderate to severe misalignment, Invisalign or orthodontics may be recommended first. Many patients combine Invisalign with veneers for a complete smile transformation." },
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Veneer Reviews",
   testimonials: [

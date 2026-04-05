@@ -60,6 +60,7 @@ const data: NeighborhoodPageData = {
     { question: "What services do you offer in Cinco Ranch?", answer: "We offer comprehensive dental care: cleanings, implants, Invisalign, veneers, crowns, emergency care, pediatric dentistry, sedation options, and more." },
     { question: "Is Smile Avenue open on Saturdays for Cinco Ranch patients?", answer: "We offer Saturday appointments by request. Call (281) 800-5008 to check availability." },
     { question: "Do you have a membership plan for patients without insurance?", answer: "Yes! Our in-house membership plan provides affordable preventive care and discounts on all treatments. Ask our team for details." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

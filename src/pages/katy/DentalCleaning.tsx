@@ -48,6 +48,7 @@ const data: ServicePageData = {
     { question: "What's the difference between a regular cleaning and a deep cleaning?", answer: "Regular cleanings address plaque above the gumline. Deep cleanings (scaling and root planing) go below the gumline to treat gum disease by removing bacteria from periodontal pockets." },
     { question: "Does a dental cleaning hurt?", answer: "No. Routine cleanings are generally comfortable. If you have sensitivity, we can use topical numbing gel." },
     { question: "Do kids need dental cleanings?", answer: "Yes! We recommend starting cleanings around age 2-3 when enough baby teeth have come in. Building early habits sets kids up for a lifetime of healthy smiles." },
+    { question: "What is the difference between a regular cleaning and a deep cleaning?", answer: "A regular cleaning (prophylaxis) removes plaque and tartar above the gumline. A deep cleaning (scaling and root planing) treats below the gumline and is recommended when gum disease is present. Your dentist will recommend the appropriate type based on your exam." },
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Cleaning Reviews",
   testimonials: [

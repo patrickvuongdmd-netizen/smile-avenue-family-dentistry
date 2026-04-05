@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What services are available?", answer: "We offer full-service dentistry: cleanings, implants, Invisalign, cosmetic dentistry, emergency care, pediatric dentistry, and oral surgery." },
     { question: "Do you offer emergency dental care?", answer: "Yes — same-day emergency appointments are available. Call us immediately at (832) 648-1756." },
     { question: "Is sedation available for nervous patients?", answer: "Yes. We offer nitrous oxide, oral sedation, and IV sedation for complete comfort during any procedure." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

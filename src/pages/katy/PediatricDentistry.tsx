@@ -49,6 +49,7 @@ const data: ServicePageData = {
     { question: "Are dental sealants worth it?", answer: "Absolutely — sealants reduce cavity risk by 80%. They're one of the most effective preventive treatments available for children's back teeth." },
     { question: "How do you handle anxious children?", answer: "We go at their pace and never rush a child. Our team uses tell-show-do techniques, and sedation is available if needed for extra relaxation." },
     { question: "How much does kids dentistry cost in Katy?", answer: "Most insurance covers pediatric preventive care at 100%. Our Membership Plan also covers children for families without insurance." },
+    { question: "What age should my child first visit the dentist?", answer: "The American Academy of Pediatric Dentistry recommends a first dental visit by age 1 or within 6 months of the first tooth erupting. Early visits help establish good habits and catch potential issues early." },
   ],
   reviewsKicker: "WHAT KATY PARENTS ARE SAYING", reviewsHeading: "Pediatric Reviews",
   testimonials: [

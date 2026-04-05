@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Are dental sealants worth it?", answer: "Absolutely — sealants reduce cavity risk by up to 80% on the chewing surfaces of back teeth. They're quick, painless, and one of the most effective preventive treatments available." },
     { question: "How do you handle anxious children?", answer: "We go at their pace, using a gentle tell-show-do approach. For very anxious children, sedation options are available to ensure a comfortable, stress-free experience." },
     { question: "How much does kids dental care cost?", answer: "Most dental insurance covers pediatric preventive care at 100%. Our Smile Avenue Membership Plan also covers children with two cleanings, exams, and X-rays annually." },
+    { question: "What age should my child first visit the dentist?", answer: "The American Academy of Pediatric Dentistry recommends a first dental visit by age 1 or within 6 months of the first tooth erupting. Early visits help establish good habits and catch potential issues early." },
   ],
   reviewsKicker: "PARENT REVIEWS",
   reviewsHeading: "What Parents Are Saying",

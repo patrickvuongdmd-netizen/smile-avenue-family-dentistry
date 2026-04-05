@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What dental services do you offer near Jersey Village?", answer: "We offer cleanings, exams, implants, Invisalign, veneers, emergency care, root canals, crowns, pediatric dentistry, sedation dentistry, and more." },
     { question: "Is sedation available for dental anxiety?", answer: "Yes! We offer sedation dentistry options for patients who experience dental anxiety. Our team will ensure you're comfortable throughout your visit." },
     { question: "Do you offer payment plans for Jersey Village patients?", answer: "Yes. In addition to accepting most major insurance plans, we offer an in-house membership plan and flexible financing options." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 
