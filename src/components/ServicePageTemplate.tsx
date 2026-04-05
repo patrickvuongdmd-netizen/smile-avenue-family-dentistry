@@ -343,8 +343,17 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <meta name="twitter:title" content={data.metaTitle} />
         <meta name="twitter:description" content={data.metaDescription} />
         {heroImage && <meta name="twitter:image" content={heroImage.url} />}
-        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+        {data.hreflangAlternates ? (
+          data.hreflangAlternates.map(alt => (
+            <link key={alt.lang} rel="alternate" hrefLang={alt.lang} href={alt.href} />
+          ))
+        ) : (
+          <>
+            <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+            <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+          </>
+        )}
+        {data.lang && <html lang={data.lang} />}
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
