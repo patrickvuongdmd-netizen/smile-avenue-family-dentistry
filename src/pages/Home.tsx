@@ -211,43 +211,43 @@ const Home = () => {
             </div>
           </div>
 
-          {/* ── DESKTOP HERO ── */}
-          <div className="hidden lg:block px-8 py-20">
-            <div className="container mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* ── DESKTOP HERO — cinematic two-column ── */}
+          <div className="hidden lg:block py-24 xl:py-32">
+            <div className="max-w-7xl mx-auto px-8">
+              <div className="grid lg:grid-cols-2 gap-16 xl:gap-20 items-center">
                 <div className="text-left">
-                  <p className="kicker mb-2 text-xs">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
-                  <p className="font-display text-5xl lg:text-[3.75rem] font-bold leading-[1.1] mb-4 text-foreground" role="presentation" aria-hidden="true">A Dentist That <em className="not-italic text-primary">Feels Like Home</em></p>
-                  <p className="font-body text-lg leading-relaxed text-muted-foreground mb-8">
+                  <p className="kicker mb-3 text-xs tracking-[0.2em]">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
+                  <h1 className="font-display text-6xl xl:text-7xl font-bold leading-[1.05] mb-6 text-foreground">A Dentist That <em className="not-italic text-primary">Feels Like Home</em></h1>
+                  <p className="font-body text-xl leading-relaxed text-muted-foreground mb-10 max-w-lg">
                     Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
                   </p>
-                  <div className="flex gap-3 mb-3 max-w-sm">
-                    <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 px-8 rounded-full transition-all duration-200 bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)]">Book Now</button>
+                  <div className="flex gap-4 mb-3 max-w-md">
+                    <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 px-8 rounded-full transition-all duration-200 bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)] hover:shadow-lg">Book Now</button>
                     <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-base py-4 px-8 rounded-full"><Phone className="w-4 h-4" />{CYPRESS_PHONE_FORMATTED}</a>
                   </div>
-                  <p className="text-[11px] font-sans text-muted-foreground mb-1">Booking takes less than 60 seconds</p>
-                  <p className="text-xs font-sans text-muted-foreground mb-2">
+                  <p className="text-[11px] font-sans text-muted-foreground mb-2">Booking takes less than 60 seconds</p>
+                  <p className="text-xs font-sans text-muted-foreground mb-4">
                     <Check className="w-3.5 h-3.5 inline text-primary mr-0.5" />Confirmed in 1 hour
                     <span className="mx-2 text-border">·</span>
                     <Check className="w-3.5 h-3.5 inline text-primary mr-0.5" />Insurance accepted
                     <span className="mx-2 text-border">·</span>
                     <Check className="w-3.5 h-3.5 inline text-primary mr-0.5" />0% financing
                   </p>
-                  <div className="flex items-center gap-1 text-sm font-sans text-muted-foreground">
-                    <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}</div>
-                    <span className="font-semibold text-foreground">4.9</span>
+                  <div className="flex items-center gap-1.5 text-sm font-sans text-muted-foreground">
+                    <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[#D4A853] text-[#D4A853]" />)}</div>
+                    <span className="font-bold text-foreground text-base">4.9</span>
                     <span>from 5,000+ verified reviews</span>
                   </div>
                 </div>
-                {/* Desktop hero video */}
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg relative">
+                {/* Desktop hero video — full height with shadow */}
+                <div className="aspect-[3/4] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-xl relative">
                   <video
                     src={HERO_VIDEO_URL}
                     autoPlay loop muted playsInline preload="metadata"
                     poster={OFFICE_IMAGES.homepageHero}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-foreground/10 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent pointer-events-none" />
                 </div>
               </div>
             </div>
@@ -259,29 +259,29 @@ const Home = () => {
 
         {/* SERVICES — no lazy loading */}
         <ScrollReveal>
-        <section className="section-padding section-alt">
-          <div className="container mx-auto">
+        <section className="py-12 lg:py-28 section-alt">
+          <div className="container mx-auto lg:max-w-7xl">
             <p className="kicker text-center">WHAT WE DO</p>
             <h2 className="section-heading text-center">Everything Your Family Needs, Under One Roof</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 mt-8 sm:mt-10 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-6 mt-8 sm:mt-10 lg:mt-14 max-w-4xl lg:max-w-none mx-auto">
               {services.map((s, i) => (
                 <Link
                   key={i}
                   to={`/services/${s.slug}`}
-                  className={`flex flex-row items-center text-left gap-4 sm:items-start sm:gap-5 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group ${!s.mobileShow ? 'hidden sm:flex' : 'flex'} ${i % 2 !== 0 ? 'bg-muted/30 sm:bg-card' : 'bg-card'}`}
+                  className={`flex flex-row items-center text-left gap-4 sm:items-start sm:gap-5 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-border hover:border-primary/30 hover:shadow-xl lg:hover:-translate-y-1.5 transition-all duration-300 group ${!s.mobileShow ? 'hidden sm:flex' : 'flex'} ${i % 2 !== 0 ? 'bg-muted/30 sm:bg-card' : 'bg-card'}`}
                 >
-                  <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground transition-colors [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
+                  <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground lg:group-hover:bg-primary lg:group-hover:text-primary-foreground transition-colors duration-300 [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
                     {s.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-display text-[15px] sm:text-lg font-bold text-primary mb-0.5 sm:mb-1">{s.title}</h3>
+                    <h3 className="font-display text-[15px] sm:text-lg font-bold text-primary mb-0.5 sm:mb-1 lg:mb-2">{s.title}</h3>
                     <p className="text-xs sm:text-sm font-body text-muted-foreground leading-relaxed">{s.description}</p>
                   </div>
                   <ChevronRight className="w-4 h-4 text-muted-foreground/40 shrink-0 sm:hidden group-hover:text-primary transition-colors" />
                 </Link>
               ))}
             </div>
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 lg:mt-12">
               <Link to="/services" className="btn-secondary w-full sm:w-auto">View All 16 Services</Link>
             </div>
           </div>
@@ -302,8 +302,8 @@ const Home = () => {
         {/* DOCTORS */}
         <LazySection>
           <ScrollReveal>
-            <section className="section-padding section-alt">
-              <div className="container mx-auto">
+            <section className="py-12 lg:py-28 section-alt">
+              <div className="container mx-auto lg:max-w-7xl">
                 <p className="kicker text-center">YOUR CARE TEAM</p>
                 <h2 className="section-heading text-center">Meet the Doctors Behind Your Smile</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-10">
@@ -331,8 +331,8 @@ const Home = () => {
 
         {/* INSURANCE ELIGIBILITY CHECKER */}
         <LazySection>
-          <section className="section-padding section-warm">
-            <div className="container mx-auto max-w-2xl">
+          <section className="py-12 lg:py-28 section-warm">
+            <div className="container mx-auto max-w-2xl lg:max-w-3xl">
               <p className="kicker text-center">INSURANCE MADE EASY</p>
               <h2 className="section-heading text-center">Check Your Insurance Benefits — Free</h2>
               <p className="text-center text-sm font-body text-muted-foreground mb-8 max-w-lg mx-auto">
@@ -367,8 +367,8 @@ const Home = () => {
 
         {/* FAQ — Objection handling at the end */}
         <LazySection>
-          <section className="section-padding gradient-cta">
-            <div className="container mx-auto max-w-3xl">
+          <section className="py-12 lg:py-28 gradient-cta">
+            <div className="container mx-auto max-w-3xl lg:max-w-4xl">
               <p className="kicker text-center text-white/70">FAQ</p>
               <h2 className="section-heading text-center text-white">Frequently Asked Questions</h2>
               <div className="mt-10"><FaqAccordion items={faqs} variant="dark" /></div>
