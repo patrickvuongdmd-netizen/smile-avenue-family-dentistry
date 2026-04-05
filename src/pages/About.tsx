@@ -243,6 +243,127 @@ const About = () => {
           <TestimonialCarousel />
         </LazySection>
 
+        {/* FOUNDING STORY */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              <div className="max-w-lg">
+                <p className="kicker">OUR FOUNDING STORY</p>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight">
+                  Built on a belief that dentistry can be better.
+                </h2>
+                <p className="font-body text-base text-muted-foreground leading-relaxed mt-6">
+                  In 2017, Dr. Patrick Vuong opened the doors to Smile Avenue Family Dentistry with a bold vision: create a dental practice that people actually look forward to visiting. After years of seeing patients anxious and uncomfortable in sterile clinical environments, he set out to build something different — a practice rooted in hospitality, transparency, and clinical excellence.
+                </p>
+                <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
+                  Starting with a single office on Fry Road in Cypress, TX, the team grew by earning trust one patient at a time. Word spread quickly — not through advertising, but through the genuine experiences patients shared with their families and neighbors.
+                </p>
+                <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
+                  Today, Smile Avenue serves thousands of families across two locations in Cypress and Katy, with an in-house dental lab, digital imaging technology, and a team of six doctors who share Dr. Vuong's founding philosophy: <em className="text-foreground font-medium">treat every patient like family</em>.
+                </p>
+              </div>
+              <div className="rounded-[2rem] overflow-hidden aspect-[4/3] shadow-md">
+                <img
+                  src={DOCTOR_IMAGES["patrick-vuong"].url}
+                  alt="Dr. Patrick Vuong, Founder of Smile Avenue Family Dentistry"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* MISSION STATEMENT */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto text-center max-w-3xl">
+            <p className="kicker">OUR MISSION</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight">
+              Why we do what we do.
+            </h2>
+            <blockquote className="mt-8 p-8 rounded-2xl border border-border bg-card">
+              <p className="font-display text-xl md:text-2xl text-foreground leading-relaxed italic">
+                "To promote optimum oral healthcare, improve the quality of life of our patients, and change the public perception of what a dental visit can be."
+              </p>
+              <footer className="mt-4 text-sm font-sans text-muted-foreground">
+                — Dr. Patrick Vuong, Founder & Lead Dentist
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+
+        {/* TECHNOLOGY & INVESTMENTS */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <p className="kicker">TECHNOLOGY & INNOVATION</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight">
+                Invested in your care.
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                { icon: <Cpu className="w-5 h-5" />, title: "3D CBCT Imaging", desc: "Full 3D jaw scans for precise implant planning and diagnostics." },
+                { icon: <Building2 className="w-5 h-5" />, title: "In-House Dental Lab", desc: "Custom crowns, veneers, and restorations crafted on-site for perfect fit." },
+                { icon: <Landmark className="w-5 h-5" />, title: "Medit Digital Scanners", desc: "No goopy impressions — digital scans for comfort and accuracy." },
+                { icon: <GraduationCap className="w-5 h-5" />, title: "Continuing Education", desc: "Every doctor completes 100+ hours of advanced training annually." },
+                { icon: <Heart className="w-5 h-5" />, title: "Netflix & Comfort", desc: "Every treatment room features Netflix, blankets, and noise-canceling headphones." },
+                { icon: <Users className="w-5 h-5" />, title: "Bilingual Team", desc: "Hablamos Español — our team serves Houston's diverse community with care." },
+              ].map((item) => (
+                <div key={item.title} className="p-6 md:p-8 rounded-2xl border border-border bg-card">
+                  <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center text-primary mb-4">{item.icon}</div>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">{item.title}</h3>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* TIMELINE */}
+        <section className="section-padding section-alt">
+          <div className="container mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <p className="kicker">OUR JOURNEY</p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight">
+                Milestones that matter.
+              </h2>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-0">
+              {milestones.map((m, i) => (
+                <div key={m.year} className="flex gap-6 group">
+                  <div className="flex flex-col items-center">
+                    <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-sans font-bold shrink-0">{m.year}</div>
+                    {i < milestones.length - 1 && <div className="w-px flex-1 bg-border" />}
+                  </div>
+                  <div className="pb-10">
+                    <h3 className="font-display text-lg font-semibold text-foreground">{m.title}</h3>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed mt-1">{m.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* COMMUNITY INVOLVEMENT */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto text-center max-w-3xl">
+            <p className="kicker">GIVING BACK</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight tracking-tight">
+              Community is everything.
+            </h2>
+            <p className="font-body text-base text-muted-foreground leading-relaxed mt-6">
+              Smile Avenue is deeply rooted in the Cypress and Katy communities. From sponsoring local youth sports teams and school events to providing free dental care for veterans and underserved families, we believe in giving back to the neighborhoods that trust us with their smiles.
+            </p>
+            <p className="font-body text-base text-muted-foreground leading-relaxed mt-4">
+              Our team regularly volunteers at community health fairs and partners with local organizations to promote oral health education. Because when the community thrives, we all do.
+            </p>
+          </div>
+        </section>
+
         {/* Video */}
         <section className="section-padding section-alt">
           <div className="container mx-auto text-center">
@@ -258,25 +379,40 @@ const About = () => {
       </main>
 
       <MobileStickyBar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
+      <ScrollBookingPrompt bookingUrl={BOOKING} />
       <Footer />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "Smile Avenue Family Dentistry",
-        url: "https://www.smileavenuefamilydentistry.com",
-        logo: "https://www.smileavenuefamilydentistry.com/logo-full.png",
-        description: "Hospitality-driven dental care for families in Cypress and Katy, TX. 5,000+ five-star reviews.",
-        telephone: ["+18326481756", "+12818005008"],
-        address: [
-          { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
-          { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
-        ],
-        sameAs: [
-          "https://www.facebook.com/SmileAvenueFamilyDentistry/",
-          "https://www.instagram.com/smileavenuefamilydentistry/",
-          "https://www.tiktok.com/@smileavenuetx",
-          "https://www.youtube.com/@SmileAvenueTX",
-        ],
+        "@type": "AboutPage",
+        name: "About Smile Avenue Family Dentistry",
+        url: "https://www.smileavenuefamilydentistry.com/about/",
+        mainEntity: {
+          "@type": "Dentist",
+          name: "Smile Avenue Family Dentistry",
+          url: "https://www.smileavenuefamilydentistry.com",
+          logo: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+          description: "Hospitality-driven dental care for families in Cypress and Katy, TX. Founded by Dr. Patrick Vuong in 2017.",
+          foundingDate: "2017",
+          founder: { "@type": "Person", name: "Dr. Patrick Vuong", jobTitle: "Founder & Lead Dentist" },
+          numberOfEmployees: { "@type": "QuantitativeValue", minValue: 30, maxValue: 50 },
+          areaServed: [
+            { "@type": "City", name: "Cypress, TX" },
+            { "@type": "City", name: "Katy, TX" },
+            { "@type": "City", name: "Houston, TX" },
+          ],
+          telephone: ["+18326481756", "+12818005008"],
+          address: [
+            { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+            { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+          ],
+          sameAs: [
+            "https://www.facebook.com/SmileAvenueFamilyDentistry/",
+            "https://www.instagram.com/smileavenuefamilydentistry/",
+            "https://www.tiktok.com/@smileavenuetx",
+            "https://www.youtube.com/@SmileAvenueTX",
+          ],
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "5000", bestRating: "5", worstRating: "1" },
+        },
       }) }} />
     </>
   );
