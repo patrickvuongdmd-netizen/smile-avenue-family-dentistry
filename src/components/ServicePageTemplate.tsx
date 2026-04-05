@@ -93,6 +93,7 @@ export interface ServicePageData {
   ctaBody: string;
   relatedServices?: RelatedService[];
   blogCategory?: string;
+  videoId?: string;
 }
 
 const LOCATIONS = {
