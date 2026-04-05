@@ -96,6 +96,9 @@ export interface ServicePageData {
   relatedServices?: RelatedService[];
   blogCategory?: string;
   videoId?: string;
+  canonicalPath?: string;
+  lang?: string;
+  hreflangAlternates?: { lang: string; href: string }[];
 }
 
 const LOCATIONS = {
