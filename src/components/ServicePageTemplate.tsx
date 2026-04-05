@@ -15,6 +15,7 @@ import FreeConsultationBanner from "@/components/FreeConsultationBanner";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import BookingLocationModal from "@/components/BookingLocationModal";
+import LazyYouTube from "@/components/LazyYouTube";
 import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
@@ -93,6 +94,7 @@ export interface ServicePageData {
   ctaBody: string;
   relatedServices?: RelatedService[];
   blogCategory?: string;
+  videoId?: string;
 }
 
 const LOCATIONS = {
@@ -505,7 +507,89 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* FAQ */}
+        {/* COST TRANSPARENCY */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto">
+              <p className="kicker">PRICING & AFFORDABILITY</p>
+              <h2 className="section-heading">What Does {data.serviceName} Cost?</h2>
+              <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  The cost of {data.serviceName.toLowerCase()} varies based on your unique treatment plan, the complexity of your case, and your insurance coverage. At Smile Avenue, we believe in full price transparency — you'll always know the cost before we begin.
+                </p>
+                <p>
+                  Most PPO dental insurance plans cover a portion of {data.serviceName.toLowerCase()} treatment. Our team will verify your benefits and provide a detailed breakdown before your appointment.
+                </p>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-5 mt-10">
+                <div className="card-soft text-center">
+                  <h3 className="font-display text-base font-bold text-foreground mb-2">Insurance Accepted</h3>
+                  <p className="text-sm font-body text-muted-foreground">We accept most PPO plans and verify your benefits for you.</p>
+                </div>
+                <div className="card-soft text-center">
+                  <h3 className="font-display text-base font-bold text-foreground mb-2">0% Financing</h3>
+                  <p className="text-sm font-body text-muted-foreground">CareCredit & Sunbit — apply in minutes, pay monthly.</p>
+                </div>
+                <div className="card-soft text-center">
+                  <h3 className="font-display text-base font-bold text-foreground mb-2">Membership Plan</h3>
+                  <p className="text-sm font-body text-muted-foreground">No insurance? Get 20% off all treatments with our plan.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* WATCH: SERVICE EXPLAINED — single video embed */}
+        {data.videoId && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+            <div className="container mx-auto text-center">
+              <p className="kicker">WATCH & LEARN</p>
+              <h2 className="section-heading">Watch: {data.serviceName} Explained</h2>
+              <p className="section-body max-w-2xl mx-auto">See how {data.serviceName.toLowerCase()} works at Smile Avenue — from consultation to results.</p>
+              <div className="max-w-2xl mx-auto mt-10">
+                <LazyYouTube videoId={data.videoId} title={`${data.serviceName} Explained — Smile Avenue Family Dentistry`} />
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* WHY PATIENTS CHOOSE US — comparison table */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
+            <h2 className="section-heading">Why Patients Choose Us for {data.serviceName}</h2>
+            <p className="section-body max-w-2xl mx-auto">See how Smile Avenue compares to a typical dental office.</p>
+            <div className="max-w-3xl mx-auto mt-10 overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-primary/20">
+                    <th className="py-4 px-4 text-sm font-sans font-bold text-foreground">Feature</th>
+                    <th className="py-4 px-4 text-sm font-sans font-bold text-primary text-center">Smile Avenue</th>
+                    <th className="py-4 px-4 text-sm font-sans font-bold text-muted-foreground text-center">Typical Office</th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm font-sans">
+                  {[
+                    { feature: "In-House Dental Lab", us: "✓", them: "✗ Outsourced" },
+                    { feature: "Same-Day Appointments", us: "✓", them: "1–2 week wait" },
+                    { feature: "Sedation Options", us: "✓ Nitrous, Oral & IV", them: "Limited" },
+                    { feature: "5,000+ Verified Reviews", us: "4.9★ average", them: "Varies" },
+                    { feature: "Netflix & Comfort Amenities", us: "✓ Every room", them: "✗" },
+                    { feature: "0% Financing Available", us: "✓ CareCredit & Sunbit", them: "Varies" },
+                    { feature: "Digital Scanners (No Molds)", us: "✓", them: "✗ Goopy impressions" },
+                  ].map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? "bg-muted/30" : ""}>
+                      <td className="py-3.5 px-4 font-medium text-foreground">{row.feature}</td>
+                      <td className="py-3.5 px-4 text-center text-primary font-semibold">{row.us}</td>
+                      <td className="py-3.5 px-4 text-center text-muted-foreground">{row.them}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">

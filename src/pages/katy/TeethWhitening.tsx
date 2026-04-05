@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Teeth Whitening",
   serviceSlug: "teeth-whitening",
+  videoId: "QRpwLPBJkS0",
   metaTitle: "Teeth Whitening Katy, TX | Professional Whitening | Smile Avenue",
   metaDescription: "Teeth whitening in Katy, TX — in-office Zoom whitening & custom take-home trays. Up to 8 shades brighter in one visit. Book today. Call (281) 800-5008.",
   heroKicker: "PROFESSIONAL WHITENING IN KATY",

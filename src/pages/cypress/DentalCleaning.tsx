@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Dental Cleaning",
   serviceSlug: "dental-cleaning",
+  videoId: "O91Y4M9liYs",
   metaTitle: "Dental Cleaning Cypress, TX | Exams & Preventive Care | Smile Avenue",
   metaDescription: "Dental cleaning in Cypress, TX — gentle exams, deep cleanings & fluoride treatments. Open Saturdays. Most insurance accepted. Call (832) 648-1756.",
   heroKicker: "PREVENTIVE CARE IN CYPRESS",

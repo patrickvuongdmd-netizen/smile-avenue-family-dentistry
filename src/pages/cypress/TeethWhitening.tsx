@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Teeth Whitening",
   serviceSlug: "teeth-whitening",
+  videoId: "QRpwLPBJkS0",
   metaTitle: "Teeth Whitening Cypress, TX | Professional Whitening | Smile Avenue",
   metaDescription: "Teeth whitening in Cypress, TX — in-office Zoom whitening & custom take-home trays. Up to 8 shades brighter in one visit. Book today. Call (832) 648-1756.",
   heroKicker: "PROFESSIONAL WHITENING IN CYPRESS",

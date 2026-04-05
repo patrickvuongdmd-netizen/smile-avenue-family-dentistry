@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Dental Bridges",
   serviceSlug: "dental-bridges",
+  videoId: "JLVp9i_Vru4",
   metaTitle: "Dental Bridges Katy, TX | Fixed Bridge Restorations | Smile Avenue",
   metaDescription: "Dental bridges in Katy, TX — traditional, Maryland & implant-supported options. Crafted in our in-house lab. Insurance accepted. Call (281) 800-5008.",
   heroKicker: "FIXED BRIDGES IN KATY",

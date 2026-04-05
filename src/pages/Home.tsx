@@ -89,8 +89,39 @@ const Home = () => {
           name: "Smile Avenue Family Dentistry",
           url: "https://www.smileavenuefamilydentistry.com",
           logo: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+          foundingDate: "2018",
+          founder: { "@type": "Person", name: "Dr. Patrick Vuong", jobTitle: "DMD, Founder" },
+          numberOfEmployees: { "@type": "QuantitativeValue", minValue: 20, maxValue: 50 },
+          contactPoint: [
+            { "@type": "ContactPoint", telephone: "+1-832-648-1756", contactType: "customer service", areaServed: "US", availableLanguage: ["English", "Spanish", "Vietnamese"] },
+            { "@type": "ContactPoint", telephone: "+1-281-800-5008", contactType: "customer service", areaServed: "US", availableLanguage: ["English", "Spanish"] },
+          ],
+          areaServed: [
+            { "@type": "City", name: "Cypress, TX" },
+            { "@type": "City", name: "Katy, TX" },
+            { "@type": "Place", name: "Bridgeland" },
+            { "@type": "Place", name: "Towne Lake" },
+            { "@type": "Place", name: "Cinco Ranch" },
+            { "@type": "Place", name: "Fulshear" },
+          ],
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "5000", bestRating: "5", worstRating: "1" },
-          sameAs: ["https://www.facebook.com/smileavenuedentistry", "https://www.instagram.com/smileavenuedentistry", "https://g.page/smileavenuedentistry"]
+          sameAs: [
+            "https://www.facebook.com/SmileAvenueFamilyDentistry/",
+            "https://www.instagram.com/smileavenuefamilydentistry/",
+            "https://www.tiktok.com/@smileavenuetx",
+            "https://www.youtube.com/@SmileAvenueTX",
+          ],
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Smile Avenue Family Dentistry",
+          url: "https://www.smileavenuefamilydentistry.com",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: "https://www.smileavenuefamilydentistry.com/services/?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -109,6 +140,7 @@ const Home = () => {
             "https://www.facebook.com/SmileAvenueFamilyDentistry/",
             "https://www.instagram.com/smileavenuefamilydentistry/",
             "https://www.tiktok.com/@smileavenuetx",
+            "https://www.youtube.com/@SmileAvenueTX",
           ],
         })}</script>
         <script type="application/ld+json">{JSON.stringify({

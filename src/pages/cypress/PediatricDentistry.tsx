@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Pediatric Dentistry",
   serviceSlug: "pediatric-dentistry",
+  videoId: "5NHuCuktCPI",
   metaTitle: "Pediatric Dentist Cypress, TX | Kids & Family Dentistry | Smile Avenue",
   metaDescription: "Kids dentist in Cypress, TX — gentle first visits, cleanings, sealants & cavity prevention. Netflix in every room. Open Saturdays. Call (832) 648-1756.",
   heroKicker: "KIDS DENTISTRY IN CYPRESS",

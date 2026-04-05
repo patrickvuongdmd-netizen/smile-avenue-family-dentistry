@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "All-on-X Implants",
   serviceSlug: "all-on-x-implants",
+  videoId: "UAwWDYzJdvw",
   metaTitle: "All-on-4 Dental Implants Katy, TX | Full Arch Restoration | Smile Avenue",
   metaDescription: "All-on-4 & All-on-X full-arch dental implants in Katy, TX. New teeth in one day with 3D-guided surgery & in-house lab. 4.9★ rated. Call (281) 800-5008.",
   heroKicker: "FULL ARCH RESTORATION IN KATY",

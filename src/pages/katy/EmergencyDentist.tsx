@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Emergency Dentist",
   serviceSlug: "emergency-dentist",
+  videoId: "HB_uTHUfm-o",
   metaTitle: "Emergency Dentist Katy, TX | Same-Day Urgent Care | Smile Avenue",
   metaDescription: "Emergency dentist in Katy, TX — same-day care for toothaches, broken teeth & abscesses. Walk-ins welcome. Open Saturdays. Call (281) 800-5008 now.",
   heroKicker: "SAME-DAY EMERGENCY CARE IN KATY",

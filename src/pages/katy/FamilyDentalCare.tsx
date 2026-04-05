@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Family Dental Care",
   serviceSlug: "family-dental-care",
+  videoId: "5NHuCuktCPI",
   metaTitle: "Family Dentist Katy, TX | Family Dental Care | Smile Avenue",
   metaDescription: "Family dentist in Katy, TX — gentle care for all ages, from toddlers to grandparents. Open Saturdays. In-house dental lab. Call (281) 800-5008.",
   heroKicker: "FAMILY DENTISTRY IN KATY",

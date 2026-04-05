@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Root Canal",
   serviceSlug: "root-canal",
+  videoId: "y1YYnlsar3U",
   metaTitle: "Root Canal Cypress, TX | Gentle, Pain-Free Treatment | Smile Avenue",
   metaDescription: "Root canal in Cypress, TX — painless treatment with sedation options. Save your natural tooth in one visit. Insurance & 0% financing. Call (832) 648-1756.",
   heroKicker: "SAVE YOUR TOOTH IN CYPRESS",

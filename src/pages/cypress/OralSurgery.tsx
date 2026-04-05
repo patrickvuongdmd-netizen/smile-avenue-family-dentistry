@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Oral Surgery",
   serviceSlug: "oral-surgery",
+  videoId: "1nicifZjXoA",
   metaTitle: "Oral Surgery Cypress, TX | Wisdom Teeth & Bone Grafting | Smile Avenue",
   metaDescription: "Oral surgery in Cypress, TX — wisdom teeth removal, bone grafting & surgical extractions. IV sedation for comfort. Same-day available. Call (832) 648-1756.",
   heroKicker: "ORAL SURGERY IN CYPRESS",

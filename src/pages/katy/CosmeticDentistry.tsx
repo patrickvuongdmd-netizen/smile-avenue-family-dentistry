@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Cosmetic Dentistry",
   serviceSlug: "cosmetic-dentistry",
+  videoId: "JLVp9i_Vru4",
   metaTitle: "Cosmetic Dentist Katy, TX | Veneers, Whitening & Smile Makeovers | Smile Avenue",
   metaDescription: "Cosmetic dentistry in Katy, TX — veneers, whitening, bonding & full smile makeovers. In-house lab for precise results. 4.9★ rated. Book today.",
   heroKicker: "SMILE MAKEOVERS IN KATY",

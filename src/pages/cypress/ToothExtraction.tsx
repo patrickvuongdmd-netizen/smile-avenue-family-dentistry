@@ -6,6 +6,7 @@ const data: ServicePageData = {
   location: "cypress",
   serviceName: "Tooth Extraction",
   serviceSlug: "tooth-extraction",
+  videoId: "1nicifZjXoA",
   metaTitle: "Tooth Extraction Cypress, TX | Gentle & Safe Extractions | Smile Avenue",
   metaDescription: "Tooth extraction in Cypress, TX — wisdom teeth, simple & surgical extractions with sedation options. Same-day appointments available. Call (832) 648-1756.",
   heroKicker: "TOOTH EXTRACTION IN CYPRESS",

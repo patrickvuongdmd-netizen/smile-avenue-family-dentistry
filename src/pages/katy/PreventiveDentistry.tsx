@@ -5,6 +5,7 @@ const data: ServicePageData = {
   location: "katy",
   serviceName: "Preventive Dentistry",
   serviceSlug: "preventive-dentistry",
+  videoId: "O91Y4M9liYs",
   metaTitle: "Preventive Dentistry Katy, TX | Exams & Cleanings | Smile Avenue",
   metaDescription: "Preventive dentistry in Katy, TX near Cinco Ranch — exams, cleanings, digital X-rays & oral cancer screenings. Open Saturdays. Insurance accepted. Book today.",
   heroKicker: "PREVENTIVE CARE IN KATY",
