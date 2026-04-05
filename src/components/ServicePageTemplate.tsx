@@ -92,6 +92,7 @@ export interface ServicePageData {
   ctaHeading: string;
   ctaBody: string;
   relatedServices?: RelatedService[];
+  blogCategory?: string;
 }
 
 const LOCATIONS = {
