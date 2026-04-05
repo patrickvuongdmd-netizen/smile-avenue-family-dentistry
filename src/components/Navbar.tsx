@@ -362,6 +362,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
         </div>
       </div>
 
+      <div className="border-b border-border/30 md:border-0" />
     </nav>
 
     {/* Mobile backdrop overlay */}
