@@ -1,6 +1,7 @@
 import { Phone, Calendar, MapPin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import BookingLocationModal from "@/components/BookingLocationModal";
+import { trackPhoneClick } from "@/lib/track-phone";
 
 interface MobileStickyBarProps {
   phone: string;
@@ -35,6 +36,7 @@ const MobileStickyBar = ({ phone, phoneFormatted, bookingUrl, directionsUrl }: M
         <div className="mx-3 mb-3 flex items-center gap-1 rounded-full bg-foreground/90 backdrop-blur-md px-1.5 py-1.5 shadow-lg">
           <a
             href={`tel:${phone}`}
+            onClick={() => trackPhoneClick(phone)}
             className="flex items-center justify-center w-10 h-10 rounded-full text-background/70 hover:text-background transition-colors"
             aria-label="Call now"
           >

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Accessibility } from "lucide-react";
 import BookingLocationModal from "@/components/BookingLocationModal";
+import { trackPhoneClick } from "@/lib/track-phone";
 
 interface NavbarProps {
   phone: string;
@@ -331,6 +332,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               </button>
               <a
                 href={`tel:${phone}`}
+                onClick={() => trackPhoneClick(phone)}
                 className="w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center rounded-full border border-border text-foreground hover:text-primary hover:border-primary transition-colors"
                 aria-label={`Call ${phoneFormatted}`}
               >
