@@ -51,6 +51,7 @@ const data: ServicePageData = {
     { question: "Do you accept walk-ins?", answer: "We recommend calling ahead at (281) 800-5008 for the fastest service — we'll prioritize your appointment and have everything ready when you arrive." },
     { question: "Will a toothache resolve on its own?", answer: "No — toothache pain indicates an underlying problem (infection, crack, decay) that will only worsen without treatment. Early treatment prevents more extensive and costly procedures." },
     { question: "Is sedation available for emergency procedures?", answer: "Yes — we offer nitrous oxide, oral sedation, and IV sedation for emergency procedures to ensure you're comfortable during treatment." },
+    { question: "What should I do if my child knocks out a tooth?", answer: "For a permanent tooth, pick it up by the crown, rinse gently, and try to place it back in the socket. If that is not possible, store it in milk and come to our office immediately. For baby teeth, do not attempt to reimplant — call us right away for guidance." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

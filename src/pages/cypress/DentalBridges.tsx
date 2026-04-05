@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Bridge vs implant — which is better?", answer: "Both are excellent options. Implants preserve bone and don't require altering adjacent teeth, but require surgery and healing time. Bridges are faster and less invasive. We'll help you choose the best option for your situation." },
     { question: "Can I eat normally with a dental bridge?", answer: "Yes — dental bridges function like natural teeth. Once placed and adjusted, you can eat most foods normally without restriction." },
     { question: "How long does the bridge process take?", answer: "Usually 2 visits over 2-3 weeks. Our in-house lab provides faster turnaround than practices that outsource to external labs." },
+    { question: "How long does it take to get a dental bridge?", answer: "Most bridges require two visits over 2-3 weeks. At the first visit, we prepare the anchor teeth and take impressions. Your custom bridge is fabricated in our in-house lab and cemented at the second visit." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

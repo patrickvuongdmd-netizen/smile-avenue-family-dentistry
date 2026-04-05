@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "How long is recovery?", answer: "Recovery varies by procedure — typically 3-10 days for most oral surgery procedures. Complete bone healing for grafting and sinus lifts may take several months. We provide detailed aftercare instructions." },
     { question: "What is bone grafting?", answer: "Bone grafting restores jawbone density lost after tooth extraction or from periodontal disease. It creates a strong foundation for dental implant placement. Grafting material integrates with your natural bone over several months." },
     { question: "At what age should wisdom teeth be removed?", answer: "Typically late teens to early 20s, but wisdom teeth can be removed at any age if they're causing problems — pain, infection, crowding, or damage to adjacent teeth." },
+    { question: "How long is recovery after oral surgery?", answer: "Recovery time varies by procedure. Simple extractions typically heal in 3-5 days. More complex procedures like bone grafting or impacted wisdom teeth may take 1-2 weeks. We provide detailed post-operative instructions for optimal healing." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

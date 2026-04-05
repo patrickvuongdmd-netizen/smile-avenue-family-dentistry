@@ -60,6 +60,7 @@ const data: NeighborhoodPageData = {
     { question: "What services do you offer near Fairfield?", answer: "We offer cleanings, exams, dental implants, Invisalign, cosmetic dentistry, emergency care, pediatric dentistry, crowns, veneers, and more." },
     { question: "Do you offer emergency dental care for Fairfield residents?", answer: "Absolutely. We offer same-day emergency appointments. If you have a dental emergency, call (832) 648-1756 immediately." },
     { question: "Do you treat children from the Fairfield community?", answer: "Yes! We love treating kids and offer a full range of pediatric dental services in a warm, fun environment." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

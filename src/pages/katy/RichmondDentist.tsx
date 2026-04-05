@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What services do you offer Richmond families?", answer: "We offer complete dental care: cleanings, implants, Invisalign, veneers, emergency care, pediatric dentistry, oral surgery, and sedation dentistry." },
     { question: "Do you accept dental insurance?", answer: "Yes — we accept most major PPO plans including Aetna, BCBS, Cigna, Delta Dental, MetLife, and United Healthcare." },
     { question: "Can I get sedation for dental work?", answer: "Absolutely. We offer nitrous oxide, oral sedation, and IV sedation for patients who experience dental anxiety." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

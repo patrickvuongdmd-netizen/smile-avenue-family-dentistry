@@ -49,6 +49,7 @@ const data: ServicePageData = {
     { question: "Can I eat normally with dentures?", answer: "Yes, with practice most patients eat normally. Implant-supported dentures offer even better stability for eating virtually anything." },
     { question: "How long do dentures last?", answer: "With proper care, dentures typically last 5-10 years before needing replacement. Relines may be needed every 1-2 years." },
     { question: "Implant-supported vs traditional dentures?", answer: "Implant-supported dentures eliminate slipping, are more comfortable, and feel more like natural teeth. They snap onto dental implants for superior stability." },
+    { question: "Can I convert my dentures to implant-supported dentures?", answer: "Yes! Many patients upgrade from traditional removable dentures to implant-supported dentures or All-on-4 for a permanent, non-removable solution. This eliminates slipping, adhesives, and dietary restrictions." },
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Denture Reviews",
   testimonials: [

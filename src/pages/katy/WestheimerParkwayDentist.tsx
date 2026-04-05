@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What are your hours on Westheimer Parkway?", answer: "We're open Monday through Friday 8:30am–5pm, with Saturday hours (8am–2pm) available at the Katy location." },
     { question: "Is parking available at your Westheimer Parkway office?", answer: "Yes, we have free parking directly in front of our suite. The office is ground-level with easy access." },
     { question: "Do you accept dental insurance?", answer: "Yes, we accept most major dental insurance plans including Aetna, BCBS, Cigna, Delta Dental, MetLife, and United Healthcare." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

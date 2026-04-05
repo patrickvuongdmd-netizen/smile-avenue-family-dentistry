@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Do veneers look natural?", answer: "Yes — our in-house Smile Dental Lab ensures perfect color matching and natural translucency. Modern porcelain and Emax veneers mimic the light-reflecting properties of natural tooth enamel." },
     { question: "Can veneers stain?", answer: "Porcelain resists staining significantly better than natural teeth. However, the bonding material at the edges can discolor over time, so good hygiene is important." },
     { question: "How many veneers do I need?", answer: "It depends on your goals. Most smile transformations involve 4-8 veneers covering the 'smile zone' — the teeth visible when you smile. We'll recommend the ideal number during your consultation." },
+    { question: "Can veneers fix crooked teeth?", answer: "Veneers can correct the appearance of mildly crooked, gapped, or uneven teeth. For moderate to severe misalignment, Invisalign or orthodontics may be recommended first. Many patients combine Invisalign with veneers for a complete smile transformation." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

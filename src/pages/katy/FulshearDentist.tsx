@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What services do you offer near Fulshear?", answer: "We offer comprehensive dental care including cleanings, exams, dental implants, Invisalign, cosmetic dentistry, emergency care, pediatric dentistry, and more." },
     { question: "Is there a dentist closer to Fulshear?", answer: "While the Fulshear area is growing, Smile Avenue on Westheimer Parkway is the closest full-service, top-rated dental practice. The 12–15 minute drive is easy and direct." },
     { question: "Do you offer financing for Fulshear patients?", answer: "Yes! We accept most major insurance plans and offer an in-house membership plan and flexible financing options for all patients." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

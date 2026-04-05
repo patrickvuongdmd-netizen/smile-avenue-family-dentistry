@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Are dental X-rays safe?", answer: "Yes. Digital X-rays use up to 80% less radiation than traditional film X-rays. We follow ADA guidelines and only take X-rays when clinically necessary." },
     { question: "Do you offer oral cancer screenings?", answer: "Yes. An oral cancer screening is included with every comprehensive exam. We check the tongue, throat, cheeks, and other soft tissues for any abnormalities." },
     { question: "What age should my child first visit the dentist?", answer: "The American Academy of Pediatric Dentistry recommends a first dental visit by age 1 or within six months of the first tooth erupting. We welcome children of all ages at Smile Avenue." },
+    { question: "What does a preventive dental visit include?", answer: "A typical preventive visit includes a comprehensive exam, professional cleaning, digital X-rays (as needed), oral cancer screening, and personalized hygiene recommendations. We also discuss any concerns you may have about your oral health." },
   ],
   reviewsKicker: "WHAT CYPRESS PATIENTS SAY",
   reviewsHeading: "Preventive Care Reviews",

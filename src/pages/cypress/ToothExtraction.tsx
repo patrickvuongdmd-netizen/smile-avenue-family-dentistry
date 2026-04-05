@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "How long is recovery?", answer: "Simple extractions heal within 3-7 days typically. Surgical extractions may take 1-2 weeks. Most patients return to normal activities within 1-2 days." },
     { question: "Should I replace the extracted tooth?", answer: "In most cases, yes. Missing teeth can cause shifting, bite problems, and bone loss over time. We offer dental implants, bridges, and dentures as replacement options." },
     { question: "Do you remove wisdom teeth?", answer: "Yes — we perform both simple and surgical wisdom tooth extractions, with sedation available for comfort. No referral to an outside oral surgeon needed." },
+    { question: "What are my options after a tooth extraction?", answer: "After extraction, you can replace the tooth with a dental implant (most recommended for long-term health), a dental bridge, or a partial denture. We discuss all options during your consultation so you can make an informed decision." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

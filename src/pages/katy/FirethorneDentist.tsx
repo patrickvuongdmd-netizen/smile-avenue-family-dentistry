@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What services do you offer near Firethorne?", answer: "We offer cleanings, implants, Invisalign, veneers, emergency care, crowns, root canals, pediatric dentistry, and more." },
     { question: "Do you offer same-day dental appointments?", answer: "Yes! We offer same-day appointments for emergencies and often have same-day availability for routine visits." },
     { question: "Can I bring my whole family to one dental office?", answer: "Absolutely! We treat patients of all ages, from toddlers to grandparents, so your entire family can be seen at one convenient location." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

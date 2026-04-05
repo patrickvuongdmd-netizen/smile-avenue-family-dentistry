@@ -59,6 +59,7 @@ const data: NeighborhoodPageData = {
     { question: "What dental services are available for Tomball patients?", answer: "We offer cleanings, implants, Invisalign, cosmetic dentistry, emergency care, pediatric dentistry, oral surgery, sedation, and more." },
     { question: "Do you have Saturday hours?", answer: "Our Cypress office does not currently offer Saturday hours, but our Katy location is open Saturdays 8am–2pm." },
     { question: "Is financing available?", answer: "Yes! We offer 0% financing through CareCredit and Sunbit, plus our in-house membership plan for patients without insurance." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

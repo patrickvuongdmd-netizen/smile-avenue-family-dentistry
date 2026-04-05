@@ -49,6 +49,7 @@ const data: ServicePageData = {
     { question: "Will I be unconscious during sedation?", answer: "It depends on the level. Nitrous oxide provides mild relaxation while conscious. IV sedation creates deep relaxation but is not general anesthesia." },
     { question: "Can I drive home after sedation?", answer: "Not after oral or IV sedation — arrange a ride home. After nitrous oxide only, you can drive yourself." },
     { question: "Which sedation is right for me?", answer: "We recommend based on your anxiety level, procedure type, and medical history. We'll discuss all options at your consultation." },
+    { question: "Is sedation dentistry safe for children?", answer: "Yes, when administered by trained professionals. We offer nitrous oxide (laughing gas) for children, which is very safe and wears off quickly. For more extensive procedures, we discuss age-appropriate sedation options with parents." },
   ],
   reviewsKicker: "WHAT KATY PATIENTS ARE SAYING", reviewsHeading: "Sedation Reviews",
   testimonials: [

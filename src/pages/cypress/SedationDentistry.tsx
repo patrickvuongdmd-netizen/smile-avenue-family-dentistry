@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Will I be unconscious?", answer: "It depends on the level. Nitrous oxide provides mild relaxation while you remain fully conscious. Oral sedation makes you drowsy but responsive. IV sedation provides deep relaxation — you likely won't remember the procedure, but it's not general anesthesia." },
     { question: "Can I drive home after sedation?", answer: "After nitrous oxide, yes — the effects wear off within minutes. After oral or IV sedation, you'll need a responsible adult to drive you home. We provide specific instructions based on your sedation type." },
     { question: "Which sedation is right for me?", answer: "We recommend based on your anxiety level, medical history, and the procedure being performed. Nitrous is great for mild anxiety, oral sedation for moderate anxiety, and IV sedation for severe anxiety or complex procedures." },
+    { question: "Is sedation dentistry safe for children?", answer: "Yes, when administered by trained professionals. We offer nitrous oxide (laughing gas) for children, which is very safe and wears off quickly. For more extensive procedures, we discuss age-appropriate sedation options with parents." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

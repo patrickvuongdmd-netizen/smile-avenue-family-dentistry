@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Is a deep cleaning different from a regular cleaning?", answer: "Yes — a deep cleaning (scaling and root planing) treats below the gumline and is necessary when gum disease is present. A regular cleaning (prophylaxis) maintains healthy teeth and gums above the gumline." },
     { question: "Does a dental cleaning hurt?", answer: "No — but if you have sensitivity, we accommodate with numbing gel or local anesthesia to ensure your comfort throughout the procedure." },
     { question: "Do kids need dental cleanings?", answer: "Yes, starting around age 2-3. Early dental visits establish good habits, catch problems early, and help children feel comfortable with dental care. Our team is great with kids of all ages." },
+    { question: "What is the difference between a regular cleaning and a deep cleaning?", answer: "A regular cleaning (prophylaxis) removes plaque and tartar above the gumline. A deep cleaning (scaling and root planing) treats below the gumline and is recommended when gum disease is present. Your dentist will recommend the appropriate type based on your exam." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

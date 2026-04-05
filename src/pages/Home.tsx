@@ -27,6 +27,7 @@ import CredibilityBar from "@/components/CredibilityBar";
 import SmileAvenueDifference from "@/components/SmileAveneDifference";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import TaglineBanner from "@/components/TaglineBanner";
+import ScrollBookingPrompt from "@/components/ScrollBookingPrompt";
 
 const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
@@ -405,6 +406,7 @@ const Home = () => {
       </main>
 
       <MobileStickyBar phone={CYPRESS_PHONE} phoneFormatted={CYPRESS_PHONE_FORMATTED} bookingUrl="" />
+      <ScrollBookingPrompt bookingUrl="https://book.modento.io/c/8e39e583fb6841bb833642fb994d478c/SmileAvenueCypress" />
       <Footer />
       <BackToTop />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />

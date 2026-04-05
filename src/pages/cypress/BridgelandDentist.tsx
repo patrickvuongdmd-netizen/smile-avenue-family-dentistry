@@ -58,6 +58,7 @@ const data: NeighborhoodPageData = {
     { question: "What dental services do you offer near Bridgeland?", answer: "We offer comprehensive dental care including cleanings, exams, dental implants, Invisalign, cosmetic dentistry, emergency care, pediatric dentistry, and more — all at our Fry Road location." },
     { question: "Do you offer same-day dental appointments for Bridgeland residents?", answer: "Yes! We offer same-day appointments for dental emergencies and often have same-day availability for routine visits. Call us at (832) 648-1756." },
     { question: "Is Smile Avenue a family-friendly dental office?", answer: "Yes! We treat patients of all ages, from toddlers to seniors. Our Bridgeland families love our kid-friendly approach and comfortable environment." },
+    { question: "Do you accept new patients?", answer: "Absolutely! We welcome new patients of all ages. You can book your first appointment online in under 60 seconds or call us directly. We offer same-day appointments for emergencies and typically schedule new patient exams within a few days." },
   ],
 };
 

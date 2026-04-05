@@ -51,6 +51,7 @@ const data: ServicePageData = {
     { question: "How long do All-on-X implants last?", answer: "The implants themselves are designed to last a lifetime. The prosthesis on top typically lasts 15-20+ years before any maintenance." },
     { question: "Am I too old for All-on-X?", answer: "Age alone rarely disqualifies you. General health and bone quality are more important factors, which we evaluate during your consultation." },
     { question: "What can I eat with All-on-X?", answer: "After the healing period, virtually anything — steak, apples, nuts, corn on the cob. All-on-X teeth function like natural teeth." },
+    { question: "How long does the All-on-X procedure take?", answer: "The surgical appointment typically takes 2-4 hours per arch. Many patients receive temporary teeth the same day. Permanent restorations are placed after 3-6 months of healing." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",

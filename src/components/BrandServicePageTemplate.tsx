@@ -41,6 +41,13 @@ const LOCATIONS = {
   },
 };
 
+const SPANISH_ALTERNATES: Record<string, string> = {
+  "dental-implants": "/es/implantes-dentales",
+  "emergency-dentist": "/es/dentista-de-emergencia",
+  "invisalign": "/es/invisalign",
+  "cosmetic-dentistry": "/es/odontologia-cosmetica",
+};
+
 const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
   const [bookingOpen, setBookingOpen] = useState(false);
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/`;
@@ -140,6 +147,11 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         {videoObjectsJsonLd && <script type="application/ld+json">{JSON.stringify(videoObjectsJsonLd)}</script>}
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+        {SPANISH_ALTERNATES[data.serviceSlug] && (
+          <link rel="alternate" hrefLang="es" href={`https://www.smileavenuefamilydentistry.com${SPANISH_ALTERNATES[data.serviceSlug]}/`} />
+        )}
       </Helmet>
       <TrustTicker />
       <Navbar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />

@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Are dental X-rays safe?", answer: "Yes. Digital X-rays use up to 80% less radiation than traditional film. We follow ADA guidelines and only take X-rays when clinically necessary." },
     { question: "Do you see children for preventive care?", answer: "Absolutely! We recommend a first dental visit by age 1. Our team is experienced with pediatric patients and makes visits fun and comfortable." },
     { question: "What if I haven't been to the dentist in years?", answer: "No judgment here! Many of our patients come to us after a long gap. We'll do a thorough assessment and create a plan to get your oral health back on track." },
+    { question: "What does a preventive dental visit include?", answer: "A typical preventive visit includes a comprehensive exam, professional cleaning, digital X-rays (as needed), oral cancer screening, and personalized hygiene recommendations. We also discuss any concerns you may have about your oral health." },
   ],
   reviewsKicker: "WHAT KATY PATIENTS SAY",
   reviewsHeading: "Preventive Care Reviews",

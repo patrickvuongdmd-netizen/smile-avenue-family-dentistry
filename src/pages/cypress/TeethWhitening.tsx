@@ -52,6 +52,7 @@ const data: ServicePageData = {
     { question: "Does whitening damage enamel?", answer: "No. Professional whitening under dental supervision is safe for your enamel. We use controlled concentrations and protective measures throughout the treatment." },
     { question: "Will whitening work on crowns or veneers?", answer: "Whitening only affects natural tooth enamel. We recommend whitening before getting restorations so we can match them to your new, brighter shade." },
     { question: "What about sensitive teeth?", answer: "We customize every treatment for sensitivity using desensitizing agents and adjusted gel concentrations. Most sensitive patients tolerate our protocols very well." },
+    { question: "Is teeth whitening safe for my enamel?", answer: "Yes, professional whitening is safe for enamel when supervised by a dentist. Over-the-counter products can cause damage if overused, which is why we recommend professional treatment for the safest and most effective results." },
   ],
   reviewsKicker: "PATIENT REVIEWS",
   reviewsHeading: "What Patients Are Saying",
