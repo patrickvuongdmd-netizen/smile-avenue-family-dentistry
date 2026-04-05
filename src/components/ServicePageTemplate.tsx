@@ -619,7 +619,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Patients Choose Us for {data.serviceName}</h2>
             <p className="section-body max-w-2xl mx-auto">See how Smile Avenue compares to a typical dental office.</p>
-            <div className="max-w-3xl mx-auto mt-10 overflow-x-auto">
+
+            {/* Desktop table */}
+            <div className="hidden sm:block max-w-3xl mx-auto mt-10 overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b-2 border-primary/20">
@@ -646,6 +648,27 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            {/* Mobile checklist */}
+            <div className="sm:hidden mt-8 max-w-sm mx-auto text-left space-y-3">
+              {[
+                { feature: "In-House Dental Lab", note: "Most offices outsource" },
+                { feature: "Same-Day Appointments", note: "Skip the 1–2 week wait" },
+                { feature: "Sedation Options", note: "Nitrous, Oral & IV available" },
+                { feature: "5,000+ Verified Reviews", note: "4.9★ average rating" },
+                { feature: "Netflix & Comfort Amenities", note: "In every treatment room" },
+                { feature: "0% Financing Available", note: "CareCredit & Sunbit accepted" },
+                { feature: "Digital Scanners", note: "No goopy impressions" },
+              ].map((row, i) => (
+                <div key={i} className={`flex items-start gap-3 p-3 rounded-xl ${i % 2 === 0 ? 'bg-muted/30' : ''}`}>
+                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-sans font-semibold text-foreground">{row.feature}</p>
+                    <p className="text-xs font-sans text-muted-foreground">{row.note}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

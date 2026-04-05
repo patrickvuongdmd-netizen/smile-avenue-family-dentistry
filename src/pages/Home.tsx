@@ -3,7 +3,7 @@ import BlogCardCarousel from "@/components/BlogCardCarousel";
 import BlogDesktopGrid from "@/components/BlogDesktopGrid";
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
-import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight } from "lucide-react";
+import { Star, Shield, Sparkles, SmilePlus, Zap, AlertCircle, Pill, Phone, Check, ArrowRight, ChevronRight } from "lucide-react";
 import { trackPhoneClick } from "@/lib/track-phone";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
@@ -33,12 +33,12 @@ const CYPRESS_PHONE = "8326481756";
 const CYPRESS_PHONE_FORMATTED = "(832) 648-1756";
 
 const services = [
-  { title: "Dental Implants", description: "Replace missing teeth permanently.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" /> },
-  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" /> },
-  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets.", slug: "invisalign", icon: <Zap className="w-6 h-6" /> },
-  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" /> },
-  { title: "Preventive Care", description: "Gentle cleanings to protect your family's smiles.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" /> },
-  { title: "Sedation Dentistry", description: "Nervous? Relax completely with sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" /> },
+  { title: "Dental Implants", description: "Replace missing teeth permanently.", slug: "dental-implants", icon: <SmilePlus className="w-6 h-6" />, mobileShow: true },
+  { title: "Cosmetic Dentistry", description: "Veneers, whitening, and complete smile makeovers.", slug: "cosmetic-dentistry", icon: <Sparkles className="w-6 h-6" />, mobileShow: false },
+  { title: "Invisalign®", description: "Straighter teeth in months — no metal brackets.", slug: "invisalign", icon: <Zap className="w-6 h-6" />, mobileShow: true },
+  { title: "Emergency Dentistry", description: "Toothache or broken tooth? We'll see you today.", slug: "emergency-dentist", icon: <AlertCircle className="w-6 h-6" />, mobileShow: true },
+  { title: "Preventive Care", description: "Gentle cleanings to protect your family's smiles.", slug: "dental-cleaning", icon: <Shield className="w-6 h-6" />, mobileShow: false },
+  { title: "Sedation Dentistry", description: "Nervous? Relax completely with sedation options.", slug: "sedation-dentistry", icon: <Pill className="w-6 h-6" />, mobileShow: false },
 ];
 
 const doctors = [
@@ -266,20 +266,21 @@ const Home = () => {
                 <Link
                   key={i}
                   to={`/services/${s.slug}`}
-                  className="flex flex-row items-center text-left gap-4 sm:items-start sm:gap-5 bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group"
+                  className={`flex flex-row items-center text-left gap-4 sm:items-start sm:gap-5 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all group ${!s.mobileShow ? 'hidden sm:flex' : 'flex'} ${i % 2 !== 0 ? 'bg-muted/30 sm:bg-card' : 'bg-card'}`}
                 >
                   <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-muted flex items-center justify-center shrink-0 text-muted-foreground transition-colors [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
                     {s.icon}
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-display text-[15px] sm:text-lg font-bold text-primary mb-0.5 sm:mb-1">{s.title}</h3>
                     <p className="text-xs sm:text-sm font-body text-muted-foreground leading-relaxed">{s.description}</p>
                   </div>
+                  <ChevronRight className="w-4 h-4 text-muted-foreground/40 shrink-0 sm:hidden group-hover:text-primary transition-colors" />
                 </Link>
               ))}
             </div>
             <div className="text-center mt-8">
-              <Link to="/services" className="btn-secondary w-full sm:w-auto">View All Services</Link>
+              <Link to="/services" className="btn-secondary w-full sm:w-auto">View All 16 Services</Link>
             </div>
           </div>
         </section>
@@ -373,8 +374,8 @@ const Home = () => {
           </section>
         </LazySection>
 
-        {/* Blog */}
-        <section className="section-padding bg-background">
+        {/* Blog — hidden on mobile to shorten scroll */}
+        <section className="hidden sm:block section-padding bg-background">
           <div className="container mx-auto">
             <div className="flex items-end justify-between mb-10">
               <div>
@@ -386,12 +387,6 @@ const Home = () => {
               </Link>
             </div>
             <div>
-              <BlogCardCarousel
-                posts={BLOG_POSTS.slice(0, 3)}
-                categoryColors={BLOG_CATEGORY_COLORS}
-                categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={BLOG_FALLBACK_IMAGE}
-              />
               <BlogDesktopGrid
                 posts={BLOG_POSTS.slice(0, 3)}
                 variant="image"
@@ -400,10 +395,6 @@ const Home = () => {
                 fallbackImage={BLOG_FALLBACK_IMAGE}
               />
             </div>
-            <Link to="/blog" className="sm:hidden flex items-center justify-center gap-1.5 mt-6 text-sm font-sans font-medium text-primary hover:underline">
-              View all posts
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </section>
       </main>
