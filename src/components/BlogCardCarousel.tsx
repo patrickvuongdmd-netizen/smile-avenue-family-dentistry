@@ -111,6 +111,7 @@ const BlogCardCarousel = ({ posts, categoryColors, categoryImages, fallbackImage
                       src={categoryImages[post.category] || fallbackImage}
                       alt={post.title}
                       loading={i === 0 ? "eager" : "lazy"}
+                      decoding="async"
                       width={800}
                       height={512}
                       className="w-full h-full object-cover mix-blend-multiply"

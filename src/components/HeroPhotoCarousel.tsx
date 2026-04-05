@@ -34,6 +34,7 @@ const HeroPhotoCarousel = ({ photos }: Props) => {
             i === current ? "opacity-100" : "opacity-0"
           }`}
           loading={i === 0 ? "eager" : "lazy"}
+          decoding={i === 0 ? "sync" : "async"}
           fetchPriority={i === 0 ? "high" : undefined}
           width={800}
           height={600}
