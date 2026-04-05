@@ -52,6 +52,30 @@ const footerServiceCategories = [
   },
 ];
 
+const FooterContact = () => (
+  <div>
+    <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-1.5">Cypress</p>
+    <div className="space-y-1 text-sm font-sans opacity-80 mb-5">
+      <a href="tel:8326481756" className="block hover:opacity-100 transition-opacity">(832) 648-1756</a>
+      <a href="mailto:info@smileavenuecypress.com" className="block hover:opacity-100 transition-opacity break-all">info@smileavenuecypress.com</a>
+    </div>
+    <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-1.5">Katy</p>
+    <div className="space-y-1 text-sm font-sans opacity-80 mb-5">
+      <a href="tel:2818005008" className="block hover:opacity-100 transition-opacity">(281) 800-5008</a>
+      <a href="mailto:info@smileavenuekaty.com" className="block hover:opacity-100 transition-opacity break-all">info@smileavenuekaty.com</a>
+    </div>
+    <p className="text-[11px] font-sans font-semibold uppercase tracking-widest opacity-60 mb-2">Social</p>
+    <div className="flex items-center gap-3">
+      <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Facebook"><Facebook className="w-4 h-4" /></a>
+      <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram"><Instagram className="w-4 h-4" /></a>
+      <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="TikTok">
+        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.21 8.21 0 004.76 1.52V7.06a4.84 4.84 0 01-1-.37z"/></svg>
+      </a>
+      <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Google Business Profile"><Globe className="w-4 h-4" /></a>
+    </div>
+  </div>
+);
+
 const Footer = () => {
   const [bookingOpen, setBookingOpen] = useState(false);
 
