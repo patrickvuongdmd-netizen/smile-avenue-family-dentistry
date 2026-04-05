@@ -254,7 +254,9 @@ const SERVICE_SLUG_TO_BLOG_CATEGORY: Record<string, string> = {
 
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const loc = LOCATIONS[data.location];
-  const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.serviceSlug}/`;
+  const canonicalUrl = data.canonicalPath
+    ? `https://www.smileavenuefamilydentistry.com${data.canonicalPath}/`
+    : `https://www.smileavenuefamilydentistry.com${loc.path}/${data.serviceSlug}/`;
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   useDocTitle(data.metaTitle);
 
