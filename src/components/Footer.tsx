@@ -196,6 +196,15 @@ const Footer = () => {
 
           {/* Mobile: Accordion layout */}
           <div className="lg:hidden">
+            {/* Prominent phone buttons on mobile */}
+            <div className="flex flex-col gap-2 mb-5">
+              <a href="tel:8326481756" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-background/10 text-sm font-sans font-semibold hover:bg-background/20 transition-colors">
+                📞 Cypress: (832) 648-1756
+              </a>
+              <a href="tel:2818005008" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-background/10 text-sm font-sans font-semibold hover:bg-background/20 transition-colors">
+                📞 Katy: (281) 800-5008
+              </a>
+            </div>
             <Accordion type="multiple" className="w-full">
               <AccordionItem value="about" className="border-background/10">
                 <AccordionTrigger className="py-3 font-display text-lg font-semibold hover:no-underline [&>svg]:text-primary [&>svg]:opacity-100">All About Us</AccordionTrigger>
