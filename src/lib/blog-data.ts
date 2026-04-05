@@ -1461,8 +1461,6 @@ Here's the method our dentists at Smile Avenue recommend:
 
 Regular [professional cleanings](/cypress-tx/dental-cleaning/) complement your home care by removing tartar that brushing alone can't reach.`,
   },
-];
-
   // ═══════════════════════════════════════
   // BATCH 3: SEO-TARGETED EXPANSION (10 posts)
   // ═══════════════════════════════════════
