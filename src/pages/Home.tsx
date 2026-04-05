@@ -18,6 +18,8 @@ import TrustStrip from "@/components/TrustStrip";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import ScrollReveal from "@/components/ScrollReveal";
+import InsuranceChecker from "@/components/InsuranceChecker";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 import LazySection from "@/components/LazySection";
 import { DOCTOR_IMAGES, OFFICE_IMAGES, HERO_VIDEO_URL } from "@/lib/images";
 import CredibilityBar from "@/components/CredibilityBar";
