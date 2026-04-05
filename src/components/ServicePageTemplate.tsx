@@ -17,8 +17,14 @@ import SkipToContent from "@/components/SkipToContent";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import LazyYouTube from "@/components/LazyYouTube";
 import { ReactNode } from "react";
-import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES } from "@/lib/images";
+import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES, DOCTOR_IMAGES } from "@/lib/images";
+import { trackPhoneClick } from "@/lib/track-phone";
 import VideoCarousel from "@/components/VideoCarousel";
+import OfficePhotoGrid from "@/components/OfficePhotoGrid";
+import BlogCardCarousel from "@/components/BlogCardCarousel";
+import BlogDesktopGrid from "@/components/BlogDesktopGrid";
+import { BLOG_POSTS } from "@/lib/blog-data";
+import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 import BlogCardCarousel from "@/components/BlogCardCarousel";
 import BlogDesktopGrid from "@/components/BlogDesktopGrid";
@@ -343,6 +349,19 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(speakableJsonLd)}</script>
+        {data.videoId && (
+          <script type="application/ld+json">{JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            name: `${data.serviceName} Explained — Smile Avenue Family Dentistry`,
+            description: `Watch how ${data.serviceName.toLowerCase()} works at Smile Avenue Family Dentistry in ${loc.name}, TX. Learn about the process, benefits, and what to expect.`,
+            thumbnailUrl: `https://img.youtube.com/vi/${data.videoId}/maxresdefault.jpg`,
+            uploadDate: "2024-01-15",
+            contentUrl: `https://www.youtube.com/watch?v=${data.videoId}`,
+            embedUrl: `https://www.youtube.com/embed/${data.videoId}`,
+            publisher: { "@type": "Organization", name: "Smile Avenue Family Dentistry", logo: { "@type": "ImageObject", url: "https://www.smileavenuefamilydentistry.com/logo-full.webp" } },
+          })}</script>
+        )}
       </Helmet>
       <TrustTicker />
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
@@ -352,8 +371,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <div className="bg-destructive text-destructive-foreground py-3 text-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-sm font-sans font-bold">
-              🦷 Dental Emergency? Call Now — Same-Day Appointments Available:{" "}
-              <a href={`tel:${loc.phone}`} className="underline hover:no-underline">{loc.phoneFormatted}</a>
+               🦷 Dental Emergency? Call Now — Same-Day Appointments Available:{" "}
+               <a href={`tel:${loc.phone}`} onClick={() => trackPhoneClick(loc.phone)} className="underline hover:no-underline">{loc.phoneFormatted}</a>
             </p>
           </div>
         </div>
@@ -398,7 +417,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   <button onClick={() => setBookingModalOpen(true)} className="btn-cta flex-1 whitespace-nowrap" aria-label={`Book ${data.serviceName} appointment`}>
                     {data.heroCta1}
                   </button>
-                  <a href={`tel:${loc.phone}`} className="btn-secondary flex-1 whitespace-nowrap flex items-center justify-center gap-2" aria-label={`Call ${loc.phoneFormatted}`}>
+                  <a href={`tel:${loc.phone}`} onClick={() => trackPhoneClick(loc.phone)} className="btn-secondary flex-1 whitespace-nowrap flex items-center justify-center gap-2" aria-label={`Call ${loc.phoneFormatted}`}>
                     <Phone className="w-4 h-4" />
                     Call Us
                   </a>
@@ -507,6 +526,38 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* MEET YOUR DOCTOR */}
+        <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-background">
+          <div className="container mx-auto">
+            <div className="max-w-2xl mx-auto">
+              <div className="card-soft flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+                {DOCTOR_IMAGES["patrick-vuong"] && (
+                  <img
+                    src={DOCTOR_IMAGES["patrick-vuong"].url}
+                    alt={DOCTOR_IMAGES["patrick-vuong"].alt}
+                    className="w-24 h-24 rounded-full object-cover shrink-0 ring-2 ring-primary/20"
+                    loading="lazy"
+                    decoding="async"
+                    width={96}
+                    height={96}
+                  />
+                )}
+                <div>
+                  <p className="text-[10px] font-sans font-semibold tracking-[0.15em] uppercase text-primary mb-1">MEET YOUR DOCTOR</p>
+                  <h3 className="font-display text-lg font-bold text-foreground">Dr. Patrick Vuong, DMD</h3>
+                  <p className="text-sm font-sans text-primary font-medium mb-2">Founder & Lead Dentist</p>
+                  <p className="text-sm font-body text-muted-foreground leading-relaxed mb-3">
+                    Over 1,000 implants placed. Advanced training in digital dentistry. Dr. Vuong leads every complex case with precision and compassion.
+                  </p>
+                  <Link to="/doctors/patrick-vuong-dmd" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+                    Read Full Bio →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* COST TRANSPARENCY */}
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
           <div className="container mx-auto">
@@ -598,7 +649,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 <h2 className="section-heading text-primary-foreground">{data.faqHeading}</h2>
                 <p className="section-body text-primary-foreground/60">
                   Have more questions? Call us at{" "}
-                  <a href={`tel:${loc.phone}`} className="text-primary-foreground underline hover:no-underline">{loc.phoneFormatted}</a>.
+                  <a href={`tel:${loc.phone}`} onClick={() => trackPhoneClick(loc.phone)} className="text-primary-foreground underline hover:no-underline">{loc.phoneFormatted}</a>.
                 </p>
               </div>
               <FaqAccordion items={data.faqs} variant="dark" />
@@ -622,7 +673,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 <button onClick={() => setBookingModalOpen(true)} className="btn-cta">
                   Book Online
                 </button>
-                <a href={`tel:${loc.phone}`} className="btn-secondary">
+                <a href={`tel:${loc.phone}`} onClick={() => trackPhoneClick(loc.phone)} className="btn-secondary">
                   Call Now
                 </a>
               </div>
@@ -733,7 +784,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="w-4 h-4 text-primary shrink-0" />
-                  <a href={`tel:${loc.phone}`} className="hover:text-primary transition-colors">{loc.phoneFormatted}</a>
+                  <a href={`tel:${loc.phone}`} onClick={() => trackPhoneClick(loc.phone)} className="hover:text-primary transition-colors">{loc.phoneFormatted}</a>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="w-4 h-4 text-primary shrink-0" />
