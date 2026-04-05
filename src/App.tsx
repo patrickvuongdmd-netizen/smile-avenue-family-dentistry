@@ -89,6 +89,10 @@ const About = lazy(() => import("./pages/About.tsx"));
 const Services = lazy(() => import("./pages/Services.tsx"));
 const Faq = lazy(() => import("./pages/Faq.tsx"));
 const Espanol = lazy(() => import("./pages/Espanol.tsx"));
+const EsImplantesDentales = lazy(() => import("./pages/es/ImplantesDentales.tsx"));
+const EsDentistaDeEmergencia = lazy(() => import("./pages/es/DentistaDeEmergencia.tsx"));
+const EsInvisalign = lazy(() => import("./pages/es/Invisalign.tsx"));
+const EsOdontologiaCosmetica = lazy(() => import("./pages/es/OdontologiaCosmetica.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 // Brand-Global Service Pages
@@ -263,6 +267,10 @@ const App = () => (
               <Route path="/services/surgical" element={<CategorySurgical />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/es" element={<Espanol />} />
+              <Route path="/es/implantes-dentales" element={<EsImplantesDentales />} />
+              <Route path="/es/dentista-de-emergencia" element={<EsDentistaDeEmergencia />} />
+              <Route path="/es/invisalign" element={<EsInvisalign />} />
+              <Route path="/es/odontologia-cosmetica" element={<EsOdontologiaCosmetica />} />
               {/* Google Ads Landing Pages */}
               <Route path="/cypress-tx/lp/new-patient" element={<CypressNewPatientLP />} />
               <Route path="/cypress-tx/lp/emergency-dentist" element={<CypressEmergencyLP />} />
