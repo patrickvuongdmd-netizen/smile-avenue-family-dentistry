@@ -9,7 +9,7 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 import Footer from "@/components/Footer";
 import TrustStrip from "@/components/TrustStrip";
 import SkipToContent from "@/components/SkipToContent";
-import ScrollReveal from "@/components/ScrollReveal";
+
 import { BLOG_POSTS, BLOG_CATEGORIES } from "@/lib/blog-data";
 import { getBlogImage } from "@/lib/blog-images";
 
