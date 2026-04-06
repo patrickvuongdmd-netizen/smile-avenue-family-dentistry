@@ -1,4 +1,4 @@
-import BrandServicePageTemplate from "@/components/BrandServicePageTemplate";
-import { BRAND_SERVICES } from "@/lib/brand-service-data";
-const DentalImplants = () => <BrandServicePageTemplate data={BRAND_SERVICES["dental-implants"]} />;
+import EducationServiceTemplate from "@/components/EducationServiceTemplate";
+import { EDUCATION_SERVICES } from "@/lib/education-service-data";
+const DentalImplants = () => <EducationServiceTemplate data={EDUCATION_SERVICES["dental-implants"]} />;
 export default DentalImplants;
