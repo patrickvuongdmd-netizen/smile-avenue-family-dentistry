@@ -619,5 +619,252 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     katySlug: "tooth-extraction",
     relatedBlogCategory: "General",
     relatedSlugs: ["dental-implants", "dental-bridges", "dentures", "sedation-dentistry"]
+  },
+
+  "oral-surgery": {
+    serviceName: "Oral Surgery",
+    serviceSlug: "oral-surgery",
+    metaTitle: "Oral Surgery | Wisdom Teeth, Bone Grafting & More | Smile Avenue",
+    metaDescription: "Learn about oral surgery procedures including wisdom teeth removal, bone grafting, and jaw surgery. Sedation options available at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "Expert surgical care in a comfortable setting — from wisdom teeth to bone grafting, we make oral surgery stress-free.",
+    whatIs: [
+      "Oral surgery encompasses a range of dental procedures that involve surgical intervention in or around the mouth and jaw. While the word 'surgery' can feel intimidating, most oral surgery procedures are routine, well-understood, and performed comfortably with modern anesthesia and sedation options.",
+      "Common oral surgery procedures include wisdom teeth removal, dental bone grafting (to prepare your jaw for implants), surgical tooth extractions, and corrective jaw procedures. At Smile Avenue, our experienced surgeons perform these procedures in-office with advanced 3D imaging and sedation so you never need to visit a hospital.",
+      "We use cone-beam CT (CBCT) technology to create a detailed 3D map of your jaw, nerves, and sinuses before any procedure. This allows us to plan every step with precision, minimize recovery time, and reduce the risk of complications.",
+      "Whether you need a single wisdom tooth removed or a complex bone graft before dental implants, our team is trained to handle it all with a gentle, patient-first approach. Most patients are surprised by how comfortable the experience actually is."
+    ],
+    whoNeeds: [
+      "Your wisdom teeth are impacted, causing pain, swelling, or crowding",
+      "You need bone grafting before dental implant placement",
+      "A tooth is severely damaged and requires surgical extraction",
+      "You have a cyst, lesion, or abnormal growth in your mouth",
+      "Your jaw alignment needs correction for bite or breathing issues",
+      "You need a tooth exposure procedure for orthodontic treatment",
+      "You require ridge preservation after a tooth extraction"
+    ],
+    processSteps: [
+      { number: "01", title: "Consultation & 3D Imaging", description: "We take CBCT scans to fully visualize the surgical area, discuss your options, and create a personalized treatment plan." },
+      { number: "02", title: "Sedation & Comfort Setup", description: "Choose from nitrous oxide, oral sedation, or IV sedation. We ensure you're completely comfortable before beginning." },
+      { number: "03", title: "The Procedure", description: "Using advanced instruments and guided imaging, your surgeon performs the procedure with precision and minimal tissue disruption." },
+      { number: "04", title: "Recovery & Follow-Up", description: "You'll receive detailed aftercare instructions and pain management. Most patients recover within a few days to a week." }
+    ],
+    costNote: "Oral surgery costs vary based on the specific procedure. Wisdom teeth removal typically ranges from $250–$600 per tooth. Bone grafting ranges from $300–$800 per site. We provide transparent pricing at your consultation, accept most dental insurance plans, and offer flexible financing options including CareCredit.",
+    comparisonRows: [
+      { feature: "In-Office Surgical Suite", smileAvenue: "Full surgical capability — no hospital needed", typical: "Refer out to oral surgeon" },
+      { feature: "3D CBCT Imaging", smileAvenue: "Included at no extra charge", typical: "Separate imaging appointment" },
+      { feature: "Sedation Options", smileAvenue: "Nitrous, oral & IV sedation available", typical: "Limited or no sedation" },
+      { feature: "Same-Day Procedures", smileAvenue: "Many procedures done same day", typical: "Multi-week scheduling" },
+      { feature: "Post-Op Follow-Up", smileAvenue: "Complimentary follow-up visit", typical: "Additional office visit fee" }
+    ],
+    faqs: [
+      { question: "Is oral surgery painful?", answer: "No — with modern anesthesia and sedation, you won't feel pain during the procedure. Most patients describe mild soreness afterward that's easily managed with over-the-counter pain medication." },
+      { question: "How long does recovery take after wisdom teeth removal?", answer: "Most patients feel significantly better within 3–5 days. Complete healing of the extraction sites takes about 2 weeks. We provide detailed aftercare instructions to speed your recovery." },
+      { question: "Do I need someone to drive me home?", answer: "If you receive oral or IV sedation, yes — you'll need a responsible adult to drive you home. If only local anesthesia or nitrous oxide is used, you can typically drive yourself." },
+      { question: "What is bone grafting and why might I need it?", answer: "Bone grafting adds bone material to your jaw to create a strong foundation for dental implants. After tooth loss, the jawbone naturally shrinks. Grafting rebuilds that bone so implants have adequate support." },
+      { question: "Can I eat normally after oral surgery?", answer: "You'll want to stick to soft foods for the first few days — smoothies, yogurt, mashed potatoes, and soup. Most patients return to normal eating within a week." },
+      { question: "Does insurance cover oral surgery?", answer: "Most dental insurance plans cover medically necessary oral surgery procedures like wisdom teeth removal and surgical extractions. We verify your benefits before treatment and help maximize your coverage." }
+    ],
+    cypressSlug: "oral-surgery",
+    katySlug: "oral-surgery",
+    relatedBlogCategory: "General",
+    relatedSlugs: ["dental-implants", "sedation-dentistry", "tooth-extraction", "all-on-x-implants"]
+  },
+
+  "sedation-dentistry": {
+    serviceName: "Sedation Dentistry",
+    serviceSlug: "sedation-dentistry",
+    metaTitle: "Sedation Dentistry | Anxiety-Free Dental Care | Smile Avenue",
+    metaDescription: "Overcome dental anxiety with sedation dentistry. Learn about nitrous oxide, oral sedation & IV sedation options at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "Dental anxiety shouldn't keep you from a healthy smile. We offer multiple sedation options so every visit feels comfortable and stress-free.",
+    whatIs: [
+      "Sedation dentistry uses medication to help you relax during dental procedures. It's sometimes called 'sleep dentistry,' though you're typically awake — just deeply relaxed and calm. It's the perfect solution for anyone who feels anxious, nervous, or fearful about visiting the dentist.",
+      "At Smile Avenue, we offer three levels of sedation tailored to your comfort needs. Nitrous oxide (laughing gas) provides mild relaxation that wears off within minutes. Oral sedation involves taking a prescribed pill before your appointment for moderate relaxation. IV sedation delivers medication directly into your bloodstream for deeper relaxation during more complex procedures.",
+      "Sedation dentistry isn't just for people with dental phobias. It's also ideal for patients who have a strong gag reflex, need extensive dental work completed in fewer visits, have difficulty getting numb with local anesthesia, or simply want a more comfortable experience.",
+      "Your safety is our top priority. Our team is trained in sedation protocols, and we monitor your vital signs throughout every procedure. You'll be in expert hands from the moment you arrive until you're ready to go home."
+    ],
+    whoNeeds: [
+      "You experience dental anxiety or fear that prevents you from visiting the dentist",
+      "You have a strong gag reflex that makes dental work uncomfortable",
+      "You need multiple procedures and want them completed in fewer visits",
+      "You have difficulty getting numb with local anesthesia alone",
+      "You have a low pain threshold or heightened sensitivity",
+      "You had a traumatic dental experience in the past",
+      "You have special needs or conditions that make sitting still difficult"
+    ],
+    processSteps: [
+      { number: "01", title: "Sedation Consultation", description: "We review your medical history, discuss your anxiety triggers, and recommend the best sedation option for your needs and procedure." },
+      { number: "02", title: "Pre-Appointment Preparation", description: "For oral or IV sedation, you'll receive specific instructions about eating, drinking, and medication. Nitrous oxide requires no prep." },
+      { number: "03", title: "Comfortable Treatment", description: "Your sedation is administered, and we wait until you're fully relaxed before beginning. You'll feel calm and comfortable throughout." },
+      { number: "04", title: "Gentle Recovery", description: "Nitrous oxide wears off in minutes. Oral and IV sedation patients rest briefly in our recovery area before being driven home by their companion." }
+    ],
+    costNote: "Nitrous oxide typically adds $50–$100 to your procedure cost. Oral sedation ranges from $150–$300. IV sedation ranges from $250–$500 depending on the length of your procedure. We discuss all costs upfront and offer financing through CareCredit so cost never prevents you from comfortable care.",
+    comparisonRows: [
+      { feature: "Sedation Options", smileAvenue: "Nitrous, oral & IV sedation", typical: "Nitrous oxide only" },
+      { feature: "Sedation Training", smileAvenue: "Advanced sedation-certified team", typical: "Basic sedation only" },
+      { feature: "Vital Sign Monitoring", smileAvenue: "Continuous pulse ox & BP monitoring", typical: "Periodic checks" },
+      { feature: "Comfort Amenities", smileAvenue: "Netflix, blankets, neck pillows", typical: "Standard dental chair" },
+      { feature: "Multi-Procedure Sessions", smileAvenue: "Complete multiple treatments in one visit", typical: "One procedure per visit" }
+    ],
+    faqs: [
+      { question: "Will I be completely unconscious during sedation?", answer: "With nitrous oxide and oral sedation, you'll be awake but deeply relaxed. IV sedation puts you in a twilight state where you may not remember the procedure, but you can still respond to your dentist. General anesthesia (full unconsciousness) is rarely needed for dental work." },
+      { question: "Is sedation dentistry safe?", answer: "Yes — sedation dentistry has an excellent safety record. Our team is trained in advanced sedation protocols and monitors your vital signs continuously. We also review your complete medical history to ensure sedation is appropriate for you." },
+      { question: "How long does sedation last?", answer: "Nitrous oxide wears off within 5 minutes of removing the mask. Oral sedation effects can last 2–4 hours. IV sedation typically wears off within 1–2 hours, though you may feel drowsy for the rest of the day." },
+      { question: "Can I drive myself home after sedation?", answer: "After nitrous oxide, yes. After oral or IV sedation, you must have a responsible adult drive you home. Plan to rest for the remainder of the day." },
+      { question: "Does insurance cover sedation dentistry?", answer: "Some dental insurance plans cover sedation for certain procedures, especially surgical ones. We verify your benefits before treatment. For non-covered sedation, we offer affordable pricing and financing." },
+      { question: "What if I'm embarrassed about my dental anxiety?", answer: "Please don't be — dental anxiety is incredibly common. About 36% of Americans experience some level of dental fear. Our entire team is trained to provide judgment-free, compassionate care. You're not alone, and we're here to help." }
+    ],
+    cypressSlug: "sedation-dentistry",
+    katySlug: "sedation-dentistry",
+    relatedBlogCategory: "General",
+    relatedSlugs: ["oral-surgery", "dental-implants", "root-canal", "emergency-dentist"]
+  },
+
+  "pediatric-dentistry": {
+    serviceName: "Pediatric Dentistry",
+    serviceSlug: "pediatric-dentistry",
+    metaTitle: "Pediatric Dentistry | Children's Dental Care | Smile Avenue",
+    metaDescription: "Gentle, fun dental care for kids of all ages. Learn about first visits, sealants, fluoride treatments & more at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "A dental home where kids actually want to come back — gentle care, fun visits, and Netflix in every room.",
+    whatIs: [
+      "Pediatric dentistry focuses on the oral health of infants, children, and teenagers. At Smile Avenue, we believe that a child's first dental experiences shape their attitude toward dental care for life — so we make every visit fun, gentle, and positive.",
+      "Our kid-friendly approach includes Netflix and streaming entertainment in every treatment room, treasure chest prizes after visits, and a warm, patient team that knows how to put even the most nervous little ones at ease. We treat children like the VIPs they are.",
+      "Children's dental needs are different from adults. Their teeth are still developing, and early intervention can prevent problems that would be much harder to fix later. We focus on preventive care — sealants, fluoride treatments, and education — to set your child up for a lifetime of healthy smiles.",
+      "The American Academy of Pediatric Dentistry recommends that children have their first dental visit by age one or within six months of their first tooth erupting. Early visits help us catch potential issues like alignment problems, tooth decay risk, and developmental concerns before they become bigger problems."
+    ],
+    whoNeeds: [
+      "Your child is approaching their first birthday or has their first tooth",
+      "Your child needs their first dental exam and cleaning",
+      "You want to protect your child's teeth with sealants or fluoride treatments",
+      "Your child has a cavity or tooth pain",
+      "You're concerned about thumb-sucking, pacifier use, or bite development",
+      "Your child is anxious about the dentist and needs a gentle approach",
+      "Your teenager needs wisdom teeth evaluation or orthodontic assessment"
+    ],
+    processSteps: [
+      { number: "01", title: "Welcome & Tour", description: "We give your child a fun tour of the office, show them the tools, and let them pick a show to watch. No surprises — just friendly faces." },
+      { number: "02", title: "Gentle Exam", description: "The dentist examines your child's teeth, gums, and bite development using kid-sized instruments. We explain everything in age-appropriate language." },
+      { number: "03", title: "Cleaning & Prevention", description: "A gentle cleaning followed by fluoride treatment and sealants if recommended. We teach brushing and flossing techniques in a fun way." },
+      { number: "04", title: "Report & Next Steps", description: "We share findings with parents, discuss any concerns, and schedule the next visit. Your child picks a prize from the treasure chest!" }
+    ],
+    costNote: "Children's dental exams and cleanings typically range from $150–$300 depending on the services provided. Sealants are $30–$50 per tooth and fluoride treatments are $25–$50. Most dental insurance plans cover pediatric preventive care at 100%. We also accept our Smile Avenue Membership Plan for uninsured families.",
+    comparisonRows: [
+      { feature: "Kid-Friendly Environment", smileAvenue: "Netflix in every room, treasure chest prizes", typical: "Standard clinical setting" },
+      { feature: "Team Training", smileAvenue: "Specially trained in pediatric behavior management", typical: "General dental training" },
+      { feature: "First Visit Experience", smileAvenue: "Fun tour, show-and-tell, zero pressure", typical: "Standard exam appointment" },
+      { feature: "Parent Communication", smileAvenue: "Detailed report with photos and next steps", typical: "Brief verbal summary" },
+      { feature: "Preventive Focus", smileAvenue: "Sealants, fluoride & education at every visit", typical: "Preventive care as needed" }
+    ],
+    faqs: [
+      { question: "When should my child first see the dentist?", answer: "The American Academy of Pediatric Dentistry recommends a first visit by age one or within six months of the first tooth appearing. Early visits establish a dental home and help us catch issues before they develop." },
+      { question: "How do you handle kids who are scared of the dentist?", answer: "We use a 'tell-show-do' approach — we explain everything first, show them the tools, then gently proceed. Netflix in every room helps distract and relax. For very anxious children, we offer nitrous oxide (laughing gas) to help them feel calm." },
+      { question: "Are dental sealants worth it?", answer: "Absolutely! Sealants reduce cavities in molars by up to 80%. They're a thin protective coating applied to the chewing surfaces of back teeth where most childhood cavities develop. The procedure is quick, painless, and extremely effective." },
+      { question: "How often should my child visit the dentist?", answer: "Every six months for routine exams and cleanings. Children who are cavity-prone or have orthodontic concerns may benefit from more frequent visits." },
+      { question: "Do you offer fluoride treatments?", answer: "Yes! Professional fluoride treatments strengthen enamel and are one of the most effective ways to prevent cavities. We recommend them at every six-month visit for children." },
+      { question: "What if my child has a dental emergency?", answer: "Call us immediately — we offer same-day emergency appointments for children. Common emergencies include knocked-out teeth, broken teeth, and severe toothaches. Quick action can often save the tooth." }
+    ],
+    cypressSlug: "pediatric-dentistry",
+    katySlug: "pediatric-dentistry",
+    relatedBlogCategory: "General",
+    relatedSlugs: ["dental-cleaning", "family-dental-care", "preventive-dentistry", "sedation-dentistry"]
+  },
+
+  "preventive-dentistry": {
+    serviceName: "Preventive Dentistry",
+    serviceSlug: "preventive-dentistry",
+    metaTitle: "Preventive Dentistry | Cleanings, Exams & Screenings | Smile Avenue",
+    metaDescription: "Prevention is the best medicine. Learn about dental cleanings, exams, X-rays, oral cancer screenings & more at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "The best dental treatment is the one you never need. Regular preventive care keeps your smile healthy and catches small issues before they become big problems.",
+    whatIs: [
+      "Preventive dentistry is the foundation of everything we do at Smile Avenue. It includes all the care and habits that keep your teeth and gums healthy — regular cleanings, comprehensive exams, digital X-rays, oral cancer screenings, and patient education.",
+      "Think of preventive care as your smile's insurance policy. By seeing your dentist regularly, we can catch cavities when they're tiny (and easy to fix), identify gum disease before it causes bone loss, and spot oral cancer in its earliest, most treatable stages.",
+      "Our preventive appointments go beyond a basic cleaning. Every visit includes a thorough examination of your teeth, gums, bite, and jaw joints. We use digital X-rays (which emit 80% less radiation than traditional X-rays) and intraoral cameras to see things the naked eye can't detect.",
+      "We also focus on education — teaching you the most effective brushing and flossing techniques, recommending the right products for your specific needs, and helping you understand how diet and lifestyle affect your oral health. An informed patient is a healthier patient."
+    ],
+    whoNeeds: [
+      "Everyone! Preventive care is recommended for patients of all ages",
+      "It's been more than 6 months since your last dental cleaning",
+      "You want to catch cavities and gum disease before they become painful",
+      "You're due for updated dental X-rays",
+      "You want an oral cancer screening",
+      "You have risk factors like diabetes, smoking, or a family history of gum disease",
+      "You want personalized advice on improving your home care routine"
+    ],
+    processSteps: [
+      { number: "01", title: "Comprehensive Exam", description: "Your dentist examines every tooth, your gums, bite alignment, jaw joints, and soft tissues. We check for cavities, gum disease, and signs of oral cancer." },
+      { number: "02", title: "Digital X-Rays", description: "Low-radiation digital X-rays reveal what's happening below the surface — cavities between teeth, bone levels, impacted teeth, and more." },
+      { number: "03", title: "Professional Cleaning", description: "Our hygienist removes plaque and tartar buildup, polishes your teeth, and flosses thoroughly. We also apply fluoride if recommended." },
+      { number: "04", title: "Personalized Care Plan", description: "We discuss findings, answer questions, and create a customized plan to keep your smile healthy between visits." }
+    ],
+    costNote: "A preventive dental exam with cleaning and X-rays typically ranges from $200–$400 without insurance. Most dental insurance plans cover two preventive visits per year at 100%. Our Smile Avenue Membership Plan covers all preventive care for $25/month — perfect for patients without insurance.",
+    comparisonRows: [
+      { feature: "Exam Thoroughness", smileAvenue: "Comprehensive 40+ point exam", typical: "Basic visual exam" },
+      { feature: "X-Ray Technology", smileAvenue: "Digital X-rays (80% less radiation)", typical: "Traditional film X-rays" },
+      { feature: "Oral Cancer Screening", smileAvenue: "Included at every exam", typical: "Only when requested" },
+      { feature: "Intraoral Camera", smileAvenue: "See what the dentist sees on screen", typical: "Verbal description only" },
+      { feature: "Membership Plan", smileAvenue: "$25/month covers all preventive care", typical: "No membership options" }
+    ],
+    faqs: [
+      { question: "How often should I get a dental cleaning?", answer: "Most patients benefit from cleanings every six months. If you have gum disease or are at higher risk for dental problems, we may recommend cleanings every 3–4 months." },
+      { question: "Are dental X-rays safe?", answer: "Yes. Our digital X-rays use up to 80% less radiation than traditional film X-rays. A full set of dental X-rays exposes you to less radiation than a short airplane flight." },
+      { question: "What is an oral cancer screening?", answer: "It's a visual and physical examination of your mouth, tongue, throat, and neck to check for signs of cancer or precancerous conditions. We perform one at every exam because early detection saves lives." },
+      { question: "Do I still need professional cleanings if I brush and floss daily?", answer: "Yes! Even excellent home care can't remove hardened tartar (calculus). Professional cleanings reach areas that brushing and flossing miss, and give us the opportunity to catch any developing issues early." },
+      { question: "What's included in the Smile Avenue Membership Plan?", answer: "For $25/month, the plan covers two exams, two cleanings, all necessary X-rays, one emergency exam, and 15–20% off all other treatments. It's designed for patients without dental insurance." },
+      { question: "What happens if you find a problem during my preventive visit?", answer: "We'll explain what we found, show you images if available, and discuss treatment options. There's never any pressure — we present the facts and let you make an informed decision." }
+    ],
+    cypressSlug: "preventive-dentistry",
+    katySlug: "preventive-dentistry",
+    relatedBlogCategory: "General",
+    relatedSlugs: ["dental-cleaning", "family-dental-care", "pediatric-dentistry", "emergency-dentist"]
+  },
+
+  "all-on-x-implants": {
+    serviceName: "All-on-X Dental Implants",
+    serviceSlug: "all-on-x-implants",
+    metaTitle: "All-on-4 & All-on-6 Full Arch Implants | Smile Avenue",
+    metaDescription: "Replace an entire arch of teeth in one day with All-on-X implants. Learn about All-on-4, All-on-6, costs & recovery at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "A brand-new smile in just one day — replace a full arch of missing or failing teeth with permanent, implant-supported teeth.",
+    videoId: "dQw4w9WcXgQ",
+    whatIs: [
+      "All-on-X is a revolutionary dental implant technique that replaces an entire arch of teeth — upper, lower, or both — using just four to six strategically placed implants. The 'X' refers to the number of implants used: All-on-4 uses four implants, while All-on-6 uses six for additional stability.",
+      "Unlike traditional dentures that rest on your gums and can slip or cause sore spots, All-on-X teeth are permanently anchored to implants in your jawbone. They don't come out, don't need adhesive, and let you eat, speak, and smile with complete confidence.",
+      "One of the most remarkable aspects of All-on-X is the timeline. In many cases, you can walk into our office with failing or missing teeth and walk out the same day with a full set of beautiful, functional teeth. We call this 'Teeth in a Day' because that's exactly what it is.",
+      "The procedure is made possible by our in-house dental lab, 3D CBCT imaging, and digital smile design technology. We plan every detail digitally before surgery, fabricate your new teeth on-site, and deliver results that look and feel completely natural — all in one location."
+    ],
+    whoNeeds: [
+      "You're missing most or all of your teeth on one or both arches",
+      "Your remaining teeth are failing and need to be replaced",
+      "Your dentures are uncomfortable, loose, or affecting your quality of life",
+      "You've been told you need full extractions",
+      "You want a permanent alternative to removable dentures",
+      "You've experienced significant jawbone loss (All-on-X often works even with reduced bone)",
+      "You want to restore your ability to eat all foods and smile with confidence"
+    ],
+    processSteps: [
+      { number: "01", title: "Free Consultation & Digital Planning", description: "We take 3D CBCT scans, photographs, and digital impressions. Your new smile is designed digitally so you can preview the result before treatment begins." },
+      { number: "02", title: "Surgery Day — Teeth in a Day", description: "Implants are placed strategically in your jawbone, any remaining teeth are removed, and a custom set of temporary teeth is attached — all in one appointment." },
+      { number: "03", title: "Healing Period", description: "Over 3–6 months, your implants fuse with the jawbone. Your temporary teeth are fully functional — you can eat and smile normally." },
+      { number: "04", title: "Final Smile Delivery", description: "Your permanent zirconia or acrylic bridge is crafted in our in-house lab and secured to your implants. Your transformation is complete." }
+    ],
+    costNote: "All-on-X treatment typically ranges from $15,000–$30,000 per arch depending on materials and complexity. While this is a significant investment, it's a permanent solution that eliminates the ongoing costs of denture adhesives, relines, and replacements. We offer financing through CareCredit with monthly payments as low as $250, and our treatment coordinators help maximize any available insurance benefits.",
+    comparisonRows: [
+      { feature: "In-House Dental Lab", smileAvenue: "Same-day teeth fabricated on-site", typical: "Outsourced to external lab" },
+      { feature: "3D Digital Planning", smileAvenue: "Full digital smile design preview", typical: "Traditional impressions" },
+      { feature: "Teeth in a Day", smileAvenue: "Walk out with teeth same day", typical: "Months without teeth during healing" },
+      { feature: "Sedation Options", smileAvenue: "IV sedation available for full comfort", typical: "Local anesthesia only" },
+      { feature: "Follow-Up Care", smileAvenue: "Lifetime of follow-up support", typical: "Limited post-op visits" }
+    ],
+    faqs: [
+      { question: "What's the difference between All-on-4 and All-on-6?", answer: "All-on-4 uses four implants to support a full arch of teeth, while All-on-6 uses six implants for additional stability. Your dentist will recommend the best option based on your bone density, bite forces, and specific needs." },
+      { question: "Can I really get new teeth in one day?", answer: "Yes! On surgery day, implants are placed and a set of temporary teeth is attached immediately. You'll walk out with a functional, beautiful smile. Your permanent teeth are delivered after the healing period (3–6 months)." },
+      { question: "How long do All-on-X implants last?", answer: "With proper care, the implants themselves can last a lifetime. The prosthetic teeth (bridge) typically last 15–20+ years before needing replacement. Regular check-ups and good hygiene help maximize longevity." },
+      { question: "Does it hurt?", answer: "The procedure is performed under sedation, so you won't feel pain during surgery. Afterward, most patients report mild to moderate soreness for a few days, manageable with prescribed pain medication. Many patients say it's less painful than they expected." },
+      { question: "Can I eat normally with All-on-X?", answer: "After the initial healing period, yes! All-on-X patients can eat steak, apples, corn on the cob — all the foods that denture wearers typically avoid. During the first few months with temporary teeth, you'll stick to softer foods." },
+      { question: "What if I've been told I don't have enough bone for implants?", answer: "All-on-X is specifically designed for patients with reduced bone. The implants are placed at strategic angles to maximize contact with available bone. In many cases, bone grafting isn't needed — making treatment possible for patients who were told they weren't candidates for traditional implants." },
+      { question: "How do All-on-X implants compare to dentures?", answer: "All-on-X teeth are permanently fixed, don't require adhesive, don't slip, and let you eat anything. They also preserve jawbone health. Dentures sit on top of your gums, can move, restrict diet, and contribute to ongoing bone loss." }
+    ],
+    cypressSlug: "all-on-x-implants",
+    katySlug: "all-on-x-implants",
+    relatedBlogCategory: "Implants",
+    relatedSlugs: ["dental-implants", "dentures", "oral-surgery", "sedation-dentistry"]
   }
 };
