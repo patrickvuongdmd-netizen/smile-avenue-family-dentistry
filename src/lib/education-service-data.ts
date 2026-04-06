@@ -319,5 +319,305 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     katySlug: "dental-cleaning",
     relatedBlogCategory: "Preventive",
     relatedSlugs: ["preventive-dentistry", "family-dental-care", "pediatric-dentistry"]
+  },
+
+  "dental-crowns": {
+    serviceName: "Dental Crowns",
+    serviceSlug: "dental-crowns",
+    metaTitle: "Dental Crowns Explained | Types, Process & Cost | Smile Avenue",
+    metaDescription: "Learn about dental crowns — porcelain, zirconia, and ceramic options. Understand when you need a crown, the process, and costs at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "A custom-fitted cap that restores damaged teeth to their full strength, shape, and beauty — often in just two visits.",
+    whatIs: [
+      "A dental crown is a custom-made cap that fits over your entire tooth, restoring its shape, size, strength, and appearance. Think of it as a protective helmet for a tooth that's been weakened by decay, a large filling, a crack, or a root canal.",
+      "Modern crowns are crafted from materials like porcelain, zirconia, and ceramic that are virtually indistinguishable from natural teeth. At Smile Avenue, we design and fabricate many crowns in our on-site dental lab, which means faster turnaround and a more precise fit than crowns sent to outside laboratories.",
+      "Zirconia crowns are the strongest option available today — they resist chipping and cracking while still looking beautifully natural. Porcelain and ceramic crowns offer the most lifelike translucency for front teeth. Your dentist will recommend the best material based on the tooth's location and your bite.",
+      "With proper care, a high-quality dental crown can last 15 to 25 years or longer. They function just like natural teeth — you can eat, brush, and floss normally."
+    ],
+    whoNeeds: [
+      "You have a cracked or fractured tooth",
+      "A large cavity that's too big for a filling",
+      "You've had a root canal and the tooth needs protection",
+      "An old, large filling is breaking down",
+      "You want to improve the appearance of a discolored or misshapen tooth",
+      "You need to anchor a dental bridge",
+      "A dental implant needs a final restoration on top"
+    ],
+    processSteps: [
+      { number: "01", title: "Exam & Treatment Planning", description: "We examine the tooth, take digital X-rays or 3D scans, and discuss the best crown material for your situation. You'll receive a clear cost estimate." },
+      { number: "02", title: "Tooth Preparation", description: "The tooth is gently reshaped to make room for the crown. We take precise digital impressions — no messy putty trays — and place a comfortable temporary crown." },
+      { number: "03", title: "Crown Fabrication", description: "Your custom crown is crafted in our in-house dental lab using high-grade porcelain or zirconia, matched perfectly to your natural tooth color." },
+      { number: "04", title: "Final Placement", description: "The temporary is removed, the permanent crown is checked for fit and bite, and then bonded securely in place. You leave with a fully restored tooth." }
+    ],
+    costNote: "Dental crown costs depend on the material chosen and the complexity of the case. At Smile Avenue, crowns typically range from $1,000–$1,800. Most PPO dental insurance plans cover a significant portion of crown treatment. We also offer 0% financing through CareCredit and accept our in-house membership plan for uninsured patients.",
+    comparisonRows: [
+      { feature: "In-House Lab", smileAvenue: "✓ Crown made on-site, faster delivery", typical: "Sent to outside lab (2-3 weeks)" },
+      { feature: "Digital Impressions", smileAvenue: "✓ Comfortable digital scans", typical: "Messy putty impression trays" },
+      { feature: "Material Options", smileAvenue: "✓ Porcelain, zirconia, ceramic", typical: "Limited material choices" },
+      { feature: "Same-Day Options", smileAvenue: "✓ Available for select cases", typical: "Always requires two visits" },
+      { feature: "Color Matching", smileAvenue: "✓ Custom shade matching in natural light", typical: "Basic shade guide" },
+      { feature: "Warranty", smileAvenue: "✓ Treatment guarantee included", typical: "Varies or none" }
+    ],
+    faqs: [
+      { question: "How long does it take to get a dental crown?", answer: "Most crowns require two visits spaced about 1-2 weeks apart. Because we have an in-house lab, turnaround is often faster than offices that send work to outside labs." },
+      { question: "Does getting a crown hurt?", answer: "Not at all. The tooth is completely numbed before any work begins. Most patients feel only light pressure. We also offer sedation options for anxious patients." },
+      { question: "How long do dental crowns last?", answer: "With good oral hygiene and regular checkups, a quality crown can last 15-25 years or even longer. Zirconia crowns tend to be the most durable." },
+      { question: "Can you tell a crown apart from a real tooth?", answer: "Modern porcelain and zirconia crowns are designed to match the color, translucency, and shape of your natural teeth. Most people can't tell the difference." },
+      { question: "What's the difference between a crown and a veneer?", answer: "A veneer covers only the front surface of a tooth and is used for cosmetic improvement. A crown covers the entire tooth and restores both structure and appearance. Crowns are recommended when a tooth is weakened or has significant damage." },
+      { question: "Will my insurance cover a dental crown?", answer: "Most PPO dental plans cover 50-80% of crown costs after deductible. We verify your benefits before treatment and provide a clear breakdown of your out-of-pocket costs." }
+    ],
+    cypressSlug: "dental-crowns",
+    katySlug: "dental-crowns",
+    relatedBlogCategory: "Cosmetic",
+    relatedSlugs: ["veneers", "dental-bridges", "root-canal", "dental-implants"]
+  },
+
+  "root-canal": {
+    serviceName: "Root Canal",
+    serviceSlug: "root-canal",
+    metaTitle: "Root Canal Treatment Explained | Pain-Free & Modern | Smile Avenue",
+    metaDescription: "Root canals don't have to be scary. Learn how modern techniques make treatment comfortable, when you need one, and what recovery looks like. Cypress & Katy, TX.",
+    heroSubtitle: "Modern root canal therapy is gentle, efficient, and virtually painless — and it saves your natural tooth from extraction.",
+    whatIs: [
+      "A root canal is a treatment that saves a tooth when the soft tissue inside it — called the pulp — becomes infected or inflamed. The pulp contains nerves and blood vessels, which is why an infected tooth can cause intense pain. Root canal therapy removes the infected tissue, cleans the inside of the tooth, and seals it to prevent future infection.",
+      "Here's the truth that surprises most patients: modern root canals feel a lot like getting a regular filling. With today's anesthetics, rotary instruments, and advanced imaging, the procedure is faster and more comfortable than ever before. Most patients say the relief they feel afterward far outweighs any discomfort during treatment.",
+      "The alternative to a root canal is extracting the tooth entirely — which then requires an implant, bridge, or denture to replace it. A root canal lets you keep your natural tooth, which is almost always the healthier and more affordable option.",
+      "After root canal therapy, the tooth is typically protected with a dental crown to restore its full strength. With proper care, a root-canal-treated tooth can last a lifetime."
+    ],
+    whoNeeds: [
+      "You have a severe, persistent toothache — especially pain that worsens with hot or cold",
+      "Your tooth is extremely sensitive to pressure or chewing",
+      "You notice swelling or a small bump (abscess) on your gums near a tooth",
+      "A tooth has become darkened or discolored",
+      "You've had trauma to a tooth (a hit, fall, or sports injury)",
+      "An X-ray shows infection at the tip of a tooth's root",
+      "A deep cavity has reached the nerve of the tooth"
+    ],
+    processSteps: [
+      { number: "01", title: "Diagnosis & Imaging", description: "We take detailed digital X-rays to confirm the infection, assess the tooth's root structure, and develop a precise treatment plan." },
+      { number: "02", title: "Numbing & Comfort Setup", description: "The area is thoroughly numbed — you shouldn't feel any pain. Sedation options are available for nervous patients. A small shield (rubber dam) isolates the tooth." },
+      { number: "03", title: "Cleaning & Disinfection", description: "A tiny opening is made in the top of the tooth. Using specialized rotary instruments, we carefully remove the infected pulp, clean the canals, and disinfect everything." },
+      { number: "04", title: "Sealing & Crown", description: "The cleaned canals are filled and sealed with a biocompatible material. A temporary filling is placed, and you'll return for a custom crown to protect the tooth long-term." }
+    ],
+    costNote: "Root canal costs depend on which tooth is involved — front teeth are simpler, while molars have more canals. At Smile Avenue, root canal therapy typically ranges from $800–$1,500 (not including the crown). Most PPO insurance plans cover root canals as a major procedure. We offer 0% financing and accept our membership plan for uninsured patients.",
+    comparisonRows: [
+      { feature: "Modern Rotary Instruments", smileAvenue: "✓ Faster, more precise cleaning", typical: "Manual hand files (slower)" },
+      { feature: "Digital Imaging", smileAvenue: "✓ Detailed digital X-rays", typical: "Traditional film X-rays" },
+      { feature: "Sedation Options", smileAvenue: "✓ Nitrous, oral sedation available", typical: "Local anesthesia only" },
+      { feature: "In-House Crown", smileAvenue: "✓ Crown made in our lab", typical: "Crown sent to outside lab" },
+      { feature: "Single-Visit Option", smileAvenue: "✓ Available for select cases", typical: "Always requires multiple visits" },
+      { feature: "Patient Comfort", smileAvenue: "✓ TVs, blankets, headphones", typical: "Standard clinical setup" }
+    ],
+    faqs: [
+      { question: "Does a root canal hurt?", answer: "No. With modern anesthetics and techniques, a root canal feels similar to getting a filling. Most patients are surprised by how comfortable it is. The pain you feel before the procedure — from the infection — is far worse than the treatment itself." },
+      { question: "How long does a root canal take?", answer: "Most root canals are completed in 45-90 minutes in a single visit. Molars with multiple canals may take slightly longer. Complex cases may require a second visit." },
+      { question: "What does recovery feel like?", answer: "You may experience mild soreness for 2-3 days, manageable with over-the-counter pain relief. Most patients return to normal activities the same day or the next day." },
+      { question: "Can I eat after a root canal?", answer: "Wait until the numbness wears off to avoid biting your cheek. Then eat soft foods for a day or two. Avoid chewing on the treated tooth until the permanent crown is placed." },
+      { question: "Why do I need a crown after a root canal?", answer: "After the pulp is removed, the tooth becomes more brittle over time. A crown acts as a protective cap that prevents the tooth from cracking and restores full chewing function." },
+      { question: "Is it better to extract the tooth instead?", answer: "Saving your natural tooth is almost always the better option. Extraction requires replacement with an implant, bridge, or denture — which costs more and involves additional procedures. A root canal preserves your natural tooth and is usually the most cost-effective solution." }
+    ],
+    cypressSlug: "root-canal",
+    katySlug: "root-canal",
+    relatedBlogCategory: "General",
+    relatedSlugs: ["dental-crowns", "emergency-dentist", "sedation-dentistry", "tooth-extraction"]
+  },
+
+  "veneers": {
+    serviceName: "Porcelain Veneers",
+    serviceSlug: "veneers",
+    metaTitle: "Porcelain Veneers | Smile Makeovers Explained | Smile Avenue",
+    metaDescription: "Everything about porcelain veneers — who they're for, the process, longevity, and care. Transform your smile at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "Ultra-thin porcelain shells custom-bonded to your teeth — the ultimate solution for a flawless, natural-looking smile makeover.",
+    whatIs: [
+      "Porcelain veneers are ultra-thin shells — about the thickness of a contact lens — that are custom-made and bonded to the front surface of your teeth. They instantly transform the color, shape, size, and alignment of your smile while looking completely natural.",
+      "Veneers are one of the most popular cosmetic dental treatments because they solve multiple issues at once: staining that won't respond to whitening, chips, cracks, gaps between teeth, minor crowding, and uneven tooth shapes. Instead of multiple separate treatments, veneers give you a complete smile makeover in just two visits.",
+      "At Smile Avenue, our veneers are handcrafted in our on-site dental lab using premium feldspathic porcelain and pressed ceramic. This gives us precise control over shade, translucency, and surface texture — so your veneers catch light exactly like natural enamel.",
+      "With proper care, porcelain veneers typically last 15-20 years. They resist staining better than natural teeth, so your smile stays bright and beautiful for years to come."
+    ],
+    whoNeeds: [
+      "You have teeth that are stained or discolored beyond what whitening can fix",
+      "You want to close gaps between your front teeth",
+      "You have chipped, cracked, or worn-down teeth",
+      "Your teeth are slightly crooked but you don't want braces",
+      "You have teeth that are uneven in size or shape",
+      "You want a complete smile transformation for a special occasion or fresh start",
+      "You've been unhappy with your smile for years and want a lasting solution"
+    ],
+    processSteps: [
+      { number: "01", title: "Smile Design Consultation", description: "We discuss your goals, take photos and digital impressions, and show you a preview of your new smile. You'll know exactly what to expect before we start." },
+      { number: "02", title: "Tooth Preparation", description: "A tiny amount of enamel (about 0.5mm) is removed from the front of each tooth. This is less than the thickness of a fingernail. Temporary veneers are placed." },
+      { number: "03", title: "Custom Fabrication", description: "Your veneers are handcrafted in our in-house lab, layer by layer, to match the perfect shade and translucency for your face and skin tone." },
+      { number: "04", title: "Bonding & Final Reveal", description: "The temporaries are removed, the permanent veneers are carefully bonded to your teeth, and your new smile is revealed. Most patients get emotional — in the best way." }
+    ],
+    costNote: "Veneer costs depend on the number of teeth treated and the material used. At Smile Avenue, individual veneers typically range from $1,200–$2,500 per tooth. Full smile makeovers (6-10 veneers) are quoted as a package. We offer 0% interest financing through CareCredit and provide a detailed cost breakdown at your consultation.",
+    comparisonRows: [
+      { feature: "In-House Lab", smileAvenue: "✓ Veneers crafted on-site", typical: "Sent to outside lab (2-3 weeks)" },
+      { feature: "Material Quality", smileAvenue: "✓ Premium feldspathic porcelain", typical: "Standard pressed ceramic" },
+      { feature: "Smile Preview", smileAvenue: "✓ Digital smile design included", typical: "No preview available" },
+      { feature: "Custom Shade Matching", smileAvenue: "✓ Matched in natural light", typical: "Basic shade guide only" },
+      { feature: "Artistry", smileAvenue: "✓ Hand-layered for natural translucency", typical: "Machine-milled, less detail" },
+      { feature: "Revision Policy", smileAvenue: "✓ Adjustments until you're thrilled", typical: "Limited revisions" }
+    ],
+    faqs: [
+      { question: "How long do porcelain veneers last?", answer: "With proper care — brushing, flossing, and regular checkups — porcelain veneers typically last 15-20 years. Some patients keep theirs even longer. They're a worthwhile investment in your confidence." },
+      { question: "Do veneers look fake?", answer: "Not at Smile Avenue. Our in-house lab creates veneers with natural translucency, subtle surface texture, and custom coloring that mimics real enamel. People will notice your great smile — not that you have veneers." },
+      { question: "Does getting veneers hurt?", answer: "The preparation is done under local anesthesia, so you won't feel pain. The amount of enamel removed is minimal — less than the thickness of a fingernail. Most patients describe the process as easy and comfortable." },
+      { question: "Can I still eat normally with veneers?", answer: "Yes! You can eat most foods normally. We recommend avoiding extremely hard foods like ice or hard candy, and not using your teeth as tools (opening packages, etc.). Otherwise, enjoy your favorite meals." },
+      { question: "What's the difference between veneers and crowns?", answer: "Veneers cover only the front surface of a tooth and require minimal enamel removal — they're primarily cosmetic. Crowns cover the entire tooth and are used when a tooth needs structural repair. Veneers are ideal for healthy teeth that need aesthetic improvement." },
+      { question: "Can veneers fix crooked teeth?", answer: "Veneers can correct the appearance of mildly crooked or overlapping teeth. For more significant alignment issues, we may recommend Invisalign first and then veneers for the finishing touch." }
+    ],
+    cypressSlug: "veneers",
+    katySlug: "veneers",
+    relatedBlogCategory: "Cosmetic",
+    relatedSlugs: ["cosmetic-dentistry", "teeth-whitening", "dental-crowns", "invisalign"]
+  },
+
+  "dentures": {
+    serviceName: "Dentures",
+    serviceSlug: "dentures",
+    metaTitle: "Dentures Explained | Full, Partial & Implant-Supported | Smile Avenue",
+    metaDescription: "Learn about modern dentures — full, partial, and implant-supported options. Comfortable fit, natural look, and affordable pricing at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "Today's dentures are nothing like your grandparents' — modern materials and techniques deliver a natural look, comfortable fit, and confident smile.",
+    whatIs: [
+      "Dentures are removable replacements for missing teeth and the surrounding gum tissue. Whether you're missing a few teeth or an entire arch, modern dentures restore your ability to eat, speak, and smile with confidence. They've come a long way from the bulky, obvious dentures of the past.",
+      "Full dentures replace all teeth in the upper or lower jaw (or both). They rest on your gums and are held in place by suction and the natural contours of your mouth. Partial dentures replace several missing teeth and clip onto your remaining natural teeth for support.",
+      "Implant-supported dentures are the premium option — they snap onto dental implants placed in your jawbone, providing superior stability and eliminating the need for adhesives. Many patients who've struggled with loose traditional dentures find that implant-supported options completely transform their quality of life.",
+      "At Smile Avenue, every set of dentures is custom-crafted in our in-house dental lab. This means we control every detail — tooth shape, color, gum shade, and fit — resulting in dentures that look natural and feel comfortable from day one."
+    ],
+    whoNeeds: [
+      "You're missing most or all of your teeth in one or both arches",
+      "Your remaining teeth are severely damaged and need to be extracted",
+      "You have existing dentures that are old, ill-fitting, or uncomfortable",
+      "You want to improve your ability to eat and speak clearly",
+      "You're looking for an affordable way to replace multiple missing teeth",
+      "You want to restore your facial structure and prevent the sunken look caused by missing teeth",
+      "You're interested in implant-supported dentures for maximum stability"
+    ],
+    processSteps: [
+      { number: "01", title: "Consultation & Assessment", description: "We evaluate your oral health, discuss your goals and lifestyle, and determine the best denture type — full, partial, or implant-supported." },
+      { number: "02", title: "Impressions & Measurements", description: "Precise digital and physical impressions of your mouth are taken, along with bite measurements and shade matching for the most natural result." },
+      { number: "03", title: "Try-In Appointment", description: "A wax model of your denture is created for a try-in. You'll see how the teeth look and feel, and we make any adjustments before final fabrication." },
+      { number: "04", title: "Final Delivery & Fitting", description: "Your finished denture is placed and carefully adjusted for comfort and fit. We schedule follow-ups to ensure everything feels perfect as you adjust." }
+    ],
+    costNote: "Denture costs vary by type: basic full dentures start around $1,500–$3,000 per arch, premium dentures with upgraded materials range from $3,000–$5,000, and implant-supported dentures range from $5,000–$15,000 depending on the number of implants. We accept most PPO insurance plans and offer 0% financing through CareCredit.",
+    comparisonRows: [
+      { feature: "In-House Lab", smileAvenue: "✓ Dentures made on-site", typical: "Sent to outside lab (3-4 weeks)" },
+      { feature: "Material Quality", smileAvenue: "✓ Premium acrylic & porcelain teeth", typical: "Standard plastic teeth" },
+      { feature: "Custom Shade & Shape", smileAvenue: "✓ Teeth matched to your face", typical: "Limited stock tooth options" },
+      { feature: "Adjustment Visits", smileAvenue: "✓ Unlimited adjustments included", typical: "Additional charges for adjustments" },
+      { feature: "Implant-Supported Option", smileAvenue: "✓ Available in-house", typical: "Referred to specialist" },
+      { feature: "Same-Day Options", smileAvenue: "✓ Immediate dentures available", typical: "Wait weeks without teeth" }
+    ],
+    faqs: [
+      { question: "How long does it take to get used to dentures?", answer: "Most patients adjust to new dentures within 2-4 weeks. Eating and speaking may feel different at first, but your muscles and brain adapt quickly. We schedule follow-up visits to fine-tune the fit during this period." },
+      { question: "Can I eat normally with dentures?", answer: "Yes, with practice. Start with soft foods cut into small pieces, and gradually reintroduce harder foods. Implant-supported dentures allow you to eat with near-normal bite force, including foods like apples and steak." },
+      { question: "Will people know I'm wearing dentures?", answer: "Modern dentures look incredibly natural. We custom-design the tooth shape, color, and gum tone to match your appearance. Friends and family are often surprised by how natural they look." },
+      { question: "How do I care for my dentures?", answer: "Remove and rinse dentures after eating. Brush them daily with a soft denture brush and denture cleaner (not regular toothpaste). Soak them overnight in denture solution. Clean your gums and any remaining teeth daily." },
+      { question: "What are implant-supported dentures?", answer: "Implant-supported dentures snap onto 2-4 dental implants placed in your jawbone. They're far more stable than traditional dentures — no slipping, no adhesives, and much stronger bite force. They also help preserve jawbone health." },
+      { question: "How often do dentures need to be replaced?", answer: "Traditional dentures typically last 5-8 years before they need relining or replacement, because your jawbone and gums change shape over time. Implant-supported dentures often last longer because the implants maintain bone structure." }
+    ],
+    cypressSlug: "dentures",
+    katySlug: "dentures",
+    relatedBlogCategory: "General",
+    relatedSlugs: ["dental-implants", "all-on-x-implants", "dental-bridges", "tooth-extraction"]
+  },
+
+  "dental-bridges": {
+    serviceName: "Dental Bridges",
+    serviceSlug: "dental-bridges",
+    metaTitle: "Dental Bridges Explained | Types, Process & Cost | Smile Avenue",
+    metaDescription: "Learn about dental bridges — traditional, cantilever, and implant-supported options. Understand when to choose a bridge vs. implant at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "A dental bridge literally bridges the gap where teeth are missing — restoring your smile, your bite, and your confidence in as few as two visits.",
+    whatIs: [
+      "A dental bridge is a fixed restoration that replaces one or more missing teeth by anchoring artificial teeth (called pontics) to the natural teeth on either side of the gap. Unlike dentures, bridges are cemented in place — you brush and floss around them just like natural teeth.",
+      "Traditional bridges are the most common type: crowns are placed on the teeth flanking the gap (called abutment teeth), with one or more false teeth suspended between them. The result is a seamless row of teeth that looks, feels, and functions naturally.",
+      "Implant-supported bridges are anchored to dental implants instead of natural teeth. This option is ideal when multiple adjacent teeth are missing or when the neighboring teeth aren't strong enough to support a traditional bridge. It also preserves healthy tooth structure since no crowns are needed on adjacent teeth.",
+      "At Smile Avenue, bridges are designed and crafted in our in-house dental lab using high-quality porcelain and zirconia. This allows us to control the color, shape, and fit with exceptional precision, and often deliver your bridge faster than offices that outsource lab work."
+    ],
+    whoNeeds: [
+      "You're missing one to three consecutive teeth",
+      "You have healthy, strong teeth on both sides of the gap",
+      "You want a fixed (non-removable) replacement for missing teeth",
+      "You're not a candidate for dental implants or prefer a faster solution",
+      "Your bite is shifting because neighboring teeth are drifting into the gap",
+      "You have difficulty chewing on one side due to a missing tooth",
+      "You want to restore your smile without a removable partial denture"
+    ],
+    processSteps: [
+      { number: "01", title: "Evaluation & Planning", description: "We examine the gap and the strength of the abutment teeth, take digital X-rays and impressions, and discuss whether a traditional or implant-supported bridge is best." },
+      { number: "02", title: "Abutment Preparation", description: "The teeth on either side of the gap are gently reshaped to receive crowns. Precise digital impressions are taken, and a comfortable temporary bridge is placed." },
+      { number: "03", title: "Bridge Fabrication", description: "Your custom bridge is fabricated in our in-house lab — each tooth is color-matched and shaped to blend seamlessly with your natural teeth." },
+      { number: "04", title: "Permanent Placement", description: "The temporary is removed, the permanent bridge is checked for fit and bite, and then cemented securely. You leave with a complete, natural-looking smile." }
+    ],
+    costNote: "Bridge costs depend on the number of teeth being replaced and the materials used. A three-unit bridge (replacing one tooth) at Smile Avenue typically ranges from $2,500–$4,500. Implant-supported bridges cost more but offer superior longevity. Most PPO insurance plans cover bridges as a major procedure. We offer 0% financing and accept our membership plan.",
+    comparisonRows: [
+      { feature: "In-House Lab", smileAvenue: "✓ Bridge crafted on-site", typical: "Outsourced to lab (2-3 weeks)" },
+      { feature: "Digital Impressions", smileAvenue: "✓ Comfortable digital scans", typical: "Messy putty trays" },
+      { feature: "Material Quality", smileAvenue: "✓ Premium porcelain & zirconia", typical: "Standard porcelain-fused-metal" },
+      { feature: "Implant-Supported Option", smileAvenue: "✓ Available in-house", typical: "Referred to specialist" },
+      { feature: "Color Matching", smileAvenue: "✓ Custom shade in natural light", typical: "Basic shade guide" },
+      { feature: "Follow-Up Care", smileAvenue: "✓ Adjustments included", typical: "Additional charges" }
+    ],
+    faqs: [
+      { question: "How long does a dental bridge last?", answer: "With proper care and regular dental visits, a well-made bridge can last 10-15 years or longer. Implant-supported bridges often last even longer because they don't depend on natural teeth for support." },
+      { question: "Is a bridge better than an implant?", answer: "It depends on your situation. Implants are generally the gold standard because they don't affect adjacent teeth and preserve jawbone. Bridges are a great option when you want a faster, less surgical solution or when the neighboring teeth already need crowns." },
+      { question: "How do I clean under a dental bridge?", answer: "You'll use a floss threader or a water flosser to clean underneath the false tooth. We'll show you exactly how during your appointment. It takes just an extra minute in your routine." },
+      { question: "Does getting a bridge hurt?", answer: "The procedure is done under local anesthesia, so you won't feel pain. The abutment teeth may be slightly sensitive for a few days afterward, manageable with over-the-counter pain relief." },
+      { question: "Can a bridge fall out?", answer: "A properly cemented bridge is very secure. However, if the underlying abutment teeth develop decay or the cement weakens over time, a bridge may loosen. Regular checkups help catch issues early." },
+      { question: "What happens if I don't replace a missing tooth?", answer: "Neighboring teeth can drift into the gap, your bite can change, you may have difficulty chewing, and the jawbone beneath the gap begins to shrink. Replacing missing teeth prevents these cascading problems." }
+    ],
+    cypressSlug: "dental-bridges",
+    katySlug: "dental-bridges",
+    relatedBlogCategory: "General",
+    relatedSlugs: ["dental-crowns", "dental-implants", "dentures", "all-on-x-implants"]
+  },
+
+  "tooth-extraction": {
+    serviceName: "Tooth Extraction",
+    serviceSlug: "tooth-extraction",
+    metaTitle: "Tooth Extraction | Simple & Surgical | Recovery Guide | Smile Avenue",
+    metaDescription: "Learn about tooth extractions — when they're needed, wisdom teeth removal, simple vs. surgical, and recovery tips. Gentle care at Smile Avenue in Cypress & Katy, TX.",
+    heroSubtitle: "Sometimes the best thing for your oral health is removing a damaged tooth — and with modern techniques, it's faster and more comfortable than you'd expect.",
+    whatIs: [
+      "A tooth extraction is the removal of a tooth from its socket in the jawbone. While we always try to save natural teeth first, there are situations where extraction is the best option for your overall oral health — such as severe decay, advanced infection, crowding, or impacted wisdom teeth.",
+      "Simple extractions are performed on teeth that are fully visible above the gumline. The area is numbed, and the tooth is gently loosened and removed. Most simple extractions take just 20-30 minutes, and recovery is quick.",
+      "Surgical extractions are needed for teeth that are broken below the gumline or haven't fully erupted (like impacted wisdom teeth). A small incision is made in the gum tissue to access the tooth. At Smile Avenue, we perform surgical extractions in-house with sedation options so you stay comfortable throughout.",
+      "After extraction, we always discuss replacement options — dental implants, bridges, or dentures — to prevent the bone loss, shifting teeth, and bite changes that occur when a gap is left unfilled. For wisdom teeth, replacement isn't needed since those teeth don't serve a functional role."
+    ],
+    whoNeeds: [
+      "You have a severely decayed tooth that can't be saved with a filling, crown, or root canal",
+      "A tooth is cracked or fractured below the gumline",
+      "You have impacted or partially erupted wisdom teeth causing pain or infection",
+      "Advanced gum disease has loosened a tooth beyond repair",
+      "You need teeth removed to make room for orthodontic treatment",
+      "A baby tooth hasn't fallen out on its own and is blocking an adult tooth",
+      "An infection or abscess isn't responding to antibiotics or root canal therapy"
+    ],
+    processSteps: [
+      { number: "01", title: "Exam & X-Rays", description: "We evaluate the tooth and surrounding bone with digital X-rays or 3D imaging. We discuss whether the extraction is simple or surgical and review sedation options." },
+      { number: "02", title: "Anesthesia & Sedation", description: "The area is completely numbed with local anesthesia. For anxious patients or surgical extractions, we offer nitrous oxide and oral sedation for full comfort." },
+      { number: "03", title: "Gentle Extraction", description: "The tooth is carefully loosened and removed. For surgical cases, a small incision is made and the tooth may be sectioned for easier removal. Sutures are placed if needed." },
+      { number: "04", title: "Recovery & Replacement Planning", description: "You'll receive detailed aftercare instructions and a prescription if needed. We schedule a follow-up and discuss tooth replacement options to protect your long-term oral health." }
+    ],
+    costNote: "Simple extractions at Smile Avenue typically range from $200–$400 per tooth. Surgical extractions, including wisdom teeth, range from $400–$800 per tooth. Multiple wisdom teeth extractions are often quoted as a package. Most dental insurance plans cover extractions. We offer 0% financing and accept our membership plan.",
+    comparisonRows: [
+      { feature: "In-House Surgical Extractions", smileAvenue: "✓ No referral needed", typical: "Referred to oral surgeon" },
+      { feature: "Sedation Options", smileAvenue: "✓ Nitrous, oral sedation available", typical: "Local anesthesia only" },
+      { feature: "3D Imaging", smileAvenue: "✓ CBCT for precise planning", typical: "Standard 2D X-rays" },
+      { feature: "Immediate Replacement Options", smileAvenue: "✓ Same-day implant placement available", typical: "Separate appointment elsewhere" },
+      { feature: "Comfort Amenities", smileAvenue: "✓ TVs, blankets, headphones", typical: "Standard clinical setup" },
+      { feature: "Follow-Up Care", smileAvenue: "✓ Included at no extra cost", typical: "Additional visit charges" }
+    ],
+    faqs: [
+      { question: "Does a tooth extraction hurt?", answer: "No. The area is fully numbed before anything begins, and we offer sedation for anxious patients. You'll feel pressure but not pain. Most patients say it was much easier than they expected." },
+      { question: "How long does recovery take?", answer: "Simple extractions typically heal in 3-5 days. Surgical extractions and wisdom teeth take about 7-10 days. Most patients return to normal activities within 1-2 days." },
+      { question: "What should I eat after an extraction?", answer: "Stick to soft foods for the first 2-3 days — smoothies, yogurt, mashed potatoes, soup. Avoid hot foods, straws, and spitting for 24 hours to protect the blood clot. Gradually return to normal eating as you heal." },
+      { question: "Do I need my wisdom teeth removed?", answer: "Not always. If your wisdom teeth are fully erupted, properly aligned, and easy to clean, they can stay. However, impacted or partially erupted wisdom teeth often cause pain, infection, or damage to neighboring teeth and should be removed." },
+      { question: "What's dry socket and how do I prevent it?", answer: "Dry socket occurs when the blood clot at the extraction site is dislodged, exposing the bone. Prevent it by avoiding straws, smoking, and vigorous rinsing for 48-72 hours. It affects about 2-5% of extractions and is easily treated if it occurs." },
+      { question: "Should I replace the extracted tooth?", answer: "Yes — unless it's a wisdom tooth. Leaving a gap causes neighboring teeth to shift, bite changes, and jawbone loss. We'll discuss replacement options (implant, bridge, or denture) at your extraction appointment." }
+    ],
+    cypressSlug: "tooth-extraction",
+    katySlug: "tooth-extraction",
+    relatedBlogCategory: "General",
+    relatedSlugs: ["dental-implants", "dental-bridges", "dentures", "sedation-dentistry"]
   }
 };
