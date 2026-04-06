@@ -492,6 +492,12 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
                 {data.introParas.map((p, i) => <p key={i}>{p}</p>)}
               </div>
+              <Link
+                to={`/services/${data.serviceSlug}`}
+                className="inline-flex items-center gap-1.5 mt-8 text-sm font-sans font-semibold text-primary hover:underline"
+              >
+                Learn More About {data.serviceName} <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
         </section>
