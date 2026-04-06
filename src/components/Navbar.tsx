@@ -212,7 +212,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                         <div>
                           <p className="text-xs font-sans font-bold uppercase tracking-wider text-primary mb-3">General Care</p>
                           {generalCare.map((s) => (
-                            <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setActiveDropdown(null)}>
+                            <Link key={s.slug} to={`/services/${s.slug}`} className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setActiveDropdown(null)}>
                               {s.label}
                             </Link>
                           ))}
@@ -221,7 +221,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
                         <div>
                           <p className="text-xs font-sans font-bold uppercase tracking-wider text-primary mb-3">Specialized Care</p>
                           {specializedCare.map((s) => (
-                            <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setActiveDropdown(null)}>
+                            <Link key={s.slug} to={`/services/${s.slug}`} className="block text-sm font-sans text-muted-foreground hover:text-primary transition-colors py-1.5" onClick={() => setActiveDropdown(null)}>
                               {s.label}
                             </Link>
                           ))}
@@ -401,7 +401,7 @@ const Navbar = ({ phone, phoneFormatted, bookingUrl }: NavbarProps) => {
               <div className={`overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${mobileExpanded === "services" ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
                 <div className="pl-0.5 pb-4 space-y-0.5">
                   {serviceLinks.map((s) => (
-                    <Link key={s.slug} to={`${locationPrefix}/${s.slug}`} className="block py-[9px] text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors duration-200" onClick={() => setMobileOpen(false)}>
+                    <Link key={s.slug} to={`/services/${s.slug}`} className="block py-[9px] text-[15px] font-sans text-muted-foreground hover:text-primary transition-colors duration-200" onClick={() => setMobileOpen(false)}>
                       {s.label}
                     </Link>
                   ))}
