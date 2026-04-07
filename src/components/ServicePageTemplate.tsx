@@ -436,6 +436,77 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     ],
   };
 
+  // Standalone Dentist schema — full practice entity for AI entity graph
+  const dentistJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "@id": `https://www.smileavenuefamilydentistry.com${loc.path}/#dentist`,
+    name: `Smile Avenue Family Dentistry - ${loc.name}`,
+    url: `https://www.smileavenuefamilydentistry.com${loc.path}/`,
+    telephone: loc.phoneFormatted,
+    email: "info@smileavenuedentistry.com",
+    image: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+    logo: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+    description: `Top-rated family & cosmetic dental practice in ${loc.name}, TX. 5,000+ five-star reviews. Same-day appointments, in-house dental lab, and IV sedation available.`,
+    address: practiceAddress,
+    geo: practiceGeo,
+    priceRange: "$$",
+    paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Insurance", "CareCredit", "Sunbit"],
+    currenciesAccepted: "USD",
+    openingHoursSpecification: loc.openingHours,
+    hasMap: loc.mapsUrl,
+    sameAs: SAME_AS,
+    founder: {
+      "@type": "Person",
+      name: "Dr. Patrick Vuong",
+      jobTitle: "Founder & Lead Dentist",
+      url: "https://www.smileavenuefamilydentistry.com/doctors/patrick-vuong-dmd/",
+    },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: loc.reviewCount, bestRating: "5", worstRating: "1" },
+    knowsAbout: [
+      "Dental Implants", "All-on-4 Dental Implants", "Cosmetic Dentistry", "Porcelain Veneers",
+      "Invisalign", "Emergency Dentistry", "Teeth Whitening", "Dental Crowns", "Dental Bridges",
+      "Root Canal Therapy", "Oral Surgery", "Sedation Dentistry", "Pediatric Dentistry",
+      "Preventive Dentistry", "Dentures", "Tooth Extraction", "Family Dental Care",
+    ],
+    medicalSpecialty: "Dentistry",
+    isAcceptingNewPatients: true,
+    availableService: {
+      "@type": "MedicalProcedure",
+      name: data.serviceName,
+      url: canonicalUrl,
+    },
+  };
+
+  // Review schema for testimonials (from verified Google Reviews)
+  const reviewJsonLd = data.testimonials.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "@id": `https://www.smileavenuefamilydentistry.com${loc.path}/#dentist`,
+    name: `Smile Avenue Family Dentistry - ${loc.name}`,
+    review: data.testimonials.map((t) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: t.name },
+      reviewBody: t.quote,
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      publisher: { "@type": "Organization", name: t.source },
+    })),
+  } : null;
+
+  // ItemList schema for sub-services (potential carousel rich results)
+  const subServicesItemListJsonLd = data.subServices && data.subServices.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${data.serviceName} Options at Smile Avenue - ${loc.name}`,
+    numberOfItems: data.subServices.length,
+    itemListElement: data.subServices.map((svc, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: svc.title,
+      description: svc.description,
+    })),
+  } : null;
+
 
 
   /* Dynamic background alternation — hero is always section-warm,
