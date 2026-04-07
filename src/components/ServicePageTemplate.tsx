@@ -116,6 +116,13 @@ const LOCATIONS = {
     path: "/cypress-tx",
     geo: { lat: "29.9691", lng: "-95.6972" },
     hours: "Mon–Fri 8:30am–5pm",
+    postalCode: "77433",
+    streetAddress: "9212 Fry Rd #120",
+    mapsUrl: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Cypress/",
+    reviewCount: "3000",
+    openingHours: [
+      { "@type": "OpeningHoursSpecification" as const, dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+    ],
   },
   katy: {
     phone: "2818005008",
@@ -126,8 +133,23 @@ const LOCATIONS = {
     path: "/katy-tx",
     geo: { lat: "29.7357", lng: "-95.7575" },
     hours: "Mon–Fri 8:30am–5pm, Sat 8am–2pm",
+    postalCode: "77494",
+    streetAddress: "23541 Westheimer Pkwy Ste #170",
+    mapsUrl: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/",
+    reviewCount: "2000",
+    openingHours: [
+      { "@type": "OpeningHoursSpecification" as const, dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+      { "@type": "OpeningHoursSpecification" as const, dayOfWeek: ["Saturday"], opens: "08:00", closes: "14:00" },
+    ],
   },
 };
+
+const SAME_AS = [
+  "https://www.facebook.com/smileavenuedentistry",
+  "https://www.instagram.com/smileavenuedentistry",
+  "https://www.youtube.com/@SmileAvenueFamilyDentistry",
+  "https://www.yelp.com/biz/smile-avenue-family-dentistry-cypress",
+];
 
 const LOCATION_DOCTORS: Record<string, { slug: string; name: string; credentials: string; specialty: string }[]> = {
   cypress: [
