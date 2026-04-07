@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "I have sensitive teeth and was worried about whitening. They used a gentle formula and I had zero discomfort. My smile looks amazing now.", name: "Chris B.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Got the take-home trays before my wedding. Two weeks later my smile was camera-ready. The custom trays fit perfectly and were so easy to use.", name: "Emily R.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get professional teeth whitening in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 offers professional in-office Zoom whitening and custom take-home whitening trays for dramatic, safe results." },
+    { question: "How much does teeth whitening cost in Cypress?", answer: "Professional whitening is more affordable than most patients expect. We offer multiple whitening options at different price points. Call (832) 648-1756 for current pricing and financing options." },
+    { question: "How many shades whiter can my teeth get in Cypress?", answer: "Professional in-office whitening at our Cypress office can brighten your teeth up to 8 shades in a single one-hour visit — far beyond what store-bought strips or toothpastes can achieve." },
+    { question: "Is professional teeth whitening safe for enamel?", answer: "Yes. Professional whitening under dental supervision is safe for your enamel. We customize treatment concentration and duration based on your sensitivity level for a comfortable, safe experience." },
+    { question: "Do you offer take-home whitening trays in Cypress?", answer: "Yes. We fabricate custom-fitted take-home trays from digital impressions of your teeth, paired with professional-grade whitening gel. Many patients use take-home trays for maintenance after in-office whitening." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road is where Cypress patients come for safe, dramatic teeth whitening results. Our professional-grade whitening treatments are significantly stronger than anything available over the counter — delivering up to 8 shades brighter in a single one-hour visit.",
     "We offer two professional whitening pathways: in-office Zoom whitening for immediate, same-day results, and custom take-home trays with professional-grade gel for gradual brightening on your schedule. Many patients combine both for maximum results — in-office treatment followed by periodic at-home touch-ups.",

@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "All four wisdom teeth removed under IV sedation. I fell asleep and woke up with it all done. Zero pain during the procedure and minimal swelling after.", name: "Stephanie K.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Needed a sinus lift before getting implants. The team walked me through every step and the whole process went perfectly. Very grateful for their expertise.", name: "William C.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get oral surgery in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 performs all oral surgery procedures in-office — wisdom teeth removal, bone grafting, sinus lifts, and surgical extractions — with IV sedation available." },
+    { question: "How much does oral surgery cost in Cypress?", answer: "Costs vary by procedure complexity. Insurance typically covers medically necessary procedures like wisdom teeth removal. We offer 0% financing through CareCredit and Sunbit for any out-of-pocket costs." },
+    { question: "Do you offer IV sedation for oral surgery in Cypress?", answer: "Yes. We offer nitrous oxide, oral sedation, and IV sedation for oral surgery procedures. Our team monitors your vital signs continuously for maximum safety and comfort throughout the procedure." },
+    { question: "Do I need a referral for oral surgery at Smile Avenue Cypress?", answer: "No referral is needed. We perform all oral surgery procedures in-house, including wisdom teeth removal, bone grafting, sinus lifts, and complex surgical extractions. Call (832) 648-1756 to schedule a consultation." },
+    { question: "How long is recovery after oral surgery in Cypress?", answer: "Recovery varies by procedure — typically 3-5 days for simple extractions and 7-14 days for more complex procedures like bone grafting or impacted wisdom teeth. We provide detailed post-operative instructions for optimal healing." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road provides comprehensive oral surgery services right here in Cypress — no hospital visits, no outside specialist referrals. From wisdom teeth removal and bone grafting to sinus lifts and complex surgical extractions, everything is performed in our modern office with IV sedation for complete comfort.",
     "Our 3D CBCT imaging technology gives our surgical team a detailed, three-dimensional view of your jaw anatomy — including nerve pathways, sinus cavities, and bone density. This precision planning leads to safer, more predictable surgical outcomes and faster healing times.",

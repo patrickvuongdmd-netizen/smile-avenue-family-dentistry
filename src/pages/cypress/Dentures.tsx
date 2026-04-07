@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "I switched to implant-supported dentures and it was life-changing. No more adhesive, no more worrying about them slipping. Wish I'd done it years ago.", name: "George F.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "The team was so patient during the whole denture process. Multiple fittings to get everything just right. The final result was worth the wait.", name: "Dorothy N.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get dentures in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 offers full dentures, partial dentures, and implant-supported overdentures — all crafted in our in-house Smile Dental Lab." },
+    { question: "How much do dentures cost in Cypress, TX?", answer: "Denture costs vary by type: traditional full dentures, flexible partials, and implant-supported overdentures each have different price ranges. Most PPO insurance plans cover a portion. We offer 0% financing through CareCredit and Sunbit." },
+    { question: "Does Smile Avenue Cypress make dentures in-house?", answer: "Yes. Our in-house Smile Dental Lab fabricates all dentures on-site, allowing same-day adjustments, faster turnaround, and better quality control than offices that outsource to external labs." },
+    { question: "What are implant-supported dentures?", answer: "Implant-supported dentures snap onto dental implants placed in your jawbone, providing significantly more stability than traditional dentures — no adhesives needed. We offer both removable overdentures and fixed All-on-X options." },
+    { question: "How long does it take to get dentures at Smile Avenue Cypress?", answer: "The denture process typically takes 3-5 appointments over several weeks. Immediate dentures can be placed the same day as extractions so you're never without teeth during the transition." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road is the Cypress practice patients choose for comfortable, natural-looking dentures. Our in-house Smile Dental Lab crafts every set of dentures on-site — allowing us to control fit, aesthetics, and turnaround time in ways that practices relying on external labs simply cannot.",
     "We offer the full range of denture solutions: traditional full dentures, flexible partial dentures, and implant-supported overdentures that snap onto dental implants for maximum stability. For patients who want a permanent, non-removable solution, we also provide All-on-X full-arch restorations.",

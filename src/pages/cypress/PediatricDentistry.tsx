@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "We've been bringing all three of our kids to Smile Avenue for years. The hygienists are incredibly patient and gentle. My kids actually remind me when their appointments are coming up.", name: "Jason H.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Dr. Kim is amazing with kids. He explained everything to my son at his level and made him feel like a superhero for being brave. We'll never go anywhere else.", name: "Rebecca C.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where is the best kids' dentist in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 is trusted by CFISD families for gentle, fun pediatric dental care. Dr. Peter Kim has advanced pediatric training and a gift for connecting with children." },
+    { question: "At what age should my child first see a dentist in Cypress?", answer: "The ADA recommends a child's first dental visit by age 1 or within 6 months of their first tooth erupting. Early visits establish positive habits and allow us to monitor development from the start." },
+    { question: "Does Smile Avenue Cypress offer sedation for kids?", answer: "Yes. We offer nitrous oxide (laughing gas) for children who need extra help relaxing. It's safe, wears off quickly, and makes dental visits comfortable and stress-free for anxious kids." },
+    { question: "How much does a kids' dental visit cost in Cypress?", answer: "Most dental insurance plans cover children's preventive care (cleanings, exams, X-rays, fluoride) at 100%. Our Smile Avenue Membership Plan also covers pediatric patients for families without insurance." },
+    { question: "Do you apply dental sealants for children in Cypress?", answer: "Yes. Dental sealants are a quick, painless protective coating applied to back teeth that reduces cavity risk by up to 80%. We recommend sealants as soon as permanent molars come in, typically around ages 6 and 12." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road is the kids' dentist Cypress families trust most. CFISD families from Bridgeland, Towne Lake, Fairfield, and Cy-Fair bring their children here because our team genuinely loves working with kids — and it shows in the way children actually ask to come back.",
     "Dr. Peter Kim has advanced pediatric training and a natural gift for connecting with children of all ages and temperaments. He uses a gentle tell-show-do approach, never rushing a nervous child. For kids who need extra help relaxing, we offer nitrous oxide (laughing gas) and other sedation options that are safe and effective.",

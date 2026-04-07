@@ -63,6 +63,13 @@ const data: ServicePageData = {
     { quote: "Dr. Vuong and his team did my implants and the results are incredible. Professional, gentle, and genuinely caring. 10/10.", name: "Michael R.", source: "Google Review", location: "Cinco Ranch, Katy" },
     { quote: "I drove 45 minutes past three other dentists to come here, and it's worth every minute. The whole family loves this practice.", name: "Sarah M.", source: "Google Review", location: "Firethorne, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where is the best family dentist in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 serves families from Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear with comprehensive care for all ages under one roof." },
+    { question: "Does Smile Avenue Katy see children?", answer: "Yes! We welcome kids of all ages. Our team uses a gentle approach with Netflix, warm blankets, and fun amenities to make every child's visit positive and stress-free." },
+    { question: "What services does your Katy family dental office offer?", answer: "We provide cleanings, exams, fillings, crowns, bridges, implants, Invisalign, veneers, root canals, extractions, oral surgery, pediatric care, sedation dentistry, and emergency care — all under one roof." },
+    { question: "Is Smile Avenue Katy open on Saturdays?", answer: "Yes! Our Katy office on Westheimer Parkway is open Saturdays 8am-2pm — perfect for busy families who can't make weekday appointments. Call (281) 800-5008 to schedule." },
+    { question: "Can my whole family be seen on the same day in Katy?", answer: "Yes! We offer block scheduling so your entire family can be seen back-to-back in one visit. Call (281) 800-5008 to book family appointments at our Katy office." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway is the family dental home Katy families trust for every generation. From first-tooth toddlers to grandparents needing implants, our team of experienced doctors covers every specialty under one roof — zero referrals, zero runaround.",
     "Our hospitality-first philosophy means every treatment room has Netflix on a ceiling-mounted TV, warm blankets, pillows, and noise-canceling headphones. Kids get a special welcome and choose their own flavored polish. We never rush a nervous child or adult — building trust and positive associations one visit at a time.",

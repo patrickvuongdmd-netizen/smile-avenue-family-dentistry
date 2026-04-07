@@ -57,6 +57,13 @@ const data: ServicePageData = {
     { quote: "My new partial denture from Smile Avenue Katy fits perfectly and looks so natural. Nobody can tell which teeth are real and which aren't.", name: "Henry L.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The team took extra time to make sure my full dentures looked natural and felt comfortable. The fit is excellent and I'm smiling again!", name: "Dolores C.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get dentures in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 offers full dentures, partial dentures, and implant-supported overdentures — all crafted in our in-house Smile Dental Lab." },
+    { question: "How much do dentures cost in Katy?", answer: "Denture costs vary by type and materials. Most PPO insurance plans cover a portion. We provide transparent pricing upfront and offer 0% financing through CareCredit and Sunbit for any balance." },
+    { question: "Does Smile Avenue Katy make dentures in-house?", answer: "Yes. Our in-house Smile Dental Lab fabricates all dentures on-site — enabling same-day adjustments, faster turnaround, and superior quality control compared to offices that outsource." },
+    { question: "Can I get implant-supported dentures in Katy?", answer: "Yes. We offer implant-supported overdentures that snap onto implants for maximum stability without adhesives. For a permanent, non-removable option, we also provide All-on-X full-arch restorations." },
+    { question: "How long does it take to get dentures at Smile Avenue Katy?", answer: "The process typically takes 3-5 appointments over several weeks. Immediate dentures can be placed same-day as extractions so you're never without teeth. Our in-house lab ensures faster completion." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway is the Katy practice patients trust for comfortable, natural-looking dentures. Our in-house Smile Dental Lab fabricates every set of dentures on-site — giving us full control over fit, aesthetics, and turnaround time that external labs simply can't match.",
     "We offer the complete range of denture solutions: traditional full dentures for patients missing an entire arch, flexible partial dentures for those with some remaining natural teeth, and implant-supported overdentures that snap onto dental implants for maximum stability without adhesives.",

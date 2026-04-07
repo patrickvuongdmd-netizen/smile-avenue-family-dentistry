@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "Had a root canal on a molar and it was honestly easier than getting a filling. The numbing was thorough and the team kept checking on me the whole time.", name: "Anthony R.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "I put off my root canal for months out of fear. Wish I hadn't waited! The procedure was nothing like what I imagined. Smooth, painless, and done in about an hour.", name: "Rachel K.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get a root canal in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 performs gentle root canal treatment with modern rotary instruments and sedation options for a comfortable experience." },
+    { question: "How much does a root canal cost in Cypress?", answer: "Root canal costs vary by tooth — front teeth are less complex than molars. Most PPO dental insurance plans cover a significant portion of root canal therapy. We offer 0% financing through CareCredit and Sunbit." },
+    { question: "Does a root canal hurt at Smile Avenue Cypress?", answer: "No. With modern anesthesia and technique, root canal treatment is comfortable — most patients compare it to getting a filling. We also offer sedation options for anxious patients." },
+    { question: "Can I get a same-day emergency root canal in Cypress?", answer: "Yes. If you're in pain from an infected tooth, we offer same-day emergency appointments. Call (832) 648-1756 for urgent care. We'll relieve your pain and start treatment immediately." },
+    { question: "Do I need a crown after a root canal in Cypress?", answer: "In most cases, yes. A crown protects the treated tooth from fracture. Our in-house Smile Dental Lab fabricates your crown on-site for faster turnaround and a precise fit." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road is where Cypress patients come for gentle, modern root canal treatment. Our advanced rotary instruments and refined technique make today's root canals comfortable and efficient — nothing like the painful reputation they once had.",
     "What makes our Cypress root canal experience different is the seamless crown workflow. After removing the infection, our in-house Smile Dental Lab fabricates your permanent crown on-site — meaning faster turnaround and fewer appointments compared to offices that outsource to external labs.",

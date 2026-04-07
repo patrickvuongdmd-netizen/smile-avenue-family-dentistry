@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "I came in with excruciating tooth pain and left feeling amazing. The root canal was nothing like I feared. The relief was immediate.", name: "Steven R.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The whole process was smooth and I didn't feel a thing. The in-house lab made the crown turnaround really fast. Highly recommend Smile Avenue.", name: "Laura K.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get a root canal in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 performs gentle root canal treatment with modern rotary instruments and multiple sedation options for comfort." },
+    { question: "How much does a root canal cost in Katy?", answer: "Root canal costs vary by tooth — front teeth are less complex than molars. Most PPO dental plans cover a significant portion of root canal therapy. We offer 0% financing through CareCredit and Sunbit." },
+    { question: "Does a root canal hurt at Smile Avenue Katy?", answer: "No. Modern root canal treatment is comfortable — most patients compare it to getting a filling. We also offer nitrous oxide, oral sedation, and IV sedation for anxious patients." },
+    { question: "Can I get a same-day emergency root canal in Katy?", answer: "Yes. If you're in pain from an infected tooth, call (281) 800-5008 for same-day emergency care. We'll relieve your pain and begin treatment immediately." },
+    { question: "Do I need a crown after a root canal in Katy?", answer: "Usually, yes. A crown protects the treated tooth from fracture. Our in-house Smile Dental Lab fabricates crowns on-site for faster turnaround and precise fit." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway is where Katy patients come for gentle, modern root canal treatment. Our advanced rotary instruments and refined technique make today's root canals comfortable and efficient — nothing like the painful reputation from decades past.",
     "After removing the infection, our in-house Smile Dental Lab fabricates your permanent crown on-site — meaning faster turnaround and fewer appointments compared to offices that ship impressions to external labs. Many patients are surprised to learn that root canal and crown can be completed in just two visits.",

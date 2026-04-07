@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "I hadn't been to the dentist in 3 years and was embarrassed. The team at Smile Avenue was so non-judgmental and kind. They got my teeth back in great shape.", name: "Derek S.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "My kids actually look forward to their cleanings here! The hygienists are wonderful with children and make it fun. Can't recommend this place enough.", name: "Sarah T.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get a dental cleaning in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 provides thorough, gentle dental cleanings for the whole family — including kids, adults, and seniors." },
+    { question: "How much does a dental cleaning cost in Cypress?", answer: "A standard dental cleaning and exam at our Cypress office is very affordable. Most dental insurance plans cover two preventive cleanings per year at 100%. Our Smile Avenue Membership Plan provides affordable coverage for uninsured patients." },
+    { question: "How often should I get my teeth cleaned in Cypress?", answer: "The ADA recommends professional cleanings every 6 months. Patients with gum disease may need cleanings every 3-4 months. Our hygienists customize your cleaning schedule based on your oral health needs." },
+    { question: "Do you offer deep cleaning (scaling and root planing) in Cypress?", answer: "Yes. For patients with gum disease, we offer deep cleaning (scaling and root planing) with local anesthesia for comfort. This removes bacteria below the gumline to halt disease progression and promote healing." },
+    { question: "Is Smile Avenue Cypress open on Saturdays for cleanings?", answer: "Our Cypress office offers convenient scheduling including early appointments. Call (832) 648-1756 to find the best time for your family's cleanings." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road is where Cypress families come for thorough, gentle dental cleanings. Our hygienists Arpine, Ivy, and Jen are known throughout Bridgeland, Towne Lake, and Fairfield for their meticulous yet comfortable technique — patients consistently say these are the best cleanings they've ever had.",
     "Every cleaning at our Cypress office includes more than just plaque removal. We perform a comprehensive exam with digital X-rays, oral cancer screening, gum health assessment, and personalized hygiene recommendations. We catch problems early — before they become root canals, extractions, or costly restorations.",

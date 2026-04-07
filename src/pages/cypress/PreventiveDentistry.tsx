@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "I hadn't been to the dentist in 3 years and they made me feel completely at ease. No judgment, just great care. Already booked my next visit!", name: "David L.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "My kids love coming here! The hygienists are so gentle and patient. Fluoride treatments and sealants give me peace of mind as a parent.", name: "Priya S.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "What does preventive dental care include at Smile Avenue Cypress?", answer: "Preventive care at our Cypress office includes comprehensive exams, digital X-rays, professional cleanings, oral cancer screenings, fluoride treatments, dental sealants, and personalized home care guidance." },
+    { question: "How often should I see a dentist for preventive care in Cypress?", answer: "Most patients should visit every 6 months for a cleaning and exam. Patients with gum disease or higher risk factors may benefit from more frequent visits (every 3-4 months). We customize your schedule." },
+    { question: "Does preventive dentistry really save money?", answer: "Absolutely. A preventive cleaning costs a fraction of restorative treatments like root canals, crowns, or implants. Catching problems early — or preventing them entirely — saves thousands of dollars over your lifetime." },
+    { question: "Do you offer oral cancer screening in Cypress?", answer: "Yes. Every comprehensive exam at our Cypress office includes a visual and tactile oral cancer screening. Early detection is critical — oral cancer has a 90%+ survival rate when caught early." },
+    { question: "Is preventive dental care covered by insurance in Cypress?", answer: "Yes. Most dental insurance plans cover preventive care (cleanings, exams, X-rays) at 100% with no out-of-pocket cost. Our Smile Avenue Membership Plan provides similar coverage for uninsured patients." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road delivers the most comprehensive preventive dental care in Cypress, TX. Our approach goes beyond basic cleanings — we combine thorough exams, digital X-rays, oral cancer screenings, fluoride treatments, and sealants to catch and prevent problems before they become costly procedures.",
     "Our Cypress hygiene team uses the latest ultrasonic scaling technology and digital imaging to provide thorough yet gentle care. We see patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Jersey Village — from toddlers getting their first checkup to seniors maintaining their oral health.",

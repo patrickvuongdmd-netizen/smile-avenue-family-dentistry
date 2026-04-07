@@ -56,6 +56,13 @@ const data: ServicePageData = {
     { quote: "Brought my whole family for cleanings at the Katy office. They were great with our kids — patient, fun, and thorough. Our new dental home!", name: "Michael & Sarah T.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "I needed a deep cleaning and was nervous, but they numbed everything and I didn't feel a thing. My gums have never been healthier.", name: "Rosa M.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get a dental cleaning in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 provides thorough, gentle dental cleanings for patients of all ages — including kids, adults, and seniors." },
+    { question: "How much does a dental cleaning cost in Katy?", answer: "Most dental insurance plans cover two preventive cleanings per year at 100%. For uninsured patients, our Smile Avenue Membership Plan includes cleanings, exams, and X-rays at an affordable annual rate." },
+    { question: "Is Smile Avenue Katy open on Saturdays for cleanings?", answer: "Yes! Our Katy office is open Saturdays 8am-2pm — perfect for busy families who can't make weekday appointments. Call (281) 800-5008 to schedule." },
+    { question: "Do you offer deep cleaning in Katy?", answer: "Yes. For patients with gum disease, we provide deep cleaning (scaling and root planing) with local anesthesia for comfort. This removes bacteria below the gumline to halt disease progression." },
+    { question: "How often should I get a cleaning at Smile Avenue Katy?", answer: "Most patients should visit every 6 months. Patients with gum disease may need cleanings every 3-4 months. Our hygienists customize your schedule based on your specific oral health needs." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway is the Katy dental office where families come for thorough, gentle cleanings. Our experienced hygiene team uses ultrasonic scaling and modern polishing techniques for a cleaning experience that's both meticulous and comfortable.",
     "Every cleaning at our Katy office includes a comprehensive exam with digital X-rays, oral cancer screening, periodontal assessment, and personalized home care recommendations. We don't just clean your teeth — we give you a complete picture of your oral health and catch problems early when they're easiest and most affordable to treat.",

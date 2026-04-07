@@ -63,6 +63,13 @@ const data: ServicePageData = {
     { quote: "I trust Smile Avenue completely. The team makes my family feel like VIPs every single visit. We wouldn't go anywhere else.", name: "Thao H.", source: "Google Review", location: "Bridgeland, Cypress" },
     { quote: "My kids actually ask to go to the dentist now! The team is so wonderful with children. They make it fun and stress-free. Best family dental experience we've ever had.", name: "Sarah T.", source: "Google Review", location: "Towne Lake, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where is the best family dentist in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 serves families from Bridgeland, Towne Lake, Fairfield, and Cy-Fair with comprehensive care for all ages — from toddlers to grandparents — under one roof." },
+    { question: "Does Smile Avenue Cypress see children?", answer: "Yes. We love seeing kids of all ages. Dr. Peter Kim has advanced pediatric training and uses a gentle tell-show-do approach. Every kids' visit includes Netflix, warm blankets, and a fun, stress-free experience." },
+    { question: "What services does your Cypress family dental office offer?", answer: "We provide cleanings, exams, fillings, crowns, bridges, implants, Invisalign, veneers, root canals, extractions, oral surgery, pediatric care, sedation dentistry, and emergency care — all under one roof with no referrals needed." },
+    { question: "Do you accept dental insurance at your Cypress office?", answer: "Yes, we accept most PPO dental insurance plans and verify your benefits before treatment. For uninsured families, our Smile Avenue Membership Plan includes cleanings, exams, X-rays, and discounts on all treatments." },
+    { question: "Can my whole family be seen on the same day in Cypress?", answer: "Yes! We offer block scheduling so your entire family can be seen back-to-back in one convenient visit. Call (832) 648-1756 to book family appointments." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road is the Cypress dental home where families from Bridgeland, Towne Lake, Fairfield, and Cy-Fair bring every generation — from first-tooth toddlers to grandparents needing implants. With five experienced doctors covering every specialty, your entire family is cared for under one roof with zero referrals.",
     "What sets us apart is our hospitality-first philosophy. Every treatment room has Netflix on a ceiling-mounted TV, warm blankets, pillows, and noise-canceling headphones. Kids get a special welcome and choose their own flavored polish. Our team never rushes a nervous child — or adult — building trust one visit at a time.",

@@ -57,6 +57,13 @@ const data: ServicePageData = {
     { quote: "We've tried three different dentists for our kids before finding Smile Avenue Katy. Night and day difference. They genuinely love children here.", name: "Jason & Lisa P.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Both my kids got sealants at the Katy office. Quick, painless, and now I have extra peace of mind about cavities. Great preventive care!", name: "Maria G.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where is the best kids' dentist in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 is trusted by Katy ISD families for gentle, fun pediatric dental care with a team that genuinely connects with children." },
+    { question: "At what age should my child first see a dentist in Katy?", answer: "The ADA recommends a first dental visit by age 1 or within 6 months of the first tooth erupting. Early visits establish positive habits and let us monitor development from the very start." },
+    { question: "Does Smile Avenue Katy offer sedation for kids?", answer: "Yes. We offer nitrous oxide (laughing gas) for children who need extra help relaxing. It's safe, wears off quickly, and makes dental visits comfortable and stress-free for anxious kids." },
+    { question: "How much does a kids' dental visit cost in Katy?", answer: "Most insurance plans cover children's preventive care at 100%. Our Smile Avenue Membership Plan also covers pediatric patients for families without insurance — including cleanings, exams, and X-rays." },
+    { question: "Do you apply dental sealants for kids in Katy?", answer: "Yes. Sealants are a quick, painless protective coating for back teeth that reduces cavity risk by up to 80%. We recommend them as soon as permanent molars appear, typically around ages 6 and 12." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway is the kids' dentist Katy families trust most. Parents from Cinco Ranch, Cross Creek Ranch, Firethorne, Elyson, and Cane Island bring their children here because our team genuinely connects with kids — and it shows when children actually ask to come back for their next visit.",
     "Our Katy team creates a warm, welcoming environment where children feel safe. We use gentle tell-show-do techniques, never rushing a nervous child. For kids who need extra help relaxing, we offer nitrous oxide and other age-appropriate sedation options that are safe and effective.",
