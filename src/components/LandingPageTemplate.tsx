@@ -166,7 +166,7 @@ const buildJsonLd = (data: LandingPageData, loc: typeof LOCATIONS.cypress) => {
   schemas.push({
     "@context": "https://schema.org",
     "@type": "Dentist",
-    name: `Smile Avenue Family Dentistry — ${loc.name}`,
+    name: `Smile Avenue Family Dentistry - ${loc.name}`,
     image: "https://www.smileavenuefamilydentistry.com/og-image.webp",
     url: `https://www.smileavenuefamilydentistry.com/${data.location === "cypress" ? "cypress-tx" : "katy-tx"}/`,
     telephone: loc.phoneFormatted,
