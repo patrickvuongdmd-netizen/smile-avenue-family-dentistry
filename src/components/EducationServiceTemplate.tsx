@@ -175,21 +175,21 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               <img
                 src={leftFlankImage}
                 alt="Smile Avenue dental team"
-                className="absolute left-0 xl:left-4 top-1/2 -translate-y-1/2 w-[280px] xl:w-[340px] 2xl:w-[380px] aspect-[3/4] object-cover rounded-[2rem] shadow-lg"
+                className="absolute -left-8 xl:left-0 2xl:left-6 top-1/2 -translate-y-1/2 w-[260px] xl:w-[300px] 2xl:w-[340px] aspect-[3/4] object-cover rounded-[2rem] shadow-lg"
                 loading="eager"
-                width={380}
-                height={507}
+                width={340}
+                height={453}
               />
               {/* Right flank — circular with colored background accent like Tend */}
-              <div className="absolute right-0 xl:right-4 top-1/2 -translate-y-1/2 w-[300px] xl:w-[360px] 2xl:w-[400px] aspect-square">
-                <div className="absolute inset-0 rounded-full bg-primary/15 scale-105" />
+              <div className="absolute -right-8 xl:right-0 2xl:right-6 top-1/2 -translate-y-1/2 w-[280px] xl:w-[320px] 2xl:w-[360px] aspect-square">
+                <div className="absolute inset-[-8%] rounded-full bg-accent/40" />
                 <img
                   src={rightFlankImage}
                   alt="Smile Avenue dental office"
                   className="relative w-full h-full object-cover rounded-full shadow-lg"
                   loading="eager"
-                  width={400}
-                  height={400}
+                  width={360}
+                  height={360}
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.85)] to-transparent" />
