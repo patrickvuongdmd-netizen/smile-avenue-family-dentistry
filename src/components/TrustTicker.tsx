@@ -22,7 +22,7 @@ const TrustTicker = () => {
 
   return (
     <div className="flex overflow-hidden relative border-b border-neon-blue/20 transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0 bg-neon-blue">
-      <Link to="/about" className="shrink-0 hidden sm:flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline text-primary-foreground">
+      <Link to="/about" className="shrink-0 hidden sm:flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline" style={{ color: '#2D2D2D' }}>
         Why Smile Avenue?
       </Link>
       <div className="relative overflow-hidden flex-1">
