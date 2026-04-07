@@ -627,20 +627,20 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
               {/* Two overlapping oval photos — Tend-style */}
               <div className="relative h-[420px] md:h-[480px] lg:h-[540px]">
-                {/* Large oval — team member */}
+                {/* Large oval — doctor/hygienist */}
                 <img
-                  src={heroLeftPhoto}
-                  alt="Smile Avenue dental team member"
+                  src={heroRightPhoto}
+                  alt="Smile Avenue dentist"
                   className="absolute left-0 top-0 w-[65%] h-full object-cover rounded-[50%/45%]"
                   loading="eager"
                   fetchPriority="high"
                   width={400}
                   height={540}
                 />
-                {/* Small oval — doctor/hygienist, positioned lower-right */}
+                {/* Small oval — team member, positioned lower-right */}
                 <img
-                  src={heroRightPhoto}
-                  alt="Smile Avenue dentist"
+                  src={heroLeftPhoto}
+                  alt="Smile Avenue dental team member"
                   className="absolute right-0 bottom-0 w-[45%] h-[75%] object-cover rounded-[50%/45%]"
                   loading="eager"
                   width={280}
