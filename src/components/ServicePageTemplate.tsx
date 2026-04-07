@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { MapPin, Phone, Clock, Check, Calendar, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Clock, Check, Calendar, ArrowRight, Star } from "lucide-react";
 import { useState } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
@@ -22,6 +22,7 @@ import { trackPhoneClick } from "@/lib/track-phone";
 import VideoCarousel from "@/components/VideoCarousel";
 import ServicesCrossLink from "@/components/ServicesCrossLink";
 import TabbedInsurance from "@/components/TabbedInsurance";
+import PaymentOptions from "@/components/PaymentOptions";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 import BlogCardCarousel from "@/components/BlogCardCarousel";
 import BlogDesktopGrid from "@/components/BlogDesktopGrid";
@@ -128,10 +129,20 @@ const LOCATIONS = {
   },
 };
 
-const insuranceLogos = [
-  "Aetna", "Blue Cross Blue Shield", "Cigna", "Delta Dental",
-  "MetLife", "United Healthcare", "Guardian", "Humana",
-];
+const LOCATION_DOCTORS: Record<string, { slug: string; name: string; credentials: string; specialty: string }[]> = {
+  cypress: [
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "Founder · General & Restorative" },
+    { slug: "peter-kim", name: "Dr. Peter Kim", credentials: "DDS", specialty: "Implants & Oral Surgery" },
+    { slug: "laith-yahya", name: "Dr. Laith Yahya", credentials: "DDS", specialty: "Oral Surgery & Implants" },
+    { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "Restorative Dentistry" },
+    { slug: "shayan-alkhiro", name: "Dr. Shayan Alkhiro", credentials: "DDS", specialty: "General Dentistry" },
+  ],
+  katy: [
+    { slug: "patrick-vuong", name: "Dr. Patrick Vuong", credentials: "DMD", specialty: "Founder · General & Restorative" },
+    { slug: "sameer-bilal", name: "Dr. Sameer Bilal", credentials: "DDS", specialty: "Implants & Restorative" },
+    { slug: "sarah-maredia", name: "Dr. Sarah Maredia", credentials: "DDS", specialty: "Restorative Dentistry" },
+  ],
+};
 
 const DEFAULT_RELATED: Record<string, { title: string; slug: string }[]> = {
   "dental-implants": [
@@ -269,6 +280,12 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     href: `${loc.path}/${r.slug}`,
   }));
 
+  const doctors = LOCATION_DOCTORS[data.location] || LOCATION_DOCTORS.cypress;
+  const serviceVideos = SERVICE_VIDEOS[data.serviceSlug];
+  const hasVideoCarousel = serviceVideos && serviceVideos.length > 0;
+  const hasVideoId = !!data.videoId;
+  const hasAnyVideo = hasVideoCarousel || hasVideoId;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService" as const,
@@ -293,18 +310,22 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     areaServed: { "@type": "City", name: `${loc.name}, TX` },
   };
 
-  const speakableJsonLd = {
+  const medicalWebPageJsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "MedicalWebPage",
     name: data.metaTitle,
-    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+    description: data.metaDescription,
     url: canonicalUrl,
+    about: { "@type": "MedicalCondition", name: data.serviceName },
+    mainEntity: { "@type": "DentalService", name: data.serviceName },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+    lastReviewed: new Date().toISOString().split("T")[0],
   };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: data.faqs.map(f => ({
+    mainEntity: [...data.faqs, ...(data.locationFaqs || [])].map(f => ({
       "@type": "Question",
       name: f.question,
       acceptedAnswer: { "@type": "Answer", text: f.answer },
@@ -329,6 +350,23 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   };
 
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
+
+  /* Dynamic background alternation for optional sections */
+  let sectionIndex = 0;
+  const nextBg = () => {
+    const bg = sectionIndex % 2 === 0 ? "bg-background" : "section-warm";
+    sectionIndex++;
+    return bg;
+  };
+
+  // Auto-generate aboutInCity if not provided
+  const aboutCityContent = data.aboutInCity && data.aboutInCity.length > 0
+    ? data.aboutInCity
+    : [
+      `Looking for ${data.serviceName.toLowerCase()} in ${loc.name}, Texas? Smile Avenue Family Dentistry provides expert ${data.serviceName.toLowerCase()} services at our ${loc.address}. Our experienced team combines advanced technology with a hospitality-first approach to deliver exceptional results.`,
+      `Patients across the ${loc.name} area choose Smile Avenue for our in-house dental lab, digital scanners, and commitment to transparent pricing. Whether you need ${data.serviceName.toLowerCase()} or a comprehensive dental plan, we make the process comfortable and convenient.`,
+      `We accept most PPO insurance plans, offer 0% financing through CareCredit and Sunbit, and welcome patients of all ages. Book your ${data.serviceName.toLowerCase()} consultation today — same-day appointments are often available.`,
+    ];
 
   return (
     <>
@@ -361,7 +399,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(speakableJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(medicalWebPageJsonLd)}</script>
         {data.videoId && (
           <script type="application/ld+json">{JSON.stringify({
             "@context": "https://schema.org",
@@ -392,7 +430,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       )}
 
       <main id="main-content" className="pb-14 lg:pb-0">
-        {/* HERO — simplified on mobile */}
+        {/* ─── 1. HERO ─── */}
         <section className="section-warm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-20">
             {/* Breadcrumb — hidden on mobile */}
@@ -406,7 +444,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               <span className="text-foreground">in {loc.name}, TX</span>
             </nav>
 
-            {/* Mobile hero — streamlined */}
+            {/* Mobile hero */}
             <div className="sm:hidden text-center">
               <h1 className="text-2xl font-bold text-foreground leading-[1.12] font-display mb-4">
                 {data.heroHeading}
@@ -424,10 +462,23 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   ))}
                 </ul>
               )}
-              <button onClick={() => setBookingModalOpen(true)} className="w-full py-4 rounded-full font-sans font-bold text-base tracking-wide bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)] transition-all" aria-label={`Book ${data.serviceName} appointment`}>
-                Book Now
-              </button>
-              <p className="text-[11px] font-sans text-muted-foreground mt-2">Booking takes less than 60 seconds</p>
+              <div className="flex gap-3 mb-3">
+                <button onClick={() => setBookingModalOpen(true)} className="flex-1 py-4 rounded-full font-sans font-bold text-base tracking-wide bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)] transition-all" aria-label={`Book ${data.serviceName} appointment`}>
+                  Book Now
+                </button>
+                <a href={`tel:${loc.phone}`} onClick={() => trackPhoneClick(loc.phone)} className="flex items-center justify-center gap-2 px-5 py-4 rounded-full font-sans font-bold text-sm border border-border bg-card text-foreground hover:bg-muted transition-all" aria-label={`Call ${loc.phoneFormatted}`}>
+                  <Phone className="w-4 h-4" />
+                  Call
+                </a>
+              </div>
+              <p className="text-[11px] font-sans text-muted-foreground">Booking takes less than 60 seconds</p>
+              <div className="flex items-center justify-center gap-2 mt-3">
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--gold))] text-[hsl(var(--gold))]" />)}
+                </div>
+                <span className="text-xs font-sans font-semibold text-foreground">4.9</span>
+                <span className="text-xs font-sans text-muted-foreground">from 5,000+ reviews</span>
+              </div>
               {heroImage && (
                 <img
                   src={heroImage.url}
@@ -497,8 +548,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* INTRO — editorial single-column flow */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+        {/* ─── 2. INTRO + TRUST BADGES (merged) ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">{data.introKicker}</p>
@@ -512,38 +563,22 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               >
                 Learn More About {data.serviceName} <ArrowRight className="w-3.5 h-3.5" />
               </Link>
+              {/* Trust badges — inline pills */}
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-10 pt-10 border-t border-border/40">
+                {data.trustBadges.map((badge) => (
+                  <div key={badge.label} className="flex items-center gap-2 bg-card rounded-full border border-border/60 px-4 py-2">
+                    <span className="text-primary">{badge.icon}</span>
+                    <span className="text-xs font-sans font-semibold text-foreground">{badge.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* TRUST BADGES — inline pill style */}
-        <section className="py-10 bg-background border-t border-border/40">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 max-w-3xl mx-auto">
-              {data.trustBadges.map((badge) => (
-                <div key={badge.label} className="flex items-center gap-2.5 bg-card rounded-full border border-border/60 px-5 py-2.5">
-                  <span className="text-primary">{badge.icon}</span>
-                  <span className="text-xs font-sans font-semibold text-foreground">{badge.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* INSURANCE SECTION (tabbed) */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
-          <div className="container mx-auto text-center">
-            <p className="kicker">INSURANCE & COVERAGE</p>
-            <h2 className="section-heading">We Work With Your Insurance</h2>
-            <div className="mt-10">
-              <TabbedInsurance coverageNote={`Most PPO plans cover a portion of ${data.serviceName.toLowerCase()} treatment. We verify your benefits before your visit.`} />
-            </div>
-          </div>
-        </section>
-
-        {/* SUB-SERVICES — soft cards with left accent (optional) */}
+        {/* ─── 3. SUB-SERVICES (optional) ─── */}
         {data.subServices && data.subServices.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+          <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
             <div className="container mx-auto text-center">
               <p className="kicker">{data.subServicesKicker}</p>
               <h2 className="section-heading">{data.subServicesHeading}</h2>
@@ -561,9 +596,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </section>
         )}
 
-        {/* PROCESS STEPS — optional */}
+        {/* ─── 4. PROCESS STEPS (optional) ─── */}
         {data.processSteps && data.processSteps.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${data.subServices && data.subServices.length > 0 ? 'bg-background' : 'section-warm'}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">{data.processKicker}</p>
               <h2 className="section-heading">{data.processHeading}</h2>
@@ -582,9 +617,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   <div key={step.number} className="flex gap-4">
                     <div className="flex flex-col items-center">
                       <span className="text-2xl font-bold text-primary font-display w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0">{step.number}</span>
-                      {i < data.processSteps.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
+                      {i < data.processSteps!.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
                     </div>
-                    <div className={`pb-8 ${i === data.processSteps.length - 1 ? 'pb-0' : ''}`}>
+                    <div className={`pb-8 ${i === data.processSteps!.length - 1 ? 'pb-0' : ''}`}>
                       <h3 className="font-display text-base font-bold text-foreground mb-1">{step.title}</h3>
                       <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
                     </div>
@@ -595,86 +630,28 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </section>
         )}
 
-        {/* MEET YOUR DOCTOR */}
-        <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-background">
-          <div className="container mx-auto">
-            <div className="max-w-2xl mx-auto">
-              <div className="card-soft flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-6">
-                {DOCTOR_IMAGES["patrick-vuong"] && (
-                  <img
-                    src={DOCTOR_IMAGES["patrick-vuong"].url}
-                    alt={DOCTOR_IMAGES["patrick-vuong"].alt}
-                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover shrink-0 ring-2 ring-primary/20"
-                    loading="lazy"
-                    decoding="async"
-                    width={96}
-                    height={96}
-                  />
-                )}
-                <div>
-                  <p className="text-[10px] font-sans font-semibold tracking-[0.15em] uppercase text-primary mb-1">MEET YOUR DOCTOR</p>
-                  <h3 className="font-display text-lg font-bold text-foreground">Dr. Patrick Vuong, DMD</h3>
-                  <p className="text-sm font-sans text-primary font-medium mb-2">Founder & Lead Dentist</p>
-                  <p className="text-sm font-body text-muted-foreground leading-relaxed mb-3">
-                    Over 1,000 implants placed. Advanced training in digital dentistry. Dr. Vuong leads every complex case with precision and compassion.
-                  </p>
-                  <Link to="/doctors/patrick-vuong-dmd" className="text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-                    Meet Dr. Vuong →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* COST TRANSPARENCY */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
-          <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto">
-              <p className="kicker">PRICING & AFFORDABILITY</p>
-              <h2 className="section-heading">What Does {data.serviceName} Cost?</h2>
-              <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  The cost of {data.serviceName.toLowerCase()} varies based on your unique treatment plan, the complexity of your case, and your insurance coverage. At Smile Avenue, we believe in full price transparency — you'll always know the cost before we begin.
-                </p>
-                <p>
-                  Most PPO dental insurance plans cover a portion of {data.serviceName.toLowerCase()} treatment. Our team will verify your benefits and provide a detailed breakdown before your appointment.
-                </p>
-              </div>
-              <div className="grid sm:grid-cols-3 gap-5 mt-10">
-                <div className="card-soft text-center">
-                  <h3 className="font-display text-base font-bold text-foreground mb-2">Insurance Accepted</h3>
-                  <p className="text-sm font-body text-muted-foreground">We accept most PPO plans and verify your benefits for you.</p>
-                </div>
-                <div className="card-soft text-center">
-                  <h3 className="font-display text-base font-bold text-foreground mb-2">0% Financing</h3>
-                  <p className="text-sm font-body text-muted-foreground">CareCredit & Sunbit — apply in minutes, pay monthly.</p>
-                </div>
-                <div className="card-soft text-center">
-                  <h3 className="font-display text-base font-bold text-foreground mb-2">Membership Plan</h3>
-                  <p className="text-sm font-body text-muted-foreground">No insurance? Get 20% off all treatments with our plan.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WATCH: SERVICE EXPLAINED — single video embed */}
-        {data.videoId && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        {/* ─── 5. VIDEO (consolidated: carousel or single) ─── */}
+        {hasAnyVideo && (
+          <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
             <div className="container mx-auto text-center">
-              <p className="kicker">WATCH & LEARN</p>
+              <p className="kicker">SEE IT IN ACTION</p>
               <h2 className="section-heading">Watch: {data.serviceName} Explained</h2>
               <p className="section-body max-w-2xl mx-auto">See how {data.serviceName.toLowerCase()} works at Smile Avenue — from consultation to results.</p>
-              <div className="max-w-2xl mx-auto mt-10">
-                <LazyYouTube videoId={data.videoId} title={`${data.serviceName} Explained — Smile Avenue Family Dentistry`} />
+              <div className="mt-10">
+                {hasVideoCarousel ? (
+                  <VideoCarousel videos={serviceVideos} />
+                ) : (
+                  <div className="max-w-2xl mx-auto">
+                    <LazyYouTube videoId={data.videoId!} title={`${data.serviceName} Explained — Smile Avenue Family Dentistry`} />
+                  </div>
+                )}
               </div>
             </div>
           </section>
         )}
 
-        {/* WHY PATIENTS CHOOSE US — comparison table */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+        {/* ─── 6. WHY CHOOSE US — comparison table ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Patients Choose Us for {data.serviceName}</h2>
@@ -733,7 +710,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
+        {/* ─── 7. FAQ (split layout, gradient background) ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 gradient-cta">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
@@ -749,7 +727,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* MID-CONTENT BOOKING CTA */}
+        {/* ─── 8. MID-CONTENT BOOKING CTA ─── */}
         <section className="py-12 section-warm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
@@ -773,21 +751,45 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* VIDEO CAROUSEL */}
-        {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
-            <div className="container mx-auto text-center">
-              <p className="kicker">SEE IT IN ACTION</p>
-              <h2 className="section-heading">Watch Real Procedures & Results</h2>
-              <div className="mt-10">
-                <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
-              </div>
+        {/* ─── 9. MEET YOUR DOCTORS (location-aware) ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
+          <div className="container mx-auto text-center">
+            <p className="kicker">YOUR {loc.name.toUpperCase()} DENTAL TEAM</p>
+            <h2 className="section-heading">Meet Your Doctors</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              Our {loc.name} team brings decades of combined experience in {data.serviceName.toLowerCase()} and comprehensive dental care.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
+              {doctors.slice(0, 3).map((doc) => {
+                const img = DOCTOR_IMAGES[doc.slug];
+                const href = `/doctors/${doc.slug}-${doc.credentials.toLowerCase()}`;
+                return (
+                  <Link key={doc.slug} to={href} className="card-soft flex flex-col items-center text-center hover:shadow-md transition-shadow group">
+                    {img && (
+                      <img
+                        src={img.url}
+                        alt={img.alt}
+                        className="w-20 h-20 rounded-full object-cover ring-2 ring-primary/20 mb-4"
+                        loading="lazy"
+                        decoding="async"
+                        width={80}
+                        height={80}
+                      />
+                    )}
+                    <h3 className="font-display text-base font-bold text-foreground">{doc.name}, {doc.credentials}</h3>
+                    <p className="text-xs font-sans text-primary font-medium mt-1">{doc.specialty}</p>
+                    <span className="text-xs font-sans font-semibold text-primary mt-3 group-hover:underline">
+                      View Profile →
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
-        {/* REVIEWS */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        {/* ─── 10. REVIEWS ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
           <div className="container mx-auto text-center">
             <p className="kicker">{data.reviewsKicker}</p>
             <h2 className="section-heading">{data.reviewsHeading}</h2>
@@ -805,38 +807,70 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* OFFICE PHOTO GRID */}
-        <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
-
-        {/* CROSS-SERVICE CAROUSEL */}
-        <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} />
-
-        {/* ABOUT [SERVICE] IN [CITY] — SEO copy block */}
-        {data.aboutInCity && data.aboutInCity.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
-            <div className="container mx-auto">
-              <div className="max-w-3xl mx-auto">
-                <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
-                <h2 className="section-heading">{data.serviceName} in {loc.name}, Texas</h2>
-                <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
-                  {data.aboutInCity.map((p, i) => (
-                    <p key={i}>{p}</p>
-                  ))}
-                </div>
-                <Link
-                  to={`/services/${data.serviceSlug}`}
-                  className="inline-flex items-center gap-1.5 mt-8 text-sm font-sans font-semibold text-primary hover:underline"
-                >
-                  Learn More About {data.serviceName} <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+        {/* ─── 11. PRICING & INSURANCE (merged) ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="kicker">PRICING & INSURANCE</p>
+              <h2 className="section-heading">What Does {data.serviceName} Cost in {loc.name}?</h2>
+              <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed text-left mt-8">
+                <p>
+                  The cost of {data.serviceName.toLowerCase()} varies based on your unique treatment plan, the complexity of your case, and your insurance coverage. At Smile Avenue, we believe in full price transparency — you'll always know the cost before we begin.
+                </p>
+                <p>
+                  Most PPO dental insurance plans cover a portion of {data.serviceName.toLowerCase()} treatment. Our team will verify your benefits and provide a detailed breakdown before your appointment.
+                </p>
               </div>
             </div>
-          </section>
-        )}
+            {/* Payment option cards */}
+            <div className="grid sm:grid-cols-3 gap-5 mt-10 max-w-3xl mx-auto">
+              <div className="card-soft text-center">
+                <h3 className="font-display text-base font-bold text-foreground mb-2">Insurance Accepted</h3>
+                <p className="text-sm font-body text-muted-foreground">We accept most PPO plans and verify your benefits for you.</p>
+              </div>
+              <div className="card-soft text-center">
+                <h3 className="font-display text-base font-bold text-foreground mb-2">0% Financing</h3>
+                <p className="text-sm font-body text-muted-foreground">CareCredit & Sunbit — apply in minutes, pay monthly.</p>
+              </div>
+              <div className="card-soft text-center">
+                <h3 className="font-display text-base font-bold text-foreground mb-2">Membership Plan</h3>
+                <p className="text-sm font-body text-muted-foreground">No insurance? Get 20% off all treatments with our plan.</p>
+              </div>
+            </div>
+            {/* Insurance logos */}
+            <div className="mt-12 max-w-3xl mx-auto">
+              <TabbedInsurance coverageNote={`Most PPO plans cover a portion of ${data.serviceName.toLowerCase()} treatment. We verify your benefits before your visit.`} />
+            </div>
+          </div>
+        </section>
 
-        {/* LOCATION-SPECIFIC FAQ */}
+        {/* ─── 12. OFFICE PHOTO GRID ─── */}
+        <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
+
+        {/* ─── 13. ABOUT [SERVICE] IN [CITY] — local SEO block ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto">
+              <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
+              <h2 className="section-heading">{data.serviceName} in {loc.name}, Texas</h2>
+              <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
+                {aboutCityContent.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+              <Link
+                to={`/services/${data.serviceSlug}`}
+                className="inline-flex items-center gap-1.5 mt-8 text-sm font-sans font-semibold text-primary hover:underline"
+              >
+                Learn More About {data.serviceName} <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── 14. LOCATION-SPECIFIC FAQ (optional) ─── */}
         {data.locationFaqs && data.locationFaqs.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+          <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
                 <div>
@@ -852,8 +886,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </section>
         )}
 
-        {/* FROM THE BLOG */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+        {/* ─── 15. BLOG ─── */}
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${data.locationFaqs && data.locationFaqs.length > 0 ? 'section-warm' : 'bg-background'}`}>
           <div className="container mx-auto">
             <div className="flex items-end justify-between mb-12">
               <div>
@@ -887,8 +921,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
+        {/* ─── 16. CROSS-SERVICE CAROUSEL ─── */}
+        <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} />
 
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        {/* ─── 17. FINAL CTA — location card ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
           <div className="container mx-auto">
             <div className="max-w-lg mx-auto card-warm text-center">
               <h3 className="font-display text-xl font-bold text-foreground mb-5">{loc.name} Office</h3>
