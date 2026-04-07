@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { MapPin, Phone, Clock, Star, Shield, Users, Stethoscope, Sparkles, Heart, Baby, Smile, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Clock, Star, Shield, Users, Stethoscope, Sparkles, Heart, Baby, Smile, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
@@ -210,6 +210,16 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">{data.heroHeading}</h1>
                 <p className="text-lg font-display font-semibold text-foreground mb-2">{data.heroSubheading}</p>
                 <p className="section-body">{data.heroBody}</p>
+                {(data.heroValueProps && data.heroValueProps.length > 0) && (
+                  <ul className="space-y-2 mb-6 text-left">
+                    {data.heroValueProps.map((prop, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm font-sans text-foreground">
+                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <span>{prop}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <div className="flex flex-wrap gap-3 mb-4">
                   <button onClick={() => setBookingModalOpen(true)} className="btn-cta">Book Your Visit</button>
                   <a href={`tel:${loc.phone}`} className="btn-secondary">Call {loc.phoneFormatted}</a>
