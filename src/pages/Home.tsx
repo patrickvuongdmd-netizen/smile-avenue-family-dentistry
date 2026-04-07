@@ -4,8 +4,7 @@ import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Phone, Check, ArrowRight } from "lucide-react";
 import { trackPhoneClick } from "@/lib/track-phone";
-import { BLOG_POSTS } from "@/lib/blog-data";
-import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
+import LazyBlogSection from "@/components/LazyBlogSection";
 import { useState } from "react";
 
 import Navbar from "@/components/Navbar";

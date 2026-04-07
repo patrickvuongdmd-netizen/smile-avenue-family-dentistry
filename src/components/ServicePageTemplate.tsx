@@ -25,10 +25,7 @@ import ServicesCrossLink from "@/components/ServicesCrossLink";
 import TabbedInsurance from "@/components/TabbedInsurance";
 import PaymentOptions from "@/components/PaymentOptions";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
-import BlogCardCarousel from "@/components/BlogCardCarousel";
-import BlogDesktopGrid from "@/components/BlogDesktopGrid";
-import { BLOG_POSTS } from "@/lib/blog-data";
-import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
+import LazyBlogSection from "@/components/LazyBlogSection";
 
 interface SubService {
   title: string;
