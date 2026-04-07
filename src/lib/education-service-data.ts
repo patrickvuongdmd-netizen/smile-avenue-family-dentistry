@@ -287,8 +287,19 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Treatment Time", smileAvenue: "✓ 60-90 minutes (in-office)", typical: "Weeks of daily strips" },
       { feature: "Even Coverage", smileAvenue: "✓ Custom trays, full coverage", typical: "One-size strips, uneven" },
       { feature: "Sensitivity Management", smileAvenue: "✓ Desensitizing agents included", typical: "No sensitivity protection" },
-      { feature: "Professional Supervision", smileAvenue: "✓ Dentist-monitored", typical: "Self-applied, unsupervised" }
     ],
+    serviceComparison: {
+      titleA: "Professional Whitening",
+      titleB: "Over-the-Counter",
+      rows: [
+        { feature: "Whitening Strength", optionA: "Prescription-grade peroxide", optionB: "Low-concentration gel" },
+        { feature: "Results", optionA: "Up to 8 shades brighter", optionB: "1–2 shades at most" },
+        { feature: "Speed", optionA: "1 visit (60–90 min)", optionB: "Weeks to months" },
+        { feature: "Sensitivity", optionA: "Managed by your dentist", optionB: "Common, no professional support" },
+        { feature: "Evenness", optionA: "Uniform, professional application", optionB: "Uneven coverage common" },
+        { feature: "Longevity", optionA: "1–3 years with touch-ups", optionB: "Fades within weeks" },
+      ],
+    },
     faqs: [
       { question: "How long do whitening results last?", answer: "Results typically last 1-3 years depending on your diet, habits, and oral hygiene. Touch-up treatments every 6-12 months can extend your results indefinitely." },
       { question: "Does professional whitening damage enamel?", answer: "No. When performed under professional supervision, teeth whitening is safe for enamel. We use products specifically formulated to minimize enamel impact while maximizing results." },
