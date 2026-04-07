@@ -66,6 +66,13 @@ const data: ServicePageData = {
     { quote: "I love that no one can tell I'm wearing aligners. The in-house fabrication option saved me money compared to traditional Invisalign pricing elsewhere.", name: "Jason T.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "My teen daughter was so happy she didn't need metal braces. The Invisalign process was easy and her smile looks beautiful now.", name: "Christina M.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get Invisalign in Katy, TX?", answer: "Smile Avenue Family Dentistry at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494. Located near LaCenterra in Cinco Ranch, we're convenient for patients from Cross Creek Ranch, Firethorne, Fulshear, and Brookshire." },
+    { question: "Which Katy dentist does Invisalign?", answer: "Dr. Patrick Vuong and Dr. Sarah Maredia provide Invisalign at our Katy office. Both are certified Invisalign providers with extensive experience treating teens and adults." },
+    { question: "Is the Invisalign consultation free in Katy?", answer: "Yes — your free consultation includes digital scanning, a virtual smile preview, and a complete cost breakdown with insurance verification. Saturday appointments available. No obligation." },
+    { question: "How much does Invisalign cost in Katy, TX?", answer: "Invisalign at our Katy office ranges from $3,500–$6,500 depending on complexity. Most PPO plans cover $1,000–$2,000 toward treatment. We offer 0% CareCredit financing with monthly payments as low as $99." },
+    { question: "Do you offer Saturday Invisalign appointments in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm, making it easy to fit Invisalign check-ups into your schedule without taking time off work or school." },
+  ],
   ctaHeading: "Straighten Your Smile Invisibly",
   ctaBody: "Schedule your free Invisalign consultation and see your virtual results preview.",
 };

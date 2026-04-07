@@ -73,6 +73,13 @@ const data: ServicePageData = {
     { quote: "The in-office whitening was amazing! I was in and out in about an hour and my teeth are noticeably whiter. The staff was great about checking my comfort level.", name: "Kevin D.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "I had bonding done on two front teeth that were chipped. You literally cannot tell they were ever damaged. So happy I chose Smile Avenue!", name: "Priya N.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get cosmetic dentistry in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 offers comprehensive cosmetic services including veneers, whitening, bonding, and full smile makeovers. Serving Bridgeland, Towne Lake, Fairfield, and Cy-Fair." },
+    { question: "Which cosmetic dentist is best in Cypress?", answer: "Dr. Patrick Vuong leads all cosmetic cases at our Cypress office, supported by our in-house Smile Dental Lab for precise color matching and custom restorations. He uses digital smile design to preview your results before treatment begins." },
+    { question: "Do you offer free cosmetic consultations in Cypress?", answer: "Yes — your complimentary cosmetic consultation includes a comprehensive exam, digital imaging, and a discussion of your smile goals with transparent pricing. No pressure, no obligation." },
+    { question: "How much do veneers cost in Cypress, TX?", answer: "Porcelain veneers at our Cypress office typically cost $1,200–$2,500 per tooth. Our in-house lab keeps costs competitive. We offer 0% CareCredit financing and verify insurance benefits that may partially cover functionally necessary work." },
+    { question: "Can I get same-day cosmetic bonding in Cypress?", answer: "Yes — dental bonding can often be completed in a single visit at our Cypress office. It's ideal for repairing chips, cracks, or gaps quickly and affordably without the wait time of veneers or crowns." },
+  ],
   ctaHeading: "Ready for Your Dream Smile?",
   ctaBody: "Book a cosmetic consultation and let us design the smile you've always wanted.",
 };
