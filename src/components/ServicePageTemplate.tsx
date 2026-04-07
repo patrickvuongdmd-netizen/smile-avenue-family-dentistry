@@ -449,6 +449,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content={`${loc.name}, TX`} />
+        <meta name="geo.position" content={`${loc.geo.lat};${loc.geo.lng}`} />
+        <meta name="ICBM" content={`${loc.geo.lat}, ${loc.geo.lng}`} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={data.metaTitle} />
         <meta property="og:description" content={data.metaDescription} />
