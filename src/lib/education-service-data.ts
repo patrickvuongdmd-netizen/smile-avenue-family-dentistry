@@ -34,7 +34,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Dental Implants Explained | Permanent Tooth Replacement | Smile Avenue",
     metaDescription: "Everything you need to know about dental implants — how they work, who needs them, what to expect, and costs. Two locations in Cypress & Katy, TX.",
     heroSubtitle: "The gold standard for replacing missing teeth — a permanent solution that looks, feels, and functions like your natural tooth.",
-    videoId: "dQw4w9WcXgQ",
+    testimonialVideoId: "Do_22b5MX_M",
     whatIs: [
       "A dental implant is a small titanium post that's surgically placed into your jawbone to replace the root of a missing tooth. Once healed, a custom-made crown is attached on top, giving you a brand-new tooth that looks and feels completely natural.",
       "Unlike dentures that sit on top of your gums or bridges that rely on neighboring teeth for support, implants are anchored directly in your bone. This means they don't slip, don't require adhesives, and won't damage adjacent teeth.",
@@ -97,6 +97,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Cosmetic Dentistry | Smile Makeovers Explained | Smile Avenue",
     metaDescription: "Learn about cosmetic dentistry options — veneers, whitening, bonding, and full smile makeovers. Expert care at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "From subtle enhancements to complete smile transformations — cosmetic dentistry designed to give you a smile you love showing off.",
+    testimonialVideoId: "wiocP_nsFPY",
     whatIs: [
       "Cosmetic dentistry is the branch of dental care focused on improving the appearance of your teeth, gums, and overall smile. While general dentistry focuses on health and function, cosmetic dentistry focuses on how your smile looks — the color, shape, alignment, and overall harmony of your teeth.",
       "Common cosmetic treatments include porcelain veneers (thin shells bonded to the front of teeth), professional teeth whitening, dental bonding (tooth-colored resin to repair chips or gaps), gum contouring, and Invisalign clear aligners. Many patients combine multiple treatments into a comprehensive 'smile makeover.'",
@@ -147,6 +148,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Invisalign Clear Aligners | Straighter Teeth Without Braces | Smile Avenue",
     metaDescription: "Learn how Invisalign clear aligners straighten teeth without metal braces. See if you're a candidate. Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Straighten your teeth discreetly with clear, removable aligners — no metal brackets, no wires, no lifestyle compromise.",
+    testimonialVideoId: "nS2MUEQXbWE",
     whatIs: [
       "Invisalign is a modern orthodontic treatment that uses a series of custom-made, virtually invisible plastic aligners to gradually shift your teeth into their ideal positions. Each set of aligners is worn for about 1-2 weeks before moving to the next set in the series.",
       "The aligners are made from SmartTrack material — a patented thermoplastic that's BPA-free, comfortable against your gums, and nearly invisible when worn. Most people won't even notice you're wearing them, which is why Invisalign has become the preferred choice for adults and teens who want straighter teeth without the look of traditional braces.",
@@ -482,6 +484,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Porcelain Veneers | Smile Makeovers Explained | Smile Avenue",
     metaDescription: "Everything about porcelain veneers — who they're for, the process, longevity, and care. Transform your smile at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Ultra-thin porcelain shells custom-bonded to your teeth — the ultimate solution for a flawless, natural-looking smile makeover.",
+    testimonialVideoId: "JLVp9i_Vru4",
     whatIs: [
       "Porcelain veneers are ultra-thin shells — about the thickness of a contact lens — that are custom-made and bonded to the front surface of your teeth. They instantly transform the color, shape, size, and alignment of your smile while looking completely natural.",
       "Veneers are one of the most popular cosmetic dental treatments because they solve multiple issues at once: staining that won't respond to whitening, chips, cracks, gaps between teeth, minor crowding, and uneven tooth shapes. Instead of multiple separate treatments, veneers give you a complete smile makeover in just two visits.",
@@ -755,6 +758,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Sedation Dentistry | Anxiety-Free Dental Care | Smile Avenue",
     metaDescription: "Overcome dental anxiety with sedation dentistry. Learn about nitrous oxide, oral sedation & IV sedation options at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Dental anxiety shouldn't keep you from a healthy smile. We offer multiple sedation options so every visit feels comfortable and stress-free.",
+    testimonialVideoId: "ilqukqtmvjY",
     whatIs: [
       "Sedation dentistry uses medication to help you relax during dental procedures. It's sometimes called 'sleep dentistry,' though you're typically awake — just deeply relaxed and calm. It's the perfect solution for anyone who feels anxious, nervous, or fearful about visiting the dentist.",
       "At Smile Avenue, we offer three levels of sedation tailored to your comfort needs. Nitrous oxide (laughing gas) provides mild relaxation that wears off within minutes. Oral sedation involves taking a prescribed pill before your appointment for moderate relaxation. IV sedation delivers medication directly into your bloodstream for deeper relaxation during more complex procedures.",
@@ -902,7 +906,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "All-on-4 & All-on-6 Full Arch Implants | Smile Avenue",
     metaDescription: "Replace an entire arch of teeth in one day with All-on-X implants. Learn about All-on-4, All-on-6, costs & recovery at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "A brand-new smile in just one day — replace a full arch of missing or failing teeth with permanent, implant-supported teeth.",
-    videoId: "dQw4w9WcXgQ",
+    testimonialVideoId: "wiocP_nsFPY",
     whatIs: [
       "All-on-X is a revolutionary dental implant technique that replaces an entire arch of teeth — upper, lower, or both — using just four to six strategically placed implants. The 'X' refers to the number of implants used: All-on-4 uses four implants, while All-on-6 uses six for additional stability.",
       "Unlike traditional dentures that rest on your gums and can slip or cause sore spots, All-on-X teeth are permanently anchored to implants in your jawbone. They don't come out, don't need adhesive, and let you eat, speak, and smile with complete confidence.",
@@ -950,10 +954,10 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
   "family-dental-care": {
     serviceName: "Family Dental Care",
     serviceSlug: "family-dental-care",
-    metaTitle: "Family Dentistry for All Ages | Smile Avenue Dental",
-    metaDescription: "Comprehensive family dental care for kids, teens & adults at Smile Avenue. Cleanings, exams, sealants, fluoride & more at our Cypress & Katy, TX offices.",
+    metaTitle: "Family Dentistry for All Ages | Smile Avenue",
+    metaDescription: "Comprehensive family dental care for kids, teens & adults. Cleanings, exams, sealants, fluoride & more. Two convenient locations in Cypress & Katy, TX.",
     heroSubtitle: "One dental home for your entire family — from first teeth to golden years. Convenient appointments, gentle care, and a team that knows every member by name.",
-    videoId: "dQw4w9WcXgQ",
+    testimonialVideoId: "EtAuvGSjEnI",
     whatIs: [
       "Family dental care means having one trusted practice that treats every member of your household — toddlers getting their first check-up, teenagers needing sealants, parents juggling busy schedules, and grandparents maintaining healthy smiles. Instead of driving to separate pediatric and adult offices, everyone is cared for under one roof.",
       "At Smile Avenue, family dentistry goes beyond routine cleanings. We provide preventive care, restorative treatments, cosmetic services, and orthodontic consultations for patients of all ages. Our team is trained to work with nervous children, busy adults, and seniors with complex dental histories.",

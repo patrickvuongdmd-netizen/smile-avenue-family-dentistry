@@ -293,14 +293,19 @@ export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }
     { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
   ],
   "dental-bridges": [
-    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
-    { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
+    { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
+    { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
     { youtubeId: "rFNVqRYSkKQ", title: "Care You Can Trust, Smiles You'll Love" },
   ],
   "dentures": [
     { youtubeId: "NqiluaBGHpk", title: "Is It Time for a New Smile?" },
+    { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
     { youtubeId: "oNouq-eUAGw", title: "Our Favorite Thing About Our Patients" },
+  ],
+  "family-dental-care": [
     { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
+    { youtubeId: "5NHuCuktCPI", title: "Making Dental Visits Fun – Children's Dental Health Month" },
+    { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
   ],
 };
 
