@@ -625,19 +625,28 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </div>
               </div>
 
-              {heroImage && (
-                <div className="relative">
-                  <img
-                    src={heroImage.url}
-                    alt={heroImage.alt}
-                    className="w-full aspect-[4/3] object-cover rounded-3xl shadow-lg"
-                    loading="eager"
-                    fetchPriority="high"
-                    width={640}
-                    height={480}
-                  />
-                </div>
-              )}
+              {/* Two overlapping oval photos — Tend-style */}
+              <div className="relative h-[420px] md:h-[480px] lg:h-[540px]">
+                {/* Large oval — team member */}
+                <img
+                  src={heroLeftPhoto}
+                  alt="Smile Avenue dental team member"
+                  className="absolute left-0 top-0 w-[65%] h-full object-cover rounded-[2.5rem]"
+                  loading="eager"
+                  fetchPriority="high"
+                  width={400}
+                  height={540}
+                />
+                {/* Small oval — doctor/hygienist, positioned lower-right */}
+                <img
+                  src={heroRightPhoto}
+                  alt="Smile Avenue dentist"
+                  className="absolute right-0 bottom-0 w-[45%] h-[75%] object-cover rounded-[2.5rem]"
+                  loading="eager"
+                  width={280}
+                  height={400}
+                />
+              </div>
             </div>
           </div>
         </section>
