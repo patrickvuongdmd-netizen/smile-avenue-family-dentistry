@@ -80,6 +80,12 @@ const data: ServicePageData = {
     { question: "How much do veneers cost in Cypress, TX?", answer: "Porcelain veneers at our Cypress office typically cost $1,200–$2,500 per tooth. Our in-house lab keeps costs competitive. We offer 0% CareCredit financing and verify insurance benefits that may partially cover functionally necessary work." },
     { question: "Can I get same-day cosmetic bonding in Cypress?", answer: "Yes — dental bonding can often be completed in a single visit at our Cypress office. It's ideal for repairing chips, cracks, or gaps quickly and affordably without the wait time of veneers or crowns." },
   ],
+  aboutInCity: [
+    "Cypress has become one of Houston's most sought-after communities — and residents here expect dental care that matches the quality of life they've built. Smile Avenue Family Dentistry on Fry Road delivers cosmetic dentistry that combines clinical precision with genuine artistry for patients across Bridgeland, Towne Lake, Fairfield, and Cy-Fair.",
+    "Our in-house Smile Dental Lab is the cornerstone of our cosmetic practice. Every veneer, crown, and bonding restoration is custom-designed and fabricated on-site, giving our doctors direct collaboration with lab technicians for color matching, translucency, and fit that outsourced labs simply cannot replicate.",
+    "Dr. Patrick Vuong leads our cosmetic team with a philosophy rooted in conservative, natural-looking results. Whether you're considering porcelain veneers, professional whitening, dental bonding, or a complete smile makeover, we use digital smile design previews so you can see your projected results before any work begins.",
+    "We believe beautiful smiles should be accessible. Most PPO plans contribute toward cosmetic procedures when there's a functional component, and we offer 0% financing through CareCredit and Sunbit. Every consultation is complimentary and includes a personalized treatment plan with transparent pricing.",
+  ],
   ctaHeading: "Ready for Your Dream Smile?",
   ctaBody: "Book a cosmetic consultation and let us design the smile you've always wanted.",
 };

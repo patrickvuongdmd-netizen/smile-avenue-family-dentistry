@@ -74,6 +74,12 @@ const data: ServicePageData = {
     { question: "How much does Invisalign cost in Cypress, TX?", answer: "Invisalign at our Cypress office ranges from $3,500–$6,500 depending on complexity. Most PPO plans cover $1,000–$2,000. We offer 0% CareCredit financing with payments as low as $99/month." },
     { question: "Do you offer Invisalign for teens in Cypress?", answer: "Yes! We offer Invisalign Teen with compliance indicators. It's a popular choice for students at Cy-Fair ISD schools who want a discreet alternative to traditional braces." },
   ],
+  aboutInCity: [
+    "Cypress residents no longer need to drive into Houston for premium Invisalign care. Smile Avenue Family Dentistry on Fry Road serves patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, Spring, and Jersey Village with experienced clear aligner treatment from consultation through retention.",
+    "What sets our Cypress Invisalign practice apart is our in-house Smile Dental Lab. While most offices outsource aligner fabrication and retainers, we design and produce them on-site — giving us tighter quality control and faster turnaround when adjustments are needed.",
+    "Our team uses Medit digital scanners to create a precise 3D model of your teeth on your first visit — no goopy impressions. You'll see a virtual preview of your projected results before committing to treatment, so you know exactly what to expect.",
+    "We offer Invisalign for adults, teens, and complex cases including open bites, crossbites, and crowding. Most PPO dental plans cover a portion of Invisalign treatment, and we provide 0% financing through CareCredit and Sunbit for the remaining balance.",
+  ],
   ctaHeading: "Start Your Invisalign Journey Today",
   ctaBody: "Book a free Invisalign consultation and see how clear aligners can transform your smile.",
 };

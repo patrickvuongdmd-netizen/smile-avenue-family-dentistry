@@ -67,6 +67,12 @@ const data: ServicePageData = {
     { question: "How much do veneers cost in Katy, TX?", answer: "Porcelain veneers at our Katy office typically cost $1,200–$2,500 per tooth. Our in-house lab keeps costs competitive while ensuring premium quality. 0% CareCredit financing available." },
     { question: "Can I get a smile makeover on Saturdays in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm for consultations and many cosmetic procedures. It's a convenient option for busy professionals who can't visit during the week." },
   ],
+  aboutInCity: [
+    "Katy residents have built a community defined by quality — and their dental care should reflect that same standard. Smile Avenue Family Dentistry on Westheimer Parkway provides cosmetic dentistry to patients across Cinco Ranch, Fulshear, Cross Creek Ranch, Firethorne, and Richmond with results that look natural and last.",
+    "Our in-house Smile Dental Lab sets us apart from every other cosmetic dentist in Katy. Veneers, crowns, and bonding restorations are designed and fabricated on-site, allowing our doctors to collaborate directly with technicians on shade matching, translucency, and contour for results that outside labs cannot match.",
+    "Dr. Patrick Vuong and Dr. Sameer Bilal lead our Katy cosmetic team with a conservative, patient-first philosophy. Digital smile design previews let you see your projected results before any treatment begins, and every procedure is planned to preserve as much natural tooth structure as possible.",
+    "Saturday appointments (8am–2pm) make it easy for busy professionals to pursue the smile they've always wanted. We accept most PPO dental plans and offer 0% financing through CareCredit and Sunbit. Every cosmetic consultation is complimentary and includes a personalized treatment plan with transparent pricing.",
+  ],
   ctaHeading: "Ready for Your Dream Smile?",
   ctaBody: "Schedule your free cosmetic consultation and discover what's possible for your smile.",
 };
