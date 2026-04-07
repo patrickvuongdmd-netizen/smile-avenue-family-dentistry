@@ -934,7 +934,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaDescription: "Replace an entire arch of teeth in one day with All-on-X implants. Learn about All-on-4, All-on-6, costs & recovery at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "A brand-new smile in just one day — replace a full arch of missing or failing teeth with permanent, implant-supported teeth.",
     heroValueProps: ["Teeth in a Day — walk out smiling", "All-on-4 & All-on-6 options", "3D digital smile design preview", "In-house lab for same-day teeth", "Financing as low as $250/month"],
-    testimonialVideoId: "wiocP_nsFPY",
+    testimonialVideoId: "UAwWDYzJdvw",
     whatIs: [
       "All-on-X is a revolutionary dental implant technique that replaces an entire arch of teeth — upper, lower, or both — using just four to six strategically placed implants. The 'X' refers to the number of implants used: All-on-4 uses four implants, while All-on-6 uses six for additional stability.",
       "Unlike traditional dentures that rest on your gums and can slip or cause sore spots, All-on-X teeth are permanently anchored to implants in your jawbone. They don't come out, don't need adhesive, and let you eat, speak, and smile with complete confidence.",
