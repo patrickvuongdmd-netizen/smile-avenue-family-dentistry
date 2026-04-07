@@ -71,6 +71,31 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
     ? BLOG_POSTS.filter((p) => p.category === data.relatedBlogCategory).slice(0, 3)
     : [];
 
+  // Dynamic background alternation — ensures no two adjacent sections share a bg
+  const hasServiceComparison = !!data.serviceComparison;
+  const hasVideos = !!(SERVICE_VIDEOS[data.serviceSlug]?.length);
+  const hasTestimonialVideo = !!data.testimonialVideoId;
+  const hasBlog = relatedPosts.length > 0;
+  const flip = (bg: "warm" | "bg"): "warm" | "bg" => bg === "warm" ? "bg" : "warm";
+  const cls = (bg: "warm" | "bg") => bg === "warm" ? "section-warm" : "bg-background";
+
+  // Sections 1-4 are fixed: warm, bg, warm, bg
+  let last: "warm" | "bg" = "bg"; // after section 4
+
+  const bg5a = hasServiceComparison ? flip(last) : null;
+  if (bg5a) last = bg5a;
+  const bg5b = flip(last); last = bg5b;
+  const bg6 = hasVideos ? flip(last) : null;
+  if (bg6) last = bg6;
+  const bg7 = flip(last); last = bg7;
+  // Section 8 = gradient-cta (visual break, resets)
+  const bg9 = hasTestimonialVideo ? "bg" as const : null;
+  last = hasTestimonialVideo ? "bg" : "bg"; // after gradient, start fresh
+  const bg10: "warm" | "bg" = hasTestimonialVideo ? "warm" : "warm"; last = bg10;
+  const bg11 = hasBlog ? flip(last) : null;
+  if (bg11) last = bg11;
+  const bg12 = data.relatedSlugs.length > 0 ? flip(last) : null;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
