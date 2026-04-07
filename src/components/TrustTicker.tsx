@@ -44,25 +44,26 @@ const TrustTicker = () => {
       <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2 z-10 text-xs font-sans font-semibold bg-neon-blue">
         <Link
           to={enPath}
-          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-primary-foreground/15 text-primary-foreground' : 'text-primary-foreground/75 hover:text-primary-foreground'}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-foreground/10' : ''}`} style={{ color: '#2D2D2D' }}
         >
           EN
         </Link>
-        <span className="text-primary-foreground/40">|</span>
+        <span style={{ color: 'rgba(45,45,45,0.4)' }}>|</span>
         <Link
           to={esPath}
-          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-primary-foreground/15 text-primary-foreground' : 'text-primary-foreground/75 hover:text-primary-foreground'}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-foreground/10' : ''}`} style={{ color: '#2D2D2D' }}
         >
           ES
         </Link>
-        <span className="text-primary-foreground/40">|</span>
+        <span style={{ color: 'rgba(45,45,45,0.4)' }}>|</span>
         <button
           onClick={() => {
             if ((window as any).toggleAccessibility) {
               (window as any).toggleAccessibility();
             }
           }}
-          className="px-1.5 py-0.5 rounded transition-colors text-primary-foreground/75 hover:text-primary-foreground"
+          className="px-1.5 py-0.5 rounded transition-colors"
+          style={{ color: '#2D2D2D' }}
           aria-label="Accessibility options"
           title="Accessibility"
         >
