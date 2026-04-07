@@ -299,8 +299,57 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </div>
         </section>
 
-        {/* 5. COMPARISON TABLE — convince while evaluating */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        {/* 5a. SERVICE-SPECIFIC COMPARISON — educational, "which option is right for me?" */}
+        {data.serviceComparison && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+            <div className="container mx-auto text-center">
+              <p className="kicker">COMPARE YOUR OPTIONS</p>
+              <h2 className="section-heading">{data.serviceComparison.titleA} vs {data.serviceComparison.titleB}</h2>
+
+              <div className="hidden md:block max-w-4xl mx-auto mt-12">
+                <div className="rounded-2xl border border-border overflow-hidden">
+                  <table className="w-full text-left">
+                    <thead>
+                      <tr className="bg-primary text-primary-foreground">
+                        <th className="px-6 py-4 font-display text-sm font-bold">Feature</th>
+                        <th className="px-6 py-4 font-display text-sm font-bold">{data.serviceComparison.titleA}</th>
+                        <th className="px-6 py-4 font-display text-sm font-bold">{data.serviceComparison.titleB}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data.serviceComparison.rows.map((row, i) => (
+                        <tr key={i} className={i % 2 === 0 ? "bg-card" : "bg-background"}>
+                          <td className="px-6 py-4 font-sans text-sm font-semibold text-foreground">{row.feature}</td>
+                          <td className="px-6 py-4 font-sans text-sm text-primary font-medium">{row.optionA}</td>
+                          <td className="px-6 py-4 font-sans text-sm text-muted-foreground">{row.optionB}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div className="md:hidden mt-10 text-left max-w-sm mx-auto space-y-6">
+                {data.serviceComparison.rows.map((row, i) => (
+                  <div key={i} className="card-soft">
+                    <h3 className="font-display text-sm font-bold text-foreground mb-3">{row.feature}</h3>
+                    <div className="flex items-start gap-2 mb-2">
+                      <span className="text-xs font-sans font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full shrink-0">{data.serviceComparison!.titleA}</span>
+                      <span className="text-sm font-sans text-foreground">{row.optionA}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-xs font-sans font-bold text-muted-foreground bg-muted px-2 py-0.5 rounded-full shrink-0">{data.serviceComparison!.titleB}</span>
+                      <span className="text-sm font-sans text-muted-foreground">{row.optionB}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 5b. SMILE AVENUE VS TYPICAL — practice differentiator */}
+        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${data.serviceComparison ? 'bg-background' : 'section-warm'}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Choose Smile Avenue for {data.serviceName}?</h2>
