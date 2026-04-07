@@ -54,6 +54,7 @@ const LOCATIONS = {
 
 const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
   useDocTitle(data.metaTitle);
+  const [bookingOpen, setBookingOpen] = useState(false);
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/`;
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
 
