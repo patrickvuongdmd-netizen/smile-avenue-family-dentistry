@@ -129,6 +129,8 @@ const Blog = () => {
                         src={getBlogImage(featured.category)}
                         alt={featured.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="eager"
+                        decoding="async"
                         width={800}
                         height={512}
                       />
