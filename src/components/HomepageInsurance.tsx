@@ -1,6 +1,6 @@
 import { useState } from "react";
 import InsuranceChecker from "@/components/InsuranceChecker";
-import InsuranceLogoBar from "@/components/InsuranceLogoBar";
+import { Link } from "react-router-dom";
 
 const HomepageInsurance = () => {
   const [tab, setTab] = useState<"check" | "carriers">("check");
