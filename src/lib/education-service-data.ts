@@ -65,6 +65,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Financing", smileAvenue: "✓ 0% interest CareCredit", typical: "Limited options" },
       { feature: "Follow-Up Care", smileAvenue: "✓ Included in treatment", typical: "Additional charges" }
     ],
+    serviceComparison: {
+      titleA: "Dental Implants",
+      titleB: "Dental Bridges",
+      rows: [
+        { feature: "Lifespan", optionA: "25+ years / lifetime", optionB: "5–15 years" },
+        { feature: "Adjacent Teeth", optionA: "No alteration needed", optionB: "Healthy teeth filed down" },
+        { feature: "Bone Preservation", optionA: "Stimulates jawbone", optionB: "Bone loss continues" },
+        { feature: "Cleaning", optionA: "Brush & floss normally", optionB: "Special floss threaders" },
+        { feature: "Feel & Function", optionA: "Like a natural tooth", optionB: "Good but less natural" },
+        { feature: "Cost (Long-term)", optionA: "Higher upfront, lower over time", optionB: "Lower upfront, replacements add up" },
+      ],
+    },
     faqs: [
       { question: "How long do dental implants last?", answer: "With proper care and regular checkups, the titanium implant post can last a lifetime. The crown on top typically lasts 15-20 years before it may need replacement." },
       { question: "Does getting a dental implant hurt?", answer: "Most patients are surprised by how comfortable the procedure is. We use local anesthesia and offer sedation options. Post-procedure soreness is usually manageable with over-the-counter medication and subsides within a few days." },
