@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "The nitrous oxide was perfect for my cleaning. I went from white-knuckling the chair to actually relaxing. Such a game changer for anxious patients like me.", name: "Tyler B.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "My son needed several fillings and was terrified. The oral sedation worked beautifully — he was calm and cooperative, and had no memory of any discomfort.", name: "Natalie V.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Cypress sedation dentistry office?", answer: "We're at 9212 Fry Rd #120, Cypress, TX 77433 — convenient for patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Jersey Village who need anxiety-free dental care." },
+    { question: "What sedation options are available in Cypress?", answer: "We offer three levels: nitrous oxide (laughing gas) for mild anxiety, oral sedation (pill-based) for moderate anxiety, and IV sedation for severe dental phobia or lengthy procedures. Your dentist will recommend the right option at your consultation." },
+    { question: "Which Cypress dentist offers IV sedation?", answer: "Dr. Patrick Vuong and Dr. Peter Kim provide IV sedation at our Cypress office. All sedation patients are continuously monitored throughout the procedure for maximum safety." },
+    { question: "How much does sedation dentistry cost in Cypress?", answer: "Nitrous oxide is typically $50–$100 per visit. Oral sedation ranges from $150–$300. IV sedation starts around $250–$500 depending on procedure length. Some dental insurance plans cover a portion of sedation costs." },
+    { question: "Can I get all my dental work done in one sedation visit in Cypress?", answer: "Yes — sedation dentistry allows us to complete multiple procedures in a single appointment. This is ideal for patients who have avoided the dentist for years and need extensive treatment. We create a comprehensive plan at your consultation." },
+  ],
   ctaHeading: "Dental Care Without the Anxiety",
   ctaBody: "Don't let fear keep you from the care you deserve. Schedule your anxiety-free visit today.",
 };

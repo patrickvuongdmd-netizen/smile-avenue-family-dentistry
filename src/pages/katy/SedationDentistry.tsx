@@ -57,6 +57,13 @@ const data: ServicePageData = {
     { quote: "My son is terrified of the dentist but nitrous oxide made his appointment easy and tear-free. He even said it was fun!", name: "Daniel P.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Oral sedation for my dental implant procedure was perfect. I was relaxed the entire time. Highly recommend for anxious patients.", name: "Karen W.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Katy sedation dentistry office?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — in Cinco Ranch, convenient for anxious patients from Fulshear, Cross Creek Ranch, Firethorne, Brookshire, and Richmond." },
+    { question: "What sedation options are available in Katy?", answer: "We offer nitrous oxide (laughing gas), oral sedation (pill-based), and IV sedation at our Katy office. Your dentist will recommend the right level based on your anxiety, procedure complexity, and medical history." },
+    { question: "Which Katy dentist offers sedation?", answer: "Dr. Patrick Vuong and Dr. Sameer Bilal provide sedation dentistry at our Katy location. All sedation patients are continuously monitored for safety throughout the procedure." },
+    { question: "Can I get Saturday sedation appointments in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm. Sedation appointments, including IV sedation for longer procedures, can be scheduled on Saturdays for your convenience." },
+    { question: "How much does sedation dentistry cost in Katy?", answer: "Nitrous oxide is typically $50–$100 per visit. Oral sedation ranges from $150–$300. IV sedation starts around $250–$500 depending on procedure length. Some dental insurance plans cover a portion of sedation costs." },
+  ],
   ctaHeading: "Experience Anxiety-Free Dentistry",
   ctaBody: "Don't let fear keep you from the care you need. Book a sedation dentistry appointment at our Katy office.",
 };

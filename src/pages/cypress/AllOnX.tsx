@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "I had dentures for years and hated them. All-on-X implants gave me permanent teeth that feel completely natural. Best investment I've ever made.", name: "Carol M.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "The whole team made a scary procedure feel manageable. I walked in with failing teeth and left with a temporary smile the same day. The final result is stunning.", name: "Frank D.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Cypress All-on-X office?", answer: "We're at 9212 Fry Rd #120, Cypress, TX 77433 — serving full-arch implant patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, Spring, and Tomball." },
+    { question: "Which Cypress dentist performs All-on-4 surgery?", answer: "Dr. Peter Kim and Dr. Laith Yahya perform All-on-X implant placement at our Cypress office under the supervision of Dr. Patrick Vuong. All final prosthetics are fabricated in our in-house Smile Dental Lab." },
+    { question: "How much does All-on-4 cost in Cypress, TX?", answer: "All-on-4 full-arch restorations start around $20,000 per arch at our Cypress office. Final pricing depends on bone grafting needs, sedation choice, and prosthetic material. We provide a detailed estimate at your free consultation. 0% financing available." },
+    { question: "Can I get temporary teeth the same day as All-on-4 surgery in Cypress?", answer: "Yes — many All-on-4 patients receive a temporary fixed prosthesis the same day as implant placement. You'll never be without teeth during the healing process. Your permanent zirconia teeth are fabricated in our in-house lab once osseointegration is complete." },
+    { question: "Do you offer free All-on-X consultations in Cypress?", answer: "Yes. Your free consultation includes a 3D CT scan, full bone density assessment, and a personalized treatment plan with transparent pricing and financing options — absolutely no obligation." },
+  ],
   ctaHeading: "A New Smile in One Day",
   ctaBody: "Schedule your All-on-X consultation and take the first step toward permanent, life-changing teeth.",
 };

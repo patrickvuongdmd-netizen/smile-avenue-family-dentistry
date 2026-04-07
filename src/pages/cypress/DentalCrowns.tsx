@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "I was impressed by how fast I got my crown — much quicker than my old dentist who sent everything to an outside lab. And the fit is perfect.", name: "Steve R.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Dr. Vuong replaced an old metal crown with a beautiful porcelain one. The color match is perfect. I'm so happy with how it turned out.", name: "Diana K.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Cypress crown office?", answer: "We're at 9212 Fry Rd #120, Cypress, TX 77433 — serving patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Jersey Village. Free parking available." },
+    { question: "Which dentist does crowns at Smile Avenue Cypress?", answer: "Dr. Patrick Vuong, Dr. Peter Kim, and Dr. Laith Yahya all perform crown procedures at our Cypress location. All crowns are fabricated in our in-house Smile Dental Lab." },
+    { question: "How much does a dental crown cost in Cypress, TX?", answer: "A single dental crown typically ranges from $800–$1,500 depending on material (porcelain, Emax, or zirconia). Most PPO dental plans cover 50–80% of crown costs. We verify your benefits before treatment." },
+    { question: "How fast can I get a crown at Smile Avenue Cypress?", answer: "Our in-house Smile Dental Lab means faster turnaround than offices that outsource — often completing crowns in days rather than weeks. We use digital scanning (no goopy impressions) for a precise fit." },
+    { question: "Do you offer same-day emergency crowns in Cypress?", answer: "If you have a broken or damaged tooth, we can often see you the same day and place a temporary crown immediately. Your permanent custom crown is then fabricated in our in-house lab for the fastest possible turnaround." },
+  ],
   ctaHeading: "Restore Your Smile with a Custom Crown",
   ctaBody: "Custom crowns from our in-house Smile Dental Lab — precision craftsmanship, faster turnaround.",
 };
