@@ -1,129 +1,192 @@
 
 
-## Tend Homepage Flow Analysis
+# Tend Page Template Analysis & Adaptation Plan
 
-Here is the complete section-by-section breakdown of hellotend.com's homepage, followed by a comparison with your current Smile Avenue homepage and a plan to close the gaps.
+## How Tend Structures Their Two Page Types
 
----
-
-### Tend's Homepage Flow (10 sections)
-
-```text
-1. Trust Ticker        - scrolling brand values ("Soothing studios", "No judgment ever", etc.)
-2. Hero                - large headline, sub-copy, two CTAs (Book Now + Phone), flanked by lifestyle photos
-3. Services Carousel   - horizontal scroll of service pills (Dental Exams, Emergency, Oral Hygiene...)
-4. Photo/Video Looper  - full-width lifestyle video loop of patients and office
-5. The Difference      - 2-col: office photo + copy with bullet list of perks + "8,000+ five star reviews" + Book Now CTA
-6. Testimonials        - dark-card carousel with quotes, stars, name, location
-7. Locations/Studios   - city tabs with map, studio cards, hours, ratings
-8. Insurance           - tabbed section: insurance checker form + carrier list + logo carousel
-9. Clinical Team       - oval photo + value props (decades of experience, science-based care, outcomes not quotas, safety first) + "Meet Our Clinical Team" CTA + team photo carousel
-10. Blog + Press       - blog carousel + press logo ticker (Forbes, NYT, WSJ, etc.)
-```
-
-### Your Current Smile Avenue Flow (10 sections)
+### Page Type 1: Service Education Page (`/services/clear-aligners-invisalign`)
+**Purpose**: Brand-wide authority, patient education, conversion to any location.
 
 ```text
-1. Trust Ticker
-2. Hero
-3. Credibility Bar
-4. Services Grid
-5. Smile Avenue Difference
-6. Testimonials
-7. Doctors
-8. Insurance Checker
-9. Free Consultation CTA
-10. FAQ
-11. Blog (desktop only)
+Section Flow:
+┌─────────────────────────────────────────────┐
+│ 1. HERO                                     │
+│    - Breadcrumb (Services / Service Name)    │
+│    - H1: "[Service] at Tend"                │
+│    - 3 value props with checkmarks           │
+│    - Star rating bar ("Over 8,000 reviews")  │
+│    - Book Now + Phone CTA                    │
+│    - Flanking lifestyle photos (left+right)  │
+├─────────────────────────────────────────────┤
+│ 2. LOCATIONS NEAR YOU                       │
+│    - Horizontal scrolling location cards     │
+│    - Each card: studio name, distance, addr  │
+│    - Service-specific booking links          │
+├─────────────────────────────────────────────┤
+│ 3. PATIENT PHOTO CAROUSEL                   │
+│    - Horizontal auto-scroll lifestyle photos │
+├─────────────────────────────────────────────┤
+│ 4. WHY CHOOSE [SERVICE] AT TEND             │
+│    - Paragraph body text                     │
+│    - Anchor link to comparison table         │
+│    - 4 icon+label feature cards              │
+│    (Personalized plan, Invisible, Results,   │
+│     No food restrictions)                    │
+├─────────────────────────────────────────────┤
+│ 5. VIDEO TESTIMONIAL                        │
+│    - Embedded Vimeo patient story            │
+├─────────────────────────────────────────────┤
+│ 6. BEFORE & AFTER CAROUSEL                  │
+│    - Slider-based B&A comparison images      │
+│    - "Transformed 10,000+ smiles"            │
+├─────────────────────────────────────────────┤
+│ 7. INSURANCE SECTION (tabbed)               │
+│    - "Up to $3,000 covered by insurance"     │
+│    - Tab 1: Insurance checker form           │
+│    - Tab 2: Carrier list                     │
+│    - Logo ticker carousel                    │
+├─────────────────────────────────────────────┤
+│ 8. COMPARISON TABLE                         │
+│    - Braces vs Clear Aligners (6-row table)  │
+│    - Side-by-side with lifestyle photo       │
+├─────────────────────────────────────────────┤
+│ 9. FAQ ACCORDION                            │
+│    - 20+ questions, extensive depth          │
+│    - Covers cost, process, retainers, care   │
+├─────────────────────────────────────────────┤
+│ 10. REVIEWS CAROUSEL                        │
+│    - 10+ real reviews with name + location   │
+├─────────────────────────────────────────────┤
+│ 11. PAYMENT OPTIONS                         │
+│    - 3-column: Insurance, Pre-tax, Financing │
+├─────────────────────────────────────────────┤
+│ 12. RELATED BLOG POSTS                      │
+│    - Horizontal carousel of 8-10 articles    │
+├─────────────────────────────────────────────┤
+│ 13. BACK LINK ("Go Back" to services hub)   │
+└─────────────────────────────────────────────┘
 ```
 
----
-
-### Gap Analysis
-
-| Area | Tend | Smile Avenue | Gap |
-|------|------|-------------|-----|
-| **Photo/Video moment** | Full-width lifestyle video loop between services and difference | Video only in desktop hero | Missing a standalone visual "vibe" section |
-| **Services format** | Horizontal scrolling pills (minimal, sleek) | Card grid with icons and descriptions | Your grid is more informative but heavier |
-| **Locations section** | Interactive map + studio cards with hours/ratings | Not on homepage (separate /locations page) | Missing — big trust builder |
-| **Team section** | Oval photo + value props (experience, science, outcomes, safety) | Small circular headshots in a grid | Tend's feels more premium and story-driven |
-| **Press/Social proof** | Press logo ticker (Forbes, NYT, WSJ) | Credibility Bar (review counts) | Missing press/media logos |
-| **Insurance** | Tabbed: checker + carrier list + logo carousel | Checker form only | Missing carrier logos and tabbed UX |
-| **FAQ** | Not on homepage | On homepage (dark section) | You have this; Tend doesn't |
-| **Free Consultation CTA** | Not on homepage (built into booking flow) | Dedicated CTA banner | You have this; Tend doesn't |
+**Key differences from your EducationServiceTemplate**:
+- Tend has a **Locations Near You** card strip right after the hero
+- Tend includes a **Before & After** carousel (you don't have this)
+- Tend has a **tabbed Insurance section** with checker form + carrier list
+- Tend uses a **comparison table** (Braces vs Aligners) rather than "Smile Avenue vs Typical Office"
+- Tend has a **Payment Options** section (3-column: insurance, HSA/FSA, financing)
+- Tend's FAQ section is much deeper (20+ questions vs your 6-8)
+- Tend puts **video testimonials** mid-page, not just explainer videos
 
 ---
 
-### Recommended Homepage Redesign Plan
-
-**New section order, inspired by Tend but adapted for Smile Avenue's strengths:**
+### Page Type 2: Location-Specific SEO Page (`/dentist-studios/new-york-city/invisalign`)
+**Purpose**: Maximum local SEO, geo-targeted conversion.
 
 ```text
- 1. Trust Ticker                    (keep as-is)
- 2. Hero                            (keep current — already Tend-inspired)
- 3. Credibility Bar                 (keep — your equivalent of Tend's "8,000+ reviews")
- 4. Services Carousel               (NEW — replace grid with horizontal scrolling pills)
- 5. Full-Width Video/Photo Moment   (NEW — lifestyle video loop or office photo carousel)
- 6. Smile Avenue Difference         (keep — matches Tend's "Difference" section)
- 7. Testimonials Carousel           (keep — already Tend-style dark cards)
- 8. Locations Section               (NEW — 2 studio cards with map, hours, phone, ratings)
- 9. Insurance + Carriers            (UPGRADE — add tabbed view with carrier logos)
-10. Doctors / Clinical Team         (UPGRADE — oval photo + value props layout instead of grid)
-11. Free Consultation CTA           (keep)
-12. Blog                            (keep)
-13. Press Logo Ticker               (NEW — add if you have any press mentions)
+Section Flow:
+┌─────────────────────────────────────────────┐
+│ 1. HERO (location-specific)                 │
+│    - Breadcrumb (Locations / City)           │
+│    - H1: "[Service] in **[City]**" (bold)    │
+│    - Geo-specific intro paragraph            │
+│    - "Read More" expandable text             │
+│    - 4 value props with checkmarks           │
+│    - Star rating bar                         │
+│    - Book Now CTA (anchors to locations)     │
+│    - Photo carousel (service + city images)  │
+├─────────────────────────────────────────────┤
+│ 2. DENTAL STUDIOS IN [CITY]                 │
+│    - "View All Locations" link               │
+│    - "Open Now" filter toggle                │
+│    - Full location cards with:               │
+│      · Hours for every day                   │
+│      · Rating + review count                 │
+│      · Address, phone, Book Now              │
+│    - Interactive map with pins               │
+├─────────────────────────────────────────────┤
+│ 3. INSURANCE SECTION (tabbed)               │
+│    - Same as education page                  │
+│    - Insurance checker + carrier list        │
+│    - Logo ticker                             │
+├─────────────────────────────────────────────┤
+│ 4. DENTAL SERVICES IN [CITY]                │
+│    - Horizontal carousel of all services     │
+│    - Each card: title, description, Book CTA │
+│    - Cross-links to other services           │
+├─────────────────────────────────────────────┤
+│ 5. BRAND/PARTNER LOGOS                      │
+│    - Invisalign, Simply Clear, Zocdoc, etc.  │
+├─────────────────────────────────────────────┤
+│ 6. REVIEWS CAROUSEL                         │
+│    - Location-specific reviews               │
+│    - 20+ reviews with studio attribution     │
+├─────────────────────────────────────────────┤
+│ 7. ABOUT [SERVICE] IN [CITY] (SEO copy)     │
+│    - 3 paragraphs of geo-targeted content    │
+│    - Mentions neighborhoods/boroughs         │
+│    - Internal links to education page        │
+├─────────────────────────────────────────────┤
+│ 8. LOCATION-SPECIFIC FAQ                    │
+│    - "How much does Invisalign cost in NYC?" │
+│    - "Where can I find Invisalign in NYC?"   │
+│    - Pricing ranges specific to market       │
+│    - Internal links within answers           │
+│    - Payment options FAQ                     │
+│    - Late cancel/no-show policy              │
+└─────────────────────────────────────────────┘
 ```
 
-**Move FAQ off the homepage** — it slows conversion and Tend doesn't use it here. Keep it accessible via nav/footer.
+**Key differences from your ServicePageTemplate**:
+- Tend's location page has a **rich "About [Service] in [City]" SEO copy block** near the bottom with 3+ paragraphs of geo-targeted content and internal links -- this is a major SEO asset you're missing
+- Tend's location FAQ is **entirely different from the education FAQ** -- questions are geo-specific ("How much does Invisalign cost in NYC?", "Where can I find an Invisalign dentist in New York?")
+- Tend includes a **full services carousel** cross-linking all other services in that city
+- Tend does NOT include: process steps, sub-services cards, comparison table, or "Meet Your Doctor" on location pages -- those live on the education page
+- Tend's location page focuses on **logistics + trust**: studios, insurance, reviews, SEO copy, geo-FAQ
 
 ---
 
-### Implementation Details
+## Recommended Adaptation Plan
 
-**Step 1 — Services Carousel (replace grid)**
-- New component: horizontal scroll of rounded pill-style links
-- Each pill = service name, links to `/services/{slug}`
-- Prev/Next arrows, auto-scroll optional
-- Lighter and faster than the current card grid
+### Step 1: Restructure EducationServiceTemplate (Tier 1)
 
-**Step 2 — Full-Width Video/Photo Section**
-- New component between services and difference
-- Reuse your `HERO_VIDEO_URL` or `OFFICE_IMAGES` in a full-bleed layout
-- Autoplay, muted, looped video or a photo carousel
+Add these sections (in order) to match Tend's education flow:
+- **A. "Find [Service] Near You" location cards** -- move from bottom to right after hero (2 cards: Cypress + Katy with address, phone, book link)
+- **B. Before & After section** -- add optional `beforeAfter` data field for services that have B&A images (Invisalign, veneers, whitening, implants)
+- **C. Video Testimonial** -- add optional `testimonialVideoId` field for patient story videos (separate from explainer video)
+- **D. Tabbed Insurance section** -- replace current cost section with a tabbed "Check your insurance" / "View carriers" layout + insurance logo ticker
+- **E. Payment Options 3-column** -- Insurance coverage, HSA/FSA, Financing
+- **F. Expand FAQ depth** -- increase to 12-20 questions per service
 
-**Step 3 — Locations Section**
-- New component showing Cypress + Katy studio cards side by side
-- Each card: address, phone, hours, star rating, "Book Now" + "Call" CTAs
-- Optional embedded map or static map image
+Remove/restructure:
+- Move "Smile Avenue vs Typical Office" comparison table to a more contextual position or keep as differentiator (Tend uses service-specific comparisons like "Braces vs Aligners" instead)
 
-**Step 4 — Upgrade Insurance Section**
-- Add tabs: "Check Your Insurance" (current form) | "Our Carriers" (logo list)
-- Add insurance logo carousel below
+### Step 2: Restructure ServicePageTemplate (Tier 2)
 
-**Step 5 — Upgrade Doctors Section**
-- Replace 6-across headshot grid with a 2-col layout:
-  - Left: large oval/rounded photo of lead doctor or team
-  - Right: value prop bullets (experience, outcomes, safety, science-based care)
-- "Meet Our Clinical Team" CTA below
-- Optional team photo carousel strip
+Reorder and modify to match Tend's location page focus:
+- **A. Add "About [Service] in [City]" SEO copy block** -- new data field `aboutInCity` with 2-3 paragraphs of geo-targeted content mentioning local neighborhoods, with internal links to education page
+- **B. Replace generic FAQ with location-specific FAQ** -- new data field `locationFaqs` with questions like "How much does [service] cost in [City]?", "Where can I find [service] in [City]?"
+- **C. Add cross-service carousel** -- "Other Services in [City]" horizontal carousel linking to all other services at that location
+- **D. Remove process steps and sub-services** -- these belong on the education page, not the location page (reduces duplication, focuses location pages on local authority)
+- **E. Keep Meet Your Doctor card** -- Tend doesn't have this but it's a strong differentiator for a 2-location practice vs a chain
 
-**Step 6 — Remove FAQ from homepage**
-- Delete FAQ section from `Home.tsx`
-- FAQ remains accessible at `/faq` and via footer links
+### Step 3: Update Data Files
 
-**Step 7 — Add Press Logo Ticker (optional)**
-- If you have any press mentions, add a simple logo carousel before the footer
-- Similar to Tend's "In the press" section
+- Add new fields to `EducationServiceData` type for `beforeAfter`, `testimonialVideoId`, expanded FAQs
+- Add new fields to `ServicePageData` type for `aboutInCity`, `locationFaqs`, remove `subServices` and `processSteps` (or make optional)
+- Update all 18 service data entries with geo-specific copy and location FAQs
 
 ---
 
-### What stays the same
-- Trust Ticker, Navbar, Footer, MobileStickyBar, BookingLocationModal
-- Hero section (already updated)
-- Credibility Bar
-- Smile Avenue Difference section
-- Testimonial Carousel (TendStyleCarousel)
-- Free Consultation CTA
-- Blog section
-- All SEO/structured data
+## Technical Details
+
+**Files to modify:**
+- `src/components/EducationServiceTemplate.tsx` -- add location cards after hero, B&A carousel, video testimonial, tabbed insurance, payment options
+- `src/components/ServicePageTemplate.tsx` -- reorder sections, add SEO copy block, location FAQ, cross-service carousel, remove duplicated education content
+- `src/lib/education-service-data.ts` -- extend type with new optional fields
+- All 34 location service page data files (`src/pages/cypress/*.tsx`, `src/pages/katy/*.tsx`) -- add `aboutInCity` and `locationFaqs` data
+- Potentially create new components: `BeforeAfterCarousel`, `TabbedInsurance`, `ServicesCrossLink`
+
+**Estimated scope:** This is a large refactor touching 40+ files. Recommend implementing in phases:
+1. Phase 1: Restructure EducationServiceTemplate sections
+2. Phase 2: Restructure ServicePageTemplate sections  
+3. Phase 3: Populate new data fields across all services
 
