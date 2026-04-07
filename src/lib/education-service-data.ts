@@ -177,6 +177,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Financing Options", smileAvenue: "✓ 0% interest available", typical: "Limited options" },
       { feature: "Retainers Included", smileAvenue: "✓ Custom retainers provided", typical: "Often an additional cost" }
     ],
+    serviceComparison: {
+      titleA: "Clear Aligners",
+      titleB: "Traditional Braces",
+      rows: [
+        { feature: "Appearance", optionA: "Nearly invisible", optionB: "Visible metal brackets & wires" },
+        { feature: "Removable", optionA: "Yes — eat & brush freely", optionB: "No — fixed for entire treatment" },
+        { feature: "Comfort", optionA: "Smooth plastic, no irritation", optionB: "Can irritate cheeks & gums" },
+        { feature: "Food Restrictions", optionA: "None", optionB: "No sticky, hard, or crunchy foods" },
+        { feature: "Treatment Time", optionA: "6–18 months average", optionB: "18–36 months average" },
+        { feature: "Office Visits", optionA: "Every 6–8 weeks", optionB: "Every 4–6 weeks for adjustments" },
+      ],
+    },
     faqs: [
       { question: "How long does Invisalign treatment take?", answer: "Most cases take 6-18 months, with an average of about 12 months. Simple cases may be finished in as little as 6 months, while complex cases can take up to 18 months." },
       { question: "Does Invisalign hurt?", answer: "You may feel mild pressure when you switch to a new set of aligners, which is a sign your teeth are moving. Most patients describe it as 'tightness' rather than pain, and it subsides within a day or two." },
