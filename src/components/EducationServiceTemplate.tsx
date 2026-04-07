@@ -235,11 +235,10 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               </div>
             </div>
 
-            {heroImage && (
-              <div className="lg:hidden mt-10 max-w-md mx-auto">
+            <div className="lg:hidden mt-10 max-w-md mx-auto">
                 <img
-                  src={heroImage.url}
-                  alt={heroImage.alt}
+                  src={leftFlankImage}
+                  alt="Smile Avenue dental team"
                   className="w-full aspect-[4/3] object-cover rounded-3xl shadow-lg"
                   loading="eager"
                   fetchPriority="high"
