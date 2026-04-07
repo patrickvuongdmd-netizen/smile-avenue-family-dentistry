@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "Had a root canal on a molar and it was honestly easier than getting a filling. The numbing was thorough and the team kept checking on me the whole time.", name: "Anthony R.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "I put off my root canal for months out of fear. Wish I hadn't waited! The procedure was nothing like what I imagined. Smooth, painless, and done in about an hour.", name: "Rachel K.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road is where Cypress patients come for gentle, modern root canal treatment. Our advanced rotary instruments and refined technique make today's root canals comfortable and efficient — nothing like the painful reputation they once had.",
+    "What makes our Cypress root canal experience different is the seamless crown workflow. After removing the infection, our in-house Smile Dental Lab fabricates your permanent crown on-site — meaning faster turnaround and fewer appointments compared to offices that outsource to external labs.",
+    "We offer multiple sedation options for anxious patients: nitrous oxide for mild relaxation, oral sedation for moderate anxiety, and IV sedation for patients who want to sleep through the procedure. Our team monitors you continuously, ensuring safety and comfort throughout.",
+    "Patients from Bridgeland, Towne Lake, Fairfield, and Cy-Fair trust us for root canal treatment because we combine clinical expertise with genuine compassion. Most PPO dental insurance plans cover root canal therapy, and we offer 0% financing through CareCredit and Sunbit for any remaining balance.",
+  ],
   ctaHeading: "Don't Wait — Save Your Tooth Today",
   ctaBody: "Gentle root canal treatment at Smile Avenue Cypress. Call now and feel better fast.",
 };

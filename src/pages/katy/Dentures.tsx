@@ -57,6 +57,12 @@ const data: ServicePageData = {
     { quote: "My new partial denture from Smile Avenue Katy fits perfectly and looks so natural. Nobody can tell which teeth are real and which aren't.", name: "Henry L.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The team took extra time to make sure my full dentures looked natural and felt comfortable. The fit is excellent and I'm smiling again!", name: "Dolores C.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway is the Katy practice patients trust for comfortable, natural-looking dentures. Our in-house Smile Dental Lab fabricates every set of dentures on-site — giving us full control over fit, aesthetics, and turnaround time that external labs simply can't match.",
+    "We offer the complete range of denture solutions: traditional full dentures for patients missing an entire arch, flexible partial dentures for those with some remaining natural teeth, and implant-supported overdentures that snap onto dental implants for maximum stability without adhesives.",
+    "Our Katy office advantage is same-day adjustments and relines. During the initial adjustment period, many patients need small tweaks — and because our lab is right here, we handle them on the spot rather than sending your dentures away for days. Patients from Cinco Ranch, Firethorne, Cross Creek Ranch, and Fulshear appreciate this convenience.",
+    "We use digital impressions for a more accurate fit and provide transparent pricing with most PPO insurance plans accepted. 0% financing through CareCredit and Sunbit is available, and our Saturday hours (8am-2pm) make consultations convenient for busy patients.",
+  ],
   ctaHeading: "Restore Your Smile with Custom Dentures",
   ctaBody: "Book a denture consultation at our Katy office and explore your tooth replacement options.",
 };

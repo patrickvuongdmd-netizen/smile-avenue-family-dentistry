@@ -57,6 +57,12 @@ const data: ServicePageData = {
     { quote: "Needed bone grafting before implants. The procedure was comfortable and the team was so reassuring. Healing went perfectly.", name: "Linda S.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Dr. Vuong performed a sinus lift and implant placement. His expertise was evident from the planning through recovery.", name: "Charles D.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway provides comprehensive oral surgery services right here in Katy — no hospital visits, no outside specialist referrals. From wisdom teeth removal and bone grafting to sinus lifts and complex surgical extractions, everything is handled in our modern office with IV sedation for complete comfort.",
+    "Our 3D CBCT imaging technology provides a detailed three-dimensional view of your jaw anatomy — including nerve pathways, sinus cavities, and bone density — enabling our surgical team to plan procedures with precision that leads to safer outcomes and faster healing.",
+    "Patients from Cinco Ranch, Cross Creek Ranch, Firethorne, Fulshear, and the greater Katy area choose us because we combine advanced surgical capability with a reassuring, compassionate approach. IV sedation ensures deep relaxation throughout — most patients have little to no memory of the procedure.",
+    "For patients needing bone grafting before dental implants, our in-house approach streamlines the entire journey from extraction to grafting to final implant placement. Most PPO insurance plans cover medically necessary oral surgery, and we offer 0% financing through CareCredit and Sunbit for any remaining costs.",
+  ],
   ctaHeading: "Schedule Your Surgical Consultation",
   ctaBody: "Expert oral surgery with sedation options at our Katy office. Book your consultation today.",
 };

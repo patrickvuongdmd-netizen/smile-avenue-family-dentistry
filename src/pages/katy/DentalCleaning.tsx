@@ -56,6 +56,12 @@ const data: ServicePageData = {
     { quote: "Brought my whole family for cleanings at the Katy office. They were great with our kids — patient, fun, and thorough. Our new dental home!", name: "Michael & Sarah T.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "I needed a deep cleaning and was nervous, but they numbed everything and I didn't feel a thing. My gums have never been healthier.", name: "Rosa M.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway is the Katy dental office where families come for thorough, gentle cleanings. Our experienced hygiene team uses ultrasonic scaling and modern polishing techniques for a cleaning experience that's both meticulous and comfortable.",
+    "Every cleaning at our Katy office includes a comprehensive exam with digital X-rays, oral cancer screening, periodontal assessment, and personalized home care recommendations. We don't just clean your teeth — we give you a complete picture of your oral health and catch problems early when they're easiest and most affordable to treat.",
+    "Families from Cinco Ranch, Cross Creek Ranch, Firethorne, Elyson, and Cane Island trust us with patients of all ages — from toddlers getting their first cleaning to grandparents maintaining their oral health. Our kid-friendly amenities and gentle approach make children's visits stress-free and even fun.",
+    "Our Katy office is open Saturdays 8am-2pm for busy families who can't make weekday appointments. Most dental insurance plans cover two preventive cleanings per year at 100%, and our Smile Avenue Membership Plan provides affordable coverage for uninsured patients.",
+  ],
   ctaHeading: "Book Your Cleaning Today",
   ctaBody: "Stay ahead of cavities and gum disease with regular professional cleanings at our Katy office.",
 };

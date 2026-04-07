@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "We've been bringing all three of our kids to Smile Avenue for years. The hygienists are incredibly patient and gentle. My kids actually remind me when their appointments are coming up.", name: "Jason H.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Dr. Kim is amazing with kids. He explained everything to my son at his level and made him feel like a superhero for being brave. We'll never go anywhere else.", name: "Rebecca C.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road is the kids' dentist Cypress families trust most. CFISD families from Bridgeland, Towne Lake, Fairfield, and Cy-Fair bring their children here because our team genuinely loves working with kids — and it shows in the way children actually ask to come back.",
+    "Dr. Peter Kim has advanced pediatric training and a natural gift for connecting with children of all ages and temperaments. He uses a gentle tell-show-do approach, never rushing a nervous child. For kids who need extra help relaxing, we offer nitrous oxide (laughing gas) and other sedation options that are safe and effective.",
+    "Every kids' visit at our Cypress office includes more than just a cleaning. We perform developmental assessments, monitor bite alignment, apply protective fluoride and sealants, and screen for early orthodontic needs. Our goal is to build positive dental habits that last a lifetime — preventing problems before they start.",
+    "Most dental insurance plans cover children's preventive care at 100%. Our Smile Avenue Membership Plan also covers pediatric patients for families without insurance — including two cleanings, exams, X-rays, and discounts on all other treatments.",
+  ],
   ctaHeading: "Give Your Child a Healthy Smile",
   ctaBody: "Schedule your child's dental visit today. Fun, gentle, and thorough care for kids of all ages.",
 };

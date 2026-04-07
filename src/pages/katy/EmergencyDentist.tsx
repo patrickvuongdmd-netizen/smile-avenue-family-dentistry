@@ -60,6 +60,12 @@ const data: ServicePageData = {
     { quote: "My son knocked out a tooth playing soccer. We called and they saw us within an hour. Dr. Maredia saved the tooth. Can't thank them enough.", name: "Michelle K.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "I had an abscess that was getting worse by the hour. Smile Avenue got me in the same day, drained it, and started treatment. The relief was immediate.", name: "James P.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "When a dental emergency strikes in Katy, TX, Smile Avenue Family Dentistry on Westheimer Parkway provides same-day urgent care. We keep emergency slots available daily so you're never told to wait days in pain. Call (281) 800-5008 and our team will triage your situation over the phone and get you in as quickly as possible.",
+    "Our Katy emergency team — Dr. Bilal, Dr. Maredia, and Dr. Vuong — handles every type of dental emergency in-house: severe toothaches, cracked and broken teeth, knocked-out teeth, abscesses, lost fillings and crowns, and soft tissue injuries. With 3D CBCT imaging, we diagnose problems accurately and treat the cause — not just the symptom.",
+    "What separates us from other Katy emergency dentists is our comprehensive in-office capability. We perform root canals, extractions, crown replacements, and infection treatment all under one roof — no referrals to outside specialists. Sedation options (nitrous, oral, and IV) ensure comfort even during stressful emergency procedures.",
+    "Families from Cinco Ranch, Cross Creek Ranch, Firethorne, Fulshear, and the Westheimer Parkway corridor count on us when emergencies strike. Our Katy office is open Saturdays 8am-2pm, and we accept most PPO insurance plans plus 0% financing through CareCredit and Sunbit.",
+  ],
   ctaHeading: "Dental Emergency? Call Now",
   ctaBody: "Don't wait in pain. Call (281) 800-5008 for same-day emergency care at Smile Avenue Katy.",
 };

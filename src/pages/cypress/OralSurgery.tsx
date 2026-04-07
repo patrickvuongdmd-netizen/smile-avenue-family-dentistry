@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "All four wisdom teeth removed under IV sedation. I fell asleep and woke up with it all done. Zero pain during the procedure and minimal swelling after.", name: "Stephanie K.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Needed a sinus lift before getting implants. The team walked me through every step and the whole process went perfectly. Very grateful for their expertise.", name: "William C.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road provides comprehensive oral surgery services right here in Cypress — no hospital visits, no outside specialist referrals. From wisdom teeth removal and bone grafting to sinus lifts and complex surgical extractions, everything is performed in our modern office with IV sedation for complete comfort.",
+    "Our 3D CBCT imaging technology gives our surgical team a detailed, three-dimensional view of your jaw anatomy — including nerve pathways, sinus cavities, and bone density. This precision planning leads to safer, more predictable surgical outcomes and faster healing times.",
+    "Patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Spring choose Smile Avenue for oral surgery because we combine advanced surgical capability with a gentle, reassuring approach. IV sedation ensures you're deeply relaxed throughout — most patients have little to no memory of the procedure.",
+    "For patients needing bone grafting in preparation for dental implants, our in-house approach streamlines the entire journey from extraction to grafting to final implant placement. Most PPO insurance plans cover medically necessary oral surgery, and we offer 0% financing for any remaining balance.",
+  ],
   ctaHeading: "Expert Oral Surgery, Right Here in Cypress",
   ctaBody: "Schedule your surgical consultation today. IV sedation, 3D planning, and experienced care.",
 };

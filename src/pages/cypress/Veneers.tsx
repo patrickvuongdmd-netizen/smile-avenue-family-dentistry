@@ -68,6 +68,12 @@ const data: ServicePageData = {
     { question: "Do you offer free veneer consultations in Cypress?", answer: "Yes. Your free consultation includes a digital smile design preview, shade evaluation, and a personalized treatment plan with transparent pricing — no obligation." },
     { question: "Can I get same-day veneers in Cypress?", answer: "Our in-house Smile Dental Lab significantly reduces turnaround time compared to offices that outsource. While same-day delivery depends on case complexity, many patients receive their final veneers faster than the industry average." },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road is the Cypress practice patients trust for expert porcelain veneer transformations. Our in-house Smile Dental Lab is the key advantage — each veneer is designed and handcrafted on-site for precise color matching, natural translucency, and a perfect fit that external labs simply cannot replicate.",
+    "We offer both Emax lithium disilicate and zirconia veneer options. Emax provides superior translucency and aesthetics ideal for front teeth, while zirconia offers maximum durability for patients who want strength without compromise. Our digital smile design previews let you see your projected results before committing to treatment.",
+    "Minimal-prep veneers are available for qualifying patients, preserving more natural tooth structure while still achieving dramatic cosmetic improvement. Patients from Bridgeland, Towne Lake, Fairfield, and Cy-Fair choose us for veneer artistry because Dr. Vuong combines aesthetic vision with technical precision.",
+    "Most veneer cases at our Cypress office are completed in two visits. We offer free smile consultations with digital previews, and provide transparent pricing with 0% financing through CareCredit and Sunbit — making a stunning smile accessible to every patient.",
+  ],
   ctaHeading: "Transform Your Smile with Veneers",
   ctaBody: "Schedule your free veneer consultation and see what's possible for your smile.",
 };

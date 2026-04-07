@@ -63,6 +63,12 @@ const data: ServicePageData = {
     { quote: "I trust Smile Avenue completely. The team makes my family feel like VIPs every single visit. We wouldn't go anywhere else.", name: "Thao H.", source: "Google Review", location: "Bridgeland, Cypress" },
     { quote: "My kids actually ask to go to the dentist now! The team is so wonderful with children. They make it fun and stress-free. Best family dental experience we've ever had.", name: "Sarah T.", source: "Google Review", location: "Towne Lake, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road is the Cypress dental home where families from Bridgeland, Towne Lake, Fairfield, and Cy-Fair bring every generation — from first-tooth toddlers to grandparents needing implants. With five experienced doctors covering every specialty, your entire family is cared for under one roof with zero referrals.",
+    "What sets us apart is our hospitality-first philosophy. Every treatment room has Netflix on a ceiling-mounted TV, warm blankets, pillows, and noise-canceling headphones. Kids get a special welcome and choose their own flavored polish. Our team never rushes a nervous child — or adult — building trust one visit at a time.",
+    "Our in-house Smile Dental Lab means your family gets faster results for crowns, bridges, dentures, and retainers. Digital scanners replace goopy molds, and same-day emergency appointments ensure your family never waits in pain. CFISD families especially appreciate our gentle pediatric approach and Saturday availability.",
+    "We accept most PPO insurance plans, offer our own Smile Avenue Membership Plan for uninsured families, and provide 0% financing through CareCredit and Sunbit — because cost should never stand between your family and quality dental care.",
+  ],
   ctaHeading: "Book Your Family's Visit Today",
   ctaBody: "One dental home for your entire family — comfortable, convenient, and judgment-free.",
 };

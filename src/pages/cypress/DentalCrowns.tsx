@@ -68,6 +68,12 @@ const data: ServicePageData = {
     { question: "How fast can I get a crown at Smile Avenue Cypress?", answer: "Our in-house Smile Dental Lab means faster turnaround than offices that outsource — often completing crowns in days rather than weeks. We use digital scanning (no goopy impressions) for a precise fit." },
     { question: "Do you offer same-day emergency crowns in Cypress?", answer: "If you have a broken or damaged tooth, we can often see you the same day and place a temporary crown immediately. Your permanent custom crown is then fabricated in our in-house lab for the fastest possible turnaround." },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road is the Cypress dental practice patients trust for precision crown restorations. Our in-house Smile Dental Lab fabricates every crown on-site — meaning faster turnaround, tighter quality control, and a better fit than offices that ship impressions to third-party labs across the country.",
+    "We use Medit digital scanners to capture 3D impressions of your tooth — no goopy molds, no gagging, no discomfort. The digital workflow produces crowns with sub-millimeter accuracy, and our lab team hand-matches shade and translucency for a seamless, natural result that blends invisibly with your surrounding teeth.",
+    "Whether you need a crown after a root canal, to repair a cracked tooth, or to restore a dental implant, our Cypress team — Dr. Vuong, Dr. Kim, and Dr. Yahya — delivers consistently excellent results. Patients from Bridgeland, Towne Lake, Fairfield, and Cy-Fair appreciate our same-day emergency crown capability.",
+    "Most PPO dental insurance plans cover 50-80% of crown costs. We verify your benefits before treatment and offer 0% financing through CareCredit and Sunbit for any remaining balance. Our Membership Plan provides significant discounts for uninsured patients.",
+  ],
   ctaHeading: "Restore Your Smile with a Custom Crown",
   ctaBody: "Custom crowns from our in-house Smile Dental Lab — precision craftsmanship, faster turnaround.",
 };

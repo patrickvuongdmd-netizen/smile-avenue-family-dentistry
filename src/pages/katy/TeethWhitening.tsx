@@ -59,6 +59,12 @@ const data: ServicePageData = {
     { quote: "I have sensitive teeth and was worried about whitening. They customized the treatment perfectly — no sensitivity at all and my teeth look amazing.", name: "Kevin D.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The take-home trays are so convenient. I whiten while watching TV and the results keep getting better. Best investment in my smile.", name: "Rachel W.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway delivers professional teeth whitening to Katy patients who want dramatically brighter results — safely, in a fraction of the time store-bought products take. Our professional-grade formulas are significantly stronger than anything available over the counter, delivering up to 8 shades brighter in one hour.",
+    "We offer two whitening pathways: in-office Zoom whitening for immediate same-day results, and custom-fitted take-home trays with professional gel for gradual brightening on your schedule. Many Katy patients combine both — in-office treatment for dramatic initial results followed by periodic at-home maintenance.",
+    "Sensitivity is the most common concern patients have about whitening. Our team customizes every treatment based on your individual sensitivity level, using desensitizing agents and adjusted gel concentrations for a comfortable experience. Most patients with sensitivity history are pleasantly surprised.",
+    "For patients from Cinco Ranch, Cross Creek Ranch, and Firethorne considering a smile makeover, whitening is the perfect first step before veneers or bonding — we brighten your natural teeth first, then match restorations to your new shade for a cohesive, stunning result.",
+  ],
   ctaHeading: "Brighten Your Smile Today",
   ctaBody: "Schedule your professional whitening appointment and see the difference dentist-supervised care makes.",
 };

@@ -68,6 +68,12 @@ const data: ServicePageData = {
     { question: "Can I get temporary teeth the same day as All-on-4 surgery in Cypress?", answer: "Yes — many All-on-4 patients receive a temporary fixed prosthesis the same day as implant placement. You'll never be without teeth during the healing process. Your permanent zirconia teeth are fabricated in our in-house lab once osseointegration is complete." },
     { question: "Do you offer free All-on-X consultations in Cypress?", answer: "Yes. Your free consultation includes a 3D CT scan, full bone density assessment, and a personalized treatment plan with transparent pricing and financing options — absolutely no obligation." },
   ],
+  aboutInCity: [
+    "Cypress residents considering full-arch tooth replacement no longer need to travel to a hospital or oral surgery center. Smile Avenue Family Dentistry on Fry Road provides complete All-on-X treatment — from 3D CT planning and IV sedation to implant placement and final prosthesis delivery — all under one roof.",
+    "What sets our Cypress All-on-X program apart is our in-house Smile Dental Lab. While most practices outsource the zirconia prosthesis to a third-party lab (adding weeks of wait time), we design and fabricate yours on-site for tighter quality control, faster turnaround, and a more precise fit.",
+    "Our 3D CBCT imaging and digitally guided surgical planning allow Dr. Vuong's team to place implants with sub-millimeter accuracy, often eliminating the need for bone grafting entirely. Patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Spring choose us for predictable, life-changing results.",
+    "We understand All-on-X is a major investment. That's why every consultation includes a comprehensive bone assessment, digital treatment preview, and transparent pricing with 0% financing through CareCredit and Sunbit — so you can make an informed decision without financial surprises.",
+  ],
   ctaHeading: "A New Smile in One Day",
   ctaBody: "Schedule your All-on-X consultation and take the first step toward permanent, life-changing teeth.",
 };

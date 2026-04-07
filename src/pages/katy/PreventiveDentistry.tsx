@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "We bring our whole family here from Cinco Ranch. The kids actually look forward to their cleanings! That says a lot about this practice.", name: "Robert K.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "After years of avoiding the dentist, Smile Avenue made me feel welcome and comfortable. No shame, just excellent care. Highly recommend!", name: "Lisa G.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway delivers the most comprehensive preventive dental care in Katy, TX. Our approach goes beyond basic cleanings — combining thorough exams, digital X-rays, oral cancer screenings, fluoride treatments, and sealants to catch and prevent problems before they become costly procedures.",
+    "Our Katy hygiene team uses the latest digital imaging and ultrasonic scaling technology for thorough yet gentle care. We serve families across the Westheimer Parkway corridor, Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear — from toddlers getting their first checkup to seniors maintaining their oral health.",
+    "Prevention is the most cost-effective form of dentistry. A $200 cleaning today can prevent a $2,000 crown or $5,000 implant tomorrow. That's why we make preventive care accessible with insurance acceptance, our Smile Avenue Membership Plan, and convenient Saturday hours (8am-2pm).",
+    "Every preventive visit includes a one-on-one conversation with your dentist about your oral health status and personalized home care recommendations. We don't rush through exams — we take time to educate you about what we see and what you can do to keep your smile healthy between visits.",
+  ],
   ctaHeading: "Schedule Your Preventive Visit Today",
   ctaBody: "Prevention is the best investment in your smile. Book your cleaning and exam at Smile Avenue Katy.",
 };

@@ -56,6 +56,12 @@ const data: ServicePageData = {
     { quote: "Dr. Maredia did a beautiful Maryland bridge for my front tooth gap. Minimal prep and it looks completely natural.", name: "Jennifer Y.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Had an implant-supported bridge done and it feels like real teeth. No slipping, no worries. Best decision for my smile.", name: "Gregory N.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway is where Katy families come for expert dental bridge restorations. We offer the full range of bridge options — traditional, Maryland, cantilever, and implant-supported — each fabricated in our in-house Smile Dental Lab for precise fit and natural appearance.",
+    "Our digital Medit scanner captures 3D impressions without goopy molds, producing bridges with superior accuracy. Because our lab is on-site, we complete most bridges in two visits over 2-3 weeks — significantly faster than offices that outsource to external labs.",
+    "Patients from Cinco Ranch, Cross Creek Ranch, Firethorne, Fulshear, and the Westheimer Parkway corridor trust us because we take time to explain all tooth replacement options — bridges vs. implants vs. dentures — so you can make an informed decision based on your situation, not a one-size-fits-all recommendation.",
+    "Most PPO dental insurance plans cover a significant portion of bridge costs. We verify your benefits before treatment begins and offer 0% financing through CareCredit and Sunbit for any remaining balance.",
+  ],
   ctaHeading: "Bridge the Gap in Your Smile",
   ctaBody: "Book a bridge consultation at our Katy office and explore your tooth replacement options.",
 };
