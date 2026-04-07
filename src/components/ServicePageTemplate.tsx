@@ -631,7 +631,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 <img
                   src={heroLeftPhoto}
                   alt="Smile Avenue dental team member"
-                  className="absolute left-0 top-0 w-[65%] h-full object-cover rounded-[2.5rem]"
+                  className="absolute left-0 top-0 w-[65%] h-full object-cover rounded-[50%/45%]"
                   loading="eager"
                   fetchPriority="high"
                   width={400}
@@ -641,7 +641,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 <img
                   src={heroRightPhoto}
                   alt="Smile Avenue dentist"
-                  className="absolute right-0 bottom-0 w-[45%] h-[75%] object-cover rounded-[2.5rem]"
+                  className="absolute right-0 bottom-0 w-[45%] h-[75%] object-cover rounded-[50%/45%]"
                   loading="eager"
                   width={280}
                   height={400}
