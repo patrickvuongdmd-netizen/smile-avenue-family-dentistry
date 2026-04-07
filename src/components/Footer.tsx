@@ -11,45 +11,25 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const footerServiceCategories = [
-  {
-    heading: "Preventive & General",
-    services: [
-      { label: "Preventive Dentistry", slug: "preventive-dentistry" },
-      { label: "Dental Cleaning", slug: "dental-cleaning" },
-      { label: "Children's Dentistry", slug: "pediatric-dentistry" },
-      { label: "Family Dental Care", slug: "family-dental-care" },
-      { label: "Emergency Dentistry", slug: "emergency-dentist" },
-    ],
-  },
-  {
-    heading: "Cosmetic & Aesthetic",
-    services: [
-      { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
-      { label: "Teeth Whitening", slug: "teeth-whitening" },
-      { label: "Veneers", slug: "veneers" },
-      { label: "Invisalign®", slug: "invisalign" },
-    ],
-  },
-  {
-    heading: "Restorative & Advanced",
-    services: [
-      { label: "Dental Crowns", slug: "dental-crowns" },
-      { label: "Dental Bridges", slug: "dental-bridges" },
-      { label: "Dentures", slug: "dentures" },
-      { label: "Root Canal", slug: "root-canal" },
-      { label: "Sedation Dentistry", slug: "sedation-dentistry" },
-    ],
-  },
-  {
-    heading: "Surgical & Periodontal",
-    services: [
-      { label: "Dental Implants", slug: "dental-implants" },
-      { label: "All-on-X Implants", slug: "all-on-x-implants" },
-      { label: "Oral Surgery", slug: "oral-surgery" },
-      { label: "Tooth Extraction", slug: "tooth-extraction" },
-    ],
-  },
+const footerServices = [
+  { label: "Preventive Dentistry", slug: "preventive-dentistry" },
+  { label: "Dental Cleaning", slug: "dental-cleaning" },
+  { label: "Children's Dentistry", slug: "pediatric-dentistry" },
+  { label: "Family Dental Care", slug: "family-dental-care" },
+  { label: "Emergency Dentistry", slug: "emergency-dentist" },
+  { label: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
+  { label: "Teeth Whitening", slug: "teeth-whitening" },
+  { label: "Veneers", slug: "veneers" },
+  { label: "Invisalign®", slug: "invisalign" },
+  { label: "Dental Crowns", slug: "dental-crowns" },
+  { label: "Dental Bridges", slug: "dental-bridges" },
+  { label: "Dentures", slug: "dentures" },
+  { label: "Root Canal", slug: "root-canal" },
+  { label: "Sedation Dentistry", slug: "sedation-dentistry" },
+  { label: "Dental Implants", slug: "dental-implants" },
+  { label: "All-on-X Implants", slug: "all-on-x-implants" },
+  { label: "Oral Surgery", slug: "oral-surgery" },
+  { label: "Tooth Extraction", slug: "tooth-extraction" },
 ];
 
 const FooterContact = () => (
