@@ -184,7 +184,7 @@ const MasonryLayout = ({ stories, accentImage }: { stories: Story[]; accentImage
     {accentImage && (
       <ScrollReveal className="hidden lg:block">
         <div className="h-full min-h-[200px] rounded-2xl overflow-hidden shadow-lg">
-          <img src={accentImage} alt="Smile Avenue office" className="w-full h-full object-cover" loading="lazy" />
+          <img src={accentImage} alt="Smile Avenue office" className="w-full h-full object-cover" loading="lazy" decoding="async" width={800} height={400} />
         </div>
       </ScrollReveal>
     )}
