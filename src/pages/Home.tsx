@@ -282,15 +282,7 @@ const Home = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div>
-              <BlogDesktopGrid
-                posts={BLOG_POSTS.slice(0, 3)}
-                variant="image"
-                categoryColors={BLOG_CATEGORY_COLORS}
-                categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={BLOG_FALLBACK_IMAGE}
-              />
-            </div>
+            <LazyBlogSection variant="image" showMobile={false} />
           </div>
         </section>
       </main>

@@ -1078,26 +1078,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 View All Posts <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div>
-              {(() => {
-                const cat = data.blogCategory || SERVICE_SLUG_TO_BLOG_CATEGORY[data.serviceSlug];
-                const categoryPosts = cat
-                  ? BLOG_POSTS.filter(p => p.category === cat).slice(0, 3)
-                  : [];
-                const blogPosts = categoryPosts.length >= 2 ? categoryPosts : BLOG_POSTS.slice(0, 3);
-                return (
-                  <>
-                    <BlogCardCarousel
-                      posts={blogPosts}
-                      categoryColors={BLOG_CATEGORY_COLORS}
-                      categoryImages={BLOG_CATEGORY_IMAGES}
-                      fallbackImage={BLOG_FALLBACK_IMAGE}
-                    />
-                    <BlogDesktopGrid posts={blogPosts} />
-                  </>
-                );
-              })()}
-            </div>
+            <LazyBlogSection
+              category={data.blogCategory}
+              serviceSlug={data.serviceSlug}
+              slugCategoryMap={SERVICE_SLUG_TO_BLOG_CATEGORY}
+            />
           </div>
         </section>
 

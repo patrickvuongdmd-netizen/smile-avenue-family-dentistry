@@ -469,15 +469,7 @@ const LocationHubTemplate = ({ data }: { data: LocationHubData }) => {
                 View All Posts <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div>
-              <BlogCardCarousel
-                posts={BLOG_POSTS.slice(0, 3)}
-                categoryColors={BLOG_CATEGORY_COLORS}
-                categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={BLOG_FALLBACK_IMAGE}
-              />
-              <BlogDesktopGrid posts={BLOG_POSTS.slice(0, 3)} />
-            </div>
+            <LazyBlogSection />
           </div>
         </section>
       </main>
