@@ -848,10 +848,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 12. OFFICE PHOTO GRID ─── */}
-        <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
+        <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" bgClassName={nextBg()} />
 
         {/* ─── 13. ABOUT [SERVICE] IN [CITY] — local SEO block ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
@@ -873,7 +873,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
         {/* ─── 14. LOCATION-SPECIFIC FAQ (optional) ─── */}
         {data.locationFaqs && data.locationFaqs.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
+          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
                 <div>
@@ -890,7 +890,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         )}
 
         {/* ─── 15. BLOG ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${data.locationFaqs && data.locationFaqs.length > 0 ? 'section-warm' : 'bg-background'}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto">
             <div className="flex items-end justify-between mb-12">
               <div>
