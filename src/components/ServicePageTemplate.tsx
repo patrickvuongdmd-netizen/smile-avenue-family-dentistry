@@ -411,9 +411,19 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               <h1 className="text-2xl font-bold text-foreground leading-[1.12] font-display mb-4">
                 {data.heroHeading}
               </h1>
-              <p className="text-[15px] leading-relaxed text-muted-foreground mb-6 max-w-[340px] mx-auto font-body">
+              <p className="text-[15px] leading-relaxed text-muted-foreground mb-4 max-w-[340px] mx-auto font-body">
                 {data.heroBody}
               </p>
+              {(data.heroValueProps && data.heroValueProps.length > 0) && (
+                <ul className="space-y-2 mb-6 text-left max-w-[320px] mx-auto">
+                  {data.heroValueProps.map((prop, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm font-sans text-foreground">
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <span>{prop}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
               <button onClick={() => setBookingModalOpen(true)} className="w-full py-4 rounded-full font-sans font-bold text-base tracking-wide bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)] transition-all" aria-label={`Book ${data.serviceName} appointment`}>
                 Book Now
               </button>
