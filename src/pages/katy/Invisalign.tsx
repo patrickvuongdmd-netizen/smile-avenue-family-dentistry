@@ -73,6 +73,12 @@ const data: ServicePageData = {
     { question: "How much does Invisalign cost in Katy, TX?", answer: "Invisalign at our Katy office ranges from $3,500–$6,500 depending on complexity. Most PPO plans cover $1,000–$2,000 toward treatment. We offer 0% CareCredit financing with monthly payments as low as $99." },
     { question: "Do you offer Saturday Invisalign appointments in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm, making it easy to fit Invisalign check-ups into your schedule without taking time off work or school." },
   ],
+  aboutInCity: [
+    "Katy families have access to experienced Invisalign providers without driving into Houston. Smile Avenue Family Dentistry on Westheimer Parkway serves clear aligner patients from Cinco Ranch, Fulshear, Cross Creek Ranch, Firethorne, and Richmond with a seamless treatment experience from first scan to final retainer.",
+    "Our Katy office uses Medit digital scanners to capture a precise 3D model of your teeth — no messy impressions. You'll see a virtual preview of your projected smile before committing, giving you confidence in the treatment plan from day one.",
+    "What makes our Katy Invisalign practice unique is our in-house Smile Dental Lab. Retainers and any supplemental aligners are fabricated on-site, giving us faster turnaround and tighter quality control than offices that outsource to third-party labs.",
+    "Our Katy office offers Saturday appointments (8am–2pm), making it easy for working professionals and students to keep up with Invisalign check-ins. We accept most PPO dental plans and provide 0% financing through CareCredit and Sunbit for the remaining balance.",
+  ],
   ctaHeading: "Straighten Your Smile Invisibly",
   ctaBody: "Schedule your free Invisalign consultation and see your virtual results preview.",
 };

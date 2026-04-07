@@ -75,6 +75,12 @@ const data: ServicePageData = {
     { question: "What are Cypress dental implant office hours?", answer: "Our Cypress office is open Monday–Friday 8:30am–5pm. We offer same-day implant consultations when availability permits. Call (832) 648-1756 to check today's openings." },
     { question: "Is there an implant dentist near Bridgeland or Towne Lake?", answer: "Yes — Smile Avenue on Fry Road is just 8 minutes from Bridgeland and 10 minutes from Towne Lake. We serve implant patients from across northwest Houston including Cy-Fair, Spring, and Tomball." },
   ],
+  aboutInCity: [
+    "Cypress, Texas is one of the fastest-growing communities in the Houston metro — and with that growth comes demand for advanced dental care that doesn't require a drive into the city. Smile Avenue Family Dentistry on Fry Road provides dental implant services to families across Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Jersey Village.",
+    "Our Cypress implant office combines 3D CBCT imaging, digital scanning, and an in-house Smile Dental Lab to plan, place, and restore dental implants under one roof. That means fewer appointments, faster turnaround on custom crowns, and no referrals to outside specialists.",
+    "Dr. Patrick Vuong, Dr. Peter Kim, and Dr. Laith Yahya bring decades of combined implant experience. Whether you need a single-tooth implant, an implant-supported bridge, or a full-arch All-on-4 restoration, our team handles every phase of treatment — from bone grafting to final crown delivery — right here at 9212 Fry Rd #120.",
+    "We accept most major PPO dental insurance plans and offer 0% financing through CareCredit and Sunbit. Every implant consultation is free and includes a 3D CT scan, bone density assessment, and a transparent, line-item treatment estimate with no obligation.",
+  ],
   ctaHeading: "Start Your Implant Journey Today",
   ctaBody: "Schedule a consultation and discover how dental implants can restore your smile permanently.",
 };

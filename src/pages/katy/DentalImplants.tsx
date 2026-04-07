@@ -73,6 +73,12 @@ const data: ServicePageData = {
     { question: "What are Katy implant office hours?", answer: "Our Katy office is open Monday–Friday 8:30am–5pm and Saturday 8am–2pm. We offer same-day implant consultations when availability permits. Call (281) 800-5008 to check today's openings." },
     { question: "Is there an implant dentist near Cinco Ranch or Fulshear?", answer: "Yes — Smile Avenue on Westheimer Parkway is located in the heart of Cinco Ranch, just minutes from Fulshear, Cross Creek Ranch, Firethorne, and Brookshire. Saturday hours make scheduling easy." },
   ],
+  aboutInCity: [
+    "Katy, Texas has grown into one of Houston's premier suburban communities — and families here deserve implant dentistry that matches the standard of living they've chosen. Smile Avenue Family Dentistry on Westheimer Parkway provides comprehensive dental implant services to patients across Cinco Ranch, Fulshear, Cross Creek Ranch, Firethorne, Brookshire, and Richmond.",
+    "Our Katy implant office features 3D CBCT imaging, Medit digital scanners, and an in-house Smile Dental Lab — all under one roof. This integrated approach means your implant is planned digitally, placed with guided precision, and restored with a custom crown fabricated steps away from the treatment chair.",
+    "Dr. Patrick Vuong and Dr. Sameer Bilal perform all implant procedures at our Katy location, from single-tooth replacements to full-arch All-on-4 restorations. No referrals to outside specialists, no coordination headaches — everything from bone grafting to final crown delivery happens here at 23541 Westheimer Pkwy Ste #170.",
+    "Our Katy office is open Monday through Friday and Saturdays 8am–2pm — a schedule designed for busy professionals and families. We accept most major PPO plans and offer 0% financing through CareCredit and Sunbit. Every implant consultation is free and includes a 3D scan with a detailed, no-obligation treatment estimate.",
+  ],
   ctaHeading: "Replace Missing Teeth Permanently",
   ctaBody: "Schedule your free implant consultation and take the first step toward a complete, confident smile.",
 };
