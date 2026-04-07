@@ -34,7 +34,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Dental Implants Explained | Permanent Tooth Replacement | Smile Avenue",
     metaDescription: "Everything you need to know about dental implants — how they work, who needs them, what to expect, and costs. Two locations in Cypress & Katy, TX.",
     heroSubtitle: "The gold standard for replacing missing teeth — a permanent solution that looks, feels, and functions like your natural tooth.",
-    videoId: "dQw4w9WcXgQ",
+    testimonialVideoId: "Do_22b5MX_M",
     whatIs: [
       "A dental implant is a small titanium post that's surgically placed into your jawbone to replace the root of a missing tooth. Once healed, a custom-made crown is attached on top, giving you a brand-new tooth that looks and feels completely natural.",
       "Unlike dentures that sit on top of your gums or bridges that rely on neighboring teeth for support, implants are anchored directly in your bone. This means they don't slip, don't require adhesives, and won't damage adjacent teeth.",
@@ -902,7 +902,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "All-on-4 & All-on-6 Full Arch Implants | Smile Avenue",
     metaDescription: "Replace an entire arch of teeth in one day with All-on-X implants. Learn about All-on-4, All-on-6, costs & recovery at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "A brand-new smile in just one day — replace a full arch of missing or failing teeth with permanent, implant-supported teeth.",
-    videoId: "dQw4w9WcXgQ",
+    testimonialVideoId: "wiocP_nsFPY",
     whatIs: [
       "All-on-X is a revolutionary dental implant technique that replaces an entire arch of teeth — upper, lower, or both — using just four to six strategically placed implants. The 'X' refers to the number of implants used: All-on-4 uses four implants, while All-on-6 uses six for additional stability.",
       "Unlike traditional dentures that rest on your gums and can slip or cause sore spots, All-on-X teeth are permanently anchored to implants in your jawbone. They don't come out, don't need adhesive, and let you eat, speak, and smile with complete confidence.",
@@ -950,10 +950,10 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
   "family-dental-care": {
     serviceName: "Family Dental Care",
     serviceSlug: "family-dental-care",
-    metaTitle: "Family Dentistry for All Ages | Smile Avenue Dental",
-    metaDescription: "Comprehensive family dental care for kids, teens & adults at Smile Avenue. Cleanings, exams, sealants, fluoride & more at our Cypress & Katy, TX offices.",
+    metaTitle: "Family Dentistry for All Ages | Smile Avenue",
+    metaDescription: "Comprehensive family dental care for kids, teens & adults. Cleanings, exams, sealants, fluoride & more. Two convenient locations in Cypress & Katy, TX.",
     heroSubtitle: "One dental home for your entire family — from first teeth to golden years. Convenient appointments, gentle care, and a team that knows every member by name.",
-    videoId: "dQw4w9WcXgQ",
+    testimonialVideoId: "EtAuvGSjEnI",
     whatIs: [
       "Family dental care means having one trusted practice that treats every member of your household — toddlers getting their first check-up, teenagers needing sealants, parents juggling busy schedules, and grandparents maintaining healthy smiles. Instead of driving to separate pediatric and adult offices, everyone is cared for under one roof.",
       "At Smile Avenue, family dentistry goes beyond routine cleanings. We provide preventive care, restorative treatments, cosmetic services, and orthodontic consultations for patients of all ages. Our team is trained to work with nervous children, busy adults, and seniors with complex dental histories.",
