@@ -759,6 +759,14 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </div>
       </div>
 
+      <LPExitIntentPopup
+        bookingUrl={bookingUrl}
+        phone={loc.phone}
+        phoneFormatted={loc.phoneFormatted}
+        locationName={loc.name}
+        onBook={() => fireConversion(bookLabel)}
+        onCall={() => fireConversion(callLabel)}
+      />
       <BackToTop />
     </>
   );
