@@ -182,36 +182,12 @@ const Home = () => {
               We built Smile Avenue around a simple idea: dental care should leave you feeling better — not just about your teeth, but about the <strong className="text-foreground font-semibold">whole experience.</strong>
             </p>
 
-            {/* CTAs — stacked full-width on mobile */}
-            <div className="flex flex-col gap-2.5 mx-auto mb-5">
-              <button onClick={() => setBookingModalOpen(true)} className="w-full inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 rounded-full bg-primary text-primary-foreground transition-all pulse-glow">Book Now</button>
-              <p className="text-[11px] font-sans text-muted-foreground -mt-1">Booking takes less than 60 seconds</p>
-              <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="w-full btn-secondary flex items-center justify-center gap-1.5 text-base py-3.5 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
+            {/* CTAs — side by side on mobile */}
+            <div className="flex gap-2.5 mx-auto mb-5">
+              <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 rounded-full bg-primary text-primary-foreground transition-all pulse-glow">Book Now</button>
+              <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-base py-4 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
             </div>
-
-            {/* Circular doctor photos */}
-            <div className="flex justify-center -space-x-2 mb-5">
-              {doctors.slice(0, 4).map((doc) => {
-                const img = DOCTOR_IMAGES[doc.imgKey];
-                return (
-                  <img key={doc.imgKey} src={img.url} alt={img.alt} className="w-[52px] h-[52px] rounded-full border-2 border-background object-cover" loading="eager" width={52} height={52} />
-                );
-              })}
-            </div>
-
-            {/* Combined Google trust element */}
-            <div className="flex items-center justify-center gap-1.5 text-xs font-sans text-muted-foreground">
-              <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
-                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" fill="#4285F4" />
-                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
-                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
-                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
-              </svg>
-              <span className="font-semibold text-foreground">4.9</span>
-              <div className="flex gap-px">{[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-[#D4A853] text-[#D4A853]" />)}</div>
-              <span className="font-bold text-foreground">5,000+</span>
-              <span>Google Reviews</span>
-            </div>
+            <p className="text-[11px] font-sans text-muted-foreground mb-5">Booking takes less than 60 seconds</p>
           </div>
 
           {/* ── DESKTOP HERO — cinematic two-column ── */}
