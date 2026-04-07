@@ -56,16 +56,91 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
   const serviceVideos = SERVICE_VIDEOS[data.serviceSlug];
 
+  const SAME_AS = [
+    "https://www.facebook.com/smileavenuedentistry",
+    "https://www.instagram.com/smileavenuedentistry",
+    "https://www.youtube.com/@SmileAvenueFamilyDentistry",
+    "https://www.yelp.com/biz/smile-avenue-family-dentistry-cypress",
+  ];
+
+  // Enriched DentalService schema
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService",
-    name: data.serviceName,
+    name: `${data.serviceName} - Smile Avenue Family Dentistry`,
     description: data.metaDescription,
     url: canonicalUrl,
+    image: heroImage?.url,
+    serviceType: data.serviceName,
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: BOOKING,
+      servicePhone: PHONE_FORMATTED,
+    },
+    areaServed: [
+      { "@type": "City", name: "Cypress, TX" },
+      { "@type": "City", name: "Katy, TX" },
+      { "@type": "State", name: "Texas" },
+    ],
     provider: {
       "@type": "Dentist",
+      "@id": "https://www.smileavenuefamilydentistry.com/#dentist",
       name: "Smile Avenue Family Dentistry",
       url: "https://www.smileavenuefamilydentistry.com",
+      telephone: PHONE_FORMATTED,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "9212 Fry Rd #120",
+        addressLocality: "Cypress",
+        addressRegion: "TX",
+        postalCode: "77433",
+        addressCountry: "US",
+      },
+      geo: { "@type": "GeoCoordinates", latitude: "29.9691", longitude: "-95.6972" },
+      priceRange: "$$",
+      paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Insurance", "CareCredit", "Sunbit"],
+      openingHoursSpecification: [
+        { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+      ],
+      hasMap: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Cypress/",
+      sameAs: SAME_AS,
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "3000", bestRating: "5", worstRating: "1" },
+    },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "USD",
+      description: `${data.serviceName} at Smile Avenue Family Dentistry. Most PPO insurance accepted. 0% financing available.`,
+    },
+  };
+
+  // MedicalWebPage schema (enriched)
+  const medicalWebPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: data.metaTitle,
+    description: data.metaDescription,
+    url: canonicalUrl,
+    inLanguage: "en",
+    datePublished: "2024-01-15",
+    dateModified: "2025-06-01",
+    lastReviewed: "2025-06-01",
+    about: { "@type": "MedicalCondition", name: data.serviceName },
+    mainEntity: { "@type": "DentalService", name: data.serviceName, url: canonicalUrl },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+    audience: { "@type": "MedicalAudience", audienceType: "Patient" },
+    author: {
+      "@type": "Person",
+      name: "Dr. Patrick Vuong",
+      jobTitle: "Founder & Lead Dentist",
+      url: "https://www.smileavenuefamilydentistry.com/doctors/patrick-vuong-dmd/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Smile Avenue Family Dentistry",
+      url: "https://www.smileavenuefamilydentistry.com/",
+      logo: { "@type": "ImageObject", url: "https://www.smileavenuefamilydentistry.com/logo-full.webp" },
+      sameAs: SAME_AS,
     },
   };
 
@@ -126,6 +201,78 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
       { "@type": "ListItem", position: 3, name: data.serviceName, item: canonicalUrl },
     ],
   };
+
+  // Standalone Dentist schema
+  const dentistJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "@id": "https://www.smileavenuefamilydentistry.com/#dentist",
+    name: "Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/",
+    telephone: PHONE_FORMATTED,
+    image: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+    logo: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+    description: "Top-rated family & cosmetic dental practice in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments, in-house dental lab, and IV sedation available.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "9212 Fry Rd #120",
+      addressLocality: "Cypress",
+      addressRegion: "TX",
+      postalCode: "77433",
+      addressCountry: "US",
+    },
+    geo: { "@type": "GeoCoordinates", latitude: "29.9691", longitude: "-95.6972" },
+    priceRange: "$$",
+    paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Insurance", "CareCredit", "Sunbit"],
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+    ],
+    hasMap: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Cypress/",
+    sameAs: SAME_AS,
+    founder: {
+      "@type": "Person",
+      name: "Dr. Patrick Vuong",
+      jobTitle: "Founder & Lead Dentist",
+      url: "https://www.smileavenuefamilydentistry.com/doctors/patrick-vuong-dmd/",
+    },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "3000", bestRating: "5", worstRating: "1" },
+    knowsAbout: [
+      "Dental Implants", "All-on-4 Dental Implants", "Cosmetic Dentistry", "Porcelain Veneers",
+      "Invisalign", "Emergency Dentistry", "Teeth Whitening", "Dental Crowns", "Dental Bridges",
+      "Root Canal Therapy", "Oral Surgery", "Sedation Dentistry", "Pediatric Dentistry",
+      "Preventive Dentistry", "Dentures", "Tooth Extraction", "Family Dental Care",
+    ],
+    medicalSpecialty: "Dentistry",
+    isAcceptingNewPatients: true,
+    department: [
+      {
+        "@type": "Dentist",
+        name: "Smile Avenue Family Dentistry - Cypress",
+        telephone: "(832) 648-1756",
+        address: { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+      },
+      {
+        "@type": "Dentist",
+        name: "Smile Avenue Family Dentistry - Katy",
+        telephone: "(281) 800-5008",
+        address: { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+      },
+    ],
+  };
+
+  // ItemList for process steps
+  const itemListJsonLd = data.processSteps.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${data.serviceName} Process at Smile Avenue Family Dentistry`,
+    numberOfItems: data.processSteps.length,
+    itemListElement: data.processSteps.map((step, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: step.title,
+      description: step.description,
+    })),
+  } : null;
 
   return (
     <>
