@@ -62,6 +62,7 @@ export interface NeighborhoodPageData {
   heroHeading: string;
   heroSubheading: string;
   heroBody: string;
+  heroValueProps?: string[];
   heroImage?: string;
   whyChooseHeading: string;
   whyChooseItems: WhyChooseItem[];
