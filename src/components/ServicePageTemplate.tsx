@@ -510,7 +510,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* ─── 1. HERO ─── */}
-        <section className="section-warm">
+        <section className="section-warm" aria-label={`${data.serviceName} in ${loc.name} Texas`}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-20">
             {/* Breadcrumb — hidden on mobile */}
             <nav aria-label="Breadcrumb" className="hidden sm:block mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
@@ -628,7 +628,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 2. INTRO + TRUST BADGES (merged) ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`About ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">{data.introKicker}</p>
@@ -730,7 +730,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         )}
 
         {/* ─── 6. WHY CHOOSE US — comparison table ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`Why choose Smile Avenue for ${data.serviceName}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Patients Choose Us for {data.serviceName}</h2>
@@ -790,7 +790,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 7. FAQ (split layout, gradient background) ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 gradient-cta">
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 gradient-cta" aria-label={`Frequently asked questions about ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
@@ -868,7 +868,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 10. REVIEWS ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`${data.serviceName} patient reviews in ${loc.name}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">{data.reviewsKicker}</p>
             <h2 className="section-heading">{data.reviewsHeading}</h2>
@@ -887,7 +887,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 11. PRICING & INSURANCE (merged) ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`${data.serviceName} cost and insurance in ${loc.name}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <p className="kicker">PRICING & INSURANCE</p>
@@ -927,7 +927,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" bgClassName={nextBg()} />
 
         {/* ─── 13. ABOUT [SERVICE] IN [CITY] — local SEO block ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`About ${data.serviceName} in ${loc.name} Texas`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
