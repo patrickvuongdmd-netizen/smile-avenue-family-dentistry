@@ -6,11 +6,14 @@ export interface EducationServiceData {
   metaTitle: string;
   metaDescription: string;
   heroSubtitle: string;
+  heroValueProps?: string[];
   videoId?: string;
+  testimonialVideoId?: string;
   whatIs: string[];
   whoNeeds: string[];
   processSteps: { number: string; title: string; description: string }[];
   costNote: string;
+  insuranceCoverageNote?: string;
   comparisonRows: { feature: string; smileAvenue: string; typical: string }[];
   faqs: { question: string; answer: string }[];
   cypressSlug: string;

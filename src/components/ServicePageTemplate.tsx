@@ -20,6 +20,8 @@ import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES, DOCTOR_IMAGES } from "@/lib/images";
 import { trackPhoneClick } from "@/lib/track-phone";
 import VideoCarousel from "@/components/VideoCarousel";
+import ServicesCrossLink from "@/components/ServicesCrossLink";
+import TabbedInsurance from "@/components/TabbedInsurance";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 import BlogCardCarousel from "@/components/BlogCardCarousel";
 import BlogDesktopGrid from "@/components/BlogDesktopGrid";
@@ -78,16 +80,17 @@ export interface ServicePageData {
   introHeading: string;
   introParas: ReactNode[];
   trustBadges: TrustBadge[];
-  subServicesKicker: string;
-  subServicesHeading: string;
-  subServicesBody: string;
-  subServices: SubService[];
-  processKicker: string;
-  processHeading: string;
-  processBody: string;
-  processSteps: ProcessStep[];
+  subServicesKicker?: string;
+  subServicesHeading?: string;
+  subServicesBody?: string;
+  subServices?: SubService[];
+  processKicker?: string;
+  processHeading?: string;
+  processBody?: string;
+  processSteps?: ProcessStep[];
   faqHeading: string;
   faqs: FaqItem[];
+  locationFaqs?: FaqItem[];
   reviewsKicker: string;
   reviewsHeading: string;
   testimonials: Testimonial[];
@@ -99,6 +102,7 @@ export interface ServicePageData {
   canonicalPath?: string;
   lang?: string;
   hreflangAlternates?: { lang: string; href: string }[];
+  aboutInCity?: string[];
 }
 
 const LOCATIONS = {
@@ -516,74 +520,70 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* INSURANCE TICKER */}
-        <section className="py-10 section-warm overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="kicker">WE ACCEPT YOUR INSURANCE</p>
-            <h2 className="section-heading">Use Your Benefits — We Handle the Paperwork</h2>
-          </div>
-          <div className="relative mt-8">
-            <div className="flex animate-ticker whitespace-nowrap">
-              {[...insuranceLogos, ...insuranceLogos].map((name, i) => (
-                <span key={`${name}-${i}`} className="inline-flex shrink-0 items-center bg-card rounded-full border border-border/60 py-2.5 px-6 mx-3">
-                  <span className="text-sm font-sans font-medium text-muted-foreground">{name}</span>
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SUB-SERVICES — soft cards with left accent */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
-          <div className="container mx-auto text-center">
-            <p className="kicker">{data.subServicesKicker}</p>
-            <h2 className="section-heading">{data.subServicesHeading}</h2>
-            <p className="section-body max-w-2xl mx-auto">{data.subServicesBody}</p>
-            <div className="grid sm:grid-cols-2 gap-8 mt-12 text-left max-w-4xl mx-auto">
-              {data.subServices.map((svc) => (
-                <div key={svc.title} className="card-soft border-l-4 border-l-primary/20">
-                  <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center text-primary mb-5">{svc.icon}</div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="text-sm font-body text-muted-foreground leading-relaxed">{svc.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* PROCESS STEPS — timeline on mobile, grid on desktop */}
+        {/* INSURANCE SECTION (tabbed) */}
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto text-center">
-            <p className="kicker">{data.processKicker}</p>
-            <h2 className="section-heading">{data.processHeading}</h2>
-            <p className="section-body max-w-2xl mx-auto">{data.processBody}</p>
-            {/* Desktop grid */}
-            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
-              {data.processSteps.map((step) => (
-                <div key={step.number} className="text-left">
-                  <span className="step-number">{step.number}</span>
-                  <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
-                  <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
-                </div>
-              ))}
-            </div>
-            {/* Mobile timeline */}
-            <div className="sm:hidden mt-10 text-left max-w-sm mx-auto">
-              {data.processSteps.map((step, i) => (
-                <div key={step.number} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-primary font-display w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0">{step.number}</span>
-                    {i < data.processSteps.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
-                  </div>
-                  <div className={`pb-8 ${i === data.processSteps.length - 1 ? 'pb-0' : ''}`}>
-                    <h3 className="font-display text-base font-bold text-foreground mb-1">{step.title}</h3>
-                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
-                  </div>
-                </div>
-              ))}
+            <p className="kicker">INSURANCE & COVERAGE</p>
+            <h2 className="section-heading">We Work With Your Insurance</h2>
+            <div className="mt-10">
+              <TabbedInsurance coverageNote={`Most PPO plans cover a portion of ${data.serviceName.toLowerCase()} treatment. We verify your benefits before your visit.`} />
             </div>
           </div>
         </section>
+
+        {/* SUB-SERVICES — soft cards with left accent (optional) */}
+        {data.subServices && data.subServices.length > 0 && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">{data.subServicesKicker}</p>
+              <h2 className="section-heading">{data.subServicesHeading}</h2>
+              <p className="section-body max-w-2xl mx-auto">{data.subServicesBody}</p>
+              <div className="grid sm:grid-cols-2 gap-8 mt-12 text-left max-w-4xl mx-auto">
+                {data.subServices.map((svc) => (
+                  <div key={svc.title} className="card-soft border-l-4 border-l-primary/20">
+                    <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center text-primary mb-5">{svc.icon}</div>
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-3">{svc.title}</h3>
+                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{svc.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* PROCESS STEPS — optional */}
+        {data.processSteps && data.processSteps.length > 0 && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+            <div className="container mx-auto text-center">
+              <p className="kicker">{data.processKicker}</p>
+              <h2 className="section-heading">{data.processHeading}</h2>
+              <p className="section-body max-w-2xl mx-auto">{data.processBody}</p>
+              <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+                {data.processSteps.map((step) => (
+                  <div key={step.number} className="text-left">
+                    <span className="step-number">{step.number}</span>
+                    <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
+                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="sm:hidden mt-10 text-left max-w-sm mx-auto">
+                {data.processSteps.map((step, i) => (
+                  <div key={step.number} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <span className="text-2xl font-bold text-primary font-display w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0">{step.number}</span>
+                      {i < data.processSteps.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
+                    </div>
+                    <div className={`pb-8 ${i === data.processSteps.length - 1 ? 'pb-0' : ''}`}>
+                      <h3 className="font-display text-base font-bold text-foreground mb-1">{step.title}</h3>
+                      <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* MEET YOUR DOCTOR */}
         <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-background">
@@ -798,22 +798,45 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {/* OFFICE PHOTO GRID */}
         <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
 
-        {/* RELATED SERVICES */}
-        {related.length > 0 && (
+        {/* CROSS-SERVICE CAROUSEL */}
+        <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} />
+
+        {/* ABOUT [SERVICE] IN [CITY] — SEO copy block */}
+        {data.aboutInCity && data.aboutInCity.length > 0 && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+            <div className="container mx-auto">
+              <div className="max-w-3xl mx-auto">
+                <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
+                <h2 className="section-heading">{data.serviceName} in {loc.name}, Texas</h2>
+                <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
+                  {data.aboutInCity.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+                <Link
+                  to={`/services/${data.serviceSlug}`}
+                  className="inline-flex items-center gap-1.5 mt-8 text-sm font-sans font-semibold text-primary hover:underline"
+                >
+                  Learn More About {data.serviceName} <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* LOCATION-SPECIFIC FAQ */}
+        {data.locationFaqs && data.locationFaqs.length > 0 && (
           <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
-            <div className="container mx-auto text-center">
-              <p className="kicker">YOU MIGHT ALSO NEED</p>
-              <h2 className="section-heading">Related Treatments</h2>
-              <div className="flex flex-wrap justify-center gap-3 mt-10">
-                {related.map((r) => (
-                  <Link
-                    key={r.href}
-                    to={r.href}
-                    className="px-6 py-3.5 rounded-2xl bg-card border border-border/60 text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary hover:shadow-md transition-all"
-                  >
-                    {r.title}
-                  </Link>
-                ))}
+            <div className="container mx-auto">
+              <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
+                <div>
+                  <p className="kicker">{loc.name.toUpperCase()}-SPECIFIC QUESTIONS</p>
+                  <h2 className="section-heading">{data.serviceName} in {loc.name} FAQ</h2>
+                  <p className="section-body">
+                    Common questions about getting {data.serviceName.toLowerCase()} at our {loc.name} office.
+                  </p>
+                </div>
+                <FaqAccordion items={data.locationFaqs} />
               </div>
             </div>
           </section>
