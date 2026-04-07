@@ -633,6 +633,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
       <Footer />
       <MobileStickyBar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />
       <BackToTop />
+      <BookingLocationModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
     </>
   );
 };
