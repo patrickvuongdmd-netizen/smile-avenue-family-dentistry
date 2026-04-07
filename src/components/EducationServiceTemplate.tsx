@@ -171,23 +171,28 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         {/* 1. HERO — center-aligned, Tend-inspired */}
         <section className="section-warm relative overflow-hidden">
             <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden="true">
+              {/* Left flank — tall rounded rectangle like Tend */}
               <img
                 src={leftFlankImage}
                 alt="Smile Avenue dental team"
-                className="absolute -left-16 xl:-left-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
+                className="absolute left-0 xl:left-4 top-1/2 -translate-y-1/2 w-[280px] xl:w-[340px] 2xl:w-[380px] aspect-[3/4] object-cover rounded-[2rem] shadow-lg"
                 loading="eager"
-                width={400}
-                height={533}
+                width={380}
+                height={507}
               />
-              <img
-                src={rightFlankImage}
-                alt="Smile Avenue dental office"
-                className="absolute -right-16 xl:-right-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
-                loading="eager"
-                width={400}
-                height={533}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.92)] to-transparent" />
+              {/* Right flank — circular with colored background accent like Tend */}
+              <div className="absolute right-0 xl:right-4 top-1/2 -translate-y-1/2 w-[300px] xl:w-[360px] 2xl:w-[400px] aspect-square">
+                <div className="absolute inset-0 rounded-full bg-primary/15 scale-105" />
+                <img
+                  src={rightFlankImage}
+                  alt="Smile Avenue dental office"
+                  className="relative w-full h-full object-cover rounded-full shadow-lg"
+                  loading="eager"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.85)] to-transparent" />
             </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
