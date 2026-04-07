@@ -311,6 +311,20 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
   const heroImage = SERVICE_IMAGES[`${data.serviceSlug}-${data.location}`] || SERVICE_IMAGES[data.serviceSlug];
 
+  // Flanking photos: team member (left/large oval) + doctor/hygienist (right/small oval)
+  const slugHash = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  const hygienistKeys = ["arpine-janbazian", "ivy-doan", "ngoc-huynh"];
+  const teamEntries = Object.entries(TEAM_IMAGES);
+  const staffPhotos = teamEntries
+    .filter(([key]) => !hygienistKeys.includes(key))
+    .map(([, t]) => t.url);
+  const doctorPhotos = Object.values(DOCTOR_IMAGES).map(d => d.url);
+  const hygienistPhotos = hygienistKeys.map(k => TEAM_IMAGES[k]?.url).filter(Boolean);
+  const clinicalPhotos = [...doctorPhotos, ...hygienistPhotos];
+
+  const heroLeftPhoto = staffPhotos[(slugHash + (data.location === "katy" ? 7 : 0)) % staffPhotos.length];
+  const heroRightPhoto = clinicalPhotos[(slugHash + (data.location === "katy" ? 3 : 0)) % clinicalPhotos.length];
+
   const practiceAddress = {
     "@type": "PostalAddress" as const,
     streetAddress: loc.streetAddress,
