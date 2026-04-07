@@ -798,22 +798,45 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         {/* OFFICE PHOTO GRID */}
         <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
 
-        {/* RELATED SERVICES */}
-        {related.length > 0 && (
+        {/* CROSS-SERVICE CAROUSEL */}
+        <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} />
+
+        {/* ABOUT [SERVICE] IN [CITY] — SEO copy block */}
+        {data.aboutInCity && data.aboutInCity.length > 0 && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+            <div className="container mx-auto">
+              <div className="max-w-3xl mx-auto">
+                <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
+                <h2 className="section-heading">{data.serviceName} in {loc.name}, Texas</h2>
+                <div className="space-y-5 font-body text-lg text-muted-foreground leading-relaxed">
+                  {data.aboutInCity.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+                <Link
+                  to={`/services/${data.serviceSlug}`}
+                  className="inline-flex items-center gap-1.5 mt-8 text-sm font-sans font-semibold text-primary hover:underline"
+                >
+                  Learn More About {data.serviceName} <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* LOCATION-SPECIFIC FAQ */}
+        {data.locationFaqs && data.locationFaqs.length > 0 && (
           <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
-            <div className="container mx-auto text-center">
-              <p className="kicker">YOU MIGHT ALSO NEED</p>
-              <h2 className="section-heading">Related Treatments</h2>
-              <div className="flex flex-wrap justify-center gap-3 mt-10">
-                {related.map((r) => (
-                  <Link
-                    key={r.href}
-                    to={r.href}
-                    className="px-6 py-3.5 rounded-2xl bg-card border border-border/60 text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary hover:shadow-md transition-all"
-                  >
-                    {r.title}
-                  </Link>
-                ))}
+            <div className="container mx-auto">
+              <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
+                <div>
+                  <p className="kicker">{loc.name.toUpperCase()}-SPECIFIC QUESTIONS</p>
+                  <h2 className="section-heading">{data.serviceName} in {loc.name} FAQ</h2>
+                  <p className="section-body">
+                    Common questions about getting {data.serviceName.toLowerCase()} at our {loc.name} office.
+                  </p>
+                </div>
+                <FaqAccordion items={data.locationFaqs} />
               </div>
             </div>
           </section>
