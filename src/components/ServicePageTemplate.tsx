@@ -78,16 +78,17 @@ export interface ServicePageData {
   introHeading: string;
   introParas: ReactNode[];
   trustBadges: TrustBadge[];
-  subServicesKicker: string;
-  subServicesHeading: string;
-  subServicesBody: string;
-  subServices: SubService[];
-  processKicker: string;
-  processHeading: string;
-  processBody: string;
-  processSteps: ProcessStep[];
+  subServicesKicker?: string;
+  subServicesHeading?: string;
+  subServicesBody?: string;
+  subServices?: SubService[];
+  processKicker?: string;
+  processHeading?: string;
+  processBody?: string;
+  processSteps?: ProcessStep[];
   faqHeading: string;
   faqs: FaqItem[];
+  locationFaqs?: FaqItem[];
   reviewsKicker: string;
   reviewsHeading: string;
   testimonials: Testimonial[];
@@ -99,6 +100,7 @@ export interface ServicePageData {
   canonicalPath?: string;
   lang?: string;
   hreflangAlternates?: { lang: string; href: string }[];
+  aboutInCity?: string[];
 }
 
 const LOCATIONS = {
