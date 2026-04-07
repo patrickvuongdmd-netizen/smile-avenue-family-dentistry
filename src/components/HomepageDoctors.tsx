@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { GraduationCap, Heart, ShieldCheck, Target } from "lucide-react";
-import { OFFICE_IMAGES, DOCTOR_IMAGES } from "@/lib/images";
+import { DOCTOR_IMAGES } from "@/lib/images";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const valueProps = [
   { icon: <GraduationCap className="w-5 h-5" />, title: "Decades of Combined Experience", desc: "Our doctors bring advanced training from top dental programs across the country." },
