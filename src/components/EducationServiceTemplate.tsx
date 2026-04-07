@@ -21,6 +21,7 @@ import BlogDesktopGrid from "@/components/BlogDesktopGrid";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
 import { SERVICE_IMAGES, OFFICE_IMAGES } from "@/lib/images";
+import { TEAM_IMAGES } from "@/lib/team-images";
 import { SERVICE_NAMES } from "@/lib/brand-service-data";
 import { trackPhoneClick } from "@/lib/track-phone";
 import type { EducationServiceData } from "@/lib/education-service-data";
@@ -56,15 +57,17 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
   useDocTitle(data.metaTitle);
   const [bookingOpen, setBookingOpen] = useState(false);
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/`;
-  // Standardised hero flanking photos — left: staff/provider, right: office/location
+  // Standardised hero flanking photos — left: team member headshot, right: office/location
   // Deterministic rotation based on slug hash so each page gets a unique pairing
   const slugHash = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
 
+  const teamHeadshots = Object.values(TEAM_IMAGES).map(t => t.url);
   const staffPhotos = [
     OFFICE_IMAGES.teamPhoto,
     OFFICE_IMAGES.aboutTeamAction,
     OFFICE_IMAGES.patientCare,
     OFFICE_IMAGES.aboutKatyTeam,
+    ...teamHeadshots,
   ];
 
   const locationPhotos = [
