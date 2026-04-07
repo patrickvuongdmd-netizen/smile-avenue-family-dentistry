@@ -56,16 +56,91 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
   const serviceVideos = SERVICE_VIDEOS[data.serviceSlug];
 
+  const SAME_AS = [
+    "https://www.facebook.com/smileavenuedentistry",
+    "https://www.instagram.com/smileavenuedentistry",
+    "https://www.youtube.com/@SmileAvenueFamilyDentistry",
+    "https://www.yelp.com/biz/smile-avenue-family-dentistry-cypress",
+  ];
+
+  // Enriched DentalService schema
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService",
-    name: data.serviceName,
+    name: `${data.serviceName} - Smile Avenue Family Dentistry`,
     description: data.metaDescription,
     url: canonicalUrl,
+    image: heroImage?.url,
+    serviceType: data.serviceName,
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: BOOKING,
+      servicePhone: PHONE_FORMATTED,
+    },
+    areaServed: [
+      { "@type": "City", name: "Cypress, TX" },
+      { "@type": "City", name: "Katy, TX" },
+      { "@type": "State", name: "Texas" },
+    ],
     provider: {
       "@type": "Dentist",
+      "@id": "https://www.smileavenuefamilydentistry.com/#dentist",
       name: "Smile Avenue Family Dentistry",
       url: "https://www.smileavenuefamilydentistry.com",
+      telephone: PHONE_FORMATTED,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "9212 Fry Rd #120",
+        addressLocality: "Cypress",
+        addressRegion: "TX",
+        postalCode: "77433",
+        addressCountry: "US",
+      },
+      geo: { "@type": "GeoCoordinates", latitude: "29.9691", longitude: "-95.6972" },
+      priceRange: "$$",
+      paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Insurance", "CareCredit", "Sunbit"],
+      openingHoursSpecification: [
+        { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+      ],
+      hasMap: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Cypress/",
+      sameAs: SAME_AS,
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "3000", bestRating: "5", worstRating: "1" },
+    },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "USD",
+      description: `${data.serviceName} at Smile Avenue Family Dentistry. Most PPO insurance accepted. 0% financing available.`,
+    },
+  };
+
+  // MedicalWebPage schema (enriched)
+  const medicalWebPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: data.metaTitle,
+    description: data.metaDescription,
+    url: canonicalUrl,
+    inLanguage: "en",
+    datePublished: "2024-01-15",
+    dateModified: "2025-06-01",
+    lastReviewed: "2025-06-01",
+    about: { "@type": "MedicalCondition", name: data.serviceName },
+    mainEntity: { "@type": "DentalService", name: data.serviceName, url: canonicalUrl },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
+    audience: { "@type": "MedicalAudience", audienceType: "Patient" },
+    author: {
+      "@type": "Person",
+      name: "Dr. Patrick Vuong",
+      jobTitle: "Founder & Lead Dentist",
+      url: "https://www.smileavenuefamilydentistry.com/doctors/patrick-vuong-dmd/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Smile Avenue Family Dentistry",
+      url: "https://www.smileavenuefamilydentistry.com/",
+      logo: { "@type": "ImageObject", url: "https://www.smileavenuefamilydentistry.com/logo-full.webp" },
+      sameAs: SAME_AS,
     },
   };
 
@@ -127,12 +202,88 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
     ],
   };
 
+  // Standalone Dentist schema
+  const dentistJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "@id": "https://www.smileavenuefamilydentistry.com/#dentist",
+    name: "Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/",
+    telephone: PHONE_FORMATTED,
+    image: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+    logo: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+    description: "Top-rated family & cosmetic dental practice in Cypress and Katy, TX. 5,000+ five-star reviews. Same-day appointments, in-house dental lab, and IV sedation available.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "9212 Fry Rd #120",
+      addressLocality: "Cypress",
+      addressRegion: "TX",
+      postalCode: "77433",
+      addressCountry: "US",
+    },
+    geo: { "@type": "GeoCoordinates", latitude: "29.9691", longitude: "-95.6972" },
+    priceRange: "$$",
+    paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Insurance", "CareCredit", "Sunbit"],
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+    ],
+    hasMap: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Cypress/",
+    sameAs: SAME_AS,
+    founder: {
+      "@type": "Person",
+      name: "Dr. Patrick Vuong",
+      jobTitle: "Founder & Lead Dentist",
+      url: "https://www.smileavenuefamilydentistry.com/doctors/patrick-vuong-dmd/",
+    },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "3000", bestRating: "5", worstRating: "1" },
+    knowsAbout: [
+      "Dental Implants", "All-on-4 Dental Implants", "Cosmetic Dentistry", "Porcelain Veneers",
+      "Invisalign", "Emergency Dentistry", "Teeth Whitening", "Dental Crowns", "Dental Bridges",
+      "Root Canal Therapy", "Oral Surgery", "Sedation Dentistry", "Pediatric Dentistry",
+      "Preventive Dentistry", "Dentures", "Tooth Extraction", "Family Dental Care",
+    ],
+    medicalSpecialty: "Dentistry",
+    isAcceptingNewPatients: true,
+    department: [
+      {
+        "@type": "Dentist",
+        name: "Smile Avenue Family Dentistry - Cypress",
+        telephone: "(832) 648-1756",
+        address: { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+      },
+      {
+        "@type": "Dentist",
+        name: "Smile Avenue Family Dentistry - Katy",
+        telephone: "(281) 800-5008",
+        address: { "@type": "PostalAddress", streetAddress: "23541 Westheimer Pkwy Ste #170", addressLocality: "Katy", addressRegion: "TX", postalCode: "77494", addressCountry: "US" },
+      },
+    ],
+  };
+
+  // ItemList for process steps
+  const itemListJsonLd = data.processSteps.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${data.serviceName} Process at Smile Avenue Family Dentistry`,
+    numberOfItems: data.processSteps.length,
+    itemListElement: data.processSteps.map((step, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: step.title,
+      description: step.description,
+    })),
+  } : null;
+
   return (
     <>
       <SkipToContent />
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content="Cypress, TX" />
+        <meta name="geo.position" content="29.9691;-95.6972" />
+        <meta name="ICBM" content="29.9691, -95.6972" />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={data.metaTitle} />
         <meta property="og:description" content={data.metaDescription} />
@@ -141,12 +292,17 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         {heroImage && <meta property="og:image" content={heroImage.url} />}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={data.metaTitle} />
+        <meta name="twitter:description" content={data.metaDescription} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(medicalWebPageJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(dentistJsonLd)}</script>
         {medicalProcedureJsonLd && <script type="application/ld+json">{JSON.stringify(medicalProcedureJsonLd)}</script>}
         {howToJsonLd && <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>}
         {videoObjectsJsonLd && <script type="application/ld+json">{JSON.stringify(videoObjectsJsonLd)}</script>}
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        {itemListJsonLd && <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>}
         <link rel="alternate" hrefLang="en" href={canonicalUrl} />
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         {SPANISH_ALTERNATES[data.serviceSlug] && (
@@ -159,7 +315,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO */}
-        <section className="section-warm">
+        <section className="section-warm" aria-label={`${data.serviceName} overview`}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
             <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
@@ -207,7 +363,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         </section>
 
         {/* INTRO — editorial single-column */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background" aria-label={`About ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">{data.introKicker}</p>
@@ -236,7 +392,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         </section>
 
         {/* WHY CHOOSE US — soft cards */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm" aria-label={`Why choose Smile Avenue for ${data.serviceName}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">WHY SMILE AVENUE</p>
             <h2 className="section-heading">{data.whyHeading}</h2>
@@ -252,7 +408,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         </section>
 
         {/* PROCESS STEPS — timeline on mobile */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background" aria-label={`${data.serviceName} process steps`}>
           <div className="container mx-auto text-center">
             <p className="kicker">HOW IT WORKS</p>
             <h2 className="section-heading">{data.processHeading}</h2>
@@ -301,7 +457,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         )}
 
         {/* FAQ */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta" aria-label={`Frequently asked questions about ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
