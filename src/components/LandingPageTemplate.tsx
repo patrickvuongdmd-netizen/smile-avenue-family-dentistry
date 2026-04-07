@@ -10,6 +10,7 @@ import BackToTop from "@/components/BackToTop";
 import ScrollReveal from "@/components/ScrollReveal";
 import TrustTicker from "@/components/TrustTicker";
 import LazySection from "@/components/LazySection";
+import LPExitIntentPopup from "@/components/LPExitIntentPopup";
 
 /* ── Types ─────────────────────────────────────────────────── */
 
