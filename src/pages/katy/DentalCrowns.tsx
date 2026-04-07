@@ -67,6 +67,12 @@ const data: ServicePageData = {
     { question: "Can I get a crown on Saturday in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm for crown consultations, preparation, and delivery. It's a convenient option for busy professionals and families." },
     { question: "How fast can I get a crown at Smile Avenue Katy?", answer: "Our in-house Smile Dental Lab means significantly faster turnaround than offices that outsource to third-party labs. Digital scanning ensures a precise fit without goopy impressions." },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway delivers precision crown restorations to Katy families using our in-house Smile Dental Lab. While most dental offices ship impressions to an external lab and wait weeks, we design and fabricate your crown on-site — meaning faster turnaround, better fit, and tighter quality control.",
+    "Our Medit digital scanner captures precise 3D impressions without goopy molds — no gagging, no discomfort. The digital workflow enables sub-millimeter accuracy, and our lab team hand-matches shade and translucency so your crown blends invisibly with surrounding teeth.",
+    "Dr. Vuong, Dr. Bilal, and Dr. Maredia perform crown procedures at our Katy location — whether you need a crown after a root canal, to repair a cracked tooth, or to restore a dental implant. Patients from Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear appreciate our same-day emergency capability and Saturday hours.",
+    "Most PPO dental insurance plans cover 50-80% of crown costs. We verify your benefits before treatment and offer 0% financing through CareCredit and Sunbit. Our Membership Plan provides significant crown discounts for uninsured patients.",
+  ],
   ctaHeading: "Restore Your Smile with a Custom Crown",
   ctaBody: "Schedule your crown consultation at Smile Avenue Katy — precision craftsmanship from our in-house lab.",
 };

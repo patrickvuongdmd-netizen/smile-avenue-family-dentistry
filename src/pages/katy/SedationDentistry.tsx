@@ -64,6 +64,12 @@ const data: ServicePageData = {
     { question: "Can I get Saturday sedation appointments in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm. Sedation appointments, including IV sedation for longer procedures, can be scheduled on Saturdays for your convenience." },
     { question: "How much does sedation dentistry cost in Katy?", answer: "Nitrous oxide is typically $50–$100 per visit. Oral sedation ranges from $150–$300. IV sedation starts around $250–$500 depending on procedure length. Some dental insurance plans cover a portion of sedation costs." },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway is the Katy dental practice anxious patients trust most. With three levels of sedation — nitrous oxide, oral sedation, and IV sedation — plus warm blankets, Netflix, and noise-canceling headphones in every room, we've helped thousands of Katy patients overcome dental fear.",
+    "Our Katy sedation team, led by Dr. Patrick Vuong and Dr. Sameer Bilal, is specially trained and certified in sedation administration. Every patient is continuously monitored with pulse oximetry and vital sign tracking. Safety is never compromised for comfort.",
+    "Sedation dentistry is ideal for patients who avoid the dentist due to anxiety, gag reflex issues, or past negative experiences. Many patients who haven't been to the dentist in years come specifically to our Katy office because our sedation options let them catch up on deferred care in one or two comfortable appointments.",
+    "Families from Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear choose us for anxiety-free dental care — including Saturday availability (8am-2pm). Nitrous oxide starts at $50-$100, oral sedation $150-$300, and IV sedation $250-$500. Some insurance plans cover sedation for qualifying procedures.",
+  ],
   ctaHeading: "Experience Anxiety-Free Dentistry",
   ctaBody: "Don't let fear keep you from the care you need. Book a sedation dentistry appointment at our Katy office.",
 };

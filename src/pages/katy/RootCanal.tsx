@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "I came in with excruciating tooth pain and left feeling amazing. The root canal was nothing like I feared. The relief was immediate.", name: "Steven R.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The whole process was smooth and I didn't feel a thing. The in-house lab made the crown turnaround really fast. Highly recommend Smile Avenue.", name: "Laura K.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway is where Katy patients come for gentle, modern root canal treatment. Our advanced rotary instruments and refined technique make today's root canals comfortable and efficient — nothing like the painful reputation from decades past.",
+    "After removing the infection, our in-house Smile Dental Lab fabricates your permanent crown on-site — meaning faster turnaround and fewer appointments compared to offices that ship impressions to external labs. Many patients are surprised to learn that root canal and crown can be completed in just two visits.",
+    "We offer multiple sedation options for anxious patients: nitrous oxide for mild relaxation, oral sedation for moderate anxiety, and IV sedation for patients who prefer to sleep through the procedure. Dr. Bilal and Dr. Vuong are experienced in gentle endodontic therapy and monitor every patient continuously.",
+    "Patients from Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear trust us for root canal treatment because we combine clinical expertise with genuine compassion. Most PPO plans cover a significant portion of root canal therapy, and we offer 0% financing through CareCredit and Sunbit.",
+  ],
   ctaHeading: "Relief Is One Call Away",
   ctaBody: "Don't suffer with tooth pain. Schedule your gentle root canal treatment at Smile Avenue Katy.",
 };

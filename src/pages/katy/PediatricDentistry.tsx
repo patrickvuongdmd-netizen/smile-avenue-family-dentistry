@@ -57,6 +57,12 @@ const data: ServicePageData = {
     { quote: "We've tried three different dentists for our kids before finding Smile Avenue Katy. Night and day difference. They genuinely love children here.", name: "Jason & Lisa P.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Both my kids got sealants at the Katy office. Quick, painless, and now I have extra peace of mind about cavities. Great preventive care!", name: "Maria G.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway is the kids' dentist Katy families trust most. Parents from Cinco Ranch, Cross Creek Ranch, Firethorne, Elyson, and Cane Island bring their children here because our team genuinely connects with kids — and it shows when children actually ask to come back for their next visit.",
+    "Our Katy team creates a warm, welcoming environment where children feel safe. We use gentle tell-show-do techniques, never rushing a nervous child. For kids who need extra help relaxing, we offer nitrous oxide and other age-appropriate sedation options that are safe and effective.",
+    "Every kids' visit includes more than a cleaning. We perform developmental assessments, monitor bite alignment, apply protective fluoride and sealants, and screen for early orthodontic needs. Our goal is building positive dental habits that last a lifetime — preventing costly problems before they start.",
+    "Most dental insurance plans cover children's preventive care at 100%. Our Smile Avenue Membership Plan covers pediatric patients for families without insurance — including two cleanings, exams, X-rays, and discounts on all treatments. Saturday hours (8am-2pm) make scheduling easy for busy Katy ISD families.",
+  ],
   ctaHeading: "Book Your Child's Dental Visit",
   ctaBody: "Give your child the gift of a healthy smile. Schedule their visit at our Katy office today.",
 };

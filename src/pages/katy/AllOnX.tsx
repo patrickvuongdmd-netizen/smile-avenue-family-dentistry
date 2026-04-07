@@ -67,6 +67,12 @@ const data: ServicePageData = {
     { question: "Can I get All-on-4 on a Saturday in Katy?", answer: "Consultations and 3D CT scans can be scheduled on Saturdays (8am–2pm). Surgical placement is typically scheduled on weekdays to allow adequate time for the procedure and recovery planning." },
     { question: "Do you offer free All-on-X consultations in Katy?", answer: "Yes. Your free consultation includes a 3D CT scan, bone density assessment, and a personalized treatment plan with transparent pricing and financing options — no obligation." },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway brings world-class All-on-X full-arch implant treatment to Katy, TX. Patients no longer need to travel to Houston medical centers — our office provides complete care from 3D CT planning and IV sedation to implant placement and final zirconia prosthesis delivery, all under one roof.",
+    "Our in-house Smile Dental Lab is a significant advantage for All-on-X patients. The final zirconia prosthesis is designed and fabricated on-site, giving us tighter control over aesthetics, fit, and turnaround time compared to practices that outsource to third-party labs across the country.",
+    "Dr. Vuong and Dr. Bilal use 3D CBCT imaging and digitally guided surgical planning to place implants with sub-millimeter precision, often eliminating the need for separate bone grafting procedures. Patients from Cinco Ranch, Cross Creek Ranch, Firethorne, Fulshear, and Brookshire choose us for predictable, life-changing All-on-X results.",
+    "We understand this is a major decision. Every consultation includes a comprehensive 3D bone assessment, a digital preview of your projected results, and completely transparent pricing with 0% financing through CareCredit and Sunbit — no hidden fees, no surprises.",
+  ],
   ctaHeading: "A New Smile in One Day",
   ctaBody: "Schedule your All-on-X consultation and take the first step toward permanent, life-changing teeth.",
 };

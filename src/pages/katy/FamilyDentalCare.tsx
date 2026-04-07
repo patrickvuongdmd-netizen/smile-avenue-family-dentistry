@@ -63,6 +63,12 @@ const data: ServicePageData = {
     { quote: "Dr. Vuong and his team did my implants and the results are incredible. Professional, gentle, and genuinely caring. 10/10.", name: "Michael R.", source: "Google Review", location: "Cinco Ranch, Katy" },
     { quote: "I drove 45 minutes past three other dentists to come here, and it's worth every minute. The whole family loves this practice.", name: "Sarah M.", source: "Google Review", location: "Firethorne, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway is the family dental home Katy families trust for every generation. From first-tooth toddlers to grandparents needing implants, our team of experienced doctors covers every specialty under one roof — zero referrals, zero runaround.",
+    "Our hospitality-first philosophy means every treatment room has Netflix on a ceiling-mounted TV, warm blankets, pillows, and noise-canceling headphones. Kids get a special welcome and choose their own flavored polish. We never rush a nervous child or adult — building trust and positive associations one visit at a time.",
+    "Families from Cinco Ranch, Cross Creek Ranch, Firethorne, Fulshear, and Elyson appreciate our Saturday hours (8am-2pm), same-day emergency availability, and the convenience of our in-house Smile Dental Lab. Digital scanners replace goopy molds, and faster lab turnaround means fewer appointments and less time away from your busy schedule.",
+    "We accept most PPO dental insurance plans, offer our Smile Avenue Membership Plan for uninsured families, and provide 0% financing through CareCredit and Sunbit. Cost should never stand between your family and quality dental care.",
+  ],
   ctaHeading: "Book Your Family's Visit Today",
   ctaBody: "One dental home for your entire family — comfortable, convenient, and open Saturdays.",
 };

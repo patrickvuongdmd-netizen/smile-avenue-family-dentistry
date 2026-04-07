@@ -57,6 +57,12 @@ const data: ServicePageData = {
     { quote: "Needed an emergency extraction and they got me in the same day. Dr. Bilal was gentle and thorough. Minimal pain after.", name: "Natalie K.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Was dreading getting a tooth pulled but the Katy team made it painless. They even discussed implant options before I left.", name: "Omar F.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway provides gentle tooth extraction services for patients across Katy, TX. Whether you need a simple extraction, surgical removal of impacted wisdom teeth, or emergency same-day extraction, our experienced team handles everything in-office with sedation options for your comfort.",
+    "Our comprehensive approach means we don't just remove the tooth — we discuss replacement options (dental implants, bridges, dentures) at the same visit so you leave with a plan for restoring your smile. For patients needing implants, we can often place a bone graft at the time of extraction to preserve bone for future placement.",
+    "Dr. Bilal, Dr. Maredia, and Dr. Vuong use modern, minimally invasive techniques designed to minimize trauma and speed healing. Combined with nitrous oxide, oral sedation, or IV sedation, most Katy patients are surprised by how comfortable the extraction experience is.",
+    "Families from Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear trust us for expert extractions with same-day emergency availability. Most PPO insurance plans cover medically necessary extractions, and we offer 0% financing through CareCredit and Sunbit. Our Katy office is open Saturdays 8am-2pm.",
+  ],
   ctaHeading: "Book Your Extraction Appointment",
   ctaBody: "Gentle, expert tooth extractions with sedation options at our Katy office.",
 };
