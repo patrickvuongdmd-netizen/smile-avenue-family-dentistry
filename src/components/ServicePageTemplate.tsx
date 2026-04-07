@@ -531,57 +531,59 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* SUB-SERVICES — soft cards with left accent */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
-          <div className="container mx-auto text-center">
-            <p className="kicker">{data.subServicesKicker}</p>
-            <h2 className="section-heading">{data.subServicesHeading}</h2>
-            <p className="section-body max-w-2xl mx-auto">{data.subServicesBody}</p>
-            <div className="grid sm:grid-cols-2 gap-8 mt-12 text-left max-w-4xl mx-auto">
-              {data.subServices.map((svc) => (
-                <div key={svc.title} className="card-soft border-l-4 border-l-primary/20">
-                  <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center text-primary mb-5">{svc.icon}</div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="text-sm font-body text-muted-foreground leading-relaxed">{svc.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* PROCESS STEPS — timeline on mobile, grid on desktop */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
-          <div className="container mx-auto text-center">
-            <p className="kicker">{data.processKicker}</p>
-            <h2 className="section-heading">{data.processHeading}</h2>
-            <p className="section-body max-w-2xl mx-auto">{data.processBody}</p>
-            {/* Desktop grid */}
-            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
-              {data.processSteps.map((step) => (
-                <div key={step.number} className="text-left">
-                  <span className="step-number">{step.number}</span>
-                  <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
-                  <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
-                </div>
-              ))}
-            </div>
-            {/* Mobile timeline */}
-            <div className="sm:hidden mt-10 text-left max-w-sm mx-auto">
-              {data.processSteps.map((step, i) => (
-                <div key={step.number} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-primary font-display w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0">{step.number}</span>
-                    {i < data.processSteps.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
+        {/* SUB-SERVICES — soft cards with left accent (optional) */}
+        {data.subServices && data.subServices.length > 0 && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">{data.subServicesKicker}</p>
+              <h2 className="section-heading">{data.subServicesHeading}</h2>
+              <p className="section-body max-w-2xl mx-auto">{data.subServicesBody}</p>
+              <div className="grid sm:grid-cols-2 gap-8 mt-12 text-left max-w-4xl mx-auto">
+                {data.subServices.map((svc) => (
+                  <div key={svc.title} className="card-soft border-l-4 border-l-primary/20">
+                    <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center text-primary mb-5">{svc.icon}</div>
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-3">{svc.title}</h3>
+                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{svc.description}</p>
                   </div>
-                  <div className={`pb-8 ${i === data.processSteps.length - 1 ? 'pb-0' : ''}`}>
-                    <h3 className="font-display text-base font-bold text-foreground mb-1">{step.title}</h3>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* PROCESS STEPS — optional */}
+        {data.processSteps && data.processSteps.length > 0 && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+            <div className="container mx-auto text-center">
+              <p className="kicker">{data.processKicker}</p>
+              <h2 className="section-heading">{data.processHeading}</h2>
+              <p className="section-body max-w-2xl mx-auto">{data.processBody}</p>
+              <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+                {data.processSteps.map((step) => (
+                  <div key={step.number} className="text-left">
+                    <span className="step-number">{step.number}</span>
+                    <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
                     <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="sm:hidden mt-10 text-left max-w-sm mx-auto">
+                {data.processSteps.map((step, i) => (
+                  <div key={step.number} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <span className="text-2xl font-bold text-primary font-display w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0">{step.number}</span>
+                      {i < data.processSteps.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
+                    </div>
+                    <div className={`pb-8 ${i === data.processSteps.length - 1 ? 'pb-0' : ''}`}>
+                      <h3 className="font-display text-base font-bold text-foreground mb-1">{step.title}</h3>
+                      <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* MEET YOUR DOCTOR */}
         <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-background">
