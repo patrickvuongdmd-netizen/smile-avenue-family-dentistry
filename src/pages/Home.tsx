@@ -168,26 +168,26 @@ const Home = () => {
         {/* HERO — Tend-inspired editorial on mobile, two-col on desktop */}
         <section className="section-warm lg:bg-background">
           {/* ── MOBILE HERO ── */}
-          <div className="lg:hidden px-5 pt-8 pb-10 text-center">
+          <div className="lg:hidden px-5 pt-12 pb-14 text-center">
 
-            <h1 className="font-display text-2xl leading-[1.15] font-bold text-foreground mb-2">
+            <h1 className="font-display text-[32px] leading-[1.2] font-bold text-foreground mb-3">
               Dentistry Done{" "}
               <em className="not-italic text-primary">Differently.</em>
             </h1>
-            <p className="font-display text-lg font-semibold text-muted-foreground mb-5">
+            <p className="font-display text-xl font-medium text-muted-foreground mb-8">
               Smiles that prove it.
             </p>
 
-            <p className="font-body text-[15px] leading-[1.7] text-muted-foreground mb-8 max-w-[340px] mx-auto">
+            <p className="font-display text-[17px] leading-[1.65] text-muted-foreground mb-10 max-w-[340px] mx-auto">
               We built Smile Avenue around a simple idea: dental care should leave you feeling better — not just about your teeth, but about the <strong className="text-foreground font-semibold">whole experience.</strong>
             </p>
 
-            {/* CTAs — side by side on mobile */}
-            <div className="flex gap-2.5 mx-auto mb-5">
-              <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 rounded-full bg-primary text-primary-foreground transition-all pulse-glow">Book Now</button>
-              <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="flex-1 btn-secondary flex items-center justify-center gap-1.5 text-base py-4 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
+            {/* CTAs — side by side, compact pills like Tend */}
+            <div className="flex gap-3 justify-center mb-4">
+              <button onClick={() => setBookingModalOpen(true)} className="inline-flex items-center justify-center font-sans font-bold tracking-wide text-sm py-3.5 px-8 rounded-full bg-primary text-primary-foreground transition-all pulse-glow">Book Now</button>
+              <a href={`tel:${CYPRESS_PHONE}`} onClick={() => trackPhoneClick(CYPRESS_PHONE)} className="btn-secondary flex items-center justify-center gap-1.5 text-sm py-3.5 px-6 rounded-full"><Phone className="w-4 h-4" />Call Us</a>
             </div>
-            <p className="text-[11px] font-sans text-muted-foreground mb-5">Booking takes less than 60 seconds</p>
+            <p className="text-xs font-sans text-muted-foreground">Booking takes less than 60 seconds</p>
           </div>
 
           {/* ── DESKTOP HERO — cinematic two-column ── */}
