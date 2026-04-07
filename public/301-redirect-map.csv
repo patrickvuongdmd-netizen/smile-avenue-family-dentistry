@@ -1,0 +1,121 @@
+react_path,wordpress_path,status_code,notes
+/,/,301,Homepage
+/about,/about/,301,
+/blog,/blog/,301,
+/book-online,/book-online/,301,
+/contact,/contact/,301,
+/convenient-locations,/convenient-locations/,301,
+/cypress-tx,/cypress-tx/,301,Location hub
+/cypress-tx/all-on-x-implants,/cypress-tx/all-on-x-implants/,301,Tier 2
+/cypress-tx/bridgeland-dentist,/cypress-tx/bridgeland-dentist/,301,Neighborhood
+/cypress-tx/cosmetic-dentistry,/cypress-tx/cosmetic-dentistry/,301,Tier 2
+/cypress-tx/cyfair-dentist,/cypress-tx/cyfair-dentist/,301,Neighborhood
+/cypress-tx/dental-bridges,/cypress-tx/dental-bridges/,301,Tier 2
+/cypress-tx/dental-cleaning,/cypress-tx/dental-cleaning/,301,Tier 2
+/cypress-tx/dental-crowns,/cypress-tx/dental-crowns/,301,Tier 2
+/cypress-tx/dental-implants,/cypress-tx/dental-implants/,301,Tier 2
+/cypress-tx/dentures,/cypress-tx/dentures/,301,Tier 2
+/cypress-tx/emergency-dentist,/cypress-tx/emergency-dentist/,301,Tier 2
+/cypress-tx/fairfield-dentist,/cypress-tx/fairfield-dentist/,301,Neighborhood
+/cypress-tx/family-dental-care,/cypress-tx/family-dental-care/,301,Tier 2
+/cypress-tx/hockley-dentist,/cypress-tx/hockley-dentist/,301,Neighborhood
+/cypress-tx/invisalign,/cypress-tx/invisalign/,301,Tier 2
+/cypress-tx/jersey-village-dentist,/cypress-tx/jersey-village-dentist/,301,Neighborhood
+/cypress-tx/lp/dental-implants,/cypress-tx/lp/dental-implants/,301,Google Ads LP
+/cypress-tx/lp/emergency-dentist,/cypress-tx/lp/emergency-dentist/,301,Google Ads LP
+/cypress-tx/lp/invisalign,/cypress-tx/lp/invisalign/,301,Google Ads LP
+/cypress-tx/lp/new-patient,/cypress-tx/lp/new-patient/,301,Google Ads LP
+/cypress-tx/oral-surgery,/cypress-tx/oral-surgery/,301,Tier 2
+/cypress-tx/pediatric-dentistry,/cypress-tx/pediatric-dentistry/,301,Tier 2
+/cypress-tx/preventive-dentistry,/cypress-tx/preventive-dentistry/,301,Tier 2
+/cypress-tx/root-canal,/cypress-tx/root-canal/,301,Tier 2
+/cypress-tx/sedation-dentistry,/cypress-tx/sedation-dentistry/,301,Tier 2
+/cypress-tx/spring-dentist,/cypress-tx/spring-dentist/,301,Neighborhood
+/cypress-tx/teeth-whitening,/cypress-tx/teeth-whitening/,301,Tier 2
+/cypress-tx/tomball-dentist,/cypress-tx/tomball-dentist/,301,Neighborhood
+/cypress-tx/tooth-extraction,/cypress-tx/tooth-extraction/,301,Tier 2
+/cypress-tx/towne-lake-dentist,/cypress-tx/towne-lake-dentist/,301,Neighborhood
+/cypress-tx/veneers,/cypress-tx/veneers/,301,Tier 2
+/dental-lab,/dental-lab/,301,
+/doctors,/doctors/,301,Doctor hub
+/doctors/laith-yahya-dds,/doctors/laith-yahya-dds/,301,Doctor bio
+/doctors/patrick-vuong-dmd,/doctors/patrick-vuong-dmd/,301,Doctor bio
+/doctors/peter-kim-dds,/doctors/peter-kim-dds/,301,Doctor bio
+/doctors/sameer-bilal-dds,/doctors/sameer-bilal-dds/,301,Doctor bio
+/doctors/sarah-maredia-dds,/doctors/sarah-maredia-dds/,301,Doctor bio
+/doctors/shayan-alkhiro-dds,/doctors/shayan-alkhiro-dds/,301,Doctor bio
+/es,/es/,301,Spanish hub
+/es/dentista-de-emergencia,/es/dentista-de-emergencia/,301,Spanish
+/es/implantes-dentales,/es/implantes-dentales/,301,Spanish
+/es/invisalign,/es/invisalign/,301,Spanish
+/es/odontologia-cosmetica,/es/odontologia-cosmetica/,301,Spanish
+/faq,/faq/,301,
+/free-consultation,/free-consultation/,301,
+/insurance,/insurance/,301,
+/katy-tx,/katy-tx/,301,Location hub
+/katy-tx/all-on-x-implants,/katy-tx/all-on-x-implants/,301,Tier 2
+/katy-tx/brookshire-dentist,/katy-tx/brookshire-dentist/,301,Neighborhood
+/katy-tx/cinco-ranch-dentist,/katy-tx/cinco-ranch-dentist/,301,Neighborhood
+/katy-tx/cosmetic-dentistry,/katy-tx/cosmetic-dentistry/,301,Tier 2
+/katy-tx/cross-creek-ranch-dentist,/katy-tx/cross-creek-ranch-dentist/,301,Neighborhood
+/katy-tx/dental-bridges,/katy-tx/dental-bridges/,301,Tier 2
+/katy-tx/dental-cleaning,/katy-tx/dental-cleaning/,301,Tier 2
+/katy-tx/dental-crowns,/katy-tx/dental-crowns/,301,Tier 2
+/katy-tx/dental-implants,/katy-tx/dental-implants/,301,Tier 2
+/katy-tx/dentures,/katy-tx/dentures/,301,Tier 2
+/katy-tx/emergency-dentist,/katy-tx/emergency-dentist/,301,Tier 2
+/katy-tx/family-dental-care,/katy-tx/family-dental-care/,301,Tier 2
+/katy-tx/firethorne-dentist,/katy-tx/firethorne-dentist/,301,Neighborhood
+/katy-tx/fulshear-dentist,/katy-tx/fulshear-dentist/,301,Neighborhood
+/katy-tx/invisalign,/katy-tx/invisalign/,301,Tier 2
+/katy-tx/lp/dental-implants,/katy-tx/lp/dental-implants/,301,Google Ads LP
+/katy-tx/lp/emergency-dentist,/katy-tx/lp/emergency-dentist/,301,Google Ads LP
+/katy-tx/lp/invisalign,/katy-tx/lp/invisalign/,301,Google Ads LP
+/katy-tx/lp/new-patient,/katy-tx/lp/new-patient/,301,Google Ads LP
+/katy-tx/oral-surgery,/katy-tx/oral-surgery/,301,Tier 2
+/katy-tx/pediatric-dentistry,/katy-tx/pediatric-dentistry/,301,Tier 2
+/katy-tx/preventive-dentistry,/katy-tx/preventive-dentistry/,301,Tier 2
+/katy-tx/richmond-dentist,/katy-tx/richmond-dentist/,301,Neighborhood
+/katy-tx/root-canal,/katy-tx/root-canal/,301,Tier 2
+/katy-tx/sedation-dentistry,/katy-tx/sedation-dentistry/,301,Tier 2
+/katy-tx/teeth-whitening,/katy-tx/teeth-whitening/,301,Tier 2
+/katy-tx/tooth-extraction,/katy-tx/tooth-extraction/,301,Tier 2
+/katy-tx/veneers,/katy-tx/veneers/,301,Tier 2
+/katy-tx/westheimer-parkway-dentist,/katy-tx/westheimer-parkway-dentist/,301,Neighborhood
+/membership-plan,/membership-plan/,301,
+/our-team,/our-team/,301,
+/patient-testimonials,/patient-testimonials/,301,
+/patients/new-patient-hub,/patients/new-patient-hub/,301,
+/privacy-policy,/privacy-policy/,301,
+/services,/services/,301,Services hub
+/services/all-on-x-implants,/services/all-on-x-implants/,301,Tier 1
+/services/cosmetic,/services/cosmetic/,301,Category
+/services/cosmetic-dentistry,/services/cosmetic-dentistry/,301,Tier 1
+/services/crowns-vs-bridges,/services/crowns-vs-bridges/,301,Comparison
+/services/dental-bridges,/services/dental-bridges/,301,Tier 1
+/services/dental-cleaning,/services/dental-cleaning/,301,Tier 1
+/services/dental-crowns,/services/dental-crowns/,301,Tier 1
+/services/dental-implants,/services/dental-implants/,301,Tier 1
+/services/dental-implants-vs-bridges,/services/dental-implants-vs-bridges/,301,Comparison
+/services/dental-implants-vs-dentures,/services/dental-implants-vs-dentures/,301,Comparison
+/services/dentures,/services/dentures/,301,Tier 1
+/services/emergency-dentist,/services/emergency-dentist/,301,Tier 1
+/services/family-dental-care,/services/family-dental-care/,301,Tier 1
+/services/invisalign,/services/invisalign/,301,Tier 1
+/services/invisalign-vs-braces,/services/invisalign-vs-braces/,301,Comparison
+/services/oral-surgery,/services/oral-surgery/,301,Tier 1
+/services/pediatric-dentistry,/services/pediatric-dentistry/,301,Tier 1
+/services/preventive,/services/preventive/,301,Category
+/services/preventive-dentistry,/services/preventive-dentistry/,301,Tier 1
+/services/restorative,/services/restorative/,301,Category
+/services/root-canal,/services/root-canal/,301,Tier 1
+/services/sedation-dentistry,/services/sedation-dentistry/,301,Tier 1
+/services/surgical,/services/surgical/,301,Category
+/services/teeth-whitening,/services/teeth-whitening/,301,Tier 1
+/services/tooth-extraction,/services/tooth-extraction/,301,Tier 1
+/services/veneers,/services/veneers/,301,Tier 1
+/services/veneers-vs-crowns,/services/veneers-vs-crowns/,301,Comparison
+/services/whitening-vs-veneers,/services/whitening-vs-veneers/,301,Comparison
+/sitemap,/sitemap/,301,
+/specials,/specials/,301,
+/locations,/convenient-locations/,301,Legacy path redirect
