@@ -171,12 +171,12 @@ const Home = () => {
           <div className="lg:hidden px-5 pt-8 pb-10 text-center">
 
             <h1 className="font-display text-2xl leading-[1.15] font-bold text-foreground mb-5">
-              A Dentist That{" "}
-              <em className="not-italic text-primary">Feels Like Home</em>
+              Finally, a Dentist You'll{" "}
+              <em className="not-italic text-primary">Actually Enjoy</em>
             </h1>
 
             <p className="font-body text-[15px] leading-[1.7] text-muted-foreground mb-8 max-w-[340px] mx-auto">
-              Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
+              Taking care of yourself starts with your smile. We deliver exceptional dental care that treats your oral health as an essential part of your overall well-being — <strong className="text-foreground font-semibold">with zero judgment, ever.</strong>
             </p>
 
             {/* CTAs — stacked full-width on mobile */}
@@ -217,9 +217,12 @@ const Home = () => {
               <div className="grid lg:grid-cols-2 gap-16 xl:gap-20 items-center">
                 <div className="text-left">
                   <p className="kicker mb-3 text-xs tracking-[0.2em]">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
-                  <h1 className="font-display text-6xl xl:text-7xl font-bold leading-[1.05] mb-6 text-foreground">A Dentist That <em className="not-italic text-primary">Feels Like Home</em></h1>
-                  <p className="font-body text-xl leading-relaxed text-muted-foreground mb-10 max-w-lg">
-                    Warm blankets, Netflix in every room, and a team that listens first. Whether it's been 6 months or 6 years — <strong className="text-foreground font-semibold">no judgment, ever.</strong>
+                  <h1 className="font-display text-6xl xl:text-7xl font-bold leading-[1.05] mb-6 text-foreground">Finally, a Dentist You'll <em className="not-italic text-primary">Actually Enjoy</em></h1>
+                  <p className="font-body text-xl leading-relaxed text-muted-foreground mb-4 max-w-lg">
+                    Taking care of yourself starts with your smile. We deliver exceptional dental care that treats your oral health as an essential part of your overall well-being.
+                  </p>
+                  <p className="font-body text-lg leading-relaxed text-muted-foreground mb-10 max-w-lg">
+                    Our doctors follow the highest clinical standards, use state-of-the-art technology, and deliver smarter care with a softer touch. Our goal is simple: to make you <strong className="text-foreground font-semibold">smile every time you see us.</strong>
                   </p>
                   <div className="flex gap-4 mb-3 max-w-md">
                     <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 px-8 rounded-full transition-all duration-200 bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)] hover:shadow-lg">Book Now</button>
