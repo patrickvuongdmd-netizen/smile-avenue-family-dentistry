@@ -125,7 +125,7 @@ const Footer = () => {
             {/* Col 1 — Logo + tagline + social + phones */}
             <div>
               <Link to="/" className="inline-block mb-4">
-                <img src="/logo-full.webp" alt="Smile Avenue Family Dentistry" className="h-12 w-auto object-contain brightness-0 invert" loading="lazy" width={1217} height={645} />
+                <img src="/logo-full-alt.webp" alt="Smile Avenue Family Dentistry" className="h-12 w-auto object-contain" loading="lazy" width={1217} height={645} />
               </Link>
               <p className="text-sm font-body opacity-70 leading-relaxed mb-6">A dentist that feels like home — warm blankets, Netflix in every room, and no judgment, ever.</p>
               <div className="space-y-2 mb-6">
