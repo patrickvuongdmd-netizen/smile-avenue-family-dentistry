@@ -64,6 +64,22 @@ const MembershipPlan = () => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Membership Plan | Smile Avenue Family Dentistry",
+          description: "Save on dental care without insurance. Includes cleanings, exams, X-rays, and 15% off treatments.",
+          url: "https://www.smileavenuefamilydentistry.com/membership-plan/",
+          mainEntity: {
+            "@type": "Offer",
+            name: "Smile Avenue Membership Plan",
+            description: "No-insurance dental savings plan including preventive care and treatment discounts",
+            priceCurrency: "USD",
+            price: "25",
+            priceSpecification: { "@type": "UnitPriceSpecification", price: "25", priceCurrency: "USD", unitText: "month" },
+            offeredBy: { "@type": "Dentist", "@id": "https://www.smileavenuefamilydentistry.com/#dentist", name: "Smile Avenue Family Dentistry" },
+          },
+        })}</script>
       </Helmet>
       <TrustTicker />
 

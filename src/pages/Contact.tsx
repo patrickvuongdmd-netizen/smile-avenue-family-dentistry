@@ -38,6 +38,24 @@ const Contact = () => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact Smile Avenue Family Dentistry",
+          description: "Contact Smile Avenue Family Dentistry in Cypress or Katy, TX. Call, visit, or fill out our contact form.",
+          url: "https://www.smileavenuefamilydentistry.com/contact/",
+          mainEntity: {
+            "@type": "Dentist",
+            "@id": "https://www.smileavenuefamilydentistry.com/#dentist",
+            name: "Smile Avenue Family Dentistry",
+            telephone: "(832) 648-1756",
+            email: "info@smileavenuedentistry.com",
+            address: { "@type": "PostalAddress", streetAddress: "9212 Fry Rd #120", addressLocality: "Cypress", addressRegion: "TX", postalCode: "77433", addressCountry: "US" },
+            openingHoursSpecification: [
+              { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "08:30", closes: "17:00" },
+            ],
+          },
+        })}</script>
       </Helmet>
       <TrustTicker />
 

@@ -38,6 +38,20 @@ const Insurance = () => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Insurance & Financing | Smile Avenue Family Dentistry",
+          description: "We accept most major dental insurance plans. Financing available through CareCredit and Sunbit.",
+          url: "https://www.smileavenuefamilydentistry.com/insurance/",
+          mainEntity: {
+            "@type": "Dentist",
+            "@id": "https://www.smileavenuefamilydentistry.com/#dentist",
+            name: "Smile Avenue Family Dentistry",
+            paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Insurance", "CareCredit", "Sunbit"],
+            priceRange: "$$",
+          },
+        })}</script>
       </Helmet>
       <TrustTicker />
 

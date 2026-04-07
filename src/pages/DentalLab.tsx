@@ -56,6 +56,19 @@ const DentalLab = () => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "In-House Digital Dental Lab | Smile Avenue Family Dentistry",
+          description: "Smile Dental Lab — our in-house digital dental lab creates custom crowns, veneers, aligners, and more.",
+          url: "https://www.smileavenuefamilydentistry.com/dental-lab/",
+          mainEntity: {
+            "@type": "DentalService",
+            name: "Smile Dental Lab",
+            description: "In-house digital dental lab for same-day crowns, custom veneers, aligners, and implant restorations",
+            provider: { "@type": "Dentist", "@id": "https://www.smileavenuefamilydentistry.com/#dentist", name: "Smile Avenue Family Dentistry" },
+          },
+        })}</script>
       </Helmet>
       <TrustTicker />
 
