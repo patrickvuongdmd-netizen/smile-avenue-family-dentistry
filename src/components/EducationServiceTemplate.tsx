@@ -23,6 +23,7 @@ import { SERVICE_IMAGES, OFFICE_IMAGES } from "@/lib/images";
 import { SERVICE_NAMES } from "@/lib/brand-service-data";
 import { trackPhoneClick } from "@/lib/track-phone";
 import type { EducationServiceData } from "@/lib/education-service-data";
+import { EDUCATION_SERVICES } from "@/lib/education-service-data";
 
 const PHONE = "8326481756";
 const PHONE_FORMATTED = "(832) 648-1756";
