@@ -67,6 +67,13 @@ const data: ServicePageData = {
     { quote: "My daughter's Invisalign treatment was so smooth. She loved that she could take them out for meals and sports. Her smile looks amazing now.", name: "Catherine P.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "10 months of Invisalign and my teeth are perfectly straight. The team at Smile Avenue was so encouraging throughout. Best decision I've made!", name: "Daniel G.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get Invisalign in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433. We're conveniently located near Bridgeland, Towne Lake, and Cy-Fair with free parking and same-day consultations." },
+    { question: "Which Cypress dentist does Invisalign?", answer: "Dr. Patrick Vuong is our lead Invisalign provider in Cypress. As a certified Invisalign provider, he has treated hundreds of cases from simple spacing to complex bite corrections." },
+    { question: "Is the Invisalign consultation free in Cypress?", answer: "Yes — your free Invisalign consultation includes digital scanning, a virtual smile preview, and a full cost breakdown with insurance verification. No obligation." },
+    { question: "How much does Invisalign cost in Cypress, TX?", answer: "Invisalign at our Cypress office ranges from $3,500–$6,500 depending on complexity. Most PPO plans cover $1,000–$2,000. We offer 0% CareCredit financing with payments as low as $99/month." },
+    { question: "Do you offer Invisalign for teens in Cypress?", answer: "Yes! We offer Invisalign Teen with compliance indicators. It's a popular choice for students at Cy-Fair ISD schools who want a discreet alternative to traditional braces." },
+  ],
   ctaHeading: "Start Your Invisalign Journey Today",
   ctaBody: "Book a free Invisalign consultation and see how clear aligners can transform your smile.",
 };

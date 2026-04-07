@@ -66,6 +66,13 @@ const data: ServicePageData = {
     { quote: "I got two implants to replace teeth I lost years ago. The in-house lab made a crown that matches my other teeth perfectly. Wish I'd done it sooner.", name: "Janet M.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The sedation option made the implant placement completely comfortable. I was nervous but the team put me at ease from the moment I walked in.", name: "David K.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Katy implant office?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — right near LaCenterra in Cinco Ranch. Convenient for patients from Cross Creek Ranch, Firethorne, Fulshear, and the Westheimer Parkway corridor." },
+    { question: "Which Katy dentist does implants?", answer: "Dr. Sameer Bilal is our lead implant provider at the Katy office, with Dr. Patrick Vuong overseeing complex cases. All implant crowns are crafted in our in-house Smile Dental Lab for a precise, natural fit." },
+    { question: "Do you offer free implant consultations in Katy?", answer: "Yes. Your free consultation includes a 3D CT scan, bone density assessment, and personalized treatment plan with transparent pricing. Saturday appointments available." },
+    { question: "What are Katy implant office hours?", answer: "Our Katy office is open Monday–Friday 8:30am–5pm and Saturday 8am–2pm. We offer same-day implant consultations when availability permits. Call (281) 800-5008 to check today's openings." },
+    { question: "Is there an implant dentist near Cinco Ranch or Fulshear?", answer: "Yes — Smile Avenue on Westheimer Parkway is located in the heart of Cinco Ranch, just minutes from Fulshear, Cross Creek Ranch, Firethorne, and Brookshire. Saturday hours make scheduling easy." },
+  ],
   ctaHeading: "Replace Missing Teeth Permanently",
   ctaBody: "Schedule your free implant consultation and take the first step toward a complete, confident smile.",
 };

@@ -68,6 +68,13 @@ const data: ServicePageData = {
     { quote: "I was missing my front tooth for years and was embarrassed to smile. The implant Smile Avenue gave me changed my life. I smile all the time now!", name: "Sandra L.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Got All-on-4 implants at Smile Avenue Cypress and couldn't be happier. The team was so supportive throughout the entire journey. Worth every penny.", name: "Tom B.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Cypress implant office located?", answer: "We're at 9212 Fry Rd #120, Cypress, TX 77433 — convenient for patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Jersey Village. Free parking and same-day appointments available." },
+    { question: "Which Cypress dentist does implants?", answer: "Dr. Peter Kim and Dr. Laith Yahya perform implant placement at our Cypress office. Dr. Patrick Vuong oversees all implant cases. All implant crowns are fabricated in our in-house Smile Dental Lab." },
+    { question: "Do you offer free implant consultations in Cypress?", answer: "Yes. Your free consultation includes a 3D CT scan, bone density assessment, and a personalized treatment plan with transparent pricing — absolutely no obligation." },
+    { question: "What are Cypress dental implant office hours?", answer: "Our Cypress office is open Monday–Friday 8:30am–5pm. We offer same-day implant consultations when availability permits. Call (832) 648-1756 to check today's openings." },
+    { question: "Is there an implant dentist near Bridgeland or Towne Lake?", answer: "Yes — Smile Avenue on Fry Road is just 8 minutes from Bridgeland and 10 minutes from Towne Lake. We serve implant patients from across northwest Houston including Cy-Fair, Spring, and Tomball." },
+  ],
   ctaHeading: "Start Your Implant Journey Today",
   ctaBody: "Schedule a consultation and discover how dental implants can restore your smile permanently.",
 };

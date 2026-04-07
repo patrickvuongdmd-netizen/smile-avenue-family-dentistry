@@ -60,6 +60,13 @@ const data: ServicePageData = {
     { quote: "I was self-conscious about my teeth for years. After whitening and bonding, I finally feel confident. The consultation was judgment-free and the results are amazing.", name: "Marcus T.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The digital preview of my new smile sold me. Being able to see the results before committing made the whole process stress-free. Love my new veneers!", name: "Lauren H.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get cosmetic dentistry in Katy, TX?", answer: "Smile Avenue Family Dentistry at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494. We offer veneers, whitening, bonding, and full smile makeovers near Cinco Ranch, Cross Creek Ranch, and Firethorne." },
+    { question: "Which Katy cosmetic dentist is best?", answer: "Dr. Patrick Vuong leads cosmetic cases at our Katy office, supported by Dr. Sarah Maredia. Our in-house Smile Dental Lab ensures precise color matching and custom restorations with fast turnaround." },
+    { question: "Do you offer free cosmetic consultations in Katy?", answer: "Yes — your complimentary cosmetic consultation includes digital imaging, a smile design preview, and transparent pricing. Saturday appointments available. No pressure, no obligation." },
+    { question: "How much do veneers cost in Katy, TX?", answer: "Porcelain veneers at our Katy office typically cost $1,200–$2,500 per tooth. Our in-house lab keeps costs competitive while ensuring premium quality. 0% CareCredit financing available." },
+    { question: "Can I get a smile makeover on Saturdays in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm for consultations and many cosmetic procedures. It's a convenient option for busy professionals who can't visit during the week." },
+  ],
   ctaHeading: "Ready for Your Dream Smile?",
   ctaBody: "Schedule your free cosmetic consultation and discover what's possible for your smile.",
 };
