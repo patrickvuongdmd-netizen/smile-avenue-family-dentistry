@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.waitingRoom,
   heroSubheading: "Modern dental care for Tomball families at our Cypress office on Fry Road.",
   heroBody: "Smile Avenue Family Dentistry is a top choice for Tomball families seeking modern, comfortable dental care. Our Cypress office on Fry Road is just 15 minutes from Tomball via FM 2920. We offer everything from routine cleanings to advanced implants and Invisalign — all in a warm, judgment-free environment.",
+  heroValueProps: ["15 minutes from Tomball", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Tomball is a charming community with deep Texas roots, and Smile Avenue is proud to serve Tomball families with dentistry that matches the warmth and character of the town. Our Cypress office is a quick drive south on FM 2920, making it easy to fit dental appointments into your day.",
     "What sets us apart is our hospitality-first approach. Every treatment room features Netflix, noise-canceling headphones, and warm blankets. Our team takes the time to listen to your concerns before recommending treatment — because we believe great dentistry starts with great communication.",

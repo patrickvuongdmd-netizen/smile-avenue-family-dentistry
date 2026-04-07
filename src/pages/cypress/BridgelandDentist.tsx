@@ -11,6 +11,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.hallway,
   heroSubheading: "Serving Bridgeland families with modern, comfortable dental care since 2018.",
   heroBody: "Smile Avenue Family Dentistry is the trusted dental home for Bridgeland residents. Located on Fry Road, just 8 minutes from Bridgeland via Tuckerton Road, we offer comprehensive dental care for the whole family — from routine cleanings to dental implants and Invisalign.",
+  heroValueProps: ["8 minutes from Bridgeland", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Bridgeland is one of Cypress's most vibrant and family-oriented communities, and Smile Avenue Family Dentistry is proud to serve as the neighborhood's go-to dental practice. Whether you're heading home from a walk around Josey Lake or picking up the kids from a playdate at Bridgeland Central Park, our office is a quick and easy stop on Fry Road.",
     "We understand the needs of Bridgeland families — busy schedules, growing kids, and the desire for high-quality care without a long drive. That's why we offer same-day appointments, early morning scheduling, and a full range of services under one roof. From your child's first dental visit to advanced cosmetic procedures, you won't need to travel far.",

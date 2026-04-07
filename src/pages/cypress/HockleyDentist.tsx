@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.hallway,
   heroSubheading: "Modern, full-service dental care for Hockley families at our Cypress office.",
   heroBody: "Living in Hockley means you value space, community, and quality. Smile Avenue Family Dentistry brings that same quality to your dental care. Our Cypress office on Fry Road is just 12 minutes from Hockley, offering comprehensive dentistry with a hospitality-first approach.",
+  heroValueProps: ["12 minutes from Hockley", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Hockley is a growing community northwest of Cypress, and Smile Avenue Family Dentistry is the closest full-service dental practice offering advanced technology and comprehensive care. Our Fry Road location is an easy 12-minute drive south, making it convenient for Hockley families to access top-quality dental care.",
     "We understand that Hockley residents value straightforward, honest care. That's exactly what you'll find at Smile Avenue — transparent pricing, clear treatment explanations, and a team that respects your time. No unnecessary upsells, no rush — just thoughtful dentistry.",

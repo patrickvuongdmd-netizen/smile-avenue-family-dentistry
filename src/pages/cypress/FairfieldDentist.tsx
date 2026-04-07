@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.treatmentRoom,
   heroSubheading: "Serving Fairfield Village and southeast Cypress with expert dental care.",
   heroBody: "Fairfield families deserve a dentist who combines convenience with excellence. Smile Avenue Family Dentistry on Fry Road is just a short drive from Fairfield Village, offering the full spectrum of dental services — from children's checkups to dental implants and cosmetic makeovers.",
+  heroValueProps: ["Minutes from Fairfield", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Fairfield is one of southeast Cypress's most established and welcoming communities, nestled along Cypress Creek with beautiful green spaces and a strong sense of neighborhood pride. Smile Avenue Family Dentistry is honored to be the dental practice that Fairfield families depend on.",
     "Located on Fry Road, our office is an easy, direct drive from the Fairfield community. Whether you're coming from Fairfield Village Boulevard or the Cypress Creek trails, you'll find us conveniently positioned at 9212 Fry Rd #120 — no highway driving required.",

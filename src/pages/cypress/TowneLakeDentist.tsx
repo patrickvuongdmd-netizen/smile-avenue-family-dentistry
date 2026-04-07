@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.waitingRoom,
   heroSubheading: "Modern dental care for the Towne Lake community, just a short drive on Barker Cypress.",
   heroBody: "Living in Towne Lake means you're just a quick drive from one of Cypress's top-rated dental practices. Smile Avenue Family Dentistry on Fry Road provides everything from routine cleanings to advanced cosmetic dentistry — all in a warm, family-friendly environment.",
+  heroValueProps: ["Minutes from Towne Lake", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Towne Lake is one of the most desirable communities in the Cypress area, known for its stunning boardwalk, crystal-clear lake, and active family lifestyle. At Smile Avenue Family Dentistry, we're proud to be the dental office that Towne Lake residents trust for their family's oral health.",
     "Whether you're wrapping up a morning jog along the Towne Lake Boardwalk or heading out from the community pool, our Fry Road office is a convenient stop. We're located just south of the Barker Cypress and Tuckerton intersection — an easy route from any part of Towne Lake.",

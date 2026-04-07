@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.katyHero,
   heroSubheading: "Full-service dental care for Brookshire families at our Katy office.",
   heroBody: "Brookshire families deserve exceptional dental care without a long commute. Smile Avenue Family Dentistry in Katy is just 15 minutes east on I-10, offering comprehensive dentistry with Saturday hours, modern technology, and a hospitality-first approach.",
+  heroValueProps: ["15 minutes from Brookshire", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Brookshire is a growing community west of Katy with a small-town feel and big ambitions. Smile Avenue Family Dentistry is proud to serve Brookshire families with the same warmth and quality that defines the community. Our Katy office on Westheimer Parkway is a quick 15-minute drive east on I-10.",
     "What makes the drive worthwhile? A dental office that treats you like family. From the moment you walk in, you'll notice the difference — complimentary coffee, Netflix in every treatment room, warm blankets, and a team that takes the time to listen before recommending any treatment.",

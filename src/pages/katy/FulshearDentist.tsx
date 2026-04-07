@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.aboutTeamAction,
   heroSubheading: "Expanding west to serve the growing Fulshear community with modern dental care.",
   heroBody: "Fulshear is booming — and its families deserve a dental practice that can keep up. Smile Avenue Family Dentistry on Westheimer Parkway in Katy is the closest top-rated dental office to Fulshear, offering everything from routine cleanings to dental implants and cosmetic transformations.",
+  heroValueProps: ["15 minutes from Fulshear", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Fulshear is one of the fastest-growing cities in Texas, with new families moving into communities like Cross Creek Ranch, Jordan Ranch, and Tamarron every month. As the Fulshear area continues to develop, dental care options remain limited — which is why Smile Avenue Family Dentistry is committed to being Fulshear's go-to dental practice.",
     "Located on Westheimer Parkway in Katy, our office is a quick 12–15 minute drive from most Fulshear neighborhoods via FM 1093. There's no need to drive into Houston or navigate congested highways — just a straight shot east on Westheimer Parkway to our front door at 23541 Westheimer Pkwy Ste #170.",

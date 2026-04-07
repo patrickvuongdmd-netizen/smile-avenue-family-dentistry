@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.contactHero,
   heroSubheading: "Walk-in from the Westheimer Parkway corridor — we're right here at Ste #170.",
   heroBody: "Looking for a dentist right on Westheimer Parkway? You've found us. Smile Avenue Family Dentistry is located at 23541 Westheimer Pkwy Ste #170 — right in the middle of Katy's busiest corridor. Whether you work nearby, live in the area, or are just passing through, quality dental care is steps away.",
+  heroValueProps: ["Right on Westheimer Parkway", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "The Westheimer Parkway corridor is the beating heart of Katy, TX — connecting communities from Cinco Ranch to Katy Mills and beyond. Smile Avenue Family Dentistry is strategically located right on this corridor at 23541 Westheimer Pkwy Ste #170, making us the most convenient dental choice for anyone who lives, works, or shops along Westheimer.",
     "Whether you're popping in between errands, scheduling during your lunch break from a nearby office, or bringing the whole family on a Saturday morning, our location on Westheimer Parkway makes dental care fit seamlessly into your routine.",

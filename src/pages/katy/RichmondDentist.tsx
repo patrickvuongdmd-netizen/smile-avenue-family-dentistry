@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.katyHero,
   heroSubheading: "Comprehensive dental care for Richmond families — just 18 minutes away.",
   heroBody: "Richmond families looking for a modern, full-service dental office choose Smile Avenue Family Dentistry in Katy. We're just 18 minutes north via the Grand Parkway or US-59, with Saturday hours, advanced technology, and a team that puts your comfort first.",
+  heroValueProps: ["18 minutes from Richmond", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Richmond, TX has a rich history and a growing community of families who deserve high-quality dental care. Smile Avenue Family Dentistry in Katy is the preferred dental home for many Richmond residents, offering the advanced technology and comprehensive services that are hard to find closer to home.",
     "Our Katy office on Westheimer Parkway is an easy 18-minute drive north via the Grand Parkway (SH 99) or US-59. Once you arrive, you'll experience dentistry the way it should be — comfortable, transparent, and thorough. Every room features Netflix, and our team provides warm blankets and noise-canceling headphones for your comfort.",
