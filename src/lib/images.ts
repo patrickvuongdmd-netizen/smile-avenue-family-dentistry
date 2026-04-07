@@ -297,13 +297,13 @@ export const HERO_VIDEO_URL = "https://www.smileavenuefamilydentistry.com/wp-con
 export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }[]> = {
   "dental-implants": [
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
-    { youtubeId: "Do_22b5MX_M", title: "From Uncomfortable to Confident Smiles" },
     { youtubeId: "rFNVqRYSkKQ", title: "Care You Can Trust, Smiles You'll Love" },
+    { youtubeId: "NqiluaBGHpk", title: "Is It Time for a New Smile?" },
   ],
   "all-on-x-implants": [
-    { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
-    { youtubeId: "NqiluaBGHpk", title: "Is It Time for a New Smile?" },
     { youtubeId: "wiocP_nsFPY", title: "Can One Visit Change Your Smile?" },
+    { youtubeId: "NqiluaBGHpk", title: "Is It Time for a New Smile?" },
+    { youtubeId: "rFNVqRYSkKQ", title: "Care You Can Trust, Smiles You'll Love" },
   ],
   "cosmetic-dentistry": [
     { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
@@ -312,28 +312,28 @@ export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }
   ],
   "teeth-whitening": [
     { youtubeId: "QRpwLPBJkS0", title: "Get a Brighter, Whiter Smile — Fast & Hassle-Free!" },
-    { youtubeId: "QbPVxWUdBR0", title: "Small Changes, Big Smiles" },
+    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
     { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
   ],
   "veneers": [
     { youtubeId: "qMAw3tPCLxk", title: "Porcelain Veneers: Strong, Stunning, and Built to Last" },
     { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
-    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
+    { youtubeId: "QbPVxWUdBR0", title: "Small Changes, Big Smiles" },
   ],
   "invisalign": [
     { youtubeId: "qMXDWzTh3Cs", title: "Essential Teeth Care Tips for Your Invisalign Journey" },
-    { youtubeId: "nS2MUEQXbWE", title: "Invisalign Patient Testimonial" },
     { youtubeId: "QbPVxWUdBR0", title: "Small Changes, Big Smiles" },
+    { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
   ],
   "dental-crowns": [
     { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
     { youtubeId: "wiocP_nsFPY", title: "Can One Visit Change Your Smile?" },
-    { youtubeId: "rFNVqRYSkKQ", title: "Care You Can Trust, Smiles You'll Love" },
+    { youtubeId: "Do_22b5MX_M", title: "From Uncomfortable to Confident Smiles" },
   ],
   "root-canal": [
     { youtubeId: "y1YYnlsar3U", title: "Is It Time for a Root Canal?" },
     { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
-    { youtubeId: "oNouq-eUAGw", title: "Our Favorite Thing About Our Patients" },
+    { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
   ],
   "sedation-dentistry": [
     { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
@@ -341,19 +341,19 @@ export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }
     { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
   ],
   "pediatric-dentistry": [
-    { youtubeId: "5NHuCuktCPI", title: "Making Dental Visits Fun – Children's Dental Health Month" },
     { youtubeId: "zKD0AARsWTk", title: "Discover the World Inside Your Mouth with Andrew" },
     { youtubeId: "Ihh1IvGMnrc", title: "Prevention is Key – Children's Dental Health Month" },
+    { youtubeId: "O91Y4M9liYs", title: "Comprehensive Gum Care: Prevent, Treat, and Heal" },
   ],
   "preventive-dentistry": [
     { youtubeId: "O91Y4M9liYs", title: "Comprehensive Gum Care: Prevent, Treat, and Heal" },
     { youtubeId: "Ihh1IvGMnrc", title: "Prevention is Key – Children's Dental Health Month" },
-    { youtubeId: "RTqM52ETpuc", title: "Seeing Blood When You Brush? Here's What to Know" },
+    { youtubeId: "Gg4LJXRsv-U", title: "Setting New Dental Goals: Tips for a Healthier Smile" },
   ],
   "dental-cleaning": [
     { youtubeId: "O91Y4M9liYs", title: "Comprehensive Gum Care: Prevent, Treat, and Heal" },
     { youtubeId: "5NHuCuktCPI", title: "Making Dental Visits Fun – Children's Dental Health Month" },
-    { youtubeId: "Gg4LJXRsv-U", title: "Setting New Dental Goals: Tips for a Healthier Smile" },
+    { youtubeId: "RTqM52ETpuc", title: "Seeing Blood When You Brush? Here's What to Know" },
   ],
   "oral-surgery": [
     { youtubeId: "1nicifZjXoA", title: "Restore Confidence with Advanced Bone Grafting" },
@@ -361,14 +361,14 @@ export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }
     { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
   ],
   "tooth-extraction": [
-    { youtubeId: "1nicifZjXoA", title: "Restore Confidence with Advanced Bone Grafting" },
     { youtubeId: "HB_uTHUfm-o", title: "What To Do During a Dental Emergency | Quick Tips" },
+    { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
     { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
   ],
   "emergency-dentist": [
     { youtubeId: "HB_uTHUfm-o", title: "What To Do During a Dental Emergency | Quick Tips" },
     { youtubeId: "y1YYnlsar3U", title: "Is It Time for a Root Canal?" },
-    { youtubeId: "EtAuvGSjEnI", title: "Why Smile Avenue is Trusted for Caring for Patients & Families" },
+    { youtubeId: "lVFe5d6pAlY", title: "Overcome Dental Anxiety with Sedation Dentistry" },
   ],
   "dental-bridges": [
     { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
@@ -376,9 +376,9 @@ export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }
     { youtubeId: "rFNVqRYSkKQ", title: "Care You Can Trust, Smiles You'll Love" },
   ],
   "dentures": [
-    { youtubeId: "NqiluaBGHpk", title: "Is It Time for a New Smile?" },
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
     { youtubeId: "oNouq-eUAGw", title: "Our Favorite Thing About Our Patients" },
+    { youtubeId: "wiocP_nsFPY", title: "Can One Visit Change Your Smile?" },
   ],
   "family-dental-care": [
     { youtubeId: "1PDGSzlt5cs", title: "Your First Visit to Smile Avenue!" },
