@@ -154,7 +154,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
-        {heroImage && <meta property="og:image" content={heroImage.url} />}
+        {SERVICE_IMAGES[data.serviceSlug] && <meta property="og:image" content={SERVICE_IMAGES[data.serviceSlug].url} />}
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
