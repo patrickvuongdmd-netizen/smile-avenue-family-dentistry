@@ -57,6 +57,13 @@ const data: ServicePageData = {
     { quote: "Needed an emergency extraction and they got me in the same day. Dr. Bilal was gentle and thorough. Minimal pain after.", name: "Natalie K.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Was dreading getting a tooth pulled but the Katy team made it painless. They even discussed implant options before I left.", name: "Omar F.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get a tooth extraction in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 performs simple and surgical extractions with sedation options. Same-day emergency extractions available." },
+    { question: "How much does a tooth extraction cost in Katy?", answer: "Costs depend on complexity — simple extractions cost less than surgical or wisdom tooth removals. Most PPO insurance covers medically necessary extractions. 0% financing available through CareCredit and Sunbit." },
+    { question: "Does Smile Avenue Katy offer same-day emergency extractions?", answer: "Yes. Call (281) 800-5008 for same-day emergency care. We keep emergency slots available daily so you're never told to wait in pain." },
+    { question: "Do you remove wisdom teeth at Smile Avenue Katy?", answer: "Yes. We perform simple and surgical wisdom tooth extractions in-office with IV sedation available. 3D CBCT imaging ensures safe, precise removal." },
+    { question: "What tooth replacement options are available after extraction in Katy?", answer: "We discuss dental implants (most recommended), bridges, and dentures at your visit. We can often place a bone graft at extraction time to preserve bone for future implant placement." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway provides gentle tooth extraction services for patients across Katy, TX. Whether you need a simple extraction, surgical removal of impacted wisdom teeth, or emergency same-day extraction, our experienced team handles everything in-office with sedation options for your comfort.",
     "Our comprehensive approach means we don't just remove the tooth — we discuss replacement options (dental implants, bridges, dentures) at the same visit so you leave with a plan for restoring your smile. For patients needing implants, we can often place a bone graft at the time of extraction to preserve bone for future placement.",

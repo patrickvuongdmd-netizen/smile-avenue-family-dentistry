@@ -56,6 +56,13 @@ const data: ServicePageData = {
     { quote: "Dr. Maredia did a beautiful Maryland bridge for my front tooth gap. Minimal prep and it looks completely natural.", name: "Jennifer Y.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Had an implant-supported bridge done and it feels like real teeth. No slipping, no worries. Best decision for my smile.", name: "Gregory N.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get a dental bridge in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 offers traditional, Maryland, cantilever, and implant-supported bridges — all fabricated in our in-house Smile Dental Lab." },
+    { question: "How much does a dental bridge cost in Katy?", answer: "Dental bridges in Katy typically range from $1,500–$4,500 depending on type and number of teeth. Most PPO dental insurance covers 50-80%. We offer 0% financing through CareCredit and Sunbit." },
+    { question: "Which dentist does dental bridges at Smile Avenue Katy?", answer: "Dr. Patrick Vuong, Dr. Sameer Bilal, and Dr. Sarah Maredia perform bridge procedures at our Katy office on Westheimer Parkway. All bridges are custom-fabricated in our on-site lab." },
+    { question: "How long does it take to get a dental bridge in Katy?", answer: "Most bridges are completed in two visits over 2-3 weeks. Our in-house lab fabricates your bridge on-site for faster turnaround than offices outsourcing to external labs." },
+    { question: "Should I get a dental bridge or implant in Katy?", answer: "Both are excellent options. Implants preserve bone and don't alter adjacent teeth; bridges are faster and less invasive. We discuss both at your consultation so you can choose what's best for your situation and budget." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway is where Katy families come for expert dental bridge restorations. We offer the full range of bridge options — traditional, Maryland, cantilever, and implant-supported — each fabricated in our in-house Smile Dental Lab for precise fit and natural appearance.",
     "Our digital Medit scanner captures 3D impressions without goopy molds, producing bridges with superior accuracy. Because our lab is on-site, we complete most bridges in two visits over 2-3 weeks — significantly faster than offices that outsource to external labs.",

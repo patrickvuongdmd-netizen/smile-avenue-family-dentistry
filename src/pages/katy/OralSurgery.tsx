@@ -57,6 +57,13 @@ const data: ServicePageData = {
     { quote: "Needed bone grafting before implants. The procedure was comfortable and the team was so reassuring. Healing went perfectly.", name: "Linda S.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "Dr. Vuong performed a sinus lift and implant placement. His expertise was evident from the planning through recovery.", name: "Charles D.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get oral surgery in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 performs all oral surgery procedures in-office — wisdom teeth, bone grafting, sinus lifts, and surgical extractions — with IV sedation." },
+    { question: "How much does oral surgery cost in Katy?", answer: "Costs vary by procedure. Insurance typically covers medically necessary procedures like wisdom teeth removal. We offer 0% financing through CareCredit and Sunbit for any remaining balance." },
+    { question: "Do you offer IV sedation for oral surgery in Katy?", answer: "Yes. We offer nitrous oxide, oral sedation, and IV sedation. Our team monitors vital signs continuously throughout the procedure for maximum safety and comfort." },
+    { question: "Do I need a referral for oral surgery at Smile Avenue Katy?", answer: "No referral needed. We perform all oral surgery in-house — including wisdom teeth removal, bone grafting, sinus lifts, and complex extractions. Call (281) 800-5008 to schedule." },
+    { question: "How long is recovery after oral surgery in Katy?", answer: "Recovery varies: 3-5 days for simple extractions, 7-14 days for bone grafting or impacted wisdom teeth. We provide detailed post-operative instructions and follow-up appointments to monitor healing." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway provides comprehensive oral surgery services right here in Katy — no hospital visits, no outside specialist referrals. From wisdom teeth removal and bone grafting to sinus lifts and complex surgical extractions, everything is handled in our modern office with IV sedation for complete comfort.",
     "Our 3D CBCT imaging technology provides a detailed three-dimensional view of your jaw anatomy — including nerve pathways, sinus cavities, and bone density — enabling our surgical team to plan procedures with precision that leads to safer outcomes and faster healing.",

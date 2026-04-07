@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "We bring our whole family here from Cinco Ranch. The kids actually look forward to their cleanings! That says a lot about this practice.", name: "Robert K.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "After years of avoiding the dentist, Smile Avenue made me feel welcome and comfortable. No shame, just excellent care. Highly recommend!", name: "Lisa G.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "What does preventive dental care include at Smile Avenue Katy?", answer: "Preventive care at our Katy office includes comprehensive exams, digital X-rays, professional cleanings, oral cancer screenings, fluoride treatments, dental sealants, and personalized home care guidance." },
+    { question: "How often should I see a dentist for preventive care in Katy?", answer: "Most patients should visit every 6 months. Patients with gum disease or higher risk factors may benefit from visits every 3-4 months. We customize your schedule based on your oral health needs." },
+    { question: "Does preventive dentistry really save money?", answer: "Yes. A preventive cleaning costs a fraction of restorative procedures like crowns, root canals, or implants. Early detection and prevention can save thousands of dollars over your lifetime." },
+    { question: "Do you offer oral cancer screening in Katy?", answer: "Yes. Every comprehensive exam includes a visual and tactile oral cancer screening. Early detection is critical — oral cancer has a 90%+ survival rate when caught in early stages." },
+    { question: "Is preventive care covered by insurance in Katy?", answer: "Most dental insurance plans cover preventive care (cleanings, exams, X-rays) at 100%. Our Smile Avenue Membership Plan provides similar coverage for uninsured patients at our Katy office." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway delivers the most comprehensive preventive dental care in Katy, TX. Our approach goes beyond basic cleanings — combining thorough exams, digital X-rays, oral cancer screenings, fluoride treatments, and sealants to catch and prevent problems before they become costly procedures.",
     "Our Katy hygiene team uses the latest digital imaging and ultrasonic scaling technology for thorough yet gentle care. We serve families across the Westheimer Parkway corridor, Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear — from toddlers getting their first checkup to seniors maintaining their oral health.",

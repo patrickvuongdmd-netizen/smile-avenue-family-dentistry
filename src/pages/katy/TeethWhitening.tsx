@@ -59,6 +59,13 @@ const data: ServicePageData = {
     { quote: "I have sensitive teeth and was worried about whitening. They customized the treatment perfectly — no sensitivity at all and my teeth look amazing.", name: "Kevin D.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The take-home trays are so convenient. I whiten while watching TV and the results keep getting better. Best investment in my smile.", name: "Rachel W.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where can I get professional teeth whitening in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 offers in-office Zoom whitening and custom take-home whitening trays for safe, dramatic results." },
+    { question: "How much does teeth whitening cost in Katy?", answer: "We offer multiple whitening options at different price points — professional whitening is more affordable than most patients expect. Call (281) 800-5008 for current pricing and financing options." },
+    { question: "How many shades whiter can my teeth get in Katy?", answer: "Professional in-office whitening at our Katy office can brighten teeth up to 8 shades in a single one-hour visit — far beyond store-bought strips or whitening toothpastes." },
+    { question: "Is professional teeth whitening safe?", answer: "Yes. Professional whitening under dental supervision is safe for enamel. We customize concentration and duration based on your sensitivity level for a comfortable experience." },
+    { question: "Do you offer take-home whitening trays in Katy?", answer: "Yes. We fabricate custom-fitted trays from digital impressions paired with professional-grade gel. Many patients use take-home trays for ongoing maintenance after in-office whitening." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Westheimer Parkway delivers professional teeth whitening to Katy patients who want dramatically brighter results — safely, in a fraction of the time store-bought products take. Our professional-grade formulas are significantly stronger than anything available over the counter, delivering up to 8 shades brighter in one hour.",
     "We offer two whitening pathways: in-office Zoom whitening for immediate same-day results, and custom-fitted take-home trays with professional gel for gradual brightening on your schedule. Many Katy patients combine both — in-office treatment for dramatic initial results followed by periodic at-home maintenance.",

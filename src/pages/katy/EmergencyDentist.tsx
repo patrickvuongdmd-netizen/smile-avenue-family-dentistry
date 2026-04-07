@@ -60,6 +60,13 @@ const data: ServicePageData = {
     { quote: "My son knocked out a tooth playing soccer. We called and they saw us within an hour. Dr. Maredia saved the tooth. Can't thank them enough.", name: "Michelle K.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "I had an abscess that was getting worse by the hour. Smile Avenue got me in the same day, drained it, and started treatment. The relief was immediate.", name: "James P.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where is the nearest emergency dentist in Katy, TX?", answer: "Smile Avenue Family Dentistry at 21860 Westheimer Pkwy #110, Katy, TX 77450 offers same-day emergency dental care. Call (281) 800-5008 for immediate triage and appointment scheduling." },
+    { question: "Does Smile Avenue Katy see dental emergencies on Saturdays?", answer: "Yes. Our Katy office is open Saturdays 8am-2pm and handles dental emergencies including severe toothaches, broken teeth, knocked-out teeth, and abscesses. Call (281) 800-5008 for same-day care." },
+    { question: "How much does an emergency dental visit cost in Katy?", answer: "Emergency exam and X-ray costs are affordable. Treatment costs depend on the type of care needed. Most PPO dental insurance covers emergency procedures, and we offer 0% financing through CareCredit and Sunbit." },
+    { question: "What should I do if my tooth gets knocked out in Katy?", answer: "Keep the tooth moist (in milk or saliva), handle it by the crown only, and call us immediately at (281) 800-5008. If reimplanted within 30-60 minutes, the tooth may be saved. We offer same-day emergency appointments." },
+    { question: "Does Smile Avenue Katy offer IV sedation for dental emergencies?", answer: "Yes. We offer nitrous oxide, oral sedation, and IV sedation for emergency procedures. Our team ensures you're comfortable even during stressful situations like emergency root canals or extractions." },
+  ],
   aboutInCity: [
     "When a dental emergency strikes in Katy, TX, Smile Avenue Family Dentistry on Westheimer Parkway provides same-day urgent care. We keep emergency slots available daily so you're never told to wait days in pain. Call (281) 800-5008 and our team will triage your situation over the phone and get you in as quickly as possible.",
     "Our Katy emergency team — Dr. Bilal, Dr. Maredia, and Dr. Vuong — handles every type of dental emergency in-house: severe toothaches, cracked and broken teeth, knocked-out teeth, abscesses, lost fillings and crowns, and soft tissue injuries. With 3D CBCT imaging, we diagnose problems accurately and treat the cause — not just the symptom.",
