@@ -246,7 +246,6 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                   height={480}
                 />
               </div>
-            )}
           </div>
         </section>
 
