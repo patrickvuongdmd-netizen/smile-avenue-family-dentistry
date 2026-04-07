@@ -400,6 +400,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Color Matching", smileAvenue: "✓ Custom shade matching in natural light", typical: "Basic shade guide" },
       { feature: "Warranty", smileAvenue: "✓ Treatment guarantee included", typical: "Varies or none" }
     ],
+    serviceComparison: {
+      titleA: "Dental Crowns",
+      titleB: "Dental Veneers",
+      rows: [
+        { feature: "Coverage", optionA: "Covers entire tooth (360°)", optionB: "Covers front surface only" },
+        { feature: "Best For", optionA: "Damaged, weak, or root-canaled teeth", optionB: "Cosmetic improvements" },
+        { feature: "Tooth Reduction", optionA: "More enamel removed", optionB: "Minimal enamel removed" },
+        { feature: "Strength", optionA: "Maximum structural support", optionB: "Less reinforcement" },
+        { feature: "Lifespan", optionA: "15–25 years", optionB: "15–20 years" },
+        { feature: "Cost", optionA: "$1,000–$1,800 per tooth", optionB: "$1,200–$2,500 per tooth" },
+      ],
+    },
     faqs: [
       { question: "How long does it take to get a dental crown?", answer: "Most crowns require two visits spaced about 1-2 weeks apart. Because we have an in-house lab, turnaround is often faster than offices that send work to outside labs." },
       { question: "Does getting a crown hurt?", answer: "Not at all. The tooth is completely numbed before any work begins. Most patients feel only light pressure. We also offer sedation options for anxious patients." },
