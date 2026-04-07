@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 const insuranceLogos = [
-  { name: "Aetna", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/aetna-original-480-138.png" },
-  { name: "Blue Cross Blue Shield", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/bcbs-original-480-138.png" },
-  { name: "Cigna", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/cigna-original-480-138.png" },
-  { name: "Humana", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/humana-original-480-138.png" },
-  { name: "MetLife", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/davis-original-480-138.png" },
-  { name: "United Healthcare", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/united-health-original-480-138.png" },
+  { name: "Aetna", src: "/images/insurance/aetna.webp" },
+  { name: "Blue Cross Blue Shield", src: "/images/insurance/bcbs.webp" },
+  { name: "Cigna", src: "/images/insurance/cigna.webp" },
+  { name: "Humana", src: "/images/insurance/humana.webp" },
+  { name: "MetLife", src: "/images/insurance/davis.webp" },
+  { name: "United Healthcare", src: "/images/insurance/united-health.webp" },
 ];
 
 interface TabbedInsuranceProps {
