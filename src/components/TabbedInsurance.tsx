@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import InsuranceChecker from "@/components/InsuranceChecker";
 
 const insuranceLogos = [
   { name: "Aetna", src: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/aetna-original-480-138.png" },
@@ -16,8 +14,6 @@ interface TabbedInsuranceProps {
 }
 
 const TabbedInsurance = ({ coverageNote }: TabbedInsuranceProps) => {
-  const [tab, setTab] = useState<"check" | "carriers">("check");
-
   return (
     <div>
       {coverageNote && (
@@ -25,40 +21,20 @@ const TabbedInsurance = ({ coverageNote }: TabbedInsuranceProps) => {
           {coverageNote}
         </p>
       )}
-      <div className="flex justify-center gap-2 mb-8">
-        <button
-          onClick={() => setTab("check")}
-          className={`px-5 py-2.5 rounded-full text-sm font-sans font-semibold transition-all ${tab === "check" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:text-foreground"}`}
-        >
-          Check My Insurance
-        </button>
-        <button
-          onClick={() => setTab("carriers")}
-          className={`px-5 py-2.5 rounded-full text-sm font-sans font-semibold transition-all ${tab === "carriers" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:text-foreground"}`}
-        >
-          Accepted Carriers
-        </button>
-      </div>
 
-      {tab === "check" ? (
-        <div className="card-warm p-6 md:p-8 max-w-2xl mx-auto">
-          <InsuranceChecker />
+      <div className="card-warm p-6 md:p-8 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {insuranceLogos.map((ins) => (
+            <div key={ins.name} className="px-4 py-4 bg-background rounded-lg border border-border flex items-center justify-center">
+              <img src={ins.src} alt={`${ins.name} dental insurance logo`} className="h-8 w-auto object-contain" loading="lazy" decoding="async" width={120} height={35} />
+            </div>
+          ))}
         </div>
-      ) : (
-        <div className="card-warm p-6 md:p-8 max-w-2xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {insuranceLogos.map((ins) => (
-              <div key={ins.name} className="px-4 py-4 bg-background rounded-lg border border-border flex items-center justify-center">
-                <img src={ins.src} alt={`${ins.name} dental insurance logo`} className="h-8 w-auto object-contain" loading="lazy" decoding="async" width={120} height={35} />
-              </div>
-            ))}
-          </div>
-          <p className="text-center mt-5 text-xs font-sans text-muted-foreground">
-            We accept most major PPO plans. Don't see yours?{" "}
-            <Link to="/insurance" className="text-primary font-semibold hover:underline">View all accepted plans →</Link>
-          </p>
-        </div>
-      )}
+        <p className="text-center mt-5 text-xs font-sans text-muted-foreground">
+          We accept most major PPO plans. Don't see yours?{" "}
+          <Link to="/insurance" className="text-primary font-semibold hover:underline">View all accepted plans →</Link>
+        </p>
+      </div>
 
       {/* Logo ticker */}
       <div className="relative mt-8 overflow-hidden">
