@@ -140,13 +140,12 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                 height={533}
               />
               <img
-                src={heroImage.url}
+                src={rightFlankImage}
                 alt=""
                 className="absolute -right-16 xl:-right-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
                 loading="eager"
                 width={400}
                 height={533}
-                style={{ transform: "translateY(-50%) scaleX(-1)" }}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.92)] to-transparent" />
             </div>
