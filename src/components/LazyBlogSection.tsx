@@ -4,13 +4,14 @@ import { Skeleton } from "@/components/ui/skeleton";
 const BlogCardCarousel = lazy(() => import("@/components/BlogCardCarousel"));
 const BlogDesktopGrid = lazy(() => import("@/components/BlogDesktopGrid"));
 
-interface BlogPost {
+interface BlogPostItem {
   slug: string;
   title: string;
   excerpt: string;
   category: string;
   author?: string;
   readTime: string;
+  [key: string]: unknown;
 }
 
 interface LazyBlogSectionProps {
