@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "I hadn't been to the dentist in 3 years and was embarrassed. The team at Smile Avenue was so non-judgmental and kind. They got my teeth back in great shape.", name: "Derek S.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "My kids actually look forward to their cleanings here! The hygienists are wonderful with children and make it fun. Can't recommend this place enough.", name: "Sarah T.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road is where Cypress families come for thorough, gentle dental cleanings. Our hygienists Arpine, Ivy, and Jen are known throughout Bridgeland, Towne Lake, and Fairfield for their meticulous yet comfortable technique — patients consistently say these are the best cleanings they've ever had.",
+    "Every cleaning at our Cypress office includes more than just plaque removal. We perform a comprehensive exam with digital X-rays, oral cancer screening, gum health assessment, and personalized hygiene recommendations. We catch problems early — before they become root canals, extractions, or costly restorations.",
+    "We see patients of all ages, from toddlers getting their first cleaning to seniors maintaining their oral health. Our kid-friendly amenities (Netflix, warm blankets, flavored polish) make children's visits fun and stress-free. CFISD families love that we build positive dental habits early.",
+    "Most dental insurance plans cover two preventive cleanings per year at 100%. For uninsured patients, our Smile Avenue Membership Plan includes two cleanings, exams, and X-rays annually plus discounts on all other treatments — making professional dental care affordable for every family.",
+  ],
   ctaHeading: "Schedule Your Cleaning Today",
   ctaBody: "Keep your smile healthy with a professional cleaning at Smile Avenue Cypress.",
 };

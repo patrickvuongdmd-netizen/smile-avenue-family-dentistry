@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "My daughter had all four wisdom teeth removed here. They used sedation and she had zero memory of the procedure. Recovery was smooth.", name: "Linda P.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "I was so nervous about having a tooth pulled but the doctor was incredibly gentle and calming. The extraction was painless and the follow-up care was thorough.", name: "Gregory T.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road provides gentle tooth extraction services for patients across Cypress, TX. Whether you need a simple extraction, surgical removal of impacted wisdom teeth, or emergency same-day extraction, our experienced team handles it all in-office with sedation options for your comfort.",
+    "What sets our Cypress extraction practice apart is our comprehensive approach. We don't just remove the tooth — we discuss replacement options (dental implants, bridges, or dentures) at the same visit so you have a plan for restoring your smile before you leave. For patients needing implants, we can often place a bone graft at the time of extraction to preserve bone for future implant placement.",
+    "Our team uses modern, minimally invasive techniques designed to minimize trauma and speed healing. Combined with nitrous oxide, oral sedation, or IV sedation, most patients are surprised by how comfortable the experience is. Families from Bridgeland, Towne Lake, Fairfield, and Cy-Fair trust us for expert extraction care.",
+    "Most PPO dental insurance plans cover medically necessary extractions. We verify your benefits before treatment and offer 0% financing through CareCredit and Sunbit for any out-of-pocket costs. Same-day emergency extractions are available — call (832) 648-1756 for immediate relief.",
+  ],
   ctaHeading: "Relief Is One Call Away",
   ctaBody: "Don't suffer with tooth pain. Schedule a gentle extraction and get back to feeling great.",
 };

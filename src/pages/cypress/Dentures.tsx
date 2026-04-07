@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "I switched to implant-supported dentures and it was life-changing. No more adhesive, no more worrying about them slipping. Wish I'd done it years ago.", name: "George F.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "The team was so patient during the whole denture process. Multiple fittings to get everything just right. The final result was worth the wait.", name: "Dorothy N.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road is the Cypress practice patients choose for comfortable, natural-looking dentures. Our in-house Smile Dental Lab crafts every set of dentures on-site — allowing us to control fit, aesthetics, and turnaround time in ways that practices relying on external labs simply cannot.",
+    "We offer the full range of denture solutions: traditional full dentures, flexible partial dentures, and implant-supported overdentures that snap onto dental implants for maximum stability. For patients who want a permanent, non-removable solution, we also provide All-on-X full-arch restorations.",
+    "One advantage of our in-house lab is same-day adjustments and relines. If your denture needs a tweak, we handle it on the spot rather than sending it away for days. Patients from Bridgeland, Towne Lake, Fairfield, and Cy-Fair appreciate this convenience, especially during the initial adjustment period.",
+    "We use digital impressions (no goopy molds) for a more accurate fit and natural appearance. Most PPO insurance plans cover a portion of denture costs, and we offer 0% financing through CareCredit and Sunbit for the balance.",
+  ],
   ctaHeading: "Restore Your Smile with Custom Dentures",
   ctaBody: "Schedule your denture consultation and discover which option is right for you.",
 };

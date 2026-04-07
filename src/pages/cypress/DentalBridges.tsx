@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "I was missing two teeth and the implant-supported bridge was the perfect solution. Rock solid, no slipping, and it looks completely natural.", name: "Michael S.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "The whole bridge process was painless and much faster than I expected. Dr. Vuong explained every step clearly. Very happy with my results.", name: "Karen W.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Patients across Cypress, TX rely on Smile Avenue Family Dentistry on Fry Road for expert dental bridge restorations. Whether you're missing one tooth or several, our team evaluates your case and recommends the best bridge type — traditional, Maryland, cantilever, or implant-supported — based on your oral health and goals.",
+    "Our in-house Smile Dental Lab is the key differentiator. While most Cypress dental offices send bridge cases to an external lab (adding 2-3 weeks of wait time), we fabricate yours on-site using digital impressions from our Medit scanner. The result is a more precise fit, better color match, and faster completion.",
+    "Families from Bridgeland, Towne Lake, Fairfield, and Cy-Fair choose us because we offer the full spectrum of tooth replacement — from conservative Maryland bridges to implant-supported bridges that preserve bone. We discuss all options transparently so you can make the right choice for your situation and budget.",
+    "Most PPO dental insurance plans cover a significant portion of bridge costs. We verify your benefits before treatment and offer 0% financing through CareCredit and Sunbit for any remaining balance.",
+  ],
   ctaHeading: "Close the Gap in Your Smile",
   ctaBody: "Schedule your bridge consultation and restore your complete, confident smile.",
 };

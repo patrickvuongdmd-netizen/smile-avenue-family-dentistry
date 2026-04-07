@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "I hadn't been to the dentist in 3 years and they made me feel completely at ease. No judgment, just great care. Already booked my next visit!", name: "David L.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "My kids love coming here! The hygienists are so gentle and patient. Fluoride treatments and sealants give me peace of mind as a parent.", name: "Priya S.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road delivers the most comprehensive preventive dental care in Cypress, TX. Our approach goes beyond basic cleanings — we combine thorough exams, digital X-rays, oral cancer screenings, fluoride treatments, and sealants to catch and prevent problems before they become costly procedures.",
+    "Our Cypress hygiene team uses the latest ultrasonic scaling technology and digital imaging to provide thorough yet gentle care. We see patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Jersey Village — from toddlers getting their first checkup to seniors maintaining their oral health.",
+    "We believe prevention is the most cost-effective form of dentistry. A $200 cleaning today can prevent a $2,000 crown or $5,000 implant tomorrow. That's why we make preventive care accessible with insurance acceptance, our Smile Avenue Membership Plan, and flexible scheduling including early morning availability.",
+    "Every preventive visit includes a one-on-one conversation with your dentist about your oral health status, risk factors, and personalized home care recommendations. We don't rush through exams — we take time to educate you about what we see and what you can do to keep your smile healthy between visits.",
+  ],
   ctaHeading: "Schedule Your Preventive Visit Today",
   ctaBody: "Prevention is the best investment in your smile. Book your cleaning and exam at Smile Avenue Cypress.",
 };

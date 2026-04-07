@@ -61,6 +61,12 @@ const data: ServicePageData = {
     { quote: "I have sensitive teeth and was worried about whitening. They used a gentle formula and I had zero discomfort. My smile looks amazing now.", name: "Chris B.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Got the take-home trays before my wedding. Two weeks later my smile was camera-ready. The custom trays fit perfectly and were so easy to use.", name: "Emily R.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Fry Road is where Cypress patients come for safe, dramatic teeth whitening results. Our professional-grade whitening treatments are significantly stronger than anything available over the counter — delivering up to 8 shades brighter in a single one-hour visit.",
+    "We offer two professional whitening pathways: in-office Zoom whitening for immediate, same-day results, and custom take-home trays with professional-grade gel for gradual brightening on your schedule. Many patients combine both for maximum results — in-office treatment followed by periodic at-home touch-ups.",
+    "Sensitivity is the #1 concern patients have about whitening. Our Cypress team customizes every treatment based on your sensitivity level, using desensitizing agents and adjusted gel concentrations. Most patients with sensitivity history tolerate our protocols very well and are surprised by how comfortable the experience is.",
+    "For patients from Bridgeland, Towne Lake, and Fairfield considering a complete smile makeover, whitening is often the perfect starting point before veneers or bonding — we whiten your natural teeth first, then match any restorations to your new, brighter shade for a cohesive result.",
+  ],
   ctaHeading: "Ready for a Brighter Smile?",
   ctaBody: "Professional whitening at Smile Avenue Cypress. Walk out several shades brighter in just one visit.",
 };
