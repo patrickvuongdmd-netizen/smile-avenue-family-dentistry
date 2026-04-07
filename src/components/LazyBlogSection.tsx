@@ -4,15 +4,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 const BlogCardCarousel = lazy(() => import("@/components/BlogCardCarousel"));
 const BlogDesktopGrid = lazy(() => import("@/components/BlogDesktopGrid"));
 
-interface BlogPostItem {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  author?: string;
-  readTime: string;
-  [key: string]: unknown;
-}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type BlogPostItem = any;
 
 interface LazyBlogSectionProps {
   /** Filter posts by category (optional). Falls back to first 3 posts. */
