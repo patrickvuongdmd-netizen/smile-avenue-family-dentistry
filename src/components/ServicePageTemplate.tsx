@@ -925,7 +925,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 16. CROSS-SERVICE CAROUSEL ─── */}
-        <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} />
+        <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} bgClassName={nextBg()} />
 
         {/* ─── 17. FINAL CTA — location card ─── */}
         <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
