@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BlogDesktopGrid from "@/components/BlogDesktopGrid";
+
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Phone, Check, ArrowRight } from "lucide-react";
