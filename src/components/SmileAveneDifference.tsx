@@ -29,16 +29,8 @@ const SmileAvenueDifference = ({ onBook }: Props) => (
     <div className="container mx-auto">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {/* Photo */}
-        <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-          <img
-            src={waitingRoomImg}
-            alt="Smile Avenue waiting room with leather sofas, 3D accent wall, and complimentary refreshments"
-            className="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-            width={800}
-            height={600}
-          />
+        <div className="rounded-2xl overflow-hidden shadow-lg">
+          <LazyYouTube videoId="pPO-p4KRJ_s" title="Your New Dental Home: Smile Avenue Family Dentistry" />
         </div>
 
         {/* Perks */}
