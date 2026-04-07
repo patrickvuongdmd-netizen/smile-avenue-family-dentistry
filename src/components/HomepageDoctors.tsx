@@ -25,7 +25,7 @@ const HomepageDoctors = () => (
         {/* Left — Team photo */}
         <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/5] max-h-[520px] mx-auto lg:mx-0 w-full">
           <img
-            src={OFFICE_IMAGES.teamPhoto}
+            src={OFFICE_IMAGES.aboutTeamAction}
             alt="The Smile Avenue clinical team — doctors and staff"
             className="w-full h-full object-cover"
             loading="lazy"
