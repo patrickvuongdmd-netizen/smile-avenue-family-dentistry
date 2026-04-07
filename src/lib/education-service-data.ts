@@ -574,6 +574,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Implant-Supported Option", smileAvenue: "✓ Available in-house", typical: "Referred to specialist" },
       { feature: "Same-Day Options", smileAvenue: "✓ Immediate dentures available", typical: "Wait weeks without teeth" }
     ],
+    serviceComparison: {
+      titleA: "Dentures",
+      titleB: "Dental Implants",
+      rows: [
+        { feature: "Cost", optionA: "$1,500–$4,000 per arch", optionB: "$3,000–$5,000 per implant" },
+        { feature: "Surgery Required", optionA: "No surgery", optionB: "Minor oral surgery" },
+        { feature: "Bone Loss Prevention", optionA: "Does not prevent bone loss", optionB: "Stimulates jawbone" },
+        { feature: "Stability", optionA: "Can shift or slip", optionB: "Fixed and permanent" },
+        { feature: "Maintenance", optionA: "Nightly removal, soaking, adhesives", optionB: "Brush & floss like natural teeth" },
+        { feature: "Timeline", optionA: "Ready in weeks", optionB: "3–6 months healing" },
+      ],
+    },
     faqs: [
       { question: "How long does it take to get used to dentures?", answer: "Most patients adjust to new dentures within 2-4 weeks. Eating and speaking may feel different at first, but your muscles and brain adapt quickly. We schedule follow-up visits to fine-tune the fit during this period." },
       { question: "Can I eat normally with dentures?", answer: "Yes, with practice. Start with soft foods cut into small pieces, and gradually reintroduce harder foods. Implant-supported dentures allow you to eat with near-normal bite force, including foods like apples and steak." },
