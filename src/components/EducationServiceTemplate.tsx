@@ -327,7 +327,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
 
         {/* 5a. SERVICE-SPECIFIC COMPARISON — educational, "which option is right for me?" */}
         {data.serviceComparison && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+          <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg5a!)}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">COMPARE YOUR OPTIONS</p>
               <h2 className="section-heading">{data.serviceComparison.titleA} vs {data.serviceComparison.titleB}</h2>
@@ -375,7 +375,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         )}
 
         {/* 5b. SMILE AVENUE VS TYPICAL — practice differentiator */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${data.serviceComparison ? 'bg-background' : 'section-warm'}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg5b)}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Choose Smile Avenue for {data.serviceName}?</h2>
@@ -423,7 +423,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
 
         {/* 6. VIDEO CAROUSEL — visual proof mid-page */}
         {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+           <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg6!)}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">SEE HOW IT WORKS</p>
               <h2 className="section-heading">Watch: Understanding {data.serviceName}</h2>
@@ -435,7 +435,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         )}
 
         {/* 7. PROCESS STEPS — "what happens next" */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg7)}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">WHAT TO EXPECT</p>
             <h2 className="section-heading">The {data.serviceName} Process</h2>
@@ -483,7 +483,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
 
         {/* 9. VIDEO TESTIMONIAL — social proof after FAQ */}
         {data.testimonialVideoId && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+           <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg9!)}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">PATIENT STORY</p>
               <h2 className="section-heading">Hear From a Real Patient</h2>
@@ -495,7 +495,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         )}
 
         {/* 10. INSURANCE & PAYMENT — consolidated affordability */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg10)}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">INSURANCE & AFFORDABILITY</p>
             <h2 className="section-heading">Affordable {data.serviceName}</h2>
@@ -509,7 +509,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
 
         {/* 11. RELATED BLOG POSTS */}
         {relatedPosts.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+           <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg11!)}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">FROM OUR BLOG</p>
               <h2 className="section-heading">Learn More About {data.serviceName}</h2>
@@ -527,7 +527,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
 
         {/* 12. RELATED SERVICES — rich cross-linking cards */}
         {data.relatedSlugs.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+           <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg12!)}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">EXPLORE MORE SERVICES</p>
               <h2 className="section-heading">You Might Also Need</h2>
