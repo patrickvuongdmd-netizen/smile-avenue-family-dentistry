@@ -10,6 +10,7 @@ import BackToTop from "@/components/BackToTop";
 import ScrollReveal from "@/components/ScrollReveal";
 import TrustTicker from "@/components/TrustTicker";
 import LazySection from "@/components/LazySection";
+import LPExitIntentPopup from "@/components/LPExitIntentPopup";
 
 /* ── Types ─────────────────────────────────────────────────── */
 
@@ -758,6 +759,14 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </div>
       </div>
 
+      <LPExitIntentPopup
+        bookingUrl={bookingUrl}
+        phone={loc.phone}
+        phoneFormatted={loc.phoneFormatted}
+        locationName={loc.name}
+        onBook={() => fireConversion(bookLabel)}
+        onCall={() => fireConversion(callLabel)}
+      />
       <BackToTop />
     </>
   );
