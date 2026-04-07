@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import BlogDesktopGrid from "@/components/BlogDesktopGrid";
+
 import { Helmet } from "react-helmet-async";
 import useDocTitle from "@/hooks/use-doc-title";
 import { Star, Phone, Check, ArrowRight } from "lucide-react";
 import { trackPhoneClick } from "@/lib/track-phone";
-import { BLOG_POSTS } from "@/lib/blog-data";
-import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
+import LazyBlogSection from "@/components/LazyBlogSection";
 import { useState } from "react";
 
 import Navbar from "@/components/Navbar";
@@ -283,15 +282,7 @@ const Home = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div>
-              <BlogDesktopGrid
-                posts={BLOG_POSTS.slice(0, 3)}
-                variant="image"
-                categoryColors={BLOG_CATEGORY_COLORS}
-                categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={BLOG_FALLBACK_IMAGE}
-              />
-            </div>
+            <LazyBlogSection variant="image" showMobile={false} />
           </div>
         </section>
       </main>

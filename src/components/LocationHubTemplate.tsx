@@ -16,10 +16,7 @@ import BackToTop from "@/components/BackToTop";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
 import VideoCarousel from "@/components/VideoCarousel";
-import BlogCardCarousel from "@/components/BlogCardCarousel";
-import BlogDesktopGrid from "@/components/BlogDesktopGrid";
-import { BLOG_POSTS } from "@/lib/blog-data";
-import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
+import LazyBlogSection from "@/components/LazyBlogSection";
 
 /* ── Data interface ── */
 
@@ -472,15 +469,7 @@ const LocationHubTemplate = ({ data }: { data: LocationHubData }) => {
                 View All Posts <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div>
-              <BlogCardCarousel
-                posts={BLOG_POSTS.slice(0, 3)}
-                categoryColors={BLOG_CATEGORY_COLORS}
-                categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={BLOG_FALLBACK_IMAGE}
-              />
-              <BlogDesktopGrid posts={BLOG_POSTS.slice(0, 3)} />
-            </div>
+            <LazyBlogSection />
           </div>
         </section>
       </main>

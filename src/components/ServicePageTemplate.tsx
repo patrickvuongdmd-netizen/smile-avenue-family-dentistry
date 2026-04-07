@@ -25,10 +25,7 @@ import ServicesCrossLink from "@/components/ServicesCrossLink";
 import TabbedInsurance from "@/components/TabbedInsurance";
 import PaymentOptions from "@/components/PaymentOptions";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
-import BlogCardCarousel from "@/components/BlogCardCarousel";
-import BlogDesktopGrid from "@/components/BlogDesktopGrid";
-import { BLOG_POSTS } from "@/lib/blog-data";
-import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
+import LazyBlogSection from "@/components/LazyBlogSection";
 
 interface SubService {
   title: string;
@@ -1081,26 +1078,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 View All Posts <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div>
-              {(() => {
-                const cat = data.blogCategory || SERVICE_SLUG_TO_BLOG_CATEGORY[data.serviceSlug];
-                const categoryPosts = cat
-                  ? BLOG_POSTS.filter(p => p.category === cat).slice(0, 3)
-                  : [];
-                const blogPosts = categoryPosts.length >= 2 ? categoryPosts : BLOG_POSTS.slice(0, 3);
-                return (
-                  <>
-                    <BlogCardCarousel
-                      posts={blogPosts}
-                      categoryColors={BLOG_CATEGORY_COLORS}
-                      categoryImages={BLOG_CATEGORY_IMAGES}
-                      fallbackImage={BLOG_FALLBACK_IMAGE}
-                    />
-                    <BlogDesktopGrid posts={blogPosts} />
-                  </>
-                );
-              })()}
-            </div>
+            <LazyBlogSection
+              category={data.blogCategory}
+              serviceSlug={data.serviceSlug}
+              slugCategoryMap={SERVICE_SLUG_TO_BLOG_CATEGORY}
+            />
           </div>
         </section>
 

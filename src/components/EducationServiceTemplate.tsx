@@ -16,10 +16,7 @@ import VideoCarousel from "@/components/VideoCarousel";
 import { SERVICE_VIDEOS, DOCTOR_IMAGES } from "@/lib/images";
 import TabbedInsurance from "@/components/TabbedInsurance";
 import PaymentOptions from "@/components/PaymentOptions";
-import BlogCardCarousel from "@/components/BlogCardCarousel";
-import BlogDesktopGrid from "@/components/BlogDesktopGrid";
-import { BLOG_POSTS } from "@/lib/blog-data";
-import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
+import LazyBlogSection from "@/components/LazyBlogSection";
 import { SERVICE_IMAGES, OFFICE_IMAGES } from "@/lib/images";
 import { TEAM_IMAGES } from "@/lib/team-images";
 import { SERVICE_NAMES } from "@/lib/brand-service-data";
@@ -74,15 +71,13 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
   const leftFlankImage = staffPhotos[slugHash % staffPhotos.length];
   const rightFlankImage = clinicalPhotos[slugHash % clinicalPhotos.length];
 
-  const relatedPosts = data.relatedBlogCategory
-    ? BLOG_POSTS.filter((p) => p.category === data.relatedBlogCategory).slice(0, 3)
-    : [];
+  const hasBlogCategory = !!data.relatedBlogCategory;
 
   // Dynamic background alternation — ensures no two adjacent sections share a bg
   const hasServiceComparison = !!data.serviceComparison;
   const hasVideos = !!(SERVICE_VIDEOS[data.serviceSlug]?.length);
   const hasTestimonialVideo = !!data.testimonialVideoId;
-  const hasBlog = relatedPosts.length > 0;
+  const hasBlog = hasBlogCategory;
   const flip = (bg: "warm" | "bg"): "warm" | "bg" => bg === "warm" ? "bg" : "warm";
   const cls = (bg: "warm" | "bg") => bg === "warm" ? "section-warm" : "bg-background";
 
@@ -668,18 +663,13 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         </section>
 
         {/* 11. RELATED BLOG POSTS */}
-        {relatedPosts.length > 0 && (
+        {hasBlogCategory && (
            <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg11!)}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">FROM OUR BLOG</p>
               <h2 className="section-heading">Learn More About {data.serviceName}</h2>
               <div className="mt-10">
-                <div className="hidden md:block">
-                  <BlogDesktopGrid posts={relatedPosts} categoryImages={BLOG_CATEGORY_IMAGES} categoryColors={BLOG_CATEGORY_COLORS} fallbackImage={BLOG_FALLBACK_IMAGE} />
-                </div>
-                <div className="md:hidden">
-                  <BlogCardCarousel posts={relatedPosts} categoryImages={BLOG_CATEGORY_IMAGES} categoryColors={BLOG_CATEGORY_COLORS} fallbackImage={BLOG_FALLBACK_IMAGE} />
-                </div>
+                <LazyBlogSection category={data.relatedBlogCategory} />
               </div>
             </div>
           </section>

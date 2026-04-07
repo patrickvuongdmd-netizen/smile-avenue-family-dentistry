@@ -15,10 +15,7 @@ import SkipToContent from "@/components/SkipToContent";
 import DoctorCard from "@/components/DoctorCard";
 import BookingLocationModal from "@/components/BookingLocationModal";
 import { DOCTOR_IMAGES, OFFICE_IMAGES } from "@/lib/images";
-import BlogCardCarousel from "@/components/BlogCardCarousel";
-import BlogDesktopGrid from "@/components/BlogDesktopGrid";
-import { BLOG_POSTS } from "@/lib/blog-data";
-import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
+import LazyBlogSection from "@/components/LazyBlogSection";
 
 interface WhyChooseItem {
   icon: React.ReactNode;
@@ -445,15 +442,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                 View All Posts <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div>
-              <BlogCardCarousel
-                posts={BLOG_POSTS.slice(0, 3)}
-                categoryColors={BLOG_CATEGORY_COLORS}
-                categoryImages={BLOG_CATEGORY_IMAGES}
-                fallbackImage={BLOG_FALLBACK_IMAGE}
-              />
-              <BlogDesktopGrid posts={BLOG_POSTS.slice(0, 3)} />
-            </div>
+            <LazyBlogSection />
           </div>
         </section>
 
