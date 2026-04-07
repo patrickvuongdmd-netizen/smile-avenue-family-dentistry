@@ -292,6 +292,10 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content="Cypress, TX" />
+        <meta name="geo.position" content="29.9691;-95.6972" />
+        <meta name="ICBM" content="29.9691, -95.6972" />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={data.metaTitle} />
         <meta property="og:description" content={data.metaDescription} />
@@ -300,9 +304,16 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         {SERVICE_IMAGES[data.serviceSlug] && <meta property="og:image" content={SERVICE_IMAGES[data.serviceSlug].url} />}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={data.metaTitle} />
+        <meta name="twitter:description" content={data.metaDescription} />
+        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(dentalServiceJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(dentistJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        {itemListJsonLd && <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>}
       </Helmet>
       <TrustTicker />
       <Navbar phone={PHONE} phoneFormatted={PHONE_FORMATTED} bookingUrl={BOOKING} />

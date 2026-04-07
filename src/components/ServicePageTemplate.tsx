@@ -565,6 +565,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(medicalWebPageJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(dentistJsonLd)}</script>
+        {reviewJsonLd && <script type="application/ld+json">{JSON.stringify(reviewJsonLd)}</script>}
+        {subServicesItemListJsonLd && <script type="application/ld+json">{JSON.stringify(subServicesItemListJsonLd)}</script>}
         {data.videoId && (
           <script type="application/ld+json">{JSON.stringify({
             "@context": "https://schema.org",
