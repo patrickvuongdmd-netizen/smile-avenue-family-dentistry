@@ -1,5 +1,5 @@
 import { Tv, Factory, Calendar, Zap, Languages, ScanLine, Heart, Baby, Sparkles, Crown, Scan, CreditCard, CalendarCheck } from "lucide-react";
-import waitingRoomImg from "@/assets/office/waiting-room-lobby.png";
+import LazyYouTube from "@/components/LazyYouTube";
 
 const perks = [
   { icon: <Tv className="w-5 h-5" />, text: "Netflix and comfort amenities in every chair" },
