@@ -11,6 +11,8 @@ import TrustTicker from "@/components/TrustTicker";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import LazyYouTube from "@/components/LazyYouTube";
+import VideoCarousel from "@/components/VideoCarousel";
+import { SERVICE_VIDEOS } from "@/lib/images";
 import TabbedInsurance from "@/components/TabbedInsurance";
 import PaymentOptions from "@/components/PaymentOptions";
 import BlogCardCarousel from "@/components/BlogCardCarousel";
