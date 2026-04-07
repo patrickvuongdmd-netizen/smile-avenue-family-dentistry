@@ -18,6 +18,7 @@ import BookingLocationModal from "@/components/BookingLocationModal";
 import LazyYouTube from "@/components/LazyYouTube";
 import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES, DOCTOR_IMAGES } from "@/lib/images";
+import { TEAM_IMAGES } from "@/lib/team-images";
 import { trackPhoneClick } from "@/lib/track-phone";
 import VideoCarousel from "@/components/VideoCarousel";
 import ServicesCrossLink from "@/components/ServicesCrossLink";
