@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.aboutKatyTeam,
   heroSubheading: "A short drive from the Firethorne community to modern, full-service dental care.",
   heroBody: "Firethorne families deserve a dentist who combines proximity with excellence. Smile Avenue Family Dentistry on Westheimer Parkway offers the comprehensive dental care your family needs — from children's checkups to dental implants — just minutes from the Firethorne community.",
+  heroValueProps: ["Minutes from Firethorne", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Firethorne is one of Katy's most welcoming master-planned communities, known for its resort-style amenities, beautiful trails, and family-first atmosphere. At Smile Avenue Family Dentistry, we're proud to serve Firethorne residents with the same level of care and quality they've come to expect from their community.",
     "Our Katy office on Westheimer Parkway is a quick drive from the Firethorne community via Firethorne Trail and Westheimer Parkway. Whether you're heading out for school drop-off or running errands along the Westheimer corridor, fitting a dental appointment into your day is easy.",

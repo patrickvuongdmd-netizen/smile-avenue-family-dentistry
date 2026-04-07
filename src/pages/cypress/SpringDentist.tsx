@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.cypressHero,
   heroSubheading: "Comprehensive dental care for Spring families — just a short drive on US-290.",
   heroBody: "Smile Avenue Family Dentistry serves Spring, TX families with state-of-the-art dental care. Located on Fry Road in Cypress, our office is an easy 20-minute drive via US-290 West. From routine cleanings to dental implants and smile makeovers, we deliver hospitality-driven dentistry with no judgment, ever.",
+  heroValueProps: ["20 minutes from Spring", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Spring, TX is a thriving community northwest of Houston, and many Spring families are discovering Smile Avenue Family Dentistry as their preferred dental home. While Spring has several dental options, patients consistently choose us for our combination of advanced technology, warm hospitality, and comprehensive services under one roof.",
     "The drive from Spring to our Cypress office is straightforward — hop on US-290 West and exit at Fry Road. In about 20 minutes, you'll arrive at a practice that treats your comfort as seriously as your dental health. Netflix in every room, warm blankets, and a team that genuinely listens.",

@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.coffeeStation,
   heroSubheading: "Convenient, high-quality dental care for the Jersey Village and Jones Road corridor.",
   heroBody: "Jersey Village residents no longer need to drive into Houston for top-tier dental care. Smile Avenue Family Dentistry on Fry Road in Cypress is just 15 minutes from Jersey Village, offering a full range of services from routine cleanings to dental implants and Invisalign.",
+  heroValueProps: ["15 minutes from Jersey Village", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Jersey Village is a tight-knit, family-oriented community in the southeast corner of the greater Cypress area, known for its excellent schools, safe neighborhoods, and convenient access to Highway 290 and FM 529. Smile Avenue Family Dentistry is proud to serve Jersey Village families with comprehensive, compassionate dental care.",
     "Located on Fry Road in Cypress, our office is a comfortable drive from the Jones Road and FM 529 corridors that define the Jersey Village area. We've designed our practice to be the dental home that Jersey Village residents have been looking for — modern, welcoming, and equipped with the latest technology.",

@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.patientCare,
   heroSubheading: "Comprehensive dental care minutes from Cross Creek Ranch and Fulshear.",
   heroBody: "Cross Creek Ranch and the growing Fulshear corridor deserve a dental practice that matches the quality of their community. Smile Avenue Family Dentistry on Westheimer Parkway delivers modern, full-service dental care for families of all sizes — and we're just a short drive away.",
+  heroValueProps: ["Minutes from Cross Creek Ranch", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Cross Creek Ranch is one of the fastest-growing communities in the greater Katy-Fulshear area, attracting families who appreciate beautiful master-planned living with resort-style amenities. Smile Avenue Family Dentistry is committed to serving this growing community with the highest standard of dental care.",
     "Our Katy office at 23541 Westheimer Pkwy Ste #170 is conveniently accessible from Cross Creek Ranch via FM 1093 (Westheimer Parkway). The drive is quick and direct, with no highway tolls or congestion to worry about.",

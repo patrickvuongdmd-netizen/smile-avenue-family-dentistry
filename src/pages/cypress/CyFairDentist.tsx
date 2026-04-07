@@ -12,6 +12,7 @@ const data: NeighborhoodPageData = {
   heroImage: OFFICE_IMAGES.teamPhoto,
   heroSubheading: "Proudly serving the greater Cy-Fair community from our Fry Road office.",
   heroBody: "The Cy-Fair area is home to some of Houston's best families — and Smile Avenue Family Dentistry is proud to be their trusted dental practice. Located on Fry Road in the heart of Cypress, we serve patients from across the Cy-Fair ISD area, Jersey Village, and the Willowbrook corridor.",
+  heroValueProps: ["Conveniently located in Cy-Fair", "Same-day & Saturday appointments", "In-house dental lab for faster results", "Most insurance accepted · 0% financing", "4.9★ from 5,000+ Google reviews"],
   contentParagraphs: [
     "Cy-Fair is more than a school district — it's a community. Spanning from Jersey Village to Cypress and touching the Willowbrook and FM 529 corridors, the Cy-Fair area represents hundreds of thousands of families who deserve convenient, high-quality dental care.",
     "Smile Avenue Family Dentistry sits at the center of this community on Fry Road, making us easily accessible from virtually anywhere in the Cy-Fair area. Whether you live near Cy-Fair High School, work along Highway 290, or shop at the Willowbrook Mall, our office is a short drive away.",
