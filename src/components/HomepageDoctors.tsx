@@ -24,16 +24,8 @@ const HomepageDoctors = () => (
     <div className="container mx-auto lg:max-w-6xl">
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Left — Team photo */}
-        <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/5] max-h-[520px] mx-auto lg:mx-0 w-full">
-          <img
-            src={OFFICE_IMAGES.aboutTeamAction}
-            alt="The Smile Avenue clinical team — doctors and staff"
-            className="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-            width={600}
-            height={750}
-          />
+        <div className="rounded-2xl overflow-hidden shadow-lg mx-auto lg:mx-0 w-full">
+          <LazyYouTube videoId="oNouq-eUAGw" title="Our Favorite Thing About Our Patients" />
         </div>
 
         {/* Right — Value props */}
