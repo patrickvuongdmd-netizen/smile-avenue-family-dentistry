@@ -315,7 +315,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* HERO */}
-        <section className="section-warm">
+        <section className="section-warm" aria-label={`${data.serviceName} overview`}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
             <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
@@ -363,7 +363,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         </section>
 
         {/* INTRO — editorial single-column */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background" aria-label={`About ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">{data.introKicker}</p>
@@ -392,7 +392,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         </section>
 
         {/* WHY CHOOSE US — soft cards */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm" aria-label={`Why choose Smile Avenue for ${data.serviceName}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">WHY SMILE AVENUE</p>
             <h2 className="section-heading">{data.whyHeading}</h2>
@@ -408,7 +408,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         </section>
 
         {/* PROCESS STEPS — timeline on mobile */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background" aria-label={`${data.serviceName} process steps`}>
           <div className="container mx-auto text-center">
             <p className="kicker">HOW IT WORKS</p>
             <h2 className="section-heading">{data.processHeading}</h2>
@@ -457,7 +457,7 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         )}
 
         {/* FAQ */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta" aria-label={`Frequently asked questions about ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
