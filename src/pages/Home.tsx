@@ -170,13 +170,16 @@ const Home = () => {
           {/* ── MOBILE HERO ── */}
           <div className="lg:hidden px-5 pt-8 pb-10 text-center">
 
-            <h1 className="font-display text-2xl leading-[1.15] font-bold text-foreground mb-5">
-              Finally, a Dentist You'll{" "}
-              <em className="not-italic text-primary">Actually Enjoy</em>
+            <h1 className="font-display text-2xl leading-[1.15] font-bold text-foreground mb-2">
+              Dentistry Done{" "}
+              <em className="not-italic text-primary">Differently.</em>
             </h1>
+            <p className="font-display text-lg font-semibold text-muted-foreground mb-5">
+              Smiles that prove it.
+            </p>
 
             <p className="font-body text-[15px] leading-[1.7] text-muted-foreground mb-8 max-w-[340px] mx-auto">
-              Taking care of yourself starts with your smile. We deliver exceptional dental care that treats your oral health as an essential part of your overall well-being — <strong className="text-foreground font-semibold">with zero judgment, ever.</strong>
+              We built Smile Avenue around a simple idea: dental care should leave you feeling better — not just about your teeth, but about the <strong className="text-foreground font-semibold">whole experience.</strong>
             </p>
 
             {/* CTAs — stacked full-width on mobile */}
@@ -217,12 +220,13 @@ const Home = () => {
               <div className="grid lg:grid-cols-2 gap-16 xl:gap-20 items-center">
                 <div className="text-left">
                   <p className="kicker mb-3 text-xs tracking-[0.2em]">5,000+ FAMILIES TRUST US WITH THEIR SMILES</p>
-                  <h1 className="font-display text-6xl xl:text-7xl font-bold leading-[1.05] mb-6 text-foreground">Finally, a Dentist You'll <em className="not-italic text-primary">Actually Enjoy</em></h1>
+                  <h1 className="font-display text-6xl xl:text-7xl font-bold leading-[1.05] mb-3 text-foreground">Dentistry Done <em className="not-italic text-primary">Differently.</em></h1>
+                  <p className="font-display text-2xl xl:text-3xl font-semibold text-muted-foreground mb-6">Smiles that prove it.</p>
                   <p className="font-body text-xl leading-relaxed text-muted-foreground mb-4 max-w-lg">
-                    Taking care of yourself starts with your smile. We deliver exceptional dental care that treats your oral health as an essential part of your overall well-being.
+                    We built Smile Avenue around a simple idea: dental care should leave you feeling better — not just about your teeth, but about the whole experience. From your first visit to your hundredth, we show up for you.
                   </p>
                   <p className="font-body text-lg leading-relaxed text-muted-foreground mb-10 max-w-lg">
-                    Our doctors follow the highest clinical standards, use state-of-the-art technology, and deliver smarter care with a softer touch. Our goal is simple: to make you <strong className="text-foreground font-semibold">smile every time you see us.</strong>
+                    Our doctors bring advanced training and genuine warmth to every appointment. No rushing, no guessing, no dread. Just honest care, modern techniques, and a team that treats you like family — <strong className="text-foreground font-semibold">because most of our patients are.</strong>
                   </p>
                   <div className="flex gap-4 mb-3 max-w-md">
                     <button onClick={() => setBookingModalOpen(true)} className="flex-1 inline-flex items-center justify-center font-sans font-bold tracking-wide text-base py-4 px-8 rounded-full transition-all duration-200 bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))] shadow-[0_2px_8px_hsl(var(--gold)/0.25)] hover:bg-[hsl(40,55%,48%)] hover:shadow-lg">Book Now</button>
