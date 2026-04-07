@@ -351,7 +351,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
 
-  /* Dynamic background alternation for optional sections */
+  /* Dynamic background alternation — hero is always section-warm,
+     subsequent content sections alternate bg-background / section-warm.
+     Special sections (FAQ gradient, mid-CTA strip, final CTA) use fixed backgrounds.
+     Only rendered optional sections advance the counter, keeping alternation perfect. */
   let sectionIndex = 0;
   const nextBg = () => {
     const bg = sectionIndex % 2 === 0 ? "bg-background" : "section-warm";
