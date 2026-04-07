@@ -57,6 +57,13 @@ const data: ServicePageData = {
     { quote: "Minimal-prep veneers were the perfect solution for my stained teeth. Barely any tooth removal and the results are gorgeous.", name: "Andrew J.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "From the consultation to the final reveal, every step was professional and exciting. My smile has never looked this good.", name: "Samantha T.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Katy veneer office?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — in the heart of Cinco Ranch, convenient for patients from Fulshear, Cross Creek Ranch, Firethorne, Brookshire, and Richmond." },
+    { question: "Which Katy dentist does veneers?", answer: "Dr. Patrick Vuong and Dr. Sameer Bilal perform veneer procedures at our Katy office. All veneers are custom-fabricated in our in-house Smile Dental Lab for precise shade matching and fit." },
+    { question: "How much do veneers cost in Katy, TX?", answer: "Porcelain veneers typically range from $1,200–$2,500 per tooth depending on material. We provide a detailed estimate at your free consultation. 0% financing through CareCredit and Sunbit available." },
+    { question: "Do you offer Saturday veneer consultations in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm, making it easy to schedule your free veneer consultation without taking time off work." },
+    { question: "What veneer materials do you use in Katy?", answer: "We offer Emax and zirconia porcelain veneers, both fabricated in our in-house lab. Emax provides superior translucency for front teeth, while zirconia offers maximum durability. Your dentist will recommend the best option for your smile goals." },
+  ],
   ctaHeading: "Get the Smile You've Always Wanted",
   ctaBody: "Book a veneer consultation at our Katy office and see what's possible for your smile.",
 };

@@ -60,6 +60,13 @@ const data: ServicePageData = {
     { quote: "I was impressed by how fast I got my crown compared to my previous dentist. The in-house lab really makes a difference in turnaround time.", name: "Brian M.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "I needed a crown after a root canal and the whole process was smooth. Great fit, natural look. Very happy with the result.", name: "Tom S.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Katy crown office?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — in Cinco Ranch, serving patients from Fulshear, Cross Creek Ranch, Firethorne, Brookshire, and Richmond." },
+    { question: "Which dentist does crowns at Smile Avenue Katy?", answer: "Dr. Patrick Vuong, Dr. Sameer Bilal, and Dr. Sarah Maredia all perform crown procedures at our Katy location. All crowns are fabricated in our in-house Smile Dental Lab." },
+    { question: "How much does a dental crown cost in Katy, TX?", answer: "A single crown typically ranges from $800–$1,500 depending on material. Most PPO dental plans cover 50–80% of crown costs. We verify your benefits before treatment begins." },
+    { question: "Can I get a crown on Saturday in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm for crown consultations, preparation, and delivery. It's a convenient option for busy professionals and families." },
+    { question: "How fast can I get a crown at Smile Avenue Katy?", answer: "Our in-house Smile Dental Lab means significantly faster turnaround than offices that outsource to third-party labs. Digital scanning ensures a precise fit without goopy impressions." },
+  ],
   ctaHeading: "Restore Your Smile with a Custom Crown",
   ctaBody: "Schedule your crown consultation at Smile Avenue Katy — precision craftsmanship from our in-house lab.",
 };

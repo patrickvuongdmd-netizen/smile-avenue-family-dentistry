@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "The minimal-prep veneers were exactly what I needed. Very little drilling and the results are gorgeous. I get compliments on my smile constantly.", name: "Andrew L.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "Worth every penny. The Emax veneers look so natural — they have the same translucency as real teeth. Nobody can tell they're veneers.", name: "Christine M.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Cypress veneer office?", answer: "We're at 9212 Fry Rd #120, Cypress, TX 77433 — convenient for patients from Bridgeland, Towne Lake, Fairfield, Cy-Fair, and Jersey Village. Free parking available." },
+    { question: "Which Cypress dentist does veneers?", answer: "Dr. Patrick Vuong leads our cosmetic veneer cases at the Cypress office. All veneers are designed and fabricated in our in-house Smile Dental Lab for precise color matching and fit." },
+    { question: "How much do veneers cost in Cypress, TX?", answer: "Porcelain veneers typically range from $1,200–$2,500 per tooth depending on material (Emax or zirconia). We provide a detailed estimate at your free consultation. 0% financing through CareCredit and Sunbit available." },
+    { question: "Do you offer free veneer consultations in Cypress?", answer: "Yes. Your free consultation includes a digital smile design preview, shade evaluation, and a personalized treatment plan with transparent pricing — no obligation." },
+    { question: "Can I get same-day veneers in Cypress?", answer: "Our in-house Smile Dental Lab significantly reduces turnaround time compared to offices that outsource. While same-day delivery depends on case complexity, many patients receive their final veneers faster than the industry average." },
+  ],
   ctaHeading: "Transform Your Smile with Veneers",
   ctaBody: "Schedule your free veneer consultation and see what's possible for your smile.",
 };

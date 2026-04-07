@@ -60,6 +60,13 @@ const data: ServicePageData = {
     { quote: "Dr. Vuong and the team made a scary procedure feel manageable. I walked in with failing teeth and left with a new smile the same day. Incredible.", name: "Patricia D.", source: "Google Review" , location: "Firethorne, Katy" },
     { quote: "The in-house lab made the whole process smoother and faster. My final zirconia teeth look absolutely stunning. Worth every penny.", name: "Frank G.", source: "Google Review" , location: "Cinco Ranch, Katy" },
   ],
+  locationFaqs: [
+    { question: "Where is Smile Avenue's Katy All-on-X office?", answer: "We're at 23541 Westheimer Pkwy Ste #170, Katy, TX 77494 — serving full-arch implant patients from Cinco Ranch, Fulshear, Cross Creek Ranch, Firethorne, Brookshire, and Richmond." },
+    { question: "Which Katy dentist performs All-on-4 surgery?", answer: "Dr. Patrick Vuong and Dr. Sameer Bilal perform All-on-X implant procedures at our Katy office. All final zirconia prosthetics are designed and fabricated in our in-house Smile Dental Lab." },
+    { question: "How much does All-on-4 cost in Katy, TX?", answer: "All-on-4 full-arch restorations start around $20,000 per arch. Final pricing depends on bone grafting needs, sedation, and material choice. We provide a detailed estimate at your free consultation. 0% financing available through CareCredit and Sunbit." },
+    { question: "Can I get All-on-4 on a Saturday in Katy?", answer: "Consultations and 3D CT scans can be scheduled on Saturdays (8am–2pm). Surgical placement is typically scheduled on weekdays to allow adequate time for the procedure and recovery planning." },
+    { question: "Do you offer free All-on-X consultations in Katy?", answer: "Yes. Your free consultation includes a 3D CT scan, bone density assessment, and a personalized treatment plan with transparent pricing and financing options — no obligation." },
+  ],
   ctaHeading: "A New Smile in One Day",
   ctaBody: "Schedule your All-on-X consultation and take the first step toward permanent, life-changing teeth.",
 };
