@@ -56,19 +56,28 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
   useDocTitle(data.metaTitle);
   const [bookingOpen, setBookingOpen] = useState(false);
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/`;
-  const heroImage = SERVICE_IMAGES[data.serviceSlug];
+  // Standardised hero flanking photos — left: staff/provider, right: office/location
+  // Deterministic rotation based on slug hash so each page gets a unique pairing
+  const slugHash = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
 
-  // Rotate through office/lifestyle photos for the right flanking hero image
-  const lifestylePhotos = [
+  const staffPhotos = [
+    OFFICE_IMAGES.teamPhoto,
+    OFFICE_IMAGES.aboutTeamAction,
+    OFFICE_IMAGES.patientCare,
+    OFFICE_IMAGES.aboutKatyTeam,
+  ];
+
+  const locationPhotos = [
+    OFFICE_IMAGES.cypressHero,
+    OFFICE_IMAGES.katyHero,
     OFFICE_IMAGES.waitingRoom,
     OFFICE_IMAGES.treatmentRoom,
     OFFICE_IMAGES.hallway,
-    OFFICE_IMAGES.coffeeStation,
-    OFFICE_IMAGES.patientCare,
-    OFFICE_IMAGES.teamPhoto,
+    OFFICE_IMAGES.receptionDesk,
   ];
-  const lifestyleIndex = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % lifestylePhotos.length;
-  const rightFlankImage = lifestylePhotos[lifestyleIndex];
+
+  const leftFlankImage = staffPhotos[slugHash % staffPhotos.length];
+  const rightFlankImage = locationPhotos[slugHash % locationPhotos.length];
 
   const relatedPosts = data.relatedBlogCategory
     ? BLOG_POSTS.filter((p) => p.category === data.relatedBlogCategory).slice(0, 3)
