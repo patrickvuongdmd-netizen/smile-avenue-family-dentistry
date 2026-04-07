@@ -23,6 +23,7 @@ import { SERVICE_IMAGES, OFFICE_IMAGES } from "@/lib/images";
 import { SERVICE_NAMES } from "@/lib/brand-service-data";
 import { trackPhoneClick } from "@/lib/track-phone";
 import type { EducationServiceData } from "@/lib/education-service-data";
+import { EDUCATION_SERVICES } from "@/lib/education-service-data";
 
 const PHONE = "8326481756";
 const PHONE_FORMATTED = "(832) 648-1756";
@@ -499,22 +500,60 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </section>
         )}
 
-        {/* 12. RELATED SERVICES */}
+        {/* 12. RELATED SERVICES — rich cross-linking cards */}
         {data.relatedSlugs.length > 0 && (
           <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
             <div className="container mx-auto text-center">
               <p className="kicker">EXPLORE MORE SERVICES</p>
-              <h2 className="section-heading">Related Treatments</h2>
-              <div className="flex flex-wrap justify-center gap-3 mt-10">
-                {data.relatedSlugs.map((slug) => (
-                  <Link
-                    key={slug}
-                    to={`/services/${slug}`}
-                    className="px-6 py-3.5 rounded-2xl bg-card border border-border/60 text-sm font-sans font-semibold text-foreground hover:border-primary/30 hover:text-primary hover:shadow-md transition-all"
-                  >
-                    {SERVICE_NAMES[slug] || slug}
-                  </Link>
-                ))}
+              <h2 className="section-heading">You Might Also Need</h2>
+              <p className="section-body max-w-2xl mx-auto mb-12">
+                Explore related treatments available at both of our locations.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+                {data.relatedSlugs.slice(0, 4).map((slug) => {
+                  const related = EDUCATION_SERVICES[slug];
+                  const name = SERVICE_NAMES[slug] || slug;
+                  const description = related?.heroSubtitle || "";
+                  const cypressSlug = related?.cypressSlug || slug;
+                  const katySlug = related?.katySlug || slug;
+                  return (
+                    <div key={slug} className="card-soft flex flex-col justify-between">
+                      <div>
+                        <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                          <Link to={`/services/${slug}`} className="hover:text-primary transition-colors">
+                            {name}
+                          </Link>
+                        </h3>
+                        {description && (
+                          <p className="text-sm font-body text-muted-foreground leading-relaxed line-clamp-2 mb-4">
+                            {description}
+                          </p>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-4 pt-3 border-t border-border/40">
+                        <Link
+                          to={`/services/${slug}`}
+                          className="text-xs font-sans font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                        >
+                          Learn More <ArrowRight className="w-3 h-3" />
+                        </Link>
+                        <span className="text-border">|</span>
+                        <Link
+                          to={`/cypress-tx/${cypressSlug}`}
+                          className="text-xs font-sans font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          Cypress
+                        </Link>
+                        <Link
+                          to={`/katy-tx/${katySlug}`}
+                          className="text-xs font-sans font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          Katy
+                        </Link>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>
