@@ -192,7 +192,8 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                   height={453}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-[hsl(38_40%_97%)] via-[hsl(38_40%_97%/0.6)] to-[hsl(38_40%_97%)]" style={{ maskImage: 'linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)', WebkitMaskImage: 'linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)' }} />
+              {/* Center fade only — keeps photos vibrant at edges */}
+              <div className="absolute inset-y-0 left-[18%] right-[18%] bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.9)] to-transparent" />
             </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
