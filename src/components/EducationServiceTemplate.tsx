@@ -180,19 +180,20 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                 width={340}
                 height={453}
               />
-              {/* Right flank — circular with colored background accent like Tend */}
-              <div className="absolute -right-8 xl:right-0 2xl:right-6 top-1/2 -translate-y-1/2 w-[280px] xl:w-[320px] 2xl:w-[360px] aspect-square">
-                <div className="absolute inset-[-8%] rounded-full bg-primary/20" />
+              {/* Right flank — oval with vibrant colored background accent like Tend */}
+              <div className="absolute -right-8 xl:right-0 2xl:right-6 top-1/2 -translate-y-1/2 w-[260px] xl:w-[300px] 2xl:w-[340px] aspect-[3/4]">
+                <div className="absolute inset-[-6%] rounded-[50%] bg-accent/30" />
                 <img
                   src={rightFlankImage}
                   alt="Smile Avenue dental office"
-                  className="relative w-full h-full object-cover rounded-full shadow-lg"
+                  className="relative w-full h-full object-cover rounded-[50%] shadow-lg"
                   loading="eager"
-                  width={360}
-                  height={360}
+                  width={340}
+                  height={453}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.85)] to-transparent" />
+              {/* Center fade only — keeps photos vibrant at edges */}
+              <div className="absolute inset-y-0 left-[18%] right-[18%] bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.9)] to-transparent" />
             </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
