@@ -321,7 +321,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* 1. HERO — center-aligned, Tend-inspired */}
-        <section className="section-warm relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
+        <section className="section-warm relative overflow-hidden min-h-[600px] lg:min-h-[700px]" aria-label={`${data.serviceName} overview`}>
             <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden="true">
               {/* Left flank — tall rounded rectangle, pinned to top like Tend */}
               <img
