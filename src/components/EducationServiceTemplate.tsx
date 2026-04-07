@@ -450,7 +450,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         </section>
 
         {/* 3. WHAT IS [SERVICE]? — establish authority */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm" aria-label={`What is ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">UNDERSTANDING THE BASICS</p>
@@ -535,7 +535,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         )}
 
         {/* 5b. SMILE AVENUE VS TYPICAL — practice differentiator */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg5b)}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg5b)}`} aria-label={`Why choose Smile Avenue for ${data.serviceName}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Choose Smile Avenue for {data.serviceName}?</h2>
@@ -595,7 +595,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         )}
 
         {/* 7. PROCESS STEPS — "what happens next" */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg7)}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg7)}`} aria-label={`${data.serviceName} process steps`}>
           <div className="container mx-auto text-center">
             <p className="kicker">WHAT TO EXPECT</p>
             <h2 className="section-heading">The {data.serviceName} Process</h2>
@@ -626,7 +626,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         </section>
 
         {/* 8. FAQ — visual anchor, upper-mid page */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta" aria-label={`Frequently asked questions about ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
@@ -655,7 +655,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         )}
 
         {/* 10. INSURANCE & PAYMENT — consolidated affordability */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg10)}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${cls(bg10)}`} aria-label={`${data.serviceName} cost and insurance`}>
           <div className="container mx-auto text-center">
             <p className="kicker">INSURANCE & AFFORDABILITY</p>
             <h2 className="section-heading">Affordable {data.serviceName}</h2>
