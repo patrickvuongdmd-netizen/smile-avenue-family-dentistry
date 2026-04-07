@@ -111,11 +111,11 @@ export const KATY_HERO_PHOTOS = [
 export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
   "dental-implants": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-single-tooth-implant-1.webp",
-    alt: "Dental implants procedure at Smile Avenue Family Dentistry",
+    alt: "Dental implant placement at Smile Avenue Family Dentistry in Cypress and Katy TX",
   },
   "cosmetic-dentistry": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-cosmetic-dentistry.webp",
-    alt: "Cosmetic dentistry smile makeover at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-cosmetic-dentistry-cypress.webp",
+    alt: "Cosmetic dentistry consultation at Smile Avenue Family Dentistry Cypress TX",
   },
   "emergency-dentist": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-dental-emergencies.webp",
@@ -123,59 +123,63 @@ export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
   },
   "invisalign": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-invisalign-clear-aligners.webp",
-    alt: "Invisalign clear aligners at Smile Avenue Family Dentistry",
+    alt: "Invisalign clear aligners treatment at Smile Avenue Family Dentistry",
   },
   "dental-crowns": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-restorative-dentistry.webp",
-    alt: "Dental crowns and restorative dentistry at Smile Avenue Family Dentistry",
+    alt: "Custom dental crown fabricated in the Smile Avenue in-house dental lab",
   },
   "oral-surgery": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Oral-Surgery-1.jpg",
-    alt: "Oral surgery at Smile Avenue Family Dentistry",
+    alt: "Oral surgery procedure at Smile Avenue Family Dentistry",
   },
   "dental-cleaning": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-preventive-dentistry.webp",
-    alt: "Professional dental cleaning at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-new-patients-cypress.webp",
+    alt: "Patient receiving a gentle dental cleaning at Smile Avenue Family Dentistry",
   },
   "preventive-dentistry": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-preventive-dentistry.webp",
-    alt: "Preventive dentistry at Smile Avenue Family Dentistry",
+    alt: "Preventive dental exam at Smile Avenue Family Dentistry",
   },
   "veneers": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-cosmetic-dentistry.webp",
-    alt: "Porcelain veneers smile makeover at Smile Avenue Family Dentistry",
+    alt: "Porcelain veneer smile transformation at Smile Avenue Family Dentistry",
   },
   "all-on-x-implants": {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-all-on-x-dental-implants-1.webp",
-    alt: "All-on-X full arch implants at Smile Avenue Family Dentistry",
+    alt: "All-on-X full arch dental implants at Smile Avenue Family Dentistry",
   },
   "teeth-whitening": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-teeth-whitening.webp",
-    alt: "Professional teeth whitening at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-teeth-whitening-cypress.webp",
+    alt: "Professional teeth whitening treatment at Smile Avenue Family Dentistry Cypress TX",
   },
   "root-canal": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-restorative-dentistry.webp",
-    alt: "Root canal therapy at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-7.jpg",
+    alt: "Dr. Vuong explaining treatment plan to a patient at Smile Avenue Family Dentistry",
   },
   "sedation-dentistry": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Soft-Tissue-Treatment-1.jpg",
-    alt: "Sedation dentistry for comfortable care at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-9.jpg",
+    alt: "Comfortable waiting room at Smile Avenue Family Dentistry for relaxed dental visits",
   },
   "pediatric-dentistry": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-preventive-dentistry.webp",
-    alt: "Pediatric dentistry for children at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-10.jpg",
+    alt: "Kid-friendly amenity station with headphones and snacks at Smile Avenue Family Dentistry",
   },
   "dentures": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-multiple-dental-implants-1.webp",
-    alt: "Dentures and tooth replacement at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
+    alt: "Smile Avenue dental team crafting custom dentures in the in-house lab",
   },
   "dental-bridges": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/img-restorative-dentistry.webp",
-    alt: "Dental bridges at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-5.webp",
+    alt: "Modern dental operatory at Smile Avenue Family Dentistry for bridge procedures",
   },
   "tooth-extraction": {
-    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Oral-Surgery-1.jpg",
-    alt: "Tooth extraction at Smile Avenue Family Dentistry",
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Oral-Surgery-2.webp",
+    alt: "Gentle tooth extraction procedure at Smile Avenue Family Dentistry",
+  },
+  "family-dental-care": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/team-img.jpg",
+    alt: "The Smile Avenue Family Dentistry team ready to welcome your family",
   },
 };
 
