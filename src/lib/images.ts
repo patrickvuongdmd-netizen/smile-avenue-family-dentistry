@@ -1,9 +1,9 @@
 // Central image URL constants for the entire site
-import patrickVuongImg from "@/assets/doctors/patrick-vuong.png";
-import peterKimImg from "@/assets/doctors/peter-kim.png";
-import laithYahyaImg from "@/assets/doctors/laith-yahya.png";
-import sameerBilalImg from "@/assets/doctors/sameer-bilal.png";
-import sarahMarediaImg from "@/assets/doctors/sarah-maredia.png";
+import patrickVuongImg from "@/assets/doctors/patrick-vuong.webp";
+import peterKimImg from "@/assets/doctors/peter-kim.webp";
+import laithYahyaImg from "@/assets/doctors/laith-yahya.webp";
+import sameerBilalImg from "@/assets/doctors/sameer-bilal.webp";
+import sarahMarediaImg from "@/assets/doctors/sarah-maredia.webp";
 import shayanAlkhiroImg from "@/assets/doctors/shayan-alkhiro.jpg";
 
 export const DOCTOR_IMAGES: Record<string, { url: string; alt: string }> = {
