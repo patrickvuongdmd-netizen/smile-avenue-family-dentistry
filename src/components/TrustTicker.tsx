@@ -21,7 +21,7 @@ const TrustTicker = () => {
   const esPath = "/es";
 
   return (
-    <div className="flex overflow-hidden relative border-b border-border/40 transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0 bg-primary/5 sm:bg-muted/60">
+    <div className="flex overflow-hidden relative border-b border-border/40 transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0" style={{ backgroundColor: '#F0F0F0' }}>
       <Link to="/about" className="shrink-0 hidden sm:flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline text-foreground/80">
         Why Smile Avenue?
       </Link>
