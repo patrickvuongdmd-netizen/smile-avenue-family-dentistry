@@ -138,7 +138,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                 style={{ transform: "translateY(-50%) scaleX(-1)" }}
               />
               {/* Soft fade overlay so text remains readable */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(var(--warm-bg)/0.92)] to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.92)] to-transparent" />
             </div>
           )}
 
