@@ -54,6 +54,18 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/`;
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
 
+  // Rotate through office/lifestyle photos for the right flanking hero image
+  const lifestylePhotos = [
+    OFFICE_IMAGES.waitingRoom,
+    OFFICE_IMAGES.treatmentRoom,
+    OFFICE_IMAGES.hallway,
+    OFFICE_IMAGES.coffeeStation,
+    OFFICE_IMAGES.patientCare,
+    OFFICE_IMAGES.teamPhoto,
+  ];
+  const lifestyleIndex = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % lifestylePhotos.length;
+  const rightFlankImage = lifestylePhotos[lifestyleIndex];
+
   const relatedPosts = data.relatedBlogCategory
     ? BLOG_POSTS.filter((p) => p.category === data.relatedBlogCategory).slice(0, 3)
     : [];
