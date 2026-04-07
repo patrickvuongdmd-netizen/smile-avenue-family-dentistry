@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 interface ServicesCrossLinkProps {
   location: "cypress" | "katy";
   currentSlug: string;
+  bgClassName?: string;
 }
 
 const ALL_SERVICES = [
