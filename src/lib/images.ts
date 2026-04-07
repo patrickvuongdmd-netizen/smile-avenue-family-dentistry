@@ -297,13 +297,13 @@ export const HERO_VIDEO_URL = "https://www.smileavenuefamilydentistry.com/wp-con
 export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }[]> = {
   "dental-implants": [
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
-    { youtubeId: "Do_22b5MX_M", title: "From Uncomfortable to Confident Smiles" },
     { youtubeId: "rFNVqRYSkKQ", title: "Care You Can Trust, Smiles You'll Love" },
+    { youtubeId: "NqiluaBGHpk", title: "Is It Time for a New Smile?" },
   ],
   "all-on-x-implants": [
     { youtubeId: "UAwWDYzJdvw", title: "From Start to Finish: The Dental Implant Process" },
     { youtubeId: "NqiluaBGHpk", title: "Is It Time for a New Smile?" },
-    { youtubeId: "wiocP_nsFPY", title: "Can One Visit Change Your Smile?" },
+    { youtubeId: "rFNVqRYSkKQ", title: "Care You Can Trust, Smiles You'll Love" },
   ],
   "cosmetic-dentistry": [
     { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
@@ -318,12 +318,12 @@ export const SERVICE_VIDEOS: Record<string, { youtubeId: string; title: string }
   "veneers": [
     { youtubeId: "qMAw3tPCLxk", title: "Porcelain Veneers: Strong, Stunning, and Built to Last" },
     { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
-    { youtubeId: "JLVp9i_Vru4", title: "Transform Your Smile with a Custom Makeover at Smile Avenue" },
+    { youtubeId: "QbPVxWUdBR0", title: "Small Changes, Big Smiles" },
   ],
   "invisalign": [
     { youtubeId: "qMXDWzTh3Cs", title: "Essential Teeth Care Tips for Your Invisalign Journey" },
-    { youtubeId: "nS2MUEQXbWE", title: "Invisalign Patient Testimonial" },
     { youtubeId: "QbPVxWUdBR0", title: "Small Changes, Big Smiles" },
+    { youtubeId: "pPO-p4KRJ_s", title: "Your New Dental Home: Smile Avenue Family Dentistry" },
   ],
   "dental-crowns": [
     { youtubeId: "WRJFa2l_j9c", title: "Crowns vs Veneers: What's Best for Your Smile?" },
