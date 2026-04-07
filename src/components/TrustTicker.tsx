@@ -26,8 +26,8 @@ const TrustTicker = () => {
         Why Smile Avenue?
       </Link>
       <div className="relative overflow-hidden flex-1">
-        <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--primary)), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--primary)), transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--neon-blue)), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--neon-blue)), transparent)" }} />
         <div className="flex animate-ticker whitespace-nowrap">
           {doubled.map((text, i) => (
             <span
