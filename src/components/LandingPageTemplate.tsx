@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import { Phone, Star, Shield, Clock, CreditCard, Zap, CheckCircle2, MapPin, X as XIcon } from "lucide-react";
-import { ReactNode } from "react";
+import { Phone, Star, Shield, Clock, CreditCard, Zap, CheckCircle2, MapPin, X as XIcon, ArrowRight } from "lucide-react";
+import { ReactNode, useState, useEffect, useCallback } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import { DOCTOR_IMAGES, SERVICE_IMAGES, OFFICE_IMAGES } from "@/lib/images";
 import VideoCarousel from "@/components/VideoCarousel";
@@ -9,6 +9,7 @@ import InsuranceLogoBar from "@/components/InsuranceLogoBar";
 import BackToTop from "@/components/BackToTop";
 import ScrollReveal from "@/components/ScrollReveal";
 import TrustTicker from "@/components/TrustTicker";
+import LazySection from "@/components/LazySection";
 
 /* ── Types ─────────────────────────────────────────────────── */
 
@@ -188,6 +189,20 @@ const buildJsonLd = (data: LandingPageData, loc: typeof LOCATIONS.cypress) => {
   return schemas;
 };
 
+/* ── Desktop floating CTA hook ─────────────────────────────── */
+
+const useShowDesktopCta = () => {
+  const [show, setShow] = useState(false);
+  const handleScroll = useCallback(() => {
+    setShow(window.scrollY > 600);
+  }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+  return show;
+};
+
 /* ═══════════════════════════════════════════════════════════
    COMPONENT — STRICT SALES FUNNEL
    Hook → Pain → Solution → Proof → Objections → CTA
@@ -205,6 +220,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
   const callLabel = `lp_${data.pageType}_call_${data.location}`;
   const conversionLabel = data.heroCtaType === "call" ? callLabel : bookLabel;
   const jsonLdSchemas = buildJsonLd(data, loc);
+  const showDesktopCta = useShowDesktopCta();
 
   const heroImageUrl = data.heroImage
     || SERVICE_IMAGES[data.pageType === "new-patient" ? "dental-cleaning" : data.pageType === "emergency" ? "emergency-dentist" : data.pageType]?.url
@@ -252,7 +268,7 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         </div>
       </header>
 
-      <main className="pt-[5.5rem] pb-16 lg:pb-0 ">
+      <main className="pt-[5.5rem] pb-16 lg:pb-0">
         {/* ═══ EMERGENCY BANNER ═══ */}
         {data.isEmergency && (
           <div className="bg-destructive text-destructive-foreground text-center py-3 text-sm font-sans font-bold">
@@ -270,35 +286,44 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         {/* ╔═══════════════════════════════════════════════════╗
            ║  SECTION 1: HOOK — Above the fold                ║
            ╚═══════════════════════════════════════════════════╝ */}
-        <section
-          className="relative min-h-[400px] md:min-h-[500px] flex items-end"
-          style={{ backgroundImage: `url(${heroImageUrl})`, backgroundSize: "cover", backgroundPosition: "center" }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
+        <section className="relative min-h-[420px] md:min-h-[520px] lg:min-h-[580px] flex items-end overflow-hidden">
+          {/* Proper <img> for browser preloading instead of CSS background-image */}
+          <img
+            src={heroImageUrl}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
+            width={1200}
+            height={800}
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
 
           <div className="relative z-10 w-full">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 lg:py-24">
               <div className="max-w-2xl">
                 {/* Urgency badge */}
                 <span className={`inline-block text-xs font-sans font-bold tracking-[0.15em] uppercase mb-4 px-3 py-1.5 rounded-full ${data.isEmergency ? "bg-destructive pulse-glow" : "bg-primary"} text-white`}>
                   {data.isEmergency ? "🔴 URGENT — Same-Day Care" : `📍 ${loc.name}, TX — Now Accepting Patients`}
                 </span>
 
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-white font-display">
+                <h1 className="text-3xl md:text-4xl lg:text-[3.25rem] xl:text-5xl font-bold mb-5 leading-[1.08] text-white font-display">
                   {data.heroHeadline}
                 </h1>
-                <p className="text-base md:text-lg text-white/85 mb-6 max-w-xl leading-relaxed font-body">
+                <p className="text-base md:text-lg lg:text-xl text-white/85 mb-7 max-w-xl leading-relaxed font-body">
                   {data.heroSubheadline}
                 </p>
 
                 {/* CTA cluster */}
-                <div className="flex flex-wrap gap-3 mb-4">
+                <div className="flex flex-wrap gap-3 mb-5">
                   <a
                     href={ctaHref}
                     target={ctaTarget}
                     rel={ctaTarget ? "noopener noreferrer" : undefined}
                     onClick={() => fireConversion(conversionLabel)}
-                    className="btn-cta rounded-full !px-8 !py-4 text-base"
+                    className="btn-cta rounded-full !px-8 !py-4 text-base shadow-lg shadow-gold/30 hover:shadow-xl hover:shadow-gold/40"
                   >
                     {data.heroCtaLabel}
                   </a>
@@ -311,16 +336,16 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
 
                 {/* Reassurance strip */}
                 {data.heroReassurance && (
-                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-white/70 font-sans">
+                  <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-white/70 font-sans">
                     {data.heroReassurance.split(" · ").map((item, i) => (
-                      <span key={i} className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-primary" />{item}</span>
+                      <span key={i} className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-primary" />{item}</span>
                     ))}
                   </div>
                 )}
 
                 {/* Star rating */}
                 <div className="flex items-center gap-2 mt-4 text-sm text-white/80">
-                  <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
+                  <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-gold text-gold" />)}</div>
                   <span className="font-bold text-white">4.9</span>
                   <span>from 5,000+ reviews</span>
                 </div>
@@ -350,16 +375,16 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
            ╚═══════════════════════════════════════════════════╝ */}
         {data.painPoints && data.painPoints.length > 0 && (
           <ScrollReveal>
-            <section className="section-padding bg-background">
+            <section className="section-padding section-warm">
               <div className="max-w-4xl mx-auto">
                 <p className="kicker text-center">SOUND FAMILIAR?</p>
                 <h2 className="section-heading text-center">
                   We Get It — Finding the Right Dentist Is Hard
                 </h2>
-                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+                <div className="w-12 h-0.5 bg-gold mx-auto mb-10 rounded-full" />
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {data.painPoints.map((p, i) => (
-                    <div key={i} className="bg-card rounded-2xl border border-border p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div key={i} className="card-soft">
                       <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-destructive/10 text-destructive">
                         {p.icon}
                       </div>
@@ -377,17 +402,21 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
         )}
 
         {/* ═══ CTA #2 — After pain points ═══ */}
-        <section className="py-8 px-4 text-center section-alt">
+        <section className="py-10 px-4 text-center bg-background">
           <div className="max-w-xl mx-auto">
-            <p className="text-sm font-sans font-semibold text-foreground mb-4">Stop settling for less. You deserve better.</p>
+            <p className="text-sm font-sans font-semibold text-foreground mb-2">Stop settling for less. You deserve better.</p>
+            <div className="flex items-center justify-center gap-2 mb-4 text-xs font-sans text-muted-foreground">
+              <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-gold text-gold" />)}</div>
+              <span>Rated 4.9 by 5,000+ patients</span>
+            </div>
             <a
               href={ctaHref}
               target={ctaTarget}
               rel={ctaTarget ? "noopener noreferrer" : undefined}
               onClick={() => fireConversion(conversionLabel)}
-              className="btn-cta rounded-full !px-8 !py-3.5"
+              className="btn-cta rounded-full !px-8 !py-3.5 shadow-lg shadow-gold/20"
             >
-              {data.heroCtaLabel}
+              {data.heroCtaLabel} <ArrowRight className="w-4 h-4 ml-1" />
             </a>
           </div>
         </section>
@@ -396,13 +425,13 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
            ║  SECTION 3: SOLUTION — Benefits grid             ║
            ╚═══════════════════════════════════════════════════╝ */}
         <ScrollReveal>
-          <section className="section-padding bg-background">
+          <section className="section-padding section-warm">
             <div className="max-w-5xl mx-auto">
               <p className="kicker text-center">THE SMILE AVENUE DIFFERENCE</p>
               <h2 className="section-heading text-center">
                 Here's Why {loc.name} Families Choose Us
               </h2>
-              <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
+              <div className="w-12 h-0.5 bg-gold mx-auto mb-10 rounded-full" />
               <div className="grid sm:grid-cols-3 gap-8">
                 {data.benefits.map((b) => (
                   <div key={b.title} className="text-center group">
@@ -433,182 +462,271 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
 
         {/* 4a. Meet Your Doctors */}
         {data.doctors && data.doctors.length > 0 && (
-          <ScrollReveal>
-            <section className="section-padding section-alt">
-              <div className="max-w-5xl mx-auto">
-                <p className="kicker text-center">YOUR CARE TEAM</p>
-                <h2 className="section-heading text-center">
-                  Meet Your {loc.name} Doctors
-                </h2>
-                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
-                <div className={`grid gap-8 ${data.doctors.length <= 2 ? "sm:grid-cols-2 max-w-2xl mx-auto" : data.doctors.length === 3 ? "sm:grid-cols-3 max-w-4xl mx-auto" : "sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto"}`}>
-                  {data.doctors.map((doc) => {
-                    const img = DOCTOR_IMAGES[doc.slug];
-                    return (
-                      <div key={doc.slug} className="text-center group">
-                        <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden shadow-lg border-4 border-card group-hover:shadow-xl transition-shadow duration-300 ring-2 ring-transparent group-hover:ring-primary/30">
-                          {img && <img src={img.url} alt={img.alt} className="w-full h-full object-cover object-top" loading="lazy" width={144} height={144} />}
+          <LazySection minHeight="400px">
+            <ScrollReveal>
+              <section className="section-padding bg-background">
+                <div className="max-w-5xl mx-auto">
+                  <p className="kicker text-center">YOUR CARE TEAM</p>
+                  <h2 className="section-heading text-center">
+                    Meet Your {loc.name} Doctors
+                  </h2>
+                  <div className="w-12 h-0.5 bg-gold mx-auto mb-10 rounded-full" />
+                  <div className={`grid gap-8 ${data.doctors.length <= 2 ? "sm:grid-cols-2 max-w-2xl mx-auto" : data.doctors.length === 3 ? "sm:grid-cols-3 max-w-4xl mx-auto" : "sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto"}`}>
+                    {data.doctors.map((doc) => {
+                      const img = DOCTOR_IMAGES[doc.slug];
+                      return (
+                        <div key={doc.slug} className="text-center group">
+                          <div className="relative w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden shadow-lg border-4 border-card group-hover:shadow-xl transition-shadow duration-300 ring-2 ring-transparent group-hover:ring-primary/30">
+                            {img && <img src={img.url} alt={img.alt} className="w-full h-full object-cover object-top" loading="lazy" decoding="async" width={144} height={144} />}
+                          </div>
+                          <h3 className="font-sans font-bold text-foreground text-base">{doc.name}</h3>
+                          <p className="text-sm font-sans font-medium text-primary-dark">{doc.credentials}</p>
+                          <p className="text-xs text-muted-foreground mt-1 font-body">{doc.specialty}</p>
                         </div>
-                        <h3 className="font-sans font-bold text-foreground text-base">{doc.name}</h3>
-                        <p className="text-sm font-sans font-medium text-primary-dark">{doc.credentials}</p>
-                        <p className="text-xs text-muted-foreground mt-1 font-body">{doc.specialty}</p>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            </section>
-          </ScrollReveal>
+              </section>
+            </ScrollReveal>
+          </LazySection>
         )}
 
         {/* 4b. Written Testimonials */}
         {data.testimonials && data.testimonials.length > 0 && (
-          <ScrollReveal>
-            <section className="section-padding bg-card border-y border-border">
-              <div className="max-w-4xl mx-auto">
-                <p className="kicker text-center">REAL PATIENT STORIES</p>
-                <h2 className="section-heading text-center">
-                  Don't Take Our Word for It
-                </h2>
-                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
-                <div className="grid sm:grid-cols-2 gap-6">
-                  {data.testimonials.map((t, i) => (
-                    <blockquote key={i} className="bg-background rounded-2xl border border-border p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative">
-                      <span className="absolute -top-3 left-6 text-4xl font-serif leading-none text-primary">"</span>
-                      <div className="flex gap-0.5 mb-3 mt-1">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}</div>
-                      <p className="text-sm text-foreground leading-relaxed mb-4 font-body">{t.quote}</p>
-                      <footer className="text-xs font-sans">
-                        <span className="font-bold text-foreground">{t.name}</span>
-                        <span className="text-muted-foreground"> · {t.service}</span>
-                      </footer>
-                    </blockquote>
-                  ))}
+          <LazySection minHeight="400px">
+            <ScrollReveal>
+              <section className="section-padding section-warm border-y border-border/40">
+                <div className="max-w-4xl mx-auto">
+                  <p className="kicker text-center">REAL PATIENT STORIES</p>
+                  <h2 className="section-heading text-center">
+                    Don't Take Our Word for It
+                  </h2>
+                  <div className="w-12 h-0.5 bg-gold mx-auto mb-10 rounded-full" />
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    {data.testimonials.map((t, i) => (
+                      <blockquote key={i} className="card-soft relative">
+                        <span className="absolute -top-3 left-6 text-4xl font-serif leading-none text-primary">"</span>
+                        <div className="flex items-center gap-2 mb-3 mt-1">
+                          <div className="flex gap-0.5">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-gold text-gold" />)}</div>
+                          {/* Google G icon for authenticity */}
+                          <svg viewBox="0 0 24 24" className="w-4 h-4 ml-auto opacity-40" aria-hidden="true">
+                            <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" />
+                            <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                            <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                            <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                          </svg>
+                        </div>
+                        <p className="text-sm text-foreground leading-relaxed mb-4 font-body">{t.quote}</p>
+                        <footer className="text-xs font-sans">
+                          <span className="font-bold text-foreground">{t.name}</span>
+                          <span className="text-muted-foreground"> · {t.service}</span>
+                        </footer>
+                      </blockquote>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </section>
-          </ScrollReveal>
+              </section>
+            </ScrollReveal>
+          </LazySection>
         )}
-
 
         {/* 4c. Video Testimonials */}
         {data.videos && data.videos.length > 0 && (
-          <ScrollReveal>
-            <section className="section-padding bg-background">
-              <div className="max-w-5xl mx-auto">
-                <p className="kicker text-center">SEE FOR YOURSELF</p>
-                <h2 className="section-heading text-center">
-                  Watch Real Patients Share Their Experience
-                </h2>
-                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
-                <VideoCarousel videos={data.videos} />
-              </div>
-            </section>
-          </ScrollReveal>
+          <LazySection minHeight="400px">
+            <ScrollReveal>
+              <section className="section-padding bg-background">
+                <div className="max-w-5xl mx-auto">
+                  <p className="kicker text-center">SEE FOR YOURSELF</p>
+                  <h2 className="section-heading text-center">
+                    Watch Real Patients Share Their Experience
+                  </h2>
+                  <div className="w-12 h-0.5 bg-gold mx-auto mb-10 rounded-full" />
+                  <VideoCarousel videos={data.videos} />
+                </div>
+              </section>
+            </ScrollReveal>
+          </LazySection>
         )}
+
+        {/* ═══ CTA #3 — After social proof ═══ */}
+        <section className="py-12 px-4 gradient-cta">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-white/70 text-xs font-sans font-bold tracking-[0.15em] uppercase mb-3">LIMITED AVAILABILITY</p>
+            <h2 className="text-white text-2xl md:text-3xl font-display font-bold mb-3">Same-Day Slots Are Filling Up</h2>
+            <p className="text-white/80 text-sm font-body mb-6">Join 5,000+ families in {loc.name} who trust Smile Avenue. Book in 60 seconds — we confirm within 1 hour.</p>
+            <a
+              href={ctaHref}
+              target={ctaTarget}
+              rel={ctaTarget ? "noopener noreferrer" : undefined}
+              onClick={() => fireConversion(conversionLabel)}
+              className="btn-cta rounded-full !px-10 !py-4 text-base shadow-lg shadow-gold/30"
+            >
+              {data.heroCtaLabel} <ArrowRight className="w-4 h-4 ml-1.5" />
+            </a>
+          </div>
+        </section>
 
         {/* ╔═══════════════════════════════════════════════════╗
            ║  SECTION 5: OBJECTION HANDLING                    ║
            ╚═══════════════════════════════════════════════════╝ */}
         {data.objections && data.objections.length > 0 && (
+          <LazySection minHeight="300px">
+            <ScrollReveal>
+              <section className="section-padding section-warm">
+                <div className="max-w-3xl mx-auto">
+                  <p className="kicker text-center">STILL ON THE FENCE?</p>
+                  <h2 className="section-heading text-center">
+                    We Get These Questions All the Time
+                  </h2>
+                  <div className="w-12 h-0.5 bg-gold mx-auto mb-10 rounded-full" />
+                  <div className="space-y-4">
+                    {data.objections.map((obj, i) => (
+                      <div key={i} className="card-soft">
+                        <p className="text-sm font-sans font-bold text-foreground mb-2 flex items-start gap-2">
+                          <XIcon className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                          "{obj.objection}"
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed pl-6 font-body">
+                          <span className="font-semibold text-foreground">→ </span>{obj.answer}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            </ScrollReveal>
+          </LazySection>
+        )}
+
+        {/* ═══ Insurance Section ═══ */}
+        <LazySection minHeight="200px">
+          <InsuranceLogoBar />
+        </LazySection>
+
+        {/* ═══ Office Tour Photos ═══ */}
+        <LazySection minHeight="400px">
           <ScrollReveal>
-            <section className="section-padding section-alt">
-              <div className="max-w-3xl mx-auto">
-                <p className="kicker text-center">STILL ON THE FENCE?</p>
+            <section className="section-padding section-warm">
+              <div className="max-w-5xl mx-auto">
+                <p className="kicker text-center">STEP INSIDE</p>
                 <h2 className="section-heading text-center">
-                  We Get These Questions All the Time
+                  Not Your Typical Dental Office
                 </h2>
-                <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
-                <div className="space-y-4">
-                  {data.objections.map((obj, i) => (
-                    <div key={i} className="bg-card rounded-2xl border border-border p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                      <p className="text-sm font-sans font-bold text-foreground mb-2 flex items-start gap-2">
-                        <XIcon className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
-                        "{obj.objection}"
-                      </p>
-                      <p className="text-sm text-muted-foreground leading-relaxed pl-6 font-body">
-                        <span className="font-semibold text-foreground">→ </span>{obj.answer}
-                      </p>
+                <div className="w-12 h-0.5 bg-gold mx-auto mb-10 rounded-full" />
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {[
+                    { url: OFFICE_IMAGES.waitingRoom, alt: "Modern waiting room at Smile Avenue" },
+                    { url: OFFICE_IMAGES.treatmentRoom, alt: "State-of-the-art treatment room with Netflix" },
+                    { url: OFFICE_IMAGES.hallway, alt: "Welcoming hallway at Smile Avenue" },
+                    { url: OFFICE_IMAGES.coffeeStation, alt: "Complimentary refreshment station" },
+                  ].map((img, i) => (
+                    <div key={i} className="rounded-xl overflow-hidden shadow-sm border border-border aspect-[4/3] group">
+                      <img src={img.url} alt={img.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" width={400} height={300} />
                     </div>
                   ))}
                 </div>
               </div>
             </section>
           </ScrollReveal>
-        )}
-
-        {/* ═══ Insurance Section — Shared Component ═══ */}
-        <InsuranceLogoBar />
-
-        {/* ═══ Office Tour Photos ═══ */}
-        <ScrollReveal>
-          <section className="section-padding bg-background">
-            <div className="max-w-5xl mx-auto">
-              <p className="kicker text-center">STEP INSIDE</p>
-              <h2 className="section-heading text-center">
-                Not Your Typical Dental Office
-              </h2>
-              <div className="w-12 h-0.5 bg-[#D4A853] mx-auto mb-10 rounded-full" />
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {[
-                  { url: OFFICE_IMAGES.waitingRoom, alt: "Modern waiting room at Smile Avenue" },
-                  { url: OFFICE_IMAGES.treatmentRoom, alt: "State-of-the-art treatment room with Netflix" },
-                  { url: OFFICE_IMAGES.hallway, alt: "Welcoming hallway at Smile Avenue" },
-                  { url: OFFICE_IMAGES.coffeeStation, alt: "Complimentary refreshment station" },
-                ].map((img, i) => (
-                  <div key={i} className="rounded-xl overflow-hidden shadow-sm border border-border aspect-[4/3] group">
-                    <img src={img.url} alt={img.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={400} height={300} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </ScrollReveal>
+        </LazySection>
 
         {/* Extra section (before/after, etc.) */}
         {data.extraSection}
 
         {/* ╔═══════════════════════════════════════════════════╗
-           ║  SECTION 6: FAQ — Shared Component               ║
+           ║  SECTION 6: FAQ                                   ║
            ╚═══════════════════════════════════════════════════╝ */}
-        <ScrollReveal>
-          <section className="section-padding gradient-cta">
-            <div className="max-w-2xl mx-auto">
-              <p className="kicker text-center text-white/70">COMMON QUESTIONS</p>
-              <h2 className="section-heading text-center text-white">
-                Frequently Asked Questions
+        <LazySection minHeight="300px">
+          <ScrollReveal>
+            <section className="section-padding gradient-cta">
+              <div className="max-w-2xl mx-auto">
+                <p className="kicker text-center text-white/70">COMMON QUESTIONS</p>
+                <h2 className="section-heading text-center text-white">
+                  Frequently Asked Questions
+                </h2>
+                <div className="w-12 h-0.5 bg-white/30 mx-auto mb-8 rounded-full" />
+                <FaqAccordion items={data.faqs} variant="dark" />
+              </div>
+            </section>
+          </ScrollReveal>
+        </LazySection>
+
+        {/* ═══ Google Maps — deferred ═══ */}
+        <LazySection minHeight="400px">
+          <section className="section-padding bg-background">
+            <div className="max-w-3xl mx-auto">
+              <p className="kicker text-center">VISIT US</p>
+              <h2 className="section-heading text-center">
+                Find Us in {loc.name}
               </h2>
-              <div className="w-12 h-0.5 bg-white/30 mx-auto mb-8 rounded-full" />
-              <FaqAccordion items={data.faqs} variant="dark" />
+              <p className="text-center text-sm text-muted-foreground mb-1 font-sans flex items-center justify-center gap-1.5"><MapPin className="w-4 h-4 text-primary" /> {loc.address}</p>
+              <p className="text-center text-xs text-muted-foreground mb-6 font-sans flex items-center justify-center gap-1.5"><Clock className="w-3.5 h-3.5" /> {loc.hours}</p>
+              <div className="rounded-xl overflow-hidden border border-border aspect-video shadow-sm">
+                <iframe src={loc.mapsEmbed} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={`Smile Avenue ${loc.name} location map`} />
+              </div>
             </div>
           </section>
-        </ScrollReveal>
+        </LazySection>
 
-        {/* ═══ Google Maps ═══ */}
-        <section className="section-padding bg-background">
-          <div className="max-w-3xl mx-auto">
-            <p className="kicker text-center">VISIT US</p>
-            <h2 className="section-heading text-center">
-              Find Us in {loc.name}
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  FINAL CTA — Cinematic closer                     ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <section className="relative py-20 md:py-28 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-foreground" />
+          <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: `url(${heroImageUrl})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+          <div className="relative z-10 max-w-2xl mx-auto text-center">
+            <div className="flex justify-center gap-0.5 mb-4">{[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-gold text-gold" />)}</div>
+            <h2 className="text-white text-3xl md:text-4xl lg:text-[2.75rem] font-display font-bold mb-4 leading-tight">
+              {data.finalCtaHeadline}
             </h2>
-            <p className="text-center text-sm text-muted-foreground mb-1 font-sans flex items-center justify-center gap-1.5"><MapPin className="w-4 h-4 text-primary" /> {loc.address}</p>
-            <p className="text-center text-xs text-muted-foreground mb-6 font-sans flex items-center justify-center gap-1.5"><Clock className="w-3.5 h-3.5" /> {loc.hours}</p>
-            <div className="rounded-xl overflow-hidden border border-border aspect-video shadow-sm">
-              <iframe src={loc.mapsEmbed} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title={`Smile Avenue ${loc.name} location map`} />
+            <p className="text-white/70 text-base md:text-lg font-body mb-8 leading-relaxed">
+              {data.finalCtaBody}
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => fireConversion(bookLabel)}
+                className="btn-cta rounded-full !px-10 !py-4 text-base shadow-lg shadow-gold/30"
+              >
+                Book Your Visit <ArrowRight className="w-4 h-4 ml-1.5" />
+              </a>
+              <a href={`tel:${loc.phone}`} onClick={() => fireConversion(callLabel)} className="btn-cta-outline rounded-full !px-6 !py-4">
+                <Phone className="w-5 h-5 mr-2" />{loc.phoneFormatted}
+              </a>
             </div>
+            <p className="text-white/40 text-xs font-sans mt-6">No obligation. No pressure. Confirmed within 1 hour.</p>
           </div>
         </section>
 
       </main>
 
       {/* ═══ FOOTER ═══ */}
-      <footer className="bg-foreground text-white/70 py-10 px-4 text-center text-sm font-sans">
-        <img src="/logo-white.webp" alt="Smile Avenue Family Dentistry" className="h-10 w-auto mx-auto mb-4 opacity-80" width={160} height={40} />
+      <footer className="bg-foreground py-12 px-4 text-center text-sm font-sans">
+        <img src="/logo-white.webp" alt="Smile Avenue Family Dentistry" className="h-10 w-auto mx-auto mb-5 opacity-80" loading="lazy" decoding="async" width={160} height={40} />
         <p className="font-semibold text-white mb-1">Smile Avenue Family Dentistry — {loc.name}</p>
-        <p>{loc.address}</p>
-        <p><a href={`tel:${loc.phone}`} className="text-white hover:underline">{loc.phoneFormatted}</a></p>
-        <p className="mt-1">{loc.hours}</p>
-        <p className="mt-4 text-white/40 text-xs">© {new Date().getFullYear()} Smile Avenue Family Dentistry. All rights reserved.</p>
+        <p className="text-white/60">{loc.address}</p>
+        <p className="text-white/60"><a href={`tel:${loc.phone}`} className="text-white/80 hover:text-white hover:underline transition-colors">{loc.phoneFormatted}</a></p>
+        <p className="text-white/60 mt-1">{loc.hours}</p>
+        <p className="mt-6 text-white/30 text-xs">© {new Date().getFullYear()} Smile Avenue Family Dentistry. All rights reserved.</p>
       </footer>
+
+      {/* ═══ DESKTOP FLOATING CTA ═══ */}
+      <div
+        className={`hidden lg:block fixed bottom-8 right-8 z-50 transition-all duration-300 ${showDesktopCta ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+      >
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => fireConversion(bookLabel)}
+          className="btn-cta rounded-full !px-6 !py-3.5 text-sm shadow-2xl shadow-gold/40 flex items-center gap-2"
+        >
+          Book Now <ArrowRight className="w-4 h-4" />
+        </a>
+      </div>
 
       {/* ═══ MOBILE STICKY BAR ═══ */}
       <div className="fixed bottom-0 inset-x-0 z-50 lg:hidden bg-background border-t border-border shadow-[0_-2px_10px_hsl(var(--foreground)/0.08)]">
@@ -632,10 +750,10 @@ const LandingPageTemplate = ({ data }: { data: LandingPageData }) => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => fireConversion(bookLabel)}
-            className="flex items-center justify-center gap-2 text-sm font-sans font-bold min-h-[48px]"
-            style={{ backgroundColor: "hsl(40 63% 58%)", color: "#fff" }}
+            className="flex items-center justify-center gap-2 text-sm font-sans font-bold min-h-[48px] text-gold-foreground"
+            style={{ background: "linear-gradient(135deg, hsl(40 63% 58%), hsl(40 55% 48%))" }}
           >
-            Book Now
+            Book Now <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>
