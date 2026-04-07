@@ -97,6 +97,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Cosmetic Dentistry | Smile Makeovers Explained | Smile Avenue",
     metaDescription: "Learn about cosmetic dentistry options — veneers, whitening, bonding, and full smile makeovers. Expert care at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "From subtle enhancements to complete smile transformations — cosmetic dentistry designed to give you a smile you love showing off.",
+    testimonialVideoId: "wiocP_nsFPY",
     whatIs: [
       "Cosmetic dentistry is the branch of dental care focused on improving the appearance of your teeth, gums, and overall smile. While general dentistry focuses on health and function, cosmetic dentistry focuses on how your smile looks — the color, shape, alignment, and overall harmony of your teeth.",
       "Common cosmetic treatments include porcelain veneers (thin shells bonded to the front of teeth), professional teeth whitening, dental bonding (tooth-colored resin to repair chips or gaps), gum contouring, and Invisalign clear aligners. Many patients combine multiple treatments into a comprehensive 'smile makeover.'",
@@ -147,6 +148,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Invisalign Clear Aligners | Straighter Teeth Without Braces | Smile Avenue",
     metaDescription: "Learn how Invisalign clear aligners straighten teeth without metal braces. See if you're a candidate. Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Straighten your teeth discreetly with clear, removable aligners — no metal brackets, no wires, no lifestyle compromise.",
+    testimonialVideoId: "nS2MUEQXbWE",
     whatIs: [
       "Invisalign is a modern orthodontic treatment that uses a series of custom-made, virtually invisible plastic aligners to gradually shift your teeth into their ideal positions. Each set of aligners is worn for about 1-2 weeks before moving to the next set in the series.",
       "The aligners are made from SmartTrack material — a patented thermoplastic that's BPA-free, comfortable against your gums, and nearly invisible when worn. Most people won't even notice you're wearing them, which is why Invisalign has become the preferred choice for adults and teens who want straighter teeth without the look of traditional braces.",
@@ -482,6 +484,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Porcelain Veneers | Smile Makeovers Explained | Smile Avenue",
     metaDescription: "Everything about porcelain veneers — who they're for, the process, longevity, and care. Transform your smile at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Ultra-thin porcelain shells custom-bonded to your teeth — the ultimate solution for a flawless, natural-looking smile makeover.",
+    testimonialVideoId: "JLVp9i_Vru4",
     whatIs: [
       "Porcelain veneers are ultra-thin shells — about the thickness of a contact lens — that are custom-made and bonded to the front surface of your teeth. They instantly transform the color, shape, size, and alignment of your smile while looking completely natural.",
       "Veneers are one of the most popular cosmetic dental treatments because they solve multiple issues at once: staining that won't respond to whitening, chips, cracks, gaps between teeth, minor crowding, and uneven tooth shapes. Instead of multiple separate treatments, veneers give you a complete smile makeover in just two visits.",
@@ -755,6 +758,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Sedation Dentistry | Anxiety-Free Dental Care | Smile Avenue",
     metaDescription: "Overcome dental anxiety with sedation dentistry. Learn about nitrous oxide, oral sedation & IV sedation options at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Dental anxiety shouldn't keep you from a healthy smile. We offer multiple sedation options so every visit feels comfortable and stress-free.",
+    testimonialVideoId: "ilqukqtmvjY",
     whatIs: [
       "Sedation dentistry uses medication to help you relax during dental procedures. It's sometimes called 'sleep dentistry,' though you're typically awake — just deeply relaxed and calm. It's the perfect solution for anyone who feels anxious, nervous, or fearful about visiting the dentist.",
       "At Smile Avenue, we offer three levels of sedation tailored to your comfort needs. Nitrous oxide (laughing gas) provides mild relaxation that wears off within minutes. Oral sedation involves taking a prescribed pill before your appointment for moderate relaxation. IV sedation delivers medication directly into your bloodstream for deeper relaxation during more complex procedures.",
