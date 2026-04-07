@@ -917,7 +917,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 11. PRICING & INSURANCE (merged) ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`${data.serviceName} cost and insurance in ${loc.name}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`} aria-label={`${data.serviceName} cost and insurance in ${loc.name}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <p className="kicker">PRICING & INSURANCE</p>
@@ -957,7 +957,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" bgClassName={nextBg()} />
 
         {/* ─── 13. ABOUT [SERVICE] IN [CITY] — local SEO block ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`About ${data.serviceName} in ${loc.name} Texas`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`} aria-label={`About ${data.serviceName} in ${loc.name} Texas`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
@@ -979,7 +979,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
         {/* ─── 14. LOCATION-SPECIFIC FAQ (optional) ─── */}
         {data.locationFaqs && data.locationFaqs.length > 0 && (
-          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+          <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`}>
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
                 <div>
@@ -996,7 +996,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         )}
 
         {/* ─── 15. BLOG ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`}>
           <div className="container mx-auto">
             <div className="flex items-end justify-between mb-12">
               <div>
@@ -1034,7 +1034,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} bgClassName={nextBg()} />
 
         {/* ─── 17. FINAL CTA — location card ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-24 section-warm">
           <div className="container mx-auto">
             <div className="max-w-lg mx-auto card-warm text-center">
               <h3 className="font-display text-xl font-bold text-foreground mb-5">{loc.name} Office</h3>
