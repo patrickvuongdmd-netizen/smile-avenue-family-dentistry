@@ -180,18 +180,15 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                 width={380}
                 height={600}
               />
-              {/* Right flank — oval with colored background accent like Tend */}
-              <div className="absolute right-[-2%] xl:right-[2%] 2xl:right-[4%] top-[8%] w-[22vw] max-w-[380px] min-w-[260px] aspect-[3/4]">
-                <div className="absolute inset-[-5%] rounded-[50%] bg-[hsl(210_60%_85%/0.6)]" />
-                <img
-                  src={rightFlankImage}
-                  alt="Smile Avenue dental office"
-                  className="relative w-full h-full object-cover rounded-[50%]"
-                  loading="eager"
-                  width={380}
-                  height={507}
-                />
-              </div>
+              {/* Right flank — tall rounded rectangle, pinned to bottom (mirror of left) */}
+              <img
+                src={rightFlankImage}
+                alt="Smile Avenue dental office"
+                className="absolute right-[-2%] xl:right-[2%] 2xl:right-[4%] bottom-0 w-[22vw] max-w-[380px] min-w-[260px] h-[90%] object-cover rounded-t-[2.5rem] rounded-b-none"
+                loading="eager"
+                width={380}
+                height={600}
+              />
             </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
