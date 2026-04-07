@@ -116,6 +116,13 @@ const LOCATIONS = {
     path: "/cypress-tx",
     geo: { lat: "29.9691", lng: "-95.6972" },
     hours: "Mon–Fri 8:30am–5pm",
+    postalCode: "77433",
+    streetAddress: "9212 Fry Rd #120",
+    mapsUrl: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Cypress/",
+    reviewCount: "3000",
+    openingHours: [
+      { "@type": "OpeningHoursSpecification" as const, dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+    ],
   },
   katy: {
     phone: "2818005008",
@@ -126,8 +133,23 @@ const LOCATIONS = {
     path: "/katy-tx",
     geo: { lat: "29.7357", lng: "-95.7575" },
     hours: "Mon–Fri 8:30am–5pm, Sat 8am–2pm",
+    postalCode: "77494",
+    streetAddress: "23541 Westheimer Pkwy Ste #170",
+    mapsUrl: "https://www.google.com/maps/place/Smile+Avenue+Family+Dentistry+-+Katy/",
+    reviewCount: "2000",
+    openingHours: [
+      { "@type": "OpeningHoursSpecification" as const, dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:30", closes: "17:00" },
+      { "@type": "OpeningHoursSpecification" as const, dayOfWeek: ["Saturday"], opens: "08:00", closes: "14:00" },
+    ],
   },
 };
+
+const SAME_AS = [
+  "https://www.facebook.com/smileavenuedentistry",
+  "https://www.instagram.com/smileavenuedentistry",
+  "https://www.youtube.com/@SmileAvenueFamilyDentistry",
+  "https://www.yelp.com/biz/smile-avenue-family-dentistry-cypress",
+];
 
 const LOCATION_DOCTORS: Record<string, { slug: string; name: string; credentials: string; specialty: string }[]> = {
   cypress: [
@@ -286,28 +308,61 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const hasVideoId = !!data.videoId;
   const hasAnyVideo = hasVideoCarousel || hasVideoId;
 
+  const heroImage = SERVICE_IMAGES[data.serviceSlug];
+
+  const practiceAddress = {
+    "@type": "PostalAddress" as const,
+    streetAddress: loc.streetAddress,
+    addressLocality: loc.name,
+    addressRegion: "TX",
+    postalCode: loc.postalCode,
+    addressCountry: "US",
+  };
+
+  const practiceGeo = { "@type": "GeoCoordinates" as const, latitude: loc.geo.lat, longitude: loc.geo.lng };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService" as const,
-    name: data.serviceName,
+    name: `${data.serviceName} — Smile Avenue Family Dentistry ${loc.name}`,
     description: data.metaDescription,
     url: canonicalUrl,
+    image: heroImage?.url,
+    serviceType: data.serviceName,
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: loc.booking,
+      servicePhone: loc.phoneFormatted,
+      serviceSmsNumber: loc.phone,
+    },
+    areaServed: [
+      { "@type": "City", name: `${loc.name}, TX` },
+      { "@type": "State", name: "Texas" },
+    ],
     provider: {
       "@type": "Dentist",
-      name: "Smile Avenue Family Dentistry",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: loc.address.split(",")[0],
-        addressLocality: loc.name,
-        addressRegion: "TX",
-        postalCode: loc.address.match(/\d{5}/)?.[0],
-        addressCountry: "US",
-      },
+      name: `Smile Avenue Family Dentistry — ${loc.name}`,
+      url: `https://www.smileavenuefamilydentistry.com${loc.path}/`,
       telephone: loc.phoneFormatted,
-      geo: { "@type": "GeoCoordinates", latitude: loc.geo.lat, longitude: loc.geo.lng },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: data.location === "cypress" ? "3000" : "2000", bestRating: "5", worstRating: "1" },
+      address: practiceAddress,
+      geo: practiceGeo,
+      image: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+      priceRange: "$$",
+      paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Insurance", "CareCredit", "Sunbit"],
+      currenciesAccepted: "USD",
+      openingHoursSpecification: loc.openingHours,
+      hasMap: loc.mapsUrl,
+      sameAs: SAME_AS,
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: loc.reviewCount, bestRating: "5", worstRating: "1" },
+      knowsAbout: [data.serviceName, "General Dentistry", "Cosmetic Dentistry", "Dental Implants", "Invisalign", "Pediatric Dentistry"],
     },
-    areaServed: { "@type": "City", name: `${loc.name}, TX` },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "USD",
+      url: loc.booking,
+      description: `${data.serviceName} at Smile Avenue ${loc.name}. Most PPO insurance accepted. 0% financing available.`,
+    },
   };
 
   const medicalWebPageJsonLd = {
@@ -316,10 +371,27 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     name: data.metaTitle,
     description: data.metaDescription,
     url: canonicalUrl,
+    inLanguage: data.lang || "en",
+    datePublished: "2024-01-15",
+    dateModified: "2025-06-01",
+    lastReviewed: "2025-06-01",
     about: { "@type": "MedicalCondition", name: data.serviceName },
-    mainEntity: { "@type": "DentalService", name: data.serviceName },
+    mainEntity: { "@type": "DentalService", name: data.serviceName, url: canonicalUrl },
     speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
-    lastReviewed: new Date().toISOString().split("T")[0],
+    audience: { "@type": "MedicalAudience", audienceType: "Patient" },
+    author: {
+      "@type": "Person",
+      name: "Dr. Patrick Vuong",
+      jobTitle: "Founder & Lead Dentist",
+      url: "https://www.smileavenuefamilydentistry.com/doctors/patrick-vuong-dmd/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Smile Avenue Family Dentistry",
+      url: "https://www.smileavenuefamilydentistry.com/",
+      logo: { "@type": "ImageObject", url: "https://www.smileavenuefamilydentistry.com/logo-full.webp" },
+      sameAs: SAME_AS,
+    },
   };
 
   const faqJsonLd = {
@@ -349,7 +421,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     ],
   };
 
-  const heroImage = SERVICE_IMAGES[data.serviceSlug];
+
 
   /* Dynamic background alternation — hero is always section-warm,
      subsequent content sections alternate bg-background / section-warm.
@@ -377,6 +449,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content={`${loc.name}, TX`} />
+        <meta name="geo.position" content={`${loc.geo.lat};${loc.geo.lng}`} />
+        <meta name="ICBM" content={`${loc.geo.lat}, ${loc.geo.lng}`} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={data.metaTitle} />
         <meta property="og:description" content={data.metaDescription} />
@@ -434,7 +510,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* ─── 1. HERO ─── */}
-        <section className="section-warm">
+        <section className="section-warm" aria-label={`${data.serviceName} in ${loc.name} Texas`}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-20">
             {/* Breadcrumb — hidden on mobile */}
             <nav aria-label="Breadcrumb" className="hidden sm:block mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
@@ -552,7 +628,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 2. INTRO + TRUST BADGES (merged) ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`About ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">{data.introKicker}</p>
@@ -654,7 +730,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         )}
 
         {/* ─── 6. WHY CHOOSE US — comparison table ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`Why choose Smile Avenue for ${data.serviceName}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Patients Choose Us for {data.serviceName}</h2>
@@ -714,7 +790,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 7. FAQ (split layout, gradient background) ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 gradient-cta">
+        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 gradient-cta" aria-label={`Frequently asked questions about ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
@@ -792,7 +868,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 10. REVIEWS ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`${data.serviceName} patient reviews in ${loc.name}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">{data.reviewsKicker}</p>
             <h2 className="section-heading">{data.reviewsHeading}</h2>
@@ -811,7 +887,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 11. PRICING & INSURANCE (merged) ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`${data.serviceName} cost and insurance in ${loc.name}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <p className="kicker">PRICING & INSURANCE</p>
@@ -851,7 +927,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" bgClassName={nextBg()} />
 
         {/* ─── 13. ABOUT [SERVICE] IN [CITY] — local SEO block ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`About ${data.serviceName} in ${loc.name} Texas`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
