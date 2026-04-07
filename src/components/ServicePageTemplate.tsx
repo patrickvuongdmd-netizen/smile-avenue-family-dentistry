@@ -629,7 +629,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               <div className="relative h-[420px] md:h-[480px] lg:h-[540px]">
                 {/* Single vibrant geometric shape behind both ovals */}
                 <div
-                  className="absolute left-[-4%] top-[4%] w-[108%] h-[92%] rounded-[50%/46%] bg-[hsl(var(--primary)/0.12)]"
+                  className="absolute left-[-4%] top-[4%] w-[108%] h-[92%] rounded-[50%/46%] bg-[hsl(192,72%,55%,0.1)]"
                   aria-hidden="true"
                 />
 
