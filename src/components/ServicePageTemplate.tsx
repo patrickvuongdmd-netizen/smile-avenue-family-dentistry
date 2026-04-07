@@ -324,7 +324,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService" as const,
-    name: `${data.serviceName} — Smile Avenue Family Dentistry ${loc.name}`,
+    name: `${data.serviceName} - Smile Avenue Family Dentistry - ${loc.name}`,
     description: data.metaDescription,
     url: canonicalUrl,
     image: heroImage?.url,
@@ -341,7 +341,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     ],
     provider: {
       "@type": "Dentist",
-      name: `Smile Avenue Family Dentistry — ${loc.name}`,
+      name: `Smile Avenue Family Dentistry - ${loc.name}`,
       url: `https://www.smileavenuefamilydentistry.com${loc.path}/`,
       telephone: loc.phoneFormatted,
       address: practiceAddress,
