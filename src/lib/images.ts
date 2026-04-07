@@ -181,6 +181,80 @@ export const SERVICE_IMAGES: Record<string, { url: string; alt: string }> = {
     url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/12/team-img.jpg",
     alt: "The Smile Avenue Family Dentistry team ready to welcome your family",
   },
+
+  // ── Katy location-specific hero images ──
+  "dental-implants-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Office-Tour.jpg",
+    alt: "Dental implant consultation at Smile Avenue Family Dentistry Katy TX",
+  },
+  "cosmetic-dentistry-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-8.jpg",
+    alt: "Cosmetic dentistry treatment room at Smile Avenue Family Dentistry Katy TX",
+  },
+  "emergency-dentist-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-5.webp",
+    alt: "Emergency dental operatory at Smile Avenue Family Dentistry Katy TX",
+  },
+  "invisalign-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-about-us.webp",
+    alt: "Invisalign consultation at Smile Avenue Family Dentistry Katy TX",
+  },
+  "dental-crowns-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
+    alt: "Custom dental crown fabrication at Smile Avenue Katy in-house lab",
+  },
+  "oral-surgery-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Oral-Surgery-2.webp",
+    alt: "Oral surgery suite at Smile Avenue Family Dentistry Katy TX",
+  },
+  "dental-cleaning-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Office-Tour.jpg",
+    alt: "Patient receiving a dental cleaning at Smile Avenue Family Dentistry Katy TX",
+  },
+  "preventive-dentistry-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-8.jpg",
+    alt: "Preventive dental exam at Smile Avenue Family Dentistry Katy TX",
+  },
+  "veneers-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-bf.webp",
+    alt: "Porcelain veneer results at Smile Avenue Family Dentistry Katy TX",
+  },
+  "all-on-x-implants-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-6.webp",
+    alt: "All-on-X implant treatment at Smile Avenue Family Dentistry Katy TX",
+  },
+  "teeth-whitening-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-contact-us.webp",
+    alt: "Professional teeth whitening at Smile Avenue Family Dentistry Katy TX",
+  },
+  "root-canal-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-gallery-5.webp",
+    alt: "Root canal treatment room at Smile Avenue Family Dentistry Katy TX",
+  },
+  "sedation-dentistry-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-office-tour-6.webp",
+    alt: "Relaxing sedation dentistry environment at Smile Avenue Family Dentistry Katy TX",
+  },
+  "pediatric-dentistry-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-New-Patients.jpg",
+    alt: "Kid-friendly dental care at Smile Avenue Family Dentistry Katy TX",
+  },
+  "dentures-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-about-us.webp",
+    alt: "Custom denture fabrication at Smile Avenue Family Dentistry Katy TX",
+  },
+  "dental-bridges-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/image-8.jpg",
+    alt: "Dental bridge consultation at Smile Avenue Family Dentistry Katy TX",
+  },
+  "tooth-extraction-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Oral-Surgery-1.jpg",
+    alt: "Gentle tooth extraction at Smile Avenue Family Dentistry Katy TX",
+  },
+  "family-dental-care-katy": {
+    url: "https://www.smileavenuefamilydentistry.com/wp-content/uploads/2024/11/img-Dental-Office-Tour.jpg",
+    alt: "Family dental care at Smile Avenue Family Dentistry Katy TX",
+  },
 };
 
 export const VIDEO_TESTIMONIALS = [
