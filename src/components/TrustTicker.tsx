@@ -22,7 +22,7 @@ const TrustTicker = () => {
 
   return (
     <div className="flex overflow-hidden relative border-b border-neon-blue/20 transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0 bg-neon-blue">
-      <Link to="/about" className="shrink-0 hidden sm:flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline" style={{ color: '#2D2D2D' }}>
+      <Link to="/about" className="shrink-0 hidden sm:flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline text-white">
         Why Smile Avenue?
       </Link>
       <div className="relative overflow-hidden flex-1">
@@ -32,10 +32,10 @@ const TrustTicker = () => {
           {doubled.map((text, i) => (
             <span
               key={i}
-              className="inline-flex items-center shrink-0 px-3 sm:px-5 py-1 sm:py-2 text-[10px] sm:text-xs tracking-[0.14em] font-semibold font-sans" style={{ color: '#2D2D2D' }}
+              className="inline-flex items-center shrink-0 px-3 sm:px-5 py-1 sm:py-2 text-[10px] sm:text-xs tracking-[0.14em] font-semibold font-sans text-white"
             >
               {text}
-              <span className="ml-3 sm:ml-5" style={{ color: 'rgba(45,45,45,0.3)' }}>·</span>
+              <span className="ml-3 sm:ml-5 text-white/40">·</span>
             </span>
           ))}
         </div>
@@ -44,26 +44,25 @@ const TrustTicker = () => {
       <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2 z-10 text-xs font-sans font-semibold bg-neon-blue">
         <Link
           to={enPath}
-          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-foreground/10' : ''}`} style={{ color: '#2D2D2D' }}
+          className={`px-1.5 py-0.5 rounded transition-colors text-white ${!isSpanish ? 'bg-white/15' : ''}`}
         >
           EN
         </Link>
-        <span style={{ color: 'rgba(45,45,45,0.4)' }}>|</span>
+        <span className="text-white/40">|</span>
         <Link
           to={esPath}
-          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-foreground/10' : ''}`} style={{ color: '#2D2D2D' }}
+          className={`px-1.5 py-0.5 rounded transition-colors text-white ${isSpanish ? 'bg-white/15' : ''}`}
         >
           ES
         </Link>
-        <span style={{ color: 'rgba(45,45,45,0.4)' }}>|</span>
+        <span className="text-white/40">|</span>
         <button
           onClick={() => {
             if ((window as any).toggleAccessibility) {
               (window as any).toggleAccessibility();
             }
           }}
-          className="px-1.5 py-0.5 rounded transition-colors"
-          style={{ color: '#2D2D2D' }}
+          className="px-1.5 py-0.5 rounded transition-colors text-white hover:text-white/80"
           aria-label="Accessibility options"
           title="Accessibility"
         >
