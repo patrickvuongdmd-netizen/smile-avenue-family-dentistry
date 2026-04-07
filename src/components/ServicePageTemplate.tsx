@@ -20,6 +20,8 @@ import { ReactNode } from "react";
 import { SERVICE_IMAGES, SERVICE_VIDEOS, OFFICE_IMAGES, DOCTOR_IMAGES } from "@/lib/images";
 import { trackPhoneClick } from "@/lib/track-phone";
 import VideoCarousel from "@/components/VideoCarousel";
+import ServicesCrossLink from "@/components/ServicesCrossLink";
+import TabbedInsurance from "@/components/TabbedInsurance";
 import OfficePhotoGrid from "@/components/OfficePhotoGrid";
 import BlogCardCarousel from "@/components/BlogCardCarousel";
 import BlogDesktopGrid from "@/components/BlogDesktopGrid";
