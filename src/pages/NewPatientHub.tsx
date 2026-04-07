@@ -92,6 +92,14 @@ const NewPatientHub = () => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "New Patient Hub | Smile Avenue Family Dentistry",
+          description: "Everything you need for your first visit — online forms, insurance info, what to expect, and how to book.",
+          url: "https://www.smileavenuefamilydentistry.com/patients/new-patient-hub/",
+          mainEntity: { "@type": "Dentist", "@id": "https://www.smileavenuefamilydentistry.com/#dentist", name: "Smile Avenue Family Dentistry" },
+        })}</script>
       </Helmet>
       <TrustTicker />
 

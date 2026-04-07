@@ -79,6 +79,17 @@ const Specials = () => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         <meta property="og:image" content="https://www.smileavenuefamilydentistry.com/logo-full.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Dental Specials & Offers | Smile Avenue Family Dentistry",
+          description: "Save on dental care with our current specials at Smile Avenue Family Dentistry.",
+          url: "https://www.smileavenuefamilydentistry.com/specials/",
+          offers: [
+            { "@type": "Offer", name: "New Patient Special", price: "99", priceCurrency: "USD", description: "Comprehensive exam, X-rays, and cleaning for new patients" },
+            { "@type": "Offer", name: "Free Implant Consultation", price: "0", priceCurrency: "USD", description: "Complimentary dental implant consultation including 3D scan" },
+          ],
+        })}</script>
       </Helmet>
       <TrustTicker />
 
