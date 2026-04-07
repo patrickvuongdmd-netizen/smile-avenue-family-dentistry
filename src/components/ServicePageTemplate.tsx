@@ -308,28 +308,59 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const hasVideoId = !!data.videoId;
   const hasAnyVideo = hasVideoCarousel || hasVideoId;
 
+  const practiceAddress = {
+    "@type": "PostalAddress" as const,
+    streetAddress: loc.streetAddress,
+    addressLocality: loc.name,
+    addressRegion: "TX",
+    postalCode: loc.postalCode,
+    addressCountry: "US",
+  };
+
+  const practiceGeo = { "@type": "GeoCoordinates" as const, latitude: loc.geo.lat, longitude: loc.geo.lng };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DentalService" as const,
-    name: data.serviceName,
+    name: `${data.serviceName} — Smile Avenue Family Dentistry ${loc.name}`,
     description: data.metaDescription,
     url: canonicalUrl,
+    image: heroImage?.url,
+    serviceType: data.serviceName,
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: loc.booking,
+      servicePhone: loc.phoneFormatted,
+      serviceSmsNumber: loc.phone,
+    },
+    areaServed: [
+      { "@type": "City", name: `${loc.name}, TX` },
+      { "@type": "State", name: "Texas" },
+    ],
     provider: {
       "@type": "Dentist",
-      name: "Smile Avenue Family Dentistry",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: loc.address.split(",")[0],
-        addressLocality: loc.name,
-        addressRegion: "TX",
-        postalCode: loc.address.match(/\d{5}/)?.[0],
-        addressCountry: "US",
-      },
+      name: `Smile Avenue Family Dentistry — ${loc.name}`,
+      url: `https://www.smileavenuefamilydentistry.com${loc.path}/`,
       telephone: loc.phoneFormatted,
-      geo: { "@type": "GeoCoordinates", latitude: loc.geo.lat, longitude: loc.geo.lng },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: data.location === "cypress" ? "3000" : "2000", bestRating: "5", worstRating: "1" },
+      address: practiceAddress,
+      geo: practiceGeo,
+      image: "https://www.smileavenuefamilydentistry.com/logo-full.webp",
+      priceRange: "$$",
+      paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Insurance", "CareCredit", "Sunbit"],
+      currenciesAccepted: "USD",
+      openingHoursSpecification: loc.openingHours,
+      hasMap: loc.mapsUrl,
+      sameAs: SAME_AS,
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: loc.reviewCount, bestRating: "5", worstRating: "1" },
+      knowsAbout: [data.serviceName, "General Dentistry", "Cosmetic Dentistry", "Dental Implants", "Invisalign", "Pediatric Dentistry"],
     },
-    areaServed: { "@type": "City", name: `${loc.name}, TX` },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "USD",
+      url: loc.booking,
+      description: `${data.serviceName} at Smile Avenue ${loc.name}. Most PPO insurance accepted. 0% financing available.`,
+    },
   };
 
   const medicalWebPageJsonLd = {
@@ -338,10 +369,27 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
     name: data.metaTitle,
     description: data.metaDescription,
     url: canonicalUrl,
+    inLanguage: data.lang || "en",
+    datePublished: "2024-01-15",
+    dateModified: "2025-06-01",
+    lastReviewed: "2025-06-01",
     about: { "@type": "MedicalCondition", name: data.serviceName },
-    mainEntity: { "@type": "DentalService", name: data.serviceName },
+    mainEntity: { "@type": "DentalService", name: data.serviceName, url: canonicalUrl },
     speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".kicker", ".section-body"] },
-    lastReviewed: new Date().toISOString().split("T")[0],
+    audience: { "@type": "MedicalAudience", audienceType: "Patient" },
+    author: {
+      "@type": "Person",
+      name: "Dr. Patrick Vuong",
+      jobTitle: "Founder & Lead Dentist",
+      url: "https://www.smileavenuefamilydentistry.com/doctors/patrick-vuong-dmd/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Smile Avenue Family Dentistry",
+      url: "https://www.smileavenuefamilydentistry.com/",
+      logo: { "@type": "ImageObject", url: "https://www.smileavenuefamilydentistry.com/logo-full.webp" },
+      sameAs: SAME_AS,
+    },
   };
 
   const faqJsonLd = {
