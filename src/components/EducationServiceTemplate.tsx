@@ -252,17 +252,17 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
     ],
   };
 
-  // ItemList for sub-services (if applicable)
-  const itemListJsonLd = data.subServices && data.subServices.length > 0 ? {
+  // ItemList for process steps
+  const itemListJsonLd = data.processSteps.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `${data.serviceName} Options at Smile Avenue Family Dentistry`,
-    numberOfItems: data.subServices.length,
-    itemListElement: data.subServices.map((svc, i) => ({
+    name: `${data.serviceName} Process at Smile Avenue Family Dentistry`,
+    numberOfItems: data.processSteps.length,
+    itemListElement: data.processSteps.map((step, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      name: svc.title,
-      description: svc.description,
+      name: step.title,
+      description: step.description,
     })),
   } : null;
 
