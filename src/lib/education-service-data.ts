@@ -512,6 +512,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Artistry", smileAvenue: "✓ Hand-layered for natural translucency", typical: "Machine-milled, less detail" },
       { feature: "Revision Policy", smileAvenue: "✓ Adjustments until you're thrilled", typical: "Limited revisions" }
     ],
+    serviceComparison: {
+      titleA: "Porcelain Veneers",
+      titleB: "Dental Bonding",
+      rows: [
+        { feature: "Appearance", optionA: "Lifelike, translucent porcelain", optionB: "Good but less natural" },
+        { feature: "Durability", optionA: "15–20 years", optionB: "5–7 years" },
+        { feature: "Stain Resistance", optionA: "Highly stain-resistant", optionB: "Stains over time" },
+        { feature: "Visits Required", optionA: "2 visits", optionB: "1 visit" },
+        { feature: "Best For", optionA: "Full smile makeovers", optionB: "Minor chips or gaps" },
+        { feature: "Cost", optionA: "$1,200–$2,500 per tooth", optionB: "$200–$600 per tooth" },
+      ],
+    },
     faqs: [
       { question: "How long do porcelain veneers last?", answer: "With proper care — brushing, flossing, and regular checkups — porcelain veneers typically last 15-20 years. Some patients keep theirs even longer. They're a worthwhile investment in your confidence." },
       { question: "Do veneers look fake?", answer: "Not at Smile Avenue. Our in-house lab creates veneers with natural translucency, subtle surface texture, and custom coloring that mimics real enamel. People will notice your great smile — not that you have veneers." },
