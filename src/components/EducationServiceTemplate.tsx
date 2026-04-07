@@ -19,7 +19,7 @@ import BlogCardCarousel from "@/components/BlogCardCarousel";
 import BlogDesktopGrid from "@/components/BlogDesktopGrid";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
-import { SERVICE_IMAGES } from "@/lib/images";
+import { SERVICE_IMAGES, OFFICE_IMAGES } from "@/lib/images";
 import { SERVICE_NAMES } from "@/lib/brand-service-data";
 import { trackPhoneClick } from "@/lib/track-phone";
 import type { EducationServiceData } from "@/lib/education-service-data";
