@@ -213,23 +213,19 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                 <span className="text-xs font-sans text-muted-foreground">from 5,000+ reviews</span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto mb-4">
-                <Link to={`/cypress-tx/${data.cypressSlug}`} className="btn-cta flex-1 whitespace-nowrap text-center">
-                  Book in Cypress →
-                </Link>
-                <Link to={`/katy-tx/${data.katySlug}`} className="btn-secondary flex-1 whitespace-nowrap text-center">
-                  Book in Katy →
-                </Link>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+                <button onClick={() => setBookingOpen(true)} className="btn-cta flex-1 whitespace-nowrap text-center">
+                  Book Now →
+                </button>
+                <a
+                  href={`tel:${PHONE}`}
+                  className="btn-secondary flex-1 whitespace-nowrap text-center inline-flex items-center justify-center gap-2"
+                  onClick={() => trackPhoneClick("Education Hero")}
+                >
+                  <Phone className="w-4 h-4" />
+                  {PHONE_FORMATTED}
+                </a>
               </div>
-
-              <a
-                href={`tel:${PHONE}`}
-                className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary hover:underline transition-colors"
-                onClick={() => trackPhoneClick("Education Hero")}
-              >
-                <Phone className="w-4 h-4" />
-                {PHONE_FORMATTED}
-              </a>
             </div>
 
             {heroImage && (
@@ -611,22 +607,18 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto mb-6">
-              <Link to={`/cypress-tx/${data.cypressSlug}`} className="btn-cta-light flex-1 text-center">
-                Book in Cypress →
-              </Link>
-              <Link to={`/katy-tx/${data.katySlug}`} className="btn-cta-light flex-1 text-center">
-                Book in Katy →
-              </Link>
+              <button onClick={() => setBookingOpen(true)} className="btn-cta-light flex-1 text-center">
+                Book Now →
+              </button>
+              <a
+                href={`tel:${PHONE}`}
+                className="btn-cta-light flex-1 text-center inline-flex items-center justify-center gap-2"
+                onClick={() => trackPhoneClick("Education Final CTA")}
+              >
+                <Phone className="w-4 h-4" />
+                {PHONE_FORMATTED}
+              </a>
             </div>
-
-            <a
-              href={`tel:${PHONE}`}
-              className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              onClick={() => trackPhoneClick("Education Final CTA")}
-            >
-              <Phone className="w-4 h-4" />
-              Or call us: {PHONE_FORMATTED}
-            </a>
 
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8 text-xs font-sans text-primary-foreground/50">
               <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5" /> Free consultation</span>
