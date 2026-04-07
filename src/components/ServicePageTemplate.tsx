@@ -658,7 +658,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 2. INTRO + TRUST BADGES (merged) ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`About ${data.serviceName}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`} aria-label={`About ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">{data.introKicker}</p>
@@ -685,9 +685,46 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* ─── 3. SUB-SERVICES (optional) ─── */}
+        {/* ─── 3. MEET YOUR DOCTORS (moved up for trust) ─── */}
+        <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`}>
+          <div className="container mx-auto text-center">
+            <p className="kicker">YOUR {loc.name.toUpperCase()} DENTAL TEAM</p>
+            <h2 className="section-heading">Meet Your Doctors</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              Our {loc.name} team brings decades of combined experience in {data.serviceName.toLowerCase()} and comprehensive dental care.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
+              {doctors.slice(0, 3).map((doc) => {
+                const img = DOCTOR_IMAGES[doc.slug];
+                const href = `/doctors/${doc.slug}-${doc.credentials.toLowerCase()}`;
+                return (
+                  <Link key={doc.slug} to={href} className="card-soft flex flex-col items-center text-center hover:shadow-md transition-shadow group">
+                    {img && (
+                      <img
+                        src={img.url}
+                        alt={img.alt}
+                        className="w-20 h-20 rounded-full object-cover ring-2 ring-primary/20 mb-4"
+                        loading="lazy"
+                        decoding="async"
+                        width={80}
+                        height={80}
+                      />
+                    )}
+                    <h3 className="font-display text-base font-bold text-foreground">{doc.name}, {doc.credentials}</h3>
+                    <p className="text-xs font-sans text-primary font-medium mt-1">{doc.specialty}</p>
+                    <span className="text-xs font-sans font-semibold text-primary mt-3 group-hover:underline">
+                      View Profile →
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── 4. SUB-SERVICES (optional) ─── */}
         {data.subServices && data.subServices.length > 0 && (
-          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+          <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">{data.subServicesKicker}</p>
               <h2 className="section-heading">{data.subServicesHeading}</h2>
@@ -705,9 +742,9 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </section>
         )}
 
-        {/* ─── 4. PROCESS STEPS (optional) ─── */}
+        {/* ─── 5. PROCESS STEPS (optional) ─── */}
         {data.processSteps && data.processSteps.length > 0 && (
-          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+          <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">{data.processKicker}</p>
               <h2 className="section-heading">{data.processHeading}</h2>
@@ -739,9 +776,28 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </section>
         )}
 
-        {/* ─── 5. VIDEO (consolidated: carousel or single) ─── */}
+        {/* ─── 6. REVIEWS (moved up for social proof) ─── */}
+        <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`} aria-label={`${data.serviceName} patient reviews in ${loc.name}`}>
+          <div className="container mx-auto text-center">
+            <p className="kicker">{data.reviewsKicker}</p>
+            <h2 className="section-heading">{data.reviewsHeading}</h2>
+            <p className="section-body max-w-2xl mx-auto">
+              4.9★ average from {data.location === "cypress" ? "3,000+" : "2,000+"} verified Google reviews.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12 text-left">
+              {data.testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
+            </div>
+            {showLiveReviews && (
+              <div className="mt-12">
+                <ReviewsWidget location={data.location} title={`${data.serviceName} Google Reviews — ${loc.name}`} />
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* ─── 7. VIDEO (consolidated: carousel or single) ─── */}
         {hasAnyVideo && (
-          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
+          <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">SEE IT IN ACTION</p>
               <h2 className="section-heading">Watch: {data.serviceName} Explained</h2>
@@ -759,8 +815,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </section>
         )}
 
-        {/* ─── 6. WHY CHOOSE US — comparison table ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`Why choose Smile Avenue for ${data.serviceName}`}>
+        {/* ─── 8. WHY CHOOSE US — comparison table ─── */}
+        <section className={`px-4 sm:px-6 lg:px-8 py-16 md:py-24 ${nextBg()}`} aria-label={`Why choose Smile Avenue for ${data.serviceName}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Patients Choose Us for {data.serviceName}</h2>
@@ -819,8 +875,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* ─── 7. FAQ (split layout, gradient background) ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 gradient-cta" aria-label={`Frequently asked questions about ${data.serviceName}`}>
+        {/* ─── 9. FAQ (split layout, gradient background) ─── */}
+        <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-24 gradient-cta" aria-label={`Frequently asked questions about ${data.serviceName}`}>
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
               <div>
@@ -836,8 +892,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* ─── 8. MID-CONTENT BOOKING CTA ─── */}
-        <section className="py-12 section-warm">
+        {/* ─── 10. MID-CONTENT BOOKING CTA ─── */}
+        <section className="py-10 section-warm">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
               <div>
@@ -857,62 +913,6 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </a>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ─── 9. MEET YOUR DOCTORS (location-aware) ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
-          <div className="container mx-auto text-center">
-            <p className="kicker">YOUR {loc.name.toUpperCase()} DENTAL TEAM</p>
-            <h2 className="section-heading">Meet Your Doctors</h2>
-            <p className="section-body max-w-2xl mx-auto">
-              Our {loc.name} team brings decades of combined experience in {data.serviceName.toLowerCase()} and comprehensive dental care.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
-              {doctors.slice(0, 3).map((doc) => {
-                const img = DOCTOR_IMAGES[doc.slug];
-                const href = `/doctors/${doc.slug}-${doc.credentials.toLowerCase()}`;
-                return (
-                  <Link key={doc.slug} to={href} className="card-soft flex flex-col items-center text-center hover:shadow-md transition-shadow group">
-                    {img && (
-                      <img
-                        src={img.url}
-                        alt={img.alt}
-                        className="w-20 h-20 rounded-full object-cover ring-2 ring-primary/20 mb-4"
-                        loading="lazy"
-                        decoding="async"
-                        width={80}
-                        height={80}
-                      />
-                    )}
-                    <h3 className="font-display text-base font-bold text-foreground">{doc.name}, {doc.credentials}</h3>
-                    <p className="text-xs font-sans text-primary font-medium mt-1">{doc.specialty}</p>
-                    <span className="text-xs font-sans font-semibold text-primary mt-3 group-hover:underline">
-                      View Profile →
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* ─── 10. REVIEWS ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`} aria-label={`${data.serviceName} patient reviews in ${loc.name}`}>
-          <div className="container mx-auto text-center">
-            <p className="kicker">{data.reviewsKicker}</p>
-            <h2 className="section-heading">{data.reviewsHeading}</h2>
-            <p className="section-body max-w-2xl mx-auto">
-              4.9★ average from {data.location === "cypress" ? "3,000+" : "2,000+"} verified Google reviews.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mt-12 text-left">
-              {data.testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
-            </div>
-            {showLiveReviews && (
-              <div className="mt-12">
-                <ReviewsWidget location={data.location} title={`${data.serviceName} Google Reviews — ${loc.name}`} />
-              </div>
-            )}
           </div>
         </section>
 
