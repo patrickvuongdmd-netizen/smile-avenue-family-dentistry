@@ -10,10 +10,11 @@ const photos = [
 interface Props {
   heading?: string;
   kicker?: string;
+  bgClassName?: string;
 }
 
-const OfficePhotoGrid = ({ heading = "Step Inside Our Office", kicker = "YOUR COMFORT, OUR PRIORITY" }: Props) => (
-  <section className="section-padding bg-background">
+const OfficePhotoGrid = ({ heading = "Step Inside Our Office", kicker = "YOUR COMFORT, OUR PRIORITY", bgClassName = "bg-background" }: Props) => (
+  <section className={`section-padding ${bgClassName}`}>
     <div className="container mx-auto">
       <p className="kicker text-center">{kicker}</p>
       <h2 className="section-heading text-center">{heading}</h2>

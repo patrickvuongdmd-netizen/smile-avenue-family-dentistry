@@ -351,7 +351,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
 
-  /* Dynamic background alternation for optional sections */
+  /* Dynamic background alternation — hero is always section-warm,
+     subsequent content sections alternate bg-background / section-warm.
+     Special sections (FAQ gradient, mid-CTA strip, final CTA) use fixed backgrounds.
+     Only rendered optional sections advance the counter, keeping alternation perfect. */
   let sectionIndex = 0;
   const nextBg = () => {
     const bg = sectionIndex % 2 === 0 ? "bg-background" : "section-warm";
@@ -549,7 +552,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 2. INTRO + TRUST BADGES (merged) ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">{data.introKicker}</p>
@@ -578,7 +581,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
         {/* ─── 3. SUB-SERVICES (optional) ─── */}
         {data.subServices && data.subServices.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
+          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">{data.subServicesKicker}</p>
               <h2 className="section-heading">{data.subServicesHeading}</h2>
@@ -598,7 +601,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
         {/* ─── 4. PROCESS STEPS (optional) ─── */}
         {data.processSteps && data.processSteps.length > 0 && (
-          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${data.subServices && data.subServices.length > 0 ? 'bg-background' : 'section-warm'}`}>
+          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">{data.processKicker}</p>
               <h2 className="section-heading">{data.processHeading}</h2>
@@ -632,7 +635,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
         {/* ─── 5. VIDEO (consolidated: carousel or single) ─── */}
         {hasAnyVideo && (
-          <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
+          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
             <div className="container mx-auto text-center">
               <p className="kicker">SEE IT IN ACTION</p>
               <h2 className="section-heading">Watch: {data.serviceName} Explained</h2>
@@ -651,7 +654,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         )}
 
         {/* ─── 6. WHY CHOOSE US — comparison table ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
             <h2 className="section-heading">Why Patients Choose Us for {data.serviceName}</h2>
@@ -752,7 +755,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 9. MEET YOUR DOCTORS (location-aware) ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">YOUR {loc.name.toUpperCase()} DENTAL TEAM</p>
             <h2 className="section-heading">Meet Your Doctors</h2>
@@ -789,7 +792,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 10. REVIEWS ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto text-center">
             <p className="kicker">{data.reviewsKicker}</p>
             <h2 className="section-heading">{data.reviewsHeading}</h2>
@@ -808,7 +811,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 11. PRICING & INSURANCE (merged) ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <p className="kicker">PRICING & INSURANCE</p>
@@ -845,10 +848,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 12. OFFICE PHOTO GRID ─── */}
-        <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" />
+        <OfficePhotoGrid kicker="VISIT OUR OFFICE" heading="A Space Designed for Your Comfort" bgClassName={nextBg()} />
 
         {/* ─── 13. ABOUT [SERVICE] IN [CITY] — local SEO block ─── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
               <p className="kicker">ABOUT {data.serviceName.toUpperCase()} IN {loc.name.toUpperCase()}, TX</p>
@@ -870,7 +873,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
         {/* ─── 14. LOCATION-SPECIFIC FAQ (optional) ─── */}
         {data.locationFaqs && data.locationFaqs.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-background">
+          <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
                 <div>
@@ -887,7 +890,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         )}
 
         {/* ─── 15. BLOG ─── */}
-        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${data.locationFaqs && data.locationFaqs.length > 0 ? 'section-warm' : 'bg-background'}`}>
+        <section className={`px-4 sm:px-6 lg:px-8 py-20 md:py-28 ${nextBg()}`}>
           <div className="container mx-auto">
             <div className="flex items-end justify-between mb-12">
               <div>
@@ -922,7 +925,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </section>
 
         {/* ─── 16. CROSS-SERVICE CAROUSEL ─── */}
-        <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} />
+        <ServicesCrossLink location={data.location} currentSlug={data.serviceSlug} bgClassName={nextBg()} />
 
         {/* ─── 17. FINAL CTA — location card ─── */}
         <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-28 section-warm">

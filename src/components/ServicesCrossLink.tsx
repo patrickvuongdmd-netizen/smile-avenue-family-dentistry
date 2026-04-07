@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 interface ServicesCrossLinkProps {
   location: "cypress" | "katy";
   currentSlug: string;
+  bgClassName?: string;
 }
 
 const ALL_SERVICES = [
@@ -32,13 +33,13 @@ const LOCATION_PATHS = {
   katy: "/katy-tx",
 };
 
-const ServicesCrossLink = ({ location, currentSlug }: ServicesCrossLinkProps) => {
+const ServicesCrossLink = ({ location, currentSlug, bgClassName = "bg-background" }: ServicesCrossLinkProps) => {
   const basePath = LOCATION_PATHS[location];
   const locationName = location === "cypress" ? "Cypress" : "Katy";
   const services = ALL_SERVICES.filter((s) => s.slug !== currentSlug);
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+    <section className={`px-4 sm:px-6 lg:px-8 py-24 md:py-28 ${bgClassName}`}>
       <div className="container mx-auto text-center">
         <p className="kicker">ALL SERVICES</p>
         <h2 className="section-heading">Dental Services in {locationName}, TX</h2>
