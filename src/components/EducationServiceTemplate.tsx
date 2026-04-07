@@ -117,7 +117,6 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* 1. HERO — center-aligned, Tend-inspired */}
         <section className="section-warm relative overflow-hidden">
-          {/* Flanking hero image — desktop only, positioned behind content */}
           {heroImage && (
             <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden="true">
               <img
@@ -137,7 +136,6 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                 height={533}
                 style={{ transform: "translateY(-50%) scaleX(-1)" }}
               />
-              {/* Soft fade overlay so text remains readable */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.92)] to-transparent" />
             </div>
           )}
@@ -194,7 +192,6 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               </a>
             </div>
 
-            {/* Mobile hero image — shown below text on small screens */}
             {heroImage && (
               <div className="lg:hidden mt-10 max-w-md mx-auto">
                 <img
@@ -211,7 +208,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </div>
         </section>
 
-        {/* 2. FIND [SERVICE] NEAR YOU — location cards right after hero */}
+        {/* 2. FIND [SERVICE] NEAR YOU — immediate action */}
         <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-20 bg-background">
           <div className="container mx-auto">
             <p className="kicker text-center">AVAILABLE AT BOTH LOCATIONS</p>
@@ -255,7 +252,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </div>
         </section>
 
-        {/* 3. WHAT IS [SERVICE]? */}
+        {/* 3. WHAT IS [SERVICE]? — establish authority */}
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
@@ -270,33 +267,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </div>
         </section>
 
-        {/* 4. VIDEO TESTIMONIAL (patient story) */}
-        {data.testimonialVideoId && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
-            <div className="container mx-auto text-center">
-              <p className="kicker">PATIENT STORY</p>
-              <h2 className="section-heading">Hear From a Real Patient</h2>
-              <div className="max-w-3xl mx-auto mt-10">
-                <LazyYouTube videoId={data.testimonialVideoId} title={`${data.serviceName} Patient Testimonial`} />
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* 5. VIDEO CAROUSEL (curated service videos) */}
-        {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
-            <div className="container mx-auto text-center">
-              <p className="kicker">SEE HOW IT WORKS</p>
-              <h2 className="section-heading">Watch: Understanding {data.serviceName}</h2>
-              <div className="mt-10">
-                <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* 6. WHO NEEDS [SERVICE]? */}
+        {/* 4. WHO NEEDS [SERVICE]? — "is this for me?" */}
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto">
@@ -317,49 +288,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </div>
         </section>
 
-        {/* 7. PROCESS STEPS */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
-          <div className="container mx-auto text-center">
-            <p className="kicker">WHAT TO EXPECT</p>
-            <h2 className="section-heading">The {data.serviceName} Process</h2>
-            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
-              {data.processSteps.map((step) => (
-                <div key={step.number} className="text-left">
-                  <span className="step-number">{step.number}</span>
-                  <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
-                  <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="sm:hidden mt-10 text-left max-w-sm mx-auto">
-              {data.processSteps.map((step, i) => (
-                <div key={step.number} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-primary font-display w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0">{step.number}</span>
-                    {i < data.processSteps.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
-                  </div>
-                  <div className={`pb-8 ${i === data.processSteps.length - 1 ? 'pb-0' : ''}`}>
-                    <h3 className="font-display text-base font-bold text-foreground mb-1">{step.title}</h3>
-                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 8. INSURANCE SECTION (tabbed) */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
-          <div className="container mx-auto text-center">
-            <p className="kicker">INSURANCE & COVERAGE</p>
-            <h2 className="section-heading">We Work With Your Insurance</h2>
-            <div className="mt-10">
-              <TabbedInsurance coverageNote={data.insuranceCoverageNote || `Most PPO plans cover a portion of ${data.serviceName.toLowerCase()} treatment. We verify your benefits before your visit.`} />
-            </div>
-          </div>
-        </section>
-
-        {/* 9. COMPARISON TABLE */}
+        {/* 5. COMPARISON TABLE — convince while evaluating */}
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto text-center">
             <p className="kicker">THE SMILE AVENUE DIFFERENCE</p>
@@ -406,7 +335,51 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </div>
         </section>
 
-        {/* 10. FAQ */}
+        {/* 6. VIDEO CAROUSEL — visual proof mid-page */}
+        {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">SEE HOW IT WORKS</p>
+              <h2 className="section-heading">Watch: Understanding {data.serviceName}</h2>
+              <div className="mt-10">
+                <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 7. PROCESS STEPS — "what happens next" */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+          <div className="container mx-auto text-center">
+            <p className="kicker">WHAT TO EXPECT</p>
+            <h2 className="section-heading">The {data.serviceName} Process</h2>
+            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+              {data.processSteps.map((step) => (
+                <div key={step.number} className="text-left">
+                  <span className="step-number">{step.number}</span>
+                  <h3 className="font-display text-lg font-bold text-foreground mt-3 mb-2">{step.title}</h3>
+                  <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="sm:hidden mt-10 text-left max-w-sm mx-auto">
+              {data.processSteps.map((step, i) => (
+                <div key={step.number} className="flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold text-primary font-display w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 shrink-0">{step.number}</span>
+                    {i < data.processSteps.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 my-1" />}
+                  </div>
+                  <div className={`pb-8 ${i === data.processSteps.length - 1 ? 'pb-0' : ''}`}>
+                    <h3 className="font-display text-base font-bold text-foreground mb-1">{step.title}</h3>
+                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 8. FAQ — visual anchor, upper-mid page */}
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[38%_62%] gap-12 lg:gap-20 items-start">
@@ -422,19 +395,35 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </div>
         </section>
 
-        {/* 11. PAYMENT OPTIONS */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+        {/* 9. VIDEO TESTIMONIAL — social proof after FAQ */}
+        {data.testimonialVideoId && (
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">PATIENT STORY</p>
+              <h2 className="section-heading">Hear From a Real Patient</h2>
+              <div className="max-w-3xl mx-auto mt-10">
+                <LazyYouTube videoId={data.testimonialVideoId} title={`${data.serviceName} Patient Testimonial`} />
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* 10. INSURANCE & PAYMENT — consolidated affordability */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
           <div className="container mx-auto text-center">
-            <p className="kicker">FLEXIBLE PAYMENT OPTIONS</p>
+            <p className="kicker">INSURANCE & AFFORDABILITY</p>
             <h2 className="section-heading">Affordable {data.serviceName}</h2>
             <p className="section-body max-w-2xl mx-auto mb-10">{data.costNote}</p>
+            <div className="mb-16">
+              <TabbedInsurance coverageNote={data.insuranceCoverageNote || `Most PPO plans cover a portion of ${data.serviceName.toLowerCase()} treatment. We verify your benefits before your visit.`} />
+            </div>
             <PaymentOptions />
           </div>
         </section>
 
-        {/* 12. RELATED BLOG POSTS */}
+        {/* 11. RELATED BLOG POSTS */}
         {relatedPosts.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
             <div className="container mx-auto text-center">
               <p className="kicker">FROM OUR BLOG</p>
               <h2 className="section-heading">Learn More About {data.serviceName}</h2>
@@ -450,9 +439,9 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </section>
         )}
 
-        {/* 13. RELATED SERVICES */}
+        {/* 12. RELATED SERVICES */}
         {data.relatedSlugs.length > 0 && (
-          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 bg-background">
+          <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
             <div className="container mx-auto text-center">
               <p className="kicker">EXPLORE MORE SERVICES</p>
               <h2 className="section-heading">Related Treatments</h2>
@@ -471,7 +460,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </section>
         )}
 
-        {/* 14. FINAL CTA */}
+        {/* 13. FINAL CTA */}
         <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
