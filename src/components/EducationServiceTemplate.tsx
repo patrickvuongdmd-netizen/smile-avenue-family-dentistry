@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, Clock, Check, X, ArrowRight } from "lucide-react";
@@ -24,6 +25,7 @@ import { SERVICE_NAMES } from "@/lib/brand-service-data";
 import { trackPhoneClick } from "@/lib/track-phone";
 import type { EducationServiceData } from "@/lib/education-service-data";
 import { EDUCATION_SERVICES } from "@/lib/education-service-data";
+import BookingLocationModal from "@/components/BookingLocationModal";
 
 const PHONE = "8326481756";
 const PHONE_FORMATTED = "(832) 648-1756";
