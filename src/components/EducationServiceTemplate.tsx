@@ -13,7 +13,7 @@ import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import LazyYouTube from "@/components/LazyYouTube";
 import VideoCarousel from "@/components/VideoCarousel";
-import { SERVICE_VIDEOS } from "@/lib/images";
+import { SERVICE_VIDEOS, DOCTOR_IMAGES } from "@/lib/images";
 import TabbedInsurance from "@/components/TabbedInsurance";
 import PaymentOptions from "@/components/PaymentOptions";
 import BlogCardCarousel from "@/components/BlogCardCarousel";
@@ -57,30 +57,22 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
   useDocTitle(data.metaTitle);
   const [bookingOpen, setBookingOpen] = useState(false);
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/`;
-  // Standardised hero flanking photos — left: team member headshot, right: office/location
-  // Deterministic rotation based on slug hash so each page gets a unique pairing
+  // Left flank: team members (non-clinical staff)
+  // Right flank: doctors & hygienists
   const slugHash = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
 
-  const teamHeadshots = Object.values(TEAM_IMAGES).map(t => t.url);
-  const staffPhotos = [
-    OFFICE_IMAGES.teamPhoto,
-    OFFICE_IMAGES.aboutTeamAction,
-    OFFICE_IMAGES.patientCare,
-    OFFICE_IMAGES.aboutKatyTeam,
-    ...teamHeadshots,
-  ];
+  const hygienistKeys = ["arpine-janbazian", "ivy-doan", "ngoc-huynh"];
+  const teamEntries = Object.entries(TEAM_IMAGES);
+  const staffPhotos = teamEntries
+    .filter(([key]) => !hygienistKeys.includes(key))
+    .map(([, t]) => t.url);
 
-  const locationPhotos = [
-    OFFICE_IMAGES.cypressHero,
-    OFFICE_IMAGES.katyHero,
-    OFFICE_IMAGES.waitingRoom,
-    OFFICE_IMAGES.treatmentRoom,
-    OFFICE_IMAGES.hallway,
-    OFFICE_IMAGES.receptionDesk,
-  ];
+  const doctorPhotos = Object.values(DOCTOR_IMAGES).map(d => d.url);
+  const hygienistPhotos = hygienistKeys.map(k => TEAM_IMAGES[k]?.url).filter(Boolean);
+  const clinicalPhotos = [...doctorPhotos, ...hygienistPhotos];
 
   const leftFlankImage = staffPhotos[slugHash % staffPhotos.length];
-  const rightFlankImage = locationPhotos[slugHash % locationPhotos.length];
+  const rightFlankImage = clinicalPhotos[slugHash % clinicalPhotos.length];
 
   const relatedPosts = data.relatedBlogCategory
     ? BLOG_POSTS.filter((p) => p.category === data.relatedBlogCategory).slice(0, 3)
