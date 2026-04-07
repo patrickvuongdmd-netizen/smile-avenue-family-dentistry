@@ -56,7 +56,7 @@ const LazyBlogSection = ({
   rootMargin = "300px",
 }: LazyBlogSectionProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [posts, setPosts] = useState<BlogPost[] | null>(null);
+  const [posts, setPosts] = useState<BlogPostItem[] | null>(null);
   const [styles, setStyles] = useState<{
     colors: Record<string, { bg: string; badge: string; text?: string }>;
     images: Record<string, string>;
@@ -79,7 +79,7 @@ const LazyBlogSection = ({
             const allPosts = blogDataMod.BLOG_POSTS;
             const cat = category || (serviceSlug && slugCategoryMap ? slugCategoryMap[serviceSlug] : undefined);
             const categoryPosts = cat
-              ? allPosts.filter((p: BlogPost) => p.category === cat).slice(0, 3)
+              ? allPosts.filter((p: BlogPostItem) => p.category === cat).slice(0, 3)
               : [];
             const resolved = categoryPosts.length >= 2 ? categoryPosts : allPosts.slice(0, 3);
             setPosts(resolved);
