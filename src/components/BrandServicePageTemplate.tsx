@@ -280,6 +280,10 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
       <Helmet>
         <title>{data.metaTitle}</title>
         <meta name="description" content={data.metaDescription} />
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content="Cypress, TX" />
+        <meta name="geo.position" content="29.9691;-95.6972" />
+        <meta name="ICBM" content="29.9691, -95.6972" />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={data.metaTitle} />
         <meta property="og:description" content={data.metaDescription} />
@@ -288,12 +292,17 @@ const BrandServicePageTemplate = ({ data }: { data: BrandServiceData }) => {
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
         {heroImage && <meta property="og:image" content={heroImage.url} />}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={data.metaTitle} />
+        <meta name="twitter:description" content={data.metaDescription} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(medicalWebPageJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(dentistJsonLd)}</script>
         {medicalProcedureJsonLd && <script type="application/ld+json">{JSON.stringify(medicalProcedureJsonLd)}</script>}
         {howToJsonLd && <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>}
         {videoObjectsJsonLd && <script type="application/ld+json">{JSON.stringify(videoObjectsJsonLd)}</script>}
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        {itemListJsonLd && <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>}
         <link rel="alternate" hrefLang="en" href={canonicalUrl} />
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         {SPANISH_ALTERNATES[data.serviceSlug] && (
