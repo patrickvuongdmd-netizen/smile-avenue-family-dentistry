@@ -1,36 +1,33 @@
 
+# Hero Redesign — EducationServiceTemplate
 
-# Add Video Carousel to EducationServiceTemplate
+## Tend's Hero Pattern (from screenshot)
+- **Center-aligned** text (not left-aligned 2-col grid)
+- **Flanking lifestyle photos** on left and right, partially bleeding off screen edges — creates a cinematic, immersive feel
+- Breadcrumb centered above H1
+- Large serif H1 centered
+- 3 value props with checkmarks, centered
+- Star rating bar centered
+- Two side-by-side CTAs: "Book Now" (filled) + Phone number (outlined)
 
 ## Current State
-- **ServicePageTemplate** (Tier 2 location pages) has a `VideoCarousel` using `SERVICE_VIDEOS[data.serviceSlug]` — showing 2-3 curated YouTube videos per service
-- **EducationServiceTemplate** (Tier 1 education pages) only has two single video embeds: `testimonialVideoId` (patient story) and `videoId` (educational) — no carousel
+- 2-column grid: text left, single image right
+- Left-aligned text with right hero image
+- Dual location booking buttons (Book in Cypress / Book in Katy)
 
-The `SERVICE_VIDEOS` map in `src/lib/images.ts` already has curated videos for all 18 services, so no new data is needed.
+## Proposed Changes
 
-## Recommended Placement
+**Layout**: Switch from 2-col grid to **center-aligned hero with flanking photos**
+- Center column: breadcrumb → H1 → value props → rating → CTAs
+- Left photo: partially visible, positioned absolute, bleeding off left edge
+- Right photo: partially visible, positioned absolute, bleeding off right edge
+- Photos hidden on mobile (clean centered text-only hero on mobile)
 
-Replace the current single educational video embed (section 5, "Watch: Understanding [Service]") with the full `VideoCarousel`. This consolidates the video content into one richer section while keeping the optional `testimonialVideoId` as a separate patient story section above it.
+**CTAs**: Keep dual-location "Book in Cypress" / "Book in Katy" buttons (our differentiator vs Tend's single "Book Now"), plus add a phone CTA link below
 
-```text
-Current flow:
-  4. Video Testimonial (patient story, optional)
-  5. Single Video Embed (educational, optional)  ← REPLACE THIS
+**Typography**: Use text-4xl md:text-5xl lg:text-6xl for the H1 (bigger, more cinematic)
 
-Proposed flow:
-  4. Video Testimonial (patient story, optional)  — stays as-is
-  5. Video Carousel (2-3 curated videos)          — replaces single embed
-```
+**Mobile**: Centered text, value props, CTAs stacked — no flanking photos (too narrow). Show hero image below text as a single rounded image.
 
-This mirrors Tend's approach of rich video content mid-page, and keeps the patient testimonial separate since it serves a different trust-building purpose.
-
-## Technical Changes
-
-**File: `src/components/EducationServiceTemplate.tsx`**
-1. Import `VideoCarousel` and `SERVICE_VIDEOS` from existing modules
-2. Replace section 5 (single `LazyYouTube` with `videoId`) with `VideoCarousel` using `SERVICE_VIDEOS[data.serviceSlug]`
-3. Keep section 4 (testimonial video) unchanged
-4. The `videoId` field on `EducationServiceData` becomes unused by this template (can be cleaned up later)
-
-The carousel auto-falls back to a single video display when only one video exists, so no conditional logic is needed.
-
+## Files to modify
+- `src/components/EducationServiceTemplate.tsx` — hero section only (lines 117-177)

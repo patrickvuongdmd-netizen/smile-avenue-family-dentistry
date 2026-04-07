@@ -115,10 +115,35 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
       <TrustStrip />
 
       <main id="main-content" className="pb-14 lg:pb-0">
-        {/* 1. HERO */}
-        <section className="section-warm">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
-            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center md:text-left">
+        {/* 1. HERO — center-aligned, Tend-inspired */}
+        <section className="section-warm relative overflow-hidden">
+          {/* Flanking hero image — desktop only, positioned behind content */}
+          {heroImage && (
+            <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden="true">
+              <img
+                src={heroImage.url}
+                alt=""
+                className="absolute -left-16 xl:-left-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
+                loading="eager"
+                width={400}
+                height={533}
+              />
+              <img
+                src={heroImage.url}
+                alt=""
+                className="absolute -right-16 xl:-right-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
+                loading="eager"
+                width={400}
+                height={533}
+                style={{ transform: "translateY(-50%) scaleX(-1)" }}
+              />
+              {/* Soft fade overlay so text remains readable */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.92)] to-transparent" />
+            </div>
+          )}
+
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
+            <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center">
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <span className="mx-2" aria-hidden="true">›</span>
               <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
@@ -126,55 +151,63 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               <span className="text-foreground">{data.serviceName}</span>
             </nav>
 
-            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-              <div className="text-center md:text-left">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground leading-[1.08] font-display">
-                  {data.serviceName}
-                </h1>
-                <p className="text-[15px] md:text-xl leading-relaxed mb-6 text-muted-foreground max-w-xl mx-auto md:mx-0 font-body">
-                  {data.heroSubtitle}
-                </p>
+            <div className="max-w-2xl mx-auto text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground leading-[1.08] font-display">
+                {data.serviceName}
+              </h1>
+              <p className="text-[15px] md:text-lg lg:text-xl leading-relaxed mb-8 text-muted-foreground font-body max-w-xl mx-auto">
+                {data.heroSubtitle}
+              </p>
 
-                {data.heroValueProps && data.heroValueProps.length > 0 && (
-                  <ul className="space-y-2.5 mb-8 text-left max-w-sm mx-auto md:mx-0">
-                    {data.heroValueProps.map((prop, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm font-sans text-foreground">
-                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                        <span>{prop}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+              {data.heroValueProps && data.heroValueProps.length > 0 && (
+                <ul className="inline-flex flex-col items-start space-y-2.5 mb-8">
+                  {data.heroValueProps.map((prop, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm font-sans text-foreground">
+                      <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <span>{prop}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-                <div className="flex items-center justify-center md:justify-start gap-4 mb-6">
-                  <span className="text-sm font-sans font-semibold text-foreground">4.9 ★★★★★</span>
-                  <span className="text-xs font-sans text-muted-foreground">from 5,000+ reviews</span>
-                </div>
-
-                <div className="flex gap-3 mb-5 max-w-md mx-auto md:mx-0">
-                  <Link to={`/cypress-tx/${data.cypressSlug}`} className="btn-cta flex-1 whitespace-nowrap text-center">
-                    Book in Cypress →
-                  </Link>
-                  <Link to={`/katy-tx/${data.katySlug}`} className="btn-secondary flex-1 whitespace-nowrap text-center">
-                    Book in Katy →
-                  </Link>
-                </div>
+              <div className="flex items-center justify-center gap-4 mb-8">
+                <span className="text-sm font-sans font-semibold text-foreground">4.9 ★★★★★</span>
+                <span className="text-xs font-sans text-muted-foreground">from 5,000+ reviews</span>
               </div>
 
-              {heroImage && (
-                <div className="relative">
-                  <img
-                    src={heroImage.url}
-                    alt={heroImage.alt}
-                    className="w-full aspect-[4/3] object-cover rounded-3xl shadow-lg"
-                    loading="eager"
-                    fetchPriority="high"
-                    width={640}
-                    height={480}
-                  />
-                </div>
-              )}
+              <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto mb-4">
+                <Link to={`/cypress-tx/${data.cypressSlug}`} className="btn-cta flex-1 whitespace-nowrap text-center">
+                  Book in Cypress →
+                </Link>
+                <Link to={`/katy-tx/${data.katySlug}`} className="btn-secondary flex-1 whitespace-nowrap text-center">
+                  Book in Katy →
+                </Link>
+              </div>
+
+              <a
+                href={`tel:${PHONE}`}
+                className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary hover:underline transition-colors"
+                onClick={() => trackPhoneClick("Education Hero")}
+              >
+                <Phone className="w-4 h-4" />
+                {PHONE_FORMATTED}
+              </a>
             </div>
+
+            {/* Mobile hero image — shown below text on small screens */}
+            {heroImage && (
+              <div className="lg:hidden mt-10 max-w-md mx-auto">
+                <img
+                  src={heroImage.url}
+                  alt={heroImage.alt}
+                  className="w-full aspect-[4/3] object-cover rounded-3xl shadow-lg"
+                  loading="eager"
+                  fetchPriority="high"
+                  width={640}
+                  height={480}
+                />
+              </div>
+            )}
           </div>
         </section>
 
