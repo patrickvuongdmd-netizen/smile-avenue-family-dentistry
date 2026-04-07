@@ -64,6 +64,12 @@ const data: ServicePageData = {
     { question: "Do you offer Saturday veneer consultations in Katy?", answer: "Yes — our Katy office is open Saturdays 8am–2pm, making it easy to schedule your free veneer consultation without taking time off work." },
     { question: "What veneer materials do you use in Katy?", answer: "We offer Emax and zirconia porcelain veneers, both fabricated in our in-house lab. Emax provides superior translucency for front teeth, while zirconia offers maximum durability. Your dentist will recommend the best option for your smile goals." },
   ],
+  aboutInCity: [
+    "Smile Avenue Family Dentistry on Westheimer Parkway is the Katy practice patients trust for expert porcelain veneer artistry. Our in-house Smile Dental Lab handcrafts each veneer on-site — delivering precise color matching, natural translucency, and a perfect fit that practices relying on external labs cannot achieve.",
+    "We offer Emax lithium disilicate veneers for superior front-tooth aesthetics and zirconia veneers for maximum durability. Our digital smile design technology lets you preview your new smile before any work begins — so you know exactly what to expect and can collaborate on the final result.",
+    "Minimal-prep veneers are available for qualifying patients, requiring little to no removal of natural tooth structure. Dr. Vuong and Dr. Bilal combine artistic vision with technical expertise, and patients from Cinco Ranch, Cross Creek Ranch, Firethorne, and Fulshear trust us for life-changing smile transformations.",
+    "Most veneer cases at our Katy office are completed in two visits, with Saturday availability (8am-2pm) for consultations. We offer free smile consultations with digital previews and transparent pricing with 0% financing through CareCredit and Sunbit.",
+  ],
   ctaHeading: "Get the Smile You've Always Wanted",
   ctaBody: "Book a veneer consultation at our Katy office and see what's possible for your smile.",
 };
