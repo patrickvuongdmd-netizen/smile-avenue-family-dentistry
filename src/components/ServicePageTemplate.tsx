@@ -308,7 +308,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const hasVideoId = !!data.videoId;
   const hasAnyVideo = hasVideoCarousel || hasVideoId;
 
-  const heroImage = SERVICE_IMAGES[data.serviceSlug];
+  const heroImage = SERVICE_IMAGES[`${data.serviceSlug}-${data.location}`] || SERVICE_IMAGES[data.serviceSlug];
 
   const practiceAddress = {
     "@type": "PostalAddress" as const,
