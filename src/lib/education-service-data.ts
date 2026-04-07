@@ -945,5 +945,56 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     katySlug: "all-on-x-implants",
     relatedBlogCategory: "Implants",
     relatedSlugs: ["dental-implants", "dentures", "oral-surgery", "sedation-dentistry"]
+  },
+
+  "family-dental-care": {
+    serviceName: "Family Dental Care",
+    serviceSlug: "family-dental-care",
+    metaTitle: "Family Dentistry for All Ages | Smile Avenue Dental",
+    metaDescription: "Comprehensive family dental care for kids, teens & adults at Smile Avenue. Cleanings, exams, sealants, fluoride & more at our Cypress & Katy, TX offices.",
+    heroSubtitle: "One dental home for your entire family — from first teeth to golden years. Convenient appointments, gentle care, and a team that knows every member by name.",
+    videoId: "dQw4w9WcXgQ",
+    whatIs: [
+      "Family dental care means having one trusted practice that treats every member of your household — toddlers getting their first check-up, teenagers needing sealants, parents juggling busy schedules, and grandparents maintaining healthy smiles. Instead of driving to separate pediatric and adult offices, everyone is cared for under one roof.",
+      "At Smile Avenue, family dentistry goes beyond routine cleanings. We provide preventive care, restorative treatments, cosmetic services, and orthodontic consultations for patients of all ages. Our team is trained to work with nervous children, busy adults, and seniors with complex dental histories.",
+      "We make scheduling easy for families. Book back-to-back appointments so the whole family can be seen in a single trip. Early morning, after-school, and Saturday hours mean you never have to pull kids out of class or miss work.",
+      "Family dental care also means building long-term relationships. When the same team sees your family year after year, they notice changes early, understand your health history, and can provide truly personalized recommendations."
+    ],
+    whoNeeds: [
+      "You want one dental office for every family member — kids through grandparents",
+      "Your child is ready for their first dental visit (we recommend by age 1)",
+      "You need convenient scheduling with back-to-back family appointments",
+      "You're looking for a patient, gentle team for children who are anxious about the dentist",
+      "Your family needs preventive care like cleanings, sealants, and fluoride treatments",
+      "You want a practice that grows with your family over the years",
+      "You need a bilingual team (English & Spanish)"
+    ],
+    processSteps: [
+      { number: "01", title: "Schedule Your Family Visit", description: "Book appointments for multiple family members back-to-back. We'll set aside enough time so no one feels rushed." },
+      { number: "02", title: "Comprehensive Exams", description: "Every family member receives a thorough exam with digital X-rays, oral cancer screening (adults), and age-appropriate assessments." },
+      { number: "03", title: "Professional Cleanings", description: "Gentle cleanings tailored to each patient's age and needs — from a child's first prophylaxis to deep cleanings for adults with gum concerns." },
+      { number: "04", title: "Personalized Treatment Plans", description: "If any family member needs additional care, we create a clear plan with transparent pricing and flexible scheduling." }
+    ],
+    costNote: "Routine family dental visits — including exams, X-rays, and cleanings — are covered by most dental insurance plans. For families without insurance, our in-house Smile Savings Plan provides discounts on all services for a low annual fee. We also accept CareCredit 0% financing for any treatments beyond preventive care.",
+    comparisonRows: [
+      { feature: "All Ages Welcome", smileAvenue: "✓ Age 1 through seniors", typical: "Refer children to pediatric office" },
+      { feature: "Back-to-Back Scheduling", smileAvenue: "✓ Whole family in one visit", typical: "Separate appointments required" },
+      { feature: "Bilingual Team", smileAvenue: "✓ English & Spanish", typical: "English only" },
+      { feature: "Saturday & Early Hours", smileAvenue: "✓ Flexible family scheduling", typical: "Weekdays only" },
+      { feature: "In-House Lab", smileAvenue: "✓ Same-day crowns & restorations", typical: "2–3 week lab wait" },
+      { feature: "Sedation for Anxious Patients", smileAvenue: "✓ Nitrous & oral sedation", typical: "Limited options" }
+    ],
+    faqs: [
+      { question: "At what age should my child first see a dentist?", answer: "The American Academy of Pediatric Dentistry recommends a first visit by age 1 or within six months of the first tooth erupting. Early visits help establish comfort and catch any developmental issues early." },
+      { question: "Can the whole family be seen on the same day?", answer: "Yes! We encourage back-to-back family appointments so you can get everyone's cleanings and exams done in a single trip. Just let us know when booking." },
+      { question: "Do you treat children who are scared of the dentist?", answer: "Absolutely. Our team is experienced with anxious children. We use a gentle, patient approach, kid-friendly explanations, and offer nitrous oxide (laughing gas) for extra comfort when needed." },
+      { question: "What preventive services do you offer for kids?", answer: "We provide fluoride treatments, dental sealants, cavity risk assessments, orthodontic screenings, and age-appropriate oral hygiene instruction in addition to routine cleanings and exams." },
+      { question: "Do you accept dental insurance for family visits?", answer: "We accept most major PPO dental insurance plans. Our team verifies your benefits before your visit so you know what's covered. For uninsured families, we offer our Smile Savings Plan." },
+      { question: "What services are available for seniors?", answer: "We provide comprehensive care for seniors including gum disease treatment, crown and bridge work, dentures, implants, dry mouth management, and oral cancer screenings. We work closely with patients managing complex medical histories." }
+    ],
+    cypressSlug: "family-dental-care",
+    katySlug: "family-dental-care",
+    relatedBlogCategory: "Preventive",
+    relatedSlugs: ["dental-cleaning", "pediatric-dentistry", "preventive-dentistry", "sedation-dentistry"]
   }
 };
