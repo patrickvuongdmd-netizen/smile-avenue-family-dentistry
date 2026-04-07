@@ -41,7 +41,7 @@ const TrustTicker = () => {
         </div>
       </div>
 
-      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2 z-10 text-xs font-sans font-semibold bg-primary-dark">
+      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2 z-10 text-xs font-sans font-semibold bg-neon-blue">
         <Link
           to={enPath}
           className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-primary-foreground/15 text-primary-foreground' : 'text-primary-foreground/75 hover:text-primary-foreground'}`}
