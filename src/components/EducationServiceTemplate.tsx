@@ -182,7 +182,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               />
               {/* Right flank — circular with colored background accent like Tend */}
               <div className="absolute -right-8 xl:right-0 2xl:right-6 top-1/2 -translate-y-1/2 w-[280px] xl:w-[320px] 2xl:w-[360px] aspect-square">
-                <div className="absolute inset-[-8%] rounded-full bg-accent/40" />
+                <div className="absolute inset-[-8%] rounded-full bg-primary/20" />
                 <img
                   src={rightFlankImage}
                   alt="Smile Avenue dental office"
