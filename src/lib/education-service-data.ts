@@ -15,6 +15,11 @@ export interface EducationServiceData {
   costNote: string;
   insuranceCoverageNote?: string;
   comparisonRows: { feature: string; smileAvenue: string; typical: string }[];
+  serviceComparison?: {
+    titleA: string;
+    titleB: string;
+    rows: { feature: string; optionA: string; optionB: string }[];
+  };
   faqs: { question: string; answer: string }[];
   cypressSlug: string;
   katySlug: string;
@@ -60,6 +65,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Financing", smileAvenue: "✓ 0% interest CareCredit", typical: "Limited options" },
       { feature: "Follow-Up Care", smileAvenue: "✓ Included in treatment", typical: "Additional charges" }
     ],
+    serviceComparison: {
+      titleA: "Dental Implants",
+      titleB: "Dental Bridges",
+      rows: [
+        { feature: "Lifespan", optionA: "25+ years / lifetime", optionB: "5–15 years" },
+        { feature: "Adjacent Teeth", optionA: "No alteration needed", optionB: "Healthy teeth filed down" },
+        { feature: "Bone Preservation", optionA: "Stimulates jawbone", optionB: "Bone loss continues" },
+        { feature: "Cleaning", optionA: "Brush & floss normally", optionB: "Special floss threaders" },
+        { feature: "Feel & Function", optionA: "Like a natural tooth", optionB: "Good but less natural" },
+        { feature: "Cost (Long-term)", optionA: "Higher upfront, lower over time", optionB: "Lower upfront, replacements add up" },
+      ],
+    },
     faqs: [
       { question: "How long do dental implants last?", answer: "With proper care and regular checkups, the titanium implant post can last a lifetime. The crown on top typically lasts 15-20 years before it may need replacement." },
       { question: "Does getting a dental implant hurt?", answer: "Most patients are surprised by how comfortable the procedure is. We use local anesthesia and offer sedation options. Post-procedure soreness is usually manageable with over-the-counter medication and subsides within a few days." },
@@ -160,6 +177,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Financing Options", smileAvenue: "✓ 0% interest available", typical: "Limited options" },
       { feature: "Retainers Included", smileAvenue: "✓ Custom retainers provided", typical: "Often an additional cost" }
     ],
+    serviceComparison: {
+      titleA: "Clear Aligners",
+      titleB: "Traditional Braces",
+      rows: [
+        { feature: "Appearance", optionA: "Nearly invisible", optionB: "Visible metal brackets & wires" },
+        { feature: "Removable", optionA: "Yes — eat & brush freely", optionB: "No — fixed for entire treatment" },
+        { feature: "Comfort", optionA: "Smooth plastic, no irritation", optionB: "Can irritate cheeks & gums" },
+        { feature: "Food Restrictions", optionA: "None", optionB: "No sticky, hard, or crunchy foods" },
+        { feature: "Treatment Time", optionA: "6–18 months average", optionB: "18–36 months average" },
+        { feature: "Office Visits", optionA: "Every 6–8 weeks", optionB: "Every 4–6 weeks for adjustments" },
+      ],
+    },
     faqs: [
       { question: "How long does Invisalign treatment take?", answer: "Most cases take 6-18 months, with an average of about 12 months. Simple cases may be finished in as little as 6 months, while complex cases can take up to 18 months." },
       { question: "Does Invisalign hurt?", answer: "You may feel mild pressure when you switch to a new set of aligners, which is a sign your teeth are moving. Most patients describe it as 'tightness' rather than pain, and it subsides within a day or two." },
@@ -258,8 +287,19 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Treatment Time", smileAvenue: "✓ 60-90 minutes (in-office)", typical: "Weeks of daily strips" },
       { feature: "Even Coverage", smileAvenue: "✓ Custom trays, full coverage", typical: "One-size strips, uneven" },
       { feature: "Sensitivity Management", smileAvenue: "✓ Desensitizing agents included", typical: "No sensitivity protection" },
-      { feature: "Professional Supervision", smileAvenue: "✓ Dentist-monitored", typical: "Self-applied, unsupervised" }
     ],
+    serviceComparison: {
+      titleA: "Professional Whitening",
+      titleB: "Over-the-Counter",
+      rows: [
+        { feature: "Whitening Strength", optionA: "Prescription-grade peroxide", optionB: "Low-concentration gel" },
+        { feature: "Results", optionA: "Up to 8 shades brighter", optionB: "1–2 shades at most" },
+        { feature: "Speed", optionA: "1 visit (60–90 min)", optionB: "Weeks to months" },
+        { feature: "Sensitivity", optionA: "Managed by your dentist", optionB: "Common, no professional support" },
+        { feature: "Evenness", optionA: "Uniform, professional application", optionB: "Uneven coverage common" },
+        { feature: "Longevity", optionA: "1–3 years with touch-ups", optionB: "Fades within weeks" },
+      ],
+    },
     faqs: [
       { question: "How long do whitening results last?", answer: "Results typically last 1-3 years depending on your diet, habits, and oral hygiene. Touch-up treatments every 6-12 months can extend your results indefinitely." },
       { question: "Does professional whitening damage enamel?", answer: "No. When performed under professional supervision, teeth whitening is safe for enamel. We use products specifically formulated to minimize enamel impact while maximizing results." },
@@ -360,6 +400,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Color Matching", smileAvenue: "✓ Custom shade matching in natural light", typical: "Basic shade guide" },
       { feature: "Warranty", smileAvenue: "✓ Treatment guarantee included", typical: "Varies or none" }
     ],
+    serviceComparison: {
+      titleA: "Dental Crowns",
+      titleB: "Dental Veneers",
+      rows: [
+        { feature: "Coverage", optionA: "Covers entire tooth (360°)", optionB: "Covers front surface only" },
+        { feature: "Best For", optionA: "Damaged, weak, or root-canaled teeth", optionB: "Cosmetic improvements" },
+        { feature: "Tooth Reduction", optionA: "More enamel removed", optionB: "Minimal enamel removed" },
+        { feature: "Strength", optionA: "Maximum structural support", optionB: "Less reinforcement" },
+        { feature: "Lifespan", optionA: "15–25 years", optionB: "15–20 years" },
+        { feature: "Cost", optionA: "$1,000–$1,800 per tooth", optionB: "$1,200–$2,500 per tooth" },
+      ],
+    },
     faqs: [
       { question: "How long does it take to get a dental crown?", answer: "Most crowns require two visits spaced about 1-2 weeks apart. Because we have an in-house lab, turnaround is often faster than offices that send work to outside labs." },
       { question: "Does getting a crown hurt?", answer: "Not at all. The tooth is completely numbed before any work begins. Most patients feel only light pressure. We also offer sedation options for anxious patients." },
@@ -460,6 +512,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Artistry", smileAvenue: "✓ Hand-layered for natural translucency", typical: "Machine-milled, less detail" },
       { feature: "Revision Policy", smileAvenue: "✓ Adjustments until you're thrilled", typical: "Limited revisions" }
     ],
+    serviceComparison: {
+      titleA: "Porcelain Veneers",
+      titleB: "Dental Bonding",
+      rows: [
+        { feature: "Appearance", optionA: "Lifelike, translucent porcelain", optionB: "Good but less natural" },
+        { feature: "Durability", optionA: "15–20 years", optionB: "5–7 years" },
+        { feature: "Stain Resistance", optionA: "Highly stain-resistant", optionB: "Stains over time" },
+        { feature: "Visits Required", optionA: "2 visits", optionB: "1 visit" },
+        { feature: "Best For", optionA: "Full smile makeovers", optionB: "Minor chips or gaps" },
+        { feature: "Cost", optionA: "$1,200–$2,500 per tooth", optionB: "$200–$600 per tooth" },
+      ],
+    },
     faqs: [
       { question: "How long do porcelain veneers last?", answer: "With proper care — brushing, flossing, and regular checkups — porcelain veneers typically last 15-20 years. Some patients keep theirs even longer. They're a worthwhile investment in your confidence." },
       { question: "Do veneers look fake?", answer: "Not at Smile Avenue. Our in-house lab creates veneers with natural translucency, subtle surface texture, and custom coloring that mimics real enamel. People will notice your great smile — not that you have veneers." },
@@ -510,6 +574,18 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
       { feature: "Implant-Supported Option", smileAvenue: "✓ Available in-house", typical: "Referred to specialist" },
       { feature: "Same-Day Options", smileAvenue: "✓ Immediate dentures available", typical: "Wait weeks without teeth" }
     ],
+    serviceComparison: {
+      titleA: "Dentures",
+      titleB: "Dental Implants",
+      rows: [
+        { feature: "Cost", optionA: "$1,500–$4,000 per arch", optionB: "$3,000–$5,000 per implant" },
+        { feature: "Surgery Required", optionA: "No surgery", optionB: "Minor oral surgery" },
+        { feature: "Bone Loss Prevention", optionA: "Does not prevent bone loss", optionB: "Stimulates jawbone" },
+        { feature: "Stability", optionA: "Can shift or slip", optionB: "Fixed and permanent" },
+        { feature: "Maintenance", optionA: "Nightly removal, soaking, adhesives", optionB: "Brush & floss like natural teeth" },
+        { feature: "Timeline", optionA: "Ready in weeks", optionB: "3–6 months healing" },
+      ],
+    },
     faqs: [
       { question: "How long does it take to get used to dentures?", answer: "Most patients adjust to new dentures within 2-4 weeks. Eating and speaking may feel different at first, but your muscles and brain adapt quickly. We schedule follow-up visits to fine-tune the fit during this period." },
       { question: "Can I eat normally with dentures?", answer: "Yes, with practice. Start with soft foods cut into small pieces, and gradually reintroduce harder foods. Implant-supported dentures allow you to eat with near-normal bite force, including foods like apples and steak." },
