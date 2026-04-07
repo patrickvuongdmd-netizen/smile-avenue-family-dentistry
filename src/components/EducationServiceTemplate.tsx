@@ -169,31 +169,29 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
 
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* 1. HERO — center-aligned, Tend-inspired */}
-        <section className="section-warm relative overflow-hidden">
+        <section className="section-warm relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
             <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden="true">
-              {/* Left flank — tall rounded rectangle like Tend */}
+              {/* Left flank — tall rounded rectangle, pinned to top like Tend */}
               <img
                 src={leftFlankImage}
                 alt="Smile Avenue dental team"
-                className="absolute -left-8 xl:left-0 2xl:left-6 top-1/2 -translate-y-1/2 w-[260px] xl:w-[300px] 2xl:w-[340px] aspect-[3/4] object-cover rounded-[2rem] shadow-lg"
+                className="absolute left-[-2%] xl:left-[2%] 2xl:left-[4%] top-0 w-[22vw] max-w-[380px] min-w-[260px] h-[90%] object-cover rounded-b-[2.5rem] rounded-t-none"
                 loading="eager"
-                width={340}
-                height={453}
+                width={380}
+                height={600}
               />
-              {/* Right flank — oval with vibrant colored background accent like Tend */}
-              <div className="absolute -right-8 xl:right-0 2xl:right-6 top-1/2 -translate-y-1/2 w-[260px] xl:w-[300px] 2xl:w-[340px] aspect-[3/4]">
-                <div className="absolute inset-[-6%] rounded-[50%] bg-accent/30" />
+              {/* Right flank — oval with colored background accent like Tend */}
+              <div className="absolute right-[-2%] xl:right-[2%] 2xl:right-[4%] top-[8%] w-[22vw] max-w-[380px] min-w-[260px] aspect-[3/4]">
+                <div className="absolute inset-[-5%] rounded-[50%] bg-[hsl(210_60%_85%/0.6)]" />
                 <img
                   src={rightFlankImage}
                   alt="Smile Avenue dental office"
-                  className="relative w-full h-full object-cover rounded-[50%] shadow-lg"
+                  className="relative w-full h-full object-cover rounded-[50%]"
                   loading="eager"
-                  width={340}
-                  height={453}
+                  width={380}
+                  height={507}
                 />
               </div>
-              {/* Center fade only — keeps photos vibrant at edges */}
-              <div className="absolute inset-y-0 left-[18%] right-[18%] bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.9)] to-transparent" />
             </div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
