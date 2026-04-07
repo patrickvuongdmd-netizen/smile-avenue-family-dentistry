@@ -34,6 +34,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Dental Implants Explained | Permanent Tooth Replacement | Smile Avenue",
     metaDescription: "Everything you need to know about dental implants — how they work, who needs them, what to expect, and costs. Two locations in Cypress & Katy, TX.",
     heroSubtitle: "The gold standard for replacing missing teeth — a permanent solution that looks, feels, and functions like your natural tooth.",
+    heroValueProps: ["Permanent, lifetime solution", "Looks & feels like a natural tooth", "Preserves jawbone health", "In-house lab for custom crowns", "0% financing available"],
     testimonialVideoId: "Do_22b5MX_M",
     whatIs: [
       "A dental implant is a small titanium post that's surgically placed into your jawbone to replace the root of a missing tooth. Once healed, a custom-made crown is attached on top, giving you a brand-new tooth that looks and feels completely natural.",
@@ -97,6 +98,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Cosmetic Dentistry | Smile Makeovers Explained | Smile Avenue",
     metaDescription: "Learn about cosmetic dentistry options — veneers, whitening, bonding, and full smile makeovers. Expert care at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "From subtle enhancements to complete smile transformations — cosmetic dentistry designed to give you a smile you love showing off.",
+    heroValueProps: ["Veneers, whitening, bonding & more", "In-house lab for precise results", "Digital smile preview before treatment", "Same-day bonding available", "0% financing through CareCredit"],
     testimonialVideoId: "wiocP_nsFPY",
     whatIs: [
       "Cosmetic dentistry is the branch of dental care focused on improving the appearance of your teeth, gums, and overall smile. While general dentistry focuses on health and function, cosmetic dentistry focuses on how your smile looks — the color, shape, alignment, and overall harmony of your teeth.",
@@ -148,6 +150,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Invisalign Clear Aligners | Straighter Teeth Without Braces | Smile Avenue",
     metaDescription: "Learn how Invisalign clear aligners straighten teeth without metal braces. See if you're a candidate. Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Straighten your teeth discreetly with clear, removable aligners — no metal brackets, no wires, no lifestyle compromise.",
+    heroValueProps: ["Nearly invisible clear aligners", "Removable — eat & brush normally", "Average treatment 6–18 months", "Free consultation with 3D preview", "Insurance & 0% financing accepted"],
     testimonialVideoId: "nS2MUEQXbWE",
     whatIs: [
       "Invisalign is a modern orthodontic treatment that uses a series of custom-made, virtually invisible plastic aligners to gradually shift your teeth into their ideal positions. Each set of aligners is worn for about 1-2 weeks before moving to the next set in the series.",
@@ -211,6 +214,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Emergency Dentist | Same-Day Urgent Dental Care | Smile Avenue",
     metaDescription: "Dental emergency? Same-day appointments for toothaches, broken teeth, and more. Learn what to do and when to call. Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Dental emergencies don't wait — and neither do we. Same-day appointments available for urgent dental situations.",
+    heroValueProps: ["Same-day emergency appointments", "Full diagnostics with 3D imaging", "All treatments handled in-house", "Sedation options for comfort", "Open to new & existing patients"],
     whatIs: [
       "A dental emergency is any situation involving your teeth, gums, or mouth that requires immediate attention — either to relieve severe pain, stop bleeding, save a tooth, or prevent a condition from getting worse. Dental emergencies can happen to anyone, at any age, often without warning.",
       "Common dental emergencies include severe toothaches that won't go away with over-the-counter pain relief, cracked or broken teeth from biting something hard or trauma, a tooth that's been knocked out completely, a lost filling or crown exposing a sensitive tooth, dental abscesses (infections), and uncontrolled bleeding after dental work or injury.",
@@ -261,6 +265,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Professional Teeth Whitening | Brighter Smile in One Visit | Smile Avenue",
     metaDescription: "Professional teeth whitening with dramatic results. In-office and take-home options explained. Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Professional-grade whitening that delivers dramatically brighter results in a single visit — safely and comfortably.",
+    heroValueProps: ["Up to 8 shades brighter in one visit", "In-office & take-home options", "Custom sensitivity management", "Results last 1–3 years", "Starts at $299"],
     whatIs: [
       "Professional teeth whitening is a cosmetic dental treatment that uses prescription-strength bleaching agents to remove stains and discoloration from your teeth. Unlike over-the-counter whitening strips or toothpastes, professional treatments deliver dramatic, even results in far less time.",
       "Teeth become stained for many reasons: coffee, tea, red wine, and colored foods cause surface stains over time. Tobacco use leads to stubborn yellow or brown discoloration. Even aging naturally darkens teeth as enamel thins and the yellowish dentin underneath becomes more visible.",
@@ -322,6 +327,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Professional Dental Cleaning | Preventive Care | Smile Avenue",
     metaDescription: "Professional dental cleanings to prevent cavities, gum disease, and maintain a healthy smile. Learn what to expect. Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "The foundation of a healthy smile — professional cleanings that go far beyond what brushing and flossing can achieve.",
+    heroValueProps: ["Removes plaque & tartar buildup", "Oral cancer screening included", "Digital X-rays (80% less radiation)", "Comfortable, gentle hygienists", "Most insurance covers 100%"],
     whatIs: [
       "A professional dental cleaning (also called prophylaxis) is a preventive procedure performed by a dental hygienist to remove plaque, tartar (calculus), and surface stains from your teeth. Even with excellent brushing and flossing, plaque builds up in areas your toothbrush can't reach — between teeth, along the gumline, and behind back molars.",
       "When plaque isn't removed, it hardens into tartar within 24-48 hours. Tartar can't be removed by brushing — only professional tools can safely remove it. Left untreated, tartar buildup leads to cavities, gingivitis (early gum disease), and eventually periodontitis (advanced gum disease that can cause tooth loss).",
@@ -372,6 +378,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Dental Crowns Explained | Types, Process & Cost | Smile Avenue",
     metaDescription: "Learn about dental crowns — porcelain, zirconia, and ceramic options. Understand when you need a crown, the process, and costs at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "A custom-fitted cap that restores damaged teeth to their full strength, shape, and beauty — often in just two visits.",
+    heroValueProps: ["Porcelain, zirconia & ceramic options", "In-house lab — faster turnaround", "Digital impressions (no messy putty)", "Lasts 15–25 years with proper care", "Insurance & financing accepted"],
     whatIs: [
       "A dental crown is a custom-made cap that fits over your entire tooth, restoring its shape, size, strength, and appearance. Think of it as a protective helmet for a tooth that's been weakened by decay, a large filling, a crack, or a root canal.",
       "Modern crowns are crafted from materials like porcelain, zirconia, and ceramic that are virtually indistinguishable from natural teeth. At Smile Avenue, we design and fabricate many crowns in our on-site dental lab, which means faster turnaround and a more precise fit than crowns sent to outside laboratories.",
@@ -434,6 +441,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Root Canal Treatment Explained | Pain-Free & Modern | Smile Avenue",
     metaDescription: "Root canals don't have to be scary. Learn how modern techniques make treatment comfortable, when you need one, and what recovery looks like. Cypress & Katy, TX.",
     heroSubtitle: "Modern root canal therapy is gentle, efficient, and virtually painless — and it saves your natural tooth from extraction.",
+    heroValueProps: ["Virtually painless with modern techniques", "Saves your natural tooth", "Completed in one visit (most cases)", "Sedation options available", "Crown crafted in our in-house lab"],
     whatIs: [
       "A root canal is a treatment that saves a tooth when the soft tissue inside it — called the pulp — becomes infected or inflamed. The pulp contains nerves and blood vessels, which is why an infected tooth can cause intense pain. Root canal therapy removes the infected tissue, cleans the inside of the tooth, and seals it to prevent future infection.",
       "Here's the truth that surprises most patients: modern root canals feel a lot like getting a regular filling. With today's anesthetics, rotary instruments, and advanced imaging, the procedure is faster and more comfortable than ever before. Most patients say the relief they feel afterward far outweighs any discomfort during treatment.",
@@ -484,6 +492,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Porcelain Veneers | Smile Makeovers Explained | Smile Avenue",
     metaDescription: "Everything about porcelain veneers — who they're for, the process, longevity, and care. Transform your smile at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Ultra-thin porcelain shells custom-bonded to your teeth — the ultimate solution for a flawless, natural-looking smile makeover.",
+    heroValueProps: ["Handcrafted in our in-house lab", "Premium feldspathic porcelain", "Digital smile preview included", "Lasts 15–20 years", "Fixes chips, gaps, stains & alignment"],
     testimonialVideoId: "JLVp9i_Vru4",
     whatIs: [
       "Porcelain veneers are ultra-thin shells — about the thickness of a contact lens — that are custom-made and bonded to the front surface of your teeth. They instantly transform the color, shape, size, and alignment of your smile while looking completely natural.",
@@ -547,6 +556,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Dentures Explained | Full, Partial & Implant-Supported | Smile Avenue",
     metaDescription: "Learn about modern dentures — full, partial, and implant-supported options. Comfortable fit, natural look, and affordable pricing at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Today's dentures are nothing like your grandparents' — modern materials and techniques deliver a natural look, comfortable fit, and confident smile.",
+    heroValueProps: ["Full, partial & implant-supported options", "Custom-crafted in our in-house lab", "Natural-looking teeth & gum tones", "Immediate dentures available", "0% financing & insurance accepted"],
     whatIs: [
       "Dentures are removable replacements for missing teeth and the surrounding gum tissue. Whether you're missing a few teeth or an entire arch, modern dentures restore your ability to eat, speak, and smile with confidence. They've come a long way from the bulky, obvious dentures of the past.",
       "Full dentures replace all teeth in the upper or lower jaw (or both). They rest on your gums and are held in place by suction and the natural contours of your mouth. Partial dentures replace several missing teeth and clip onto your remaining natural teeth for support.",
@@ -609,6 +619,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Dental Bridges Explained | Types, Process & Cost | Smile Avenue",
     metaDescription: "Learn about dental bridges — traditional, cantilever, and implant-supported options. Understand when to choose a bridge vs. implant at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "A dental bridge literally bridges the gap where teeth are missing — restoring your smile, your bite, and your confidence in as few as two visits.",
+    heroValueProps: ["Fixed, non-removable restoration", "Traditional & implant-supported options", "In-house lab for precise fit & color", "Completed in as few as 2 visits", "Most PPO insurance accepted"],
     whatIs: [
       "A dental bridge is a fixed restoration that replaces one or more missing teeth by anchoring artificial teeth (called pontics) to the natural teeth on either side of the gap. Unlike dentures, bridges are cemented in place — you brush and floss around them just like natural teeth.",
       "Traditional bridges are the most common type: crowns are placed on the teeth flanking the gap (called abutment teeth), with one or more false teeth suspended between them. The result is a seamless row of teeth that looks, feels, and functions naturally.",
@@ -659,6 +670,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Tooth Extraction | Simple & Surgical | Recovery Guide | Smile Avenue",
     metaDescription: "Learn about tooth extractions — when they're needed, wisdom teeth removal, simple vs. surgical, and recovery tips. Gentle care at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Sometimes the best thing for your oral health is removing a damaged tooth — and with modern techniques, it's faster and more comfortable than you'd expect.",
+    heroValueProps: ["Simple & surgical extractions in-house", "Sedation options for full comfort", "Same-day emergency extractions", "3D imaging for precise planning", "Tooth replacement options discussed"],
     whatIs: [
       "A tooth extraction is the removal of a tooth from its socket in the jawbone. While we always try to save natural teeth first, there are situations where extraction is the best option for your overall oral health — such as severe decay, advanced infection, crowding, or impacted wisdom teeth.",
       "Simple extractions are performed on teeth that are fully visible above the gumline. The area is numbed, and the tooth is gently loosened and removed. Most simple extractions take just 20-30 minutes, and recovery is quick.",
@@ -709,6 +721,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Oral Surgery | Wisdom Teeth, Bone Grafting & More | Smile Avenue",
     metaDescription: "Learn about oral surgery procedures including wisdom teeth removal, bone grafting, and jaw surgery. Sedation options available at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Expert surgical care in a comfortable setting — from wisdom teeth to bone grafting, we make oral surgery stress-free.",
+    heroValueProps: ["Wisdom teeth removal in-office", "Bone grafting for implant prep", "3D CBCT imaging included", "IV, oral & nitrous sedation", "No hospital visit required"],
     whatIs: [
       "Oral surgery encompasses a range of dental procedures that involve surgical intervention in or around the mouth and jaw. While the word 'surgery' can feel intimidating, most oral surgery procedures are routine, well-understood, and performed comfortably with modern anesthesia and sedation options.",
       "Common oral surgery procedures include wisdom teeth removal, dental bone grafting (to prepare your jaw for implants), surgical tooth extractions, and corrective jaw procedures. At Smile Avenue, our experienced surgeons perform these procedures in-office with advanced 3D imaging and sedation so you never need to visit a hospital.",
@@ -758,6 +771,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Sedation Dentistry | Anxiety-Free Dental Care | Smile Avenue",
     metaDescription: "Overcome dental anxiety with sedation dentistry. Learn about nitrous oxide, oral sedation & IV sedation options at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "Dental anxiety shouldn't keep you from a healthy smile. We offer multiple sedation options so every visit feels comfortable and stress-free.",
+    heroValueProps: ["Nitrous oxide, oral & IV sedation", "Safe, monitored by trained team", "Complete multiple treatments in one visit", "Perfect for dental anxiety & phobias", "Netflix, blankets & headphones"],
     testimonialVideoId: "ilqukqtmvjY",
     whatIs: [
       "Sedation dentistry uses medication to help you relax during dental procedures. It's sometimes called 'sleep dentistry,' though you're typically awake — just deeply relaxed and calm. It's the perfect solution for anyone who feels anxious, nervous, or fearful about visiting the dentist.",
@@ -808,6 +822,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Pediatric Dentistry | Children's Dental Care | Smile Avenue",
     metaDescription: "Gentle, fun dental care for kids of all ages. Learn about first visits, sealants, fluoride treatments & more at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "A dental home where kids actually want to come back — gentle care, fun visits, and Netflix in every room.",
+    heroValueProps: ["Gentle care for ages 1 through teens", "Netflix & prizes at every visit", "Sealants, fluoride & prevention focus", "Nitrous oxide for anxious kids", "Most insurance covers 100%"],
     whatIs: [
       "Pediatric dentistry focuses on the oral health of infants, children, and teenagers. At Smile Avenue, we believe that a child's first dental experiences shape their attitude toward dental care for life — so we make every visit fun, gentle, and positive.",
       "Our kid-friendly approach includes Netflix and streaming entertainment in every treatment room, treasure chest prizes after visits, and a warm, patient team that knows how to put even the most nervous little ones at ease. We treat children like the VIPs they are.",
@@ -857,6 +872,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Preventive Dentistry | Cleanings, Exams & Screenings | Smile Avenue",
     metaDescription: "Prevention is the best medicine. Learn about dental cleanings, exams, X-rays, oral cancer screenings & more at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "The best dental treatment is the one you never need. Regular preventive care keeps your smile healthy and catches small issues before they become big problems.",
+    heroValueProps: ["Comprehensive exams & digital X-rays", "Oral cancer screening at every visit", "Personalized hygiene coaching", "Membership plan: $25/month covers all preventive care", "Two convenient locations"],
     whatIs: [
       "Preventive dentistry is the foundation of everything we do at Smile Avenue. It includes all the care and habits that keep your teeth and gums healthy — regular cleanings, comprehensive exams, digital X-rays, oral cancer screenings, and patient education.",
       "Think of preventive care as your smile's insurance policy. By seeing your dentist regularly, we can catch cavities when they're tiny (and easy to fix), identify gum disease before it causes bone loss, and spot oral cancer in its earliest, most treatable stages.",
@@ -906,6 +922,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "All-on-4 & All-on-6 Full Arch Implants | Smile Avenue",
     metaDescription: "Replace an entire arch of teeth in one day with All-on-X implants. Learn about All-on-4, All-on-6, costs & recovery at Smile Avenue in Cypress & Katy, TX.",
     heroSubtitle: "A brand-new smile in just one day — replace a full arch of missing or failing teeth with permanent, implant-supported teeth.",
+    heroValueProps: ["Teeth in a Day — walk out smiling", "All-on-4 & All-on-6 options", "3D digital smile design preview", "In-house lab for same-day teeth", "Financing as low as $250/month"],
     testimonialVideoId: "wiocP_nsFPY",
     whatIs: [
       "All-on-X is a revolutionary dental implant technique that replaces an entire arch of teeth — upper, lower, or both — using just four to six strategically placed implants. The 'X' refers to the number of implants used: All-on-4 uses four implants, while All-on-6 uses six for additional stability.",
@@ -957,6 +974,7 @@ export const EDUCATION_SERVICES: Record<string, EducationServiceData> = {
     metaTitle: "Family Dentistry for All Ages | Smile Avenue",
     metaDescription: "Comprehensive family dental care for kids, teens & adults. Cleanings, exams, sealants, fluoride & more. Two convenient locations in Cypress & Katy, TX.",
     heroSubtitle: "One dental home for your entire family — from first teeth to golden years. Convenient appointments, gentle care, and a team that knows every member by name.",
+    heroValueProps: ["All ages welcome — 1 through seniors", "Back-to-back family scheduling", "Bilingual team (English & Spanish)", "Saturday & early morning hours", "Membership plan for uninsured families"],
     testimonialVideoId: "EtAuvGSjEnI",
     whatIs: [
       "Family dental care means having one trusted practice that treats every member of your household — toddlers getting their first check-up, teenagers needing sealants, parents juggling busy schedules, and grandparents maintaining healthy smiles. Instead of driving to separate pediatric and adult offices, everyone is cared for under one roof.",
