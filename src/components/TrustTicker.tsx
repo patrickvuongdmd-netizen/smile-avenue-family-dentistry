@@ -21,48 +21,48 @@ const TrustTicker = () => {
   const esPath = "/es";
 
   return (
-    <div className="flex overflow-hidden relative border-b border-border/40 transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0" style={{ backgroundColor: 'hsl(210 8% 26%)' }}>
-      <Link to="/about" className="shrink-0 hidden sm:flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline text-primary">
+    <div className="flex overflow-hidden relative border-b border-primary/20 transition-all duration-300 [[data-menu-open]_&]:h-0 [[data-menu-open]_&]:overflow-hidden [[data-menu-open]_&]:opacity-0 bg-primary">
+      <Link to="/about" className="shrink-0 hidden sm:flex items-center px-4 py-2 font-semibold text-xs tracking-wide font-sans z-10 hover:underline text-primary-foreground">
         Why Smile Avenue?
       </Link>
       <div className="relative overflow-hidden flex-1">
-        <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(210 8% 26%), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(210 8% 26%), transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, hsl(var(--primary)), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-10 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, hsl(var(--primary)), transparent)" }} />
         <div className="flex animate-ticker whitespace-nowrap">
           {doubled.map((text, i) => (
             <span
               key={i}
-              className="inline-flex items-center shrink-0 px-3 sm:px-5 py-1 sm:py-2 text-[10px] sm:text-xs tracking-[0.14em] font-semibold font-sans text-primary"
+              className="inline-flex items-center shrink-0 px-3 sm:px-5 py-1 sm:py-2 text-[10px] sm:text-xs tracking-[0.14em] font-semibold font-sans text-primary-foreground"
             >
               {text}
-              <span className="ml-3 sm:ml-5 text-primary/50">·</span>
+              <span className="ml-3 sm:ml-5 text-primary-foreground/40">·</span>
             </span>
           ))}
         </div>
       </div>
 
-      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2 z-10 text-xs font-sans font-semibold" style={{ backgroundColor: 'hsl(210 8% 22%)' }}>
+      <div className="hidden md:flex shrink-0 items-center gap-1.5 px-4 py-2 z-10 text-xs font-sans font-semibold bg-primary-dark">
         <Link
           to={enPath}
-          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-primary/15 text-primary' : 'text-primary/75 hover:text-primary'}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${!isSpanish ? 'bg-primary-foreground/15 text-primary-foreground' : 'text-primary-foreground/75 hover:text-primary-foreground'}`}
         >
           EN
         </Link>
-        <span className="text-primary/40">|</span>
+        <span className="text-primary-foreground/40">|</span>
         <Link
           to={esPath}
-          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-primary/15 text-primary' : 'text-primary/75 hover:text-primary'}`}
+          className={`px-1.5 py-0.5 rounded transition-colors ${isSpanish ? 'bg-primary-foreground/15 text-primary-foreground' : 'text-primary-foreground/75 hover:text-primary-foreground'}`}
         >
           ES
         </Link>
-        <span className="text-primary/40">|</span>
+        <span className="text-primary-foreground/40">|</span>
         <button
           onClick={() => {
             if ((window as any).toggleAccessibility) {
               (window as any).toggleAccessibility();
             }
           }}
-          className="px-1.5 py-0.5 rounded transition-colors text-primary/75 hover:text-primary"
+          className="px-1.5 py-0.5 rounded transition-colors text-primary-foreground/75 hover:text-primary-foreground"
           aria-label="Accessibility options"
           title="Accessibility"
         >
