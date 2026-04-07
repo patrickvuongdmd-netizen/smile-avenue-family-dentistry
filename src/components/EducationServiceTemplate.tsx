@@ -167,11 +167,10 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* 1. HERO — center-aligned, Tend-inspired */}
         <section className="section-warm relative overflow-hidden">
-          {heroImage && (
             <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden="true">
               <img
-                src={heroImage.url}
-                alt=""
+                src={leftFlankImage}
+                alt="Smile Avenue dental team"
                 className="absolute -left-16 xl:-left-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
                 loading="eager"
                 width={400}
@@ -179,7 +178,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               />
               <img
                 src={rightFlankImage}
-                alt=""
+                alt="Smile Avenue dental office"
                 className="absolute -right-16 xl:-right-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
                 loading="eager"
                 width={400}
@@ -187,7 +186,6 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.92)] to-transparent" />
             </div>
-          )}
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
             <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center">
