@@ -11,6 +11,8 @@ import TrustTicker from "@/components/TrustTicker";
 import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import LazyYouTube from "@/components/LazyYouTube";
+import VideoCarousel from "@/components/VideoCarousel";
+import { SERVICE_VIDEOS } from "@/lib/images";
 import TabbedInsurance from "@/components/TabbedInsurance";
 import PaymentOptions from "@/components/PaymentOptions";
 import BlogCardCarousel from "@/components/BlogCardCarousel";
@@ -248,14 +250,14 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </section>
         )}
 
-        {/* 5. VIDEO EMBED (educational) */}
-        {data.videoId && (
+        {/* 5. VIDEO CAROUSEL (curated service videos) */}
+        {SERVICE_VIDEOS[data.serviceSlug] && SERVICE_VIDEOS[data.serviceSlug].length > 0 && (
           <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
             <div className="container mx-auto text-center">
               <p className="kicker">SEE HOW IT WORKS</p>
               <h2 className="section-heading">Watch: Understanding {data.serviceName}</h2>
-              <div className="max-w-3xl mx-auto mt-10">
-                <LazyYouTube videoId={data.videoId} title={`Understanding ${data.serviceName}`} />
+              <div className="mt-10">
+                <VideoCarousel videos={SERVICE_VIDEOS[data.serviceSlug]} />
               </div>
             </div>
           </section>
