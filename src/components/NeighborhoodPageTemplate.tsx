@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { MapPin, Phone, Clock, Star, Shield, Users, Stethoscope, Sparkles, Heart, Baby, Smile, ArrowRight, Check } from "lucide-react";
+import { MapPin, Phone, Clock, Star, Shield, Users, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
 import useDocTitle from "@/hooks/use-doc-title";
 import Navbar from "@/components/Navbar";
@@ -14,8 +14,12 @@ import BackToTop from "@/components/BackToTop";
 import SkipToContent from "@/components/SkipToContent";
 import DoctorCard from "@/components/DoctorCard";
 import BookingLocationModal from "@/components/BookingLocationModal";
-import { DOCTOR_IMAGES, OFFICE_IMAGES } from "@/lib/images";
+import { OFFICE_IMAGES } from "@/lib/images";
 import LazyBlogSection from "@/components/LazyBlogSection";
+import LazySection from "@/components/LazySection";
+import ScrollReveal from "@/components/ScrollReveal";
+
+/* ── Types ─────────────────────────────────────────────────── */
 
 interface WhyChooseItem {
   icon: React.ReactNode;
@@ -34,7 +38,6 @@ export interface Testimonial {
   source: string;
   location?: string;
 }
-
 
 interface Doctor {
   name: string;
@@ -74,6 +77,8 @@ export interface NeighborhoodPageData {
   contentParagraphs: string[];
 }
 
+/* ── Location data ─────────────────────────────────────────── */
+
 const LOCATIONS = {
   cypress: {
     phone: "8326481756",
@@ -102,12 +107,17 @@ const insuranceLogos = [
   "MetLife", "United Healthcare", "Guardian", "Humana",
 ];
 
+/* ═══════════════════════════════════════════════════════════
+   COMPONENT
+   ═══════════════════════════════════════════════════════════ */
+
 const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
   const loc = LOCATIONS[data.location];
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com${loc.path}/${data.slug}/`;
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   useDocTitle(data.metaTitle);
 
+  /* ── JSON-LD ─────────────────────────────────────────────── */
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["Dentist", "LocalBusiness"],
@@ -190,8 +200,11 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
       <Navbar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <TrustStrip />
 
-      <main id="main-content" className="pb-14 lg:pb-0 ">
-        {/* HERO */}
+      <main id="main-content" className="pb-14 lg:pb-0">
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  HERO — Above the fold (no lazy loading)         ║
+           ╚═══════════════════════════════════════════════════╝ */}
         <section className="section-padding bg-background">
           <div className="container mx-auto">
             <nav aria-label="Breadcrumb" className="mb-6 text-xs font-sans text-muted-foreground">
@@ -207,11 +220,11 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                 <h1 className="section-heading text-4xl md:text-5xl lg:text-[3.25rem] leading-tight">{data.heroHeading}</h1>
                 <p className="text-lg font-display font-semibold text-foreground mb-2">{data.heroSubheading}</p>
                 <p className="section-body">{data.heroBody}</p>
-                {(data.heroValueProps && data.heroValueProps.length > 0) && (
+                {data.heroValueProps && data.heroValueProps.length > 0 && (
                   <ul className="space-y-2 mb-6 text-left">
                     {data.heroValueProps.map((prop, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm font-sans text-foreground">
-                        <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <Check className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                         <span>{prop}</span>
                       </li>
                     ))}
@@ -219,7 +232,9 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                 )}
                 <div className="flex flex-wrap gap-3 mb-4">
                   <button onClick={() => setBookingModalOpen(true)} className="btn-cta">Book Your Visit</button>
-                  <a href={`tel:${loc.phone}`} className="btn-secondary">Call {loc.phoneFormatted}</a>
+                  <a href={`tel:${loc.phone}`} className="btn-secondary">
+                    <Phone className="w-4 h-4 mr-1.5" />Call {loc.phoneFormatted}
+                  </a>
                 </div>
                 <p className="text-xs font-sans text-muted-foreground mb-2">
                   ✓ Booking takes 60 seconds · ✓ We confirm within 1 hour · ✓ Same-day appointments available
@@ -235,6 +250,8 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                   alt={`Smile Avenue Family Dentistry ${loc.name} office near ${data.neighborhoodName}`}
                   className="w-full h-full object-cover"
                   fetchPriority="high"
+                  loading="eager"
+                  decoding="sync"
                   width={640}
                   height={480}
                 />
@@ -243,213 +260,293 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
           </div>
         </section>
 
-        {/* TRUST BADGES */}
+        {/* ═══ TRUST BADGES ═══ */}
         <section className="py-8 bg-card border-y border-border">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div className="flex flex-col items-center gap-2">
-                <Star className="w-6 h-6 text-primary" />
-                <span className="text-sm font-sans font-semibold text-foreground">5,000+ Five-Star Reviews</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <Clock className="w-6 h-6 text-primary" />
-                <span className="text-sm font-sans font-semibold text-foreground">Same-Day Appointments</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <Shield className="w-6 h-6 text-primary" />
-                <span className="text-sm font-sans font-semibold text-foreground">Insurance Accepted</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <Users className="w-6 h-6 text-primary" />
-                <span className="text-sm font-sans font-semibold text-foreground">Family-Friendly Care</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* NEIGHBORHOOD CONTENT */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto">
-              <p className="kicker">YOUR LOCAL DENTIST</p>
-              <h2 className="section-heading">Trusted Dental Care Near {data.neighborhoodName}</h2>
-              <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
-                {data.contentParagraphs.map((p, i) => <p key={i}>{p}</p>)}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WHY CHOOSE US */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto text-center">
-            <p className="kicker">WHY {data.neighborhoodName.toUpperCase()} FAMILIES CHOOSE US</p>
-            <h2 className="section-heading">{data.whyChooseHeading}</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 text-left max-w-5xl mx-auto">
-              {data.whyChooseItems.map((item) => (
-                <div key={item.title} className="bg-card rounded-xl p-6 border border-border">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">{item.icon}</div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm font-body text-muted-foreground leading-relaxed">{item.description}</p>
+              {[
+                { icon: <Star className="w-6 h-6" />, label: "5,000+ Five-Star Reviews" },
+                { icon: <Clock className="w-6 h-6" />, label: "Same-Day Appointments" },
+                { icon: <Shield className="w-6 h-6" />, label: "Insurance Accepted" },
+                { icon: <Users className="w-6 h-6" />, label: "Family-Friendly Care" },
+              ].map((badge) => (
+                <div key={badge.label} className="flex flex-col items-center gap-2">
+                  <div className="text-gold">{badge.icon}</div>
+                  <span className="text-sm font-sans font-semibold text-foreground">{badge.label}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="section-padding gradient-cta">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
-              <div>
-                <p className="kicker text-white/70">FREQUENTLY ASKED QUESTIONS</p>
-                <h2 className="section-heading text-white">{data.neighborhoodName} Dental FAQ</h2>
-                <p className="section-body text-white/70">
-                  Have more questions? Call us at{" "}
-                  <a href={`tel:${loc.phone}`} className="text-white underline hover:no-underline">{loc.phoneFormatted}</a>.
-                </p>
-              </div>
-              <FaqAccordion items={data.faqs} variant="dark" />
-            </div>
-          </div>
-        </section>
-
-        {/* SERVICES GRID */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">SERVICES NEAR {data.neighborhoodName.toUpperCase()}</p>
-            <h2 className="section-heading">Comprehensive Dental Services</h2>
-            <p className="section-body max-w-2xl mx-auto">From routine cleanings to advanced restorative care, we offer a full range of dental services just minutes from {data.neighborhoodName}.</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-4xl mx-auto">
-              {data.featuredServices.map((svc) => (
-                <Link
-                  key={svc.title}
-                  to={svc.href}
-                  className="group bg-card rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 text-left"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    {svc.icon}
-                  </div>
-                  <h3 className="font-display text-base font-semibold text-foreground mb-1">{svc.title}</h3>
-                  <span className="text-xs font-sans font-medium text-primary group-hover:gap-2 transition-all">Learn More →</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* DOCTORS */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto text-center">
-            <p className="kicker">MEET YOUR DENTISTS</p>
-            <h2 className="section-heading">Our {loc.name} Dental Team</h2>
-            <p className="section-body max-w-2xl mx-auto">Our experienced team of dentists is ready to welcome you and your family.</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 max-w-4xl mx-auto">
-              {data.doctors.map((doc) => (
-                <DoctorCard key={doc.name} {...doc} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* REVIEWS */}
-        <section className="section-padding section-alt">
-          <div className="container mx-auto text-center">
-            <p className="kicker">PATIENT REVIEWS</p>
-            <h2 className="section-heading">What {data.neighborhoodName} Patients Say</h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
-              {data.testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
-            </div>
-          </div>
-        </section>
-
-        {/* GETTING HERE / DIRECTIONS */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-              <div>
-                <p className="kicker">DIRECTIONS</p>
-                <h2 className="section-heading">{data.directionsHeading}</h2>
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  NEIGHBORHOOD CONTENT                            ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <ScrollReveal>
+          <section className="section-padding section-warm">
+            <div className="container mx-auto">
+              <div className="max-w-3xl mx-auto">
+                <p className="kicker">YOUR LOCAL DENTIST</p>
+                <h2 className="section-heading">Trusted Dental Care Near {data.neighborhoodName}</h2>
+                <div className="w-12 h-0.5 bg-gold mx-auto mb-8 rounded-full" />
                 <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
-                  {data.directionsBody.map((p, i) => <p key={i}>{p}</p>)}
-                </div>
-                <div className="mt-6 space-y-3">
-                  <div className="flex items-start gap-3 text-sm font-sans">
-                    <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-semibold text-foreground">Address:</span>
-                      <span className="text-muted-foreground ml-1">{loc.address}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 text-sm font-sans">
-                    <Clock className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-semibold text-foreground">Drive Time:</span>
-                      <span className="text-muted-foreground ml-1">{data.driveTime}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 text-sm font-sans">
-                    <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-semibold text-foreground">Cross Streets:</span>
-                      <span className="text-muted-foreground ml-1">{data.crossStreets}</span>
-                    </div>
-                  </div>
+                  {data.contentParagraphs.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
               </div>
-              <div className="rounded-2xl overflow-hidden border border-border shadow-md aspect-[4/3] bg-muted flex items-center justify-center">
-                <div className="text-center p-8">
-                  <MapPin className="w-10 h-10 text-primary mx-auto mb-3" />
-                  <p className="text-sm font-sans font-semibold text-foreground mb-1">Google Maps</p>
+            </div>
+          </section>
+        </ScrollReveal>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  WHY CHOOSE US                                   ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <ScrollReveal>
+          <section className="section-padding bg-background">
+            <div className="container mx-auto text-center">
+              <p className="kicker">WHY {data.neighborhoodName.toUpperCase()} FAMILIES CHOOSE US</p>
+              <h2 className="section-heading">{data.whyChooseHeading}</h2>
+              <div className="w-12 h-0.5 bg-gold mx-auto mb-10 rounded-full" />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 text-left max-w-5xl mx-auto">
+                {data.whyChooseItems.map((item) => (
+                  <div key={item.title} className="card-soft">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4">{item.icon}</div>
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm font-body text-muted-foreground leading-relaxed">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </ScrollReveal>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  FAQ                                             ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <LazySection minHeight="300px">
+          <section className="section-padding gradient-cta">
+            <div className="container mx-auto">
+              <div className="grid lg:grid-cols-[40%_60%] gap-10 lg:gap-16 items-start">
+                <div>
+                  <p className="kicker text-white/70">FREQUENTLY ASKED QUESTIONS</p>
+                  <h2 className="section-heading text-white">{data.neighborhoodName} Dental FAQ</h2>
+                  <p className="section-body text-white/70">
+                    Have more questions? Call us at{" "}
+                    <a href={`tel:${loc.phone}`} className="text-white underline hover:no-underline">{loc.phoneFormatted}</a>.
+                  </p>
+                </div>
+                <FaqAccordion items={data.faqs} variant="dark" />
+              </div>
+            </div>
+          </section>
+        </LazySection>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  SERVICES GRID                                   ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <ScrollReveal>
+          <section className="section-padding section-warm">
+            <div className="container mx-auto text-center">
+              <p className="kicker">SERVICES NEAR {data.neighborhoodName.toUpperCase()}</p>
+              <h2 className="section-heading">Comprehensive Dental Services</h2>
+              <p className="section-body max-w-2xl mx-auto">From routine cleanings to advanced restorative care, we offer a full range of dental services just minutes from {data.neighborhoodName}.</p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-4xl mx-auto">
+                {data.featuredServices.map((svc) => (
+                  <Link
+                    key={svc.title}
+                    to={svc.href}
+                    className="group card-soft text-left"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      {svc.icon}
+                    </div>
+                    <h3 className="font-display text-base font-semibold text-foreground mb-1">{svc.title}</h3>
+                    <span className="text-xs font-sans font-medium text-primary group-hover:gap-2 transition-all">Learn More →</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        </ScrollReveal>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  DOCTORS — Lazy loaded                           ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <LazySection minHeight="400px">
+          <ScrollReveal>
+            <section className="section-padding bg-background">
+              <div className="container mx-auto text-center">
+                <p className="kicker">MEET YOUR DENTISTS</p>
+                <h2 className="section-heading">Our {loc.name} Dental Team</h2>
+                <div className="w-12 h-0.5 bg-gold mx-auto mb-8 rounded-full" />
+                <p className="section-body max-w-2xl mx-auto">Our experienced team of dentists is ready to welcome you and your family.</p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 max-w-4xl mx-auto">
+                  {data.doctors.map((doc) => (
+                    <DoctorCard key={doc.name} {...doc} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          </ScrollReveal>
+        </LazySection>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  PATIENT REVIEWS — Lazy loaded                   ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <LazySection minHeight="300px">
+          <ScrollReveal>
+            <section className="section-padding section-warm">
+              <div className="container mx-auto text-center">
+                <p className="kicker">PATIENT REVIEWS</p>
+                <h2 className="section-heading">What {data.neighborhoodName} Patients Say</h2>
+                <div className="w-12 h-0.5 bg-gold mx-auto mb-8 rounded-full" />
+                <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
+                  {data.testimonials.map((t) => (
+                    <div key={t.name} className="card-soft">
+                      <div className="flex items-center gap-1 mb-3">
+                        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-gold text-gold" />)}
+                      </div>
+                      <TestimonialCard {...t} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          </ScrollReveal>
+        </LazySection>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  DIRECTIONS + MAP — Lazy loaded                  ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <LazySection minHeight="400px">
+          <section className="section-padding bg-background">
+            <div className="container mx-auto">
+              <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                <div>
+                  <p className="kicker">DIRECTIONS</p>
+                  <h2 className="section-heading">{data.directionsHeading}</h2>
+                  <div className="w-12 h-0.5 bg-gold mb-6 rounded-full" />
+                  <div className="space-y-4 font-body text-base text-muted-foreground leading-relaxed">
+                    {data.directionsBody.map((p, i) => <p key={i}>{p}</p>)}
+                  </div>
+                  <div className="mt-6 space-y-3">
+                    <div className="flex items-start gap-3 text-sm font-sans">
+                      <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold text-foreground">Address:</span>
+                        <span className="text-muted-foreground ml-1">{loc.address}</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 text-sm font-sans">
+                      <Clock className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold text-foreground">Drive Time:</span>
+                        <span className="text-muted-foreground ml-1">{data.driveTime}</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 text-sm font-sans">
+                      <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-semibold text-foreground">Cross Streets:</span>
+                        <span className="text-muted-foreground ml-1">{data.crossStreets}</span>
+                      </div>
+                    </div>
+                  </div>
                   <a
                     href={`https://www.google.com/maps/dir/${encodeURIComponent(data.neighborhoodName + ", TX")}/${encodeURIComponent(loc.address)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-sans text-primary hover:underline"
+                    className="inline-flex items-center gap-2 mt-6 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors"
                   >
-                    Get Directions from {data.neighborhoodName} →
+                    Open in Google Maps <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* INSURANCE */}
-        <section className="py-12 section-alt">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="kicker">INSURANCE WE ACCEPT</p>
-            <h2 className="section-heading">Most Major Plans Accepted</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-3xl mx-auto">
-              {insuranceLogos.map((name) => (
-                <div key={name} className="bg-card rounded-xl border border-border py-5 px-4 flex items-center justify-center">
-                  <span className="text-sm font-sans font-medium text-muted-foreground">{name}</span>
+                <div className="rounded-2xl overflow-hidden border border-border shadow-md aspect-[4/3]">
+                  <iframe
+                    src={loc.mapEmbed}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Smile Avenue ${loc.name} office map`}
+                  />
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FROM THE BLOG */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto">
-            <div className="flex items-end justify-between mb-12">
-              <div>
-                <p className="kicker">FROM THE BLOG</p>
-                <h2 className="section-heading">Dental Tips & Insights</h2>
               </div>
-              <Link to="/blog" className="hidden sm:inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
-                View All Posts <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
-            <LazyBlogSection />
+          </section>
+        </LazySection>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  INSURANCE — Lazy loaded                         ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <LazySection minHeight="200px">
+          <section className="py-12 section-warm">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <p className="kicker">INSURANCE WE ACCEPT</p>
+              <h2 className="section-heading">Most Major Plans Accepted</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-3xl mx-auto">
+                {insuranceLogos.map((name) => (
+                  <div key={name} className="card-soft py-5 px-4 flex items-center justify-center">
+                    <span className="text-sm font-sans font-medium text-muted-foreground">{name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </LazySection>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  FROM THE BLOG — Lazy loaded                     ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <LazySection minHeight="300px">
+          <section className="section-padding bg-background">
+            <div className="container mx-auto">
+              <div className="flex items-end justify-between mb-12">
+                <div>
+                  <p className="kicker">FROM THE BLOG</p>
+                  <h2 className="section-heading">Dental Tips & Insights</h2>
+                </div>
+                <Link to="/blog" className="hidden sm:inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary hover:text-primary-dark transition-colors">
+                  View All Posts <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <LazyBlogSection />
+            </div>
+          </section>
+        </LazySection>
+
+        {/* ╔═══════════════════════════════════════════════════╗
+           ║  FINAL CTA — Cinematic conversion close          ║
+           ╚═══════════════════════════════════════════════════╝ */}
+        <section className="py-20 md:py-24 bg-foreground text-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-xs font-sans font-bold tracking-[0.2em] uppercase text-gold mb-4">READY TO GET STARTED?</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Your {data.neighborhoodName} Smile Starts Here</h2>
+            <p className="font-body text-base text-background/70 max-w-xl mx-auto mb-8">
+              Join thousands of families who trust Smile Avenue. Book your first visit in 60 seconds — we confirm within 1 hour. No obligation, no pressure.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button
+                onClick={() => setBookingModalOpen(true)}
+                className="btn-cta rounded-full !px-8 !py-4 text-base shadow-lg shadow-gold/30"
+              >
+                Book Your Visit
+              </button>
+              <a
+                href={`tel:${loc.phone}`}
+                className="inline-flex items-center gap-2 rounded-full border border-background/30 px-6 py-3.5 text-sm font-sans font-semibold text-background hover:bg-background/10 transition-colors"
+              >
+                <Phone className="w-4 h-4" />{loc.phoneFormatted}
+              </a>
+            </div>
           </div>
         </section>
 
-        {/* LOCATION INFO */}
-        <section className="section-padding section-alt">
+        {/* ═══ LOCATION CARD ═══ */}
+        <section className="section-padding section-warm">
           <div className="container mx-auto">
-            <div className="max-w-lg mx-auto bg-card rounded-xl p-8 border border-border text-center">
+            <div className="max-w-lg mx-auto card-soft p-8 text-center">
               <h3 className="font-display text-xl font-bold text-foreground mb-4">{loc.name} Office</h3>
               <div className="space-y-3 text-sm font-sans text-muted-foreground mb-6">
                 <div className="flex items-start justify-center gap-2">
@@ -462,7 +559,7 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Clock className="w-4 h-4 text-primary shrink-0" />
-                  <span>Mon–Fri 8:30am–5pm</span>
+                  <span>Mon–Fri 8:30am–5pm{data.location === "katy" ? " · Sat 8am–2pm" : ""}</span>
                 </div>
               </div>
               <button onClick={() => setBookingModalOpen(true)} className="btn-cta w-full text-center">
@@ -479,7 +576,6 @@ const NeighborhoodPageTemplate = ({ data }: { data: NeighborhoodPageData }) => {
       <MobileStickyBar phone={loc.phone} phoneFormatted={loc.phoneFormatted} bookingUrl={loc.booking} />
       <BackToTop />
       <BookingLocationModal open={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
-
     </>
   );
 };
