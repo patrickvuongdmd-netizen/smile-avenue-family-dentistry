@@ -145,14 +145,26 @@ const Footer = () => {
                 <a href="https://g.page/smileavenuedentistry" target="_blank" rel="noopener noreferrer" className="opacity-60 hover:opacity-100 transition-opacity" aria-label="Google Business Profile"><Globe className="w-4 h-4" /></a>
               </div>
             </div>
-            {/* Col 2 — Services */}
+            {/* Col 2 — Services with dropdowns */}
             <div>
-              <h4 className="font-display text-lg font-semibold mb-5">Services</h4>
-              <div className="space-y-2.5 text-sm font-sans opacity-80">
-                {footerServiceCategories.flatMap(cat => cat.services).map(svc => (
-                  <Link key={svc.slug} to={`/services/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label}</Link>
+              <h4 className="font-display text-lg font-semibold mb-4">Services</h4>
+              <Link to="/services" className="block text-sm font-sans font-medium opacity-90 hover:opacity-100 transition-opacity mb-3">All Services</Link>
+              <Accordion type="multiple" className="w-full">
+                {footerServices.map(svc => (
+                  <AccordionItem key={svc.slug} value={svc.slug} className="border-background/10 border-b-0">
+                    <AccordionTrigger className="py-1.5 text-sm font-sans opacity-80 hover:opacity-100 hover:no-underline [&>svg]:text-primary [&>svg]:opacity-100 [&>svg]:w-3.5 [&>svg]:h-3.5">
+                      {svc.label}
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-2 pt-0">
+                      <div className="pl-4 space-y-1.5 text-sm font-sans opacity-70">
+                        <Link to={`/services/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label}</Link>
+                        <Link to={`/cypress-tx/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label.replace('®', '')} in Cypress</Link>
+                        <Link to={`/katy-tx/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label.replace('®', '')} in Katy</Link>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
+              </Accordion>
             </div>
             {/* Col 3 — Locations */}
             <div>
@@ -223,11 +235,22 @@ const Footer = () => {
                 <AccordionTrigger className="py-3 font-display text-lg font-semibold hover:no-underline [&>svg]:text-primary [&>svg]:opacity-100">Services</AccordionTrigger>
                 <AccordionContent className="pb-4">
                   <Link to="/services" className="block text-sm font-sans font-medium opacity-90 hover:opacity-100 transition-opacity mb-3">All Services →</Link>
-                  <div className="space-y-2 text-sm font-sans opacity-80">
-                    {footerServiceCategories.flatMap((cat) => cat.services).map((svc) => (
-                      <Link key={svc.slug} to={`/services/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label}</Link>
+                  <Accordion type="multiple" className="w-full">
+                    {footerServices.map((svc) => (
+                      <AccordionItem key={svc.slug} value={`mobile-${svc.slug}`} className="border-background/10 border-b-0">
+                        <AccordionTrigger className="py-1.5 text-sm font-sans opacity-80 hover:opacity-100 hover:no-underline [&>svg]:text-primary [&>svg]:opacity-100 [&>svg]:w-3.5 [&>svg]:h-3.5">
+                          {svc.label}
+                        </AccordionTrigger>
+                        <AccordionContent className="pb-2 pt-0">
+                          <div className="pl-4 space-y-1.5 text-sm font-sans opacity-70">
+                            <Link to={`/services/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label}</Link>
+                            <Link to={`/cypress-tx/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label.replace('®', '')} in Cypress</Link>
+                            <Link to={`/katy-tx/${svc.slug}`} className="block hover:opacity-100 transition-opacity">{svc.label.replace('®', '')} in Katy</Link>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
                     ))}
-                  </div>
+                  </Accordion>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="contact" className="border-background/10">
