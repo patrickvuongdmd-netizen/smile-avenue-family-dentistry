@@ -520,19 +520,13 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
           </div>
         </section>
 
-        {/* INSURANCE TICKER */}
-        <section className="py-10 section-warm overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="kicker">WE ACCEPT YOUR INSURANCE</p>
-            <h2 className="section-heading">Use Your Benefits — We Handle the Paperwork</h2>
-          </div>
-          <div className="relative mt-8">
-            <div className="flex animate-ticker whitespace-nowrap">
-              {[...insuranceLogos, ...insuranceLogos].map((name, i) => (
-                <span key={`${name}-${i}`} className="inline-flex shrink-0 items-center bg-card rounded-full border border-border/60 py-2.5 px-6 mx-3">
-                  <span className="text-sm font-sans font-medium text-muted-foreground">{name}</span>
-                </span>
-              ))}
+        {/* INSURANCE SECTION (tabbed) */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 section-warm">
+          <div className="container mx-auto text-center">
+            <p className="kicker">INSURANCE & COVERAGE</p>
+            <h2 className="section-heading">We Work With Your Insurance</h2>
+            <div className="mt-10">
+              <TabbedInsurance coverageNote={`Most PPO plans cover a portion of ${data.serviceName.toLowerCase()} treatment. We verify your benefits before your visit.`} />
             </div>
           </div>
         </section>
