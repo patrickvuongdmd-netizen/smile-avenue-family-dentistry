@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "My daughter had all four wisdom teeth removed here. They used sedation and she had zero memory of the procedure. Recovery was smooth.", name: "Linda P.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "I was so nervous about having a tooth pulled but the doctor was incredibly gentle and calming. The extraction was painless and the follow-up care was thorough.", name: "Gregory T.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get a tooth extraction in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 performs simple and surgical tooth extractions with sedation options. Same-day emergency extractions are available." },
+    { question: "How much does a tooth extraction cost in Cypress?", answer: "Extraction costs depend on complexity — simple extractions cost less than surgical or wisdom tooth removals. Most PPO insurance plans cover medically necessary extractions. 0% financing available through CareCredit and Sunbit." },
+    { question: "Does Smile Avenue Cypress offer same-day emergency extractions?", answer: "Yes. If you're in severe pain, we offer same-day emergency extractions. Call (832) 648-1756 and our team will get you in as quickly as possible for immediate relief." },
+    { question: "Do you remove wisdom teeth at Smile Avenue Cypress?", answer: "Yes. We perform both simple and surgical wisdom tooth extractions in-office with IV sedation available. Our 3D CBCT imaging allows precise planning for safe, efficient removal." },
+    { question: "What tooth replacement options are available after extraction in Cypress?", answer: "After extraction, we discuss dental implants (most recommended for long-term health), dental bridges, and dentures at your visit. We can often place a bone graft at extraction time to preserve bone for future implant placement." },
+  ],
   aboutInCity: [
     "Smile Avenue Family Dentistry on Fry Road provides gentle tooth extraction services for patients across Cypress, TX. Whether you need a simple extraction, surgical removal of impacted wisdom teeth, or emergency same-day extraction, our experienced team handles it all in-office with sedation options for your comfort.",
     "What sets our Cypress extraction practice apart is our comprehensive approach. We don't just remove the tooth — we discuss replacement options (dental implants, bridges, or dentures) at the same visit so you have a plan for restoring your smile before you leave. For patients needing implants, we can often place a bone graft at the time of extraction to preserve bone for future implant placement.",

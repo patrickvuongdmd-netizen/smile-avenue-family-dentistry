@@ -61,6 +61,13 @@ const data: ServicePageData = {
     { quote: "I was missing two teeth and the implant-supported bridge was the perfect solution. Rock solid, no slipping, and it looks completely natural.", name: "Michael S.", source: "Google Review" , location: "Towne Lake, Cypress" },
     { quote: "The whole bridge process was painless and much faster than I expected. Dr. Vuong explained every step clearly. Very happy with my results.", name: "Karen W.", source: "Google Review" , location: "Bridgeland, Cypress" },
   ],
+  locationFaqs: [
+    { question: "Where can I get a dental bridge in Cypress, TX?", answer: "Smile Avenue Family Dentistry at 9212 Fry Rd #120, Cypress, TX 77433 offers all types of dental bridges — traditional, Maryland, cantilever, and implant-supported — fabricated in our in-house Smile Dental Lab for precise fit." },
+    { question: "How much does a dental bridge cost in Cypress?", answer: "Dental bridges in Cypress typically range from $1,500–$4,500 depending on the type and number of teeth replaced. Most PPO dental insurance plans cover 50-80% of bridge costs. We offer 0% financing through CareCredit and Sunbit." },
+    { question: "Which dentist does dental bridges at Smile Avenue Cypress?", answer: "Dr. Patrick Vuong, Dr. Peter Kim, and Dr. Laith Yahya perform dental bridge procedures at our Cypress location. All bridges are custom-fabricated in our on-site Smile Dental Lab." },
+    { question: "How long does it take to get a dental bridge in Cypress?", answer: "Most dental bridges at our Cypress office are completed in two visits over 2-3 weeks. Our in-house lab fabricates your bridge on-site, which is significantly faster than offices that outsource to external labs." },
+    { question: "Is a dental bridge or implant better for missing teeth?", answer: "Both are excellent options. Dental implants preserve bone and don't require altering adjacent teeth, while bridges are faster and less invasive. We discuss both options at your consultation so you can make the best choice for your situation." },
+  ],
   aboutInCity: [
     "Patients across Cypress, TX rely on Smile Avenue Family Dentistry on Fry Road for expert dental bridge restorations. Whether you're missing one tooth or several, our team evaluates your case and recommends the best bridge type — traditional, Maryland, cantilever, or implant-supported — based on your oral health and goals.",
     "Our in-house Smile Dental Lab is the key differentiator. While most Cypress dental offices send bridge cases to an external lab (adding 2-3 weeks of wait time), we fabricate yours on-site using digital impressions from our Medit scanner. The result is a more precise fit, better color match, and faster completion.",
