@@ -460,22 +460,52 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
           </section>
         )}
 
-        {/* 13. FINAL CTA */}
-        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-28 gradient-cta">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-6">
-              Ready to Get Started with {data.serviceName}?
-            </h2>
-            <p className="text-lg font-body text-primary-foreground/70 max-w-2xl mx-auto mb-10">
-              Book a free consultation at the location most convenient for you. We'll answer all your questions and create a personalized treatment plan.
+        {/* 13. FINAL CTA — upgraded with trust signals & phone */}
+        <section className="px-4 sm:px-6 lg:px-8 py-24 md:py-32 gradient-cta relative overflow-hidden">
+          {/* Decorative background circles */}
+          <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-primary-foreground/5 pointer-events-none" aria-hidden="true" />
+          <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-primary-foreground/5 pointer-events-none" aria-hidden="true" />
+
+          <div className="container mx-auto text-center relative z-10">
+            <div className="flex items-center justify-center gap-1 mb-4">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-xl text-primary-foreground">★</span>
+              ))}
+            </div>
+            <p className="text-sm font-sans font-semibold text-primary-foreground/70 mb-6">
+              4.9 rating from 5,000+ happy patients
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-primary-foreground mb-6 leading-tight">
+              Ready to Get Started<br className="hidden sm:block" /> with {data.serviceName}?
+            </h2>
+            <p className="text-base md:text-lg font-body text-primary-foreground/70 max-w-xl mx-auto mb-10">
+              Book a free consultation at the location most convenient for you. We'll create a personalized treatment plan — no obligation, no pressure.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto mb-6">
               <Link to={`/cypress-tx/${data.cypressSlug}`} className="btn-cta-light flex-1 text-center">
                 Book in Cypress →
               </Link>
               <Link to={`/katy-tx/${data.katySlug}`} className="btn-cta-light flex-1 text-center">
                 Book in Katy →
               </Link>
+            </div>
+
+            <a
+              href={`tel:${PHONE}`}
+              className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              onClick={() => trackPhoneClick("Education Final CTA")}
+            >
+              <Phone className="w-4 h-4" />
+              Or call us: {PHONE_FORMATTED}
+            </a>
+
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8 text-xs font-sans text-primary-foreground/50">
+              <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5" /> Free consultation</span>
+              <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5" /> Insurance accepted</span>
+              <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5" /> 0% financing available</span>
+              <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5" /> Booking takes 60 seconds</span>
             </div>
           </div>
         </section>
