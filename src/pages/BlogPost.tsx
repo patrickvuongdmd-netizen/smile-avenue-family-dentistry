@@ -236,7 +236,7 @@ const BlogPostPage = () => {
               {/* Author + Meta */}
               <div className="flex items-center gap-4 mb-6">
                 {authorImg && (
-                  <img src={authorImg.url} alt={post.author} className="w-12 h-12 rounded-full object-cover border-2 border-primary/20" width={48} height={48} />
+                  <img src={authorImg.url} alt={post.author} className="w-12 h-12 rounded-full object-cover border-2 border-primary/20" loading="lazy" decoding="async" width={48} height={48} />
                 )}
                 <div>
                   <Link to={`/doctors/${post.authorSlug}/`} className="text-sm font-sans font-semibold text-foreground hover:text-primary transition-colors">
@@ -286,7 +286,7 @@ const BlogPostPage = () => {
             {/* Author Bio */}
             <div className="mt-12 p-6 bg-card rounded-xl border border-border flex gap-4 items-start">
               {authorImg && (
-                <img src={authorImg.url} alt={post.author} className="w-16 h-16 rounded-full object-cover border-2 border-primary/20 shrink-0" width={64} height={64} />
+                <img src={authorImg.url} alt={post.author} className="w-16 h-16 rounded-full object-cover border-2 border-primary/20 shrink-0" loading="lazy" decoding="async" width={64} height={64} />
               )}
               <div>
                 <p className="text-xs font-sans font-bold tracking-wider uppercase text-primary mb-1">About the Author</p>

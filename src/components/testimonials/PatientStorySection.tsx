@@ -72,7 +72,7 @@ const LeadGridLayout = ({ stories, accentImage }: { stories: Story[]; accentImag
     {accentImage && (
       <ScrollReveal>
         <div className="h-48 md:h-56 rounded-2xl overflow-hidden shadow-lg">
-          <img src={accentImage} alt="Smile Avenue office" className="w-full h-full object-cover" loading="lazy" />
+          <img src={accentImage} alt="Smile Avenue office" className="w-full h-full object-cover" loading="lazy" decoding="async" width={800} height={400} />
         </div>
       </ScrollReveal>
     )}
@@ -87,7 +87,7 @@ const HorizontalLayout = ({ stories, accentImage }: { stories: Story[]; accentIm
       <ScrollReveal>
         <div className="grid md:grid-cols-2 gap-5">
           <div className="rounded-2xl overflow-hidden shadow-lg min-h-[220px]">
-            <img src={accentImage} alt="Smile Avenue office" className="w-full h-full object-cover" loading="lazy" />
+            <img src={accentImage} alt="Smile Avenue office" className="w-full h-full object-cover" loading="lazy" decoding="async" width={800} height={400} />
           </div>
           <div className="rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/[0.06] to-primary/[0.02] p-7 flex flex-col justify-between">
             <div>

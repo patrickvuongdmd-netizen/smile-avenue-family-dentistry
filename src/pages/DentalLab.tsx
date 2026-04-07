@@ -95,6 +95,8 @@ const DentalLab = () => {
                   src="https://www.smileavenuefamilydentistry.com/wp-content/uploads/2025/07/img-in-house-implant-manufacturing-for-convenience-savings.webp"
                   alt="Smile Dental Lab — in-house digital dental lab at Smile Avenue Family Dentistry"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                   width={600}
                   height={450}
                 />
