@@ -627,11 +627,24 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
 
               {/* Two overlapping oval photos — Tend-style */}
               <div className="relative h-[420px] md:h-[480px] lg:h-[540px]">
+                {/* Baby blue geometric accent behind photos */}
+                <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+                  {/* Large rounded arch — sits behind the main photo */}
+                  <div className="absolute left-[-8%] top-[-6%] w-[72%] h-[108%] rounded-[50%/45%] bg-[hsl(195,80%,88%)] opacity-50" />
+                  {/* Smaller floating circle — decorative accent top-right */}
+                  <div className="absolute right-[8%] top-[-10%] w-[100px] h-[100px] rounded-full border-[3px] border-[hsl(195,70%,82%)] opacity-60" />
+                  {/* Subtle ring behind small oval */}
+                  <div className="absolute right-[-4%] bottom-[-4%] w-[50%] h-[80%] rounded-[50%/45%] border-[3px] border-[hsl(195,70%,85%)] opacity-40" />
+                  {/* Tiny dot cluster */}
+                  <div className="absolute left-[55%] top-[8%] w-3 h-3 rounded-full bg-[hsl(195,75%,80%)] opacity-50" />
+                  <div className="absolute left-[58%] top-[14%] w-2 h-2 rounded-full bg-[hsl(195,75%,82%)] opacity-40" />
+                </div>
+
                 {/* Large oval — doctor/hygienist */}
                 <img
                   src={heroRightPhoto}
                   alt="Smile Avenue dentist"
-                  className="absolute left-0 top-0 w-[65%] h-full object-cover rounded-[50%/45%]"
+                  className="absolute left-0 top-0 w-[65%] h-full object-cover rounded-[50%/45%] shadow-[0_8px_40px_-8px_hsl(195,60%,75%,0.4)]"
                   loading="eager"
                   fetchPriority="high"
                   width={400}
@@ -641,7 +654,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 <img
                   src={heroLeftPhoto}
                   alt="Smile Avenue dental team member"
-                  className="absolute right-0 bottom-0 w-[45%] h-[75%] object-cover rounded-[50%/45%]"
+                  className="absolute right-0 bottom-0 w-[45%] h-[75%] object-cover rounded-[50%/45%] shadow-[0_8px_40px_-8px_hsl(195,60%,75%,0.4)]"
                   loading="eager"
                   width={280}
                   height={400}
