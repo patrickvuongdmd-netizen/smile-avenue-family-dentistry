@@ -15,6 +15,11 @@ export interface EducationServiceData {
   costNote: string;
   insuranceCoverageNote?: string;
   comparisonRows: { feature: string; smileAvenue: string; typical: string }[];
+  serviceComparison?: {
+    titleA: string;
+    titleB: string;
+    rows: { feature: string; optionA: string; optionB: string }[];
+  };
   faqs: { question: string; answer: string }[];
   cypressSlug: string;
   katySlug: string;
