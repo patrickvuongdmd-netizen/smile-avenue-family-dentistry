@@ -19,7 +19,7 @@ import BlogCardCarousel from "@/components/BlogCardCarousel";
 import BlogDesktopGrid from "@/components/BlogDesktopGrid";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { BLOG_CATEGORY_IMAGES, BLOG_CATEGORY_COLORS, BLOG_FALLBACK_IMAGE } from "@/lib/blog-styles";
-import { SERVICE_IMAGES } from "@/lib/images";
+import { SERVICE_IMAGES, OFFICE_IMAGES } from "@/lib/images";
 import { SERVICE_NAMES } from "@/lib/brand-service-data";
 import { trackPhoneClick } from "@/lib/track-phone";
 import type { EducationServiceData } from "@/lib/education-service-data";
@@ -53,6 +53,18 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
   useDocTitle(data.metaTitle);
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/`;
   const heroImage = SERVICE_IMAGES[data.serviceSlug];
+
+  // Rotate through office/lifestyle photos for the right flanking hero image
+  const lifestylePhotos = [
+    OFFICE_IMAGES.waitingRoom,
+    OFFICE_IMAGES.treatmentRoom,
+    OFFICE_IMAGES.hallway,
+    OFFICE_IMAGES.coffeeStation,
+    OFFICE_IMAGES.patientCare,
+    OFFICE_IMAGES.teamPhoto,
+  ];
+  const lifestyleIndex = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % lifestylePhotos.length;
+  const rightFlankImage = lifestylePhotos[lifestyleIndex];
 
   const relatedPosts = data.relatedBlogCategory
     ? BLOG_POSTS.filter((p) => p.category === data.relatedBlogCategory).slice(0, 3)
@@ -128,13 +140,12 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                 height={533}
               />
               <img
-                src={heroImage.url}
+                src={rightFlankImage}
                 alt=""
                 className="absolute -right-16 xl:-right-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
                 loading="eager"
                 width={400}
                 height={533}
-                style={{ transform: "translateY(-50%) scaleX(-1)" }}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.92)] to-transparent" />
             </div>
