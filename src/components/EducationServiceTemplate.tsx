@@ -56,19 +56,28 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
   useDocTitle(data.metaTitle);
   const [bookingOpen, setBookingOpen] = useState(false);
   const canonicalUrl = `https://www.smileavenuefamilydentistry.com/services/${data.serviceSlug}/`;
-  const heroImage = SERVICE_IMAGES[data.serviceSlug];
+  // Standardised hero flanking photos — left: staff/provider, right: office/location
+  // Deterministic rotation based on slug hash so each page gets a unique pairing
+  const slugHash = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
 
-  // Rotate through office/lifestyle photos for the right flanking hero image
-  const lifestylePhotos = [
+  const staffPhotos = [
+    OFFICE_IMAGES.teamPhoto,
+    OFFICE_IMAGES.aboutTeamAction,
+    OFFICE_IMAGES.patientCare,
+    OFFICE_IMAGES.aboutKatyTeam,
+  ];
+
+  const locationPhotos = [
+    OFFICE_IMAGES.cypressHero,
+    OFFICE_IMAGES.katyHero,
     OFFICE_IMAGES.waitingRoom,
     OFFICE_IMAGES.treatmentRoom,
     OFFICE_IMAGES.hallway,
-    OFFICE_IMAGES.coffeeStation,
-    OFFICE_IMAGES.patientCare,
-    OFFICE_IMAGES.teamPhoto,
+    OFFICE_IMAGES.receptionDesk,
   ];
-  const lifestyleIndex = data.serviceSlug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % lifestylePhotos.length;
-  const rightFlankImage = lifestylePhotos[lifestyleIndex];
+
+  const leftFlankImage = staffPhotos[slugHash % staffPhotos.length];
+  const rightFlankImage = locationPhotos[slugHash % locationPhotos.length];
 
   const relatedPosts = data.relatedBlogCategory
     ? BLOG_POSTS.filter((p) => p.category === data.relatedBlogCategory).slice(0, 3)
@@ -145,7 +154,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Smile Avenue Family Dentistry" />
-        {heroImage && <meta property="og:image" content={heroImage.url} />}
+        {SERVICE_IMAGES[data.serviceSlug] && <meta property="og:image" content={SERVICE_IMAGES[data.serviceSlug].url} />}
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
@@ -158,11 +167,10 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
       <main id="main-content" className="pb-14 lg:pb-0">
         {/* 1. HERO — center-aligned, Tend-inspired */}
         <section className="section-warm relative overflow-hidden">
-          {heroImage && (
             <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden="true">
               <img
-                src={heroImage.url}
-                alt=""
+                src={leftFlankImage}
+                alt="Smile Avenue dental team"
                 className="absolute -left-16 xl:-left-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
                 loading="eager"
                 width={400}
@@ -170,7 +178,7 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               />
               <img
                 src={rightFlankImage}
-                alt=""
+                alt="Smile Avenue dental office"
                 className="absolute -right-16 xl:-right-8 top-1/2 -translate-y-1/2 w-[340px] xl:w-[400px] aspect-[3/4] object-cover rounded-3xl opacity-90"
                 loading="eager"
                 width={400}
@@ -178,7 +186,6 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(38_40%_97%/0.92)] to-transparent" />
             </div>
-          )}
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28 relative z-10">
             <nav aria-label="Breadcrumb" className="mb-8 text-xs font-sans text-muted-foreground text-center">
@@ -228,11 +235,10 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
               </div>
             </div>
 
-            {heroImage && (
-              <div className="lg:hidden mt-10 max-w-md mx-auto">
+            <div className="lg:hidden mt-10 max-w-md mx-auto">
                 <img
-                  src={heroImage.url}
-                  alt={heroImage.alt}
+                  src={leftFlankImage}
+                  alt="Smile Avenue dental team"
                   className="w-full aspect-[4/3] object-cover rounded-3xl shadow-lg"
                   loading="eager"
                   fetchPriority="high"
@@ -240,7 +246,6 @@ const EducationServiceTemplate = ({ data }: { data: EducationServiceData }) => {
                   height={480}
                 />
               </div>
-            )}
           </div>
         </section>
 
